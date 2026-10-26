@@ -34,7 +34,7 @@
   }
 
   .app {
-    min-height: 100dvh;
+    height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
     padding-top: env(safe-area-inset-top);
@@ -42,12 +42,11 @@
   }
 
   header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--fvl-space-icon-gap);
+    display: grid;
+    gap: var(--fvl-space-stack-related);
     padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) 0;
   }
+  .row { display: flex; align-items: baseline; justify-content: space-between; gap: var(--fvl-space-icon-gap); }
   .title {
     margin: 0;
     font-family: var(--fvl-type-h3-family);
@@ -60,167 +59,138 @@
     font-size: var(--fvl-type-label-size);
     font-weight: var(--fvl-type-label-weight);
     letter-spacing: var(--fvl-type-label-tracking);
-    line-height: var(--fvl-type-label-line-height);
     color: var(--fvl-color-text-secondary);
     transition: color var(--fvl-motion-tone);
   }
   .seat[data-seat="outside"] { color: var(--fvl-color-accent-text); }
+  .chapters { display: flex; align-items: center; gap: var(--fvl-space-icon-gap); }
+  .chapters span {
+    height: 2px; flex: 1; border-radius: var(--fvl-radius-pill);
+    background: var(--fvl-color-line-subtle);
+    transition: background var(--fvl-motion-tone);
+  }
+  .chapters span.done { background: var(--fvl-color-line-strong); }
+  .chapters span.current { background: var(--fvl-color-accent-default); }
+  .chapter-name {
+    font-size: var(--fvl-type-micro-size);
+    font-weight: var(--fvl-type-label-weight);
+    letter-spacing: var(--fvl-type-label-tracking);
+    text-transform: uppercase;
+    color: var(--fvl-color-text-muted);
+    font-variant-numeric: var(--fvl-type-data-numeric);
+  }
 
   /* ---- stage ---- */
   .stage {
     position: relative;
-    display: grid;
-    grid-template-rows: 1fr auto;
     min-height: 0;
     touch-action: none;
     user-select: none;
     -webkit-user-select: none;
   }
-  .stage svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 16rem;
-    overflow: visible;
-  }
+  .stage svg { display: block; width: 100%; height: 100%; }
 
-  .staff {
-    stroke: var(--fvl-color-line-subtle);
-    stroke-width: var(--fvl-stroke-default);
-    vector-effect: non-scaling-stroke;
-    fill: none;
-  }
-  .tail {
-    stroke: var(--fvl-color-text-muted);
-    stroke-width: var(--fvl-stroke-default);
-    stroke-linecap: round;
-    vector-effect: non-scaling-stroke;
-    fill: none;
-    opacity: 0;
-  }
+  .seg { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; stroke-width: var(--fvl-stroke-default); }
+  .seg.walked { stroke: var(--fvl-color-line-strong); }
+  .seg.open { stroke: var(--fvl-color-line-subtle); stroke-dasharray: 3 7; }
+  .seg.commit { stroke: var(--fvl-color-accent-default); stroke-width: 2px; stroke-dasharray: none; }
+  .seg.bet { stroke: var(--fvl-color-text-primary); stroke-width: 2px; stroke-dasharray: none; }
+  .seg.bet.dark { stroke: var(--fvl-color-line-subtle); stroke-width: var(--fvl-stroke-default); stroke-dasharray: 3 7; }
+  .seg.commit, .seg.bet { transition: stroke var(--fvl-motion-tone); }
 
-  .note { transition: opacity var(--fvl-motion-tone); }
-  .note .body {
-    fill: var(--fvl-color-bg-canvas);
-    stroke: var(--fvl-color-line-strong);
-    stroke-width: var(--fvl-stroke-default);
-    vector-effect: non-scaling-stroke;
-    transition: fill var(--fvl-motion-tone), stroke var(--fvl-motion-tone);
-  }
-  .note.hidden { opacity: 0; }
-  .note.trace  { opacity: 0.4; }
-  .note.now .body { fill: var(--fvl-color-accent-default); stroke: var(--fvl-color-accent-default); }
-  .note.prayed .body { fill: var(--fvl-color-accent-subtle); stroke: var(--fvl-color-accent-default); }
-  .note.now.prayed .body { fill: var(--fvl-color-accent-default); stroke: var(--fvl-color-accent-default); }
-  .ripple {
-    fill: none;
-    stroke: var(--fvl-color-accent-default);
-    stroke-width: var(--fvl-stroke-default);
-    vector-effect: non-scaling-stroke;
-    pointer-events: none;
-  }
+  .fork { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-line-strong); vector-effect: non-scaling-stroke; stroke-width: var(--fvl-stroke-default); }
+  .print { fill: var(--fvl-color-text-muted); opacity: 0.55; }
+  .print.his { fill: var(--fvl-color-accent-subtle); stroke: var(--fvl-color-accent-default); vector-effect: non-scaling-stroke; stroke-width: 1px; opacity: 1; }
+  .lantern { fill: var(--fvl-color-accent-subtle); stroke: var(--fvl-color-accent-default); vector-effect: non-scaling-stroke; stroke-width: var(--fvl-stroke-default); }
+  .fire { fill: none; stroke: var(--fvl-color-line-strong); vector-effect: non-scaling-stroke; stroke-width: var(--fvl-stroke-default); }
+  .end { fill: none; stroke: var(--fvl-color-accent-default); vector-effect: non-scaling-stroke; stroke-width: 2px; stroke-linecap: round; }
+  .walker { fill: var(--fvl-color-accent-default); }
+  .ripple { fill: none; stroke: var(--fvl-color-accent-default); vector-effect: non-scaling-stroke; stroke-width: var(--fvl-stroke-default); pointer-events: none; }
 
-  .caption {
-    min-height: 3lh;
-    margin: 0;
-    padding: 0 var(--fvl-layout-margin-compact);
-    text-align: center;
-    color: var(--fvl-color-text-secondary);
+  /* ---- card ---- */
+  .card {
+    margin: 0 var(--fvl-layout-margin-compact);
+    margin-bottom: var(--fvl-space-stack-group);
+    padding: var(--fvl-space-inset-container);
+    border-radius: var(--fvl-radius-container);
+    background: var(--fvl-color-bg-surface);
+    display: grid;
+    gap: var(--fvl-space-stack-group);
     max-width: var(--fvl-layout-width-prose);
     justify-self: center;
+    width: calc(100% - 2 * var(--fvl-layout-margin-compact));
   }
-  .caption b { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); }
-
-  /* ---- footer ---- */
-  footer {
-    display: grid;
-    justify-items: center;
-    gap: var(--fvl-space-stack-group);
-    padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) var(--fvl-space-stack-section);
-  }
-  .hold {
-    appearance: none;
-    border: 0;
-    margin: 0;
-    height: var(--fvl-size-control-lg);
-    min-width: 12rem;
+  .card p { margin: 0; color: var(--fvl-color-text-secondary); min-height: 3lh; }
+  .card p b { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--fvl-space-icon-gap); align-items: center; }
+  .btn {
+    appearance: none; border: 0; margin: 0;
+    height: var(--fvl-size-control-md);
     padding: 0 var(--fvl-space-inset-control-x);
     border-radius: var(--fvl-radius-pill);
-    background: var(--fvl-color-bg-surface);
-    color: var(--fvl-color-text-primary);
     font: inherit;
     font-size: var(--fvl-type-label-size);
     font-weight: var(--fvl-type-label-weight);
     letter-spacing: var(--fvl-type-label-tracking);
     cursor: pointer;
-    touch-action: none;
-    -webkit-user-select: none;
-    user-select: none;
+    -webkit-user-select: none; user-select: none;
     transition: background var(--fvl-motion-tone), color var(--fvl-motion-tone), transform var(--fvl-motion-spring-press-duration) var(--fvl-motion-spring-press-easing);
   }
-  .hold:hover { background: var(--fvl-color-bg-hover); }
-  .hold.held { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); transform: scale(0.98); }
-  .hold:focus-visible {
-    outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring);
-    outline-offset: var(--fvl-stroke-focus-offset);
-  }
-
-  .about-toggle {
-    appearance: none;
-    border: 0;
-    background: none;
-    padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x);
-    min-height: var(--fvl-size-target-min);
-    border-radius: var(--fvl-radius-control);
-    color: var(--fvl-color-text-muted);
-    font: inherit;
-    font-size: var(--fvl-type-small-size);
-    cursor: pointer;
-  }
-  .about-toggle:focus-visible {
-    outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring);
-    outline-offset: var(--fvl-stroke-focus-offset);
-  }
-  .about {
-    max-width: var(--fvl-layout-width-prose);
-    color: var(--fvl-color-text-secondary);
-    font-size: var(--fvl-type-small-size);
-    line-height: var(--fvl-type-small-line-height);
-    display: grid;
-    gap: var(--fvl-space-stack-related);
-  }
-  .about p { margin: 0; }
-  .about[hidden] { display: none; }
+  .btn:active { transform: scale(0.97); }
+  .btn:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: var(--fvl-stroke-focus-offset); }
+  .btn.primary { background: var(--fvl-color-accent-default); color: var(--fvl-color-text-on-accent); }
+  .btn.primary:hover { background: var(--fvl-color-accent-hover); }
+  .btn.secondary { background: var(--fvl-color-bg-sunken); color: var(--fvl-color-text-primary); }
+  .btn.secondary:hover { background: var(--fvl-color-bg-hover); }
+  .btn.hold { touch-action: none; margin-left: auto; }
+  .btn.hold.held { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); transform: scale(0.97); }
+  .btn[hidden] { display: none; }
 </style>
 </head>
 <body>
 <div class="app">
   <header>
-    <h1 class="title">Two Seats of Time</h1>
-    <span class="seat" id="seat" data-seat="inside" aria-live="polite">Inside</span>
+    <div class="row">
+      <h1 class="title">Two Seats of Time</h1>
+      <span class="seat" id="seat" data-seat="inside">Inside</span>
+    </div>
+    <div class="row">
+      <span class="chapter-name" id="chapterName">1 · The two seats</span>
+    </div>
+    <div class="chapters" id="chapters"><span class="current"></span><span></span><span></span><span></span></div>
   </header>
 
-  <section class="stage" id="stage" aria-label="The score">
-    <svg id="score" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" role="img">
+  <section class="stage" id="stage" aria-label="The path">
+    <svg id="scene" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A path through fog">
+      <defs>
+        <radialGradient id="fogGrad" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="100">
+          <stop offset="0.45" stop-color="#fff" stop-opacity="1"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+        <mask id="fog" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000">
+          <circle id="fogCircle" cx="0" cy="0" r="100" fill="url(#fogGrad)"/>
+        </mask>
+      </defs>
       <g id="world">
-        <line id="staff" class="staff"></line>
-        <line id="tail" class="tail"></line>
-        <g id="notes"></g>
+        <g id="tree" mask="url(#fog)">
+          <g id="segs"></g>
+          <g id="marks"></g>
+          <g id="prints"></g>
+        </g>
         <g id="fx"></g>
+        <circle id="walker" class="walker" r="6"/>
       </g>
     </svg>
-    <p class="caption" id="caption" aria-live="polite"></p>
   </section>
 
-  <footer>
-    <button class="hold" id="hold" type="button" aria-pressed="false">Hold to trust</button>
-    <button class="about-toggle" id="aboutToggle" type="button" aria-expanded="false" aria-controls="about">About this</button>
-    <div class="about" id="about" hidden>
-      <p>Time shows itself two ways. From inside there is only now: one note sounding, a trace of the one before, nothing else in hand. From outside everything is laid out at once, and nothing moves — there is no now.</p>
-      <p>Nothing you do from inside reaches the outside. Dragging the score fails. The only way across is the hold: the outside is given, not derived. That is the claim of the paper: the two seats are joined by trust, not logic.</p>
-      <p>Tap the sounding note to pray. It re-tunes; the score does not change. Hold to trust afterwards and the re-tuned notes are there — the asking was already part of the plan.</p>
+  <div class="card">
+    <p id="caption" aria-live="polite"></p>
+    <div class="actions" id="actions">
+      <button class="btn primary" id="act1" type="button" hidden></button>
+      <button class="btn secondary" id="act2" type="button" hidden></button>
+      <button class="btn secondary hold" id="hold" type="button" aria-pressed="false">Hold to trust</button>
     </div>
-  </footer>
+  </div>
 </div>
 
 <script src="/apps/vendor/gsap/gsap.min.js"></script>
@@ -232,8 +202,6 @@
   const css = getComputedStyle(document.documentElement);
   const token = (n) => css.getPropertyValue(n).trim();
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Parse a CSS linear() easing into a GSAP ease function.
   function linearEase(str) {
     const m = str.match(/linear\(([^)]*)\)/);
     if (!m) return 'power2.out';
@@ -248,7 +216,6 @@
     };
   }
   const seconds = (n) => (reduced ? 0 : parseFloat(token(n)) / 1000 || 0.6);
-
   const spring = {};
   ['settle', 'arrive', 'grow', 'carve'].forEach((k) => {
     gsap.registerEase('fvl-' + k, linearEase(token('--fvl-motion-spring-' + k + '-easing')));
@@ -257,105 +224,267 @@
   const breatheAmp = parseFloat(token('--fvl-motion-loop-breathe-amplitude')) || 0.045;
   const breatheRate = parseFloat(token('--fvl-motion-loop-breathe-rate')) || 1.3;
 
-  // ---------- the score ----------
-  const N = 20, STEP = 64, R = 14, LEFT = 96;
-  const notes = [];
-  const melody = [0, -24, -40, -16, 8, 32, 48, 24, 0, -32, -48, -24, 8, 40, 56, 32, 0, -16, -8, 16];
-  const svg = document.getElementById('score');
-  const world = document.getElementById('world');
-  const notesG = document.getElementById('notes');
-  const fx = document.getElementById('fx');
-  const staff = document.getElementById('staff');
-  const tail = document.getElementById('tail');
+  // ---------- the tree ----------
+  // One walked path (the trunk, 0..END) with open branches at three forks. Up the screen is forward.
+  const STEP = 56, END = 40;
+  const FORKS = { 10: 'fire', 20: 'crown', 30: 'garden' };
   const NS = 'http://www.w3.org/2000/svg';
+  const $ = (id) => document.getElementById(id);
+  const svg = $('scene'), world = $('world'), segsG = $('segs'), marksG = $('marks'), printsG = $('prints'), fx = $('fx');
+  const walker = $('walker'), fogCircle = $('fogCircle'), fogGrad = $('fogGrad');
 
-  for (let i = 0; i < N; i++) {
-    const g = document.createElementNS(NS, 'g');
-    g.setAttribute('class', 'note hidden');
-    const x = LEFT + i * STEP, y = melody[i];
-    g.setAttribute('transform', `translate(${x} ${y})`);
-    const body = document.createElementNS(NS, 'circle');
-    body.setAttribute('class', 'body');
-    body.setAttribute('r', R);
-    g.appendChild(body);
-    notesG.appendChild(g);
-    notes.push({ i, x, y, el: g, body, prayed: false });
-  }
-  const WIDTH = LEFT * 2 + (N - 1) * STEP;
-  staff.setAttribute('x1', 0); staff.setAttribute('x2', WIDTH);
-  staff.setAttribute('y1', 0); staff.setAttribute('y2', 0);
+  const main = [];
+  for (let i = 0; i <= END; i++) main.push({ x: 26 * Math.sin(i * 0.55) + 8 * Math.sin(i * 1.7), y: -i * STEP });
 
-  // ---------- camera ----------
-  const INSIDE_W = 300;
-  const cam = { cx: notes[0].x, w: INSIDE_W };
-  function aspect() {
-    const r = svg.getBoundingClientRect();
-    return r.width ? r.height / r.width : 1;
+  const branches = []; // {id, fork, pts:[...], seg:[els], sub:[branch ids]}
+  function branch(id, fork, dir, len, lean) {
+    const o = main[fork];
+    const pts = [o];
+    for (let j = 1; j <= len; j++) pts.push({ x: o.x + dir * (j * STEP * lean) + 6 * Math.sin(j * 1.3), y: o.y - j * STEP * 0.92 });
+    const b = { id, fork, pts, segs: [] };
+    branches.push(b);
+    return b;
   }
+  // chapter 2: the furnace — one open branch (the fire burns)
+  branch('fire-burns', 10, 1, 5, 0.75);
+  // chapter 3: the crown — two open branches, each opening again
+  const l = branch('crown-left', 20, -1, 6, 0.7);
+  const r = branch('crown-right', 20, 1, 6, 0.7);
+  function subBranch(id, parent, at, dir, len) {
+    const o = parent.pts[at];
+    const pts = [o];
+    for (let j = 1; j <= len; j++) pts.push({ x: o.x + dir * j * STEP * 0.6, y: o.y - j * STEP * 0.9 });
+    const b = { id, fork: null, pts, segs: [] };
+    branches.push(b);
+  }
+  subBranch('crown-left-a', l, 3, -1, 3);
+  subBranch('crown-right-a', r, 3, 1, 3);
+  // chapter 4: the garden — one open branch (the cup passes)
+  branch('cup-passes', 30, -1, 5, 0.75);
+
+  function line(cls, a, b, parent) {
+    const el = document.createElementNS(NS, 'line');
+    el.setAttribute('class', cls);
+    el.setAttribute('x1', a.x); el.setAttribute('y1', a.y); el.setAttribute('x2', b.x); el.setAttribute('y2', b.y);
+    (parent || segsG).appendChild(el);
+    return el;
+  }
+  const mainSegs = [];
+  for (let i = 0; i < END; i++) mainSegs.push(line('seg walked', main[i], main[i + 1]));
+  branches.forEach((b) => { for (let j = 0; j < b.pts.length - 1; j++) b.segs.push(line('seg open', b.pts[j], b.pts[j + 1])); });
+
+  // fork dots, fire, end mark
+  function circle(cls, p, r, parent) {
+    const el = document.createElementNS(NS, 'circle');
+    el.setAttribute('class', cls); el.setAttribute('cx', p.x); el.setAttribute('cy', p.y); el.setAttribute('r', r);
+    (parent || marksG).appendChild(el);
+    return el;
+  }
+  Object.keys(FORKS).forEach((k) => circle('fork', main[+k], 4));
+  branches.filter((b) => b.fork === null).forEach((b) => circle('fork', b.pts[0], 3));
+  // the furnace sits on the open branch of fork 1
+  (function () {
+    const p = branches[0].pts[3];
+    const g = document.createElementNS(NS, 'path');
+    g.setAttribute('class', 'fire');
+    g.setAttribute('d', `M${p.x - 10},${p.y + 10} q10,-6 6,-18 q8,6 6,18 q-10,10 -24,0 z`);
+    marksG.appendChild(g);
+  })();
+  (function () {
+    const p = main[END];
+    const g = document.createElementNS(NS, 'path');
+    g.setAttribute('class', 'end');
+    g.setAttribute('d', `M${p.x},${p.y - 16} v26 M${p.x - 9},${p.y - 6} h18`);
+    marksG.appendChild(g);
+  })();
+
+  const bounds = (() => {
+    const all = main.concat(...branches.map((b) => b.pts));
+    const xs = all.map((p) => p.x), ys = all.map((p) => p.y);
+    return { minX: Math.min(...xs) - 60, maxX: Math.max(...xs) + 60, minY: Math.min(...ys) - 70, maxY: Math.max(...ys) + 70 };
+  })();
+
+  // ---------- footprints ----------
+  const printAt = (p, i, his) => {
+    const el = document.createElementNS(NS, 'ellipse');
+    el.setAttribute('class', his ? 'print his' : 'print');
+    el.setAttribute('cx', p.x + (i % 2 ? 7 : -7)); el.setAttribute('cy', p.y);
+    el.setAttribute('rx', 2.6); el.setAttribute('ry', 4.2);
+    printsG.appendChild(el);
+    return el;
+  };
+  const hisPrints = [];
+  function layHisPrints() {
+    if (hisPrints.length) return;
+    for (let i = 0; i <= END; i++) hisPrints.push(printAt(main[i], i, true));
+    const cup = branches.find((b) => b.id === 'cup-passes');
+    cup.pts.slice(1).forEach((p, j) => hisPrints.push(printAt(p, j, true)));
+    gsap.set(hisPrints, { opacity: 0 });
+    gsap.to(hisPrints, { opacity: 1, stagger: reduced ? 0 : 0.02, duration: spring.grow.duration, ease: 'fvl-grow' });
+  }
+
+  // ---------- camera and fog ----------
+  const INSIDE_W = 320, FOG_R = STEP * 1.7;
+  const cam = { cx: main[0].x, cy: main[0].y, w: INSIDE_W, fog: FOG_R };
+  function aspect() { const b = svg.getBoundingClientRect(); return b.width ? b.height / b.width : 1.6; }
   function applyCam() {
     const h = cam.w * aspect();
-    svg.setAttribute('viewBox', `${cam.cx - cam.w / 2} ${-h / 2} ${cam.w} ${h}`);
+    svg.setAttribute('viewBox', `${cam.cx - cam.w / 2} ${cam.cy - h / 2} ${cam.w} ${h}`);
+    fogCircle.setAttribute('r', cam.fog); fogGrad.setAttribute('r', cam.fog);
   }
   addEventListener('resize', applyCam);
+  function outsideBox() {
+    const w = bounds.maxX - bounds.minX, h = bounds.maxY - bounds.minY;
+    const W = Math.max(w, h / aspect());
+    return { cx: (bounds.minX + bounds.maxX) / 2, cy: (bounds.minY + bounds.maxY) / 2, w: W };
+  }
 
   // ---------- state ----------
-  let seat = 'inside';
-  let now = 0;
-  let advanceCall = null;
-  const seatEl = document.getElementById('seat');
-  const captionEl = document.getElementById('caption');
-  const say = (html) => { captionEl.innerHTML = html; };
-
-  function paintInside() {
-    notes.forEach((n) => {
-      n.el.classList.remove('now', 'trace', 'hidden');
-      if (n.i === now) n.el.classList.add('now');
-      else if (n.i === now - 1) n.el.classList.add('trace');
-      else n.el.classList.add('hidden');
+  let seat = 'inside', pos = 0, chapter = 1, waiting = null, walkCall = null, ended = false;
+  const state = { fire: null, crown: null, bet: null, prayed: new Set() };
+  const seatEl = $('seat'), captionEl = $('caption'), act1 = $('act1'), act2 = $('act2'), hold = $('hold');
+  const chapterName = $('chapterName'), chapterBars = $('chapters').children;
+  const NAMES = ['1 · The two seats', '2 · But if not', '3 · The seed and the tree', '4 · Author and finisher'];
+  let captionTimer = null;
+  function say(html, revertAfter) {
+    captionEl.innerHTML = html;
+    if (captionTimer) captionTimer.kill();
+    if (revertAfter) captionTimer = gsap.delayedCall(revertAfter, () => { if (seat === 'inside' && !waiting) captionEl.innerHTML = idleLine(); });
+  }
+  function actions(a, b) {
+    [[act1, a], [act2, b]].forEach(([el, def]) => {
+      if (!def) { el.hidden = true; el.onclick = null; return; }
+      el.hidden = false; el.textContent = def.label; el.onclick = def.run;
     });
-    if (now > 0) {
-      const a = notes[now - 1], b = notes[now];
-      tail.setAttribute('x1', a.x); tail.setAttribute('y1', a.y);
-      tail.setAttribute('x2', b.x); tail.setAttribute('y2', b.y);
-      gsap.fromTo(tail, { opacity: 0.5 }, { opacity: 0, duration: spring.settle.duration, ease: 'none' });
-    } else {
-      gsap.set(tail, { opacity: 0 });
-    }
   }
-  function paintOutside() {
-    gsap.killTweensOf(tail); gsap.set(tail, { opacity: 0 });
-    notes.forEach((n) => n.el.classList.remove('now', 'trace', 'hidden'));
+  function setChapter(c) {
+    chapter = c;
+    chapterName.textContent = NAMES[c - 1];
+    Array.from(chapterBars).forEach((el, i) => { el.className = i + 1 < c ? 'done' : i + 1 === c ? 'current' : ''; });
+  }
+  function idleLine() {
+    switch (chapter) {
+      case 1: return '<b>Inside.</b> The path exists one step ahead. Your prints fade behind. Tap where you stand to pray.';
+      case 2: return state.fire === 'commit' ? 'Walking on. The commitment is already finished.' : 'Walking on. Nothing of yours was fixed.';
+      case 3: return state.crown ? 'The branches close behind you into one trunk. That is the fixed past.' : 'Walking on.';
+      case 4: return 'Prints ahead of yours. Someone walked this first. Follow them.';
+    }
+    return '';
   }
 
-  function advance() {
-    if (seat !== 'inside') return;
-    if (now >= N - 1) {
-      say('The score ends here.');
-      advanceCall = gsap.delayedCall(2.4, () => { now = 0; cam.cx = notes[0].x; applyCam(); paintInside(); say(insideLine()); schedule(); });
-      return;
+  // ---------- walking ----------
+  function moveWalkerTo(p, tween) {
+    if (tween) {
+      gsap.to(walker, { attr: { cx: p.x, cy: p.y }, ...spring.arrive });
+      gsap.to(cam, { cx: p.x, cy: p.y, ...spring.arrive, onUpdate: applyCam });
+      gsap.to(fogCircle, { attr: { cx: p.x, cy: p.y }, ...spring.arrive });
+      gsap.to(fogGrad, { attr: { cx: p.x, cy: p.y }, ...spring.arrive });
+    } else {
+      walker.setAttribute('cx', p.x); walker.setAttribute('cy', p.y);
+      fogCircle.setAttribute('cx', p.x); fogCircle.setAttribute('cy', p.y);
+      fogGrad.setAttribute('cx', p.x); fogGrad.setAttribute('cy', p.y);
+      cam.cx = p.x; cam.cy = p.y; applyCam();
     }
-    now += 1;
-    paintInside();
-    gsap.to(cam, { cx: notes[now].x, ...spring.arrive, onUpdate: applyCam });
+  }
+  const myPrints = [];
+  function step() {
+    if (seat !== 'inside' || waiting || ended) return;
+    if (pos >= END) { finish(); return; }
+    myPrints.push(printAt(main[pos], pos, false));
+    pos += 1;
+    moveWalkerTo(main[pos], true);
+    arrive(pos);
     schedule();
   }
-  function schedule() {
-    if (advanceCall) advanceCall.kill();
-    advanceCall = gsap.delayedCall(reduced ? 2.2 : 1.8, advance);
+  function schedule(delay) {
+    if (walkCall) walkCall.kill();
+    walkCall = gsap.delayedCall(delay ?? (reduced ? 2.4 : 1.9), step);
   }
-  const insideLine = () => '<b>Inside.</b> One note sounding. A trace of the one before. Nothing ahead.';
-  const outsideLine = () => {
-    const k = notes.filter((n) => n.prayed).length;
-    return '<b>Outside.</b> The whole score at once. Nothing moves. There is no now.' +
-      (k ? ` ${k === 1 ? 'One note' : k + ' notes'} you re-tuned ${k === 1 ? 'is' : 'are'} there — the score is the one it always was.` : '');
-  };
+  function pause(fn) { waiting = fn; if (walkCall) walkCall.kill(); }
+  function resume(delay) { waiting = null; actions(null, null); schedule(delay); }
 
-  // breathe loop on the sounding note
+  function arrive(i) {
+    if (i === 10) {
+      setChapter(2);
+      pause(true);
+      say('<b>The path forks.</b> One way the fire goes out, the other it burns. From here you cannot see which. Say it before you know.');
+      actions(
+        { label: 'But if not', run: () => {
+          state.fire = 'commit';
+          commitBranches(10);
+          say('<b>Said.</b> "If he delivers us, good. But if not, we will not serve." Finished before the outcome.');
+          resume(2.2);
+        } },
+        { label: 'Wait and see', run: () => {
+          state.fire = 'wait';
+          say('Only waiting. Nothing asked, nothing let go, nothing fixed.');
+          resume(2.2);
+        } }
+      );
+    } else if (i === 12) {
+      say(state.fire === 'commit'
+        ? '<b>The fire went out.</b> It would have held on the other branch too. The deliverance was for the king watching, not the reason for the faith.'
+        : '<b>The fire went out.</b> You were carried past it. Nothing of yours was in it.', 6);
+    } else if (i === 20) {
+      setChapter(3);
+      pause(true);
+      say('<b>From inside the future is a tree.</b> Three ways ahead, each opening onto more. A wish bets on one branch. Faith is said on all of them.');
+      actions(
+        { label: 'But if not', run: () => {
+          state.crown = 'commit';
+          commitBranches(20);
+          say('<b>Said on every branch.</b> It leaves the weather open and fixes the one thing that was yours to fix: what you do at the fork.');
+          resume(2.4);
+        } },
+        { label: 'Bet on one', run: () => {
+          const pick = ['main', 'crown-left', 'crown-right'][Math.floor(Math.random() * 3)];
+          state.crown = 'bet'; state.bet = pick;
+          betOn(20, pick);
+          say(`<b>A wish, placed on one branch.</b> ${pick === 'main' ? 'It may land. It still fixes nothing.' : 'If the walk goes another way, it goes dark.'}`);
+          resume(2.4);
+        } }
+      );
+    } else if (i === 22) {
+      if (state.crown === 'bet') {
+        const landed = state.bet === 'main';
+        if (!landed) branches.find((b) => b.id === state.bet).segs[0].classList.add('dark');
+        say(landed ? '<b>The wish happened to land.</b> It fixed nothing; the branch was never yours to pick.'
+                   : '<b>The wish went dark</b> on the branch that was not walked. The commitment would still be here.', 6);
+      } else if (state.crown === 'commit') {
+        say('<b>The commitment held.</b> The other branches close behind you. Faith fixes the self and releases the world.', 6);
+      }
+    } else if (i === 29) {
+      setChapter(4);
+      pause(true);
+      layHisPrints();
+      say('<b>Prints ahead of yours.</b> Someone stood exactly here first, not reading ahead, and walked it. At the fork his prints go onto every branch.');
+      actions({ label: 'Follow', run: () => resume(0.6) }, null);
+    } else if (i === 31) {
+      say('<b>Begun on every branch, finished on the one walked.</b> "Not my will, but yours" was the first "but if not", said from inside with a real will.', 7);
+    } else if (i === 36) {
+      say('Faith is not blind. It follows footprints.', 5);
+    }
+  }
+
+  function commitBranches(fork) {
+    mainSegs[fork].classList.add('commit');
+    branches.filter((b) => b.fork === fork).forEach((b) => b.segs[0].classList.add('commit'));
+  }
+  function betOn(fork, id) {
+    (id === 'main' ? mainSegs[fork] : branches.find((b) => b.id === id).segs[0]).classList.add('bet');
+  }
+
+  function finish() {
+    ended = true;
+    pause(true);
+    say('<b>It is finished.</b> One path, four chapters: two seats joined by trust; a faith finished before the outcome; said on every branch; walked first by the author. Hold to trust and see the whole of it.');
+    actions({ label: 'Walk again', run: () => location.reload() }, null);
+  }
+
+  // ---------- breathe ----------
   gsap.ticker.add((t) => {
     if (seat !== 'inside' || reduced) return;
-    const n = notes[now];
-    const s = 1 + breatheAmp * Math.sin(t * breatheRate);
-    n.body.setAttribute('transform', `scale(${s})`);
+    walker.setAttribute('r', 6 * (1 + breatheAmp * Math.sin(t * breatheRate)));
   });
 
   // ---------- the bridge ----------
@@ -364,25 +493,25 @@
     seat = 'outside';
     seatEl.dataset.seat = 'outside'; seatEl.textContent = 'Outside';
     hold.classList.add('held'); hold.setAttribute('aria-pressed', 'true');
-    if (advanceCall) advanceCall.kill();
-    notes[now].body.removeAttribute('transform');
-    paintOutside();
+    if (walkCall) walkCall.kill();
     gsap.killTweensOf(cam);
-    gsap.to(cam, { cx: WIDTH / 2, w: WIDTH + 48, ...spring.settle, onUpdate: applyCam });
-    say(outsideLine());
+    const box = outsideBox();
+    gsap.to(cam, { ...box, fog: 20000, ...spring.settle, onUpdate: applyCam });
+    walker.setAttribute('r', 6);
+    const n = state.prayed.size;
+    say('<b>Outside.</b> The whole path at once. Nothing moves; there is no now. The open branches are what a will could fix at each fork.' +
+      (n ? ` ${n === 1 ? 'One lantern' : n + ' lanterns'} where you prayed — the path never bent.` : '') +
+      (chapter >= 4 ? ' His prints run the whole way: the gap was crossed first, from the far side.' : ''));
   }
   function enterInside() {
     if (seat === 'inside') return;
     seat = 'inside';
     seatEl.dataset.seat = 'inside'; seatEl.textContent = 'Inside';
     hold.classList.remove('held'); hold.setAttribute('aria-pressed', 'false');
-    paintInside();
     gsap.killTweensOf(cam);
-    gsap.to(cam, { cx: notes[now].x, w: INSIDE_W, ...spring.arrive, onUpdate: applyCam, onComplete: schedule });
-    say(insideLine());
+    gsap.to(cam, { cx: main[pos].x, cy: main[pos].y, w: INSIDE_W, fog: FOG_R, ...spring.arrive, onUpdate: applyCam, onComplete: () => { if (!waiting && !ended) schedule(0.6); } });
+    say(waiting ? captionEl.innerHTML : idleLine());
   }
-
-  const hold = document.getElementById('hold');
   hold.addEventListener('pointerdown', (e) => { e.preventDefault(); hold.setPointerCapture(e.pointerId); enterOutside(); });
   ['pointerup', 'pointercancel'].forEach((ev) => hold.addEventListener(ev, enterInside));
   hold.addEventListener('keydown', (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); enterOutside(); } });
@@ -390,8 +519,8 @@
   hold.addEventListener('contextmenu', (e) => e.preventDefault());
   addEventListener('blur', enterInside);
 
-  // ---------- inside: drag fails, tap prays ----------
-  const stage = document.getElementById('stage');
+  // ---------- inside: looking ahead fails, tapping prays ----------
+  const stage = $('stage');
   let drag = null;
   stage.addEventListener('contextmenu', (e) => e.preventDefault());
   svg.addEventListener('pointerdown', (e) => {
@@ -402,19 +531,21 @@
   });
   svg.addEventListener('pointermove', (e) => {
     if (!drag) return;
-    const dx = e.clientX - drag.x0;
-    drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(e.clientY - drag.y0));
-    const scale = cam.w / svg.getBoundingClientRect().width; // px → user units
-    const resist = 28 * Math.tanh((dx * scale) / 140);
-    gsap.set(world, { x: resist });
+    const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+    drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
+    const scale = cam.w / svg.getBoundingClientRect().width;
+    gsap.set(world, { x: 24 * Math.tanh((dx * scale) / 140), y: 24 * Math.tanh((dy * scale) / 140) });
   });
   function endDrag(e) {
     if (!drag) return;
     const d = drag; drag = null;
-    gsap.to(world, { x: 0, ...spring.arrive });
+    gsap.to(world, { x: 0, y: 0, ...spring.arrive });
     if (d.moved > 10) {
-      say('<b>No.</b> From inside you cannot look ahead, and you cannot look back past the trace.');
-      gsap.delayedCall(2.4, () => { if (seat === 'inside') say(insideLine()); });
+      // worry: the fog flares and closes again
+      gsap.fromTo(cam, { fog: FOG_R * 1.35 }, { fog: FOG_R, ...spring.settle, onUpdate: applyCam });
+      say(chapter === 3
+        ? '<b>Worry.</b> Reaching for the whole tree from inside, and failing. Stay at your point; the tree is held.'
+        : '<b>No.</b> From inside you cannot look ahead, and you cannot look back past the trace.', 3);
       return;
     }
     if (e && e.type === 'pointerup') tryPray(e);
@@ -423,41 +554,23 @@
   svg.addEventListener('pointercancel', endDrag);
 
   function tryPray(e) {
-    const n = notes[now];
+    const p = main[pos];
     const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
-    const p = pt.matrixTransform(svg.getScreenCTM().inverse());
-    const hit = Math.hypot(p.x - n.x, p.y - n.y) <= R * 2.2;
-    if (!hit) return;
-    const first = !n.prayed;
-    n.prayed = true;
-    n.el.classList.add('prayed');
-    const ring = document.createElementNS(NS, 'circle');
-    ring.setAttribute('class', 'ripple');
-    ring.setAttribute('cx', n.x); ring.setAttribute('cy', n.y); ring.setAttribute('r', R);
-    fx.appendChild(ring);
-    gsap.to(ring, { attr: { r: R * 4.5 }, opacity: 0, ...spring.grow, onComplete: () => ring.remove() });
-    say(first
-      ? '<b>Prayer.</b> The note re-tuned. The score did not move.'
-      : 'Still in tune. Still the same score.');
-    gsap.delayedCall(2.4, () => { if (seat === 'inside') say(insideLine()); });
+    const q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    if (Math.hypot(q.x - p.x, q.y - p.y) > 26) return;
+    const first = !state.prayed.has(pos);
+    if (first) { state.prayed.add(pos); circle('lantern', p, 10); }
+    const ring = circle('ripple', p, 6, fx);
+    gsap.to(ring, { attr: { r: 56 }, opacity: 0, ...spring.grow, onComplete: () => ring.remove() });
+    say(first ? '<b>Prayer.</b> A lantern where you stand. You see where you are more clearly; the path did not bend.'
+              : 'Still lit. Still the same path.', 3);
   }
-
-  // ---------- about ----------
-  const aboutToggle = document.getElementById('aboutToggle');
-  const about = document.getElementById('about');
-  aboutToggle.addEventListener('click', () => {
-    const open = about.hidden;
-    about.hidden = !open;
-    aboutToggle.setAttribute('aria-expanded', String(open));
-    aboutToggle.textContent = open ? 'Less' : 'About this';
-    applyCam();
-  });
 
   // ---------- start ----------
   applyCam();
-  paintInside();
-  say(insideLine());
-  gsap.delayedCall(1.2, schedule);
+  moveWalkerTo(main[0], false);
+  say(idleLine());
+  gsap.delayedCall(1.6, () => schedule(0));
 })();
 </script>
 </body>
