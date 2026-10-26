@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f7fa" media="(prefers-color-scheme: light)">
+<title>Two Seats of Time</title>
+<link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fvl.css">
+<script>
+  // FVL context: daylight from the clock (dawn 05–09, day 09–17, dusk 17–21, night 21–05). Theme follows the OS.
+  (function () {
+    var h = new Date().getHours();
+    document.documentElement.dataset.daylight = h < 5 ? 'night' : h < 9 ? 'dawn' : h < 17 ? 'day' : h < 21 ? 'dusk' : 'night';
+  })();
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--fvl-color-bg-canvas);
+    color: var(--fvl-color-text-primary);
+    font-family: var(--fvl-type-body-family);
+    font-size: var(--fvl-type-body-size);
+    line-height: var(--fvl-type-body-line-height);
+    letter-spacing: var(--fvl-type-body-tracking);
+    font-feature-settings: var(--fvl-type-body-features);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+    -webkit-touch-callout: none;
+  }
+
+  .app {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--fvl-space-icon-gap);
+    padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) 0;
+  }
+  .title {
+    margin: 0;
+    font-family: var(--fvl-type-h3-family);
+    font-size: var(--fvl-type-h3-size);
+    font-weight: var(--fvl-type-h3-weight);
+    line-height: var(--fvl-type-h3-line-height);
+    letter-spacing: var(--fvl-type-h3-tracking);
+  }
+  .seat {
+    font-size: var(--fvl-type-label-size);
+    font-weight: var(--fvl-type-label-weight);
+    letter-spacing: var(--fvl-type-label-tracking);
+    line-height: var(--fvl-type-label-line-height);
+    color: var(--fvl-color-text-secondary);
+    transition: color var(--fvl-motion-tone);
+  }
+  .seat[data-seat="outside"] { color: var(--fvl-color-accent-text); }
+
+  /* ---- stage ---- */
+  .stage {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .stage svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 16rem;
+    overflow: visible;
+  }
+
+  .staff {
+    stroke: var(--fvl-color-line-subtle);
+    stroke-width: var(--fvl-stroke-default);
+    vector-effect: non-scaling-stroke;
+    fill: none;
+  }
+  .tail {
+    stroke: var(--fvl-color-text-muted);
+    stroke-width: var(--fvl-stroke-default);
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+    fill: none;
+    opacity: 0;
+  }
+
+  .note { transition: opacity var(--fvl-motion-tone); }
+  .note .body {
+    fill: var(--fvl-color-bg-canvas);
+    stroke: var(--fvl-color-line-strong);
+    stroke-width: var(--fvl-stroke-default);
+    vector-effect: non-scaling-stroke;
+    transition: fill var(--fvl-motion-tone), stroke var(--fvl-motion-tone);
+  }
+  .note.hidden { opacity: 0; }
+  .note.trace  { opacity: 0.4; }
+  .note.now .body { fill: var(--fvl-color-accent-default); stroke: var(--fvl-color-accent-default); }
+  .note.prayed .body { fill: var(--fvl-color-accent-subtle); stroke: var(--fvl-color-accent-default); }
+  .note.now.prayed .body { fill: var(--fvl-color-accent-default); stroke: var(--fvl-color-accent-default); }
+  .ripple {
+    fill: none;
+    stroke: var(--fvl-color-accent-default);
+    stroke-width: var(--fvl-stroke-default);
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+
+  .caption {
+    min-height: 3lh;
+    margin: 0;
+    padding: 0 var(--fvl-layout-margin-compact);
+    text-align: center;
+    color: var(--fvl-color-text-secondary);
+    max-width: var(--fvl-layout-width-prose);
+    justify-self: center;
+  }
+  .caption b { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); }
+
+  /* ---- footer ---- */
+  footer {
+    display: grid;
+    justify-items: center;
+    gap: var(--fvl-space-stack-group);
+    padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) var(--fvl-space-stack-section);
+  }
+  .hold {
+    appearance: none;
+    border: 0;
+    margin: 0;
+    height: var(--fvl-size-control-lg);
+    min-width: 12rem;
+    padding: 0 var(--fvl-space-inset-control-x);
+    border-radius: var(--fvl-radius-pill);
+    background: var(--fvl-color-bg-surface);
+    color: var(--fvl-color-text-primary);
+    font: inherit;
+    font-size: var(--fvl-type-label-size);
+    font-weight: var(--fvl-type-label-weight);
+    letter-spacing: var(--fvl-type-label-tracking);
+    cursor: pointer;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: background var(--fvl-motion-tone), color var(--fvl-motion-tone), transform var(--fvl-motion-spring-press-duration) var(--fvl-motion-spring-press-easing);
+  }
+  .hold:hover { background: var(--fvl-color-bg-hover); }
+  .hold.held { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); transform: scale(0.98); }
+  .hold:focus-visible {
+    outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring);
+    outline-offset: var(--fvl-stroke-focus-offset);
+  }
+
+  .about-toggle {
+    appearance: none;
+    border: 0;
+    background: none;
+    padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x);
+    min-height: var(--fvl-size-target-min);
+    border-radius: var(--fvl-radius-control);
+    color: var(--fvl-color-text-muted);
+    font: inherit;
+    font-size: var(--fvl-type-small-size);
+    cursor: pointer;
+  }
+  .about-toggle:focus-visible {
+    outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring);
+    outline-offset: var(--fvl-stroke-focus-offset);
+  }
+  .about {
+    max-width: var(--fvl-layout-width-prose);
+    color: var(--fvl-color-text-secondary);
+    font-size: var(--fvl-type-small-size);
+    line-height: var(--fvl-type-small-line-height);
+    display: grid;
+    gap: var(--fvl-space-stack-related);
+  }
+  .about p { margin: 0; }
+  .about[hidden] { display: none; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1 class="title">Two Seats of Time</h1>
+    <span class="seat" id="seat" data-seat="inside" aria-live="polite">Inside</span>
+  </header>
+
+  <section class="stage" id="stage" aria-label="The score">
+    <svg id="score" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" role="img">
+      <g id="world">
+        <line id="staff" class="staff"></line>
+        <line id="tail" class="tail"></line>
+        <g id="notes"></g>
+        <g id="fx"></g>
+      </g>
+    </svg>
+    <p class="caption" id="caption" aria-live="polite"></p>
+  </section>
+
+  <footer>
+    <button class="hold" id="hold" type="button" aria-pressed="false">Hold to trust</button>
+    <button class="about-toggle" id="aboutToggle" type="button" aria-expanded="false" aria-controls="about">About this</button>
+    <div class="about" id="about" hidden>
+      <p>Time shows itself two ways. From inside there is only now: one note sounding, a trace of the one before, nothing else in hand. From outside everything is laid out at once, and nothing moves — there is no now.</p>
+      <p>Nothing you do from inside reaches the outside. Dragging the score fails. The only way across is the hold: the outside is given, not derived. That is the claim of the paper: the two seats are joined by trust, not logic.</p>
+      <p>Tap the sounding note to pray. It re-tunes; the score does not change. Hold to trust afterwards and the re-tuned notes are there — the asking was already part of the plan.</p>
+    </div>
+  </footer>
+</div>
+
+<script src="/apps/vendor/gsap/gsap.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // ---------- FVL motion → GSAP ----------
+  const css = getComputedStyle(document.documentElement);
+  const token = (n) => css.getPropertyValue(n).trim();
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Parse a CSS linear() easing into a GSAP ease function.
+  function linearEase(str) {
+    const m = str.match(/linear\(([^)]*)\)/);
+    if (!m) return 'power2.out';
+    const pts = m[1].split(',').map(Number).filter((n) => !isNaN(n));
+    if (pts.length < 2) return 'power2.out';
+    const n = pts.length - 1;
+    return (p) => {
+      if (p <= 0) return pts[0];
+      if (p >= 1) return pts[n];
+      const i = Math.floor(p * n), f = p * n - i;
+      return pts[i] + (pts[i + 1] - pts[i]) * f;
+    };
+  }
+  const seconds = (n) => (reduced ? 0 : parseFloat(token(n)) / 1000 || 0.6);
+
+  const spring = {};
+  ['settle', 'arrive', 'grow', 'carve'].forEach((k) => {
+    gsap.registerEase('fvl-' + k, linearEase(token('--fvl-motion-spring-' + k + '-easing')));
+    spring[k] = { ease: 'fvl-' + k, duration: seconds('--fvl-motion-spring-' + k + '-duration') };
+  });
+  const breatheAmp = parseFloat(token('--fvl-motion-loop-breathe-amplitude')) || 0.045;
+  const breatheRate = parseFloat(token('--fvl-motion-loop-breathe-rate')) || 1.3;
+
+  // ---------- the score ----------
+  const N = 20, STEP = 64, R = 14, LEFT = 96;
+  const notes = [];
+  const melody = [0, -24, -40, -16, 8, 32, 48, 24, 0, -32, -48, -24, 8, 40, 56, 32, 0, -16, -8, 16];
+  const svg = document.getElementById('score');
+  const world = document.getElementById('world');
+  const notesG = document.getElementById('notes');
+  const fx = document.getElementById('fx');
+  const staff = document.getElementById('staff');
+  const tail = document.getElementById('tail');
+  const NS = 'http://www.w3.org/2000/svg';
+
+  for (let i = 0; i < N; i++) {
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'note hidden');
+    const x = LEFT + i * STEP, y = melody[i];
+    g.setAttribute('transform', `translate(${x} ${y})`);
+    const body = document.createElementNS(NS, 'circle');
+    body.setAttribute('class', 'body');
+    body.setAttribute('r', R);
+    g.appendChild(body);
+    notesG.appendChild(g);
+    notes.push({ i, x, y, el: g, body, prayed: false });
+  }
+  const WIDTH = LEFT * 2 + (N - 1) * STEP;
+  staff.setAttribute('x1', 0); staff.setAttribute('x2', WIDTH);
+  staff.setAttribute('y1', 0); staff.setAttribute('y2', 0);
+
+  // ---------- camera ----------
+  const INSIDE_W = 300;
+  const cam = { cx: notes[0].x, w: INSIDE_W };
+  function aspect() {
+    const r = svg.getBoundingClientRect();
+    return r.width ? r.height / r.width : 1;
+  }
+  function applyCam() {
+    const h = cam.w * aspect();
+    svg.setAttribute('viewBox', `${cam.cx - cam.w / 2} ${-h / 2} ${cam.w} ${h}`);
+  }
+  addEventListener('resize', applyCam);
+
+  // ---------- state ----------
+  let seat = 'inside';
+  let now = 0;
+  let advanceCall = null;
+  const seatEl = document.getElementById('seat');
+  const captionEl = document.getElementById('caption');
+  const say = (html) => { captionEl.innerHTML = html; };
+
+  function paintInside() {
+    notes.forEach((n) => {
+      n.el.classList.remove('now', 'trace', 'hidden');
+      if (n.i === now) n.el.classList.add('now');
+      else if (n.i === now - 1) n.el.classList.add('trace');
+      else n.el.classList.add('hidden');
+    });
+    if (now > 0) {
+      const a = notes[now - 1], b = notes[now];
+      tail.setAttribute('x1', a.x); tail.setAttribute('y1', a.y);
+      tail.setAttribute('x2', b.x); tail.setAttribute('y2', b.y);
+      gsap.fromTo(tail, { opacity: 0.5 }, { opacity: 0, duration: spring.settle.duration, ease: 'none' });
+    } else {
+      gsap.set(tail, { opacity: 0 });
+    }
+  }
+  function paintOutside() {
+    gsap.killTweensOf(tail); gsap.set(tail, { opacity: 0 });
+    notes.forEach((n) => n.el.classList.remove('now', 'trace', 'hidden'));
+  }
+
+  function advance() {
+    if (seat !== 'inside') return;
+    if (now >= N - 1) {
+      say('The score ends here.');
+      advanceCall = gsap.delayedCall(2.4, () => { now = 0; cam.cx = notes[0].x; applyCam(); paintInside(); say(insideLine()); schedule(); });
+      return;
+    }
+    now += 1;
+    paintInside();
+    gsap.to(cam, { cx: notes[now].x, ...spring.arrive, onUpdate: applyCam });
+    schedule();
+  }
+  function schedule() {
+    if (advanceCall) advanceCall.kill();
+    advanceCall = gsap.delayedCall(reduced ? 2.2 : 1.8, advance);
+  }
+  const insideLine = () => '<b>Inside.</b> One note sounding. A trace of the one before. Nothing ahead.';
+  const outsideLine = () => {
+    const k = notes.filter((n) => n.prayed).length;
+    return '<b>Outside.</b> The whole score at once. Nothing moves. There is no now.' +
+      (k ? ` ${k === 1 ? 'One note' : k + ' notes'} you re-tuned ${k === 1 ? 'is' : 'are'} there — the score is the one it always was.` : '');
+  };
+
+  // breathe loop on the sounding note
+  gsap.ticker.add((t) => {
+    if (seat !== 'inside' || reduced) return;
+    const n = notes[now];
+    const s = 1 + breatheAmp * Math.sin(t * breatheRate);
+    n.body.setAttribute('transform', `scale(${s})`);
+  });
+
+  // ---------- the bridge ----------
+  function enterOutside() {
+    if (seat === 'outside') return;
+    seat = 'outside';
+    seatEl.dataset.seat = 'outside'; seatEl.textContent = 'Outside';
+    hold.classList.add('held'); hold.setAttribute('aria-pressed', 'true');
+    if (advanceCall) advanceCall.kill();
+    notes[now].body.removeAttribute('transform');
+    paintOutside();
+    gsap.killTweensOf(cam);
+    gsap.to(cam, { cx: WIDTH / 2, w: WIDTH + 48, ...spring.settle, onUpdate: applyCam });
+    say(outsideLine());
+  }
+  function enterInside() {
+    if (seat === 'inside') return;
+    seat = 'inside';
+    seatEl.dataset.seat = 'inside'; seatEl.textContent = 'Inside';
+    hold.classList.remove('held'); hold.setAttribute('aria-pressed', 'false');
+    paintInside();
+    gsap.killTweensOf(cam);
+    gsap.to(cam, { cx: notes[now].x, w: INSIDE_W, ...spring.arrive, onUpdate: applyCam, onComplete: schedule });
+    say(insideLine());
+  }
+
+  const hold = document.getElementById('hold');
+  hold.addEventListener('pointerdown', (e) => { e.preventDefault(); hold.setPointerCapture(e.pointerId); enterOutside(); });
+  ['pointerup', 'pointercancel'].forEach((ev) => hold.addEventListener(ev, enterInside));
+  hold.addEventListener('keydown', (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); enterOutside(); } });
+  hold.addEventListener('keyup', (e) => { if (e.code === 'Space' || e.code === 'Enter') enterInside(); });
+  hold.addEventListener('contextmenu', (e) => e.preventDefault());
+  addEventListener('blur', enterInside);
+
+  // ---------- inside: drag fails, tap prays ----------
+  const stage = document.getElementById('stage');
+  let drag = null;
+  stage.addEventListener('contextmenu', (e) => e.preventDefault());
+  svg.addEventListener('pointerdown', (e) => {
+    if (seat !== 'inside') return;
+    svg.setPointerCapture(e.pointerId);
+    drag = { x0: e.clientX, y0: e.clientY, moved: 0 };
+    gsap.killTweensOf(world);
+  });
+  svg.addEventListener('pointermove', (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x0;
+    drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(e.clientY - drag.y0));
+    const scale = cam.w / svg.getBoundingClientRect().width; // px → user units
+    const resist = 28 * Math.tanh((dx * scale) / 140);
+    gsap.set(world, { x: resist });
+  });
+  function endDrag(e) {
+    if (!drag) return;
+    const d = drag; drag = null;
+    gsap.to(world, { x: 0, ...spring.arrive });
+    if (d.moved > 10) {
+      say('<b>No.</b> From inside you cannot look ahead, and you cannot look back past the trace.');
+      gsap.delayedCall(2.4, () => { if (seat === 'inside') say(insideLine()); });
+      return;
+    }
+    if (e && e.type === 'pointerup') tryPray(e);
+  }
+  svg.addEventListener('pointerup', endDrag);
+  svg.addEventListener('pointercancel', endDrag);
+
+  function tryPray(e) {
+    const n = notes[now];
+    const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
+    const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+    const hit = Math.hypot(p.x - n.x, p.y - n.y) <= R * 2.2;
+    if (!hit) return;
+    const first = !n.prayed;
+    n.prayed = true;
+    n.el.classList.add('prayed');
+    const ring = document.createElementNS(NS, 'circle');
+    ring.setAttribute('class', 'ripple');
+    ring.setAttribute('cx', n.x); ring.setAttribute('cy', n.y); ring.setAttribute('r', R);
+    fx.appendChild(ring);
+    gsap.to(ring, { attr: { r: R * 4.5 }, opacity: 0, ...spring.grow, onComplete: () => ring.remove() });
+    say(first
+      ? '<b>Prayer.</b> The note re-tuned. The score did not move.'
+      : 'Still in tune. Still the same score.');
+    gsap.delayedCall(2.4, () => { if (seat === 'inside') say(insideLine()); });
+  }
+
+  // ---------- about ----------
+  const aboutToggle = document.getElementById('aboutToggle');
+  const about = document.getElementById('about');
+  aboutToggle.addEventListener('click', () => {
+    const open = about.hidden;
+    about.hidden = !open;
+    aboutToggle.setAttribute('aria-expanded', String(open));
+    aboutToggle.textContent = open ? 'Less' : 'About this';
+    applyCam();
+  });
+
+  // ---------- start ----------
+  applyCam();
+  paintInside();
+  say(insideLine());
+  gsap.delayedCall(1.2, schedule);
+})();
+</script>
+</body>
+</html>
