@@ -11,6 +11,17 @@
 - **Full TSK Index & Live 340,000-Row Dataset Loader:** Pre-loaded with 204 high-confidence Treasury of Scripture Knowledge (TSK) links, plus an in-browser TSV/CSV parser that lets users upload the complete 344,799-row `cross_references.txt` dataset from [OpenBible.info](https://www.openbible.info/labs/cross-references/) and filter by confidence votes.
 - **Saved Study Notes & Markdown Export:** Bookmark passages in `localStorage` and export your study collection to Markdown with one click.
 
+## Reading layout (index.html)
+
+The default page is a calm reader built on the Flow Visual Language (FVL) and GSAP:
+
+- **Browse** with search, category chips and one filter drawer (book and relationship). Rows show what you have read and saved, and **Continue reading** picks up where you stopped.
+- **Tap a bridge** and it grows into a full-screen reader: promise, fulfilment, why they connect. The rest of the app is hidden. The top and bottom bars step aside as you read down and return on the way up.
+- **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.
+- **Threads** read as numbered sequences, the **Map** draws every bridge as an arc, **Saved** collects starred bridges, and the **Index** holds the TSK links with the 344,799-row OpenBible importer.
+
+Files: `index.html`, `ui.css`, `ui.js`, data loaded from `data/*.json`. The original single-file layout is kept as `bible_prophecy_explorer.html` (rebuilt by `scripts/generate_app.py`).
+
 ## Repository Structure
 
 ```text

@@ -1804,8 +1804,9 @@ final_html = (
 
 import os
 _root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# index.html is the redesigned reader (index.html + ui.css + ui.js, data loaded from data/*.json).
+# This generator builds the classic single-file layout only.
 for path in [
-    os.path.join(_root, "index.html"),
     os.path.join(_root, "bible_prophecy_explorer.html")
 ]:
     with open(path, "w", encoding="utf-8") as f:
