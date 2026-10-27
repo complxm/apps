@@ -1,0 +1,534 @@
+{
+  "old_testament": [
+    {
+      "name": "Genesis",
+      "abbrev": "Gen",
+      "section": "law",
+      "chapters": 50,
+      "x": 14.0,
+      "testament": "OT"
+    },
+    {
+      "name": "Exodus",
+      "abbrev": "Exod",
+      "section": "law",
+      "chapters": 40,
+      "x": 27.2,
+      "testament": "OT"
+    },
+    {
+      "name": "Leviticus",
+      "abbrev": "Lev",
+      "section": "law",
+      "chapters": 27,
+      "x": 40.3,
+      "testament": "OT"
+    },
+    {
+      "name": "Numbers",
+      "abbrev": "Num",
+      "section": "law",
+      "chapters": 36,
+      "x": 53.5,
+      "testament": "OT"
+    },
+    {
+      "name": "Deuteronomy",
+      "abbrev": "Deut",
+      "section": "law",
+      "chapters": 34,
+      "x": 66.6,
+      "testament": "OT"
+    },
+    {
+      "name": "Joshua",
+      "abbrev": "Josh",
+      "section": "history",
+      "chapters": 24,
+      "x": 79.8,
+      "testament": "OT"
+    },
+    {
+      "name": "Judges",
+      "abbrev": "Judg",
+      "section": "history",
+      "chapters": 21,
+      "x": 92.9,
+      "testament": "OT"
+    },
+    {
+      "name": "Ruth",
+      "abbrev": "Ruth",
+      "section": "history",
+      "chapters": 4,
+      "x": 106.1,
+      "testament": "OT"
+    },
+    {
+      "name": "1 Samuel",
+      "abbrev": "1Sam",
+      "section": "history",
+      "chapters": 31,
+      "x": 119.3,
+      "testament": "OT"
+    },
+    {
+      "name": "2 Samuel",
+      "abbrev": "2Sam",
+      "section": "history",
+      "chapters": 24,
+      "x": 132.4,
+      "testament": "OT"
+    },
+    {
+      "name": "1 Kings",
+      "abbrev": "1Kgs",
+      "section": "history",
+      "chapters": 22,
+      "x": 145.6,
+      "testament": "OT"
+    },
+    {
+      "name": "2 Kings",
+      "abbrev": "2Kgs",
+      "section": "history",
+      "chapters": 25,
+      "x": 158.7,
+      "testament": "OT"
+    },
+    {
+      "name": "1 Chronicles",
+      "abbrev": "1Chr",
+      "section": "history",
+      "chapters": 29,
+      "x": 171.9,
+      "testament": "OT"
+    },
+    {
+      "name": "2 Chronicles",
+      "abbrev": "2Chr",
+      "section": "history",
+      "chapters": 36,
+      "x": 185.1,
+      "testament": "OT"
+    },
+    {
+      "name": "Ezra",
+      "abbrev": "Ezra",
+      "section": "history",
+      "chapters": 10,
+      "x": 198.2,
+      "testament": "OT"
+    },
+    {
+      "name": "Nehemiah",
+      "abbrev": "Neh",
+      "section": "history",
+      "chapters": 13,
+      "x": 211.4,
+      "testament": "OT"
+    },
+    {
+      "name": "Esther",
+      "abbrev": "Esth",
+      "section": "history",
+      "chapters": 10,
+      "x": 224.5,
+      "testament": "OT"
+    },
+    {
+      "name": "Job",
+      "abbrev": "Job",
+      "section": "poetry",
+      "chapters": 42,
+      "x": 237.7,
+      "testament": "OT"
+    },
+    {
+      "name": "Psalms",
+      "abbrev": "Ps",
+      "section": "poetry",
+      "chapters": 150,
+      "x": 250.8,
+      "testament": "OT"
+    },
+    {
+      "name": "Proverbs",
+      "abbrev": "Prov",
+      "section": "poetry",
+      "chapters": 31,
+      "x": 264.0,
+      "testament": "OT"
+    },
+    {
+      "name": "Ecclesiastes",
+      "abbrev": "Eccl",
+      "section": "poetry",
+      "chapters": 12,
+      "x": 277.2,
+      "testament": "OT"
+    },
+    {
+      "name": "Song of Solomon",
+      "abbrev": "Song",
+      "section": "poetry",
+      "chapters": 8,
+      "x": 290.3,
+      "testament": "OT"
+    },
+    {
+      "name": "Isaiah",
+      "abbrev": "Isa",
+      "section": "prophets",
+      "chapters": 66,
+      "x": 303.5,
+      "testament": "OT"
+    },
+    {
+      "name": "Jeremiah",
+      "abbrev": "Jer",
+      "section": "prophets",
+      "chapters": 52,
+      "x": 316.6,
+      "testament": "OT"
+    },
+    {
+      "name": "Lamentations",
+      "abbrev": "Lam",
+      "section": "prophets",
+      "chapters": 5,
+      "x": 329.8,
+      "testament": "OT"
+    },
+    {
+      "name": "Ezekiel",
+      "abbrev": "Ezek",
+      "section": "prophets",
+      "chapters": 48,
+      "x": 342.9,
+      "testament": "OT"
+    },
+    {
+      "name": "Daniel",
+      "abbrev": "Dan",
+      "section": "prophets",
+      "chapters": 12,
+      "x": 356.1,
+      "testament": "OT"
+    },
+    {
+      "name": "Hosea",
+      "abbrev": "Hos",
+      "section": "prophets",
+      "chapters": 14,
+      "x": 369.3,
+      "testament": "OT"
+    },
+    {
+      "name": "Joel",
+      "abbrev": "Joel",
+      "section": "prophets",
+      "chapters": 3,
+      "x": 382.4,
+      "testament": "OT"
+    },
+    {
+      "name": "Amos",
+      "abbrev": "Amos",
+      "section": "prophets",
+      "chapters": 9,
+      "x": 395.6,
+      "testament": "OT"
+    },
+    {
+      "name": "Obadiah",
+      "abbrev": "Obad",
+      "section": "prophets",
+      "chapters": 1,
+      "x": 408.7,
+      "testament": "OT"
+    },
+    {
+      "name": "Jonah",
+      "abbrev": "Jonah",
+      "section": "prophets",
+      "chapters": 4,
+      "x": 421.9,
+      "testament": "OT"
+    },
+    {
+      "name": "Micah",
+      "abbrev": "Mic",
+      "section": "prophets",
+      "chapters": 7,
+      "x": 435.1,
+      "testament": "OT"
+    },
+    {
+      "name": "Nahum",
+      "abbrev": "Nah",
+      "section": "prophets",
+      "chapters": 3,
+      "x": 448.2,
+      "testament": "OT"
+    },
+    {
+      "name": "Habakkuk",
+      "abbrev": "Hab",
+      "section": "prophets",
+      "chapters": 3,
+      "x": 461.4,
+      "testament": "OT"
+    },
+    {
+      "name": "Zephaniah",
+      "abbrev": "Zeph",
+      "section": "prophets",
+      "chapters": 3,
+      "x": 474.5,
+      "testament": "OT"
+    },
+    {
+      "name": "Haggai",
+      "abbrev": "Hag",
+      "section": "prophets",
+      "chapters": 2,
+      "x": 487.7,
+      "testament": "OT"
+    },
+    {
+      "name": "Zechariah",
+      "abbrev": "Zech",
+      "section": "prophets",
+      "chapters": 14,
+      "x": 500.8,
+      "testament": "OT"
+    },
+    {
+      "name": "Malachi",
+      "abbrev": "Mal",
+      "section": "prophets",
+      "chapters": 4,
+      "x": 514.0,
+      "testament": "OT"
+    }
+  ],
+  "new_testament": [
+    {
+      "name": "Matthew",
+      "abbrev": "Matt",
+      "section": "gospels",
+      "chapters": 28,
+      "x": 540.0,
+      "testament": "NT"
+    },
+    {
+      "name": "Mark",
+      "abbrev": "Mark",
+      "section": "gospels",
+      "chapters": 16,
+      "x": 557.1,
+      "testament": "NT"
+    },
+    {
+      "name": "Luke",
+      "abbrev": "Luke",
+      "section": "gospels",
+      "chapters": 24,
+      "x": 574.2,
+      "testament": "NT"
+    },
+    {
+      "name": "John",
+      "abbrev": "John",
+      "section": "gospels",
+      "chapters": 21,
+      "x": 591.3,
+      "testament": "NT"
+    },
+    {
+      "name": "Acts",
+      "abbrev": "Acts",
+      "section": "gospels",
+      "chapters": 28,
+      "x": 608.5,
+      "testament": "NT"
+    },
+    {
+      "name": "Romans",
+      "abbrev": "Rom",
+      "section": "epistles",
+      "chapters": 16,
+      "x": 625.6,
+      "testament": "NT"
+    },
+    {
+      "name": "1 Corinthians",
+      "abbrev": "1Cor",
+      "section": "epistles",
+      "chapters": 16,
+      "x": 642.7,
+      "testament": "NT"
+    },
+    {
+      "name": "2 Corinthians",
+      "abbrev": "2Cor",
+      "section": "epistles",
+      "chapters": 13,
+      "x": 659.8,
+      "testament": "NT"
+    },
+    {
+      "name": "Galatians",
+      "abbrev": "Gal",
+      "section": "epistles",
+      "chapters": 6,
+      "x": 676.9,
+      "testament": "NT"
+    },
+    {
+      "name": "Ephesians",
+      "abbrev": "Eph",
+      "section": "epistles",
+      "chapters": 6,
+      "x": 694.0,
+      "testament": "NT"
+    },
+    {
+      "name": "Philippians",
+      "abbrev": "Phil",
+      "section": "epistles",
+      "chapters": 4,
+      "x": 711.2,
+      "testament": "NT"
+    },
+    {
+      "name": "Colossians",
+      "abbrev": "Col",
+      "section": "epistles",
+      "chapters": 4,
+      "x": 728.3,
+      "testament": "NT"
+    },
+    {
+      "name": "1 Thessalonians",
+      "abbrev": "1Thess",
+      "section": "epistles",
+      "chapters": 5,
+      "x": 745.4,
+      "testament": "NT"
+    },
+    {
+      "name": "2 Thessalonians",
+      "abbrev": "2Thess",
+      "section": "epistles",
+      "chapters": 3,
+      "x": 762.5,
+      "testament": "NT"
+    },
+    {
+      "name": "1 Timothy",
+      "abbrev": "1Tim",
+      "section": "epistles",
+      "chapters": 6,
+      "x": 779.6,
+      "testament": "NT"
+    },
+    {
+      "name": "2 Timothy",
+      "abbrev": "2Tim",
+      "section": "epistles",
+      "chapters": 4,
+      "x": 796.7,
+      "testament": "NT"
+    },
+    {
+      "name": "Titus",
+      "abbrev": "Titus",
+      "section": "epistles",
+      "chapters": 3,
+      "x": 813.8,
+      "testament": "NT"
+    },
+    {
+      "name": "Philemon",
+      "abbrev": "Phlm",
+      "section": "epistles",
+      "chapters": 1,
+      "x": 831.0,
+      "testament": "NT"
+    },
+    {
+      "name": "Hebrews",
+      "abbrev": "Heb",
+      "section": "epistles",
+      "chapters": 13,
+      "x": 848.1,
+      "testament": "NT"
+    },
+    {
+      "name": "James",
+      "abbrev": "Jas",
+      "section": "epistles",
+      "chapters": 5,
+      "x": 865.2,
+      "testament": "NT"
+    },
+    {
+      "name": "1 Peter",
+      "abbrev": "1Pet",
+      "section": "epistles",
+      "chapters": 5,
+      "x": 882.3,
+      "testament": "NT"
+    },
+    {
+      "name": "2 Peter",
+      "abbrev": "2Pet",
+      "section": "epistles",
+      "chapters": 3,
+      "x": 899.4,
+      "testament": "NT"
+    },
+    {
+      "name": "1 John",
+      "abbrev": "1John",
+      "section": "epistles",
+      "chapters": 5,
+      "x": 916.5,
+      "testament": "NT"
+    },
+    {
+      "name": "2 John",
+      "abbrev": "2John",
+      "section": "epistles",
+      "chapters": 1,
+      "x": 933.7,
+      "testament": "NT"
+    },
+    {
+      "name": "3 John",
+      "abbrev": "3John",
+      "section": "epistles",
+      "chapters": 1,
+      "x": 950.8,
+      "testament": "NT"
+    },
+    {
+      "name": "Jude",
+      "abbrev": "Jude",
+      "section": "epistles",
+      "chapters": 1,
+      "x": 967.9,
+      "testament": "NT"
+    },
+    {
+      "name": "Revelation",
+      "abbrev": "Rev",
+      "section": "revelation",
+      "chapters": 22,
+      "x": 985.0,
+      "testament": "NT"
+    }
+  ]
+}
