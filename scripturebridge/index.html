@@ -33,10 +33,10 @@
       <div class="nav-scroll">
         <fvl-segmented id="nav" value="bridges" aria-label="Sections">
           <fvl-segment value="bridges">Bridges</fvl-segment>
+          <fvl-segment value="bible">Bible</fvl-segment>
           <fvl-segment value="threads">Threads</fvl-segment>
           <fvl-segment value="map">Map</fvl-segment>
           <fvl-segment value="saved">Saved</fvl-segment>
-          <fvl-segment value="index">Index</fvl-segment>
         </fvl-segmented>
       </div>
     </div>
@@ -87,26 +87,13 @@
     <!-- Saved -->
     <section id="view-saved" class="view stack" aria-label="Saved" hidden></section>
 
-    <!-- Index -->
-    <section id="view-index" class="view stack" aria-label="Cross-reference index" hidden>
-      <div class="section-head">
-        <h2>Cross-reference index</h2>
-        <p>The high-confidence Treasury of Scripture Knowledge links. Import the full OpenBible.info file (344,799 links) to search all of them.</p>
-      </div>
-      <fvl-search id="iq" placeholder="Filter by verse, summary or type" aria-label="Filter the index"></fvl-search>
-      <div class="stack-tight">
-        <p class="note" id="minLabel">Minimum votes: 0</p>
-        <fvl-slider id="minVotes" min="0" max="700" step="25" value="0" hide-value aria-label="Minimum votes"></fvl-slider>
-      </div>
-      <div class="actions">
-        <fvl-button id="importBtn" variant="secondary" size="sm"><fvl-icon name="upload"></fvl-icon>Import cross_references.txt</fvl-button>
-        <input type="file" id="file" accept=".txt,.tsv,.csv" hidden>
-      </div>
-      <p class="count" id="icount"></p>
-      <ol class="list" id="ilist"></ol>
-    </section>
+    <!-- Bible: BSB text, tap a verse for its cross-references -->
+    <section id="view-bible" class="view stack" aria-label="Bible" hidden></section>
 
-    <footer class="foot"><a href="bible_prophecy_explorer.html">Classic layout</a></footer>
+    <footer class="foot stack-tight">
+      <p class="note">Bible text: Berean Standard Bible (public domain). Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.</p>
+      <a href="bible_prophecy_explorer.html">Classic layout</a>
+    </footer>
   </main>
 </div>
 
@@ -132,6 +119,10 @@
   <div class="book-group"><h3>Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship"></div></div>
   <div class="book-group"><div id="bookGroups"></div></div>
   <fvl-button slot="footer" variant="primary" id="applyBtn">Show bridges</fvl-button>
+</fvl-drawer>
+
+<fvl-drawer id="xrefSheet" placement="bottom" heading="Cross-references">
+  <div id="xrefBody" class="stack"></div>
 </fvl-drawer>
 
 <fvl-drawer id="mapList" placement="bottom" heading="Bridges">

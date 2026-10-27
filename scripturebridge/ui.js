@@ -1,5 +1,5 @@
 // ScriptureBridge UI — Flow Visual Language components + GSAP with the FVL springs.
-// Browse (list, threads, map, saved, index) → tap → Reader: one bridge, nothing else on screen.
+// Browse (bridges, Bible, threads, map, saved) → tap → Reader: one bridge, nothing else on screen.
 import { toast } from '/apps/vendor/fvl/ui/fvl-components.js';
 
 const gsap = window.gsap;
@@ -51,9 +51,9 @@ const refTouches = (ref, book) => ref.split(/;\s*/).some((r) => r === book || r.
 
 // ---------- state ----------
 const CATS = ['birth', 'ministry', 'passion', 'resurrection', 'covenant'];
-const TABS = ['bridges', 'threads', 'map', 'saved', 'index'];
-const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, iq: '', imin: 0, thread: null, mapDrawn: false };
-const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], TSK: [], catLabel: {} };
+const TABS = ['bridges', 'bible', 'threads', 'map', 'saved'];
+const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, bible: {}, thread: null, mapDrawn: false };
+const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {} };
 let saved = store.get('scripturebridge_saved_v2', []);
 const readSet = new Set(store.get('sb_read_v1', []));
 let lastRead = store.get('sb_last_v1', null);
@@ -61,8 +61,8 @@ let lastRead = store.get('sb_last_v1', null);
 // ---------- data ----------
 async function load() {
   const get = (f) => fetch('data/' + f).then((r) => { if (!r.ok) throw new Error(f); return r.json(); });
-  const [books, P, T, TSK] = await Promise.all([get('books_66.json'), get('prophecies_66_books.json'), get('canonical_threads.json'), get('tsk_high_impact_index.json')]);
-  D.P = P; D.T = T; D.TSK = TSK; D.OT = books.old_testament; D.NT = books.new_testament;
+  const [books, P, T] = await Promise.all([get('books_66.json'), get('prophecies_66_books.json'), get('canonical_threads.json'), bibleMeta()]);
+  D.P = P; D.T = T; D.OT = books.old_testament; D.NT = books.new_testament;
   P.forEach((p) => { D.byId.set(p.id, p); D.catLabel[p.category] = D.catLabel[p.category] || p.categoryLabel; });
 }
 
@@ -223,38 +223,141 @@ function renderSaved() {
     <ol class="list">${items.map((p) => rowHTML(p)).join('')}</ol>`;
 }
 
-// ---------- index ----------
-function renderIndex() {
-  const q = S.iq.toLowerCase();
-  const rows = D.TSK.filter((r) => r.votes >= S.imin && (!q || [r.fromRef, r.toRef, r.type, r.summary].some((s) => String(s).toLowerCase().includes(q))));
-  const shown = rows.slice(0, 200);
-  $('#icount').textContent = `${rows.length.toLocaleString()} links${rows.length > shown.length ? ` · showing the first ${shown.length}, narrow with the filter` : ''}`;
-  $('#ilist').innerHTML = shown.map((r) => {
-    const inner = `<span class="row-head"><span class="kicker">${esc(r.type)}<span aria-hidden="true">·</span>${Number(r.votes).toLocaleString()} votes</span></span>
-      <span class="refs">${esc(r.fromRef)} <span aria-hidden="true">→</span><span class="sr"> to </span> ${esc(r.toRef)}</span><span class="row-sum">${esc(r.summary)}</span>`;
-    return r.prophecyId && D.byId.has(r.prophecyId)
-      ? `<li><button type="button" class="row idx-row" data-id="${esc(r.prophecyId)}">${inner}</button></li>`
-      : `<li><div class="row idx-row">${inner}</div></li>`;
-  }).join('');
+// ---------- Bible: BSB text + OpenBible cross-references, one small file per chapter ----------
+const BIB = { meta: null, byOsis: new Map(), byName: new Map(), text: new Map(), xref: new Map() };
+async function bibleMeta() {
+  if (BIB.meta) return BIB.meta;
+  const m = await fetch('data/bible/books.json').then((r) => { if (!r.ok) throw new Error('books.json'); return r.json(); });
+  m.books.forEach((b, i) => { b.index = i; BIB.byOsis.set(b.osis, b); BIB.byName.set(b.name.toLowerCase(), b); });
+  [['psalm', 'Ps'], ['song of songs', 'Song'], ['revelation of john', 'Rev']].forEach(([n, o]) => BIB.byName.set(n, BIB.byOsis.get(o)));
+  BIB.meta = m;
+  return m;
 }
-function importFile(file) {
-  const reader = new FileReader();
-  reader.onload = () => {
-    const parsed = [];
-    for (const raw of String(reader.result).split(/\r?\n/)) {
-      const line = raw.trim();
-      if (!line || line.startsWith('#') || /^from/i.test(line)) continue;
-      const parts = line.split(/\t|,/);
-      if (parts.length < 2) continue;
-      const votes = parts.length >= 3 ? (parseInt(parts[2], 10) || 0) : 0;
-      parsed.push({ fromRef: parts[0].trim(), toRef: parts[1].trim(), votes, type: 'OpenBible cross-reference', summary: '', prophecyId: null });
-    }
-    if (!parsed.length) { toast.warning('Nothing to import', { description: 'Use a tab- or comma-separated file.' }); return; }
-    D.TSK = parsed.concat(D.TSK);
-    renderIndex();
-    toast.success(`Imported ${parsed.length.toLocaleString()} links`);
-  };
-  reader.readAsText(file);
+function cached(map, key, load) {
+  if (!map.has(key)) map.set(key, load().catch((err) => { map.delete(key); throw err; }));
+  return map.get(key);
+}
+const getJSON = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url); return r.json(); });
+const chapterText = (osis, c) => cached(BIB.text, `${osis}/${c}`, () => getJSON(`data/bible/bsb/${osis}/${c}.json`));
+const chapterXref = (osis, c) => cached(BIB.xref, `${osis}/${c}`, () => getJSON(`data/bible/xref/${osis}/${c}.json`).catch(() => ({})));
+const nltUrl = (q) => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(q) + '&version=NLT';
+const nltLink = (q, label = 'Read in NLT') => `<a class="ext" href="${nltUrl(q)}" target="_blank" rel="noopener">${label}<fvl-icon name="external-link"></fvl-icon></a>`;
+
+// "Rom.5.8", "1John.4.9-10", "Gen.1.31-Gen.2.3"
+function parseTarget(t) {
+  const [a, b] = t.split('-');
+  const [osis, c, v] = a.split('.');
+  let end = null;
+  if (b) { const q = b.split('.'); end = q.length === 3 ? { osis: q[0], c: +q[1], v: +q[2] } : { osis, c: +c, v: +q[0] }; }
+  return { osis, c: +c, v: +v, end };
+}
+function refLabel(t) {
+  const r = parseTarget(t), name = (o) => BIB.byOsis.get(o)?.name || o;
+  let s = `${name(r.osis)} ${r.c}:${r.v}`;
+  if (r.end) s += r.end.osis !== r.osis ? `–${name(r.end.osis)} ${r.end.c}:${r.end.v}` : r.end.c !== r.c ? `–${r.end.c}:${r.end.v}` : `–${r.end.v}`;
+  return s;
+}
+async function targetText(t) {
+  const r = parseTarget(t);
+  const vs = await chapterText(r.osis, r.c);
+  const sameCh = !r.end || (r.end.osis === r.osis && r.end.c === r.c);
+  const last = r.end ? (sameCh ? r.end.v : vs.length) : r.v;
+  const cap = Math.min(last, r.v + 3);
+  let s = vs.slice(r.v - 1, cap).filter(Boolean).join(' ');
+  if (cap < last || !sameCh) s += ' …';
+  return s;
+}
+// "Luke 1:46-55, 69; Acts 2" -> { osis: 'Luke', c: 1, v: 46 }
+function humanRef(ref) {
+  const m = ref.split(';')[0].trim().match(/^((?:[123]\s)?[A-Za-z][A-Za-z ]*?)\s+(\d+)(?::(\d+))?/);
+  const b = m && BIB.byName.get(m[1].toLowerCase());
+  return b ? { osis: b.osis, c: +m[2], v: m[3] ? +m[3] : null } : null;
+}
+const bibleHash = (r) => `#/bible/${r.osis}/${r.c}${r.v ? '/' + r.v : ''}`;
+function neighbour(osis, c, d) {
+  const b = BIB.byOsis.get(osis);
+  if (d < 0) { if (c > 1) return { osis, c: c - 1 }; const pb = BIB.meta.books[b.index - 1]; return pb ? { osis: pb.osis, c: pb.verses.length } : null; }
+  if (c < b.verses.length) return { osis, c: c + 1 };
+  const nb = BIB.meta.books[b.index + 1]; return nb ? { osis: nb.osis, c: 1 } : null;
+}
+const chName = (r) => `${BIB.byOsis.get(r.osis).name} ${r.c}`;
+let bibleToken = 0;
+
+async function renderBible() {
+  const v = $('#view-bible');
+  await bibleMeta();
+  const { osis, c, v: verse } = S.bible;
+  const b = osis && BIB.byOsis.get(osis);
+  if (!b) {
+    const pos = store.get('sb_bible_pos', null);
+    const posOk = pos && BIB.byOsis.get(pos.osis);
+    v.innerHTML = `<div class="section-head"><h2>Bible</h2><p>The Berean Standard Bible, with 344,799 cross-references. Tap any verse to see everything it connects to.</p></div>
+      ${posOk ? `<button type="button" class="continue" data-go="#/bible/${pos.osis}/${pos.c}"><span><small>Continue reading</small><b>${esc(chName(pos))}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
+      <div>${['OT', 'NT'].map((t) => `<div class="book-group"><h3>${t === 'OT' ? 'Old Testament' : 'New Testament'}</h3><div class="book-grid">${BIB.meta.books.filter((x) => x.testament === t).map((x) =>
+        `<button type="button" class="book" data-go="#/bible/${x.osis}">${esc(x.name)} <span>${x.verses.length}</span></button>`).join('')}</div></div>`).join('')}</div>`;
+    return;
+  }
+  if (!c || !b.verses[c - 1]) {
+    v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/bible"><fvl-icon name="arrow-left"></fvl-icon>All books</fvl-button></div>
+      <div class="section-head"><h2>${esc(b.name)}</h2><p>${b.verses.length} ${b.verses.length === 1 ? 'chapter' : 'chapters'}. Choose one to read.</p></div>
+      <div class="ch-grid">${b.verses.map((_, i) => `<button type="button" class="ch" data-go="#/bible/${b.osis}/${i + 1}">${i + 1}</button>`).join('')}</div>`;
+    return;
+  }
+  const token = ++bibleToken;
+  const prev = neighbour(osis, c, -1), next = neighbour(osis, c, 1);
+  v.innerHTML = `<div class="ch-head">
+      <fvl-button variant="tertiary" size="sm" data-go="#/bible/${b.osis}"><fvl-icon name="arrow-left"></fvl-icon>${esc(b.name)}</fvl-button>
+      ${nltLink(`${b.name} ${c}`)}
+    </div>
+    <h2 class="ch-title">${esc(b.name)} ${c}</h2>
+    <p class="ch-text" id="chText" aria-busy="true"></p>
+    <nav class="ch-nav" aria-label="Chapters">
+      ${prev ? `<fvl-button variant="secondary" data-go="${bibleHash(prev)}"><fvl-icon name="chevron-left"></fvl-icon>${esc(chName(prev))}</fvl-button>` : '<span></span>'}
+      ${next ? `<fvl-button variant="primary" data-go="${bibleHash(next)}">${esc(chName(next))}<fvl-icon name="chevron-right"></fvl-icon></fvl-button>` : '<span></span>'}
+    </nav>`;
+  let text, xr;
+  try { [text, xr] = await Promise.all([chapterText(osis, c), chapterXref(osis, c)]); }
+  catch { if (token === bibleToken) $('#chText').textContent = 'Could not load this chapter. Check your connection and try again.'; return; }
+  if (token !== bibleToken) return;
+  const el = $('#chText');
+  el.removeAttribute('aria-busy');
+  el.innerHTML = text.map((t, i) => {
+    const n = i + 1, k = (xr[n] || []).length;
+    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="Verse ${n}${k ? `, ${k} cross-references` : ''}"><sup>${n}</sup>${t ? esc(t) : '<em class="omit">Not in the earliest manuscripts.</em>'}</span> `;
+  }).join('');
+  store.set('sb_bible_pos', { osis, c });
+  if (verse) {
+    const vEl = $(`.verse[data-v="${verse}"]`, el);
+    if (vEl) { vEl.classList.add('sel'); requestAnimationFrame(() => vEl.scrollIntoView({ block: 'center' })); }
+  }
+}
+
+async function openXref(osis, c, v) {
+  const b = BIB.byOsis.get(osis);
+  const [text, xr] = await Promise.all([chapterText(osis, c), chapterXref(osis, c)]);
+  const list = xr[v] || [];
+  const dr = $('#xrefSheet');
+  dr.setAttribute('heading', `${b.name} ${c}:${v}`);
+  dr.setAttribute('description', list.length ? `${list.length} cross-references, strongest first by OpenBible.info reader votes.` : 'No cross-references for this verse.');
+  S.xref = { list, shown: 12 };
+  $('#xrefBody').innerHTML = `<blockquote class="p-text">${text[v - 1] ? esc(text[v - 1]) : '<em class="omit">Not in the earliest manuscripts.</em>'}</blockquote>
+    <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
+    <ol class="list sheet-list" id="xrefList"></ol><div id="xrefMore"></div>`;
+  renderXrefItems();
+  dr.show();
+}
+function renderXrefItems() {
+  const { list, shown } = S.xref;
+  $('#xrefList').innerHTML = list.slice(0, shown).map(([t, votes]) => {
+    const r = parseTarget(t);
+    return `<li><button type="button" class="row xref" data-go="${bibleHash(r)}"><span class="row-head"><span class="refs">${esc(refLabel(t))}</span><span class="kicker">${votes} ${Math.abs(votes) === 1 ? 'vote' : 'votes'}</span></span><span class="xtext" data-t="${esc(t)}">…</span></button></li>`;
+  }).join('');
+  $('#xrefMore').innerHTML = list.length > shown ? `<fvl-button variant="secondary" size="sm" id="xrefMoreBtn">Show all ${list.length}</fvl-button>` : '';
+  $$('#xrefList .xtext').forEach(async (el) => {
+    if (el.dataset.done) return;
+    el.dataset.done = '1';
+    try { el.textContent = (await targetText(el.dataset.t)) || 'Not in the earliest manuscripts.'; } catch { el.textContent = 'Could not load this verse.'; }
+  });
 }
 
 // ---------- tabs ----------
@@ -267,16 +370,19 @@ function renderTab(t, animate) {
     if (S.mapScroll && S.mapBook) { S.mapScroll = false; requestAnimationFrame(() => $(`.bbook[data-book="${CSS.escape(S.mapBook)}"]`)?.scrollIntoView({ block: 'center' })); }
   }
   else if (t === 'saved') renderSaved();
-  else if (t === 'index') renderIndex();
+  else if (t === 'bible') renderBible();
 }
 function showTab(t, sub) {
-  const changed = S.tab !== t || (t === 'threads' && S.thread !== sub);
+  const bibleKey = (x) => [x?.osis, x?.c, x?.v].join('/');
+  const changed = S.tab !== t || (t === 'threads' && S.thread !== sub) || (t === 'bible' && bibleKey(S.bible) !== bibleKey(sub));
+  const verseOnly = t === 'bible' && S.tab === 'bible' && S.bible.osis === sub?.osis && S.bible.c === sub?.c && sub?.c;
   S.tab = t;
   if (t === 'threads') S.thread = sub && D.T[sub] ? sub : null;
+  if (t === 'bible') S.bible = sub || {};
   $('#nav').value = t;
   TABS.forEach((k) => { views[k].hidden = k !== t; });
   renderTab(t, changed);
-  if (changed) {
+  if (changed && !verseOnly) {
     window.scrollTo(0, 0);
     gsap.fromTo(views[t], { opacity: 0, y: 8 }, { opacity: 1, y: 0, ...spring.arrive, clearProps: 'opacity,transform' });
   }
@@ -317,6 +423,11 @@ function showReader(id, ctx) {
   markRead(id);
 }
 
+function passageLinks(ref) {
+  const r = humanRef(ref);
+  return `<p class="p-links">${r ? `<a class="ext" href="${bibleHash(r)}" data-bible="${bibleHash(r)}">Open in Bible<fvl-icon name="book-open"></fvl-icon></a>` : ''}${nltLink(ref)}</p>`;
+}
+
 function positionLabel() {
   const { ctx, idx, seq } = cur;
   if (ctx.kind === 'thread') return `${D.T[ctx.key].title} · step ${idx + 1} of ${seq.length}`;
@@ -339,12 +450,14 @@ function renderReader() {
       <h3 class="p-ref">${esc(p.ot.ref)} <small>${esc(p.ot.author)}</small></h3>
       <blockquote class="p-text">${highlight(p.ot.text, p.ot.keyPhrase)}</blockquote>
       <p class="p-context">${esc(p.ot.context)}</p>
+      ${passageLinks(p.ot.ref)}
     </section>
     <section class="passage" aria-label="Fulfilment">
       <p class="p-label">Fulfilment</p>
       <h3 class="p-ref">${esc(p.nt.ref)} <small>${esc(p.nt.author)}</small></h3>
       <blockquote class="p-text">${highlight(p.nt.text, p.nt.keyPhrase)}</blockquote>
       <p class="p-context">${esc(p.nt.context)}</p>
+      ${passageLinks(p.nt.ref)}
     </section>
     <section class="why" aria-label="Why they connect">
       <p class="p-label">Why they connect</p>
@@ -500,13 +613,14 @@ function route() {
     return;
   }
   const tab = TABS.includes(parts[0]) ? parts[0] : 'bridges';
+  const sub = tab === 'bible' ? { osis: parts[1] || null, c: parts[2] ? +parts[2] : null, v: parts[3] ? +parts[3] : null } : parts[1];
   if (!reader.hidden) {
-    if (S.tab !== tab || (tab === 'threads' && S.thread !== (parts[1] || null))) { reader.hidden = true; root.classList.remove('reading'); browse.inert = false; showTab(tab, parts[1]); }
+    if (S.tab !== tab || tab === 'bible' || (tab === 'threads' && S.thread !== (parts[1] || null))) { reader.hidden = true; root.classList.remove('reading'); browse.inert = false; showTab(tab, sub); }
     else closeReader();
     pushed = false;
     return;
   }
-  showTab(tab, parts[1]);
+  showTab(tab, sub);
 }
 window.addEventListener('hashchange', route);
 
@@ -542,11 +656,29 @@ $('#bookGroups').addEventListener('click', (e) => {
   S.book = b.dataset.book || null; syncBookUI(); renderBridges();
   gsap.fromTo(b, { scale: 0.96 }, { scale: 1, ...spring.arrive, clearProps: 'transform' });
 });
-let iqTimer;
-$('#iq').addEventListener('input', (e) => { clearTimeout(iqTimer); iqTimer = setTimeout(() => { S.iq = (e.target.value || '').trim(); renderIndex(); }, 150); });
-$('#minVotes').addEventListener('input', (e) => { S.imin = Number(e.target.value) || 0; $('#minLabel').textContent = `Minimum votes: ${S.imin}`; renderIndex(); });
-$('#importBtn').addEventListener('click', () => $('#file').click());
-$('#file').addEventListener('change', (e) => { const f = e.target.files?.[0]; if (f) importFile(f); e.target.value = ''; });
+// Bible: tap a verse for its cross-references; swipe between chapters.
+const bibleView = $('#view-bible');
+function verseTap(el) {
+  $$('.verse.sel', bibleView).forEach((x) => x.classList.remove('sel'));
+  el.classList.add('sel');
+  openXref(S.bible.osis, S.bible.c, Number(el.dataset.v)).catch(() => toast.warning('Could not load cross-references'));
+}
+bibleView.addEventListener('click', (e) => { const el = e.target.closest('.verse'); if (el && !getSelection()?.toString()) verseTap(el); });
+bibleView.addEventListener('keydown', (e) => { const el = e.target.closest('.verse'); if (el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); verseTap(el); } });
+let chTouch = null;
+bibleView.addEventListener('touchstart', (e) => { if (!e.target.closest('.ch-text')) return; const t = e.touches[0]; chTouch = { x: t.clientX, y: t.clientY, t: Date.now() }; }, { passive: true });
+bibleView.addEventListener('touchend', (e) => {
+  if (!chTouch || !S.bible.c) return;
+  const t = e.changedTouches[0], dx = t.clientX - chTouch.x, dy = t.clientY - chTouch.y, dt = Date.now() - chTouch.t;
+  chTouch = null;
+  if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700) { const n = neighbour(S.bible.osis, S.bible.c, dx < 0 ? 1 : -1); if (n) location.hash = bibleHash(n); }
+}, { passive: true });
+$('#xrefSheet').addEventListener('click', (e) => {
+  if (e.target.closest('#xrefMoreBtn')) { S.xref.shown = S.xref.list.length; renderXrefItems(); return; }
+  const link = e.target.closest('[data-go]'); if (!link) return;
+  $('#xrefSheet').close();
+  location.hash = link.dataset.go;
+});
 
 // Browse: one delegated handler for rows and actions.
 browse.addEventListener('click', (e) => {
@@ -564,7 +696,6 @@ browse.addEventListener('click', (e) => {
   const id = row.dataset.id;
   if (S.tab === 'threads' && row.dataset.step != null) openReader(id, { kind: 'thread', key: S.thread }, row, Number(row.dataset.step));
   else if (S.tab === 'saved') openReader(id, { kind: 'saved' }, row);
-  else if (S.tab === 'index') { resetFilters(); openReader(id, { kind: 'list' }, row); }
   else openReader(id, { kind: 'list' }, row);
 });
 
@@ -575,6 +706,8 @@ $('#next').addEventListener('click', () => go(1));
 $('#star').addEventListener('click', () => cur && toggleSave(cur.id));
 rBody.addEventListener('click', (e) => {
   if (e.target.closest('[data-next]')) { go(1); return; }
+  const bl = e.target.closest('[data-bible]');
+  if (bl) { e.preventDefault(); pushed = false; location.hash = bl.dataset.bible; return; }
   if (e.target.closest('[data-cite]')) {
     const p = D.byId.get(cur.id);
     copy(`${p.title} (${p.type})\n${p.ot.ref}: "${p.ot.text}"\n${p.nt.ref}: "${p.nt.text}"\nWhy they connect: ${p.bridge}`, 'Citation copied'); return;
