@@ -52,7 +52,7 @@ const refTouches = (ref, book) => ref.split(/;\s*/).some((r) => r === book || r.
 // ---------- state ----------
 const CATS = ['birth', 'ministry', 'passion', 'resurrection', 'covenant'];
 const TABS = ['bridges', 'threads', 'map', 'saved', 'index'];
-const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapSel: null, iq: '', imin: 0, thread: null, mapDrawn: false };
+const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, iq: '', imin: 0, thread: null, mapDrawn: false };
 const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], TSK: [], catLabel: {} };
 let saved = store.get('scripturebridge_saved_v2', []);
 const readSet = new Set(store.get('sb_read_v1', []));
@@ -151,30 +151,63 @@ function renderThreads() {
 }
 
 // ---------- map ----------
-const BASE = 395;
-function bookX(name) { const b = D.OT.concat(D.NT).find((x) => x.name === name || x.abbrev === name); return b ? b.x : 500; }
-function arcPath(p) {
-  const x1 = bookX(p.ot.book), x2 = bookX(p.nt.book), h = Math.min(350, Math.max(65, Math.abs(x2 - x1) * 0.56)), y = BASE - h;
-  return `M ${x1} ${BASE} C ${x1 + (x2 - x1) * 0.15} ${y}, ${x2 - (x2 - x1) * 0.15} ${y}, ${x2} ${BASE}`;
+// Two columns (OT left, NT right) in canonical order, bridges drawn as curves between them.
+// Books are the tap targets; tapping one lights its bridges and slides up a bar to list or read them.
+const ROW = 32; // px per Old Testament book; the New Testament column spreads over the same height
+const touches = (p, b) => p.ot.book === b || p.nt.book === b || refTouches(p.ot.ref, b) || refTouches(p.nt.ref, b);
+const inMapCat = (p) => S.mapCat === 'all' || p.category === S.mapCat;
+function mapBridges(book) { return D.P.filter((p) => inMapCat(p) && (!book || touches(p, book))); }
+function renderMap(animate, grow) {
+  const H = D.OT.length * ROW;
+  const P = mapBridges(null);
+  const sel = S.mapBook;
+  const selP = sel ? P.filter((p) => touches(p, sel)) : [];
+  const onIds = new Set(selP.map((p) => p.id));
+  const linked = new Set(selP.flatMap((p) => [p.ot.book, p.nt.book]));
+  const bmap = $('#bmap');
+  bmap.style.setProperty('--bmap-h', H + 'px');
+  bmap.classList.toggle('has-sel', !!sel);
+  const col = (books) => books.map((b) => {
+    const n = P.filter((p) => touches(p, b.name)).length;
+    const cls = ['bbook', n ? '' : 'none', b.name === sel ? 'sel' : '', sel && b.name !== sel && linked.has(b.name) ? 'linked' : ''].filter(Boolean).join(' ');
+    return `<button type="button" class="${cls}" data-book="${esc(b.name)}" aria-pressed="${b.name === sel}"${n ? '' : ' disabled'} aria-label="${esc(b.name)}, ${n} ${n === 1 ? 'bridge' : 'bridges'}"><span class="bname">${esc(b.name)}</span><span class="n">${n || ''}</span></button>`;
+  }).join('');
+  $('#otCol').innerHTML = col(D.OT);
+  $('#ntCol').innerHTML = col(D.NT);
+  const oi = new Map(D.OT.map((b, i) => [b.name, i])), ni = new Map(D.NT.map((b, i) => [b.name, i]));
+  const yO = (i) => (i + 0.5) * (H / D.OT.length), yN = (i) => (i + 0.5) * (H / D.NT.length);
+  const curve = (p) => {
+    if (!oi.has(p.ot.book) || !ni.has(p.nt.book)) return '';
+    const a = yO(oi.get(p.ot.book)), b = yN(ni.get(p.nt.book));
+    return `<path class="curve c-${esc(p.category)}${onIds.has(p.id) ? ' on' : ''}" d="M0 ${a} C50 ${a}, 50 ${b}, 100 ${b}"/>`;
+  };
+  const svg = $('#curves');
+  svg.setAttribute('viewBox', `0 0 100 ${H}`);
+  svg.innerHTML = P.filter((p) => !onIds.has(p.id)).map(curve).join('') + selP.map(curve).join('');
+  if (window.DrawSVGPlugin && !reduced) {
+    if (animate) gsap.from('#curves .curve', { drawSVG: '0%', stagger: 0.004, ...spring.grow });
+    else if (grow && sel) {
+      const fromRight = D.NT.some((b) => b.name === sel);
+      gsap.from('#curves .curve.on', { drawSVG: fromRight ? '100% 100%' : '0%', stagger: 0.02, ...spring.carve });
+    }
+  }
+  renderMapBar(selP);
 }
-function renderMap(animate) {
-  const arcs = D.P.filter((p) => S.mapCat === 'all' || p.category === S.mapCat);
-  if (!arcs.some((p) => p.id === S.mapSel)) S.mapSel = arcs[0]?.id || null;
-  const books = D.OT.concat(D.NT);
-  $('#arc').innerHTML = `
-    <line class="divider" x1="526" y1="28" x2="526" y2="455"/>
-    <text class="side-label" x="518" y="22" font-size="10" text-anchor="end">OLD TESTAMENT</text>
-    <text class="side-label" x="534" y="22" font-size="10">NEW TESTAMENT</text>
-    <line class="axis" x1="8" y1="${BASE}" x2="992" y2="${BASE}"/>
-    ${arcs.map((p) => `<g><path class="arc-hit" d="${arcPath(p)}" data-arc="${esc(p.id)}" tabindex="0" role="button" aria-label="${esc(p.title)}: ${esc(p.ot.ref)} to ${esc(p.nt.ref)}"/><path class="arc c-${esc(p.category)}${p.id === S.mapSel ? ' sel' : ''}" d="${arcPath(p)}"/></g>`).join('')}
-    ${books.map((b) => `<circle class="tick ${b.testament === 'NT' ? 'nt' : ''}" cx="${b.x}" cy="${BASE}" r="2.5"/><text class="book-label" x="${b.x}" y="${BASE + 10}" font-size="8.5" text-anchor="end" transform="rotate(-55 ${b.x} ${BASE + 10})">${esc(b.abbrev)}</text>`).join('')}`;
-  if (animate && !reduced && window.DrawSVGPlugin) gsap.from('#arc .arc', { drawSVG: '0%', stagger: 0.006, ...spring.grow });
-  renderMapPreview();
+function renderMapBar(selP) {
+  const bar = $('#mapBar'), sel = S.mapBook, was = !bar.hidden;
+  $('#view-map').classList.toggle('with-bar', !!sel);
+  if (!sel) {
+    if (was) gsap.to(bar, { yPercent: 100, duration: reduced ? 0 : 0.2, ease: 'power1.in', onComplete: () => { bar.hidden = true; gsap.set(bar, { clearProps: 'transform' }); } });
+    return;
+  }
+  $('#mbSide').textContent = D.NT.some((b) => b.name === sel) ? 'New Testament' : 'Old Testament';
+  $('#mbBook').textContent = sel;
+  $('#mbCount').textContent = `${selP.length} ${selP.length === 1 ? 'bridge' : 'bridges'}`;
+  if (!was) { bar.hidden = false; gsap.fromTo(bar, { yPercent: 100 }, { yPercent: 0, ...spring.arrive }); }
 }
-function renderMapPreview() {
-  const p = D.byId.get(S.mapSel);
-  $('#mapPreview').innerHTML = p ? `<ol class="list">${rowHTML(p)}</ol>` : '';
-  $$('#arc .arc').forEach((a) => a.classList.toggle('sel', a.previousElementSibling?.dataset.arc === S.mapSel));
+function selectMapBook(name) {
+  S.mapBook = S.mapBook === name ? null : name;
+  renderMap(false, true);
 }
 
 // ---------- saved ----------
@@ -229,7 +262,10 @@ const views = Object.fromEntries(TABS.map((t) => [t, $('#view-' + t)]));
 function renderTab(t, animate) {
   if (t === 'bridges') renderBridges();
   else if (t === 'threads') renderThreads();
-  else if (t === 'map') renderMap(animate && !S.mapDrawn), (S.mapDrawn = true);
+  else if (t === 'map') {
+    renderMap(animate && !S.mapDrawn); S.mapDrawn = true;
+    if (S.mapScroll && S.mapBook) { S.mapScroll = false; requestAnimationFrame(() => $(`.bbook[data-book="${CSS.escape(S.mapBook)}"]`)?.scrollIntoView({ block: 'center' })); }
+  }
   else if (t === 'saved') renderSaved();
   else if (t === 'index') renderIndex();
 }
@@ -255,10 +291,10 @@ let pushed = false;      // did we push a history entry to open the reader?
 function sequence(ctx) {
   if (ctx.kind === 'thread' && D.T[ctx.key]) return D.T[ctx.key].steps.map((s) => s.prophecyId).filter((id) => D.byId.has(id));
   if (ctx.kind === 'saved') return saved.filter((id) => D.byId.has(id));
-  if (ctx.kind === 'map') return D.P.filter((p) => S.mapCat === 'all' || p.category === S.mapCat).map((p) => p.id);
+  if (ctx.kind === 'map') return mapBridges(ctx.book).map((p) => p.id);
   return filtered().map((p) => p.id);
 }
-const ctxHash = (ctx) => (ctx.kind === 'thread' ? `/thread/${ctx.key}` : ctx.kind === 'saved' ? '/saved' : ctx.kind === 'map' ? '/map' : '');
+const ctxHash = (ctx) => (ctx.kind === 'thread' ? `/thread/${ctx.key}` : ctx.kind === 'saved' ? '/saved' : ctx.kind === 'map' ? '/map' + (ctx.book ? '/' + encodeURIComponent(ctx.book) : '') : '');
 const hashFor = (c) => `#/read/${c.id}${ctxHash(c.ctx)}`;
 
 function openReader(id, ctx, src, stepIdx) {
@@ -285,6 +321,7 @@ function positionLabel() {
   const { ctx, idx, seq } = cur;
   if (ctx.kind === 'thread') return `${D.T[ctx.key].title} · step ${idx + 1} of ${seq.length}`;
   if (ctx.kind === 'saved') return `Saved · ${idx + 1} of ${seq.length}`;
+  if (ctx.kind === 'map' && ctx.book) return `${ctx.book} · ${idx + 1} of ${seq.length}`;
   return `${idx + 1} of ${seq.length}`;
 }
 
@@ -457,7 +494,7 @@ rBody.addEventListener('touchend', (e) => {
 function route() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if (parts[0] === 'read' && D.byId.has(parts[1])) {
-    const ctx = parts[2] === 'thread' ? { kind: 'thread', key: parts[3] } : parts[2] === 'saved' ? { kind: 'saved' } : parts[2] === 'map' ? { kind: 'map' } : { kind: 'list' };
+    const ctx = parts[2] === 'thread' ? { kind: 'thread', key: parts[3] } : parts[2] === 'saved' ? { kind: 'saved' } : parts[2] === 'map' ? { kind: 'map', book: parts[3] ? decodeURIComponent(parts[3]) : null } : { kind: 'list' };
     if (!S.tab) showTab(ctx.kind === 'thread' ? 'threads' : ctx.kind === 'saved' ? 'saved' : ctx.kind === 'map' ? 'map' : 'bridges', ctx.key);
     showReader(parts[1], ctx);
     return;
@@ -478,7 +515,24 @@ $('#nav').addEventListener('change', (e) => { const v = e.target.value; if (TABS
 let qTimer;
 $('#q').addEventListener('input', (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => { S.q = (e.target.value || '').trim(); renderBridges(); }, 120); });
 $('#cats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.cat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#cats'), S.cat); renderBridges(); });
-$('#mapCats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.mapCat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#mapCats'), S.mapCat); renderMap(true); });
+$('#mapCats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.mapCat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#mapCats'), S.mapCat); if (S.mapBook && !mapBridges(S.mapBook).length) S.mapBook = null; renderMap(true); });
+$('#otCol').addEventListener('click', (e) => { const b = e.target.closest('.bbook'); if (b) selectMapBook(b.dataset.book); });
+$('#ntCol').addEventListener('click', (e) => { const b = e.target.closest('.bbook'); if (b) selectMapBook(b.dataset.book); });
+$('#mbClear').addEventListener('click', () => { S.mapBook = null; renderMap(false); });
+$('#mbRead').addEventListener('click', () => { const ids = mapBridges(S.mapBook).map((p) => p.id); if (ids.length) openReader(ids[0], { kind: 'map', book: S.mapBook }, null); });
+$('#mbList').addEventListener('click', () => {
+  const list = mapBridges(S.mapBook);
+  const dr = $('#mapList');
+  dr.setAttribute('heading', `${S.mapBook} · ${list.length} ${list.length === 1 ? 'bridge' : 'bridges'}`);
+  $('#mapListRows').innerHTML = list.map((p) => rowHTML(p, { summary: false })).join('');
+  dr.show();
+});
+$('#mapListRows').addEventListener('click', (e) => {
+  const row = e.target.closest('.row[data-id]'); if (!row) return;
+  const book = S.mapBook;
+  $('#mapList').close();
+  openReader(row.dataset.id, { kind: 'map', book }, null);
+});
 $('#types').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.type = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#types'), S.type); renderBridges(); });
 $('#filterBtn').addEventListener('click', () => $('#books').show());
 $('#clearBtn').addEventListener('click', resetFilters);
@@ -510,12 +564,9 @@ browse.addEventListener('click', (e) => {
   const id = row.dataset.id;
   if (S.tab === 'threads' && row.dataset.step != null) openReader(id, { kind: 'thread', key: S.thread }, row, Number(row.dataset.step));
   else if (S.tab === 'saved') openReader(id, { kind: 'saved' }, row);
-  else if (S.tab === 'map') openReader(id, { kind: 'map' }, row);
   else if (S.tab === 'index') { resetFilters(); openReader(id, { kind: 'list' }, row); }
   else openReader(id, { kind: 'list' }, row);
 });
-$('#arc').addEventListener('click', (e) => { const a = e.target.closest('[data-arc]'); if (a) { S.mapSel = a.dataset.arc; renderMapPreview(); } });
-$('#arc').addEventListener('keydown', (e) => { const a = e.target.closest('[data-arc]'); if (a && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); S.mapSel = a.dataset.arc; renderMapPreview(); } });
 
 // Reader controls.
 $('#back').addEventListener('click', back);
@@ -528,7 +579,7 @@ rBody.addEventListener('click', (e) => {
     const p = D.byId.get(cur.id);
     copy(`${p.title} (${p.type})\n${p.ot.ref}: "${p.ot.text}"\n${p.nt.ref}: "${p.nt.text}"\nWhy they connect: ${p.bridge}`, 'Citation copied'); return;
   }
-  if (e.target.closest('[data-onmap]')) { S.mapSel = cur.id; S.mapCat = 'all'; syncChips($('#mapCats'), 'all'); pushed = false; location.hash = '#/map'; return; }
+  if (e.target.closest('[data-onmap]')) { S.mapBook = D.byId.get(cur.id).ot.book; S.mapScroll = true; S.mapCat = 'all'; syncChips($('#mapCats'), 'all'); pushed = false; location.hash = '#/map'; return; }
   const kw = e.target.closest('[data-kw]');
   if (kw) { resetFilters(); S.q = kw.dataset.kw; $('#q').value = S.q; pushed = false; location.hash = '#/bridges'; renderBridges(); }
 });

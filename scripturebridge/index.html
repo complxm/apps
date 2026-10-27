@@ -22,12 +22,14 @@
 <body>
 
 <div id="browse">
-  <header class="top" id="top">
+  <header class="masthead wrap">
+    <div class="brand">
+      <h1>ScriptureBridge</h1>
+      <p>Old Testament promises and their New Testament fulfilments, across all 66 books.</p>
+    </div>
+  </header>
+  <div class="top" id="top">
     <div class="wrap">
-      <div class="brand">
-        <h1>ScriptureBridge</h1>
-        <p>Old Testament promises and their New Testament fulfilments, across all 66 books.</p>
-      </div>
       <div class="nav-scroll">
         <fvl-segmented id="nav" value="bridges" aria-label="Sections">
           <fvl-segment value="bridges">Bridges</fvl-segment>
@@ -38,7 +40,7 @@
         </fvl-segmented>
       </div>
     </div>
-  </header>
+  </div>
 
   <main class="wrap">
     <!-- Bridges -->
@@ -62,14 +64,24 @@
     <!-- Map -->
     <section id="view-map" class="view stack" aria-label="Map" hidden>
       <div class="section-head">
-        <h2>The whole Bible, bridged</h2>
-        <p>Each arc joins an Old Testament promise to its New Testament fulfilment. Tap an arc to see it.</p>
+        <h2>Bridge map</h2>
+        <p>Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.</p>
       </div>
       <div class="chips" id="mapCats" role="group" aria-label="Category"></div>
-      <div class="map-card">
-        <div class="map-scroll"><svg id="arc" viewBox="0 0 1000 470" role="group" aria-label="Arc map of all 66 books"></svg></div>
+      <div class="bmap" id="bmap">
+        <span class="bhead">Old Testament</span><span></span><span class="bhead nt">New Testament</span>
+        <div class="bcol ot" id="otCol" role="group" aria-label="Old Testament books"></div>
+        <svg class="bcurves" id="curves" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="bcol nt" id="ntCol" role="group" aria-label="New Testament books"></div>
       </div>
-      <div id="mapPreview"></div>
+      <div class="map-bar" id="mapBar" hidden>
+        <div class="map-bar-in">
+          <div class="mb-text"><small id="mbSide"></small><b id="mbBook"></b><span id="mbCount"></span></div>
+          <fvl-button variant="tertiary" icon aria-label="Clear selection" id="mbClear"><fvl-icon name="x" size="md"></fvl-icon></fvl-button>
+          <fvl-button variant="secondary" size="sm" id="mbList">List</fvl-button>
+          <fvl-button variant="primary" size="sm" id="mbRead">Read</fvl-button>
+        </div>
+      </div>
     </section>
 
     <!-- Saved -->
@@ -120,6 +132,10 @@
   <div class="book-group"><h3>Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship"></div></div>
   <div class="book-group"><div id="bookGroups"></div></div>
   <fvl-button slot="footer" variant="primary" id="applyBtn">Show bridges</fvl-button>
+</fvl-drawer>
+
+<fvl-drawer id="mapList" placement="bottom" heading="Bridges">
+  <ol class="list sheet-list" id="mapListRows"></ol>
 </fvl-drawer>
 
 <script src="/apps/vendor/gsap/gsap.min.js"></script>
