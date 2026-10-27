@@ -362,16 +362,17 @@ function closeReader() {
   const row = id && views[S.tab] && $(`.row[data-id="${CSS.escape(id)}"]`, views[S.tab]);
   const done = () => {
     reader.hidden = true;
-    gsap.set(reader, { clearProps: 'clipPath,opacity,transform' });
-    if (row) {
-      row.focus({ preventScroll: true });
-      gsap.fromTo(row, { backgroundColor: token('--fvl-color-bg-selected') }, { backgroundColor: token('--fvl-color-bg-surface'), ...spring.settle, clearProps: 'backgroundColor' });
-    }
+    gsap.set([reader, rTop, rBar], { clearProps: 'clipPath,opacity,transform' });
+    if (row) row.focus({ preventScroll: true });
   };
   if (row && !reduced) {
+    // Shrink onto the row and fade out on the way, so nothing is left sitting over the list.
+    // FVL carve curve, compressed so its settle tail does not linger.
     row.scrollIntoView({ block: 'center' });
-    gsap.to($$('.r-in > *', rBody).concat([rTop, rBar]), { opacity: 0, ...quick });
-    gsap.to(reader, { clipPath: insetFor(row.getBoundingClientRect()), ...spring.carve, onComplete: done });
+    gsap.timeline({ onComplete: done })
+      .to($$('.r-in > *', rBody).concat([rTop, rBar]), { opacity: 0, duration: 0.12, ease: 'power1.in' }, 0)
+      .to(reader, { clipPath: insetFor(row.getBoundingClientRect()), duration: 0.42, ease: 'fvl-carve' }, 0)
+      .to(reader, { opacity: 0, duration: 0.2, ease: 'power1.out' }, 0.16);
   } else {
     gsap.to(reader, { opacity: 0, duration: reduced ? 0 : 0.2, onComplete: done });
   }
