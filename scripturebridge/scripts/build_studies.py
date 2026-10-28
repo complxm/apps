@@ -56,6 +56,70 @@ def norm_ref(ref):
     return text, b, spans
 
 
+def span(ref):
+    """Book, first (c, v) and last (c, v) a reference covers; a bare chapter covers all of it."""
+    _, b, spans = norm_ref(ref)
+    c1, a1, _ = spans[0]
+    c2, _, z2 = spans[-1]
+    if a1 is None:
+        a1, z2 = 1, b["verses"][c2 - 1]
+    return b, (c1, a1), (c2, z2)
+
+
+def overlaps(r1, r2):
+    b1, s1, e1 = span(r1)
+    b2, s2, e2 = span(r2)
+    return b1["name"] == b2["name"] and s1 <= e2 and s2 <= e1
+
+
+def union_ref(refs):
+    b = span(refs[0])[0]
+    lo = min(span(r)[1] for r in refs)
+    hi = max(span(r)[2] for r in refs)
+    if lo[0] == hi[0]:
+        if lo[1] == 1 and hi[1] == b["verses"][lo[0] - 1] and all(":" not in r for r in refs):
+            return f"{b['name']} {lo[0]}"
+        return f"{b['name']} {lo[0]}:{lo[1]}" + (f"-{hi[1]}" if hi[1] != lo[1] else "")
+    return f"{b['name']} {lo[0]}:{lo[1]}-{hi[0]}:{hi[1]}"
+
+
+def merge_repeats(steps, pl_steps):
+    """Back-to-back steps on overlapping verses become one step: the passage is shown once and each thing he
+    says about it is kept, with its own time ("at" lists the time of each paragraph of "point").
+    The passage shown is what he read aloud when there is a reading (not a whole chapter he only mentions).
+    A return to a passage after other passages stays a step of its own."""
+    groups = []
+    for st, ps in zip(steps, pl_steps):
+        g = groups[-1] if groups else None
+        if g and overlaps(union_ref(g["refs"]), st["ref"]):
+            g["parts"].append((st, ps)); g["refs"].append(st["ref"])
+        else:
+            groups.append({"parts": [(st, ps)], "refs": [st["ref"]]})
+    out, out_pl = [], []
+    for g in groups:
+        parts = g["parts"]
+        if len(parts) == 1:
+            out.append(parts[0][0]); out_pl.append(parts[0][1]); continue
+        reads = [st for st, _ in parts if st["kind"] == "read"]
+        vers = []
+        for st in reads:
+            if st["version"] not in vers and st["version"] not in ("-", "unknown"):
+                vers.append(st["version"])
+        named = [v for v in vers if v != "other"] or vers
+        m = {"t": parts[0][0]["t"], "ref": union_ref([st["ref"] for st in (reads or [p[0] for p in parts])]),
+             "kind": "read" if reads else "cited", "version": ", ".join(named) if reads else "-",
+             "point": "\n\n".join(st["point"] for st, _ in parts), "at": [st["t"] for st, _ in parts]}
+        notes = [st["note"] for st, _ in parts if st.get("note")]
+        if notes:
+            m["note"] = " ".join(notes)
+        mp = {"point": "\n\n".join(ps["point"] for _, ps in parts)}
+        notes_pl = [ps["note"] for _, ps in parts if ps.get("note")]
+        if notes_pl:
+            mp["note"] = " ".join(notes_pl)
+        out.append(m); out_pl.append(mp)
+    return out, out_pl
+
+
 def hms(t):
     h, m, s = t // 3600, t % 3600 // 60, t % 60
     return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
@@ -70,13 +134,21 @@ def write(path, obj):
 def main():
     order = [p for s in SERIES for p in s["parts"]] + SINGLES
     studies, index, verses = {}, {}, collections.defaultdict(lambda: collections.defaultdict(list))
+    merged_away = {}
     for sid in order:
         d = json.load(open(os.path.join(SRC, sid + ".json"), encoding="utf-8"))
         se = next((s for s in SERIES if sid in s["parts"]), None)
+        pl = d.get("pl")
+        assert pl and len(pl["steps"]) == len(d["steps"]), sid
+        raw = len(d["steps"])
+        d["steps"], pl["steps"] = merge_repeats(d["steps"], pl["steps"])
+        merged_away[sid] = raw - len(d["steps"])
         steps = []
         for i, st in enumerate(d["steps"]):
             ref, b, spans = norm_ref(st["ref"])
             o = {"t": st["t"], "ref": ref, "kind": st["kind"], "version": st["version"], "point": st["point"]}
+            if st.get("at"):
+                o["at"] = st["at"]
             if st.get("note"):
                 o["note"] = st["note"]
             steps.append(o)
@@ -87,8 +159,6 @@ def main():
                         continue
                     for v in range(a, z + 1):
                         verses[f"{b['osis']}.{c}"][str(v)].append([sid, i, st["t"], st["kind"]])
-        pl = d.get("pl")
-        assert pl and len(pl["steps"]) == len(steps), sid
         study = {"id": sid, "title": d["title"], "question": d["question"], "summary": d["summary"], "claims": d["claims"], "topics": d["topics"],
                  "dur": d["dur"], "video": d.get("video"), "series": se and se["id"], "part": se and se["parts"].index(sid) + 1,
                  "steps": steps, "pl": pl}
@@ -99,6 +169,7 @@ def main():
     write(os.path.join(OUT, "index.json"), {"source": SOURCE, "series": SERIES, "studies": index})
     write(os.path.join(OUT, "verses.json"), {k: dict(v) for k, v in sorted(verses.items())})
     catalogue(order, studies)
+    print("repeats merged:", merged_away, sum(merged_away.values()))
     print(f"{len(studies)} studies, {sum(len(s['steps']) for s in studies.values())} steps, "
           f"{sum(len(v) for v in verses.values())} verses indexed in {len(verses)} chapters")
 
@@ -131,7 +202,9 @@ def catalogue(order, studies):
         L += ["", "**Topics:** " + ", ".join(s["topics"]), "", "| # | Time | Passage | How | What he draws from it |", "|---|---|---|---|---|"]
         for i, x in enumerate(s["steps"]):
             how = f"read ({x['version']})" if x["kind"] == "read" else "mentioned"
-            pt = x["point"] + (f" *({x['note']})*" if x.get("note") else "")
+            paras = x["point"].split("\n\n")
+            pt = " ".join(f"**{hms(t)}** {p}" for t, p in zip(x["at"], paras)) if x.get("at") else x["point"]
+            pt += f" *({x['note']})*" if x.get("note") else ""
             L.append(f"| {i + 1} | {hms(x['t'])} | {x['ref']} | {how} | {pt.replace('|', '/')} |")
         L.append("")
 

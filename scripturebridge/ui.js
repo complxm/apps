@@ -537,10 +537,22 @@ async function studyPassageHTML(ref) {
     }).join('')).join('');
   }).join('');
 }
+// What he draws from a passage. A step that gathers several moments on the same verses shows each one
+// as its own paragraph, headed by its time in the video (a link to that moment when the video is known).
+function pointHTML(st, meta) {
+  const paras = st.point.split('\n\n');
+  if (!st.at || st.at.length !== paras.length) return paras.map((x) => `<p>${esc(x)}</p>`).join('');
+  return paras.map((x, i) => {
+    const tm = esc(t('st.into', { time: hms(st.at[i]) })), url = videoAt(meta, st.at[i]);
+    return `<p class="st-para"><span class="st-at">${url ? `<a class="ext" href="${esc(url)}" target="_blank" rel="noopener">${tm}</a>` : tm}</span>${esc(x)}</p>`;
+  }).join('');
+}
 function renderStudyReader() {
   const id = cur.ctx.key, x = LS(D.SD[id]), meta = D.SI.studies[id];
   const st = x.steps[cur.idx], nx = x.steps[cur.idx + 1];
-  const verId = { KJV: 'kjv', NLT: 'nlt' }[st.version];
+  // A merged step may name several versions ("NLT, KJV"): offer the first one the app has.
+  const verName = String(st.version).split(', ').find((v) => v === 'KJV' || v === 'NLT');
+  const verId = { KJV: 'kjv', NLT: 'nlt' }[verName];
   const showKjv = st.kind === 'read' && verId && trInfo().id !== verId && lang() === 'en' && BIB.meta?.translations.some((q) => q.id === verId);
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
@@ -550,13 +562,13 @@ function renderStudyReader() {
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
       <p class="p-label st-tr">${esc(trInfo().name)}</p>
       <div class="p-text st-text" lang="${esc(trInfo().lang)}"><span class="p-loading">…</span></div>
-      ${showKjv ? `<p class="note st-kjv">${esc(t('st.inVer', { v: st.version }))} <button type="button" class="link-btn" data-to-ver="${verId}">${esc(t('st.toVer', { v: st.version }))}</button></p>` : ''}
+      ${showKjv ? `<p class="note st-kjv">${esc(t('st.inVer', { v: verName }))} <button type="button" class="link-btn" data-to-ver="${verId}">${esc(t('st.toVer', { v: verName }))}</button></p>` : ''}
       ${trInfo().notice ? `<p class="note">${esc(trInfo().notice)}</p>` : ''}
       ${passageLinks(st.ref)}
     </section>
     <section class="why" aria-label="${esc(t('st.draws'))}">
       <p class="p-label">${esc(t('st.draws'))}</p>
-      <p>${esc(st.point)}</p>
+      ${pointHTML(st, meta)}
       ${st.note ? `<p class="note">${esc(st.note)}</p>` : ''}
       ${vid ? `<p class="p-links"><a class="ext" href="${esc(vid)}" target="_blank" rel="noopener">${esc(t('st.watch', { time: hms(st.t) }))}<fvl-icon name="external-link"></fvl-icon></a></p>` : ''}
     </section>

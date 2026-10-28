@@ -905,3 +905,16 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .st-text .seg-ref { margin: var(--fvl-space-stack-related) 0 0; }
 .st-text .seg-gap { margin: 0; padding: var(--fvl-space-stack-related) 0; color: var(--fvl-color-text-muted); }
 .st-kjv { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--fvl-space-icon-gap); }
+/* A step that gathers several moments: each paragraph carries its time in the video. */
+.st-at {
+  display: block;
+  margin-bottom: var(--fvl-space-stack-related);
+  font-family: var(--fvl-type-data-family);
+  font-size: var(--fvl-type-micro-size);
+  font-weight: var(--fvl-type-label-weight);
+  font-variant-numeric: var(--fvl-type-data-numeric);
+  letter-spacing: var(--fvl-type-micro-tracking);
+  text-transform: uppercase;
+  color: var(--fvl-color-text-muted);
+}
+.why .st-para + .st-para { margin-top: var(--fvl-space-stack-group); }
