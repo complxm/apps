@@ -417,7 +417,7 @@ fvl-button[hidden] { display: none; }
 }
 .verse {
   display: grid;
-  grid-template-columns: 2rem minmax(0, 1fr);
+  grid-template-columns: minmax(2rem, max-content) minmax(0, 1fr);
   column-gap: var(--fvl-space-icon-gap);
   align-items: baseline;
   padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x) var(--fvl-space-stack-related) 0;
@@ -432,6 +432,7 @@ fvl-button[hidden] { display: none; }
 .verse:focus-visible { outline: none; }
 .vn {
   text-align: right;
+  white-space: nowrap; /* "23–24" where a translation joins verses */
   font-family: var(--fvl-type-data-family);
   font-size: var(--fvl-type-small-size);
   font-weight: var(--fvl-type-label-weight);

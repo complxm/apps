@@ -76,7 +76,7 @@ const STR = {
     'st.loading': 'Loading the study…', 'st.err': 'The study could not be loaded.',
     'st.verses': 'In the studies', 'st.versesHint': 'Studies that turn to this verse. Tap one to follow it from there.',
     'pos.study': '{title} · step {i} of {n}', 'st.alsoAt': 'Also at {times}',
-    'nlt.fail': 'The NLT could not be reached from Tyndale’s NLT API, so the BSB is shown instead.', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the BSB is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
@@ -135,7 +135,7 @@ const STR = {
     'st.loading': 'Wczytywanie studium…', 'st.err': 'Nie udało się wczytać studium.',
     'st.verses': 'W studiach', 'st.versesHint': 'Studia, które sięgają do tego wersetu. Dotknij, aby iść dalej od tego miejsca.',
     'pos.study': '{title} · krok {i} z {n}', 'st.alsoAt': 'Także: {times}',
-    'nlt.fail': 'Nie udało się połączyć z NLT API wydawnictwa Tyndale, dlatego pokazano BSB.', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu BSB.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
@@ -462,9 +462,11 @@ const lenText = (sec) => { const h = Math.floor(sec / 3600), m = Math.round((sec
 const videoAt = (st, sec) => st.video ? `${st.video}${st.video.includes('?') ? '&' : '?'}t=${sec}s` : '';
 const sReadKey = (id, i) => `${id}:${i}`;
 const sRead = new Set(store.get('sb_sread_v1', []));
-function stepKicker(st, i) {
+function stepKicker(st, i, full) {
   const how = st.kind === 'cited' ? t('st.cited') : st.version && st.version !== 'unknown' && st.version !== '-' ? t('st.read', { v: st.version }) : t('st.readU');
-  return `<span class="step-n">${i + 1}</span><span aria-hidden="true">·</span><span class="st-time">${esc(hms(st.t))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`;
+  // In the reader the line is spelled out: "Step 4 · 12:00 into the video · read from the KJV".
+  return full ? `<span>${esc(t('st.stepN', { n: i + 1 }))}</span><span aria-hidden="true">·</span><span>${esc(t('st.into', { time: hms(st.t) }))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`
+    : `<span class="step-n">${i + 1}</span><span aria-hidden="true">·</span><span class="st-time">${esc(hms(st.t))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`;
 }
 function thModeHTML(mode) {
   return `<fvl-segmented id="thMode" value="${mode}" aria-label="${esc(t('th.mode'))}"><fvl-segment value="threads">${esc(t('th.threads'))}</fvl-segment><fvl-segment value="studies">${esc(t('th.studies'))}</fvl-segment></fvl-segmented>`;
@@ -526,9 +528,12 @@ async function studyPassageHTML(ref) {
     const vs = arrays[k];
     const ranges = sg.ranges.length ? sg.ranges : [[1, vs.length]];
     const head = segs.length > 1 ? `<p class="seg-ref">${esc(refName(BIB.byOsis.get(sg.osis)))} ${sg.c}</p>` : '';
-    return head + ranges.map(([a, b], j) => (j ? '<p class="seg-gap" aria-hidden="true">…</p>' : '') + vs.slice(a - 1, b).map((vt, q) => {
-      const n = a + q;
-      return `<span class="verse" data-sv="${esc(`${sg.osis}.${sg.c}.${n}`)}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${n}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
+    const jn = joinedNow(sg.osis, sg.c);
+    // A range that starts on a joined verse begins at the verse it is joined to, so no line is empty.
+    return head + ranges.map(([a, b], j) => (j ? '<p class="seg-gap" aria-hidden="true">…</p>' : '') + vs.slice((jn[a] || a) - 1, b).map((vt, q) => {
+      const n = (jn[a] || a) + q;
+      if (jn[n]) return '';
+      return `<span class="verse" data-sv="${esc(`${sg.osis}.${sg.c}.${n}`)}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${verseLabel(jn, n)}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
     }).join('')).join('');
   }).join('');
 }
@@ -540,9 +545,10 @@ function renderStudyReader() {
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
     <div class="r-step"><span class="kicker">${esc(x.title)}</span><p>${esc(x.question)}</p></div>
-    <p class="kicker">${stepKicker(st, cur.idx)}</p>
+    <p class="kicker">${stepKicker(st, cur.idx, true)}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(locRef(st.ref))}</h2>
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
+      <p class="p-label st-tr">${esc(trInfo().name)}</p>
       <div class="p-text st-text" lang="${esc(trInfo().lang)}"><span class="p-loading">…</span></div>
       ${showKjv ? `<p class="note st-kjv">${esc(t('st.inVer', { v: st.version }))} <button type="button" class="link-btn" data-to-ver="${verId}">${esc(t('st.toVer', { v: st.version }))}</button></p>` : ''}
       ${trInfo().notice ? `<p class="note">${esc(trInfo().notice)}</p>` : ''}
@@ -563,7 +569,14 @@ function renderStudyReader() {
   next.textContent = last ? t('finish') : t('next');
   next.setAttribute('aria-label', last ? t('finishA') : t('nextA', { t: nx ? locRef(nx.ref) : '' }));
   const tok = ++passageToken;
-  studyPassageHTML(st.ref).then((html) => { if (tok === passageToken) $('.st-text', rBody).innerHTML = html; })
+  studyPassageHTML(st.ref).then((html) => {
+    if (tok !== passageToken) return;
+    $('.st-text', rBody).innerHTML = html;
+    // If the NLT could not be read for this passage, say plainly that the BSB is shown.
+    if (trInfo().id === 'nlt' && parseRefList(st.ref).some((sg) => nltFell.has(`${sg.osis}/${sg.c}`))) {
+      $('.st-tr', rBody).textContent = `${BIB.meta.translations[0].name} · ${t('nlt.fail')}`;
+    }
+  })
     .catch(() => { if (tok === passageToken) $('.st-text', rBody).textContent = t('passageErr'); });
   // The next passage is likely to be read next.
   if (nx) parseRefList(nx.ref).forEach((sg) => chapterText(sg.osis, sg.c).catch(() => {}));
@@ -729,40 +742,69 @@ const getJSON = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url
 const NLT_KEY = 'TEST';
 const NLT = { id: 'nlt', label: 'NLT', name: 'New Living Translation', lang: 'en', remote: true,
   licence: '© Tyndale House Foundation, read live from the NLT API', url: 'https://api.nlt.to',
-  empty: 'Combined with the verse before it in the NLT.',
+  empty: 'The NLT translates this verse together with the verse before it.',
   notice: 'Scripture quotations are taken from the Holy Bible, New Living Translation, copyright © 1996, 2004, 2015 by Tyndale House Foundation. Used by permission of Tyndale House Publishers, Carol Stream, Illinois 60188. All rights reserved.' };
-// The API's HTML: one element per verse carrying its number (vn="16", or "16-17" where the NLT joins verses),
-// with the verse number, footnote markers, footnotes and headings inside it, which are dropped.
-function nltVerses(html, c, n, into) {
+// The API returns an HTML excerpt. Rather than rely on one exact layout, the reply is read in document order:
+// any element with a vn="16" attribute, or a verse-number span (class "vn") or <sup> holding only a number, starts
+// that verse, and the text that follows belongs to it until the next number. A range ("16-17") means the NLT
+// translates those verses together. Footnotes, footnote markers and headings are dropped.
+function nltVerses(html, c, n, into, joined) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
-  const els = [...doc.querySelectorAll('[vn]')].filter((el) => !el.parentElement?.closest('[vn]'));
-  if (!els.length) throw new Error('NLT: no verses in reply');
-  els.forEach((el) => {
-    const ch = el.getAttribute('ch');
-    if (ch && +ch !== c) return;
-    const v = parseInt(el.getAttribute('vn'), 10);
-    if (!(v >= 1 && v <= n)) return;
-    const x = el.cloneNode(true);
-    x.querySelectorAll('.vn, .a-tn, .tn, sup, h1, h2, h3, h4, h5, script, style').forEach((q) => q.remove());
-    const txt = x.textContent.replace(/\s+/g, ' ').trim();
-    into[v - 1] = into[v - 1] ? `${into[v - 1]} ${txt}` : txt;
-  });
+  doc.querySelectorAll('.tn, .a-tn, script, style, h1, h2, h3, h4, h5, h6').forEach((q) => q.remove());
+  let v = 0, found = false;
+  const start = (raw) => {
+    const m = String(raw).trim().match(/^(\d+)(?:\s*[-–]\s*(\d+))?$/);
+    if (!m) return false;
+    v = +m[1]; found = true;
+    if (m[2]) for (let k = v + 1; k <= Math.min(+m[2], n); k++) joined[k] = v;
+    return true;
+  };
+  const walk = (node) => {
+    for (const ch of node.childNodes) {
+      if (ch.nodeType === 3) { if (v >= 1 && v <= n) into[v - 1] += ch.nodeValue; continue; }
+      if (ch.nodeType !== 1) continue;
+      const chap = ch.getAttribute('ch');
+      if (chap && +chap !== c) continue;
+      if (ch.hasAttribute('vn')) start(ch.getAttribute('vn'));
+      if ((ch.classList.contains('vn') || ch.tagName === 'SUP') && start(ch.textContent)) continue;
+      walk(ch);
+      if (/^(P|DIV|SECTION|LI|BR)$/.test(ch.tagName) && v >= 1 && v <= n) into[v - 1] += ' ';
+    }
+  };
+  walk(doc.body);
+  if (!found) throw new Error('NLT: no verse numbers in reply');
+}
+const nltJoined = new Map(); // "Osis/c" -> { verse: first verse it is joined to }
+async function nltFetch(b, c, a, z, n, out, joined) {
+  const url = `https://api.nlt.to/api/passages?ref=${encodeURIComponent(`${b.name} ${c}:${a}-${z}`)}&version=NLT&key=${encodeURIComponent(NLT_KEY)}`;
+  const r = await fetch(url, { credentials: 'omit' });
+  if (!r.ok) throw new Error('NLT ' + r.status);
+  nltVerses(await r.text(), c, n, out, joined);
 }
 async function nltChapter(osis, c) {
   const b = BIB.byOsis.get(osis), n = b.verses[c - 1];
-  const out = new Array(n).fill('');
+  const out = new Array(n).fill(''), joined = {};
   const step = NLT_KEY === 'TEST' ? 50 : 500;
-  const parts = [];
-  for (let a = 1; a <= n; a += step) parts.push([a, Math.min(n, a + step - 1)]);
-  await Promise.all(parts.map(async ([a, z]) => {
-    const url = `https://api.nlt.to/api/passages?ref=${encodeURIComponent(`${b.name} ${c}:${a}-${z}`)}&version=NLT&key=${encodeURIComponent(NLT_KEY)}`;
-    const r = await fetch(url, { credentials: 'omit' });
-    if (!r.ok) throw new Error('NLT ' + r.status);
-    nltVerses(await r.text(), c, n, out);
-  }));
-  if (!out.some(Boolean)) throw new Error('NLT: empty');
-  return out;
+  const ranges = [];
+  for (let a = 1; a <= n; a += step) ranges.push([a, Math.min(n, a + step - 1)]);
+  // The BSB says which verses really exist (a few are not in the earliest manuscripts and are blank in both).
+  const [bsb] = await Promise.all([chapterText(osis, c, 'bsb'), ...ranges.map(([a, z]) => nltFetch(b, c, a, z, n, out, joined))]);
+  const missing = () => {
+    const tidy = out.map((x) => x.replace(/\s+/g, ' ').trim());
+    const gaps = [];
+    tidy.forEach((x, i) => { if (!x && !joined[i + 1] && bsb[i]) { const last = gaps[gaps.length - 1]; if (last && last[1] === i) last[1] = i + 1; else gaps.push([i + 1, i + 1]); } });
+    return gaps;
+  };
+  // Verses the reply left out are asked for again; if any are still missing, the chapter is not shown half-empty.
+  let gaps = missing();
+  if (gaps.length && gaps.length <= 8) { await Promise.all(gaps.map(([a, z]) => nltFetch(b, c, a, z, n, out, joined))); gaps = missing(); }
+  if (gaps.length) throw new Error('NLT: verses missing ' + JSON.stringify(gaps));
+  nltJoined.set(`${osis}/${c}`, joined);
+  return out.map((x) => x.replace(/\s+/g, ' ').trim());
 }
+// Where the NLT translates verses together, show one line numbered "23–24" instead of an empty verse.
+function joinedNow(osis, c) { return trInfo().id === 'nlt' && !nltFell.has(`${osis}/${c}`) ? nltJoined.get(`${osis}/${c}`) || {} : {}; }
+function verseLabel(j, v) { let last = v; while (j[last + 1] === v) last++; return last > v ? `${v}–${last}` : String(v); }
 // If the NLT cannot be reached, say so once and read the BSB instead.
 let nltWarned = false;
 const nltFell = new Set();
@@ -953,9 +995,11 @@ async function renderBible() {
   const el = $('#chText');
   el.removeAttribute('aria-busy');
   if (trInfo().id === 'nlt' && nltFell.has(`${osis}/${c}`)) { const n = $('.tr-notice', v); if (n) n.textContent = t('nlt.fail'); }
+  const jn = joinedNow(osis, c);
   el.innerHTML = text.map((vt, i) => {
     const n = i + 1;
-    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${n}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
+    if (jn[n]) return '';
+    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${verseLabel(jn, n)}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
   }).join('');
   store.set('sb_bible_pos', { osis, c });
   if (verse) {
