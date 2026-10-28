@@ -85,7 +85,7 @@ const STR = {
     save: 'Save', unsave: 'Remove from saved', savedToast: 'Saved', removedToast: 'Removed from saved',
     next: 'Next', finish: 'Finish', finishA: 'Finish and go back', nextA: 'Next: {t}',
     back: 'Back to list', prevA: 'Previous bridge', readerNav: 'Bridge navigation', reader: 'Reader',
-    fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}',
+    fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
     credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.',
@@ -118,7 +118,7 @@ const STR = {
     save: 'Zapisz', unsave: 'Usuń z zapisanych', savedToast: 'Zapisano', removedToast: 'Usunięto z zapisanych',
     next: 'Dalej', finish: 'Zakończ', finishA: 'Zakończ i wróć', nextA: 'Dalej: {t}',
     back: 'Wróć do listy', prevA: 'Poprzedni most', readerNav: 'Nawigacja mostów', reader: 'Czytnik',
-    fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}',
+    fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
     credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.',
@@ -187,7 +187,7 @@ function applyStatic() {
 const CATS = ['birth', 'ministry', 'passion', 'resurrection', 'covenant'];
 const TABS = ['bridges', 'bible', 'threads', 'map', 'saved'];
 const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, bible: {}, thread: null, mapDrawn: false };
-const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {}, PL: {}, TPL: {} };
+const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {}, PL: {}, TPL: {}, EV: {} };
 let saved = store.get('scripturebridge_saved_v2', []);
 const readSet = new Set(store.get('sb_read_v1', []));
 let lastRead = store.get('sb_last_v1', null);
@@ -199,7 +199,8 @@ async function load() {
   D.P = P; D.T = T; D.OT = books.old_testament; D.NT = books.new_testament;
   P.forEach((p) => { D.byId.set(p.id, p); D.catLabel[p.category] = D.catLabel[p.category] || p.categoryLabel; });
   // Polish versions of the bridges and threads (English stays the master; missing pieces fall back to it).
-  const [pl, tpl] = await Promise.all([get('pl/prophecies.json').catch(() => []), get('pl/threads.json').catch(() => ({}))]);
+  const [pl, tpl, ev] = await Promise.all([get('pl/prophecies.json').catch(() => []), get('pl/threads.json').catch(() => ({})), get('evidence.json').catch(() => ({}))]);
+  D.EV = ev; // checks computed from the texts and OpenBible (scripts/build_evidence.py)
   pl.forEach((x) => { D.PL[x.id] = x; });
   D.TPL = tpl;
 }
@@ -661,7 +662,7 @@ function renderReader() {
     ${step ? `<div class="r-step"><span class="kicker">${esc(step.stage)}</span><p>${esc(step.note)}</p></div>` : ''}
     <p class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}<span aria-hidden="true">·</span>${esc(typeLabel(p.type))}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(p.title)}</h2>
-    <p class="r-meta">${esc(p.eraGap)} · ${t('votesTotal', { n: Number(p.votes) })}</p>
+    <p class="r-meta">${esc(p.eraGap)}${D.EV[p.id]?.votes != null ? ` · ${t('votesReal', { n: D.EV[p.id].votes })}` : ''}</p>
     <section class="passage" aria-label="${esc(t('promise'))}">
       <p class="p-label">${esc(t('promise'))}</p>
       <h3 class="p-ref">${esc(locRef(p.ot.ref))} <small>${esc(p.ot.author)}</small></h3>

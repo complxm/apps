@@ -1,0 +1,2982 @@
+{
+ "p1": {
+  "votes": 43,
+  "links": [
+   [
+    "Gen.3.15",
+    "Gal.4.4",
+    43
+   ],
+   [
+    "Gal.4.4",
+    "Gen.3.15",
+    5
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "and her"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 0.8
+  }
+ },
+ "p2": {
+  "votes": 24,
+  "links": [
+   [
+    "Gen.22.18",
+    "Acts.3.25",
+    24
+   ],
+   [
+    "Acts.3.25",
+    "Gen.22.18",
+    16
+   ],
+   [
+    "Gen.22.18",
+    "Gal.3.16",
+    13
+   ],
+   [
+    "Gal.3.16",
+    "Gen.22.17-18",
+    9
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 6,
+   "text": "of the earth will be blessed"
+  },
+  "formula": {
+   "ref": "Gal.3.16",
+   "phrase": "…were spoken to Abraham and to his seed. The Scripture does not say, “and to seeds,” meaning many, but “…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.86,
+   "nt": 0.81
+  }
+ },
+ "p3": {
+  "votes": 16,
+  "links": [
+   [
+    "Rev.5.5",
+    "Gen.49.9-10",
+    16
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "of the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.69,
+   "nt": 0.78
+  }
+ },
+ "p4": {
+  "votes": 35,
+  "links": [
+   [
+    "Matt.2.2",
+    "Num.24.17",
+    35
+   ],
+   [
+    "Num.24.17",
+    "Rev.22.16",
+    15
+   ],
+   [
+    "Rev.22.16",
+    "Num.24.17",
+    9
+   ],
+   [
+    "Num.24.17",
+    "Matt.2.2-9",
+    7
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 1,
+   "text": "i"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.79,
+   "nt": 0.84
+  }
+ },
+ "p5": {
+  "votes": 3,
+  "links": [
+   [
+    "Ruth.4.14",
+    "Matt.1.5-20",
+    3
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 5,
+   "text": "jesse the father of david"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.78,
+   "nt": 0.73
+  }
+ },
+ "p6": {
+  "votes": 26,
+  "links": [
+   [
+    "Luke.1.46",
+    "1Sam.2.1-10",
+    26
+   ],
+   [
+    "Luke.1.69",
+    "1Sam.2.10",
+    8
+   ],
+   [
+    "Luke.1.51",
+    "1Sam.2.9-10",
+    3
+   ],
+   [
+    "1Sam.2.10",
+    "Luke.1.69",
+    2
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 2,
+   "text": "those who"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.68,
+   "nt": 0.6
+  }
+ },
+ "p7": {
+  "votes": 19,
+  "links": [
+   [
+    "Heb.1.5",
+    "2Sam.7.14",
+    19
+   ],
+   [
+    "Heb.1.5",
+    "1Chr.17.13",
+    17
+   ],
+   [
+    "2Sam.7.14",
+    "Heb.1.5",
+    14
+   ],
+   [
+    "Luke.1.32",
+    "2Sam.7.11-13",
+    13
+   ],
+   [
+    "Luke.1.33",
+    "2Sam.7.16",
+    13
+   ]
+  ],
+  "linkCount": 11,
+  "overlap": {
+   "words": 11,
+   "text": "i will be his father and he will be my son"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.92,
+   "nt": 0.94
+  }
+ },
+ "p8": {
+  "votes": 144,
+  "links": [
+   [
+    "Matt.1.23",
+    "Isa.7.14",
+    144
+   ],
+   [
+    "Isa.7.14",
+    "Matt.1.23",
+    118
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 15,
+   "text": "behold the virgin will be with child and will give birth to a son and"
+  },
+  "formula": {
+   "ref": "Matt.1.22",
+   "phrase": "All this took place to fulfill what the Lord had said through the prophet:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.77,
+   "nt": 0.43
+  }
+ },
+ "p9": {
+  "votes": 152,
+  "links": [
+   [
+    "Isa.9.6",
+    "Luke.2.11",
+    152
+   ],
+   [
+    "Luke.2.11",
+    "Isa.9.6",
+    42
+   ],
+   [
+    "John.14.27",
+    "Isa.9.6",
+    25
+   ],
+   [
+    "Isa.9.6",
+    "John.14.27",
+    22
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 2,
+   "text": "of david"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.89,
+   "nt": 0.86
+  }
+ },
+ "p10": {
+  "votes": 30,
+  "links": [
+   [
+    "Rom.15.12",
+    "Isa.11.10",
+    30
+   ],
+   [
+    "Isa.11.2",
+    "Matt.3.16",
+    24
+   ],
+   [
+    "Matt.3.16",
+    "Isa.11.2",
+    19
+   ],
+   [
+    "Isa.11.10",
+    "Rom.15.9-12",
+    18
+   ],
+   [
+    "Isa.11.1",
+    "Rom.15.12",
+    17
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 5,
+   "text": "the root of jesse will"
+  },
+  "formula": {
+   "ref": "Rom.15.10",
+   "phrase": "Again, it says: “Rejoice, O Gentiles, with His people.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.64,
+   "nt": 0.64
+  }
+ },
+ "p11": {
+  "votes": 130,
+  "links": [
+   [
+    "Matt.2.6",
+    "Mic.5.2",
+    130
+   ],
+   [
+    "Mic.5.2",
+    "Matt.2.6",
+    63
+   ],
+   [
+    "Matt.2.1",
+    "Mic.5.2",
+    33
+   ],
+   [
+    "Mic.5.2",
+    "John.7.42",
+    30
+   ],
+   [
+    "John.7.42",
+    "Mic.5.2",
+    19
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 5,
+   "text": "out of you will come"
+  },
+  "formula": {
+   "ref": "John.7.42",
+   "phrase": "Doesn’t the Scripture say that the Christ will come from the line of Da…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.68,
+   "nt": 0.77
+  }
+ },
+ "p12": {
+  "votes": 83,
+  "links": [
+   [
+    "Matt.2.18",
+    "Jer.31.15",
+    83
+   ],
+   [
+    "Jer.31.15",
+    "Matt.2.16-18",
+    18
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 15,
+   "text": "rachel weeping for her children and refusing to be comforted because they are no more"
+  },
+  "formula": {
+   "ref": "Matt.2.15",
+   "phrase": "…e stayed until the death of Herod. This fulfilled what the Lord had spoken through the prophet: “Out of…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.74,
+   "nt": 0.76
+  }
+ },
+ "p13": {
+  "votes": 69,
+  "links": [
+   [
+    "Matt.2.15",
+    "Hos.11.1",
+    69
+   ],
+   [
+    "Hos.11.1",
+    "Matt.2.15",
+    15
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 7,
+   "text": "out of egypt i called my son"
+  },
+  "formula": {
+   "ref": "Matt.2.15",
+   "phrase": "…e stayed until the death of Herod. This fulfilled what the Lord had spoken through the prophet: “Out of…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 0.7
+  }
+ },
+ "p14": {
+  "votes": 84,
+  "links": [
+   [
+    "Isa.40.3",
+    "Mark.1.2-5",
+    84
+   ],
+   [
+    "Matt.11.10",
+    "Mal.3.1",
+    46
+   ],
+   [
+    "Mark.1.2",
+    "Mal.3.1",
+    40
+   ],
+   [
+    "Matt.11.10",
+    "Isa.40.3",
+    28
+   ],
+   [
+    "Mark.1.3",
+    "Isa.40.3-5",
+    27
+   ]
+  ],
+  "linkCount": 7,
+  "overlap": {
+   "words": 6,
+   "text": "prepare the way for the lord"
+  },
+  "formula": {
+   "ref": "Mark.1.2",
+   "phrase": "As it is written in Isaiah the prophet: “Behold, I will send My me…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.75,
+   "nt": 0.77
+  }
+ },
+ "p15": {
+  "votes": 8,
+  "links": [
+   [
+    "Mark.1.15",
+    "Dan.9.25",
+    8
+   ],
+   [
+    "Luke.19.44",
+    "Dan.9.24",
+    6
+   ],
+   [
+    "Dan.9.26",
+    "Luke.19.43-44",
+    4
+   ],
+   [
+    "Luke.19.43",
+    "Dan.9.26-27",
+    3
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 2,
+   "text": "the city"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.76,
+   "nt": 0.88
+  }
+ },
+ "p16": {
+  "votes": 51,
+  "links": [
+   [
+    "Isa.9.2",
+    "Matt.4.16",
+    51
+   ],
+   [
+    "Matt.4.16",
+    "Isa.9.2",
+    45
+   ],
+   [
+    "Matt.4.15",
+    "Isa.9.1",
+    33
+   ],
+   [
+    "Matt.4.14",
+    "Isa.9.1-2",
+    25
+   ],
+   [
+    "Isa.9.1",
+    "Matt.4.15-16",
+    21
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 22,
+   "text": "in darkness have seen a great light on those living in the land of the shadow of death a light has dawned"
+  },
+  "formula": {
+   "ref": "Matt.4.10",
+   "phrase": "…y from Me, Satan!” Jesus declared. “For it is written: ‘Worship the Lord your God and serve Him only.’”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.65,
+   "nt": 0.64
+  }
+ },
+ "p17": {
+  "votes": 280,
+  "links": [
+   [
+    "Isa.61.1",
+    "Luke.4.18-19",
+    280
+   ],
+   [
+    "Luke.4.18",
+    "Isa.61.1",
+    221
+   ],
+   [
+    "Luke.4.19",
+    "Isa.61.2",
+    17
+   ],
+   [
+    "Luke.4.17",
+    "Isa.61.1-3",
+    12
+   ],
+   [
+    "Isa.61.2",
+    "Luke.4.19",
+    7
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 15,
+   "text": "has anointed me to preach good news to the poor he has sent me to"
+  },
+  "formula": {
+   "ref": "Luke.4.17",
+   "phrase": "the scroll of the prophet Isaiah was handed to Him. Unrolling it, He found the pla…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.74,
+   "nt": 0.61
+  }
+ },
+ "p18": {
+  "votes": 61,
+  "links": [
+   [
+    "Acts.3.22",
+    "Deut.18.15-19",
+    61
+   ],
+   [
+    "Deut.18.15",
+    "Acts.3.22-23",
+    35
+   ],
+   [
+    "John.6.14",
+    "Deut.18.15-18",
+    15
+   ],
+   [
+    "Acts.3.23",
+    "Deut.18.19",
+    10
+   ],
+   [
+    "Deut.18.19",
+    "Acts.3.22-23",
+    5
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 22,
+   "text": "the lord your god will raise up for you a prophet like me from among your brothers you must listen to him"
+  },
+  "formula": {
+   "ref": "Acts.3.22",
+   "phrase": "For Moses said, ‘The Lord your God will raise up for you a proph…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.81,
+   "nt": 0.61
+  }
+ },
+ "p19": {
+  "votes": 64,
+  "links": [
+   [
+    "Matt.11.5",
+    "Isa.35.4-6",
+    64
+   ],
+   [
+    "Isa.35.5",
+    "Matt.11.3-5",
+    53
+   ],
+   [
+    "Isa.35.5",
+    "Mark.7.32-37",
+    19
+   ],
+   [
+    "Isa.35.6",
+    "Mark.7.32-37",
+    2
+   ],
+   [
+    "Isa.35.6",
+    "Matt.11.5",
+    2
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 3,
+   "text": "and the mute"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.85,
+   "nt": 0.75
+  }
+ },
+ "p20": {
+  "votes": 144,
+  "links": [
+   [
+    "Matt.13.35",
+    "Ps.78.2",
+    144
+   ],
+   [
+    "Ps.78.2",
+    "Matt.13.34-35",
+    15
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 12,
+   "text": "i will open my mouth in parables i will utter things hidden"
+  },
+  "formula": {
+   "ref": "Matt.13.35",
+   "phrase": "So was fulfilled what was spoken through the prophet: “I will open…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.25,
+   "nt": 0.67
+  }
+ },
+ "p21": {
+  "votes": 45,
+  "links": [
+   [
+    "Matt.12.18",
+    "Isa.42.1",
+    45
+   ],
+   [
+    "Isa.42.1",
+    "Matt.12.18-21",
+    33
+   ],
+   [
+    "Matt.12.17",
+    "Isa.42.1-4",
+    18
+   ],
+   [
+    "Matt.12.20",
+    "Isa.42.3-4",
+    16
+   ],
+   [
+    "Isa.42.2",
+    "Matt.12.16-20",
+    9
+   ]
+  ],
+  "linkCount": 7,
+  "overlap": {
+   "words": 18,
+   "text": "in the streets a bruised reed he will not break and a smoldering wick he will not extinguish"
+  },
+  "formula": {
+   "ref": "Matt.12.17",
+   "phrase": "This was to fulfill what was spoken through the prophet Isaiah:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.76,
+   "nt": 0.52
+  }
+ },
+ "p22": {
+  "votes": 5,
+  "links": [
+   [
+    "Josh.5.14",
+    "Rev.19.10-14",
+    5
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "for the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.56,
+   "nt": 0.78
+  }
+ },
+ "p23": {
+  "votes": 23,
+  "links": [
+   [
+    "1Cor.10.4",
+    "Exod.17.6",
+    23
+   ],
+   [
+    "Exod.17.6",
+    "1Cor.10.4",
+    22
+   ],
+   [
+    "John.6.31",
+    "Exod.16.4-15",
+    8
+   ],
+   [
+    "Exod.16.15",
+    "John.6.31-32",
+    7
+   ],
+   [
+    "Exod.16.15",
+    "1Cor.10.3",
+    5
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 2,
+   "text": "for they"
+  },
+  "formula": {
+   "ref": "John.6.31",
+   "phrase": "…athers ate the manna in the wilderness, as it is written: ‘He gave them bread from heaven to eat.’”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.73,
+   "nt": 0.93
+  }
+ },
+ "p24": {
+  "votes": 70,
+  "links": [
+   [
+    "John.3.14",
+    "Num.21.7-9",
+    70
+   ],
+   [
+    "Num.21.9",
+    "John.3.14-15",
+    21
+   ],
+   [
+    "Num.21.8",
+    "John.3.14",
+    20
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 1,
+   "text": "the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.86,
+   "nt": 0.72
+  }
+ },
+ "p25": {
+  "votes": 14,
+  "links": [
+   [
+    "2Kgs.5.14",
+    "Luke.4.27",
+    14
+   ],
+   [
+    "John.6.9",
+    "2Kgs.4.42-44",
+    11
+   ],
+   [
+    "2Kgs.4.43",
+    "John.6.9",
+    6
+   ],
+   [
+    "Luke.4.27",
+    "2Kgs.5.1-27",
+    6
+   ],
+   [
+    "2Kgs.4.42",
+    "John.6.13",
+    4
+   ]
+  ],
+  "linkCount": 7,
+  "overlap": {
+   "words": 2,
+   "text": "the people"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.74,
+   "nt": 0.71
+  }
+ },
+ "p26": {
+  "votes": 85,
+  "links": [
+   [
+    "Matt.21.5",
+    "Zech.9.9-10",
+    85
+   ],
+   [
+    "John.12.15",
+    "Zech.9.9",
+    49
+   ],
+   [
+    "Zech.9.9",
+    "Matt.21.4-7",
+    46
+   ],
+   [
+    "Zech.9.9",
+    "John.12.13-16",
+    25
+   ],
+   [
+    "Matt.21.4",
+    "Zech.9.9",
+    22
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 13,
+   "text": "and riding on a donkey on a colt the foal of a donkey"
+  },
+  "formula": {
+   "ref": "Matt.21.4",
+   "phrase": "This took place to fulfill what was spoken through the prophet:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.71,
+   "nt": 0.58
+  }
+ },
+ "p27": {
+  "votes": 75,
+  "links": [
+   [
+    "John.2.17",
+    "Ps.69.9",
+    75
+   ],
+   [
+    "Matt.21.16",
+    "Ps.8.2",
+    53
+   ],
+   [
+    "Ps.8.2",
+    "Matt.21.16",
+    42
+   ],
+   [
+    "Ps.69.9",
+    "John.2.14-17",
+    16
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 10,
+   "text": "from the mouths of children and infants you have ordained"
+  },
+  "formula": {
+   "ref": "John.2.17",
+   "phrase": "His disciples remembered that it is written: “Zeal for Your house will consume Me.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.47,
+   "nt": 0.38
+  }
+ },
+ "p28": {
+  "votes": 57,
+  "links": [
+   [
+    "John.13.18",
+    "Ps.41.9",
+    57
+   ],
+   [
+    "Ps.41.9",
+    "John.13.18",
+    24
+   ],
+   [
+    "Ps.41.9",
+    "John.13.26-27",
+    12
+   ],
+   [
+    "Ps.55.12",
+    "John.13.18",
+    5
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 9,
+   "text": "my bread has lifted up his heel against me"
+  },
+  "formula": {
+   "ref": "John.13.18",
+   "phrase": "…I know whom I have chosen. But this is to fulfill the Scripture: ‘The one who shares My bread has l…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.73,
+   "nt": 0.6
+  }
+ },
+ "p29": {
+  "votes": 37,
+  "links": [
+   [
+    "Matt.27.9",
+    "Zech.11.12-13",
+    37
+   ],
+   [
+    "Zech.11.12",
+    "Matt.26.15",
+    18
+   ],
+   [
+    "Matt.26.15",
+    "Zech.11.12-13",
+    10
+   ],
+   [
+    "Zech.11.13",
+    "Matt.27.3-10",
+    9
+   ],
+   [
+    "Matt.27.10",
+    "Zech.11.13",
+    8
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 6,
+   "text": "took the thirty pieces of silver"
+  },
+  "formula": {
+   "ref": "Matt.27.9",
+   "phrase": "Then what was spoken through Jeremiah the prophet was fulfilled: “They…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.81,
+   "nt": 0.54
+  }
+ },
+ "p30": {
+  "votes": 49,
+  "links": [
+   [
+    "Matt.26.31",
+    "Zech.13.7",
+    49
+   ],
+   [
+    "Mark.14.27",
+    "Zech.13.7",
+    28
+   ],
+   [
+    "Zech.13.7",
+    "Mark.14.27",
+    25
+   ],
+   [
+    "Zech.13.7",
+    "Matt.26.31",
+    21
+   ],
+   [
+    "Matt.26.56",
+    "Zech.13.7",
+    21
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 9,
+   "text": "strike the shepherd and the sheep will be scattered"
+  },
+  "formula": {
+   "ref": "Matt.26.31",
+   "phrase": "…ill all fall away on account of Me. For it is written: ‘I will strike the Shepherd, and the sheep of th…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.71,
+   "nt": 0.71
+  }
+ },
+ "p31": {
+  "votes": 68,
+  "links": [
+   [
+    "Acts.8.32",
+    "Isa.53.7-8",
+    68
+   ],
+   [
+    "Isa.53.7",
+    "Acts.8.32-33",
+    30
+   ],
+   [
+    "1Pet.2.23",
+    "Isa.53.7",
+    24
+   ],
+   [
+    "Isa.53.7",
+    "1Pet.2.23",
+    23
+   ],
+   [
+    "Isa.53.7",
+    "Matt.27.12-14",
+    16
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 9,
+   "text": "is silent so he did not open his mouth"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.86,
+   "nt": 0.33
+  }
+ },
+ "p32": {
+  "votes": 22,
+  "links": [
+   [
+    "Isa.50.6",
+    "Matt.26.67",
+    22
+   ],
+   [
+    "Isa.50.6",
+    "Matt.27.30",
+    11
+   ],
+   [
+    "Matt.26.67",
+    "Isa.50.6",
+    9
+   ],
+   [
+    "Matt.27.30",
+    "Isa.50.6",
+    8
+   ],
+   [
+    "Matt.27.26",
+    "Isa.50.6",
+    5
+   ]
+  ],
+  "linkCount": 10,
+  "overlap": {
+   "words": 1,
+   "text": "to"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.75,
+   "nt": 0.62
+  }
+ },
+ "p33": {
+  "votes": 12,
+  "links": [
+   [
+    "Ps.22.16",
+    "John.20.25",
+    12
+   ],
+   [
+    "Ps.22.16",
+    "John.20.27",
+    6
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 3,
+   "text": "my hands and"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.5,
+   "nt": 0.73
+  }
+ },
+ "p34": {
+  "votes": 49,
+  "links": [
+   [
+    "John.19.24",
+    "Ps.22.18",
+    49
+   ],
+   [
+    "Ps.22.18",
+    "John.19.23-24",
+    15
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 10,
+   "text": "my garments among them and cast lots for my clothing"
+  },
+  "formula": {
+   "ref": "John.19.24",
+   "phrase": "…lots to see who will get it.” This was to fulfill the Scripture: “They divided My garments among th…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 0.57
+  }
+ },
+ "p35": {
+  "votes": 204,
+  "links": [
+   [
+    "Isa.53.5",
+    "1Pet.2.24-25",
+    204
+   ],
+   [
+    "1Pet.2.24",
+    "Isa.53.4-6",
+    127
+   ],
+   [
+    "Luke.23.34",
+    "Isa.53.12",
+    26
+   ],
+   [
+    "Isa.53.12",
+    "Luke.23.32-34",
+    8
+   ],
+   [
+    "Isa.53.12",
+    "Mark.15.27",
+    8
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 3,
+   "text": "by his stripes"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.82,
+   "nt": 0.73
+  }
+ },
+ "p36": {
+  "votes": 64,
+  "links": [
+   [
+    "Matt.27.46",
+    "Ps.22.1",
+    64
+   ],
+   [
+    "Ps.22.1",
+    "Matt.27.46",
+    34
+   ],
+   [
+    "Ps.22.8",
+    "Matt.27.42-43",
+    20
+   ],
+   [
+    "Matt.27.43",
+    "Ps.22.8",
+    12
+   ],
+   [
+    "Ps.22.7",
+    "Matt.27.39-40",
+    4
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 9,
+   "text": "my god my god why have you forsaken me"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.67,
+   "nt": 0.74
+  }
+ },
+ "p37": {
+  "votes": 101,
+  "links": [
+   [
+    "John.19.28",
+    "Ps.69.21",
+    101
+   ],
+   [
+    "Ps.69.21",
+    "Matt.27.34",
+    16
+   ],
+   [
+    "Ps.69.21",
+    "John.19.28-30",
+    10
+   ],
+   [
+    "Matt.27.34",
+    "Ps.69.21",
+    9
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 2,
+   "text": "with gall"
+  },
+  "formula": {
+   "ref": "John.19.28",
+   "phrase": "…erything had now been accomplished, and to fulfill the Scripture, Jesus said, “I am thirsty.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.75,
+   "nt": 0.67
+  }
+ },
+ "p38": {
+  "votes": 47,
+  "links": [
+   [
+    "Rev.1.7",
+    "Zech.12.10",
+    47
+   ],
+   [
+    "John.19.36",
+    "Ps.34.20",
+    38
+   ],
+   [
+    "Zech.12.10",
+    "Rev.1.7",
+    32
+   ],
+   [
+    "John.19.37",
+    "Zech.12.10",
+    24
+   ],
+   [
+    "Ps.34.20",
+    "John.19.36",
+    23
+   ]
+  ],
+  "linkCount": 10,
+  "overlap": {
+   "words": 5,
+   "text": "the one they have pierced"
+  },
+  "formula": {
+   "ref": "John.19.36",
+   "phrase": "Now these things happened so that the Scripture would be fulfilled: “Not one of His bones will be…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.74,
+   "nt": 0.63
+  }
+ },
+ "p39": {
+  "votes": 13,
+  "links": [
+   [
+    "Matt.27.45",
+    "Amos.8.9",
+    13
+   ],
+   [
+    "Amos.8.9",
+    "Matt.27.45",
+    9
+   ],
+   [
+    "Luke.23.44",
+    "Amos.8.9",
+    9
+   ],
+   [
+    "Amos.8.9",
+    "Luke.23.44",
+    8
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 2,
+   "text": "the sun"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.46,
+   "nt": 0.88
+  }
+ },
+ "p40": {
+  "votes": 15,
+  "links": [
+   [
+    "Isa.53.9",
+    "Matt.27.57-60",
+    15
+   ],
+   [
+    "Matt.27.60",
+    "Isa.53.9",
+    6
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 3,
+   "text": "a rich man"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.83,
+   "nt": 0.65
+  }
+ },
+ "p41": {
+  "votes": 92,
+  "links": [
+   [
+    "Ps.16.11",
+    "Acts.2.28",
+    92
+   ],
+   [
+    "Ps.16.10",
+    "Acts.2.27-31",
+    51
+   ],
+   [
+    "Acts.2.25",
+    "Ps.16.8-11",
+    50
+   ],
+   [
+    "Ps.16.10",
+    "Acts.13.35-38",
+    31
+   ],
+   [
+    "Acts.2.27",
+    "Ps.16.10",
+    17
+   ]
+  ],
+  "linkCount": 10,
+  "overlap": {
+   "words": 16,
+   "text": "nor will you let your holy one see decay you have made known to me the"
+  },
+  "formula": {
+   "ref": "Acts.2.25",
+   "phrase": "David says about Him: ‘I saw the Lord always before me; beca…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.61,
+   "nt": 0.71
+  }
+ },
+ "p42": {
+  "votes": 29,
+  "links": [
+   [
+    "1Cor.15.4",
+    "Hos.6.2",
+    29
+   ],
+   [
+    "Matt.12.40",
+    "Jonah.1.17",
+    19
+   ],
+   [
+    "Jonah.1.17",
+    "Matt.12.40",
+    18
+   ],
+   [
+    "Hos.6.2",
+    "1Cor.15.4",
+    8
+   ],
+   [
+    "1Cor.15.4",
+    "Jonah.1.17",
+    8
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 10,
+   "text": "three days and three nights in the belly of the"
+  },
+  "formula": {
+   "ref": "1Cor.15.3",
+   "phrase": "…t Christ died for our sins according to the Scriptures,"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.91,
+   "nt": 0.91
+  }
+ },
+ "p43": {
+  "votes": 4,
+  "links": [
+   [
+    "Job.19.26",
+    "1Cor.15.53",
+    4
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "in the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.92,
+   "nt": 0.92
+  }
+ },
+ "p44": {
+  "votes": 85,
+  "links": [
+   [
+    "Isa.28.16",
+    "Acts.4.11-12",
+    85
+   ],
+   [
+    "Isa.28.16",
+    "1Pet.2.6-8",
+    79
+   ],
+   [
+    "Matt.21.42",
+    "Ps.118.22-23",
+    67
+   ],
+   [
+    "1Pet.2.6",
+    "Isa.28.16",
+    59
+   ],
+   [
+    "Ps.118.22",
+    "Matt.21.42",
+    55
+   ]
+  ],
+  "linkCount": 12,
+  "overlap": {
+   "words": 20,
+   "text": "the stone the builders rejected has become the cornerstone this is from the lord and it is marvelous in our"
+  },
+  "formula": {
+   "ref": "Matt.21.42",
+   "phrase": "…s said to them, “Have you never read in the Scriptures: ‘The stone the builders rejected has become the…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.7,
+   "nt": 0.26
+  }
+ },
+ "p45": {
+  "votes": 70,
+  "links": [
+   [
+    "Ps.110.1",
+    "Heb.10.12-13",
+    70
+   ],
+   [
+    "Ps.110.1",
+    "Acts.2.34-35",
+    34
+   ],
+   [
+    "Ps.110.4",
+    "Heb.7.17",
+    25
+   ],
+   [
+    "Ps.110.4",
+    "Heb.7.21",
+    22
+   ],
+   [
+    "Acts.2.34",
+    "Ps.110.1",
+    21
+   ]
+  ],
+  "linkCount": 10,
+  "overlap": {
+   "words": 21,
+   "text": "the lord said to my lord sit at my right hand until i make your enemies a footstool for your feet"
+  },
+  "formula": {
+   "ref": "Acts.2.34",
+   "phrase": "…cend into heaven, but he himself says: ‘The Lord said to my Lord, “Sit at My right hand"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.67,
+   "nt": 0.75
+  }
+ },
+ "p46": {
+  "votes": 76,
+  "links": [
+   [
+    "Eph.4.8",
+    "Ps.68.18",
+    76
+   ],
+   [
+    "Ps.68.18",
+    "Eph.4.8-10",
+    20
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 3,
+   "text": "ascended on high"
+  },
+  "formula": {
+   "ref": "Eph.4.8",
+   "phrase": "This is why it says: “When He ascended on high, He led captives away,…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.73,
+   "nt": 0.68
+  }
+ },
+ "p47": {
+  "votes": 75,
+  "links": [
+   [
+    "Dan.7.13",
+    "Matt.26.64",
+    75
+   ],
+   [
+    "Dan.7.13",
+    "Rev.1.7",
+    71
+   ],
+   [
+    "Rev.1.7",
+    "Dan.7.13",
+    33
+   ],
+   [
+    "Matt.26.64",
+    "Dan.7.13",
+    25
+   ],
+   [
+    "Dan.7.13",
+    "Rev.1.13",
+    21
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 6,
+   "text": "one like the son of man"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.72,
+   "nt": 0.79
+  }
+ },
+ "p48": {
+  "votes": 94,
+  "links": [
+   [
+    "Rev.21.4",
+    "Isa.25.8",
+    94
+   ],
+   [
+    "Isa.25.8",
+    "Rev.21.4",
+    51
+   ],
+   [
+    "Isa.25.8",
+    "1Cor.15.54",
+    31
+   ],
+   [
+    "1Cor.15.54",
+    "Isa.25.8",
+    31
+   ],
+   [
+    "1Cor.15.55",
+    "Hos.13.14",
+    30
+   ]
+  ],
+  "linkCount": 8,
+  "overlap": {
+   "words": 3,
+   "text": "will wipe away"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.72,
+   "nt": 0.82
+  }
+ },
+ "p49": {
+  "votes": 62,
+  "links": [
+   [
+    "Phil.2.10",
+    "Isa.45.23-25",
+    62
+   ],
+   [
+    "Rom.14.11",
+    "Isa.45.22-25",
+    53
+   ],
+   [
+    "Isa.45.23",
+    "Phil.2.10",
+    25
+   ],
+   [
+    "Isa.45.23",
+    "Rom.14.10-12",
+    16
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 9,
+   "text": "every knee will bow before me every tongue will"
+  },
+  "formula": {
+   "ref": "Rom.14.11",
+   "phrase": "It is written: “As surely as I live, says the Lord, every knee…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.77,
+   "nt": 0.9
+  }
+ },
+ "p50": {
+  "votes": 4,
+  "links": [
+   [
+    "Lev.16.15",
+    "Heb.9.12",
+    4
+   ],
+   [
+    "Matt.27.51",
+    "Lev.16.12-15",
+    2
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "the veil"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.8,
+   "nt": 0.86
+  }
+ },
+ "p51": {
+  "votes": 247,
+  "links": [
+   [
+    "Heb.8.10",
+    "Jer.31.33",
+    247
+   ],
+   [
+    "Jer.31.33",
+    "2Cor.3.3",
+    99
+   ],
+   [
+    "Jer.31.33",
+    "Heb.8.10",
+    81
+   ],
+   [
+    "Heb.8.8",
+    "Jer.31.31-34",
+    72
+   ],
+   [
+    "Jer.31.31",
+    "Luke.22.20",
+    26
+   ]
+  ],
+  "linkCount": 12,
+  "overlap": {
+   "words": 54,
+   "text": "behold the days are coming declares the lord when i will make a new covenant with the house of israel and with the house of judah it will not be like the covenant i made with their fathers when i took them by the hand to lead them out of the land of egypt"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.82,
+   "nt": 0.75
+  }
+ },
+ "p52": {
+  "votes": 92,
+  "links": [
+   [
+    "John.3.5",
+    "Ezek.36.25-27",
+    92
+   ],
+   [
+    "Ezek.36.26",
+    "John.3.3-5",
+    64
+   ],
+   [
+    "Ezek.36.25",
+    "John.3.5",
+    52
+   ],
+   [
+    "Ezek.36.27",
+    "Titus.3.3-6",
+    21
+   ],
+   [
+    "Ezek.36.25",
+    "Titus.3.5-6",
+    20
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 2,
+   "text": "of flesh"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.91,
+   "nt": 0.69
+  }
+ },
+ "p53": {
+  "votes": 139,
+  "links": [
+   [
+    "Joel.2.28",
+    "Acts.2.16-21",
+    139
+   ],
+   [
+    "Rom.10.13",
+    "Joel.2.32",
+    103
+   ],
+   [
+    "Acts.2.17",
+    "Joel.2.28-32",
+    75
+   ],
+   [
+    "Acts.2.16",
+    "Joel.2.28-32",
+    27
+   ],
+   [
+    "Acts.2.21",
+    "Joel.2.32",
+    26
+   ]
+  ],
+  "linkCount": 9,
+  "overlap": {
+   "words": 21,
+   "text": "of smoke the sun will be turned to darkness and the moon to blood before the coming of the great and"
+  },
+  "formula": {
+   "ref": "Acts.2.16",
+   "phrase": "No, this is what was spoken by the prophet Joel:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.65,
+   "nt": 0.68
+  }
+ },
+ "p54": {
+  "votes": 91,
+  "links": [
+   [
+    "Rom.1.17",
+    "Hab.2.4",
+    91
+   ],
+   [
+    "Hab.2.4",
+    "Rom.1.17",
+    64
+   ],
+   [
+    "Hab.2.4",
+    "Heb.10.38",
+    49
+   ],
+   [
+    "Hab.2.4",
+    "Gal.3.11-12",
+    43
+   ],
+   [
+    "Gal.3.11",
+    "Hab.2.4",
+    30
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 6,
+   "text": "the righteous will live by faith"
+  },
+  "formula": {
+   "ref": "Rom.1.17",
+   "phrase": "…mes by faith from start to finish, just as it is written: “The righteous will live by faith.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.62,
+   "nt": 0.73
+  }
+ },
+ "p55": {
+  "votes": 63,
+  "links": [
+   [
+    "Acts.15.16",
+    "Amos.9.11-12",
+    63
+   ],
+   [
+    "Amos.9.11",
+    "Acts.15.15-17",
+    21
+   ],
+   [
+    "Amos.9.12",
+    "Acts.15.17",
+    4
+   ],
+   [
+    "Acts.15.17",
+    "Amos.9.12",
+    2
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 5,
+   "text": "the fallen tent of david"
+  },
+  "formula": {
+   "ref": "Acts.15.15",
+   "phrase": "…words of the prophets agree with this, as it is written:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.45,
+   "nt": 0.68
+  }
+ },
+ "p56": {
+  "votes": 21,
+  "links": [
+   [
+    "Heb.12.26",
+    "Hag.2.6-7",
+    21
+   ],
+   [
+    "Hag.2.6",
+    "Heb.12.26-28",
+    9
+   ],
+   [
+    "Hag.2.7",
+    "Luke.2.27",
+    3
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 3,
+   "text": "i will shake"
+  },
+  "formula": {
+   "ref": "John.2.17",
+   "phrase": "His disciples remembered that it is written: “Zeal for Your house will consume Me.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.62,
+   "nt": 0.7
+  }
+ },
+ "p57": {
+  "votes": 80,
+  "links": [
+   [
+    "John.1.1",
+    "Prov.8.22-31",
+    80
+   ],
+   [
+    "Prov.8.22",
+    "Col.1.17",
+    12
+   ],
+   [
+    "Prov.8.22",
+    "John.1.1-2",
+    11
+   ],
+   [
+    "Prov.8.30",
+    "John.1.1-3",
+    11
+   ],
+   [
+    "Col.1.17",
+    "Prov.8.22-23",
+    11
+   ]
+  ],
+  "linkCount": 8,
+  "overlap": {
+   "words": 2,
+   "text": "the beginning"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.55,
+   "nt": 1.0
+  }
+ },
+ "p58": {
+  "votes": 49,
+  "links": [
+   [
+    "Mark.11.17",
+    "Isa.56.7",
+    49
+   ],
+   [
+    "Isa.56.7",
+    "Mark.11.17",
+    22
+   ],
+   [
+    "Mark.11.17",
+    "1Kgs.8.41-48",
+    9
+   ],
+   [
+    "Isa.56.7",
+    "Eph.2.11-13",
+    6
+   ],
+   [
+    "2Chr.6.32",
+    "Eph.2.12-13",
+    4
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 12,
+   "text": "my house will be called a house of prayer for all the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.73,
+   "nt": 0.79
+  }
+ },
+ "p59": {
+  "votes": null,
+  "links": [],
+  "linkCount": 0,
+  "overlap": {
+   "words": 2,
+   "text": "me to"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.89,
+   "nt": 0.77
+  }
+ },
+ "p60": {
+  "votes": 14,
+  "links": [
+   [
+    "Eccl.1.2",
+    "Rom.8.20",
+    14
+   ],
+   [
+    "Rom.8.20",
+    "Eccl.1.2",
+    6
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "of the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.48,
+   "nt": 0.65
+  }
+ },
+ "p61": {
+  "votes": 2,
+  "links": [
+   [
+    "Judg.16.30",
+    "Heb.2.14-15",
+    2
+   ],
+   [
+    "Heb.11.34",
+    "Judg.16.19-30",
+    2
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 3,
+   "text": "his death he"
+  },
+  "formula": {
+   "ref": "Heb.2.12",
+   "phrase": "He says: “I will proclaim Your name to My brothers; I wil…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.67,
+   "nt": 0.55
+  }
+ },
+ "p62": {
+  "votes": 7,
+  "links": [
+   [
+    "Neh.8.8",
+    "Luke.24.45",
+    7
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "of the"
+  },
+  "formula": {
+   "ref": "Luke.24.45",
+   "phrase": "…hen He opened their minds to understand the Scriptures."
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.58,
+   "nt": 0.6
+  }
+ },
+ "p63": {
+  "votes": null,
+  "links": [],
+  "linkCount": 0,
+  "overlap": {
+   "words": 2,
+   "text": "it is"
+  },
+  "formula": {
+   "ref": "Gal.3.13",
+   "phrase": "…the law by becoming a curse for us. For it is written: “Cursed is everyone who is hung on a tree.”"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.75,
+   "nt": 0.73
+  }
+ },
+ "p64": {
+  "votes": 2,
+  "links": [
+   [
+    "Lam.2.15",
+    "Matt.27.39",
+    2
+   ],
+   [
+    "Matt.27.39",
+    "Lam.2.15-17",
+    2
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "you in"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.85,
+   "nt": 0.62
+  }
+ },
+ "p65": {
+  "votes": 86,
+  "links": [
+   [
+    "2Tim.2.19",
+    "Nah.1.7",
+    86
+   ],
+   [
+    "Nah.1.7",
+    "2Tim.2.19",
+    61
+   ],
+   [
+    "Rom.10.15",
+    "Nah.1.15",
+    43
+   ],
+   [
+    "Nah.1.15",
+    "Rom.10.15",
+    21
+   ],
+   [
+    "Obad.1.21",
+    "Rev.11.15",
+    7
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 3,
+   "text": "of the lord"
+  },
+  "formula": {
+   "ref": "Rom.10.15",
+   "phrase": "…w can they preach unless they are sent? As it is written: “How beautiful are the feet of those who bring g…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.62,
+   "nt": 0.72
+  }
+ },
+ "p66": {
+  "votes": 5,
+  "links": [
+   [
+    "Zeph.3.15",
+    "Rev.21.3-4",
+    5
+   ],
+   [
+    "Zeph.3.15",
+    "John.12.15",
+    4
+   ],
+   [
+    "John.12.15",
+    "Zeph.3.16-17",
+    2
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 4,
+   "text": "o daughter of zion"
+  },
+  "formula": {
+   "ref": "John.12.14",
+   "phrase": "…inding a young donkey, Jesus sat on it, as it is written:"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.86,
+   "nt": 0.78
+  }
+ },
+ "p67": {
+  "votes": 38,
+  "links": [
+   [
+    "Luke.1.17",
+    "Mal.4.5-6",
+    38
+   ],
+   [
+    "Mal.4.6",
+    "Luke.1.16-17",
+    34
+   ],
+   [
+    "Mal.4.2",
+    "Luke.1.78",
+    29
+   ],
+   [
+    "Mal.4.5",
+    "Luke.1.17",
+    29
+   ],
+   [
+    "Mal.4.2",
+    "2Pet.1.19",
+    12
+   ]
+  ],
+  "linkCount": 6,
+  "overlap": {
+   "words": 11,
+   "text": "turn the hearts of the fathers to their children and the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.73,
+   "nt": 0.55
+  }
+ },
+ "p68": {
+  "votes": 71,
+  "links": [
+   [
+    "2Tim.2.19",
+    "Num.16.5",
+    71
+   ],
+   [
+    "1Tim.5.18",
+    "Deut.25.4",
+    39
+   ],
+   [
+    "Deut.25.4",
+    "1Tim.5.17-18",
+    13
+   ],
+   [
+    "Num.16.5",
+    "2Tim.2.19",
+    4
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 12,
+   "text": "do not muzzle an ox while it is treading out the grain"
+  },
+  "formula": {
+   "ref": "1Tim.5.18",
+   "phrase": "For the Scripture says, “Do not muzzle an ox while it is treading out th…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.6,
+   "nt": 0.61
+  }
+ },
+ "p69": {
+  "votes": 30,
+  "links": [
+   [
+    "Jude.1.9",
+    "Zech.3.2",
+    30
+   ],
+   [
+    "Zech.3.2",
+    "Jude.1.9",
+    10
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "the lord"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.68,
+   "nt": 0.68
+  }
+ },
+ "p70": {
+  "votes": 48,
+  "links": [
+   [
+    "Rev.21.1",
+    "Isa.65.17-19",
+    48
+   ],
+   [
+    "Ezek.47.12",
+    "Rev.22.2",
+    25
+   ],
+   [
+    "Isa.65.17",
+    "Rev.21.1-5",
+    22
+   ],
+   [
+    "Rev.22.2",
+    "Ezek.47.8-12",
+    19
+   ],
+   [
+    "Rev.22.2",
+    "Gen.2.9",
+    17
+   ]
+  ],
+  "linkCount": 10,
+  "overlap": {
+   "words": 4,
+   "text": "the middle of the"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.88,
+   "nt": 0.9
+  }
+ },
+ "p71": {
+  "votes": 17,
+  "links": [
+   [
+    "Heb.1.5",
+    "1Chr.17.13",
+    17
+   ],
+   [
+    "1Chr.17.13",
+    "Heb.1.5",
+    7
+   ],
+   [
+    "1Chr.17.14",
+    "Luke.1.32-33",
+    4
+   ],
+   [
+    "1Chr.17.13",
+    "Luke.1.32",
+    2
+   ]
+  ],
+  "linkCount": 4,
+  "overlap": {
+   "words": 11,
+   "text": "i will be his father and he will be my son"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.78,
+   "nt": 0.62
+  }
+ },
+ "p72": {
+  "votes": 9,
+  "links": [
+   [
+    "Luke.11.51",
+    "2Chr.24.20-22",
+    9
+   ],
+   [
+    "Matt.23.35",
+    "2Chr.24.20-22",
+    8
+   ],
+   [
+    "2Chr.24.22",
+    "Luke.11.51",
+    5
+   ],
+   [
+    "2Chr.24.20",
+    "Matt.23.35",
+    3
+   ],
+   [
+    "2Chr.24.21",
+    "Matt.23.34-37",
+    2
+   ]
+  ],
+  "linkCount": 5,
+  "overlap": {
+   "words": 3,
+   "text": "zechariah son of"
+  },
+  "formula": {
+   "ref": "Luke.11.49",
+   "phrase": "Because of this, the wisdom of God said, ‘I will send them prophets and apostles; some of…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.61,
+   "nt": 0.81
+  }
+ },
+ "p73": {
+  "votes": 13,
+  "links": [
+   [
+    "Isa.11.4",
+    "2Thess.2.8",
+    13
+   ],
+   [
+    "2Thess.2.8",
+    "Isa.11.4",
+    11
+   ],
+   [
+    "Isa.66.15",
+    "2Thess.1.6-9",
+    7
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 5,
+   "text": "with the breath of his"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.93,
+   "nt": 0.6
+  }
+ },
+ "p74": {
+  "votes": 44,
+  "links": [
+   [
+    "2Cor.5.21",
+    "Isa.53.4-6",
+    44
+   ],
+   [
+    "2Cor.5.21",
+    "Isa.53.9-12",
+    21
+   ],
+   [
+    "Phlm.1.18",
+    "Isa.53.4-7",
+    6
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 2,
+   "text": "to my"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.46,
+   "nt": 0.78
+  }
+ },
+ "p75": {
+  "votes": 12,
+  "links": [
+   [
+    "1John.1.7",
+    "Zech.13.1",
+    12
+   ],
+   [
+    "Zech.13.1",
+    "1John.1.7",
+    8
+   ],
+   [
+    "Lev.16.30",
+    "1John.1.7-9",
+    3
+   ]
+  ],
+  "linkCount": 3,
+  "overlap": {
+   "words": 2,
+   "text": "you will"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.67,
+   "nt": 0.95
+  }
+ },
+ "p76": {
+  "votes": 10,
+  "links": [
+   [
+    "Ps.86.11",
+    "2John.1.4",
+    10
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "walk in"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.9,
+   "nt": 0.67
+  }
+ },
+ "p77": {
+  "votes": 26,
+  "links": [
+   [
+    "Ps.34.14",
+    "3John.1.11",
+    26
+   ],
+   [
+    "3John.1.11",
+    "Ps.34.14",
+    14
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 3,
+   "text": "the one who"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 0.62,
+   "nt": 0.71
+  }
+ }
+}
