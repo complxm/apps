@@ -17,6 +17,10 @@ body {
 }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
+/* Keyboard focus is drawn by FVL's single liquid focus ring (one ring per document, travels between controls).
+   Our own elements draw no outline of their own, so the ring is never doubled. */
+:where(button, a, [tabindex]):focus-visible { outline: none; }
+
 /* ---------- frame ---------- */
 .wrap {
   max-width: var(--fvl-layout-width-content);
@@ -78,6 +82,7 @@ body {
   padding: var(--fvl-layout-margin-compact);
 }
 .welcome[hidden] { display: none; }
+.welcome { overflow: hidden; }
 .welcome-card {
   width: min(28rem, 100%);
   background: var(--fvl-color-bg-overlay);
@@ -100,7 +105,7 @@ body {
 .welcome-card h2 span { color: var(--fvl-color-text-secondary); font-weight: var(--fvl-type-body-weight); }
 .welcome-card p { margin: 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
 .tr-opt[aria-checked="true"] { background: var(--fvl-color-bg-selected); }
-.tr-opt:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: var(--fvl-stroke-focus-offset); }
+.tr-opt:focus-visible { outline: none; }
 .tr-opt b { display: block; font-weight: var(--fvl-type-label-weight); }
 .tr-opt small { display: block; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
 /* Only the section tabs stay pinned; the title scrolls away to give the content the screen. */
@@ -178,8 +183,7 @@ fvl-button[hidden] { display: none; }
 .row:hover { background: var(--fvl-color-bg-hover); }
 .row:active { background: var(--fvl-color-bg-active); }
 .row:focus-visible, .book:focus-visible, .continue:focus-visible {
-  outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring);
-  outline-offset: var(--fvl-stroke-focus-offset);
+  outline: none;
 }
 .row > span { display: block; }
 .row-head { display: flex !important; align-items: center; justify-content: space-between; gap: var(--fvl-space-icon-gap); }
@@ -313,7 +317,7 @@ fvl-button[hidden] { display: none; }
 }
 .nt .bbook { flex-direction: row-reverse; text-align: right; }
 .bbook:hover { background: var(--fvl-color-bg-hover); }
-.bbook:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: calc(-1 * var(--fvl-stroke-focus)); }
+.bbook:focus-visible { outline: none; }
 .bbook .bname { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bbook .n { flex: none; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-micro-size); font-variant-numeric: var(--fvl-type-data-numeric); }
 .bbook.none { color: var(--fvl-color-text-disabled); cursor: default; }
@@ -370,7 +374,7 @@ fvl-button[hidden] { display: none; }
   text-decoration: none;
 }
 .ext:hover { text-decoration: underline; text-underline-offset: 0.2em; }
-.ext:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: var(--fvl-stroke-focus-offset); border-radius: var(--fvl-radius-control); }
+.ext:focus-visible { outline: none; border-radius: var(--fvl-radius-control); }
 .p-links { margin: var(--fvl-space-stack-related) 0 0; display: flex; flex-wrap: wrap; gap: 0 var(--fvl-space-stack-group); }
 .foot .note a { color: inherit; }
 
@@ -389,7 +393,7 @@ fvl-button[hidden] { display: none; }
   transition: background var(--fvl-motion-tone);
 }
 .ch:hover { background: var(--fvl-color-bg-hover); }
-.ch:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: var(--fvl-stroke-focus-offset); }
+.ch:focus-visible { outline: none; }
 .ch-head { display: flex; align-items: center; justify-content: space-between; gap: var(--fvl-space-icon-gap); max-width: var(--fvl-layout-width-prose); }
 .ch-title {
   margin: 0;
@@ -416,7 +420,7 @@ fvl-button[hidden] { display: none; }
 }
 @media (hover: hover) { .verse:hover { background: var(--fvl-color-bg-hover); } }
 .verse.sel { background: var(--fvl-color-accent-subtle); }
-.verse:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: 0; }
+.verse:focus-visible { outline: none; }
 .verse sup {
   margin-right: var(--fvl-space-stack-related);
   font-size: var(--fvl-type-micro-size);
@@ -626,6 +630,6 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   transition: background var(--fvl-motion-tone);
 }
 .upnext:hover { background: var(--fvl-color-bg-hover); }
-.upnext:focus-visible { outline: var(--fvl-stroke-focus) solid var(--fvl-color-focus-ring); outline-offset: var(--fvl-stroke-focus-offset); }
+.upnext:focus-visible { outline: none; }
 .upnext small { display: block; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-micro-size); letter-spacing: var(--fvl-type-micro-tracking); font-weight: var(--fvl-type-label-weight); text-transform: uppercase; }
 .upnext b { display: block; font-weight: var(--fvl-type-label-weight); }

@@ -23,6 +23,12 @@ const spring = {};
   spring[k] = { ease: 'fvl-' + k, duration: reduced ? 0 : (parseFloat(token('--fvl-motion-spring-' + k + '-duration')) / 1000 || 0.8) };
 });
 const quick = { duration: reduced ? 0 : 0.16, ease: 'power1.in' };
+// Move focus programmatically only for keyboard users: with touch or a mouse it would wake FVL's focus ring
+// on an element that is still animating in, which looks like a stray outline.
+let keyboardMode = false;
+addEventListener('keydown', (e) => { if (!e.metaKey && !e.ctrlKey && !e.altKey) keyboardMode = true; }, true);
+addEventListener('pointerdown', () => { keyboardMode = false; }, true);
+const softFocus = (el) => { if (el && keyboardMode) el.focus({ preventScroll: true }); };
 
 // ---------- helpers ----------
 const $ = (s, el = document) => el.querySelector(s);
@@ -719,7 +725,7 @@ function animateOpen(src) {
   }
   gsap.fromTo($$('.r-in > *', rBody), { opacity: 0, y: 16 }, { opacity: 1, y: 0, stagger: 0.035, ...spring.arrive, delay: r ? 0.08 : 0, clearProps: 'opacity,transform' });
   gsap.fromTo([rTop, rBar], { opacity: 0 }, { opacity: 1, duration: reduced ? 0 : 0.3, delay: 0.12, clearProps: 'opacity' });
-  $('#rTitle').focus({ preventScroll: true });
+  softFocus($('#rTitle'));
 }
 function closeReader() {
   if (reader.hidden) return;
@@ -731,7 +737,7 @@ function closeReader() {
   const done = () => {
     reader.hidden = true;
     gsap.set([reader, rTop, rBar], { clearProps: 'clipPath,opacity,transform' });
-    if (row) row.focus({ preventScroll: true });
+    if (row) softFocus(row);
   };
   if (row && !reduced) {
     // Shrink onto the row and fade out on the way, so nothing is left sitting over the list.
@@ -765,7 +771,7 @@ function go(d) {
       reader.scrollTop = 0;
       showBars();
       gsap.fromTo($$('.r-in > *', rBody), { opacity: 0, x: 24 * d }, { opacity: 1, x: 0, stagger: 0.02, ...spring.arrive, clearProps: 'opacity,transform' });
-      $('#rTitle').focus({ preventScroll: true });
+      softFocus($('#rTitle'));
     },
   });
 }
@@ -882,7 +888,7 @@ function verseTap(el) {
   openXref(S.bible.osis, S.bible.c, Number(el.dataset.v)).catch(() => toast.warning(t('xrefErr')));
 }
 // One place sets the translation (and so the language): the globe menu, the first-run card and the in-chapter switch.
-function setTranslation(id) {
+function setTranslation(id, { instant = false } = {}) {
   store.set('sb_tr_chosen', true);
   if (!id || id === TR.id || !BIB.meta?.translations.some((x) => x.id === id)) { syncTrUI(); return; }
   const langBefore = lang();
@@ -898,7 +904,7 @@ function setTranslation(id) {
   };
   // Fade the page out, swap the words, fade back in: nothing redraws while it is visible.
   const target = reader.hidden ? $('main') : rBody;
-  if (reduced) { apply(); return; }
+  if (reduced || instant) { apply(); return; }
   gsap.to(target, { opacity: 0, duration: 0.12, ease: 'power1.in', onComplete: () => {
     apply();
     gsap.to(target, { opacity: 1, duration: 0.28, ease: 'power2.out', clearProps: 'opacity' });
@@ -934,7 +940,7 @@ function openTrMenu() {
     gsap.fromTo(trPop, { opacity: 0, scale: 0.94, y: -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.36, ease: 'fvl-arrive', transformOrigin: 'top right' });
     gsap.fromTo($$('.tr-opt', trPop), { opacity: 0, y: -4 }, { opacity: 1, y: 0, duration: 0.24, stagger: 0.035, delay: 0.05, ease: 'power2.out', clearProps: 'opacity,transform' });
   }
-  ($('.tr-opt[aria-checked="true"]', trPop) || $('.tr-opt', trPop))?.focus({ preventScroll: true });
+  softFocus($('.tr-opt[aria-checked="true"]', trPop) || $('.tr-opt', trPop));
 }
 function closeTrMenu(then, { focusButton = false } = {}) {
   if (trPop.hidden) { then?.(); return; }
@@ -972,17 +978,22 @@ function showWelcome() {
     gsap.fromTo(card, { opacity: 0, y: 24, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'fvl-arrive', delay: 0.06 });
     gsap.fromTo($$('.tr-opt', card), { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.06, delay: 0.2, ease: 'power2.out', clearProps: 'opacity,transform' });
   }
-  card.focus({ preventScroll: true }); // the dialog itself, so no option looks pre-selected
+  softFocus($('.tr-opt', card)); // keyboard users land on the first choice; touch users see no ring
 }
 $('#welcomeList').addEventListener('click', (e) => {
   const o = e.target.closest('[data-tr]'); if (!o) return;
   const id = o.dataset.tr, w = $('#welcome');
   $$('.tr-opt', w).forEach((x) => x.setAttribute('aria-checked', String(x === o)));
-  const finish = () => { w.hidden = true; browse.inert = false; gsap.set([w, $('.welcome-card', w)], { clearProps: 'opacity,transform' }); setTranslation(id); };
-  if (reduced) { finish(); return; }
+  w.style.pointerEvents = 'none';
+  const finish = () => { w.hidden = true; w.style.pointerEvents = ''; browse.inert = false; gsap.set([w, $('.welcome-card', w)], { clearProps: 'opacity,transform' }); };
+  if (reduced) { setTranslation(id, { instant: true }); finish(); return; }
+  // The tick shows, the card leaves, the language switches behind the backdrop, then the backdrop lifts.
+  // The card stays solid and slides away (no see-through text over the page), then the backdrop lifts.
+  const card = $('.welcome-card', w), travel = innerHeight - card.getBoundingClientRect().top + 24;
   gsap.timeline({ onComplete: finish })
-    .to($('.welcome-card', w), { opacity: 0, y: 12, duration: 0.2, ease: 'power1.in', delay: 0.12 })
-    .to(w, { opacity: 0, duration: 0.2, ease: 'power1.in' }, '-=0.08');
+    .to(card, { y: travel, duration: 0.34, ease: 'power2.in', delay: 0.16 })
+    .add(() => setTranslation(id, { instant: true }))
+    .to(w, { opacity: 0, duration: 0.28, ease: 'power2.out' });
 });
 bibleView.addEventListener('change', (e) => { if (e.target.id === 'trPick') setTranslation(e.target.value); });
 bibleView.addEventListener('click', (e) => { const el = e.target.closest('.verse'); if (el && !getSelection()?.toString()) verseTap(el); });
@@ -1054,7 +1065,7 @@ load().then(() => {
   syncBookUI();
   route();
   // First visit: ask which Bible (and so which language) to use.
-  if (!store.get('sb_tr_chosen', false)) setTimeout(showWelcome, reduced ? 0 : 300);
+  if (!store.get('sb_tr_chosen', false)) showWelcome();
 }).catch((err) => {
   $('#count').textContent = t('loadErr');
   console.error(err);
