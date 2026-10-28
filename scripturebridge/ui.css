@@ -773,3 +773,14 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .mm-river { fill: none; stroke: var(--fvl-color-info-icon); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; opacity: 0.6; }
 .mm-halo { fill: var(--fvl-color-accent-default); opacity: 0.2; }
 .mm-dot { fill: var(--fvl-color-accent-default); }
+
+/* ---------- time view ---------- */
+#mapMode { align-self: flex-start; }
+.time-view { display: grid; gap: var(--fvl-space-stack-group); }
+.time-view[hidden], .bmap[hidden] { display: none; }
+.tl-fan { display: block; width: 100%; height: auto; }
+.tl-axis, .tl-tick { stroke: var(--fvl-color-line-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.tl-year { fill: var(--fvl-color-text-muted); font-family: var(--fvl-type-data-family); font-size: 32px; }
+.tl-arc { fill: none; stroke: currentColor; stroke-width: 1.5px; vector-effect: non-scaling-stroke; opacity: 0.55; }
+.tl-row .row-head .kicker:last-child { font-variant-numeric: var(--fvl-type-data-numeric); }
+.tl-era { font-family: var(--fvl-type-data-family); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-variant-numeric: var(--fvl-type-data-numeric); color: var(--fvl-color-text-secondary); }

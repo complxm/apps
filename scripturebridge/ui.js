@@ -70,6 +70,8 @@ const STR = {
     'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
+    'map.mode': 'Map view', 'map.books': 'Books', 'map.time': 'Time', 'map.timeLead': 'Each arc runs from a promise to its fulfilment, oldest promise first. Tap a bridge to read it.',
+    'tl.bc': '{n} BC', 'tl.ad': 'AD {n}', 'tl.years': '{n} years', 'pos.time': 'In time order · {i} of {n}',
     'saved.emptyH': 'Nothing saved yet', 'saved.emptyD': 'Open a bridge and tap the star to keep it here.', 'saved.lead': '{n} {bridge}, in the order you saved them.',
     readSaved: 'Read saved', copyMd: 'Copy as Markdown', copiedMd: 'Copied as Markdown',
     'bible.lead': '{name}, with every OpenBible.info cross-reference. Tap any verse to see everything it connects to.',
@@ -116,6 +118,8 @@ const STR = {
     'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
+    'map.mode': 'Widok mapy', 'map.books': 'Księgi', 'map.time': 'Czas', 'map.timeLead': 'Każdy łuk biegnie od obietnicy do jej wypełnienia, od najstarszej obietnicy. Dotknij mostu, aby go przeczytać.',
+    'tl.bc': '{n} p.n.e.', 'tl.ad': '{n} n.e.', 'tl.years': '{n} lat', 'pos.time': 'Według czasu · {i} z {n}',
     'saved.emptyH': 'Nic jeszcze nie zapisano', 'saved.emptyD': 'Otwórz most i dotknij gwiazdki, aby go tu zachować.', 'saved.lead': '{n} {bridge}, w kolejności zapisywania.',
     readSaved: 'Czytaj zapisane', copyMd: 'Kopiuj jako Markdown', copiedMd: 'Skopiowano jako Markdown',
     'bible.lead': '{name} ze wszystkimi odnośnikami OpenBible.info. Dotknij dowolnego wersetu, aby zobaczyć wszystko, z czym się łączy.',
@@ -219,7 +223,7 @@ function applyStatic() {
 // ---------- state ----------
 const CATS = ['birth', 'ministry', 'passion', 'resurrection', 'covenant'];
 const TABS = ['bridges', 'bible', 'threads', 'map', 'saved'];
-const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, bible: {}, thread: null, mapDrawn: false };
+const S = { mapMode: 'books', tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, bible: {}, thread: null, mapDrawn: false };
 const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {}, PL: {}, TPL: {}, EV: {}, RV: null, TIMES: [], TIMEBY: new Map(), CALNOTE: {} };
 let saved = store.get('scripturebridge_saved_v2', []);
 const readSet = new Set(store.get('sb_read_v1', []));
@@ -471,6 +475,50 @@ function renderMapBar(selP) {
 function selectMapBook(name) {
   S.mapBook = S.mapBook === name ? null : name;
   renderMap(false, true);
+}
+
+// ---------- time: every bridge as an arc from promise to fulfilment ----------
+// Years come from each bridge's era line ("c. 1400 BC → c. AD 50"): the earliest promise date and the first fulfilment date.
+function eraYears(p) {
+  const [a, b] = String(p.eraGap || '').replace(/\([^)]*\)/g, '').split('→');
+  if (!b) return null;
+  const ot = Math.max(...(a.match(/\d[\d,]*/g) || []).map((x) => +x.replace(/,/g, '')));
+  const m = b.match(/(\d[\d,]*)\s*BC|AD\s*(\d[\d,]*)/);
+  if (!isFinite(ot) || !m) return null;
+  return { ot: -ot, nt: m[1] ? -(+m[1].replace(/,/g, '')) : +m[2].replace(/,/g, '') };
+}
+function timeBridges() {
+  return D.P.filter(inMapCat).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y).sort((a, b) => a.y.ot - b.y.ot || a.y.nt - b.y.nt);
+}
+function renderTime(animate) {
+  const list = timeBridges(), W = 1000, H = 340, base = 290, y0 = -2100, y1 = 150;
+  const X = (yr) => 20 + ((yr - y0) / (y1 - y0)) * (W - 40);
+  const yearLabel = (yr) => (yr < 0 ? t('tl.bc', { n: String(-yr) }) : t('tl.ad', { n: String(yr || 1) }));
+  const ticks = [-2000, -1500, -1000, -500, 0].map((yr) => `<line class="tl-tick" x1="${X(yr)}" x2="${X(yr)}" y1="${base}" y2="${base + 8}"/>
+    <text class="tl-year" x="${X(yr)}" y="${base + 36}" text-anchor="middle">${esc(yr === 0 ? t('tl.ad', { n: '' }).trim() : yearLabel(yr))}</text>`).join('');
+  const arcs = list.map(({ p, y }) => {
+    const a = X(y.ot), b = X(y.nt), rx = (b - a) / 2, ry = Math.min(base - 12, rx * 0.62);
+    return `<path class="tl-arc c-${esc(p.category)}" data-id="${esc(p.id)}" d="M${a.toFixed(1)} ${base} A${rx.toFixed(1)} ${ry.toFixed(1)} 0 0 1 ${b.toFixed(1)} ${base}"/>`;
+  }).join('');
+  $('#timeView').innerHTML = `<svg class="tl-fan" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t('map.time'))}">
+      <line class="tl-axis" x1="20" x2="${W - 20}" y1="${base}" y2="${base}"/>${ticks}<g class="tl-arcs">${arcs}</g></svg>
+    <ol class="list">${list.map(({ p: p0, y }) => {
+      const p = L(p0), gap = y.nt - y.ot;
+      return `<li><button type="button" class="row tl-row${readSet.has(p.id) ? ' is-read' : ''}" data-id="${esc(p.id)}">
+        <span class="row-head"><span class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}</span><span class="kicker">${esc(t('tl.years', { n: gap }))}</span></span>
+        <span class="row-title">${esc(p.title)}</span>
+        <span class="tl-era">${esc(String(p.eraGap).replace(/\s*\([^)]*\)\s*$/, ''))}</span>
+        <span class="refs">${esc(locRef(p.ot.ref))} <span aria-hidden="true">→</span><span class="sr">${esc(t('fulfilledIn'))}</span> ${esc(locRef(p.nt.ref))}</span></button></li>`;
+    }).join('')}</ol>`;
+  if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow });
+}
+function showMapMode() {
+  const time = S.mapMode === 'time';
+  $('#mapMode').value = S.mapMode;
+  $('#mapLead').textContent = t(time ? 'map.timeLead' : 'map.lead');
+  $('#timeView').hidden = !time;
+  $('#bmap').hidden = time;
+  if (time) { $('#mapBar').hidden = true; $('#view-map').classList.remove('with-bar'); }
 }
 
 // ---------- saved ----------
@@ -828,6 +876,8 @@ function renderTab(t, animate) {
   if (t === 'bridges') renderBridges();
   else if (t === 'threads') renderThreads();
   else if (t === 'map') {
+    showMapMode();
+    if (S.mapMode === 'time') { renderTime(animate); return; }
     renderMap(animate && !S.mapDrawn); S.mapDrawn = true;
     if (S.mapScroll && S.mapBook) { S.mapScroll = false; requestAnimationFrame(() => $(`.bbook[data-book="${CSS.escape(S.mapBook)}"]`)?.scrollIntoView({ block: 'center' })); }
   }
@@ -836,7 +886,9 @@ function renderTab(t, animate) {
 }
 function showTab(t, sub) {
   const bibleKey = (x) => [x?.osis, x?.c, x?.v].join('/');
-  const changed = S.tab !== t || (t === 'threads' && S.thread !== sub) || (t === 'bible' && bibleKey(S.bible) !== bibleKey(sub));
+  const mode = t === 'map' && sub === 'time' ? 'time' : 'books';
+  const changed = S.tab !== t || (t === 'threads' && S.thread !== sub) || (t === 'bible' && bibleKey(S.bible) !== bibleKey(sub)) || (t === 'map' && S.mapMode !== mode);
+  if (t === 'map') S.mapMode = mode;
   const verseOnly = t === 'bible' && S.tab === 'bible' && S.bible.osis === sub?.osis && S.bible.c === sub?.c && sub?.c;
   S.tab = t;
   if (t === 'threads') S.thread = sub && D.T[sub] ? sub : null;
@@ -860,9 +912,10 @@ function sequence(ctx) {
   if (ctx.kind === 'thread' && D.T[ctx.key]) return D.T[ctx.key].steps.map((s) => s.prophecyId).filter((id) => D.byId.has(id));
   if (ctx.kind === 'saved') return saved.filter((id) => D.byId.has(id));
   if (ctx.kind === 'map') return mapBridges(ctx.book).map((p) => p.id);
+  if (ctx.kind === 'time') return timeBridges().map((x) => x.p.id);
   return filtered().map((p) => p.id);
 }
-const ctxHash = (ctx) => (ctx.kind === 'thread' ? `/thread/${ctx.key}` : ctx.kind === 'saved' ? '/saved' : ctx.kind === 'map' ? '/map' + (ctx.book ? '/' + encodeURIComponent(ctx.book) : '') : '');
+const ctxHash = (ctx) => (ctx.kind === 'thread' ? `/thread/${ctx.key}` : ctx.kind === 'saved' ? '/saved' : ctx.kind === 'time' ? '/time' : ctx.kind === 'map' ? '/map' + (ctx.book ? '/' + encodeURIComponent(ctx.book) : '') : '');
 const hashFor = (c) => `#/read/${c.id}${ctxHash(c.ctx)}`;
 
 function openReader(id, ctx, src, stepIdx) {
@@ -896,6 +949,7 @@ function positionLabel() {
   if (ctx.kind === 'thread') return t('pos.step', { ...v, title: LT(ctx.key).title });
   if (ctx.kind === 'saved') return t('pos.saved', v);
   if (ctx.kind === 'map' && ctx.book) return `${dispBook(ctx.book)} · ${t('pos.of', v)}`;
+  if (ctx.kind === 'time') return t('pos.time', v);
   return t('pos.of', v);
 }
 
@@ -1156,15 +1210,15 @@ rBody.addEventListener('touchend', (e) => {
 function route() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
   if (parts[0] === 'read' && D.byId.has(parts[1])) {
-    const ctx = parts[2] === 'thread' ? { kind: 'thread', key: parts[3] } : parts[2] === 'saved' ? { kind: 'saved' } : parts[2] === 'map' ? { kind: 'map', book: parts[3] ? decodeURIComponent(parts[3]) : null } : { kind: 'list' };
-    if (!S.tab) showTab(ctx.kind === 'thread' ? 'threads' : ctx.kind === 'saved' ? 'saved' : ctx.kind === 'map' ? 'map' : 'bridges', ctx.key);
+    const ctx = parts[2] === 'thread' ? { kind: 'thread', key: parts[3] } : parts[2] === 'saved' ? { kind: 'saved' } : parts[2] === 'time' ? { kind: 'time' } : parts[2] === 'map' ? { kind: 'map', book: parts[3] ? decodeURIComponent(parts[3]) : null } : { kind: 'list' };
+    if (!S.tab) showTab(ctx.kind === 'thread' ? 'threads' : ctx.kind === 'saved' ? 'saved' : ctx.kind === 'map' || ctx.kind === 'time' ? 'map' : 'bridges', ctx.kind === 'time' ? 'time' : ctx.key);
     showReader(parts[1], ctx);
     return;
   }
   const tab = TABS.includes(parts[0]) ? parts[0] : 'bridges';
   const sub = tab === 'bible' ? { osis: parts[1] || null, c: parts[2] ? +parts[2] : null, v: parts[3] ? +parts[3] : null } : parts[1];
   if (!reader.hidden) {
-    if (S.tab !== tab || tab === 'bible' || (tab === 'threads' && S.thread !== (parts[1] || null))) { reader.hidden = true; root.classList.remove('reading'); browse.inert = false; showTab(tab, sub); }
+    if (S.tab !== tab || tab === 'bible' || (tab === 'threads' && S.thread !== (parts[1] || null)) || (tab === 'map' && S.mapMode !== (sub === 'time' ? 'time' : 'books'))) { reader.hidden = true; root.classList.remove('reading'); browse.inert = false; showTab(tab, sub); }
     else closeReader();
     pushed = false;
     return;
@@ -1178,7 +1232,8 @@ $('#nav').addEventListener('change', (e) => { const v = e.target.value; if (TABS
 let qTimer;
 $('#q').addEventListener('input', (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => { S.q = (e.target.value || '').trim(); renderBridges(); }, 120); });
 $('#cats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.cat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#cats'), S.cat); renderBridges(); });
-$('#mapCats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.mapCat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#mapCats'), S.mapCat); if (S.mapBook && !mapBridges(S.mapBook).length) S.mapBook = null; renderMap(true); });
+$('#mapCats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.mapCat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#mapCats'), S.mapCat); if (S.mapMode === 'time') { renderTime(true); return; } if (S.mapBook && !mapBridges(S.mapBook).length) S.mapBook = null; renderMap(true); });
+$('#mapMode').addEventListener('change', (e) => { const v = e.target.value; if (v === 'time' || v === 'books') location.hash = v === 'time' ? '#/map/time' : '#/map'; });
 $('#otCol').addEventListener('click', (e) => { const b = e.target.closest('.bbook'); if (b) selectMapBook(b.dataset.book); });
 $('#ntCol').addEventListener('click', (e) => { const b = e.target.closest('.bbook'); if (b) selectMapBook(b.dataset.book); });
 $('#mbClear').addEventListener('click', () => { S.mapBook = null; renderMap(false); });
@@ -1362,6 +1417,7 @@ browse.addEventListener('click', (e) => {
   const id = row.dataset.id;
   if (S.tab === 'threads' && row.dataset.step != null) openReader(id, { kind: 'thread', key: S.thread }, row, Number(row.dataset.step));
   else if (S.tab === 'saved') openReader(id, { kind: 'saved' }, row);
+  else if (S.tab === 'map' && S.mapMode === 'time') openReader(id, { kind: 'time' }, row);
   else openReader(id, { kind: 'list' }, row);
 });
 

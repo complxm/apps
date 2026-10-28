@@ -20,6 +20,7 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.
 - **Bible**: the whole Berean Standard Bible, chapter by chapter. Tap any verse for its cross-references in two groups, each strongest first with its text: **Points to** (the verse's own links, 344,799 in total) and **Referenced by** (verses whose links land here, 513,837 entries, since OpenBible lists each link one way only). Tap one to jump there. Swipe between chapters. Every chapter, verse and bridge passage links to the NLT on Bible Gateway.
 - **Threads** read as numbered sequences (including **The Appointed Times of Leviticus 23**, with each feast's next date), the **Map** shows Old and New Testament books in two columns with the bridges between them, and **Saved** collects starred bridges.
+- The **Map** has two views: **Books** (above) and **Time**, where every bridge is an arc from the date of the promise to the date of its fulfilment, read from each bridge's era line; the list below it opens the bridges in time order.
 - Every bridge ends with **How strong is this link**: how the New Testament uses the passage, how strong the connection is, and the evidence for it.
 
 ### Bible data
