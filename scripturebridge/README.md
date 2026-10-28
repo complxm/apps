@@ -35,6 +35,20 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - Both taken from https://github.com/scrollmapper/bible_databases (`formats/json/BSB.json`, `sources/extras/cross_references.txt`).
 - The NLT is copyrighted by Tyndale House, so it is linked, not included.
 
+### Original languages
+
+Tap a verse and the sheet shows it word by word in Hebrew (Old Testament) or Greek (New Testament), each word with its transliteration and gloss. Tap a word for its dictionary entry and every verse it appears in; tap one of those to go there. Bridge passages have a **Words & cross-references** link that opens the same sheet.
+
+- Source: **STEPBible data** by Tyndale House, Cambridge, CC BY 4.0. https://github.com/STEPBible/STEPBible-Data
+  - Hebrew: TAHOT (Leningrad Codex), with English verse numbering. Cantillation marks are removed; vowels are kept.
+  - Greek: TAGNT, keeping only the words in the Nestle-Aland text.
+  - Dictionaries: TBESH (Hebrew) and TBESG (Greek), keyed by extended Strong's numbers.
+- Built by `scripts/build_original.py <path to STEPBible-Data>` into `data/orig/<Book>/<chapter>.json` (one file per chapter, largest 60 KB), and `data/lex/` and `data/occ/` (dictionary entries and verse lists, grouped by Strong's number in hundreds). 442,997 words; 16,968 distinct Strong's numbers, all with a dictionary entry.
+
+### Evidence for each bridge
+
+`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage introduces the words as Scripture, reference checks, and how closely each quoted text matches its reference. The reading layout shows the real link strength. The vote counts in `prophecies_66_books.json` (318–890) matched no OpenBible data, so they are not shown there; the classic page still uses them.
+
 Files: `index.html`, `ui.css`, `ui.js`, data loaded from `data/*.json`. The original single-file layout is kept as `bible_prophecy_explorer.html` (rebuilt by `scripts/generate_app.py`).
 
 ## Repository Structure

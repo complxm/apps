@@ -88,7 +88,10 @@ const STR = {
     fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
-    credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.',
+    credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0.',
+    hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.',
+    wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
+    wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
     passageErr: 'Could not load this passage.', loadErr: 'Could not load the bridges. Check your connection and reload.',
   },
   pl: {
@@ -121,14 +124,17 @@ const STR = {
     fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
-    credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.',
+    credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0.',
+    hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.',
+    wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
+    wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
     passageErr: 'Nie udało się wczytać fragmentu.', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
   },
 };
 // Plural forms: English [one, other]; Polish [one, few (2–4, 22–24…), many].
 const FORMS = {
-  en: { bridge: ['bridge', 'bridges'], chapter: ['chapter', 'chapters'], xref: ['cross-reference', 'cross-references'], vote: ['vote', 'votes'], step: ['step', 'steps'] },
-  pl: { bridge: ['most', 'mosty', 'mostów'], chapter: ['rozdział', 'rozdziały', 'rozdziałów'], xref: ['odnośnik', 'odnośniki', 'odnośników'], vote: ['głos', 'głosy', 'głosów'], step: ['krok', 'kroki', 'kroków'] },
+  en: { bridge: ['bridge', 'bridges'], chapter: ['chapter', 'chapters'], xref: ['cross-reference', 'cross-references'], vote: ['vote', 'votes'], step: ['step', 'steps'], word: ['word', 'words'], time: ['time', 'times'], verse: ['verse', 'verses'] },
+  pl: { bridge: ['most', 'mosty', 'mostów'], chapter: ['rozdział', 'rozdziały', 'rozdziałów'], xref: ['odnośnik', 'odnośniki', 'odnośników'], vote: ['głos', 'głosy', 'głosów'], step: ['krok', 'kroki', 'kroków'], word: ['słowo', 'słowa', 'słów'], time: ['raz', 'razy', 'razy'], verse: ['werset', 'wersety', 'wersetów'] },
 };
 const CAT_PL = { birth: 'Narodziny i rodowód', ministry: 'Posługa i znaki', passion: 'Męka i krzyż', resurrection: 'Zmartwychwstanie i panowanie', covenant: 'Przymierza i mądrość' };
 const TYPE_PL = { 'Direct Prophecy': 'Proroctwo bezpośrednie', 'Typological Foreshadowing': 'Zapowiedź typologiczna', 'Direct Quotation': 'Bezpośredni cytat', 'Covenantal Promise': 'Obietnica przymierza', 'Thematic Parallel': 'Paralela tematyczna' };
@@ -396,6 +402,11 @@ function trPicker() {
 }
 const chapterXref = (osis, c) => cached(BIB.xref, `${osis}/${c}`, () => getJSON(`data/bible/xref/${osis}/${c}.json`).catch(() => ({})));
 const chapterXin = (osis, c) => cached(BIB.xref, `in:${osis}/${c}`, () => getJSON(`data/bible/xin/${osis}/${c}.json`).catch(() => ({})));
+// Hebrew / Greek words per chapter, lexicon and occurrence buckets (STEPBible data, CC BY 4.0).
+const chapterOrig = (osis, c) => cached(BIB.xref, `orig:${osis}/${c}`, () => getJSON(`data/orig/${osis}/${c}.json`).catch(() => ({})));
+const bucketOf = (strong) => `${strong[0]}/${Math.floor(Number(strong.slice(1, 5)) / 100)}`;
+const lexEntry = (strong) => cached(BIB.xref, `lex:${bucketOf(strong)}`, () => getJSON(`data/lex/${bucketOf(strong)}.json`)).then((d) => d[strong]);
+const occList = (strong) => cached(BIB.xref, `occ:${bucketOf(strong)}`, () => getJSON(`data/occ/${bucketOf(strong)}.json`)).then((d) => d[strong] || []);
 const nltUrl = (q) => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(q) + '&version=NLT';
 const nltLink = (q, label = t('nlt')) => `<a class="ext" href="${nltUrl(q)}" target="_blank" rel="noopener">${label}<fvl-icon name="external-link"></fvl-icon></a>`;
 
@@ -528,8 +539,9 @@ async function renderBible() {
 // "Points to" (its own links) and "Referenced by" (verses whose links land here).
 async function openXref(osis, c, v) {
   const b = BIB.byOsis.get(osis);
-  const [text, xo, xi] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c)]);
-  const out = xo[v] || [], inc = xi[v] || [];
+  const [text, xo, xi, og] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c), chapterOrig(osis, c)]);
+  const out = xo[v] || [], inc = xi[v] || [], ow = og[v] || [];
+  const heb = b.testament === 'OT';
   const dr = $('#xrefSheet');
   dr.setAttribute('heading', `${refName(b)} ${c}:${v}`);
   const n = out.length + inc.length;
@@ -540,11 +552,50 @@ async function openXref(osis, c, v) {
       <ol class="list sheet-list" id="x-${key}"></ol><div id="x-${key}-more"></div></section>` : '';
   $('#xrefBody').innerHTML = `<blockquote class="p-text" lang="${esc(trInfo().lang)}">${text[v - 1] ? esc(text[v - 1]) : emptyVerse()}</blockquote>
     <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
+    ${ow.length ? `<section class="xgroup" aria-label="${esc(t(heb ? 'hebrew' : 'greek'))}">
+      <div class="xgroup-head"><p class="p-label">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(t('origWords', { n: ow.length }))}</p><p class="note">${esc(t('origHint'))}</p></div>
+      <div class="wgrid ${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${ow.map(([w, tr, gl, st]) => `<button type="button" class="wchip" data-word="${esc(st || '')}" ${st ? '' : 'disabled'}>
+        <span class="w" lang="${heb ? 'he' : 'grc'}">${esc(w)}</span><span class="tr" dir="ltr">${esc(tr)}</span><span class="gl" dir="ltr">${esc(gl.replace(/[<>]/g, ''))}</span></button>`).join('')}</div>
+    </section>` : ''}
     ${group('out', t('pointsTo'), t('pointsToHint'), out)}
     ${group('inc', t('refBy'), t('refByHint'), inc)}`;
   if (out.length) renderXrefItems('out');
   if (inc.length) renderXrefItems('inc');
+  S.sheetBack = null;
+  S.sheetVerse = { osis, c, v };
   dr.show();
+}
+// A word opens inside the same sheet (no second layer): meaning, Strong's number, every verse that uses it.
+async function openWord(strong) {
+  const body = $('#xrefBody'), dr = $('#xrefSheet'), sv = S.sheetVerse;
+  S.sheetBack = { html: body.innerHTML, heading: dr.getAttribute('heading'), description: dr.getAttribute('description'), scroll: body.closest('fvl-drawer') ? 0 : 0 };
+  let e, occ;
+  try { [e, occ] = await Promise.all([lexEntry(strong), occList(strong)]); } catch { toast.warning(t('wordErr')); return; }
+  if (!e) { toast.warning(t('wordErr')); return; }
+  const heb = strong[0] === 'H';
+  dr.setAttribute('heading', `${e.l} · ${e.t}`);
+  dr.setAttribute('description', `${t(heb ? 'hebrew' : 'greek')} · ${strong} · ${t('wordTimes', { n: e.n })}`);
+  S.occ = { list: occ, shown: 40 };
+  const backRef = sv ? `${refName(BIB.byOsis.get(sv.osis))} ${sv.c}:${sv.v}` : '';
+  body.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-sheet-back><fvl-icon name="arrow-left"></fvl-icon>${esc(t('backTo', { ref: backRef }))}</fvl-button></div>
+    <div class="wordhead"><span class="lemma" lang="${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${esc(e.l)}</span><span class="gloss">${esc(e.g)}</span></div>
+    <section class="xgroup"><p class="p-label">${esc(t('definition'))}</p><p class="wdef" lang="en">${esc(e.d)}</p></section>
+    <section class="xgroup"><p class="p-label">${esc(t('occurrences'))} · ${num(occ.length)} ${pluralForm(occ.length, 'verse')}</p><div class="occ" id="occList"></div><div id="occMore"></div></section>`;
+  renderOcc();
+  gsap.fromTo(body, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
+}
+function renderOcc() {
+  const { list, shown } = S.occ;
+  $('#occList').innerHTML = list.slice(0, shown).map((r) => { const [o, c, v] = r.split('.'); const b = BIB.byOsis.get(o);
+    return `<button type="button" class="occ-ref" data-go="#/bible/${o}/${c}/${v}">${esc(`${refName(b)} ${c}:${v}`)}</button>`; }).join('');
+  $('#occMore').innerHTML = list.length > shown ? `<fvl-button variant="secondary" size="sm" data-occ-more>${esc(t('showAll', { n: list.length }))}</fvl-button>` : '';
+}
+function sheetBack() {
+  const sb = S.sheetBack; if (!sb) return;
+  const body = $('#xrefBody'), dr = $('#xrefSheet');
+  body.innerHTML = sb.html; dr.setAttribute('heading', sb.heading); dr.setAttribute('description', sb.description);
+  S.sheetBack = null;
+  gsap.fromTo(body, { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
 }
 function renderXrefItems(key) {
   const g = S.xref[key];
@@ -637,7 +688,7 @@ function showReader(id, ctx) {
 
 function passageLinks(ref) {
   const r = humanRef(ref);
-  return `<p class="p-links">${r ? `<a class="ext" href="${bibleHash(r)}" data-bible="${bibleHash(r)}">${esc(t('openBible'))}<fvl-icon name="book-open"></fvl-icon></a>` : ''}${nltLink(ref)}</p>`;
+  return `<p class="p-links">${r ? `<a class="ext" href="${bibleHash(r)}" data-bible="${bibleHash(r)}">${esc(t('openBible'))}<fvl-icon name="book-open"></fvl-icon></a>` : ''}${r && r.v ? `<a class="ext" href="${bibleHash(r)}" data-verse="${esc(`${r.osis}.${r.c}.${r.v}`)}">${esc(t('wordsLink'))}<fvl-icon name="search"></fvl-icon></a>` : ''}${nltLink(ref)}</p>`;
 }
 
 function positionLabel() {
@@ -1008,6 +1059,9 @@ bibleView.addEventListener('touchend', (e) => {
   if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700) { const n = neighbour(S.bible.osis, S.bible.c, dx < 0 ? 1 : -1); if (n) location.hash = bibleHash(n); }
 }, { passive: true });
 $('#xrefSheet').addEventListener('click', (e) => {
+  const wd = e.target.closest('[data-word]'); if (wd && wd.dataset.word) { openWord(wd.dataset.word); return; }
+  if (e.target.closest('[data-sheet-back]')) { sheetBack(); return; }
+  if (e.target.closest('[data-occ-more]')) { S.occ.shown = S.occ.list.length; renderOcc(); return; }
   const more = e.target.closest('[data-more]');
   if (more) { const g = S.xref[more.dataset.more]; g.shown = g.list.length; renderXrefItems(more.dataset.more); return; }
   const link = e.target.closest('[data-go]'); if (!link) return;
@@ -1041,6 +1095,8 @@ $('#next').addEventListener('click', () => go(1));
 $('#star').addEventListener('click', () => cur && toggleSave(cur.id));
 rBody.addEventListener('click', (e) => {
   if (e.target.closest('[data-next]')) { go(1); return; }
+  const vl = e.target.closest('[data-verse]');
+  if (vl) { e.preventDefault(); const [o, c, v] = vl.dataset.verse.split('.'); openXref(o, +c, +v).catch(() => toast.warning(t('xrefErr'))); return; }
   const bl = e.target.closest('[data-bible]');
   if (bl) { e.preventDefault(); pushed = false; location.hash = bl.dataset.bible; return; }
   if (e.target.closest('[data-cite]')) { citation(D.byId.get(cur.id)).then((c) => copy(c.plain, t('citeCopied'))); return; }
