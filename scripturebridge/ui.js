@@ -91,7 +91,8 @@ const STR = {
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
     credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
-    hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.',
+    hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.', origHint2: 'Tap a word to see what it means.',
+    defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
     wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
     passageErr: 'Could not load this passage.', loadErr: 'Could not load the bridges. Check your connection and reload.',
@@ -139,7 +140,8 @@ const STR = {
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
     credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
-    hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.',
+    hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.', origHint2: 'Dotknij słowa, aby zobaczyć, co znaczy.',
+    defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
     wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
     passageErr: 'Nie udało się wczytać fragmentu.', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
@@ -730,7 +732,7 @@ async function renderBible() {
   el.removeAttribute('aria-busy');
   el.innerHTML = text.map((vt, i) => {
     const n = i + 1;
-    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><sup>${n}</sup>${vt ? esc(vt) : emptyVerse()}</span> `;
+    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${n}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
   }).join('');
   store.set('sb_bible_pos', { osis, c });
   if (verse) {
@@ -764,9 +766,10 @@ async function openXref(osis, c, v) {
     <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
     ${whoHTML}
     ${ow.length ? `<section class="xgroup" aria-label="${esc(t(heb ? 'hebrew' : 'greek'))}">
-      <div class="xgroup-head"><p class="p-label">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(t('origWords', { n: ow.length }))}</p><p class="note">${esc(t('origHint'))}</p></div>
-      <div class="wgrid ${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${ow.map(([w, tr, gl, st]) => `<button type="button" class="wchip" data-word="${esc(st || '')}" ${st ? '' : 'disabled'}>
-        <span class="w" lang="${heb ? 'he' : 'grc'}">${esc(w)}</span><span class="tr" dir="ltr">${esc(tr)}</span><span class="gl" dir="ltr">${esc(gl.replace(/[<>]/g, ''))}</span></button>`).join('')}</div>
+      <div class="xgroup-head"><p class="p-label">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(t('origWords', { n: ow.length }))}</p><p class="note">${esc(t('origHint2'))}</p></div>
+      <div class="ilin ${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${ow.map(([w, , gl, st]) => `<button type="button" class="iw" data-iw="${esc(st || '')}" aria-pressed="false" ${st ? '' : 'disabled'}>
+        <span class="w" lang="${heb ? 'he' : 'grc'}">${esc(w.replace(/[\u05C3¶]+$/, ''))}</span><span class="gl" dir="ltr">${esc(gl.replace(/[<>\[\]]/g, ''))}</span></button>`).join('')}</div>
+      <div class="wdetail" id="wDetail" hidden></div>
     </section>` : ''}
     ${group('out', t('pointsTo'), t('pointsToHint'), out)}
     ${group('inc', t('refBy'), t('refByHint'), inc)}`;
@@ -776,7 +779,89 @@ async function openXref(osis, c, v) {
   S.sheetVerse = { osis, c, v };
   dr.show();
 }
-// A word opens inside the same sheet (no second layer): meaning, Strong's number, every verse that uses it.
+// A word's meaning: the dictionary form, a short definition (the full one on request) and the verses that use it.
+// The first line that says what the word means: not the headword line, not the "[in LXX …]" note, at least two English words;
+// cut before the references and scholarly asides that follow.
+function shortDef(d) {
+  const full = String(d || '').trim();
+  const lines = full.split('\n').map((x) => x.trim()).filter(Boolean);
+  const plain = (x) => (x.replace(/[^\x00-\x7F]+/g, ' ').match(/[A-Za-z]{2,}/g) || []).length;
+  let line = lines.find((x) => /^[\x00-\x7F]/.test(x) && !/^[([:]/.test(x) && !/in LXX/.test(x) && plain(x) >= 2) || lines[0] || '';
+  const cut = line.slice(12).search(/[(:]/);
+  if (cut >= 0) line = line.slice(0, 12 + cut).replace(/[\s,;]+$/, '');
+  const short = line.length > 200 ? line.slice(0, 200).replace(/\s+\S*$/, '') + ' …' : line;
+  return { short, full, more: full.length > short.length + 2 };
+}
+function wordPanelHTML(strong, e, occ, { head = true } = {}) {
+  const heb = strong[0] === 'H', d = shortDef(e.d);
+  return `${head ? `<div class="wd-head"><span class="wd-lemma" lang="${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${esc(e.l)}</span>
+      <span class="wd-names"><span class="wd-tr">${esc(e.t)}</span><span class="wd-gl">${esc(e.g)}</span></span></div>` : ''}
+    <p class="wd-meta">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(strong)} · ${esc(t('wordTimes', { n: e.n }))}</p>
+    <p class="wd-def" lang="en">${esc(d.short)}</p>
+    ${d.more ? `<button type="button" class="link-btn" data-def-more aria-expanded="false">${esc(t('defMore'))}</button>` : ''}
+    <div class="wd-occ"><button type="button" class="link-btn" data-occ-open aria-expanded="false">${esc(t('occOpen', { n: occ.length }))}</button><div class="occ" hidden></div></div>`;
+}
+function fillOcc(box, list, all) {
+  const shown = all ? list.length : 40;
+  box.innerHTML = list.slice(0, shown).map((r) => { const [o, c, v] = r.split('.'); const b = BIB.byOsis.get(o);
+    return `<button type="button" class="occ-ref" data-go="#/bible/${o}/${c}/${v}">${esc(`${refName(b)} ${c}:${v}`)}</button>`; }).join('') +
+    (list.length > shown ? `<fvl-button variant="secondary" size="sm" data-occ-all>${esc(t('showAll', { n: list.length }))}</fvl-button>` : '');
+}
+// Inside a word panel: the full definition, and the verses, open and close in place.
+function wordPanelClick(e) {
+  const panel = e.target.closest('.wdetail');
+  if (!panel?._word) return false;
+  const { e: entry, occ } = panel._word;
+  const dm = e.target.closest('[data-def-more]');
+  if (dm) {
+    const open = dm.getAttribute('aria-expanded') !== 'true', d = shortDef(entry.d);
+    $('.wd-def', panel).textContent = open ? d.full : d.short;
+    $('.wd-def', panel).classList.toggle('full', open);
+    dm.setAttribute('aria-expanded', String(open));
+    dm.textContent = t(open ? 'defLess' : 'defMore');
+    return true;
+  }
+  const oo = e.target.closest('[data-occ-open]');
+  if (oo) {
+    const box = $('.wd-occ .occ', panel), open = oo.getAttribute('aria-expanded') !== 'true';
+    if (open) fillOcc(box, occ, false);
+    box.hidden = !open;
+    oo.setAttribute('aria-expanded', String(open));
+    oo.textContent = open ? t('occClose') : t('occOpen', { n: occ.length });
+    if (open && !reduced) gsap.fromTo(box, { opacity: 0, y: -4 }, { opacity: 1, y: 0, duration: 0.24, ease: 'power2.out', clearProps: 'opacity,transform' });
+    return true;
+  }
+  if (e.target.closest('[data-occ-all]')) { fillOcc($('.wd-occ .occ', panel), occ, true); return true; }
+  return false;
+}
+let wordTok = 0;
+async function selectWord(btn) {
+  const panel = $('#wDetail');
+  if (!panel) return;
+  const wasOn = btn.getAttribute('aria-pressed') === 'true';
+  $$('.iw[aria-pressed="true"]', $('#xrefBody')).forEach((b) => b.setAttribute('aria-pressed', 'false'));
+  const tok = ++wordTok;
+  if (wasOn) {
+    if (reduced) { panel.hidden = true; return; }
+    gsap.to(panel, { opacity: 0, y: -4, duration: 0.14, ease: 'power1.in', onComplete: () => { if (tok === wordTok) panel.hidden = true; gsap.set(panel, { clearProps: 'opacity,transform' }); } });
+    return;
+  }
+  btn.setAttribute('aria-pressed', 'true');
+  const strong = btn.dataset.iw;
+  let e, occ;
+  try { [e, occ] = await Promise.all([lexEntry(strong), occList(strong)]); } catch { toast.warning(t('wordErr')); return; }
+  if (tok !== wordTok || !e) return;
+  const wasOpen = !panel.hidden;
+  panel._word = { e, occ };
+  panel.innerHTML = wordPanelHTML(strong, e, occ);
+  panel.hidden = false;
+  if (!reduced) {
+    if (wasOpen) gsap.fromTo([...panel.children], { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power1.out', clearProps: 'opacity' });
+    else gsap.fromTo(panel, { opacity: 0, y: -6 }, { opacity: 1, y: 0, ...spring.arrive, clearProps: 'opacity,transform' });
+  }
+  requestAnimationFrame(() => panel.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' }));
+}
+// A word opened on its own (the reader's key words): the same panel, filling the sheet.
 async function openWord(strong, { fresh = false } = {}) {
   const body = $('#xrefBody'), dr = $('#xrefSheet');
   const back = fresh ? null : { html: body.innerHTML, heading: dr.getAttribute('heading'), description: dr.getAttribute('description') };
@@ -788,14 +873,15 @@ async function openWord(strong, { fresh = false } = {}) {
   const sv = S.sheetVerse;
   const heb = strong[0] === 'H';
   dr.setAttribute('heading', `${e.l} · ${e.t}`);
-  dr.setAttribute('description', `${t(heb ? 'hebrew' : 'greek')} · ${strong} · ${t('wordTimes', { n: e.n })}`);
+  dr.setAttribute('description', e.g);
   S.occ = { list: occ, shown: 40 };
   const backRef = sv ? `${refName(BIB.byOsis.get(sv.osis))} ${sv.c}:${sv.v}` : '';
   body.innerHTML = `${back && sv ? `<div class="actions"><fvl-button variant="tertiary" size="sm" data-sheet-back><fvl-icon name="arrow-left"></fvl-icon>${esc(t('backTo', { ref: backRef }))}</fvl-button></div>` : ''}
-    <div class="wordhead"><span class="lemma" lang="${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${esc(e.l)}</span><span class="gloss">${esc(e.g)}</span></div>
-    <section class="xgroup"><p class="p-label">${esc(t('definition'))}</p><p class="wdef" lang="en">${esc(e.d)}</p></section>
-    <section class="xgroup"><p class="p-label">${esc(t('occurrences'))} · ${num(occ.length)} ${pluralForm(occ.length, 'verse')}</p><div class="occ" id="occList"></div><div id="occMore"></div></section>`;
-  renderOcc();
+    <div class="wdetail solo">${wordPanelHTML(strong, e, occ)}</div>`;
+  const panel = $('.wdetail', body);
+  panel._word = { e, occ };
+  // On its own, the verses are open from the start.
+  $('[data-occ-open]', panel)?.click();
   if (fresh) { dr.show(); return; }
   gsap.fromTo(body, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
 }
@@ -1387,6 +1473,8 @@ bibleView.addEventListener('touchend', (e) => {
   if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700) { const n = neighbour(S.bible.osis, S.bible.c, dx < 0 ? 1 : -1); if (n) location.hash = bibleHash(n); }
 }, { passive: true });
 $('#xrefSheet').addEventListener('click', (e) => {
+  if (wordPanelClick(e)) return;
+  const iw = e.target.closest('[data-iw]'); if (iw && iw.dataset.iw) { selectWord(iw); return; }
   const wd = e.target.closest('[data-word]'); if (wd && wd.dataset.word) { openWord(wd.dataset.word); return; }
   const pe = e.target.closest('[data-person]'); if (pe) { openEntity('person', pe.dataset.person); return; }
   const pl = e.target.closest('[data-place]'); if (pl) { openEntity('place', pl.dataset.place); return; }

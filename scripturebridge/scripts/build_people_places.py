@@ -202,6 +202,11 @@ def main(bibledata, geocoding, ne):
             ch["v"][v][1].append(lid)
     for (o, c), ch in by_ch.items():
         write(os.path.join(DATA, "who", o, f"{c}.json"), {"p": ch["p"], "l": ch["l"], "v": {k: ch["v"][k] for k in sorted(ch["v"], key=int)}})
+    # Every chapter gets a file, empty when nobody and nowhere is named, so the app never asks for a missing one.
+    for b in BOOKS:
+        for c in range(1, len(b["verses"]) + 1):
+            if (b["osis"], c) not in by_ch:
+                write(os.path.join(DATA, "who", b["osis"], f"{c}.json"), {"p": {}, "l": {}, "v": {}})
     for kind, items in (("person", P), ("place", L)):
         groups = defaultdict(dict)
         for key, x in items.items():
