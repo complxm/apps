@@ -32,11 +32,11 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - Polish text: **Uwspółcześniona Biblia Gdańska (UBG)**, © Fundacja Wrota Nadziei, CC BY-ND 4.0 (shared unchanged, with credit). https://ebible.org/find/show.php?id=polubg
 - Polish text: **Biblia Gdańska (1881)**, public domain.
 - Choosing a Polish Bible also switches the app to Polish: every label, the 77 bridges and 6 threads (`data/pl/`, translated from the English master, which stays the source), and the bridge passages, which are then read from the chosen Polish Bible. First-time visitors pick their Bible on a welcome card; the globe button changes it later.
-- All four share the same chapter and verse numbering, so the cross-references apply to each. The Bible tab has a BSB / KJV / UBG / Gdańska switch, remembered per device; Polish book names are used with the Polish texts.
+- All five share the same chapter and verse numbering, so the cross-references apply to each. The Bible tab has a BSB / KJV / NLT / UBG / Gdańska switch, remembered per device; Polish book names are used with the Polish texts.
 - Cross-references: **OpenBible.info**, CC BY, export of 2024-11-04 (344,799 links). https://www.openbible.info/labs/cross-references/
 - `data/bible/xin/` holds the reverse direction, computed from the same file: every verse a link's target covers lists that link's source, minus any already in its own links.
 - Both taken from https://github.com/scrollmapper/bible_databases (`formats/json/BSB.json`, `sources/extras/cross_references.txt`).
-- The NLT is copyrighted by Tyndale House, so it is linked, not included.
+- **New Living Translation**: copyrighted by Tyndale House Foundation, so it is **not stored** in this repository. Choosing NLT reads each chapter live from Tyndale's official [NLT API](https://api.nlt.to) (free for non-commercial use) and keeps it only in memory, with Tyndale's copyright notice under the text. Without a key the API allows 50 verses a request and 500 requests a day for each reader (the app splits long chapters); a free key from api.nlt.to (Sign Up) raises this to 500 verses and 5,000 requests. Put it in `NLT_KEY` in `ui.js`. If the API cannot be reached, the BSB is shown and the app says so. Bible Gateway links to the NLT remain throughout.
 
 ### Original languages
 
