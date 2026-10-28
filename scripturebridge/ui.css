@@ -900,9 +900,12 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 /* A passage only mentioned reads quieter than one read aloud. */
 .row.is-cited .row-title { color: var(--fvl-color-text-secondary); }
 /* The study passage: one verse per line, inside the quotation rule. */
-.st-text { display: grid; padding-left: 0; }
+.st-text { display: grid; padding-left: var(--fvl-space-inset-item-x); }
 .st-text .verse { padding-left: 0; }
-.st-text .seg-ref { margin: var(--fvl-space-stack-related) 0 0; }
+/* A passage over two chapters: each chapter is named above its verses, inside the quote rule, not against it. */
+.st-text .seg-ref { margin: var(--fvl-space-stack-group) 0 var(--fvl-space-stack-related); }
+.st-text .seg-ref:first-child { margin-top: 0; }
+.st-text .seg-ref + .verse { border-top: 0; }
 .st-text .seg-gap { margin: 0; padding: var(--fvl-space-stack-related) 0; color: var(--fvl-color-text-muted); }
 .st-kjv { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--fvl-space-icon-gap); }
 /* A step that gathers several moments: each paragraph carries its time in the video. */
