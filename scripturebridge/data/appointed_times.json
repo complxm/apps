@@ -1,5 +1,5 @@
 {
- "about": "The appointed times of Leviticus 23: seven new bridges (p78-p84) and the 'feasts' thread, which also uses p50 (the Day of Atonement). Added alongside the original data, which is unchanged. Bridge text is the Berean Standard Bible (public domain). 'times' drives the dates shown in the app.",
+ "about": "The appointed times of Leviticus 23: seven new bridges (p78-p84) and the 'feasts' thread, which also uses p50 (the Day of Atonement). Added alongside the original data, which is unchanged. Bridge text is the Berean Standard Bible (public domain). 'times' drives the dates shown in the app; basis is nt (the New Testament makes the link), part (partly a reading) or reading.",
  "bridges": [
   {
    "id": "p78",
@@ -7,7 +7,7 @@
    "category": "covenant",
    "categoryLabel": "Covenants & Wisdom",
    "type": "Typological Foreshadowing",
-   "eraGap": "c. 1440 BC → c. AD 30 / 65",
+   "eraGap": "c. 1440 BC → c. AD 60 / 65",
    "ot": {
     "ref": "Leviticus 23:3",
     "book": "Leviticus",
@@ -17,14 +17,14 @@
     "keyPhrase": "the seventh day is a Sabbath of complete rest"
    },
    "nt": {
-    "ref": "Hebrews 4:9-10; Matthew 11:28",
+    "ref": "Hebrews 4:9-10; Colossians 2:16-17",
     "book": "Hebrews",
-    "author": "Author of Hebrews / Matthew",
-    "context": "Hebrews says a Sabbath rest still remains for the people of God; Jesus calls the weary to come to Him for rest.",
-    "text": "There remains, then, a Sabbath rest for the people of God. For whoever enters God’s rest also rests from his own work, just as God did from His. … Come to Me, all you who are weary and burdened, and I will give you rest.",
+    "author": "Author of Hebrews / Paul",
+    "context": "Hebrews says a Sabbath rest still remains for the people of God; Paul calls feasts and Sabbaths a shadow of the things to come.",
+    "text": "There remains, then, a Sabbath rest for the people of God. For whoever enters God’s rest also rests from his own work, just as God did from His. … Therefore let no one judge you by what you eat or drink, or with regard to a feast, a New Moon, or a Sabbath. These are a shadow of the things to come, but the body that casts it belongs to Christ.",
     "keyPhrase": "There remains, then, a Sabbath rest for the people of God"
    },
-   "bridge": "Leviticus 23 begins its list of the LORD's appointed times with the weekly Sabbath. Hebrews 4 reads that rest forward: Joshua did not give Israel the final rest, so 'a Sabbath rest' still remains, and whoever enters God's rest by faith 'rests from his own work, just as God did from His.' Paul calls the Sabbath and the feasts 'a shadow of the things to come', whose substance belongs to Christ (Colossians 2:16-17).",
+   "bridge": "Leviticus 23 begins its list of the LORD's appointed times with the weekly Sabbath. Hebrews 4 reads God's own seventh-day rest forward (Hebrews 4:4): Joshua did not give Israel the final rest, so 'a Sabbath rest' still remains, and whoever enters God's rest 'rests from his own work, just as God did from His.' Paul calls feasts and Sabbaths 'a shadow of the things to come', whose substance belongs to Christ. Jesus' call, 'Come to Me, all you who are weary… and I will give you rest' (Matthew 11:28), comes just before Matthew's Sabbath accounts.",
    "keywords": [
     "Sabbath",
     "Rest",
@@ -56,7 +56,7 @@
     "text": "Get rid of the old leaven, that you may be a new unleavened batch, as you really are. For Christ, our Passover lamb, has been sacrificed. … “You know that the Passover is two days away, and the Son of Man will be handed over to be crucified.”",
     "keyPhrase": "For Christ, our Passover lamb, has been sacrificed"
    },
-   "bridge": "Jesus was crucified at Passover, as He said He would be (Matthew 26:2), and Paul states the link plainly: 'Christ, our Passover lamb, has been sacrificed.' In Egypt judgment passed over every house marked with the lamb's blood; Christ's blood is now that shelter. John adds that, as the law required for the Passover lamb, none of His bones was broken (John 19:36; Exodus 12:46).",
+   "bridge": "Jesus was crucified at Passover, as He said He would be (Matthew 26:2), and Paul states the link plainly: 'Christ, our Passover lamb, has been sacrificed.' In Egypt judgment passed over every house marked with the lamb's blood; Peter says believers were redeemed 'with the precious blood of Christ, a lamb without blemish or spot' (1 Peter 1:19). John adds that none of His bones was broken, 'so that the Scripture would be fulfilled' (John 19:36), most likely the law for the Passover lamb (Exodus 12:46).",
    "keywords": [
     "Passover",
     "Lamb",
@@ -81,14 +81,14 @@
     "keyPhrase": "For seven days you must eat unleavened bread"
    },
    "nt": {
-    "ref": "1 Corinthians 5:8; Luke 22:19",
+    "ref": "1 Corinthians 5:8; Luke 22:7, 19",
     "book": "1 Corinthians",
     "author": "Paul / Luke",
-    "context": "Paul tells the church to keep the feast with the unleavened bread of sincerity and truth; at the Passover meal Jesus gives the bread as His body.",
-    "text": "Therefore let us keep the feast, not with the old bread, leavened with malice and wickedness, but with the unleavened bread of sincerity and of truth. … And He took the bread, gave thanks and broke it, and gave it to them, saying, “This is My body, given for you; do this in remembrance of Me.”",
+    "context": "Paul tells the church to keep the feast with the unleavened bread of sincerity and truth; at the Passover meal, on the day of Unleavened Bread, Jesus gives the bread as His body.",
+    "text": "Therefore let us keep the feast, not with the old bread, leavened with malice and wickedness, but with the unleavened bread of sincerity and of truth. … Then came the day of Unleavened Bread on which the Passover lamb was to be sacrificed. … And He took the bread, gave thanks and broke it, and gave it to them, saying, “This is My body, given for you; do this in remembrance of Me.”",
     "keyPhrase": "the unleavened bread of sincerity and of truth"
    },
-   "bridge": "A little leaven works through the whole batch of dough (1 Corinthians 5:6), so for the seven days of this feast Israel removed it from their houses (Exodus 12:15). Paul applies the feast directly to the church: because Christ our Passover has been sacrificed, 'let us keep the feast', not with the old leaven of malice and wickedness but with the bread of sincerity and truth. At the Passover meal, on 'the day of Unleavened Bread' (Luke 22:7), Jesus took bread and said, 'This is My body, given for you.'",
+   "bridge": "For the seven days of this feast Israel kept leaven out of their houses (Exodus 12:15), remembering how they left Egypt in haste, with no time for their dough to rise (Exodus 12:39). Paul takes up the image: a little leaven works through the whole batch (1 Corinthians 5:6). Because Christ our Passover has been sacrificed, he writes, 'let us keep the feast', not with the old leaven of malice and wickedness but with the bread of sincerity and truth. At the Passover meal prepared on 'the day of Unleavened Bread' (Luke 22:7), Jesus took bread and said, 'This is My body, given for you.'",
    "keywords": [
     "Unleavened bread",
     "Leaven",
@@ -108,7 +108,7 @@
     "ref": "Leviticus 23:10-11",
     "book": "Leviticus",
     "author": "Moses",
-    "context": "When the harvest begins, the first sheaf is brought to the priest and waved before the LORD on the day after the Sabbath, so that the harvest may be accepted.",
+    "context": "When the harvest begins, the first sheaf is brought to the priest and waved before the LORD on the day after the Sabbath, so that it may be accepted on the people's behalf.",
     "text": "“Speak to the Israelites and say, ‘When you enter the land that I am giving you and you reap its harvest, you are to bring to the priest a sheaf of the firstfruits of your harvest. And he shall wave the sheaf before the LORD so that it may be accepted on your behalf; the priest is to wave it on the day after the Sabbath.",
     "keyPhrase": "the priest is to wave it on the day after the Sabbath"
    },
@@ -120,7 +120,7 @@
     "text": "But Christ has indeed been raised from the dead, the firstfruits of those who have fallen asleep. … But each in his own turn: Christ the firstfruits; then at His coming, those who belong to Him. … After the Sabbath, at dawn on the first day of the week, Mary Magdalene and the other Mary went to see the tomb.",
     "keyPhrase": "the firstfruits of those who have fallen asleep"
    },
-   "bridge": "The first sheaf was offered before any of the new harvest could be eaten (Leviticus 23:14), the pledge that the rest would follow. Paul uses this feast's own word for the risen Christ: 'the firstfruits', with 'those who belong to Him' to follow at His coming. Leviticus sets the sheaf 'on the day after the Sabbath', and the tomb was found empty 'after the Sabbath, at dawn on the first day of the week.'",
+   "bridge": "The first sheaf was offered before any of the new harvest could be eaten (Leviticus 23:14), the pledge that the rest would follow. Paul calls the risen Christ 'the firstfruits', the word Leviticus uses for that sheaf, with 'those who belong to Him' to follow at His coming. He does not name the sheaf offering or its day; that Jesus rose on it is a reading. Leviticus sets the sheaf on the day after the Sabbath, and the tomb was found empty 'after the Sabbath, at dawn on the first day of the week.'",
    "keywords": [
     "Firstfruits",
     "First sheaf",
@@ -152,7 +152,7 @@
     "text": "When the day of Pentecost came, they were all together in one place. Suddenly a sound like a mighty rushing wind came from heaven and filled the whole house where they were sitting. They saw tongues like flames of fire that separated and came to rest on each of them. And they were all filled with the Holy Spirit and began to speak in other tongues as the Spirit enabled them.",
     "keyPhrase": "When the day of Pentecost came"
    },
-   "bridge": "'Pentecost' is Greek for 'fiftieth': it is the Feast of Weeks, counted fifty days from the first sheaf. On that day, with Jerusalem full of Jews from every nation (Acts 2:5), the Spirit was poured out, and about three thousand were added (Acts 2:41): a first harvest gathered after Christ the firstfruits. Peter explains the day with Joel's promise of the Spirit (Acts 2:16-21).",
+   "bridge": "'Pentecost' is Greek for 'fiftieth': it is the Feast of Weeks, counted fifty days from the first sheaf. On that day, with Jerusalem full of Jews from every nation (Acts 2:5), the Spirit was poured out, and about three thousand were added (Acts 2:41), which many read as a first harvest gathered after Christ the firstfruits. Peter explains the day with Joel's promise of the Spirit (Acts 2:16-21).",
    "keywords": [
     "Feast of Weeks",
     "Pentecost",
@@ -184,7 +184,7 @@
     "text": "For the Lord Himself will descend from heaven with a loud command, with the voice of an archangel, and with the trumpet of God, and the dead in Christ will be the first to rise. … in an instant, in the twinkling of an eye, at the last trumpet. For the trumpet will sound, the dead will be raised imperishable, and we will be changed.",
     "keyPhrase": "with the trumpet of God"
    },
-   "bridge": "In Israel trumpets called the people together and sounded over the appointed feasts (Numbers 10:2-10). Paul twice ties the raising of the dead to a trumpet: 'the trumpet of God' and 'the last trumpet'. He does not name this feast, so the link is a reading rather than a statement of the text. Many Christians read the autumn feasts as still waiting for their fulfilment at Christ's return.",
+   "bridge": "In Israel trumpets called the people together and sounded over the appointed feasts (Numbers 10:2-10). Paul twice ties the raising of the dead to a trumpet: 'the trumpet of God' and 'the last trumpet'. He does not name this feast, and the ram's horn is a wider Old Testament sign of God's coming (Isaiah 27:13; Zechariah 9:14), echoed in Jesus' 'loud trumpet call' (Matthew 24:31). So the link is a reading, not a statement of the text; many Christians read the autumn feasts as still waiting for their fulfilment at Christ's return.",
    "keywords": [
     "Trumpets",
     "Return of Christ",
@@ -212,11 +212,11 @@
     "ref": "John 1:14; 7:37-38; Revelation 21:3",
     "book": "John",
     "author": "John",
-    "context": "The Word made His dwelling among us; on the last day of this feast Jesus offers living water; in the new creation God's dwelling is with man.",
+    "context": "On the last day of this feast Jesus offers living water; John 1:14 and Revelation 21:3 speak of God dwelling among His people.",
     "text": "The Word became flesh and made His dwelling among us. We have seen His glory, the glory of the one and only Son from the Father, full of grace and truth. … On the last and greatest day of the feast, Jesus stood up and called out in a loud voice, “If anyone is thirsty, let him come to Me and drink. Whoever believes in Me, as the Scripture has said: ‘Streams of living water will flow from within him.’” … And I heard a loud voice from the throne saying: “Behold, the dwelling place of God is with man, and He will dwell with them. They will be His people, and God Himself will be with them as their God.",
     "keyPhrase": "made His dwelling among us"
    },
-   "bridge": "John's 'made His dwelling' translates skēnoō, from skēnē, a tent or tabernacle. At the Feast of Tabernacles itself (John 7:2), on its last and greatest day, Jesus called the thirsty to come to Him and drink. Revelation closes with the same words: 'the dwelling place (skēnē) of God is with man, and He will dwell (skēnoō) with them.' Zechariah expects the nations to keep this feast, and Christians read its full meaning as still ahead.",
+   "bridge": "On the last and greatest day of the Feast of Tabernacles (John 7:2, 37), Jesus called the thirsty to come to Him and drink, words that recall the living water Zechariah sees flowing from Jerusalem (Zechariah 14:8), in the chapter that has the nations keeping this feast. John 1:14 ('made His dwelling') and Revelation 21:3 ('the dwelling place of God is with man') use the Greek word for a tent, skēnē, which mainly recalls the tabernacle where God's glory dwelt; many readers also hear this feast in them, and Revelation 7:9-17 adds its palm branches and springs of living water. Many Christians read the feast's full meaning as still ahead.",
    "keywords": [
     "Tabernacles",
     "Booths",
@@ -230,7 +230,7 @@
   "feasts": {
    "title": "The Appointed Times of Leviticus 23",
    "subtitle": "From the weekly Sabbath to Tabernacles: the LORD's calendar, read in Christ",
-   "description": "Leviticus 23 lists the LORD's appointed times: the weekly Sabbath and seven yearly feasts, in spring and autumn. Paul calls such days 'a shadow of the things to come', whose substance belongs to Christ (Colossians 2:17). The spring feasts line up with His death, His resurrection and the gift of the Spirit. The autumn feasts are often read as still pointing ahead, to His return; each step says where a link is a reading rather than a statement of the text.",
+   "description": "Leviticus 23 lists the LORD's appointed times: the weekly Sabbath and seven yearly feasts, in spring and autumn. Paul calls feasts and Sabbaths 'a shadow of the things to come', whose substance belongs to Christ (Colossians 2:16-17). The spring feasts line up with His death, His resurrection and the gift of the Spirit. The autumn feasts are often read as still pointing ahead, to His return; each step says where a link is a reading rather than a statement of the text.",
    "calendar": true,
    "steps": [
     {
@@ -258,8 +258,8 @@
      "stage": "4. Firstfruits (the day after the Sabbath)",
      "ref": "Leviticus 23:10-11",
      "prophecyId": "p81",
-     "note": "The first sheaf waved before the LORD; Christ was raised as 'the firstfruits of those who have fallen asleep'.",
-     "highlight": "Fulfilled in His resurrection."
+     "note": "The first sheaf waved before the LORD; Paul calls the risen Christ 'the firstfruits of those who have fallen asleep'.",
+     "highlight": "Read as fulfilled in His resurrection."
     },
     {
      "stage": "5. Weeks, or Pentecost (fifty days on)",
@@ -286,7 +286,7 @@
      "stage": "8. Tabernacles (15–21 Tishri)",
      "ref": "Leviticus 23:42-43",
      "prophecyId": "p84",
-     "note": "Seven days in booths; the Word 'made His dwelling among us', and at the end 'the dwelling place of God is with man'.",
+     "note": "Seven days in booths; on the feast's last day Jesus offers living water, and at the end 'the dwelling place of God is with man'.",
      "highlight": "Begun at His coming; completed in the new creation."
     }
    ]
@@ -313,7 +313,7 @@
    "basis": "nt",
    "basisText": {
     "en": "Hebrews 4:9 and Colossians 2:16-17 read the Sabbath in the light of Christ.",
-    "pl": "List do Hebrajczyków 4:9 i List do Kolosan 2:16-17 odczytują szabat w świetle Chrystusa."
+    "pl": "Hebrajczyków 4:9 i Kolosan 2:16-17 odczytują szabat w świetle Chrystusa."
    },
    "words": [
     "H7676",
@@ -334,16 +334,16 @@
    },
    "heb": {
     "en": "14 Nisan, at twilight",
-    "pl": "14 nisan, o zmierzchu"
+    "pl": "14 nisana, o zmierzchu"
    },
    "note": {
-    "en": "The lambs were sacrificed at twilight on the 14th and eaten that night, as the 15th began (Exodus 12:6-8).",
-    "pl": "Baranki zabijano o zmierzchu 14 dnia i spożywano tej samej nocy, gdy zaczynał się dzień 15 (Wyjścia 12:6-8)."
+    "en": "The lambs were sacrificed at twilight on the 14th and eaten that night (Exodus 12:6-8); since a day begins at sunset, that night already belongs to the 15th, the first day of Unleavened Bread (Leviticus 23:5-6).",
+    "pl": "Baranki zabijano o zmierzchu 14 dnia i spożywano tej samej nocy (Wyjścia 12:6-8); ponieważ dzień zaczyna się o zachodzie słońca, ta noc należy już do dnia 15, pierwszego dnia Przaśników (Kapłańska 23:5-6)."
    },
    "basis": "nt",
    "basisText": {
     "en": "1 Corinthians 5:7 names Christ \"our Passover lamb\".",
-    "pl": "1 List do Koryntian 5:7 nazywa Chrystusa „naszą Paschą”."
+    "pl": "1 Koryntian 5:7 nazywa Chrystusa naszą Paschą."
    },
    "words": [
     "H6453",
@@ -365,7 +365,7 @@
    },
    "heb": {
     "en": "15–21 Nisan",
-    "pl": "15–21 nisan"
+    "pl": "15–21 nisana"
    },
    "note": {
     "en": "The first and the seventh days are sacred assemblies (Leviticus 23:7-8).",
@@ -374,7 +374,7 @@
    "basis": "nt",
    "basisText": {
     "en": "1 Corinthians 5:8 applies this feast to the church.",
-    "pl": "1 List do Koryntian 5:8 odnosi to święto do Kościoła."
+    "pl": "1 Koryntian 5:8 odnosi to święto do Kościoła."
    },
    "words": [
     "H4682",
@@ -395,13 +395,13 @@
     "pl": "Nazajutrz po szabacie"
    },
    "note": {
-    "en": "Counted here from the weekly Sabbath during Unleavened Bread (the Sadducees' and the Karaites' reading of Leviticus 23:11), so it always falls on a Sunday, the day Jesus rose. Jewish practice, following the Pharisees, counts from the first day of the feast instead: 16 Nisan, {alt}.",
-    "pl": "Liczone tu od cotygodniowego szabatu w czasie Święta Przaśników (tak Kapłańską 23:11 czytali saduceusze i karaimi), więc zawsze wypada w niedzielę, w dniu zmartwychwstania Jezusa. Tradycja żydowska, idąc za faryzeuszami, liczy od pierwszego dnia święta: 16 nisan, {alt}."
+    "en": "Counted here as the Sadducees and the Karaites read Leviticus 23:11: the Sabbath is the weekly one, so the sheaf day is the Sunday within the seven days of Unleavened Bread, the day of the week Jesus rose. Jewish practice, following the Pharisees, takes the Sabbath to be the first day of the feast (15 Nisan), so the count starts on 16 Nisan: {alt}. On John's timing, where the Sabbath after the crucifixion was a high day (John 19:31), both counts fall on the Sunday of the resurrection.",
+    "pl": "Liczone tu tak, jak Kapłańską 23:11 czytali saduceusze i karaici: chodzi o cotygodniowy szabat, więc dzień snopa to niedziela w czasie siedmiu dni Przaśników, dzień tygodnia, w którym zmartwychwstał Jezus. Tradycja żydowska, za faryzeuszami, uznaje za szabat pierwszy dzień święta (15 nisana), więc liczenie zaczyna się 16 nisana: {alt}. Według chronologii Jana, w której szabat po ukrzyżowaniu był wielkim dniem (Jana 19:31), oba sposoby liczenia wskazują niedzielę zmartwychwstania."
    },
-   "basis": "nt",
+   "basis": "part",
    "basisText": {
-    "en": "1 Corinthians 15:20 and 23 call the risen Christ \"the firstfruits\".",
-    "pl": "1 List do Koryntian 15:20 i 23 nazywa zmartwychwstałego Chrystusa „pierwszym plonem”."
+    "en": "1 Corinthians 15:20 and 23 call the risen Christ \"the firstfruits\". That He rose on the day of the first sheaf is a reading that depends on how that day is counted.",
+    "pl": "1 Koryntian 15:20 i 23 nazywa zmartwychwstałego Chrystusa pierwszym plonem. To, że zmartwychwstał w dniu pierwszego snopa, jest interpretacją zależną od sposobu liczenia tego dnia."
    },
    "words": [
     "H7225G",
@@ -423,7 +423,7 @@
    },
    "note": {
     "en": "Fifty days counted from Firstfruits, so it also falls on a Sunday. Jewish practice keeps Shavuot on 6 Sivan: {alt}.",
-    "pl": "Pięćdziesiąt dni liczonych od Pierwocin, więc również w niedzielę. Tradycja żydowska obchodzi Szawuot 6 siwan: {alt}."
+    "pl": "Pięćdziesiąt dni liczonych od Pierwocin, więc również w niedzielę. W tradycji żydowskiej Szawuot obchodzi się 6 siwana: {alt}."
    },
    "basis": "nt",
    "basisText": {
@@ -458,7 +458,7 @@
    "basis": "reading",
    "basisText": {
     "en": "The New Testament does not name this feast. The usual link is Paul's \"trumpet of God\" (1 Thessalonians 4:16).",
-    "pl": "Nowy Testament nie wymienia tego święta. Zwykle łączy się je z „trąbą Bożą” u Pawła (1 Tesaloniczan 4:16)."
+    "pl": "Nowy Testament nie wymienia tego święta. Zwykle łączy się je z Pawłowym „dźwiękiem trąby Bożej” (1 Tesaloniczan 4:16)."
    },
    "words": [
     "H8643",
@@ -488,7 +488,7 @@
    "basis": "nt",
    "basisText": {
     "en": "Hebrews 9 reads this day as a picture of Christ entering heaven itself, once for all.",
-    "pl": "List do Hebrajczyków 9 odczytuje ten dzień jako obraz Chrystusa, który raz na zawsze wszedł do samego nieba."
+    "pl": "Hebrajczyków 9 odczytuje ten dzień jako obraz Chrystusa, który raz na zawsze wszedł do samego nieba."
    },
    "words": [
     "H3725",
@@ -517,10 +517,10 @@
     "en": "Followed by a sacred assembly on the eighth day (Leviticus 23:36): {alt}.",
     "pl": "Po nim, ósmego dnia, święte zgromadzenie (Kapłańska 23:36): {alt}."
    },
-   "basis": "nt",
+   "basis": "part",
    "basisText": {
-    "en": "John 7 takes place at this feast and John 1:14 uses its word; its full meaning is read as still ahead (Revelation 21:3).",
-    "pl": "Ewangelia Jana 7 dzieje się w czasie tego święta, a Jana 1:14 używa jego słowa; pełnię jego znaczenia odczytuje się jako wciąż przyszłą (Objawienie 21:3)."
+    "en": "John 7 takes place at this feast (John 7:2, 37). John 1:14 and Revelation 21:3 use the Greek word for a tent (skēnē) found in the feast's Greek name; reading them as its fulfilment is an interpretation.",
+    "pl": "Wydarzenia z Jana 7 rozgrywają się w czasie tego święta (Jana 7:2, 37). Jana 1:14 i Objawienie 21:3 używają greckiego słowa oznaczającego namiot (skēnē), od którego pochodzi grecka nazwa święta; odczytywanie ich jako jego wypełnienia jest interpretacją."
    },
    "words": [
     "H5521",

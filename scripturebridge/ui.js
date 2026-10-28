@@ -99,7 +99,7 @@ const STR = {
     'ev.votes': 'Strongest OpenBible.info cross-reference: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info lists no direct cross-reference between these passages.',
     'ev.overlap': 'Shared wording, {n} {word} in a row:', 'ev.formula': '{ref} refers to Scripture:',
     'moed.title': 'The appointed time', 'moed.next': 'Next', 'moed.today': 'today', 'moed.now': 'now, until {date}',
-    'moed.words': 'Key words', 'moed.reading': 'A reading', 'moed.nt': 'In the New Testament', 'moed.noCal': 'This browser cannot show Hebrew calendar dates.',
+    'moed.words': 'Key words', 'moed.reading': 'A reading', 'moed.part': 'Partly a reading', 'moed.nt': 'In the New Testament', 'moed.noCal': 'This browser cannot show Hebrew calendar dates.',
   },
   pl: {
     tagline: 'Obietnice Starego Testamentu i ich wypełnienie w Nowym Testamencie, we wszystkich 66 księgach.',
@@ -142,7 +142,7 @@ const STR = {
     'ev.votes': 'Najmocniejszy odnośnik OpenBible.info: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info nie podaje bezpośredniego odnośnika między tymi fragmentami.',
     'ev.overlap': 'Wspólne sformułowanie w angielskim BSB, {n} {word} z rzędu:', 'ev.formula': '{ref} odwołuje się do Pisma:',
     'moed.title': 'Wyznaczony czas', 'moed.next': 'Najbliższy termin', 'moed.today': 'dziś', 'moed.now': 'trwa, do {date}',
-    'moed.words': 'Słowa kluczowe', 'moed.reading': 'Interpretacja', 'moed.nt': 'W Nowym Testamencie', 'moed.noCal': 'Ta przeglądarka nie pokazuje dat kalendarza hebrajskiego.',
+    'moed.words': 'Słowa kluczowe', 'moed.reading': 'Interpretacja', 'moed.part': 'Częściowo interpretacja', 'moed.nt': 'W Nowym Testamencie', 'moed.noCal': 'Ta przeglądarka nie pokazuje dat kalendarza hebrajskiego.',
   },
 };
 // Plural forms: English [one, other]; Polish [one, few (2–4, 22–24…), many].
@@ -873,7 +873,7 @@ function moedHTML(id) {
         : `<p class="note">${esc(t('moed.noCal'))}</p>`}
       <p class="note">${esc(note)}</p>
     </div>
-    <p class="moed-basis"><fvl-badge variant="${tm.basis === 'reading' ? 'warning' : 'info'}">${esc(t(tm.basis === 'reading' ? 'moed.reading' : 'moed.nt'))}</fvl-badge><span>${esc(tm.basisText[lg])}</span></p>
+    <p class="moed-basis"><fvl-badge variant="${{ reading: 'warning', part: 'neutral' }[tm.basis] || 'info'}">${esc(t({ reading: 'moed.reading', part: 'moed.part' }[tm.basis] || 'moed.nt'))}</fvl-badge><span>${esc(tm.basisText[lg])}</span></p>
     ${chips ? `<div class="moed-words"><p class="p-label">${esc(t('moed.words'))}</p><div class="wgrid">${chips}</div></div>` : ''}
     ${D.CALNOTE[lg] ? `<p class="note">${esc(D.CALNOTE[lg])}</p>` : ''}
   </section>`;
@@ -936,7 +936,8 @@ function renderReader() {
   // Passages and the review arrive together, so the marked phrase is right the first time.
   $$('.p-loading', rBody).forEach(async (el) => {
     try {
-      const [html] = await Promise.all([loadReview().then(() => passageHTML(el.dataset.ref, keyOf(p0, el.dataset.side)))]);
+      await loadReview();
+      const html = await passageHTML(el.dataset.ref, keyOf(p0, el.dataset.side));
       if (tok === passageToken) el.outerHTML = html;
     } catch { if (tok === passageToken) el.textContent = t('passageErr'); }
   });

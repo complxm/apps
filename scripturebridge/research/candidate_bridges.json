@@ -1,0 +1,4783 @@
+{
+ "about": "Candidate new bridges: Old/New Testament verse pairs that the evidence says belong together but no bridge covers yet.",
+ "minVotes": 10,
+ "candidates": [
+  {
+   "ot": "Deuteronomy 8:3",
+   "nt": "Matthew 4:4",
+   "votes": 349,
+   "shared": {
+    "words": 15,
+    "text": "not live on bread alone but on every word that comes from the mouth of"
+   },
+   "formula": {
+    "ref": "Matt.4.4",
+    "phrase": "But Jesus answered, “It is written: ‘Man shall not live on bread alone, but on every…"
+   },
+   "score": 6.04,
+   "sameOtAs": [],
+   "otText": "He humbled you, and in your hunger He gave you manna to eat, which neither you nor your fathers had known, so that you might understand that man does not live on bread alone, but on every word that comes from the mouth of the LORD.",
+   "ntText": "But Jesus answered, “It is written: ‘Man shall not live on bread alone, but on every word that comes from the mouth of God.’”"
+  },
+  {
+   "ot": "Isaiah 29:13",
+   "nt": "Mark 7:6",
+   "votes": 180,
+   "shared": {
+    "words": 12,
+    "text": "honor me with their lips but their hearts are far from me"
+   },
+   "formula": {
+    "ref": "Mark.7.6",
+    "phrase": "…phesied correctly about you hypocrites, as it is written: ‘These people honor Me with their lips, but thei…"
+   },
+   "score": 5.76,
+   "sameOtAs": [],
+   "otText": "Therefore the Lord said: “These people draw near to Me with their mouths and honor Me with their lips, but their hearts are far from Me. Their worship of Me is but rules taught by men.",
+   "ntText": "Jesus answered them, “Isaiah prophesied correctly about you hypocrites, as it is written: ‘These people honor Me with their lips, but their hearts are far from Me."
+  },
+  {
+   "ot": "Psalm 95:7-10",
+   "nt": "Hebrews 3:7",
+   "votes": 135,
+   "shared": {
+    "words": 6,
+    "text": "today if you hear his voice"
+   },
+   "formula": {
+    "ref": "Heb.3.7",
+    "phrase": "Therefore, as the Holy Spirit says: “Today, if you hear His voice,"
+   },
+   "score": 5.63,
+   "sameOtAs": [],
+   "otText": "For He is our God, and we are the people of His pasture, the sheep under His care. Today, if you hear His voice, do not harden your hearts as you did at Meribah, in the day at Massah in the wilderness, where your fathers tested and tried Me, though they had seen My work. For forty years I was angry with that generation, and I said, “They are a people whose hearts go astray, and they have not known My ways.”",
+   "ntText": "Therefore, as the Holy Spirit says: “Today, if you hear His voice,"
+  },
+  {
+   "ot": "Psalm 14:3",
+   "nt": "Romans 3:10-12",
+   "votes": 128,
+   "shared": {
+    "words": 10,
+    "text": "there is no one who does good not even one"
+   },
+   "formula": {
+    "ref": "Rom.3.10",
+    "phrase": "As it is written: “There is no one righteous, not even one."
+   },
+   "score": 5.61,
+   "sameOtAs": [],
+   "otText": "All have turned away, they have together become corrupt; there is no one who does good, not even one.",
+   "ntText": "As it is written: “There is no one righteous, not even one. There is no one who understands, no one who seeks God. All have turned away, they have together become worthless; there is no one who does good, not even one.”"
+  },
+  {
+   "ot": "Psalm 91:11-12",
+   "nt": "Matthew 4:6",
+   "votes": 100,
+   "shared": {
+    "words": 19,
+    "text": "they will lift you up in their hands so that you will not strike your foot against a stone"
+   },
+   "formula": {
+    "ref": "Matt.4.4",
+    "phrase": "But Jesus answered, “It is written: ‘Man shall not live on bread alone, but on every…"
+   },
+   "score": 5.5,
+   "sameOtAs": [],
+   "otText": "For He will command His angels concerning you to guard you in all your ways. They will lift you up in their hands, so that you will not strike your foot against a stone.",
+   "ntText": "“If You are the Son of God,” he said, “throw Yourself down. For it is written: ‘He will command His angels concerning You, and they will lift You up in their hands, so that You will not strike Your foot against a stone.’”"
+  },
+  {
+   "ot": "Jeremiah 31:33",
+   "nt": "Hebrews 10:16",
+   "votes": 94,
+   "shared": {
+    "words": 10,
+    "text": "after those days declares the lord i will put my"
+   },
+   "formula": {
+    "ref": "Heb.10.15",
+    "phrase": "…also testifies to us about this. First He says:"
+   },
+   "score": 5.47,
+   "sameOtAs": [
+    "p51"
+   ],
+   "otText": "“But this is the covenant I will make with the house of Israel after those days, declares the LORD. I will put My law in their minds and inscribe it on their hearts. And I will be their God, and they will be My people.",
+   "ntText": "“This is the covenant I will make with them after those days, declares the Lord. I will put My laws in their hearts and inscribe them on their minds.”"
+  },
+  {
+   "ot": "Isaiah 53:4",
+   "nt": "Matthew 8:17",
+   "votes": 86,
+   "shared": {
+    "words": 8,
+    "text": "he took on our infirmities and carried our"
+   },
+   "formula": {
+    "ref": "Matt.8.17",
+    "phrase": "This was to fulfill what was spoken through the prophet Isaiah: “He t…"
+   },
+   "score": 5.43,
+   "sameOtAs": [],
+   "otText": "Surely He took on our infirmities and carried our sorrows; yet we considered Him stricken by God, struck down and afflicted.",
+   "ntText": "This was to fulfill what was spoken through the prophet Isaiah: “He took on our infirmities and carried our diseases.”"
+  },
+  {
+   "ot": "Leviticus 11:44",
+   "nt": "1 Peter 1:16",
+   "votes": 82,
+   "shared": {
+    "words": 6,
+    "text": "be holy because i am holy"
+   },
+   "formula": {
+    "ref": "1Pet.1.16",
+    "phrase": "for it is written: “Be holy, because I am holy.”"
+   },
+   "score": 5.41,
+   "sameOtAs": [],
+   "otText": "For I am the LORD your God; consecrate yourselves, therefore, and be holy, because I am holy. You must not defile yourselves by any creature that crawls along the ground.",
+   "ntText": "for it is written: “Be holy, because I am holy.”"
+  },
+  {
+   "ot": "Genesis 15:6",
+   "nt": "James 2:23",
+   "votes": 80,
+   "shared": {
+    "words": 8,
+    "text": "and it was credited to him as righteousness"
+   },
+   "formula": {
+    "ref": "Jas.2.23",
+    "phrase": "And the Scripture was fulfilled that says, “Abraham believed God, a…"
+   },
+   "score": 5.4,
+   "sameOtAs": [],
+   "otText": "Abram believed the LORD, and it was credited to him as righteousness.",
+   "ntText": "And the Scripture was fulfilled that says, “Abraham believed God, and it was credited to him as righteousness,” and he was called a friend of God."
+  },
+  {
+   "ot": "Psalm 45:6-7",
+   "nt": "Hebrews 1:8",
+   "votes": 79,
+   "shared": {
+    "words": 16,
+    "text": "your throne o god endures forever and ever and justice is the scepter of your kingdom"
+   },
+   "formula": {
+    "ref": "Heb.1.6",
+    "phrase": "…od brings His firstborn into the world, He says: “Let all God’s angels worship Him.”"
+   },
+   "score": 5.4,
+   "sameOtAs": [
+    "p59"
+   ],
+   "otText": "Your throne, O God, endures forever and ever, and justice is the scepter of Your kingdom. You have loved righteousness and hated wickedness; therefore God, your God, has anointed you above your companions with the oil of joy.",
+   "ntText": "But about the Son He says: “Your throne, O God, endures forever and ever, and justice is the scepter of Your kingdom."
+  },
+  {
+   "ot": "Psalm 51:4",
+   "nt": "Romans 3:4",
+   "votes": 80,
+   "shared": {
+    "words": 11,
+    "text": "so that you may be proved right when you speak and"
+   },
+   "formula": {
+    "ref": "Rom.3.4",
+    "phrase": "…! Let God be true and every man a liar. As it is written: “So that You may be proved right when You speak…"
+   },
+   "score": 5.4,
+   "sameOtAs": [],
+   "otText": "Against You, You only, have I sinned and done what is evil in Your sight, so that You may be proved right when You speak and blameless when You judge.",
+   "ntText": "Certainly not! Let God be true and every man a liar. As it is written: “So that You may be proved right when You speak and victorious when You judge.”"
+  },
+  {
+   "ot": "Isaiah 49:8",
+   "nt": "2 Corinthians 6:2",
+   "votes": 70,
+   "shared": {
+    "words": 8,
+    "text": "you and in the day of salvation i"
+   },
+   "formula": {
+    "ref": "2Cor.6.2",
+    "phrase": "For He says: “In the time of favor I heard you, and in the da…"
+   },
+   "score": 5.35,
+   "sameOtAs": [],
+   "otText": "This is what the LORD says: “In the time of favor I will answer You, and in the day of salvation I will help You; I will keep You and appoint You to be a covenant for the people, to restore the land, to apportion its desolate inheritances,",
+   "ntText": "For He says: “In the time of favor I heard you, and in the day of salvation I helped you.” Behold, now is the time of favor; now is the day of salvation!"
+  },
+  {
+   "ot": "Deuteronomy 32:35",
+   "nt": "Romans 12:19",
+   "votes": 67,
+   "shared": {
+    "words": 6,
+    "text": "vengeance is mine i will repay"
+   },
+   "formula": {
+    "ref": "Rom.12.19",
+    "phrase": "…ed, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.…"
+   },
+   "score": 5.33,
+   "sameOtAs": [],
+   "otText": "Vengeance is Mine; I will repay. In due time their foot will slip; for their day of disaster is near, and their doom is coming quickly.”",
+   "ntText": "Do not avenge yourselves, beloved, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.”"
+  },
+  {
+   "ot": "Isaiah 53:1",
+   "nt": "John 12:38",
+   "votes": 66,
+   "shared": {
+    "words": 16,
+    "text": "who has believed our message and to whom has the arm of the lord been revealed"
+   },
+   "formula": {
+    "ref": "John.12.38",
+    "phrase": "This was to fulfill the word of Isaiah the prophet: “Lord, who has be…"
+   },
+   "score": 5.32,
+   "sameOtAs": [],
+   "otText": "Who has believed our message? And to whom has the arm of the LORD been revealed?",
+   "ntText": "This was to fulfill the word of Isaiah the prophet: “Lord, who has believed our message? And to whom has the arm of the Lord been revealed?”"
+  },
+  {
+   "ot": "Isaiah 40:3",
+   "nt": "Matthew 3:1-3",
+   "votes": 63,
+   "shared": {
+    "words": 6,
+    "text": "prepare the way for the lord"
+   },
+   "formula": {
+    "ref": "Matt.3.3",
+    "phrase": "This is he who was spoken of through the prophet Isaiah: “A voice of one calling in the wilderness, ‘Prep…"
+   },
+   "score": 5.3,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+   "ntText": "In those days John the Baptist came, preaching in the wilderness of Judea and saying, “Repent, for the kingdom of heaven is near.” This is he who was spoken of through the prophet Isaiah: “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him.’”"
+  },
+  {
+   "ot": "Psalm 91:11",
+   "nt": "Luke 4:10-11",
+   "votes": 59,
+   "shared": {
+    "words": 10,
+    "text": "he will command his angels concerning you to guard you"
+   },
+   "formula": {
+    "ref": "Luke.4.8",
+    "phrase": "But Jesus answered, “It is written: ‘Worship the Lord your God and serve Him only.’”"
+   },
+   "score": 5.27,
+   "sameOtAs": [],
+   "otText": "For He will command His angels concerning you to guard you in all your ways.",
+   "ntText": "For it is written: ‘He will command His angels concerning You to guard You carefully; and they will lift You up in their hands, so that You will not strike Your foot against a stone.’”"
+  },
+  {
+   "ot": "Psalm 44:22",
+   "nt": "Romans 8:36",
+   "votes": 57,
+   "shared": {
+    "words": 17,
+    "text": "for your sake we face death all day long we are considered as sheep to be slaughtered"
+   },
+   "formula": {
+    "ref": "Rom.8.36",
+    "phrase": "As it is written: “For Your sake we face death all day long; we ar…"
+   },
+   "score": 5.26,
+   "sameOtAs": [],
+   "otText": "Yet for Your sake we face death all day long; we are considered as sheep to be slaughtered.",
+   "ntText": "As it is written: “For Your sake we face death all day long; we are considered as sheep to be slaughtered.”"
+  },
+  {
+   "ot": "Isaiah 44:18",
+   "nt": "Romans 11:8-10",
+   "votes": 58,
+   "shared": {
+    "words": 5,
+    "text": "so they cannot see and"
+   },
+   "formula": {
+    "ref": "Rom.11.8",
+    "phrase": "as it is written: “God gave them a spirit of stupor, eyes that cou…"
+   },
+   "score": 5.26,
+   "sameOtAs": [],
+   "otText": "They do not comprehend or discern, for He has shut their eyes so they cannot see and closed their minds so they cannot understand.",
+   "ntText": "as it is written: “God gave them a spirit of stupor, eyes that could not see, and ears that could not hear, to this very day.” And David says: “May their table become a snare and a trap, a stumbling block and a retribution to them. May their eyes be darkened so they cannot see, and their backs be bent forever.”"
+  },
+  {
+   "ot": "Habakkuk 1:5",
+   "nt": "Acts 13:41",
+   "votes": 58,
+   "shared": {
+    "words": 19,
+    "text": "for i am doing a work in your days that you would never believe even if someone told you"
+   },
+   "formula": {
+    "ref": "Acts.13.40",
+    "phrase": "Watch out, then, that what was spoken by the prophets does not happen to you:"
+   },
+   "score": 5.26,
+   "sameOtAs": [],
+   "otText": "“Look at the nations and observe— be utterly astounded! For I am doing a work in your days that you would never believe even if someone told you.",
+   "ntText": "‘Look, you scoffers, wonder and perish! For I am doing a work in your days that you would never believe, even if someone told you.’”"
+  },
+  {
+   "ot": "Isaiah 29:14",
+   "nt": "1 Corinthians 1:19",
+   "votes": 57,
+   "shared": {
+    "words": 5,
+    "text": "the wisdom of the wise"
+   },
+   "formula": {
+    "ref": "1Cor.1.19",
+    "phrase": "For it is written: “I will destroy the wisdom of the wise; the inte…"
+   },
+   "score": 5.26,
+   "sameOtAs": [],
+   "otText": "Therefore I will again confound these people with wonder upon wonder. The wisdom of the wise will vanish, and the intelligence of the intelligent will be hidden.”",
+   "ntText": "For it is written: “I will destroy the wisdom of the wise; the intelligence of the intelligent I will frustrate.”"
+  },
+  {
+   "ot": "Genesis 15:6",
+   "nt": "Galatians 3:6-9",
+   "votes": 56,
+   "shared": {
+    "words": 8,
+    "text": "and it was credited to him as righteousness"
+   },
+   "formula": {
+    "ref": "Gal.3.8",
+    "phrase": "The Scripture foresaw that God would justify the Gentiles by fa…"
+   },
+   "score": 5.25,
+   "sameOtAs": [],
+   "otText": "Abram believed the LORD, and it was credited to him as righteousness.",
+   "ntText": "So also, “Abraham believed God, and it was credited to him as righteousness.” Understand, then, that those who have faith are sons of Abraham. The Scripture foresaw that God would justify the Gentiles by faith, and foretold the gospel to Abraham: “All nations will be blessed through you.” So those who have faith are blessed along with Abraham, the man of faith."
+  },
+  {
+   "ot": "Proverbs 25:21-22",
+   "nt": "Romans 12:20",
+   "votes": 56,
+   "shared": {
+    "words": 13,
+    "text": "drink for in so doing you will heap burning coals on his head"
+   },
+   "formula": {
+    "ref": "Rom.12.19",
+    "phrase": "…ed, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.…"
+   },
+   "score": 5.25,
+   "sameOtAs": [],
+   "otText": "If your enemy is hungry, give him food to eat, and if he is thirsty, give him water to drink. For in so doing, you will heap burning coals on his head, and the LORD will reward you.",
+   "ntText": "On the contrary, “If your enemy is hungry, feed him; if he is thirsty, give him a drink. For in so doing, you will heap burning coals on his head.”"
+  },
+  {
+   "ot": "Psalm 69:25",
+   "nt": "Acts 1:20",
+   "votes": 56,
+   "shared": {
+    "words": 11,
+    "text": "place be deserted let there be no one to dwell in"
+   },
+   "formula": {
+    "ref": "Acts.1.20",
+    "phrase": "“For it is written in the book of Psalms: ‘May his place be deserted…"
+   },
+   "score": 5.25,
+   "sameOtAs": [],
+   "otText": "May their place be deserted; let there be no one to dwell in their tents.",
+   "ntText": "“For it is written in the book of Psalms: ‘May his place be deserted; let there be no one to dwell in it,’ and, ‘May another take his position.’"
+  },
+  {
+   "ot": "Deuteronomy 8:3",
+   "nt": "Luke 4:4",
+   "votes": 55,
+   "shared": {
+    "words": 5,
+    "text": "not live on bread alone"
+   },
+   "formula": {
+    "ref": "Luke.4.4",
+    "phrase": "But Jesus answered, “It is written: ‘Man shall not live on bread alone.’”"
+   },
+   "score": 5.24,
+   "sameOtAs": [],
+   "otText": "He humbled you, and in your hunger He gave you manna to eat, which neither you nor your fathers had known, so that you might understand that man does not live on bread alone, but on every word that comes from the mouth of the LORD.",
+   "ntText": "But Jesus answered, “It is written: ‘Man shall not live on bread alone.’”"
+  },
+  {
+   "ot": "Deuteronomy 10:20",
+   "nt": "Matthew 4:10",
+   "votes": 53,
+   "shared": {
+    "words": 7,
+    "text": "the lord your god and serve him"
+   },
+   "formula": {
+    "ref": "Matt.4.10",
+    "phrase": "…y from Me, Satan!” Jesus declared. “For it is written: ‘Worship the Lord your God and serve Him only.’”"
+   },
+   "score": 5.22,
+   "sameOtAs": [],
+   "otText": "You are to fear the LORD your God and serve Him. Hold fast to Him and take your oaths in His name.",
+   "ntText": "“Away from Me, Satan!” Jesus declared. “For it is written: ‘Worship the Lord your God and serve Him only.’”"
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Luke 20:42-43",
+   "votes": 50,
+   "shared": {
+    "words": 21,
+    "text": "the lord said to my lord sit at my right hand until i make your enemies a footstool for your feet"
+   },
+   "formula": {
+    "ref": "Luke.20.42",
+    "phrase": "…id himself says in the book of Psalms: ‘The Lord said to my Lord, “Sit at My right hand"
+   },
+   "score": 5.2,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "For David himself says in the book of Psalms: ‘The Lord said to my Lord, “Sit at My right hand until I make Your enemies a footstool for Your feet.”’"
+  },
+  {
+   "ot": "Job 5:13",
+   "nt": "1 Corinthians 3:19",
+   "votes": 49,
+   "shared": {
+    "words": 7,
+    "text": "he catches the wise in their craftiness"
+   },
+   "formula": {
+    "ref": "1Cor.3.19",
+    "phrase": "…is world is foolishness in God’s sight. As it is written: “He catches the wise in their craftiness.”"
+   },
+   "score": 5.19,
+   "sameOtAs": [],
+   "otText": "He catches the wise in their craftiness, and sweeps away the plans of the cunning.",
+   "ntText": "For the wisdom of this world is foolishness in God’s sight. As it is written: “He catches the wise in their craftiness.”"
+  },
+  {
+   "ot": "Psalm 112:9",
+   "nt": "2 Corinthians 9:9",
+   "votes": 49,
+   "shared": {
+    "words": 13,
+    "text": "he has scattered abroad his gifts to the poor his righteousness endures forever"
+   },
+   "formula": {
+    "ref": "2Cor.9.9",
+    "phrase": "As it is written: “He has scattered abroad His gifts to the poor;…"
+   },
+   "score": 5.19,
+   "sameOtAs": [],
+   "otText": "He has scattered abroad his gifts to the poor; his righteousness endures forever; his horn will be lifted high in honor.",
+   "ntText": "As it is written: “He has scattered abroad His gifts to the poor; His righteousness endures forever.”"
+  },
+  {
+   "ot": "Psalm 40:7-8",
+   "nt": "Hebrews 10:7",
+   "votes": 48,
+   "shared": {
+    "words": 9,
+    "text": "it is written about me in the scroll i"
+   },
+   "formula": {
+    "ref": "Heb.10.7",
+    "phrase": "Then I said, ‘Here I am, it is written about Me in the scroll: I have come to do Your wi…"
+   },
+   "score": 5.18,
+   "sameOtAs": [],
+   "otText": "Then I said, “Here I am, I have come— it is written about me in the scroll: I delight to do Your will, O my God; Your law is within my heart.”",
+   "ntText": "Then I said, ‘Here I am, it is written about Me in the scroll: I have come to do Your will, O God.’”"
+  },
+  {
+   "ot": "Psalm 69:9",
+   "nt": "Romans 15:3",
+   "votes": 48,
+   "shared": {
+    "words": 11,
+    "text": "the insults of those who insult you have fallen on me"
+   },
+   "formula": {
+    "ref": "Rom.15.3",
+    "phrase": "…even Christ did not please Himself, but as it is written: “The insults of those who insult You have fallen…"
+   },
+   "score": 5.18,
+   "sameOtAs": [
+    "p27"
+   ],
+   "otText": "because zeal for Your house has consumed me, and the insults of those who insult You have fallen on me.",
+   "ntText": "For even Christ did not please Himself, but as it is written: “The insults of those who insult You have fallen on Me.”"
+  },
+  {
+   "ot": "Isaiah 6:10",
+   "nt": "John 12:40",
+   "votes": 48,
+   "shared": {
+    "words": 7,
+    "text": "understand with their hearts and turn and"
+   },
+   "formula": {
+    "ref": "John.12.38",
+    "phrase": "This was to fulfill the word of Isaiah the prophet: “Lord, who has be…"
+   },
+   "score": 5.18,
+   "sameOtAs": [],
+   "otText": "Make the hearts of this people calloused; deafen their ears and close their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn and be healed.”",
+   "ntText": "“He has blinded their eyes and hardened their hearts, so that they cannot see with their eyes, and understand with their hearts, and turn, and I would heal them.”"
+  },
+  {
+   "ot": "Genesis 2:24",
+   "nt": "Mark 10:6-9",
+   "votes": 47,
+   "shared": {
+    "words": 18,
+    "text": "for this reason a man will leave his father and mother and be united to his wife and"
+   },
+   "formula": {
+    "ref": "Mark.10.5",
+    "phrase": "But Jesus told them, “Moses wrote this commandment for you because of your hardness…"
+   },
+   "score": 5.17,
+   "sameOtAs": [],
+   "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
+   "ntText": "However, from the beginning of creation, ‘God made them male and female.’ ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh.’ So they are no longer two, but one flesh. Therefore what God has joined together, let man not separate.”"
+  },
+  {
+   "ot": "Psalm 2:7",
+   "nt": "Acts 13:33",
+   "votes": 47,
+   "shared": {
+    "words": 10,
+    "text": "you are my son today i have become your father"
+   },
+   "formula": {
+    "ref": "Acts.13.33",
+    "phrase": "…s, their children, by raising up Jesus. As it is written in the second Psalm: ‘You are My Son; today I hav…"
+   },
+   "score": 5.17,
+   "sameOtAs": [],
+   "otText": "I will proclaim the decree spoken to Me by the LORD: “You are My Son; today I have become Your Father.",
+   "ntText": "He has fulfilled for us, their children, by raising up Jesus. As it is written in the second Psalm: ‘You are My Son; today I have become Your Father.’"
+  },
+  {
+   "ot": "Isaiah 53:1",
+   "nt": "Romans 10:16-17",
+   "votes": 47,
+   "shared": {
+    "words": 5,
+    "text": "who has believed our message"
+   },
+   "formula": {
+    "ref": "Rom.10.15",
+    "phrase": "…w can they preach unless they are sent? As it is written: “How beautiful are the feet of those who bring g…"
+   },
+   "score": 5.17,
+   "sameOtAs": [],
+   "otText": "Who has believed our message? And to whom has the arm of the LORD been revealed?",
+   "ntText": "But not all of them welcomed the good news. For Isaiah says, “Lord, who has believed our message?” Consequently, faith comes by hearing, and hearing by the word of Christ."
+  },
+  {
+   "ot": "Genesis 15:6",
+   "nt": "Romans 4:3-6",
+   "votes": 45,
+   "shared": {
+    "words": 8,
+    "text": "and it was credited to him as righteousness"
+   },
+   "formula": {
+    "ref": "Rom.4.3",
+    "phrase": "For what does the Scripture say? “Abraham believed God, and it was credited t…"
+   },
+   "score": 5.15,
+   "sameOtAs": [],
+   "otText": "Abram believed the LORD, and it was credited to him as righteousness.",
+   "ntText": "For what does the Scripture say? “Abraham believed God, and it was credited to him as righteousness.” Now the wages of the worker are not credited as a gift, but as an obligation. However, to the one who does not work, but believes in Him who justifies the wicked, his faith is credited as righteousness. And David speaks likewise of the blessedness of the man to whom God credits righteousness apart from works:"
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Mark 12:35-37",
+   "votes": 45,
+   "shared": {
+    "words": 13,
+    "text": "the lord said to my lord sit at my right hand until i"
+   },
+   "formula": {
+    "ref": "Mark.12.36",
+    "phrase": "…e Holy Spirit, David himself declared: ‘The Lord said to my Lord, “Sit at My right hand until I put You…"
+   },
+   "score": 5.15,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "While Jesus was teaching in the temple courts, He asked, “How can the scribes say that the Christ is the Son of David? Speaking by the Holy Spirit, David himself declared: ‘The Lord said to my Lord, “Sit at My right hand until I put Your enemies under Your feet.”’ David himself calls Him ‘Lord.’ So how can He be David’s son?” And the large crowd listened to Him with delight."
+  },
+  {
+   "ot": "Isaiah 40:3",
+   "nt": "Matthew 3:3",
+   "votes": 45,
+   "shared": {
+    "words": 6,
+    "text": "prepare the way for the lord"
+   },
+   "formula": {
+    "ref": "Matt.3.3",
+    "phrase": "This is he who was spoken of through the prophet Isaiah: “A voice of one calling in the wilderness, ‘Prep…"
+   },
+   "score": 5.15,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+   "ntText": "This is he who was spoken of through the prophet Isaiah: “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him.’”"
+  },
+  {
+   "ot": "Jeremiah 9:23-24",
+   "nt": "1 Corinthians 1:31",
+   "votes": 45,
+   "shared": {
+    "words": 6,
+    "text": "let him who boasts boast in"
+   },
+   "formula": {
+    "ref": "1Cor.1.31",
+    "phrase": "Therefore, as it is written: “Let him who boasts boast in the Lord.”"
+   },
+   "score": 5.15,
+   "sameOtAs": [],
+   "otText": "This is what the LORD says: “Let not the wise man boast in his wisdom, nor the strong man in his strength, nor the wealthy man in his riches. But let him who boasts boast in this, that he understands and knows Me, that I am the LORD, who exercises loving devotion, justice and righteousness on the earth— for I delight in these things,” declares the LORD.",
+   "ntText": "Therefore, as it is written: “Let him who boasts boast in the Lord.”"
+  },
+  {
+   "ot": "Proverbs 3:34",
+   "nt": "James 4:6",
+   "votes": 44,
+   "shared": {
+    "words": 6,
+    "text": "but gives grace to the humble"
+   },
+   "formula": {
+    "ref": "Jas.4.5",
+    "phrase": "Or do you think the Scripture says without reason that the Spirit He caused to dwell…"
+   },
+   "score": 5.14,
+   "sameOtAs": [],
+   "otText": "He mocks the mockers, but gives grace to the humble.",
+   "ntText": "But He gives us more grace. This is why it says: “God opposes the proud, but gives grace to the humble.”"
+  },
+  {
+   "ot": "Exodus 33:19",
+   "nt": "Romans 9:15",
+   "votes": 43,
+   "shared": {
+    "words": 19,
+    "text": "i will have mercy on whom i have mercy and i will have compassion on whom i have compassion"
+   },
+   "formula": {
+    "ref": "Rom.9.13",
+    "phrase": "So it is written: “Jacob I loved, but Esau I hated.”"
+   },
+   "score": 5.13,
+   "sameOtAs": [],
+   "otText": "“I will cause all My goodness to pass before you,” the LORD replied, “and I will proclaim My name—the LORD—in your presence. I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”",
+   "ntText": "For He says to Moses: “I will have mercy on whom I have mercy, and I will have compassion on whom I have compassion.”"
+  },
+  {
+   "ot": "Isaiah 22:22",
+   "nt": "Revelation 3:7",
+   "votes": 42,
+   "shared": {
+    "words": 17,
+    "text": "of david what he opens no one can shut and what he shuts no one can open"
+   },
+   "formula": {
+    "ref": "Rev.3.6",
+    "phrase": "…o has an ear, let him hear what the Spirit says to the churches."
+   },
+   "score": 5.12,
+   "sameOtAs": [],
+   "otText": "I will place on his shoulder the key to the house of David. What he opens no one can shut, and what he shuts no one can open.",
+   "ntText": "To the angel of the church in Philadelphia write: These are the words of the One who is holy and true, who holds the key of David. What He opens no one can shut, and what He shuts no one can open."
+  },
+  {
+   "ot": "Isaiah 28:11-12",
+   "nt": "1 Corinthians 14:21",
+   "votes": 42,
+   "shared": {
+    "words": 5,
+    "text": "will speak to this people"
+   },
+   "formula": {
+    "ref": "1Cor.14.21",
+    "phrase": "It is written in the Law: “By strange tongues and foreign lips…"
+   },
+   "score": 5.12,
+   "sameOtAs": [],
+   "otText": "Indeed, with mocking lips and foreign tongues, He will speak to this people to whom He has said: “This is the place of rest, let the weary rest; this is the place of repose.” But they would not listen.",
+   "ntText": "It is written in the Law: “By strange tongues and foreign lips I will speak to this people, but even then they will not listen to Me, says the Lord.”"
+  },
+  {
+   "ot": "Hosea 1:10",
+   "nt": "Romans 9:25-28",
+   "votes": 38,
+   "shared": {
+    "words": 31,
+    "text": "and it will happen that in the very place where it was said to them you are not my people ' they will be called sons of the living god '"
+   },
+   "formula": {
+    "ref": "Rom.9.25",
+    "phrase": "As He says in Hosea: “I will call them ‘My People’ who are n…"
+   },
+   "score": 5.08,
+   "sameOtAs": [],
+   "otText": "Yet the number of the Israelites will be like the sand of the sea, which cannot be measured or counted. And it will happen that in the very place where it was said to them, ‘You are not My people,’ they will be called ‘sons of the living God.’",
+   "ntText": "As He says in Hosea: “I will call them ‘My People’ who are not My people, and I will call her ‘My Beloved’ who is not My beloved,” and, “It will happen that in the very place where it was said to them, ‘You are not My people,’ they will be called ‘sons of the living God.’” Isaiah cries out concerning Israel: “Though the number of the Israelites is like the sand of the sea, only the remnant will be saved. For the Lord will carry out His sentence on the earth thoroughly and decisively.”"
+  },
+  {
+   "ot": "Genesis 17:4-5",
+   "nt": "Romans 4:17",
+   "votes": 38,
+   "shared": {
+    "words": 9,
+    "text": "i have made you a father of many nations"
+   },
+   "formula": {
+    "ref": "Rom.4.17",
+    "phrase": "As it is written: “I have made you a father of many nations.” He i…"
+   },
+   "score": 5.08,
+   "sameOtAs": [],
+   "otText": "“As for Me, this is My covenant with you: You will be the father of many nations. No longer will you be called Abram, but your name will be Abraham, for I have made you a father of many nations.",
+   "ntText": "As it is written: “I have made you a father of many nations.” He is our father in the presence of God, in whom he believed, the God who gives life to the dead and calls into being what does not yet exist."
+  },
+  {
+   "ot": "Psalm 45:7",
+   "nt": "Hebrews 1:9",
+   "votes": 37,
+   "shared": {
+    "words": 22,
+    "text": "you have loved righteousness and hated wickedness therefore god your god has anointed you above your companions with the oil of joy"
+   },
+   "formula": {
+    "ref": "Heb.1.7",
+    "phrase": "Now about the angels He says: “He makes His angels winds, His servants flames…"
+   },
+   "score": 5.07,
+   "sameOtAs": [
+    "p59"
+   ],
+   "otText": "You have loved righteousness and hated wickedness; therefore God, your God, has anointed you above your companions with the oil of joy.",
+   "ntText": "You have loved righteousness and hated wickedness; therefore God, Your God, has anointed You above Your companions with the oil of joy.”"
+  },
+  {
+   "ot": "Isaiah 65:1",
+   "nt": "Romans 10:20",
+   "votes": 36,
+   "shared": {
+    "words": 11,
+    "text": "i revealed myself to those who did not ask for me"
+   },
+   "formula": {
+    "ref": "Rom.10.19",
+    "phrase": "…tead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a…"
+   },
+   "score": 5.06,
+   "sameOtAs": [],
+   "otText": "“I revealed Myself to those who did not ask for Me; I was found by those who did not seek Me. To a nation that did not call My name, I said, ‘Here I am! Here I am!’",
+   "ntText": "And Isaiah boldly says: “I was found by those who did not seek Me; I revealed Myself to those who did not ask for Me.”"
+  },
+  {
+   "ot": "Genesis 12:3",
+   "nt": "Galatians 3:8",
+   "votes": 35,
+   "shared": {
+    "words": 5,
+    "text": "will be blessed through you"
+   },
+   "formula": {
+    "ref": "Gal.3.8",
+    "phrase": "The Scripture foresaw that God would justify the Gentiles by fa…"
+   },
+   "score": 5.04,
+   "sameOtAs": [],
+   "otText": "I will bless those who bless you and curse those who curse you; and all the families of the earth will be blessed through you.”",
+   "ntText": "The Scripture foresaw that God would justify the Gentiles by faith, and foretold the gospel to Abraham: “All nations will be blessed through you.”"
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Matthew 22:42-45",
+   "votes": 35,
+   "shared": {
+    "words": 13,
+    "text": "the lord said to my lord sit at my right hand until i"
+   },
+   "formula": {
+    "ref": "Matt.22.43",
+    "phrase": "…es David in the Spirit call Him ‘Lord’? For he says:"
+   },
+   "score": 5.04,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "“What do you think about the Christ? Whose son is He?” “David’s,” they answered. Jesus said to them, “How then does David in the Spirit call Him ‘Lord’? For he says: ‘The Lord said to my Lord, “Sit at My right hand until I put Your enemies under Your feet.”’ So if David calls Him ‘Lord,’ how can He be David’s son?”"
+  },
+  {
+   "ot": "Exodus 9:16",
+   "nt": "Romans 9:17",
+   "votes": 34,
+   "shared": {
+    "words": 13,
+    "text": "raised you up for this very purpose that i might display my power"
+   },
+   "formula": {
+    "ref": "Rom.9.15",
+    "phrase": "For He says to Moses: “I will have mercy on whom I have mercy…"
+   },
+   "score": 5.03,
+   "sameOtAs": [],
+   "otText": "But I have raised you up for this very purpose, that I might display My power to you, and that My name might be proclaimed in all the earth.",
+   "ntText": "For the Scripture says to Pharaoh: “I raised you up for this very purpose, that I might display My power in you, and that My name might be proclaimed in all the earth.”"
+  },
+  {
+   "ot": "Psalm 102:25-27",
+   "nt": "Hebrews 1:10",
+   "votes": 34,
+   "shared": {
+    "words": 16,
+    "text": "you laid the foundations of the earth and the heavens are the work of your hands"
+   },
+   "formula": {
+    "ref": "Heb.1.8",
+    "phrase": "But about the Son He says: “Your throne, O God, endures forever and ever, a…"
+   },
+   "score": 5.03,
+   "sameOtAs": [],
+   "otText": "In the beginning You laid the foundations of the earth, and the heavens are the work of Your hands. They will perish, but You remain; they will all wear out like a garment. Like clothing You will change them, and they will be passed on. But You remain the same, and Your years will never end.",
+   "ntText": "And: “In the beginning, O Lord, You laid the foundations of the earth, and the heavens are the work of Your hands."
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Matthew 22:44",
+   "votes": 34,
+   "shared": {
+    "words": 13,
+    "text": "the lord said to my lord sit at my right hand until i"
+   },
+   "formula": {
+    "ref": "Matt.22.43",
+    "phrase": "…es David in the Spirit call Him ‘Lord’? For he says:"
+   },
+   "score": 5.03,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "‘The Lord said to my Lord, “Sit at My right hand until I put Your enemies under Your feet.”’"
+  },
+  {
+   "ot": "Exodus 32:6-8",
+   "nt": "1 Corinthians 10:7",
+   "votes": 34,
+   "shared": {
+    "words": 8,
+    "text": "drink and got up to indulge in revelry"
+   },
+   "formula": {
+    "ref": "1Cor.10.7",
+    "phrase": "…not be idolaters, as some of them were. As it is written: “The people sat down to eat and to drink, and go…"
+   },
+   "score": 5.03,
+   "sameOtAs": [],
+   "otText": "So the next day they arose, offered burnt offerings, and presented peace offerings. And the people sat down to eat and drink, and got up to indulge in revelry. Then the LORD said to Moses, “Go down at once, for your people, whom you brought up out of the land of Egypt, have corrupted themselves. How quickly they have turned aside from the way that I commanded them! They have made for themselves a molten calf and have bowed down to it. They have sacrificed to it and said, ‘These, O Israel, are your gods, who brought you up out of the land of Egypt.’”",
+   "ntText": "Do not be idolaters, as some of them were. As it is written: “The people sat down to eat and to drink, and got up to indulge in revelry.”"
+  },
+  {
+   "ot": "Isaiah 56:7",
+   "nt": "Matthew 21:13",
+   "votes": 33,
+   "shared": {
+    "words": 9,
+    "text": "my house will be called a house of prayer"
+   },
+   "formula": {
+    "ref": "Matt.21.13",
+    "phrase": "And He declared to them, “It is written: ‘My house will be called a house of prayer.’ But…"
+   },
+   "score": 5.02,
+   "sameOtAs": [
+    "p58"
+   ],
+   "otText": "I will bring them to My holy mountain and make them joyful in My house of prayer. Their burnt offerings and sacrifices will be accepted on My altar, for My house will be called a house of prayer for all the nations.”",
+   "ntText": "And He declared to them, “It is written: ‘My house will be called a house of prayer.’ But you are making it ‘a den of robbers.’”"
+  },
+  {
+   "ot": "Isaiah 45:17",
+   "nt": "Romans 10:11",
+   "votes": 323,
+   "shared": {
+    "words": 4,
+    "text": "be put to shame"
+   },
+   "formula": {
+    "ref": "Rom.10.11",
+    "phrase": "It is just as the Scripture says: “Anyone who believes in Him will never be put to…"
+   },
+   "score": 5.01,
+   "sameOtAs": [],
+   "otText": "But Israel will be saved by the LORD with an everlasting salvation; you will not be put to shame or humiliated, to ages everlasting.",
+   "ntText": "It is just as the Scripture says: “Anyone who believes in Him will never be put to shame.”"
+  },
+  {
+   "ot": "Isaiah 54:1",
+   "nt": "Galatians 4:27",
+   "votes": 32,
+   "shared": {
+    "words": 24,
+    "text": "and cry aloud you who have never travailed because more are the children of the desolate woman than of her who has a husband"
+   },
+   "formula": {
+    "ref": "Gal.4.27",
+    "phrase": "For it is written: “Rejoice, O barren woman, who bears no children;…"
+   },
+   "score": 5.01,
+   "sameOtAs": [],
+   "otText": "“Shout for joy, O barren woman, who bears no children; break forth in song and cry aloud, you who have never travailed; because more are the children of the desolate woman than of her who has a husband,” says the LORD.",
+   "ntText": "For it is written: “Rejoice, O barren woman, who bears no children; break forth and cry aloud, you who have never travailed; because more are the children of the desolate woman than of her who has a husband.”"
+  },
+  {
+   "ot": "Psalm 69:22-23",
+   "nt": "Romans 11:9",
+   "votes": 30,
+   "shared": {
+    "words": 6,
+    "text": "may their table become a snare"
+   },
+   "formula": {
+    "ref": "Rom.11.8",
+    "phrase": "as it is written: “God gave them a spirit of stupor, eyes that cou…"
+   },
+   "score": 4.98,
+   "sameOtAs": [],
+   "otText": "May their table become a snare; may it be a retribution and a trap. May their eyes be darkened so they cannot see, and their backs be bent forever.",
+   "ntText": "And David says: “May their table become a snare and a trap, a stumbling block and a retribution to them."
+  },
+  {
+   "ot": "Isaiah 64:4",
+   "nt": "1 Corinthians 2:9",
+   "votes": 298,
+   "shared": {
+    "words": 4,
+    "text": "no eye has seen"
+   },
+   "formula": {
+    "ref": "1Cor.2.9",
+    "phrase": "Rather, as it is written: “No eye has seen, no ear has heard, no heart has…"
+   },
+   "score": 4.97,
+   "sameOtAs": [],
+   "otText": "From ancient times no one has heard, no ear has perceived, no eye has seen any God besides You, who acts on behalf of those who wait for Him.",
+   "ntText": "Rather, as it is written: “No eye has seen, no ear has heard, no heart has imagined, what God has prepared for those who love Him.”"
+  },
+  {
+   "ot": "Deuteronomy 32:21",
+   "nt": "Romans 10:19",
+   "votes": 29,
+   "shared": {
+    "words": 7,
+    "text": "jealous by those who are not a"
+   },
+   "formula": {
+    "ref": "Rom.10.19",
+    "phrase": "…tead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a…"
+   },
+   "score": 4.96,
+   "sameOtAs": [],
+   "otText": "They have provoked My jealousy by that which is not God; they have enraged Me with their worthless idols. So I will make them jealous by those who are not a people; I will make them angry by a nation without understanding.",
+   "ntText": "I ask instead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a nation; I will make you angry by a nation without understanding.”"
+  },
+  {
+   "ot": "2 Samuel 22:50",
+   "nt": "Romans 15:9",
+   "votes": 29,
+   "shared": {
+    "words": 5,
+    "text": "therefore i will praise you"
+   },
+   "formula": {
+    "ref": "Rom.15.9",
+    "phrase": "…Gentiles may glorify God for His mercy. As it is written: “Therefore I will praise You among the Gentiles;…"
+   },
+   "score": 4.96,
+   "sameOtAs": [],
+   "otText": "Therefore I will praise You, O LORD, among the nations; I will sing praises to Your name.",
+   "ntText": "so that the Gentiles may glorify God for His mercy. As it is written: “Therefore I will praise You among the Gentiles; I will sing hymns to Your name.”"
+  },
+  {
+   "ot": "Isaiah 40:3",
+   "nt": "Luke 3:2-5",
+   "votes": 28,
+   "shared": {
+    "words": 6,
+    "text": "prepare the way for the lord"
+   },
+   "formula": {
+    "ref": "Luke.3.4",
+    "phrase": "as it is written in the book of the words of Isaiah the prophet: “…"
+   },
+   "score": 4.95,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+   "ntText": "during the high priesthood of Annas and Caiaphas, the word of God came to John son of Zechariah in the wilderness. He went into all the region around the Jordan, preaching a baptism of repentance for the forgiveness of sins, as it is written in the book of the words of Isaiah the prophet: “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him. Every valley shall be filled in, and every mountain and hill made low. The crooked ways shall be made straight, and the rough ways smooth."
+  },
+  {
+   "ot": "Isaiah 51:6",
+   "nt": "Hebrews 1:10-12",
+   "votes": 27,
+   "shared": {
+    "words": 5,
+    "text": "wear out like a garment"
+   },
+   "formula": {
+    "ref": "Heb.1.8",
+    "phrase": "But about the Son He says: “Your throne, O God, endures forever and ever, a…"
+   },
+   "score": 4.93,
+   "sameOtAs": [],
+   "otText": "Lift up your eyes to the heavens, and look at the earth below; for the heavens will vanish like smoke, the earth will wear out like a garment, and its people will die like gnats. But My salvation will last forever, and My righteousness will never fail.",
+   "ntText": "And: “In the beginning, O Lord, You laid the foundations of the earth, and the heavens are the work of Your hands. They will perish, but You remain; they will all wear out like a garment. You will roll them up like a robe; like a garment they will be changed; but You remain the same, and Your years will never end.”"
+  },
+  {
+   "ot": "Psalm 14:2-4",
+   "nt": "Romans 3:11",
+   "votes": 26,
+   "shared": {
+    "words": 5,
+    "text": "there is no one who"
+   },
+   "formula": {
+    "ref": "Rom.3.10",
+    "phrase": "As it is written: “There is no one righteous, not even one."
+   },
+   "score": 4.91,
+   "sameOtAs": [],
+   "otText": "The LORD looks down from heaven upon the sons of men to see if any understand, if any seek God. All have turned away, they have together become corrupt; there is no one who does good, not even one. Will the workers of iniquity never learn? They devour my people like bread; they refuse to call upon the LORD.",
+   "ntText": "There is no one who understands, no one who seeks God."
+  },
+  {
+   "ot": "Exodus 22:28",
+   "nt": "Acts 23:5",
+   "votes": 26,
+   "shared": {
+    "words": 5,
+    "text": "the ruler of your people"
+   },
+   "formula": {
+    "ref": "Acts.23.5",
+    "phrase": "…aware that he was the high priest, for it is written: ‘Do not speak evil about the ruler of your peopl…"
+   },
+   "score": 4.91,
+   "sameOtAs": [],
+   "otText": "You must not blaspheme God or curse the ruler of your people.",
+   "ntText": "“Brothers,” Paul replied, “I was not aware that he was the high priest, for it is written: ‘Do not speak evil about the ruler of your people.’”"
+  },
+  {
+   "ot": "Psalm 19:4",
+   "nt": "Romans 10:18",
+   "votes": 25,
+   "shared": {
+    "words": 17,
+    "text": "their voice has gone out into all the earth their words to the ends of the world"
+   },
+   "formula": {
+    "ref": "Rom.10.16",
+    "phrase": "…all of them welcomed the good news. For Isaiah says, “Lord, who has believed our message?”"
+   },
+   "score": 4.9,
+   "sameOtAs": [],
+   "otText": "their voice has gone out into all the earth, their words to the ends of the world. In the heavens He has pitched a tent for the sun.",
+   "ntText": "But I ask, did they not hear? Indeed they did: “Their voice has gone out into all the earth, their words to the ends of the world.”"
+  },
+  {
+   "ot": "Isaiah 40:3-5",
+   "nt": "Luke 3:4",
+   "votes": 25,
+   "shared": {
+    "words": 6,
+    "text": "prepare the way for the lord"
+   },
+   "formula": {
+    "ref": "Luke.3.4",
+    "phrase": "as it is written in the book of the words of Isaiah the prophet: “…"
+   },
+   "score": 4.9,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert. Every valley shall be lifted up, and every mountain and hill made low; the uneven ground will become smooth, and the rugged land a plain. And the glory of the LORD will be revealed, and all humanity together will see it. For the mouth of the LORD has spoken.”",
+   "ntText": "as it is written in the book of the words of Isaiah the prophet: “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him."
+  },
+  {
+   "ot": "Exodus 16:18",
+   "nt": "2 Corinthians 8:15",
+   "votes": 25,
+   "shared": {
+    "words": 15,
+    "text": "he who gathered much had no excess and he who gathered little had no shortfall"
+   },
+   "formula": {
+    "ref": "2Cor.8.15",
+    "phrase": "As it is written: “He who gathered much had no excess, and he who…"
+   },
+   "score": 4.9,
+   "sameOtAs": [],
+   "otText": "When they measured it by the omer, he who gathered much had no excess, and he who gathered little had no shortfall. Each one gathered as much as he needed to eat.",
+   "ntText": "As it is written: “He who gathered much had no excess, and he who gathered little had no shortfall.”"
+  },
+  {
+   "ot": "Psalm 110:4",
+   "nt": "Hebrews 5:6",
+   "votes": 24,
+   "shared": {
+    "words": 10,
+    "text": "you are a priest forever in the order of melchizedek"
+   },
+   "formula": {
+    "ref": "Heb.5.6",
+    "phrase": "And in another passage God says: “You are a priest forever in the order of Melchi…"
+   },
+   "score": 4.88,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "The LORD has sworn and will not change His mind: “You are a priest forever in the order of Melchizedek.”",
+   "ntText": "And in another passage God says: “You are a priest forever in the order of Melchizedek.”"
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Mark 12:36",
+   "votes": 24,
+   "shared": {
+    "words": 13,
+    "text": "the lord said to my lord sit at my right hand until i"
+   },
+   "formula": {
+    "ref": "Mark.12.36",
+    "phrase": "…e Holy Spirit, David himself declared: ‘The Lord said to my Lord, “Sit at My right hand until I put You…"
+   },
+   "score": 4.88,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "Speaking by the Holy Spirit, David himself declared: ‘The Lord said to my Lord, “Sit at My right hand until I put Your enemies under Your feet.”’"
+  },
+  {
+   "ot": "Amos 5:25-26",
+   "nt": "Acts 7:42",
+   "votes": 24,
+   "shared": {
+    "words": 16,
+    "text": "did you bring me sacrifices and offerings forty years in the wilderness o house of israel"
+   },
+   "formula": {
+    "ref": "Acts.7.42",
+    "phrase": "…r to the worship of the host of heaven, as it is written in the book of the prophets: ‘Did you bring Me sa…"
+   },
+   "score": 4.88,
+   "sameOtAs": [],
+   "otText": "Did you bring Me sacrifices and offerings forty years in the wilderness, O house of Israel? You have taken along Sakkuth your king and Kaiwan your star god, the idols you made for yourselves.",
+   "ntText": "But God turned away from them and gave them over to the worship of the host of heaven, as it is written in the book of the prophets: ‘Did you bring Me sacrifices and offerings forty years in the wilderness, O house of Israel?"
+  },
+  {
+   "ot": "Isaiah 8:17-18",
+   "nt": "Hebrews 2:13",
+   "votes": 24,
+   "shared": {
+    "words": 7,
+    "text": "i will put my trust in him"
+   },
+   "formula": {
+    "ref": "Heb.2.12",
+    "phrase": "He says: “I will proclaim Your name to My brothers; I wil…"
+   },
+   "score": 4.88,
+   "sameOtAs": [],
+   "otText": "I will wait for the LORD, who is hiding His face from the house of Jacob. I will put my trust in Him. Here am I, and the children the LORD has given me as signs and symbols in Israel from the LORD of Hosts, who dwells on Mount Zion.",
+   "ntText": "And again: “I will put My trust in Him.” And once again: “Here am I, and the children God has given Me.”"
+  },
+  {
+   "ot": "Isaiah 66:1",
+   "nt": "Acts 7:49",
+   "votes": 23,
+   "shared": {
+    "words": 13,
+    "text": "earth is my footstool what kind of house will you build for me"
+   },
+   "formula": {
+    "ref": "Acts.7.48",
+    "phrase": "…dwell in houses made by human hands. As the prophet says:"
+   },
+   "score": 4.86,
+   "sameOtAs": [],
+   "otText": "This is what the LORD says: “Heaven is My throne, and earth is My footstool. What kind of house will you build for Me? Or where will My place of repose be?",
+   "ntText": "‘Heaven is My throne and the earth is My footstool. What kind of house will you build for Me, says the Lord, or where will My place of repose be?"
+  },
+  {
+   "ot": "Isaiah 10:20-23",
+   "nt": "Romans 9:27",
+   "votes": 23,
+   "shared": {
+    "words": 7,
+    "text": "like the sand of the sea only"
+   },
+   "formula": {
+    "ref": "Rom.9.25",
+    "phrase": "As He says in Hosea: “I will call them ‘My People’ who are n…"
+   },
+   "score": 4.86,
+   "sameOtAs": [],
+   "otText": "On that day the remnant of Israel and the survivors of the house of Jacob will no longer depend on him who struck them, but they will truly rely on the LORD, the Holy One of Israel. A remnant will return—a remnant of Jacob— to the Mighty God. Though your people, O Israel, be like the sand of the sea, only a remnant will return. Destruction has been decreed, overflowing with righteousness. For the Lord GOD of Hosts will carry out the destruction decreed upon the whole land.",
+   "ntText": "Isaiah cries out concerning Israel: “Though the number of the Israelites is like the sand of the sea, only the remnant will be saved."
+  },
+  {
+   "ot": "Psalm 117:1",
+   "nt": "Romans 15:11",
+   "votes": 23,
+   "shared": {
+    "words": 5,
+    "text": "praise the lord all you"
+   },
+   "formula": {
+    "ref": "Rom.15.9",
+    "phrase": "…Gentiles may glorify God for His mercy. As it is written: “Therefore I will praise You among the Gentiles;…"
+   },
+   "score": 4.86,
+   "sameOtAs": [],
+   "otText": "Praise the LORD, all you nations! Extol Him, all you peoples!",
+   "ntText": "And again: “Praise the Lord, all you Gentiles, and extol Him, all you peoples.”"
+  },
+  {
+   "ot": "Isaiah 40:4",
+   "nt": "Luke 3:5",
+   "votes": 21,
+   "shared": {
+    "words": 8,
+    "text": "and every mountain and hill made low the"
+   },
+   "formula": {
+    "ref": "Luke.3.4",
+    "phrase": "as it is written in the book of the words of Isaiah the prophet: “…"
+   },
+   "score": 4.82,
+   "sameOtAs": [],
+   "otText": "Every valley shall be lifted up, and every mountain and hill made low; the uneven ground will become smooth, and the rugged land a plain.",
+   "ntText": "Every valley shall be filled in, and every mountain and hill made low. The crooked ways shall be made straight, and the rough ways smooth."
+  },
+  {
+   "ot": "Deuteronomy 25:4",
+   "nt": "1 Corinthians 9:9",
+   "votes": 20,
+   "shared": {
+    "words": 12,
+    "text": "do not muzzle an ox while it is treading out the grain"
+   },
+   "formula": {
+    "ref": "1Cor.9.9",
+    "phrase": "For it is written in the Law of Moses: “Do not muzzle an ox while i…"
+   },
+   "score": 4.8,
+   "sameOtAs": [
+    "p68"
+   ],
+   "otText": "Do not muzzle an ox while it is treading out the grain.",
+   "ntText": "For it is written in the Law of Moses: “Do not muzzle an ox while it is treading out the grain.” Is it about oxen that God is concerned?"
+  },
+  {
+   "ot": "Psalm 95:7",
+   "nt": "Hebrews 4:7",
+   "votes": 19,
+   "shared": {
+    "words": 6,
+    "text": "today if you hear his voice"
+   },
+   "formula": {
+    "ref": "Heb.4.5",
+    "phrase": "And again, as He says in the passage above: “They shall never enter My…"
+   },
+   "score": 4.78,
+   "sameOtAs": [],
+   "otText": "For He is our God, and we are the people of His pasture, the sheep under His care. Today, if you hear His voice,",
+   "ntText": "God again designated a certain day as “Today,” when a long time later He spoke through David as was just stated: “Today, if you hear His voice, do not harden your hearts.”"
+  },
+  {
+   "ot": "Isaiah 65:2-5",
+   "nt": "Romans 10:21",
+   "votes": 19,
+   "shared": {
+    "words": 10,
+    "text": "all day long i have held out my hands to"
+   },
+   "formula": {
+    "ref": "Rom.10.19",
+    "phrase": "…tead, did Israel not understand? First, Moses says: “I will make you jealous by those who are not a…"
+   },
+   "score": 4.78,
+   "sameOtAs": [],
+   "otText": "All day long I have held out My hands to an obstinate people who walk in the wrong path, who follow their own imaginations, to a people who continually provoke Me to My face, sacrificing in the gardens and burning incense on altars of brick, sitting among the graves, spending nights in secret places, eating the meat of pigs and polluted broth from their bowls. They say, ‘Keep to yourself; do not come near me, for I am holier than you!’ Such people are smoke in My nostrils, a fire that burns all day long.",
+   "ntText": "But as for Israel he says: “All day long I have held out My hands to a disobedient and obstinate people.”"
+  },
+  {
+   "ot": "Genesis 21:10-12",
+   "nt": "Galatians 4:30",
+   "votes": 19,
+   "shared": {
+    "words": 19,
+    "text": "expel the slave woman and her son for the slave woman's son will never share in the inheritance with"
+   },
+   "formula": {
+    "ref": "Gal.4.30",
+    "phrase": "But what does the Scripture say? “Expel the slave woman and her son, for the…"
+   },
+   "score": 4.78,
+   "sameOtAs": [],
+   "otText": "and she said to Abraham, “Expel the slave woman and her son, for the slave woman’s son will never share in the inheritance with my son Isaac!” Now this matter distressed Abraham greatly because it concerned his son Ishmael. But God said to Abraham, “Do not be distressed about the boy and your maidservant. Listen to everything that Sarah tells you, for through Isaac your offspring will be reckoned.",
+   "ntText": "But what does the Scripture say? “Expel the slave woman and her son, for the slave woman’s son will never share in the inheritance with the free woman’s son.”"
+  },
+  {
+   "ot": "Isaiah 8:14-15",
+   "nt": "Romans 9:33",
+   "votes": 18,
+   "shared": {
+    "words": 9,
+    "text": "a stone of stumbling and a rock of offense"
+   },
+   "formula": {
+    "ref": "Rom.9.33",
+    "phrase": "as it is written: “See, I lay in Zion a stone of stumbling and a r…"
+   },
+   "score": 4.76,
+   "sameOtAs": [],
+   "otText": "And He will be a sanctuary— but to both houses of Israel a stone of stumbling and a rock of offense, to the dwellers of Jerusalem a trap and a snare. Many will stumble over these; they will fall and be broken; they will be ensnared and captured.”",
+   "ntText": "as it is written: “See, I lay in Zion a stone of stumbling and a rock of offense; and the one who believes in Him will never be put to shame.”"
+  },
+  {
+   "ot": "1 Kings 19:10-13",
+   "nt": "Romans 11:3",
+   "votes": 18,
+   "shared": {
+    "words": 14,
+    "text": "i am the only one left and they are seeking my life as well"
+   },
+   "formula": {
+    "ref": "Rom.11.2",
+    "phrase": "…whom He foreknew. Do you not know what the Scripture says about Elijah, how he appealed to God against Isra…"
+   },
+   "score": 4.76,
+   "sameOtAs": [],
+   "otText": "“I have been very zealous for the LORD, the God of Hosts,” he replied, “but the Israelites have forsaken Your covenant, torn down Your altars, and killed Your prophets with the sword. I am the only one left, and they are seeking my life as well.” Then the LORD said, “Go out and stand on the mountain before the LORD. Behold, the LORD is about to pass by.” And a great and mighty wind tore into the mountains and shattered the rocks before the LORD, but the LORD was not in the wind. After the wind there was an earthquake, but the LORD was not in the earthquake. After the earthquake there was a fire, but the LORD was not in the fire. And after the fire came a still, small voice. When Elijah heard it, he wrapped his face in his cloak and went out and stood at the mouth of the cave. Suddenly a voice came to him and said, “What are you doing here, Elijah?”",
+   "ntText": "“Lord, they have killed Your prophets and torn down Your altars. I am the only one left, and they are seeking my life as well”?"
+  },
+  {
+   "ot": "Deuteronomy 32:43",
+   "nt": "Hebrews 1:6",
+   "votes": 18,
+   "shared": {
+    "words": 6,
+    "text": "let all god's angels worship him"
+   },
+   "formula": {
+    "ref": "Heb.1.6",
+    "phrase": "…od brings His firstborn into the world, He says: “Let all God’s angels worship Him.”"
+   },
+   "score": 4.76,
+   "sameOtAs": [],
+   "otText": "Rejoice, O heavens, with Him, and let all God’s angels worship Him. Rejoice, O nations, with His people; for He will avenge the blood of His children. He will take vengeance on His adversaries and repay those who hate Him; He will cleanse His land and His people.",
+   "ntText": "And again, when God brings His firstborn into the world, He says: “Let all God’s angels worship Him.”"
+  },
+  {
+   "ot": "1 Samuel 7:3",
+   "nt": "Luke 4:8",
+   "votes": 177,
+   "shared": {
+    "words": 4,
+    "text": "and serve him only"
+   },
+   "formula": {
+    "ref": "Luke.4.8",
+    "phrase": "But Jesus answered, “It is written: ‘Worship the Lord your God and serve Him only.’”"
+   },
+   "score": 4.75,
+   "sameOtAs": [],
+   "otText": "Then Samuel said to all the house of Israel, “If you are returning to the LORD with all your hearts, then rid yourselves of the foreign gods and Ashtoreths among you, prepare your hearts for the LORD, and serve Him only. And He will deliver you from the hand of the Philistines.”",
+   "ntText": "But Jesus answered, “It is written: ‘Worship the Lord your God and serve Him only.’”"
+  },
+  {
+   "ot": "Psalm 14:3",
+   "nt": "Romans 3:12",
+   "votes": 17,
+   "shared": {
+    "words": 10,
+    "text": "there is no one who does good not even one"
+   },
+   "formula": {
+    "ref": "Rom.3.10",
+    "phrase": "As it is written: “There is no one righteous, not even one."
+   },
+   "score": 4.73,
+   "sameOtAs": [],
+   "otText": "All have turned away, they have together become corrupt; there is no one who does good, not even one.",
+   "ntText": "All have turned away, they have together become worthless; there is no one who does good, not even one.”"
+  },
+  {
+   "ot": "Leviticus 18:5",
+   "nt": "Galatians 3:12",
+   "votes": 17,
+   "shared": {
+    "words": 10,
+    "text": "the man who does these things will live by them"
+   },
+   "formula": {
+    "ref": "Gal.3.10",
+    "phrase": "…works of the law are under a curse. For it is written: “Cursed is everyone who does not continue to do…"
+   },
+   "score": 4.73,
+   "sameOtAs": [],
+   "otText": "Keep My statutes and My judgments, for the man who does these things will live by them. I am the LORD.",
+   "ntText": "The law, however, is not based on faith; on the contrary, “The man who does these things will live by them.”"
+  },
+  {
+   "ot": "Genesis 15:13",
+   "nt": "Acts 7:6-7",
+   "votes": 16,
+   "shared": {
+    "words": 7,
+    "text": "be enslaved and mistreated four hundred years"
+   },
+   "formula": {
+    "ref": "Acts.7.7",
+    "phrase": "…punish the nation that enslaves them,’ God said, ‘and afterward they will come forth and worship…"
+   },
+   "score": 4.7,
+   "sameOtAs": [],
+   "otText": "Then the LORD said to Abram, “Know for certain that your descendants will be strangers in a land that is not their own, and they will be enslaved and mistreated four hundred years.",
+   "ntText": "God told him that his descendants would be foreigners in a strange land, and that they would be enslaved and mistreated four hundred years. ‘But I will punish the nation that enslaves them,’ God said, ‘and afterward they will come forth and worship Me in this place.’"
+  },
+  {
+   "ot": "Exodus 3:6",
+   "nt": "Matthew 22:32",
+   "votes": 16,
+   "shared": {
+    "words": 12,
+    "text": "the god of abraham the god of isaac and the god of"
+   },
+   "formula": {
+    "ref": "Matt.22.31",
+    "phrase": "…ion of the dead, have you not read what God said to you:"
+   },
+   "score": 4.7,
+   "sameOtAs": [],
+   "otText": "Then He said, “I am the God of your father, the God of Abraham, the God of Isaac, and the God of Jacob.” At this, Moses hid his face, for he was afraid to look at God.",
+   "ntText": "‘I am the God of Abraham, the God of Isaac, and the God of Jacob’? He is not the God of the dead, but of the living.”"
+  },
+  {
+   "ot": "Leviticus 11:44",
+   "nt": "1 Peter 1:15-16",
+   "votes": 16,
+   "shared": {
+    "words": 6,
+    "text": "be holy because i am holy"
+   },
+   "formula": {
+    "ref": "1Pet.1.16",
+    "phrase": "for it is written: “Be holy, because I am holy.”"
+   },
+   "score": 4.7,
+   "sameOtAs": [],
+   "otText": "For I am the LORD your God; consecrate yourselves, therefore, and be holy, because I am holy. You must not defile yourselves by any creature that crawls along the ground.",
+   "ntText": "But just as He who called you is holy, so be holy in all you do, for it is written: “Be holy, because I am holy.”"
+  },
+  {
+   "ot": "1 Samuel 15:22",
+   "nt": "Hebrews 10:4-7",
+   "votes": 155,
+   "shared": {
+    "words": 4,
+    "text": "in burnt offerings and"
+   },
+   "formula": {
+    "ref": "Heb.10.7",
+    "phrase": "Then I said, ‘Here I am, it is written about Me in the scroll: I have come to do Your wi…"
+   },
+   "score": 4.69,
+   "sameOtAs": [],
+   "otText": "But Samuel declared: “Does the LORD delight in burnt offerings and sacrifices as much as in obedience to His voice? Behold, obedience is better than sacrifice, and attentiveness is better than the fat of rams.",
+   "ntText": "because it is impossible for the blood of bulls and goats to take away sins. Therefore, when Christ came into the world, He said: “Sacrifice and offering You did not desire, but a body You prepared for Me. In burnt offerings and sin offerings You took no delight. Then I said, ‘Here I am, it is written about Me in the scroll: I have come to do Your will, O God.’”"
+  },
+  {
+   "ot": "Habakkuk 1:5",
+   "nt": "Acts 13:40-41",
+   "votes": 15,
+   "shared": {
+    "words": 19,
+    "text": "for i am doing a work in your days that you would never believe even if someone told you"
+   },
+   "formula": {
+    "ref": "Acts.13.40",
+    "phrase": "Watch out, then, that what was spoken by the prophets does not happen to you:"
+   },
+   "score": 4.68,
+   "sameOtAs": [],
+   "otText": "“Look at the nations and observe— be utterly astounded! For I am doing a work in your days that you would never believe even if someone told you.",
+   "ntText": "Watch out, then, that what was spoken by the prophets does not happen to you: ‘Look, you scoffers, wonder and perish! For I am doing a work in your days that you would never believe, even if someone told you.’”"
+  },
+  {
+   "ot": "Exodus 21:17",
+   "nt": "Matthew 15:4",
+   "votes": 15,
+   "shared": {
+    "words": 8,
+    "text": "anyone who curses his father or mother must"
+   },
+   "formula": {
+    "ref": "Matt.15.4",
+    "phrase": "For God said, ‘Honor your father and mother’ and ‘Anyone who c…"
+   },
+   "score": 4.68,
+   "sameOtAs": [],
+   "otText": "Anyone who curses his father or mother must surely be put to death.",
+   "ntText": "For God said, ‘Honor your father and mother’ and ‘Anyone who curses his father or mother must be put to death.’"
+  },
+  {
+   "ot": "Genesis 2:24",
+   "nt": "Mark 10:7",
+   "votes": 15,
+   "shared": {
+    "words": 17,
+    "text": "for this reason a man will leave his father and mother and be united to his wife"
+   },
+   "formula": {
+    "ref": "Mark.10.5",
+    "phrase": "But Jesus told them, “Moses wrote this commandment for you because of your hardness…"
+   },
+   "score": 4.68,
+   "sameOtAs": [],
+   "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
+   "ntText": "‘For this reason a man will leave his father and mother and be united to his wife,"
+  },
+  {
+   "ot": "Exodus 3:7-10",
+   "nt": "Acts 7:34",
+   "votes": 14,
+   "shared": {
+    "words": 8,
+    "text": "of my people in egypt i have heard"
+   },
+   "formula": {
+    "ref": "Acts.7.33",
+    "phrase": "Then the Lord said to him, ‘Take off your sandals, for the place whe…"
+   },
+   "score": 4.65,
+   "sameOtAs": [],
+   "otText": "The LORD said, “I have indeed seen the affliction of My people in Egypt. I have heard them crying out because of their oppressors, and I am aware of their sufferings. I have come down to rescue them from the hand of the Egyptians and to bring them up out of that land to a good and spacious land, a land flowing with milk and honey—the home of the Canaanites, Hittites, Amorites, Perizzites, Hivites, and Jebusites. And now the cry of the Israelites has reached Me, and I have seen how severely the Egyptians are oppressing them. Therefore, go! I am sending you to Pharaoh to bring My people the Israelites out of Egypt.”",
+   "ntText": "I have indeed seen the oppression of My people in Egypt. I have heard their groaning and have come down to deliver them. Now come, I will send you back to Egypt.’"
+  },
+  {
+   "ot": "Psalm 95:8",
+   "nt": "Hebrews 3:8-9",
+   "votes": 13,
+   "shared": {
+    "words": 8,
+    "text": "do not harden your hearts as you did"
+   },
+   "formula": {
+    "ref": "Heb.3.7",
+    "phrase": "Therefore, as the Holy Spirit says: “Today, if you hear His voice,"
+   },
+   "score": 4.61,
+   "sameOtAs": [],
+   "otText": "do not harden your hearts as you did at Meribah, in the day at Massah in the wilderness,",
+   "ntText": "do not harden your hearts, as you did in the rebellion, in the day of testing in the wilderness, where your fathers tested and tried Me, and for forty years saw My works."
+  },
+  {
+   "ot": "Isaiah 29:16",
+   "nt": "Romans 9:19-21",
+   "votes": 13,
+   "shared": {
+    "words": 10,
+    "text": "shall what is formed say to him who formed it"
+   },
+   "formula": {
+    "ref": "Rom.9.17",
+    "phrase": "For the Scripture says to Pharaoh: “I raised you up for this very purpos…"
+   },
+   "score": 4.61,
+   "sameOtAs": [],
+   "otText": "You have turned things upside down, as if the potter were regarded as clay. Shall what is formed say to him who formed it, “He did not make me”? Can the pottery say of the potter, “He has no understanding”?",
+   "ntText": "One of you will say to me, “Then why does God still find fault? For who can resist His will?” But who are you, O man, to talk back to God? Shall what is formed say to Him who formed it, “Why did You make me like this?” Does not the potter have the right to make from the same lump of clay one vessel for special occasions and another for common use?"
+  },
+  {
+   "ot": "Isaiah 43:5",
+   "nt": "Acts 18:9-10",
+   "votes": 13,
+   "shared": {
+    "words": 5,
+    "text": "for i am with you"
+   },
+   "formula": {
+    "ref": "Acts.18.9",
+    "phrase": "One night the Lord spoke to Paul in a vision: “Do not be afraid; keep on s…"
+   },
+   "score": 4.61,
+   "sameOtAs": [],
+   "otText": "Do not be afraid, for I am with you; I will bring your offspring from the east and gather you from the west.",
+   "ntText": "One night the Lord spoke to Paul in a vision: “Do not be afraid; keep on speaking; do not be silent. For I am with you and no one will lay a hand on you, because I have many people in this city.”"
+  },
+  {
+   "ot": "Hosea 1:9-10",
+   "nt": "Romans 9:26",
+   "votes": 13,
+   "shared": {
+    "words": 31,
+    "text": "and it will happen that in the very place where it was said to them you are not my people ' they will be called sons of the living god '"
+   },
+   "formula": {
+    "ref": "Rom.9.25",
+    "phrase": "As He says in Hosea: “I will call them ‘My People’ who are n…"
+   },
+   "score": 4.61,
+   "sameOtAs": [],
+   "otText": "And the LORD said, “Name him Lo-ammi, for you are not My people, and I am not your God. Yet the number of the Israelites will be like the sand of the sea, which cannot be measured or counted. And it will happen that in the very place where it was said to them, ‘You are not My people,’ they will be called ‘sons of the living God.’",
+   "ntText": "and, “It will happen that in the very place where it was said to them, ‘You are not My people,’ they will be called ‘sons of the living God.’”"
+  },
+  {
+   "ot": "Genesis 15:5",
+   "nt": "Romans 4:18",
+   "votes": 12,
+   "shared": {
+    "words": 5,
+    "text": "so shall your offspring be"
+   },
+   "formula": {
+    "ref": "Rom.4.17",
+    "phrase": "As it is written: “I have made you a father of many nations.” He i…"
+   },
+   "score": 4.58,
+   "sameOtAs": [],
+   "otText": "And the LORD took him outside and said, “Now look to the heavens and count the stars, if you are able.” Then He told him, “So shall your offspring be.”",
+   "ntText": "Against all hope, Abraham in hope believed and so became the father of many nations, just as he had been told, “So shall your offspring be.”"
+  },
+  {
+   "ot": "Exodus 3:5",
+   "nt": "Acts 7:33",
+   "votes": 12,
+   "shared": {
+    "words": 14,
+    "text": "take off your sandals for the place where you are standing is holy ground"
+   },
+   "formula": {
+    "ref": "Acts.7.33",
+    "phrase": "Then the Lord said to him, ‘Take off your sandals, for the place whe…"
+   },
+   "score": 4.58,
+   "sameOtAs": [],
+   "otText": "“Do not come any closer,” God said. “Take off your sandals, for the place where you are standing is holy ground.”",
+   "ntText": "Then the Lord said to him, ‘Take off your sandals, for the place where you are standing is holy ground."
+  },
+  {
+   "ot": "Exodus 21:17",
+   "nt": "Mark 7:10",
+   "votes": 12,
+   "shared": {
+    "words": 8,
+    "text": "anyone who curses his father or mother must"
+   },
+   "formula": {
+    "ref": "Mark.7.10",
+    "phrase": "For Moses said, ‘Honor your father and your mother’ and ‘Anyone…"
+   },
+   "score": 4.58,
+   "sameOtAs": [],
+   "otText": "Anyone who curses his father or mother must surely be put to death.",
+   "ntText": "For Moses said, ‘Honor your father and your mother’ and ‘Anyone who curses his father or mother must be put to death.’"
+  },
+  {
+   "ot": "Leviticus 12:6-8",
+   "nt": "Luke 2:24",
+   "votes": 12,
+   "shared": {
+    "words": 5,
+    "text": "turtledoves or two young pigeons"
+   },
+   "formula": {
+    "ref": "Luke.2.23",
+    "phrase": "(as it is written in the Law of the Lord: “Every firstborn male sha…"
+   },
+   "score": 4.58,
+   "sameOtAs": [],
+   "otText": "When the days of her purification are complete, whether for a son or for a daughter, she is to bring to the priest at the entrance to the Tent of Meeting a year-old lamb for a burnt offering and a young pigeon or a turtledove for a sin offering. And the priest will present them before the LORD and make atonement for her; and she shall be ceremonially cleansed from her flow of blood. This is the law for a woman giving birth, whether to a male or to a female. But if she cannot afford a lamb, she shall bring two turtledoves or two young pigeons, one for a burnt offering and the other for a sin offering. Then the priest will make atonement for her, and she will be clean.’”",
+   "ntText": "and to offer the sacrifice specified in the Law of the Lord: “A pair of turtledoves or two young pigeons.”"
+  },
+  {
+   "ot": "Genesis 3:22",
+   "nt": "Revelation 2:7",
+   "votes": 11,
+   "shared": {
+    "words": 5,
+    "text": "from the tree of life"
+   },
+   "formula": {
+    "ref": "Rev.2.7",
+    "phrase": "…o has an ear, let him hear what the Spirit says to the churches. To the one who overcomes, I will…"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "Then the LORD God said, “Behold, the man has become like one of Us, knowing good and evil. And now, lest he reach out his hand and take also from the tree of life, and eat, and live forever...”",
+   "ntText": "He who has an ear, let him hear what the Spirit says to the churches. To the one who overcomes, I will grant the right to eat from the tree of life in the Paradise of God."
+  },
+  {
+   "ot": "Genesis 25:23",
+   "nt": "Romans 9:10-13",
+   "votes": 11,
+   "shared": {
+    "words": 6,
+    "text": "the older will serve the younger"
+   },
+   "formula": {
+    "ref": "Rom.9.13",
+    "phrase": "So it is written: “Jacob I loved, but Esau I hated.”"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "and He declared to her: “Two nations are in your womb, and two peoples from within you will be separated; one people will be stronger than the other, and the older will serve the younger.”",
+   "ntText": "Not only that, but Rebecca’s children were conceived by one man, our father Isaac. Yet before the twins were born or had done anything good or bad, in order that God’s plan of election might stand, not by works but by Him who calls, she was told, “The older will serve the younger.” So it is written: “Jacob I loved, but Esau I hated.”"
+  },
+  {
+   "ot": "Psalm 95:11",
+   "nt": "Hebrews 4:5",
+   "votes": 11,
+   "shared": {
+    "words": 6,
+    "text": "they shall never enter my rest"
+   },
+   "formula": {
+    "ref": "Heb.4.5",
+    "phrase": "And again, as He says in the passage above: “They shall never enter My…"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "So I swore on oath in My anger, “They shall never enter My rest.”",
+   "ntText": "And again, as He says in the passage above: “They shall never enter My rest.”"
+  },
+  {
+   "ot": "Malachi 3:1",
+   "nt": "Luke 7:27",
+   "votes": 11,
+   "shared": {
+    "words": 6,
+    "text": "behold i will send my messenger"
+   },
+   "formula": {
+    "ref": "Luke.7.27",
+    "phrase": "This is the one about whom it is written: ‘Behold, I will send My messenger ahead of You,…"
+   },
+   "score": 4.54,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "“Behold, I will send My messenger, who will prepare the way before Me. Then the Lord whom you seek will suddenly come to His temple—the Messenger of the covenant, in whom you delight—see, He is coming,” says the LORD of Hosts.",
+   "ntText": "This is the one about whom it is written: ‘Behold, I will send My messenger ahead of You, who will prepare Your way before You.’"
+  },
+  {
+   "ot": "Amos 5:26-27",
+   "nt": "Acts 7:43",
+   "votes": 11,
+   "shared": {
+    "words": 8,
+    "text": "therefore i will send you into exile beyond"
+   },
+   "formula": {
+    "ref": "Acts.7.42",
+    "phrase": "…r to the worship of the host of heaven, as it is written in the book of the prophets: ‘Did you bring Me sa…"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "You have taken along Sakkuth your king and Kaiwan your star god, the idols you made for yourselves. Therefore I will send you into exile beyond Damascus,” says the LORD, whose name is the God of Hosts.",
+   "ntText": "You have taken along the tabernacle of Molech and the star of your god Rephan, the idols you made to worship. Therefore I will send you into exile beyond Babylon.’"
+  },
+  {
+   "ot": "Isaiah 41:10",
+   "nt": "Acts 18:10",
+   "votes": 11,
+   "shared": {
+    "words": 5,
+    "text": "for i am with you"
+   },
+   "formula": {
+    "ref": "Acts.18.9",
+    "phrase": "One night the Lord spoke to Paul in a vision: “Do not be afraid; keep on s…"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "Do not fear, for I am with you; do not be afraid, for I am your God. I will strengthen you; I will surely help you; I will uphold you with My right hand of righteousness.",
+   "ntText": "For I am with you and no one will lay a hand on you, because I have many people in this city.”"
+  },
+  {
+   "ot": "Psalm 86:5",
+   "nt": "Romans 10:12",
+   "votes": 11,
+   "shared": {
+    "words": 5,
+    "text": "to all who call on"
+   },
+   "formula": {
+    "ref": "Rom.10.11",
+    "phrase": "It is just as the Scripture says: “Anyone who believes in Him will never be put to…"
+   },
+   "score": 4.54,
+   "sameOtAs": [],
+   "otText": "For You, O Lord, are kind and forgiving, rich in loving devotion to all who call on You.",
+   "ntText": "For there is no difference between Jew and Greek: The same Lord is Lord of all, and gives richly to all who call on Him,"
+  },
+  {
+   "ot": "Deuteronomy 6:16",
+   "nt": "Matthew 4:7",
+   "votes": 99,
+   "shared": {
+    "words": 4,
+    "text": "the lord your god"
+   },
+   "formula": {
+    "ref": "Matt.4.6",
+    "phrase": "…od,” he said, “throw Yourself down. For it is written: ‘He will command His angels concerning You, and…"
+   },
+   "score": 4.5,
+   "sameOtAs": [],
+   "otText": "Do not test the LORD your God as you tested Him at Massah.",
+   "ntText": "Jesus replied, “It is also written: ‘Do not put the Lord your God to the test.’”"
+  },
+  {
+   "ot": "Isaiah 10:22",
+   "nt": "Romans 9:27-28",
+   "votes": 10,
+   "shared": {
+    "words": 7,
+    "text": "like the sand of the sea only"
+   },
+   "formula": {
+    "ref": "Rom.9.25",
+    "phrase": "As He says in Hosea: “I will call them ‘My People’ who are n…"
+   },
+   "score": 4.5,
+   "sameOtAs": [],
+   "otText": "Though your people, O Israel, be like the sand of the sea, only a remnant will return. Destruction has been decreed, overflowing with righteousness.",
+   "ntText": "Isaiah cries out concerning Israel: “Though the number of the Israelites is like the sand of the sea, only the remnant will be saved. For the Lord will carry out His sentence on the earth thoroughly and decisively.”"
+  },
+  {
+   "ot": "2 Kings 1:8",
+   "nt": "Matthew 3:4",
+   "votes": 10,
+   "shared": {
+    "words": 7,
+    "text": "with a leather belt around his waist"
+   },
+   "formula": {
+    "ref": "Matt.3.3",
+    "phrase": "This is he who was spoken of through the prophet Isaiah: “A voice of one calling in the wilderness, ‘Prep…"
+   },
+   "score": 4.5,
+   "sameOtAs": [],
+   "otText": "“He was a hairy man,” they answered, “with a leather belt around his waist.” “It was Elijah the Tishbite,” said the king.",
+   "ntText": "John wore a garment of camel’s hair, with a leather belt around his waist. His food was locusts and wild honey."
+  },
+  {
+   "ot": "Psalm 118:6-9",
+   "nt": "Hebrews 13:6",
+   "votes": 299,
+   "shared": {
+    "words": 11,
+    "text": "i will not be afraid what can man do to me"
+   },
+   "formula": null,
+   "score": 4.48,
+   "sameOtAs": [],
+   "otText": "The LORD is on my side; I will not be afraid. What can man do to me? The LORD is on my side; He is my helper. Therefore I will look in triumph on those who hate me. It is better to take refuge in the LORD than to trust in man. It is better to take refuge in the LORD than to trust in princes.",
+   "ntText": "So we say with confidence: “The Lord is my helper; I will not be afraid. What can man do to me?”"
+  },
+  {
+   "ot": "Jeremiah 32:38",
+   "nt": "2 Corinthians 6:16",
+   "votes": 250,
+   "shared": {
+    "words": 6,
+    "text": "and i will be their god"
+   },
+   "formula": null,
+   "score": 4.4,
+   "sameOtAs": [],
+   "otText": "They will be My people, and I will be their God.",
+   "ntText": "What agreement can exist between the temple of God and idols? For we are the temple of the living God. As God has said: “I will dwell with them and walk among them, and I will be their God, and they will be My people.”"
+  },
+  {
+   "ot": "Isaiah 45:17",
+   "nt": "Romans 11:26",
+   "votes": 59,
+   "shared": {
+    "words": 4,
+    "text": "israel will be saved"
+   },
+   "formula": {
+    "ref": "Rom.11.26",
+    "phrase": "And so all Israel will be saved, as it is written: “The Deliverer will come from Zion; He will remo…"
+   },
+   "score": 4.27,
+   "sameOtAs": [],
+   "otText": "But Israel will be saved by the LORD with an everlasting salvation; you will not be put to shame or humiliated, to ages everlasting.",
+   "ntText": "And so all Israel will be saved, as it is written: “The Deliverer will come from Zion; He will remove godlessness from Jacob."
+  },
+  {
+   "ot": "Hosea 2:23",
+   "nt": "Romans 9:25-26",
+   "votes": 59,
+   "shared": {
+    "words": 4,
+    "text": "not my people '"
+   },
+   "formula": {
+    "ref": "Rom.9.25",
+    "phrase": "As He says in Hosea: “I will call them ‘My People’ who are n…"
+   },
+   "score": 4.27,
+   "sameOtAs": [],
+   "otText": "And I will sow her as My own in the land, and I will have compassion on ‘No Compassion.’ I will say to those called ‘Not My People,’ ‘You are My people,’ and they will say, ‘You are my God.’”",
+   "ntText": "As He says in Hosea: “I will call them ‘My People’ who are not My people, and I will call her ‘My Beloved’ who is not My beloved,” and, “It will happen that in the very place where it was said to them, ‘You are not My people,’ they will be called ‘sons of the living God.’”"
+  },
+  {
+   "ot": "Hosea 6:6",
+   "nt": "Matthew 9:13",
+   "votes": 162,
+   "shared": {
+    "words": 5,
+    "text": "i desire mercy not sacrifice"
+   },
+   "formula": null,
+   "score": 4.21,
+   "sameOtAs": [],
+   "otText": "For I desire mercy, not sacrifice, and the knowledge of God rather than burnt offerings.",
+   "ntText": "But go and learn what this means: ‘I desire mercy, not sacrifice.’ For I have not come to call the righteous, but sinners.”"
+  },
+  {
+   "ot": "Psalm 53:1-3",
+   "nt": "Romans 3:10",
+   "votes": 47,
+   "shared": {
+    "words": 4,
+    "text": "there is no one"
+   },
+   "formula": {
+    "ref": "Rom.3.10",
+    "phrase": "As it is written: “There is no one righteous, not even one."
+   },
+   "score": 4.17,
+   "sameOtAs": [],
+   "otText": "For the choirmaster. According to Mahalath. A Maskil of David. The fool says in his heart, “There is no God.” They are corrupt; their ways are vile. There is no one who does good. God looks down from heaven upon the sons of men to see if any understand, if any seek God. All have turned away, they have together become corrupt; there is no one who does good, not even one.",
+   "ntText": "As it is written: “There is no one righteous, not even one."
+  },
+  {
+   "ot": "Genesis 2:7",
+   "nt": "1 Corinthians 15:45",
+   "votes": 38,
+   "shared": {
+    "words": 4,
+    "text": "became a living being"
+   },
+   "formula": {
+    "ref": "1Cor.15.45",
+    "phrase": "So it is written: “The first man Adam became a living being;” the…"
+   },
+   "score": 4.08,
+   "sameOtAs": [],
+   "otText": "Then the LORD God formed man from the dust of the ground and breathed the breath of life into his nostrils, and the man became a living being.",
+   "ntText": "So it is written: “The first man Adam became a living being;” the last Adam a life-giving spirit."
+  },
+  {
+   "ot": "Deuteronomy 6:5",
+   "nt": "Mark 12:30",
+   "votes": 121,
+   "shared": {
+    "words": 18,
+    "text": "love the lord your god with all your heart and with all your soul and with all your"
+   },
+   "formula": null,
+   "score": 4.08,
+   "sameOtAs": [
+    "p76"
+   ],
+   "otText": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+   "ntText": "Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.’"
+  },
+  {
+   "ot": "Malachi 1:2-3",
+   "nt": "Romans 9:13",
+   "votes": 38,
+   "shared": {
+    "words": 4,
+    "text": "loved but esau i"
+   },
+   "formula": {
+    "ref": "Rom.9.13",
+    "phrase": "So it is written: “Jacob I loved, but Esau I hated.”"
+   },
+   "score": 4.08,
+   "sameOtAs": [],
+   "otText": "“I have loved you,” says the LORD. But you ask, “How have You loved us?” “Was not Esau Jacob’s brother?” declares the LORD. “Yet Jacob I have loved, but Esau I have hated, and I have made his mountains a wasteland and left his inheritance to the desert jackals.”",
+   "ntText": "So it is written: “Jacob I loved, but Esau I hated.”"
+  },
+  {
+   "ot": "Psalm 82:6-7",
+   "nt": "John 10:34",
+   "votes": 111,
+   "shared": {
+    "words": 5,
+    "text": "i have said you are"
+   },
+   "formula": null,
+   "score": 4.05,
+   "sameOtAs": [],
+   "otText": "I have said, ‘You are gods; you are all sons of the Most High.’ But like mortals you will die, and like rulers you will fall.”",
+   "ntText": "Jesus replied, “Is it not written in your Law: ‘I have said you are gods’?"
+  },
+  {
+   "ot": "Psalm 34:8",
+   "nt": "1 Peter 2:2-3",
+   "votes": 105,
+   "shared": {
+    "words": 5,
+    "text": "that the lord is good"
+   },
+   "formula": null,
+   "score": 4.02,
+   "sameOtAs": [],
+   "otText": "Taste and see that the LORD is good; blessed is the man who takes refuge in Him!",
+   "ntText": "Like newborn babies, crave pure spiritual milk, so that by it you may grow up in your salvation, now that you have tasted that the Lord is good."
+  },
+  {
+   "ot": "Daniel 12:11",
+   "nt": "Matthew 24:15",
+   "votes": 33,
+   "shared": {
+    "words": 4,
+    "text": "the abomination of desolation"
+   },
+   "formula": {
+    "ref": "Matt.24.15",
+    "phrase": "…bomination of desolation,’ described by the prophet Daniel (let the reader understand),"
+   },
+   "score": 4.02,
+   "sameOtAs": [],
+   "otText": "And from the time the daily sacrifice is abolished and the abomination of desolation set up, there will be 1,290 days.",
+   "ntText": "So when you see standing in the holy place ‘the abomination of desolation,’ described by the prophet Daniel (let the reader understand),"
+  },
+  {
+   "ot": "Deuteronomy 6:5",
+   "nt": "Matthew 22:37",
+   "votes": 102,
+   "shared": {
+    "words": 18,
+    "text": "love the lord your god with all your heart and with all your soul and with all your"
+   },
+   "formula": null,
+   "score": 4.01,
+   "sameOtAs": [
+    "p76"
+   ],
+   "otText": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+   "ntText": "Jesus declared, “‘Love the Lord your God with all your heart and with all your soul and with all your mind.’"
+  },
+  {
+   "ot": "Psalm 31:5",
+   "nt": "Luke 23:46",
+   "votes": 96,
+   "shared": {
+    "words": 7,
+    "text": "into your hands i commit my spirit"
+   },
+   "formula": null,
+   "score": 3.98,
+   "sameOtAs": [],
+   "otText": "Into Your hands I commit my spirit; You have redeemed me, O LORD, God of truth.",
+   "ntText": "Then Jesus called out in a loud voice, “Father, into Your hands I commit My Spirit.” And when He had said this, He breathed His last."
+  },
+  {
+   "ot": "Ecclesiastes 11:6",
+   "nt": "2 Corinthians 9:10-11",
+   "votes": 301,
+   "shared": {
+    "words": 1,
+    "text": "your"
+   },
+   "formula": {
+    "ref": "2Cor.9.9",
+    "phrase": "As it is written: “He has scattered abroad His gifts to the poor;…"
+   },
+   "score": 3.98,
+   "sameOtAs": [],
+   "otText": "Sow your seed in the morning, and do not rest your hands in the evening, for you do not know which will succeed, whether this or that, or if both will equally prosper.",
+   "ntText": "Now He who supplies seed to the sower and bread for food will supply and multiply your store of seed and will increase the harvest of your righteousness. You will be enriched in every way to be generous on every occasion, so that through us your giving will produce thanksgiving to God."
+  },
+  {
+   "ot": "Deuteronomy 6:5",
+   "nt": "Luke 10:27",
+   "votes": 94,
+   "shared": {
+    "words": 19,
+    "text": "love the lord your god with all your heart and with all your soul and with all your strength"
+   },
+   "formula": null,
+   "score": 3.97,
+   "sameOtAs": [
+    "p76"
+   ],
+   "otText": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+   "ntText": "He answered, “‘Love the Lord your God with all your heart and with all your soul and with all your strength and with all your mind’ and ‘Love your neighbor as yourself.’”"
+  },
+  {
+   "ot": "Deuteronomy 6:16",
+   "nt": "Luke 4:12",
+   "votes": 29,
+   "shared": {
+    "words": 4,
+    "text": "the lord your god"
+   },
+   "formula": {
+    "ref": "Luke.4.10",
+    "phrase": "For it is written: ‘He will command His angels concerning You to gu…"
+   },
+   "score": 3.96,
+   "sameOtAs": [],
+   "otText": "Do not test the LORD your God as you tested Him at Massah.",
+   "ntText": "But Jesus answered, “It also says, ‘Do not put the Lord your God to the test.’”"
+  },
+  {
+   "ot": "2 Chronicles 16:9",
+   "nt": "1 Peter 3:12",
+   "votes": 90,
+   "shared": {
+    "words": 6,
+    "text": "for the eyes of the lord"
+   },
+   "formula": null,
+   "score": 3.95,
+   "sameOtAs": [],
+   "otText": "For the eyes of the LORD roam to and fro over all the earth, to show Himself strong on behalf of those whose hearts are fully devoted to Him. You have acted foolishly in this matter. From now on, therefore, you will be at war.”",
+   "ntText": "For the eyes of the Lord are on the righteous, and His ears are inclined to their prayer. But the face of the Lord is against those who do evil.”"
+  },
+  {
+   "ot": "Isaiah 6:9",
+   "nt": "Matthew 13:14-15",
+   "votes": 90,
+   "shared": {
+    "words": 6,
+    "text": "be ever hearing but never understanding"
+   },
+   "formula": null,
+   "score": 3.95,
+   "sameOtAs": [],
+   "otText": "And He replied: “Go and tell this people, ‘Be ever hearing, but never understanding; be ever seeing, but never perceiving.’",
+   "ntText": "In them the prophecy of Isaiah is fulfilled: ‘You will be ever hearing but never understanding; you will be ever seeing but never perceiving. For this people’s heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.’"
+  },
+  {
+   "ot": "Isaiah 43:25",
+   "nt": "Hebrews 10:17",
+   "votes": 284,
+   "shared": {
+    "words": 2,
+    "text": "no more"
+   },
+   "formula": {
+    "ref": "Heb.10.15",
+    "phrase": "…also testifies to us about this. First He says:"
+   },
+   "score": 3.95,
+   "sameOtAs": [],
+   "otText": "I, yes I, am He who blots out your transgressions for My own sake and remembers your sins no more.",
+   "ntText": "Then He adds: “Their sins and lawless acts I will remember no more.”"
+  },
+  {
+   "ot": "Isaiah 29:13",
+   "nt": "Matthew 15:8",
+   "votes": 78,
+   "shared": {
+    "words": 12,
+    "text": "honor me with their lips but their hearts are far from me"
+   },
+   "formula": null,
+   "score": 3.89,
+   "sameOtAs": [],
+   "otText": "Therefore the Lord said: “These people draw near to Me with their mouths and honor Me with their lips, but their hearts are far from Me. Their worship of Me is but rules taught by men.",
+   "ntText": "‘These people honor Me with their lips, but their hearts are far from Me."
+  },
+  {
+   "ot": "Genesis 2:24",
+   "nt": "Matthew 19:3-6",
+   "votes": 75,
+   "shared": {
+    "words": 18,
+    "text": "for this reason a man will leave his father and mother and be united to his wife and"
+   },
+   "formula": null,
+   "score": 3.88,
+   "sameOtAs": [],
+   "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
+   "ntText": "Then some Pharisees came and tested Him by asking, “Is it lawful for a man to divorce his wife for any reason?” Jesus answered, “Have you not read that from the beginning the Creator ‘made them male and female,’ and said, ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh’? So they are no longer two, but one flesh. Therefore what God has joined together, let man not separate.”"
+  },
+  {
+   "ot": "Psalm 24:1",
+   "nt": "1 Corinthians 10:26",
+   "votes": 72,
+   "shared": {
+    "words": 9,
+    "text": "the earth is the lord's and the fullness thereof"
+   },
+   "formula": null,
+   "score": 3.86,
+   "sameOtAs": [],
+   "otText": "A Psalm of David. The earth is the LORD’s, and the fullness thereof, the world and all who dwell therein.",
+   "ntText": "for, “The earth is the Lord’s, and the fullness thereof.”"
+  },
+  {
+   "ot": "Isaiah 40:3",
+   "nt": "John 1:23",
+   "votes": 70,
+   "shared": {
+    "words": 5,
+    "text": "a voice of one calling"
+   },
+   "formula": null,
+   "score": 3.85,
+   "sameOtAs": [
+    "p14"
+   ],
+   "otText": "A voice of one calling: “Prepare the way for the LORD in the wilderness; make a straight highway for our God in the desert.",
+   "ntText": "John replied in the words of Isaiah the prophet: “I am a voice of one calling in the wilderness, ‘Make straight the way for the Lord.’”"
+  },
+  {
+   "ot": "Deuteronomy 6:4",
+   "nt": "Mark 12:29-32",
+   "votes": 67,
+   "shared": {
+    "words": 11,
+    "text": "hear o israel the lord our god the lord is one"
+   },
+   "formula": null,
+   "score": 3.83,
+   "sameOtAs": [],
+   "otText": "Hear, O Israel: The LORD our God, the LORD is One.",
+   "ntText": "Jesus replied, “This is the most important: ‘Hear O Israel, the Lord our God, the Lord is One. Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.’ The second is this: ‘Love your neighbor as yourself.’ No other commandment is greater than these.” “Right, Teacher,” the scribe replied. “You have stated correctly that God is One and there is no other but Him,"
+  },
+  {
+   "ot": "Isaiah 6:9",
+   "nt": "Mark 4:12",
+   "votes": 68,
+   "shared": {
+    "words": 6,
+    "text": "be ever seeing but never perceiving"
+   },
+   "formula": null,
+   "score": 3.83,
+   "sameOtAs": [],
+   "otText": "And He replied: “Go and tell this people, ‘Be ever hearing, but never understanding; be ever seeing, but never perceiving.’",
+   "ntText": "so that, ‘they may be ever seeing but never perceiving, and ever hearing but never understanding; otherwise they might turn and be forgiven.’”"
+  },
+  {
+   "ot": "Genesis 1:1",
+   "nt": "Revelation 14:7",
+   "votes": 66,
+   "shared": {
+    "words": 5,
+    "text": "the heavens and the earth"
+   },
+   "formula": null,
+   "score": 3.82,
+   "sameOtAs": [],
+   "otText": "In the beginning God created the heavens and the earth.",
+   "ntText": "And he said in a loud voice, “Fear God and give Him glory, because the hour of His judgment has come. Worship the One who made the heavens and the earth and the sea and the springs of waters.”"
+  },
+  {
+   "ot": "Genesis 19:17",
+   "nt": "Matthew 24:16-18",
+   "votes": 21,
+   "shared": {
+    "words": 4,
+    "text": "flee to the mountains"
+   },
+   "formula": {
+    "ref": "Matt.24.15",
+    "phrase": "…bomination of desolation,’ described by the prophet Daniel (let the reader understand),"
+   },
+   "score": 3.82,
+   "sameOtAs": [],
+   "otText": "As soon as the men had brought them out, one of them said, “Run for your lives! Do not look back, and do not stop anywhere on the plain! Flee to the mountains, or you will be swept away!”",
+   "ntText": "then let those who are in Judea flee to the mountains. Let no one on the housetop come down to retrieve anything from his house. And let no one in the field return for his cloak."
+  },
+  {
+   "ot": "Proverbs 3:5",
+   "nt": "1 Corinthians 3:18-20",
+   "votes": 208,
+   "shared": {
+    "words": 2,
+    "text": "the lord"
+   },
+   "formula": {
+    "ref": "1Cor.3.19",
+    "phrase": "…is world is foolishness in God’s sight. As it is written: “He catches the wise in their craftiness.”"
+   },
+   "score": 3.82,
+   "sameOtAs": [],
+   "otText": "Trust in the LORD with all your heart, and lean not on your own understanding;",
+   "ntText": "Let no one deceive himself. If any of you thinks he is wise in this age, he should become a fool, so that he may become wise. For the wisdom of this world is foolishness in God’s sight. As it is written: “He catches the wise in their craftiness.” And again, “The Lord knows that the thoughts of the wise are futile.”"
+  },
+  {
+   "ot": "Isaiah 56:7",
+   "nt": "Luke 19:46",
+   "votes": 21,
+   "shared": {
+    "words": 4,
+    "text": "my house will be"
+   },
+   "formula": {
+    "ref": "Luke.19.46",
+    "phrase": "He declared to them, “It is written: ‘My house will be a house of prayer.’ But you ha…"
+   },
+   "score": 3.82,
+   "sameOtAs": [
+    "p58"
+   ],
+   "otText": "I will bring them to My holy mountain and make them joyful in My house of prayer. Their burnt offerings and sacrifices will be accepted on My altar, for My house will be called a house of prayer for all the nations.”",
+   "ntText": "He declared to them, “It is written: ‘My house will be a house of prayer.’ But you have made it ‘a den of robbers.’”"
+  },
+  {
+   "ot": "Exodus 20:12",
+   "nt": "Ephesians 6:2",
+   "votes": 66,
+   "shared": {
+    "words": 5,
+    "text": "honor your father and mother"
+   },
+   "formula": null,
+   "score": 3.82,
+   "sameOtAs": [],
+   "otText": "Honor your father and mother, so that your days may be long in the land that the LORD your God is giving you.",
+   "ntText": "“Honor your father and mother” (which is the first commandment with a promise),"
+  },
+  {
+   "ot": "Genesis 2:7",
+   "nt": "1 Corinthians 15:47",
+   "votes": 20,
+   "shared": {
+    "words": 4,
+    "text": "the dust of the"
+   },
+   "formula": {
+    "ref": "1Cor.15.45",
+    "phrase": "So it is written: “The first man Adam became a living being;” the…"
+   },
+   "score": 3.8,
+   "sameOtAs": [],
+   "otText": "Then the LORD God formed man from the dust of the ground and breathed the breath of life into his nostrils, and the man became a living being.",
+   "ntText": "The first man was of the dust of the earth, the second man from heaven."
+  },
+  {
+   "ot": "Proverbs 3:11-12",
+   "nt": "Hebrews 12:5",
+   "votes": 61,
+   "shared": {
+    "words": 8,
+    "text": "the discipline of the lord and do not"
+   },
+   "formula": null,
+   "score": 3.79,
+   "sameOtAs": [],
+   "otText": "My son, do not reject the discipline of the LORD, and do not loathe His rebuke; for the LORD disciplines the one He loves, as does a father the son in whom he delights.",
+   "ntText": "And you have forgotten the exhortation that addresses you as sons: “My son, do not take lightly the discipline of the Lord, and do not lose heart when He rebukes you."
+  },
+  {
+   "ot": "Isaiah 44:3",
+   "nt": "Acts 2:33",
+   "votes": 191,
+   "shared": {
+    "words": 1,
+    "text": "the"
+   },
+   "formula": {
+    "ref": "Acts.2.31",
+    "phrase": "Foreseeing this, David spoke about the resurrection of the Christ, that He was…"
+   },
+   "score": 3.78,
+   "sameOtAs": [],
+   "otText": "For I will pour water on the thirsty land, and currents on the dry ground. I will pour out My Spirit on your descendants, and My blessing on your offspring.",
+   "ntText": "Exalted, then, to the right hand of God, He has received from the Father the promised Holy Spirit and has poured out what you now see and hear."
+  },
+  {
+   "ot": "Daniel 7:13",
+   "nt": "Luke 21:27",
+   "votes": 60,
+   "shared": {
+    "words": 5,
+    "text": "the son of man coming"
+   },
+   "formula": null,
+   "score": 3.78,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence.",
+   "ntText": "At that time they will see the Son of Man coming in a cloud with power and great glory."
+  },
+  {
+   "ot": "Psalm 8:6",
+   "nt": "1 Corinthians 15:27",
+   "votes": 19,
+   "shared": {
+    "words": 4,
+    "text": "everything under his feet"
+   },
+   "formula": {
+    "ref": "1Cor.15.27",
+    "phrase": "…ut everything under His feet.” Now when it says that everything has been put under Him, this clea…"
+   },
+   "score": 3.78,
+   "sameOtAs": [],
+   "otText": "You made him ruler of the works of Your hands; You have placed everything under his feet:",
+   "ntText": "For “God has put everything under His feet.” Now when it says that everything has been put under Him, this clearly does not include the One who put everything under Him."
+  },
+  {
+   "ot": "Psalm 32:1",
+   "nt": "Romans 4:6-8",
+   "votes": 59,
+   "shared": {
+    "words": 6,
+    "text": "are forgiven whose sins are covered"
+   },
+   "formula": null,
+   "score": 3.77,
+   "sameOtAs": [],
+   "otText": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered.",
+   "ntText": "And David speaks likewise of the blessedness of the man to whom God credits righteousness apart from works: “Blessed are they whose lawless acts are forgiven, whose sins are covered. Blessed is the man whose sin the Lord will never count against him.”"
+  },
+  {
+   "ot": "Exodus 20:12",
+   "nt": "Ephesians 6:1-3",
+   "votes": 57,
+   "shared": {
+    "words": 5,
+    "text": "honor your father and mother"
+   },
+   "formula": null,
+   "score": 3.76,
+   "sameOtAs": [],
+   "otText": "Honor your father and mother, so that your days may be long in the land that the LORD your God is giving you.",
+   "ntText": "Children, obey your parents in the Lord, for this is right. “Honor your father and mother” (which is the first commandment with a promise), “that it may go well with you and that you may have a long life on the earth.”"
+  },
+  {
+   "ot": "Psalm 118:22",
+   "nt": "Luke 20:17",
+   "votes": 58,
+   "shared": {
+    "words": 8,
+    "text": "the stone the builders rejected has become the"
+   },
+   "formula": null,
+   "score": 3.76,
+   "sameOtAs": [
+    "p44"
+   ],
+   "otText": "The stone the builders rejected has become the cornerstone.",
+   "ntText": "But Jesus looked directly at them and said, “Then what is the meaning of that which is written: ‘The stone the builders rejected has become the cornerstone’?"
+  },
+  {
+   "ot": "Genesis 15:6",
+   "nt": "Romans 4:9",
+   "votes": 54,
+   "shared": {
+    "words": 6,
+    "text": "was credited to him as righteousness"
+   },
+   "formula": null,
+   "score": 3.73,
+   "sameOtAs": [],
+   "otText": "Abram believed the LORD, and it was credited to him as righteousness.",
+   "ntText": "Is this blessing only on the circumcised, or also on the uncircumcised? We have been saying that Abraham’s faith was credited to him as righteousness."
+  },
+  {
+   "ot": "Psalm 73:28",
+   "nt": "James 4:8",
+   "votes": 17,
+   "shared": {
+    "words": 4,
+    "text": "draw near to god"
+   },
+   "formula": {
+    "ref": "Jas.4.6",
+    "phrase": "But He gives us more grace. This is why it says: “God opposes the proud, but gives grace to the h…"
+   },
+   "score": 3.73,
+   "sameOtAs": [],
+   "otText": "But as for me, it is good to draw near to God. I have made the Lord GOD my refuge, that I may proclaim all Your works.",
+   "ntText": "Draw near to God, and He will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded."
+  },
+  {
+   "ot": "Jeremiah 6:16",
+   "nt": "Matthew 11:29",
+   "votes": 54,
+   "shared": {
+    "words": 8,
+    "text": "and you will find rest for your souls"
+   },
+   "formula": null,
+   "score": 3.73,
+   "sameOtAs": [],
+   "otText": "This is what the LORD says: “Stand at the crossroads and look. Ask for the ancient paths: ‘Where is the good way?’ Then walk in it, and you will find rest for your souls. But they said, ‘We will not walk in it!’",
+   "ntText": "Take My yoke upon you and learn from Me; for I am gentle and humble in heart, and you will find rest for your souls."
+  },
+  {
+   "ot": "Psalm 4:4",
+   "nt": "Ephesians 4:26",
+   "votes": 52,
+   "shared": {
+    "words": 6,
+    "text": "be angry yet do not sin"
+   },
+   "formula": null,
+   "score": 3.72,
+   "sameOtAs": [],
+   "otText": "Be angry, yet do not sin; on your bed, search your heart and be still. Selah",
+   "ntText": "“Be angry, yet do not sin.” Do not let the sun set upon your anger,"
+  },
+  {
+   "ot": "Isaiah 40:6-8",
+   "nt": "1 Peter 1:24",
+   "votes": 52,
+   "shared": {
+    "words": 22,
+    "text": "all flesh is like grass and all its glory like the flowers of the field the grass withers and the flowers fall"
+   },
+   "formula": null,
+   "score": 3.72,
+   "sameOtAs": [],
+   "otText": "A voice says, “Cry out!” And I asked, “What should I cry out?” “All flesh is like grass, and all its glory like the flowers of the field. The grass withers and the flowers fall when the breath of the LORD blows on them; indeed, the people are grass. The grass withers and the flowers fall, but the word of our God stands forever.”",
+   "ntText": "For, “All flesh is like grass, and all its glory like the flowers of the field; the grass withers and the flowers fall,"
+  },
+  {
+   "ot": "Daniel 7:13",
+   "nt": "Revelation 14:14",
+   "votes": 51,
+   "shared": {
+    "words": 6,
+    "text": "one like the son of man"
+   },
+   "formula": null,
+   "score": 3.71,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence.",
+   "ntText": "And I looked and saw a white cloud, and seated on the cloud was One like the Son of Man, with a golden crown on His head and a sharp sickle in His hand."
+  },
+  {
+   "ot": "1 Chronicles 28:9",
+   "nt": "James 4:8-11",
+   "votes": 159,
+   "shared": {
+    "words": 2,
+    "text": "the lord"
+   },
+   "formula": {
+    "ref": "Jas.4.6",
+    "phrase": "But He gives us more grace. This is why it says: “God opposes the proud, but gives grace to the h…"
+   },
+   "score": 3.7,
+   "sameOtAs": [],
+   "otText": "As for you, Solomon my son, know the God of your father and serve Him wholeheartedly and with a willing mind, for the LORD searches every heart and understands the intent of every thought. If you seek Him, He will be found by you; but if you forsake Him, He will reject you forever.",
+   "ntText": "Draw near to God, and He will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded. Grieve, mourn, and weep. Turn your laughter to mourning, and your joy to gloom. Humble yourselves before the Lord, and He will exalt you. Brothers, do not slander one another. Anyone who speaks against his brother or judges him speaks against the law and judges it. And if you judge the law, you are not a practitioner of the law, but a judge of it."
+  },
+  {
+   "ot": "Psalm 2:7",
+   "nt": "Hebrews 5:5",
+   "votes": 50,
+   "shared": {
+    "words": 10,
+    "text": "you are my son today i have become your father"
+   },
+   "formula": null,
+   "score": 3.7,
+   "sameOtAs": [],
+   "otText": "I will proclaim the decree spoken to Me by the LORD: “You are My Son; today I have become Your Father.",
+   "ntText": "So also Christ did not take upon Himself the glory of becoming a high priest, but He was called by the One who said to Him: “You are My Son; today I have become Your Father.”"
+  },
+  {
+   "ot": "Proverbs 3:34",
+   "nt": "1 Peter 5:5",
+   "votes": 50,
+   "shared": {
+    "words": 6,
+    "text": "but gives grace to the humble"
+   },
+   "formula": null,
+   "score": 3.7,
+   "sameOtAs": [],
+   "otText": "He mocks the mockers, but gives grace to the humble.",
+   "ntText": "Young men, in the same way, submit yourselves to your elders. And all of you, clothe yourselves with humility toward one another, because, “God opposes the proud, but gives grace to the humble.”"
+  },
+  {
+   "ot": "Isaiah 6:9",
+   "nt": "Acts 28:26-27",
+   "votes": 50,
+   "shared": {
+    "words": 6,
+    "text": "be ever hearing but never understanding"
+   },
+   "formula": null,
+   "score": 3.7,
+   "sameOtAs": [],
+   "otText": "And He replied: “Go and tell this people, ‘Be ever hearing, but never understanding; be ever seeing, but never perceiving.’",
+   "ntText": "‘Go to this people and say, “You will be ever hearing but never understanding; you will be ever seeing but never perceiving.” For this people’s heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.’"
+  },
+  {
+   "ot": "Deuteronomy 5:16",
+   "nt": "Ephesians 6:3",
+   "votes": 50,
+   "shared": {
+    "words": 7,
+    "text": "that it may go well with you"
+   },
+   "formula": null,
+   "score": 3.7,
+   "sameOtAs": [],
+   "otText": "Honor your father and your mother, as the LORD your God has commanded you, so that your days may be long and that it may go well with you in the land that the LORD your God is giving you.",
+   "ntText": "“that it may go well with you and that you may have a long life on the earth.”"
+  },
+  {
+   "ot": "Isaiah 49:6",
+   "nt": "Acts 13:47",
+   "votes": 49,
+   "shared": {
+    "words": 7,
+    "text": "salvation to the ends of the earth"
+   },
+   "formula": null,
+   "score": 3.69,
+   "sameOtAs": [],
+   "otText": "He says: “It is not enough for You to be My Servant, to raise up the tribes of Jacob, and to restore the protected ones of Israel. I will also make You a light for the nations, to bring My salvation to the ends of the earth.”",
+   "ntText": "For this is what the Lord has commanded us: ‘I have made you a light for the Gentiles, to bring salvation to the ends of the earth.’”"
+  },
+  {
+   "ot": "Isaiah 44:18",
+   "nt": "John 12:39-40",
+   "votes": 151,
+   "shared": {
+    "words": 3,
+    "text": "they cannot see"
+   },
+   "formula": {
+    "ref": "John.12.38",
+    "phrase": "This was to fulfill the word of Isaiah the prophet: “Lord, who has be…"
+   },
+   "score": 3.68,
+   "sameOtAs": [],
+   "otText": "They do not comprehend or discern, for He has shut their eyes so they cannot see and closed their minds so they cannot understand.",
+   "ntText": "For this reason they were unable to believe. For again, Isaiah says: “He has blinded their eyes and hardened their hearts, so that they cannot see with their eyes, and understand with their hearts, and turn, and I would heal them.”"
+  },
+  {
+   "ot": "Genesis 15:6",
+   "nt": "Romans 4:20-23",
+   "votes": 47,
+   "shared": {
+    "words": 7,
+    "text": "it was credited to him as righteousness"
+   },
+   "formula": null,
+   "score": 3.67,
+   "sameOtAs": [],
+   "otText": "Abram believed the LORD, and it was credited to him as righteousness.",
+   "ntText": "Yet he did not waver through disbelief in the promise of God, but was strengthened in his faith and gave glory to God, being fully persuaded that God was able to do what He had promised. This is why “it was credited to him as righteousness.” Now the words “it was credited to him” were written not only for Abraham,"
+  },
+  {
+   "ot": "Psalm 110:1",
+   "nt": "Hebrews 1:13",
+   "votes": 47,
+   "shared": {
+    "words": 15,
+    "text": "sit at my right hand until i make your enemies a footstool for your feet"
+   },
+   "formula": null,
+   "score": 3.67,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "A Psalm of David. The LORD said to my Lord: “Sit at My right hand until I make Your enemies a footstool for Your feet.”",
+   "ntText": "Yet to which of the angels did God ever say: “Sit at My right hand until I make Your enemies a footstool for Your feet”?"
+  },
+  {
+   "ot": "Daniel 7:13",
+   "nt": "Matthew 24:30",
+   "votes": 47,
+   "shared": {
+    "words": 5,
+    "text": "the son of man coming"
+   },
+   "formula": null,
+   "score": 3.67,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence.",
+   "ntText": "At that time the sign of the Son of Man will appear in heaven, and all the tribes of the earth will mourn. They will see the Son of Man coming on the clouds of heaven, with power and great glory."
+  },
+  {
+   "ot": "Habakkuk 2:3",
+   "nt": "Hebrews 10:36-37",
+   "votes": 47,
+   "shared": {
+    "words": 5,
+    "text": "come and will not delay"
+   },
+   "formula": null,
+   "score": 3.67,
+   "sameOtAs": [],
+   "otText": "For the vision awaits an appointed time; it testifies of the end and does not lie. Though it lingers, wait for it, since it will surely come and will not delay.",
+   "ntText": "You need to persevere, so that after you have done the will of God, you will receive what He has promised. For, “In just a little while, He who is coming will come and will not delay."
+  },
+  {
+   "ot": "Deuteronomy 30:14",
+   "nt": "Romans 10:8",
+   "votes": 46,
+   "shared": {
+    "words": 11,
+    "text": "near you it is in your mouth and in your heart"
+   },
+   "formula": null,
+   "score": 3.66,
+   "sameOtAs": [],
+   "otText": "But the word is very near you; it is in your mouth and in your heart, so that you may obey it.",
+   "ntText": "But what does it say? “The word is near you; it is in your mouth and in your heart,” that is, the word of faith we are proclaiming:"
+  },
+  {
+   "ot": "Psalm 22:1",
+   "nt": "Mark 15:34",
+   "votes": 46,
+   "shared": {
+    "words": 9,
+    "text": "my god my god why have you forsaken me"
+   },
+   "formula": null,
+   "score": 3.66,
+   "sameOtAs": [
+    "p36"
+   ],
+   "otText": "For the choirmaster. To the tune of “The Doe of the Dawn.” A Psalm of David. My God, my God, why have You forsaken me? Why are You so far from saving me, so far from my words of groaning?",
+   "ntText": "At the ninth hour, Jesus cried out in a loud voice, “Eloi, Eloi, lema sabachthani?” which means, “My God, My God, why have You forsaken Me?”"
+  },
+  {
+   "ot": "Proverbs 20:22",
+   "nt": "Romans 12:17-19",
+   "votes": 144,
+   "shared": {
+    "words": 2,
+    "text": "do not"
+   },
+   "formula": {
+    "ref": "Rom.12.19",
+    "phrase": "…ed, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.…"
+   },
+   "score": 3.66,
+   "sameOtAs": [],
+   "otText": "Do not say, “I will avenge this evil!” Wait on the LORD, and He will save you.",
+   "ntText": "Do not repay anyone evil for evil. Carefully consider what is right in the eyes of everybody. If it is possible on your part, live at peace with everyone. Do not avenge yourselves, beloved, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.”"
+  },
+  {
+   "ot": "Psalm 89:27",
+   "nt": "Revelation 1:5",
+   "votes": 46,
+   "shared": {
+    "words": 6,
+    "text": "of the kings of the earth"
+   },
+   "formula": null,
+   "score": 3.66,
+   "sameOtAs": [],
+   "otText": "I will indeed appoint him as My firstborn, the highest of the kings of the earth.",
+   "ntText": "and from Jesus Christ, the faithful witness, the firstborn from the dead, and the ruler of the kings of the earth. To Him who loves us and has released us from our sins by His blood,"
+  },
+  {
+   "ot": "Deuteronomy 6:5",
+   "nt": "Mark 12:33",
+   "votes": 45,
+   "shared": {
+    "words": 8,
+    "text": "with all your heart and with all your"
+   },
+   "formula": null,
+   "score": 3.65,
+   "sameOtAs": [
+    "p76"
+   ],
+   "otText": "And you shall love the LORD your God with all your heart and with all your soul and with all your strength.",
+   "ntText": "and to love Him with all your heart and with all your understanding and with all your strength, and to love your neighbor as yourself, which is more important than all burnt offerings and sacrifices.”"
+  },
+  {
+   "ot": "Ezekiel 12:2",
+   "nt": "Romans 11:8",
+   "votes": 14,
+   "shared": {
+    "words": 4,
+    "text": "not see and ears"
+   },
+   "formula": {
+    "ref": "Rom.11.8",
+    "phrase": "as it is written: “God gave them a spirit of stupor, eyes that cou…"
+   },
+   "score": 3.65,
+   "sameOtAs": [],
+   "otText": "“Son of man, you are living in a rebellious house. They have eyes to see but do not see, and ears to hear but do not hear, for they are a rebellious house.",
+   "ntText": "as it is written: “God gave them a spirit of stupor, eyes that could not see, and ears that could not hear, to this very day.”"
+  },
+  {
+   "ot": "Psalm 34:14",
+   "nt": "1 Peter 3:11",
+   "votes": 44,
+   "shared": {
+    "words": 5,
+    "text": "from evil and do good"
+   },
+   "formula": null,
+   "score": 3.64,
+   "sameOtAs": [
+    "p77"
+   ],
+   "otText": "Turn away from evil and do good; seek peace and pursue it.",
+   "ntText": "He must turn from evil and do good; he must seek peace and pursue it."
+  },
+  {
+   "ot": "Psalm 118:22",
+   "nt": "Mark 12:10-11",
+   "votes": 44,
+   "shared": {
+    "words": 9,
+    "text": "the stone the builders rejected has become the cornerstone"
+   },
+   "formula": null,
+   "score": 3.64,
+   "sameOtAs": [
+    "p44"
+   ],
+   "otText": "The stone the builders rejected has become the cornerstone.",
+   "ntText": "Have you never read this Scripture: ‘The stone the builders rejected has become the cornerstone. This is from the Lord, and it is marvelous in our eyes’?”"
+  },
+  {
+   "ot": "Isaiah 43:25",
+   "nt": "Acts 3:19",
+   "votes": 138,
+   "shared": {
+    "words": 2,
+    "text": "your sins"
+   },
+   "formula": {
+    "ref": "Acts.3.18",
+    "phrase": "But in this way God has fulfilled what He foretold through all the prophets, saying that…"
+   },
+   "score": 3.64,
+   "sameOtAs": [],
+   "otText": "I, yes I, am He who blots out your transgressions for My own sake and remembers your sins no more.",
+   "ntText": "Repent, then, and turn back, so that your sins may be wiped away,"
+  },
+  {
+   "ot": "Jeremiah 9:24",
+   "nt": "2 Corinthians 10:17",
+   "votes": 44,
+   "shared": {
+    "words": 6,
+    "text": "let him who boasts boast in"
+   },
+   "formula": null,
+   "score": 3.64,
+   "sameOtAs": [],
+   "otText": "But let him who boasts boast in this, that he understands and knows Me, that I am the LORD, who exercises loving devotion, justice and righteousness on the earth— for I delight in these things,” declares the LORD.",
+   "ntText": "Rather, “Let him who boasts boast in the Lord.”"
+  },
+  {
+   "ot": "Proverbs 11:31",
+   "nt": "1 Peter 4:18",
+   "votes": 44,
+   "shared": {
+    "words": 5,
+    "text": "the ungodly and the sinner"
+   },
+   "formula": null,
+   "score": 3.64,
+   "sameOtAs": [],
+   "otText": "If the righteous receive their due on earth, how much more the ungodly and the sinner!",
+   "ntText": "And, “If it is hard for the righteous to be saved, what will become of the ungodly and the sinner?”"
+  },
+  {
+   "ot": "Hosea 6:6",
+   "nt": "Matthew 12:7",
+   "votes": 43,
+   "shared": {
+    "words": 5,
+    "text": "i desire mercy not sacrifice"
+   },
+   "formula": null,
+   "score": 3.63,
+   "sameOtAs": [],
+   "otText": "For I desire mercy, not sacrifice, and the knowledge of God rather than burnt offerings.",
+   "ntText": "If only you had known the meaning of ‘I desire mercy, not sacrifice,’ you would not have condemned the innocent."
+  },
+  {
+   "ot": "Psalm 32:1-2",
+   "nt": "Romans 4:7",
+   "votes": 43,
+   "shared": {
+    "words": 6,
+    "text": "are forgiven whose sins are covered"
+   },
+   "formula": null,
+   "score": 3.63,
+   "sameOtAs": [],
+   "otText": "Of David. A Maskil. Blessed is he whose transgressions are forgiven, whose sins are covered. Blessed is the man whose iniquity the LORD does not count against him, in whose spirit there is no deceit.",
+   "ntText": "“Blessed are they whose lawless acts are forgiven, whose sins are covered."
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "Romans 13:9",
+   "votes": 42,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.62,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "The commandments “Do not commit adultery,” “Do not murder,” “Do not steal,” “Do not covet,” and any other commandments, are summed up in this one decree: “Love your neighbor as yourself.”"
+  },
+  {
+   "ot": "Isaiah 61:1-2",
+   "nt": "2 Corinthians 3:17",
+   "votes": 42,
+   "shared": {
+    "words": 5,
+    "text": "the spirit of the lord"
+   },
+   "formula": null,
+   "score": 3.62,
+   "sameOtAs": [
+    "p17"
+   ],
+   "otText": "The Spirit of the Lord GOD is on Me, because the LORD has anointed Me to preach good news to the poor. He has sent Me to bind up the brokenhearted, to proclaim liberty to the captives and freedom to the prisoners, to proclaim the year of the LORD’s favor and the day of our God’s vengeance, to comfort all who mourn,",
+   "ntText": "Now the Lord is the Spirit, and where the Spirit of the Lord is, there is freedom."
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "Matthew 22:39",
+   "votes": 41,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.61,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "And the second is like it: ‘Love your neighbor as yourself.’"
+  },
+  {
+   "ot": "Isaiah 54:13",
+   "nt": "John 6:45",
+   "votes": 128,
+   "shared": {
+    "words": 3,
+    "text": "be taught by"
+   },
+   "formula": {
+    "ref": "John.6.45",
+    "phrase": "It is written in the Prophets: ‘And they will all be taught by…"
+   },
+   "score": 3.61,
+   "sameOtAs": [],
+   "otText": "Then all your sons will be taught by the LORD, and great will be their prosperity.",
+   "ntText": "It is written in the Prophets: ‘And they will all be taught by God.’ Everyone who has heard the Father and learned from Him comes to Me—"
+  },
+  {
+   "ot": "Deuteronomy 19:15",
+   "nt": "John 8:17",
+   "votes": 13,
+   "shared": {
+    "words": 4,
+    "text": "the testimony of two"
+   },
+   "formula": {
+    "ref": "John.8.17",
+    "phrase": "Even in your own Law it is written that the testimony of two men is valid."
+   },
+   "score": 3.61,
+   "sameOtAs": [],
+   "otText": "A lone witness is not sufficient to establish any wrongdoing or sin against a man, regardless of what offense he may have committed. A matter must be established by the testimony of two or three witnesses.",
+   "ntText": "Even in your own Law it is written that the testimony of two men is valid."
+  },
+  {
+   "ot": "Psalm 40:6-8",
+   "nt": "Hebrews 10:5",
+   "votes": 40,
+   "shared": {
+    "words": 8,
+    "text": "sacrifice and offering you did not desire but"
+   },
+   "formula": null,
+   "score": 3.6,
+   "sameOtAs": [],
+   "otText": "Sacrifice and offering You did not desire, but my ears You have opened. Burnt offerings and sin offerings You did not require. Then I said, “Here I am, I have come— it is written about me in the scroll: I delight to do Your will, O my God; Your law is within my heart.”",
+   "ntText": "Therefore, when Christ came into the world, He said: “Sacrifice and offering You did not desire, but a body You prepared for Me."
+  },
+  {
+   "ot": "Daniel 7:13",
+   "nt": "Mark 14:61-62",
+   "votes": 40,
+   "shared": {
+    "words": 6,
+    "text": "coming with the clouds of heaven"
+   },
+   "formula": null,
+   "score": 3.6,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence.",
+   "ntText": "But Jesus remained silent and made no reply. Again the high priest questioned Him, “Are You the Christ, the Son of the Blessed One?” “I am,” said Jesus, “and you will see the Son of Man sitting at the right hand of Power and coming with the clouds of heaven.”"
+  },
+  {
+   "ot": "Psalm 8:4",
+   "nt": "Hebrews 2:6-9",
+   "votes": 39,
+   "shared": {
+    "words": 19,
+    "text": "what is man that you are mindful of him or the son of man that you care for him"
+   },
+   "formula": null,
+   "score": 3.59,
+   "sameOtAs": [],
+   "otText": "what is man that You are mindful of him, or the son of man that You care for him?",
+   "ntText": "But somewhere it is testified in these words: “What is man that You are mindful of him, or the son of man that You care for him? You made him a little lower than the angels; You crowned him with glory and honor and placed everything under his feet.” When God subjected all things to him, He left nothing outside of his control. Yet at present we do not see everything subject to him. But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone."
+  },
+  {
+   "ot": "Proverbs 29:23",
+   "nt": "James 4:6-9",
+   "votes": 122,
+   "shared": {
+    "words": 1,
+    "text": "will"
+   },
+   "formula": {
+    "ref": "Jas.4.5",
+    "phrase": "Or do you think the Scripture says without reason that the Spirit He caused to dwell…"
+   },
+   "score": 3.59,
+   "sameOtAs": [],
+   "otText": "A man’s pride will bring him low, but a humble spirit will obtain honor.",
+   "ntText": "But He gives us more grace. This is why it says: “God opposes the proud, but gives grace to the humble.” Submit yourselves, then, to God. Resist the devil, and he will flee from you. Draw near to God, and He will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded. Grieve, mourn, and weep. Turn your laughter to mourning, and your joy to gloom."
+  },
+  {
+   "ot": "1 Samuel 2:26",
+   "nt": "Luke 2:52",
+   "votes": 38,
+   "shared": {
+    "words": 5,
+    "text": "stature and in favor with"
+   },
+   "formula": null,
+   "score": 3.58,
+   "sameOtAs": [],
+   "otText": "And the boy Samuel continued to grow in stature and in favor with the LORD and with man.",
+   "ntText": "And Jesus grew in wisdom and stature, and in favor with God and man."
+  },
+  {
+   "ot": "Psalm 32:2",
+   "nt": "John 1:47",
+   "votes": 12,
+   "shared": {
+    "words": 4,
+    "text": "there is no deceit"
+   },
+   "formula": {
+    "ref": "John.1.45",
+    "phrase": "…el and told him, “We have found the One Moses wrote about in the Law, the One the prophets foretold—J…"
+   },
+   "score": 3.58,
+   "sameOtAs": [],
+   "otText": "Blessed is the man whose iniquity the LORD does not count against him, in whose spirit there is no deceit.",
+   "ntText": "When Jesus saw Nathanael approaching, He said of him, “Here is a true Israelite, in whom there is no deceit.”"
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "Mark 12:31-34",
+   "votes": 37,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.57,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "The second is this: ‘Love your neighbor as yourself.’ No other commandment is greater than these.” “Right, Teacher,” the scribe replied. “You have stated correctly that God is One and there is no other but Him, and to love Him with all your heart and with all your understanding and with all your strength, and to love your neighbor as yourself, which is more important than all burnt offerings and sacrifices.” When Jesus saw that the man had answered wisely, He said, “You are not far from the kingdom of God.” And no one dared to question Him any further."
+  },
+  {
+   "ot": "Daniel 7:13-14",
+   "nt": "Mark 14:62",
+   "votes": 37,
+   "shared": {
+    "words": 6,
+    "text": "coming with the clouds of heaven"
+   },
+   "formula": null,
+   "score": 3.57,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence. And He was given dominion, glory, and kingship, that the people of every nation and language should serve Him. His dominion is an everlasting dominion that will not pass away, and His kingdom is one that will never be destroyed.",
+   "ntText": "“I am,” said Jesus, “and you will see the Son of Man sitting at the right hand of Power and coming with the clouds of heaven.”"
+  },
+  {
+   "ot": "Genesis 2:21-24",
+   "nt": "Matthew 19:5",
+   "votes": 36,
+   "shared": {
+    "words": 18,
+    "text": "for this reason a man will leave his father and mother and be united to his wife and"
+   },
+   "formula": null,
+   "score": 3.56,
+   "sameOtAs": [],
+   "otText": "So the LORD God caused the man to fall into a deep sleep, and while he slept, He took one of the man’s ribs and closed up the area with flesh. And from the rib that the LORD God had taken from the man, He made a woman and brought her to him. And the man said: “This is now bone of my bones and flesh of my flesh; she shall be called ‘woman,’ for out of man she was taken.” For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
+   "ntText": "and said, ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh’?"
+  },
+  {
+   "ot": "Isaiah 60:14",
+   "nt": "Hebrews 12:22",
+   "votes": 11,
+   "shared": {
+    "words": 4,
+    "text": "the city of the"
+   },
+   "formula": {
+    "ref": "Heb.12.21",
+    "phrase": "The sight was so terrifying that even Moses said, “I am trembling with fear.”"
+   },
+   "score": 3.54,
+   "sameOtAs": [],
+   "otText": "The sons of your oppressors will come and bow down to you; all who reviled you will fall facedown at your feet and call you the City of the LORD, Zion of the Holy One of Israel.",
+   "ntText": "Instead, you have come to Mount Zion, to the city of the living God, the heavenly Jerusalem. You have come to myriads of angels"
+  },
+  {
+   "ot": "Psalm 2:1",
+   "nt": "Acts 4:25-26",
+   "votes": 34,
+   "shared": {
+    "words": 11,
+    "text": "why do the nations rage and the peoples plot in vain"
+   },
+   "formula": null,
+   "score": 3.53,
+   "sameOtAs": [],
+   "otText": "Why do the nations rage and the peoples plot in vain?",
+   "ntText": "You spoke by the Holy Spirit through the mouth of Your servant, our father David: ‘Why do the nations rage and the peoples plot in vain? The kings of the earth take their stand and the rulers gather together against the Lord and against His Anointed One.’"
+  },
+  {
+   "ot": "Isaiah 7:14",
+   "nt": "Luke 1:31",
+   "votes": 34,
+   "shared": {
+    "words": 6,
+    "text": "give birth to a son and"
+   },
+   "formula": null,
+   "score": 3.53,
+   "sameOtAs": [
+    "p8"
+   ],
+   "otText": "Therefore the Lord Himself will give you a sign: Behold, the virgin will be with child and will give birth to a son, and will call Him Immanuel.",
+   "ntText": "Behold, you will conceive and give birth to a son, and you are to give Him the name Jesus."
+  },
+  {
+   "ot": "Psalm 41:9",
+   "nt": "Acts 1:16",
+   "votes": 108,
+   "shared": {
+    "words": 1,
+    "text": "the"
+   },
+   "formula": {
+    "ref": "Acts.1.16",
+    "phrase": "“Brothers, the Scripture had to be fulfilled which the Holy Spirit foretol…"
+   },
+   "score": 3.53,
+   "sameOtAs": [
+    "p28"
+   ],
+   "otText": "Even my close friend whom I trusted, the one who shared my bread, has lifted up his heel against me.",
+   "ntText": "“Brothers, the Scripture had to be fulfilled which the Holy Spirit foretold through the mouth of David concerning Judas, who became a guide for those who arrested Jesus."
+  },
+  {
+   "ot": "Deuteronomy 32:35-36",
+   "nt": "Hebrews 10:30",
+   "votes": 32,
+   "shared": {
+    "words": 6,
+    "text": "vengeance is mine i will repay"
+   },
+   "formula": null,
+   "score": 3.51,
+   "sameOtAs": [],
+   "otText": "Vengeance is Mine; I will repay. In due time their foot will slip; for their day of disaster is near, and their doom is coming quickly.” For the LORD will vindicate His people and have compassion on His servants when He sees that their strength is gone and no one remains, slave or free.",
+   "ntText": "For we know Him who said, “Vengeance is Mine; I will repay,” and again, “The Lord will judge His people.”"
+  },
+  {
+   "ot": "Psalm 8:5",
+   "nt": "Hebrews 2:7",
+   "votes": 31,
+   "shared": {
+    "words": 16,
+    "text": "you made him a little lower than the angels you crowned him with glory and honor"
+   },
+   "formula": null,
+   "score": 3.49,
+   "sameOtAs": [],
+   "otText": "You made him a little lower than the angels; You crowned him with glory and honor.",
+   "ntText": "You made him a little lower than the angels; You crowned him with glory and honor"
+  },
+  {
+   "ot": "Isaiah 6:2-5",
+   "nt": "Revelation 4:8",
+   "votes": 31,
+   "shared": {
+    "words": 6,
+    "text": "holy holy holy is the lord"
+   },
+   "formula": null,
+   "score": 3.49,
+   "sameOtAs": [],
+   "otText": "Above Him stood seraphim, each having six wings: With two wings they covered their faces, with two they covered their feet, and with two they were flying. And they were calling out to one another: “Holy, holy, holy is the LORD of Hosts; all the earth is full of His glory.” At the sound of their voices the doorposts and thresholds shook, and the temple was filled with smoke. Then I said: “Woe is me, for I am ruined, because I am a man of unclean lips dwelling among a people of unclean lips; for my eyes have seen the King, the LORD of Hosts.”",
+   "ntText": "And each of the four living creatures had six wings and was covered with eyes all around and within. Day and night they never stop saying: “Holy, Holy, Holy, is the Lord God Almighty, who was and is and is to come!”"
+  },
+  {
+   "ot": "Ezekiel 1:24",
+   "nt": "Revelation 1:15",
+   "votes": 31,
+   "shared": {
+    "words": 6,
+    "text": "like the roar of many waters"
+   },
+   "formula": null,
+   "score": 3.49,
+   "sameOtAs": [],
+   "otText": "When the creatures moved, I heard the sound of their wings like the roar of many waters, like the voice of the Almighty, like the tumult of an army. When they stood still, they lowered their wings.",
+   "ntText": "His feet were like polished bronze refined in a furnace, and His voice was like the roar of many waters."
+  },
+  {
+   "ot": "Daniel 7:13",
+   "nt": "Mark 13:26",
+   "votes": 31,
+   "shared": {
+    "words": 5,
+    "text": "the son of man coming"
+   },
+   "formula": null,
+   "score": 3.49,
+   "sameOtAs": [
+    "p47"
+   ],
+   "otText": "In my vision in the night I continued to watch, and I saw One like the Son of Man coming with the clouds of heaven. He approached the Ancient of Days and was led into His presence.",
+   "ntText": "At that time they will see the Son of Man coming in the clouds with great power and glory."
+  },
+  {
+   "ot": "Exodus 2:2",
+   "nt": "Hebrews 11:23",
+   "votes": 30,
+   "shared": {
+    "words": 7,
+    "text": "saw that he was a beautiful child"
+   },
+   "formula": null,
+   "score": 3.48,
+   "sameOtAs": [],
+   "otText": "and she conceived and gave birth to a son. When she saw that he was a beautiful child, she hid him for three months.",
+   "ntText": "By faith Moses’ parents hid him for three months after his birth, because they saw that he was a beautiful child, and they were unafraid of the king’s edict."
+  },
+  {
+   "ot": "Deuteronomy 18:15",
+   "nt": "Acts 7:37",
+   "votes": 30,
+   "shared": {
+    "words": 14,
+    "text": "god will raise up for you a prophet like me from among your brothers"
+   },
+   "formula": null,
+   "score": 3.48,
+   "sameOtAs": [
+    "p18"
+   ],
+   "otText": "The LORD your God will raise up for you a prophet like me from among your brothers. You must listen to him.",
+   "ntText": "This is the same Moses who told the Israelites, ‘God will raise up for you a prophet like me from among your brothers.’"
+  },
+  {
+   "ot": "Isaiah 6:10",
+   "nt": "Matthew 13:15",
+   "votes": 30,
+   "shared": {
+    "words": 20,
+    "text": "their eyes otherwise they might see with their eyes hear with their ears understand with their hearts and turn and"
+   },
+   "formula": null,
+   "score": 3.48,
+   "sameOtAs": [],
+   "otText": "Make the hearts of this people calloused; deafen their ears and close their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn and be healed.”",
+   "ntText": "For this people’s heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.’"
+  },
+  {
+   "ot": "1 Chronicles 29:11",
+   "nt": "Revelation 5:12-13",
+   "votes": 29,
+   "shared": {
+    "words": 5,
+    "text": "in heaven and on earth"
+   },
+   "formula": null,
+   "score": 3.46,
+   "sameOtAs": [],
+   "otText": "Yours, O LORD, is the greatness and the power and the glory and the splendor and the majesty, for everything in heaven and on earth belongs to You. Yours, O LORD, is the kingdom, and You are exalted as head over all.",
+   "ntText": "In a loud voice they were saying: “Worthy is the Lamb, who was slain, to receive power and riches and wisdom and strength and honor and glory and blessing!” And I heard every creature in heaven and on earth and under the earth and in the sea, and all that is in them, saying: “To Him who sits on the throne and to the Lamb be praise and honor and glory and power forever and ever!”"
+  },
+  {
+   "ot": "Exodus 20:11",
+   "nt": "Acts 4:24",
+   "votes": 28,
+   "shared": {
+    "words": 7,
+    "text": "and the earth and the sea and"
+   },
+   "formula": null,
+   "score": 3.45,
+   "sameOtAs": [],
+   "otText": "For in six days the LORD made the heavens and the earth and the sea and all that is in them, but on the seventh day He rested. Therefore the LORD blessed the Sabbath day and set it apart as holy.",
+   "ntText": "When the believers heard this, they lifted up their voices to God with one accord. “Sovereign Lord,” they said, “You made the heaven and the earth and the sea and everything in them."
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "Galatians 5:14",
+   "votes": 27,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.43,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "The entire law is fulfilled in a single decree: “Love your neighbor as yourself.”"
+  },
+  {
+   "ot": "Proverbs 26:11",
+   "nt": "2 Peter 2:22",
+   "votes": 27,
+   "shared": {
+    "words": 6,
+    "text": "a dog returns to its vomit"
+   },
+   "formula": null,
+   "score": 3.43,
+   "sameOtAs": [],
+   "otText": "As a dog returns to its vomit, so a fool repeats his folly.",
+   "ntText": "Of them the proverbs are true: “A dog returns to its vomit,” and, “A sow that is washed goes back to her wallowing in the mud.”"
+  },
+  {
+   "ot": "Isaiah 8:14",
+   "nt": "1 Peter 2:8",
+   "votes": 27,
+   "shared": {
+    "words": 9,
+    "text": "a stone of stumbling and a rock of offense"
+   },
+   "formula": null,
+   "score": 3.43,
+   "sameOtAs": [],
+   "otText": "And He will be a sanctuary— but to both houses of Israel a stone of stumbling and a rock of offense, to the dwellers of Jerusalem a trap and a snare.",
+   "ntText": "and, “A stone of stumbling and a rock of offense.” They stumble because they disobey the word—and to this they were appointed."
+  },
+  {
+   "ot": "Genesis 12:1",
+   "nt": "Acts 7:2-5",
+   "votes": 26,
+   "shared": {
+    "words": 9,
+    "text": "and go to the land i will show you"
+   },
+   "formula": null,
+   "score": 3.41,
+   "sameOtAs": [],
+   "otText": "Then the LORD said to Abram, “Leave your country, your kindred, and your father’s household, and go to the land I will show you.",
+   "ntText": "And Stephen declared: “Brothers and fathers, listen to me! The God of glory appeared to our father Abraham while he was still in Mesopotamia, before he lived in Haran, and told him, ‘Leave your country and your kindred and go to the land I will show you.’ So Abraham left the land of the Chaldeans and settled in Haran. After his father died, God brought him out of that place and into this land where you are now living. He gave him no inheritance here, not even a foot of ground. But God promised to give possession of the land to Abraham and his descendants, even though he did not yet have a child."
+  },
+  {
+   "ot": "Psalm 8:5",
+   "nt": "Hebrews 2:9",
+   "votes": 26,
+   "shared": {
+    "words": 6,
+    "text": "a little lower than the angels"
+   },
+   "formula": null,
+   "score": 3.41,
+   "sameOtAs": [],
+   "otText": "You made him a little lower than the angels; You crowned him with glory and honor.",
+   "ntText": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone."
+  },
+  {
+   "ot": "Isaiah 53:12",
+   "nt": "Luke 22:37",
+   "votes": 26,
+   "shared": {
+    "words": 7,
+    "text": "and he was numbered with the transgressors"
+   },
+   "formula": null,
+   "score": 3.41,
+   "sameOtAs": [
+    "p35"
+   ],
+   "otText": "Therefore I will allot Him a portion with the great, and He will divide the spoils with the strong, because He has poured out His life unto death, and He was numbered with the transgressors. Yet He bore the sin of many and made intercession for the transgressors.",
+   "ntText": "For I tell you that this Scripture must be fulfilled in Me: ‘And He was numbered with the transgressors.’ For what is written about Me is reaching its fulfillment.”"
+  },
+  {
+   "ot": "Micah 7:6",
+   "nt": "Matthew 10:35-36",
+   "votes": 26,
+   "shared": {
+    "words": 12,
+    "text": "a daughter in law against her mother in law a man's enemies"
+   },
+   "formula": null,
+   "score": 3.41,
+   "sameOtAs": [],
+   "otText": "For a son dishonors his father, a daughter rises against her mother, and a daughter-in-law against her mother-in-law. A man’s enemies are the members of his own household.",
+   "ntText": "For I have come to turn ‘a man against his father, a daughter against her mother, a daughter-in-law against her mother-in-law. A man’s enemies will be the members of his own household.’"
+  },
+  {
+   "ot": "Exodus 33:14",
+   "nt": "Matthew 11:28",
+   "votes": 25,
+   "shared": {
+    "words": 6,
+    "text": "and i will give you rest"
+   },
+   "formula": null,
+   "score": 3.4,
+   "sameOtAs": [],
+   "otText": "And the LORD answered, “My Presence will go with you, and I will give you rest.”",
+   "ntText": "Come to Me, all you who are weary and burdened, and I will give you rest."
+  },
+  {
+   "ot": "Psalm 22:27",
+   "nt": "Acts 1:8",
+   "votes": 25,
+   "shared": {
+    "words": 5,
+    "text": "the ends of the earth"
+   },
+   "formula": null,
+   "score": 3.4,
+   "sameOtAs": [],
+   "otText": "All the ends of the earth will remember and turn to the LORD. All the families of the nations will bow down before Him.",
+   "ntText": "But you will receive power when the Holy Spirit comes upon you, and you will be My witnesses in Jerusalem, and in all Judea and Samaria, and to the ends of the earth.”"
+  },
+  {
+   "ot": "Deuteronomy 30:11-14",
+   "nt": "Romans 10:6",
+   "votes": 25,
+   "shared": {
+    "words": 5,
+    "text": "who will ascend into heaven"
+   },
+   "formula": null,
+   "score": 3.4,
+   "sameOtAs": [],
+   "otText": "For this commandment I give you today is not too difficult for you or beyond your reach. It is not in heaven, that you should need to ask, ‘Who will ascend into heaven to get it for us and proclaim it, that we may obey it?’ And it is not beyond the sea, that you should need to ask, ‘Who will cross the sea to get it for us and proclaim it, that we may obey it?’ But the word is very near you; it is in your mouth and in your heart, so that you may obey it.",
+   "ntText": "But the righteousness that is by faith says: “Do not say in your heart, ‘Who will ascend into heaven?’ (that is, to bring Christ down)"
+  },
+  {
+   "ot": "Psalm 144:3",
+   "nt": "Hebrews 2:6",
+   "votes": 25,
+   "shared": {
+    "words": 6,
+    "text": "the son of man that you"
+   },
+   "formula": null,
+   "score": 3.4,
+   "sameOtAs": [],
+   "otText": "O LORD, what is man, that You regard him, the son of man that You think of him?",
+   "ntText": "But somewhere it is testified in these words: “What is man that You are mindful of him, or the son of man that You care for him?"
+  },
+  {
+   "ot": "Proverbs 3:12",
+   "nt": "Hebrews 12:6",
+   "votes": 25,
+   "shared": {
+    "words": 8,
+    "text": "for the lord disciplines the one he loves"
+   },
+   "formula": null,
+   "score": 3.4,
+   "sameOtAs": [],
+   "otText": "for the LORD disciplines the one He loves, as does a father the son in whom he delights.",
+   "ntText": "For the Lord disciplines the one He loves, and He chastises every son He receives.”"
+  },
+  {
+   "ot": "Isaiah 55:11",
+   "nt": "Romans 10:17",
+   "votes": 77,
+   "shared": {
+    "words": 1,
+    "text": "word"
+   },
+   "formula": {
+    "ref": "Rom.10.15",
+    "phrase": "…w can they preach unless they are sent? As it is written: “How beautiful are the feet of those who bring g…"
+   },
+   "score": 3.39,
+   "sameOtAs": [],
+   "otText": "so My word that proceeds from My mouth will not return to Me empty, but it will accomplish what I please, and it will prosper where I send it.",
+   "ntText": "Consequently, faith comes by hearing, and hearing by the word of Christ."
+  },
+  {
+   "ot": "Psalm 5:9",
+   "nt": "Romans 3:13",
+   "votes": 24,
+   "shared": {
+    "words": 9,
+    "text": "their throats are open graves their tongues practice deceit"
+   },
+   "formula": null,
+   "score": 3.38,
+   "sameOtAs": [],
+   "otText": "For not a word they speak can be trusted; destruction lies within them. Their throats are open graves; their tongues practice deceit.",
+   "ntText": "“Their throats are open graves; their tongues practice deceit.” “The venom of vipers is on their lips.”"
+  },
+  {
+   "ot": "Proverbs 16:3",
+   "nt": "Luke 12:22",
+   "votes": 75,
+   "shared": {
+    "words": 1,
+    "text": "your"
+   },
+   "formula": {
+    "ref": "Luke.12.20",
+    "phrase": "But God said to him, ‘You fool! This very night your life will…"
+   },
+   "score": 3.38,
+   "sameOtAs": [],
+   "otText": "Commit your works to the LORD and your plans will be achieved.",
+   "ntText": "Then Jesus said to His disciples, “Therefore I tell you, do not worry about your life, what you will eat, or about your body, what you will wear."
+  },
+  {
+   "ot": "Jeremiah 33:3",
+   "nt": "1 Corinthians 2:7-10",
+   "votes": 76,
+   "shared": {
+    "words": 1,
+    "text": "to"
+   },
+   "formula": {
+    "ref": "1Cor.2.9",
+    "phrase": "Rather, as it is written: “No eye has seen, no ear has heard, no heart has…"
+   },
+   "score": 3.38,
+   "sameOtAs": [],
+   "otText": "Call to Me, and I will answer and show you great and unsearchable things you do not know.",
+   "ntText": "No, we speak of the mysterious and hidden wisdom of God, which He destined for our glory before time began. None of the rulers of this age understood it. For if they had, they would not have crucified the Lord of glory. Rather, as it is written: “No eye has seen, no ear has heard, no heart has imagined, what God has prepared for those who love Him.” But God has revealed it to us by the Spirit. The Spirit searches all things, even the deep things of God."
+  },
+  {
+   "ot": "Isaiah 29:16",
+   "nt": "Romans 9:20",
+   "votes": 24,
+   "shared": {
+    "words": 10,
+    "text": "shall what is formed say to him who formed it"
+   },
+   "formula": null,
+   "score": 3.38,
+   "sameOtAs": [],
+   "otText": "You have turned things upside down, as if the potter were regarded as clay. Shall what is formed say to him who formed it, “He did not make me”? Can the pottery say of the potter, “He has no understanding”?",
+   "ntText": "But who are you, O man, to talk back to God? Shall what is formed say to Him who formed it, “Why did You make me like this?”"
+  },
+  {
+   "ot": "Leviticus 18:5",
+   "nt": "Romans 10:5",
+   "votes": 24,
+   "shared": {
+    "words": 10,
+    "text": "the man who does these things will live by them"
+   },
+   "formula": null,
+   "score": 3.38,
+   "sameOtAs": [],
+   "otText": "Keep My statutes and My judgments, for the man who does these things will live by them. I am the LORD.",
+   "ntText": "For concerning the righteousness that is by the law, Moses writes: “The man who does these things will live by them.”"
+  },
+  {
+   "ot": "Deuteronomy 7:9",
+   "nt": "Romans 8:28",
+   "votes": 23,
+   "shared": {
+    "words": 5,
+    "text": "of those who love him"
+   },
+   "formula": null,
+   "score": 3.36,
+   "sameOtAs": [],
+   "otText": "Know therefore that the LORD your God is God, the faithful God who keeps His covenant of loving devotion for a thousand generations of those who love Him and keep His commandments.",
+   "ntText": "And we know that God works all things together for the good of those who love Him, who are called according to His purpose."
+  },
+  {
+   "ot": "Psalm 2:2",
+   "nt": "Acts 4:26",
+   "votes": 23,
+   "shared": {
+    "words": 21,
+    "text": "the kings of the earth take their stand and the rulers gather together against the lord and against his anointed one"
+   },
+   "formula": null,
+   "score": 3.36,
+   "sameOtAs": [],
+   "otText": "The kings of the earth take their stand and the rulers gather together, against the LORD and against His Anointed One:",
+   "ntText": "The kings of the earth take their stand and the rulers gather together against the Lord and against His Anointed One.’"
+  },
+  {
+   "ot": "Deuteronomy 27:26",
+   "nt": "Galatians 3:10",
+   "votes": 70,
+   "shared": {
+    "words": 3,
+    "text": "who does not"
+   },
+   "formula": {
+    "ref": "Gal.3.8",
+    "phrase": "The Scripture foresaw that God would justify the Gentiles by fa…"
+   },
+   "score": 3.35,
+   "sameOtAs": [],
+   "otText": "‘Cursed is he who does not put the words of this law into practice.’ And let all the people say, ‘Amen!’",
+   "ntText": "All who rely on works of the law are under a curse. For it is written: “Cursed is everyone who does not continue to do everything written in the Book of the Law.”"
+  },
+  {
+   "ot": "Genesis 5:24",
+   "nt": "Hebrews 11:5-6",
+   "votes": 22,
+   "shared": {
+    "words": 6,
+    "text": "because god had taken him away"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [],
+   "otText": "Enoch walked with God, and then he was no more, because God had taken him away.",
+   "ntText": "By faith Enoch was taken up so that he did not see death: “He could not be found, because God had taken him away.” For before he was taken, he was commended as one who pleased God. And without faith it is impossible to please God, because anyone who approaches Him must believe that He exists and that He rewards those who earnestly seek Him."
+  },
+  {
+   "ot": "Deuteronomy 4:24",
+   "nt": "Hebrews 12:29",
+   "votes": 22,
+   "shared": {
+    "words": 5,
+    "text": "god is a consuming fire"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [],
+   "otText": "For the LORD your God is a consuming fire, a jealous God.",
+   "ntText": "“For our God is a consuming fire.”"
+  },
+  {
+   "ot": "Judges 6:12",
+   "nt": "Luke 1:28",
+   "votes": 22,
+   "shared": {
+    "words": 5,
+    "text": "the lord is with you"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [
+    "p61"
+   ],
+   "otText": "And the angel of the LORD appeared to Gideon and said, “The LORD is with you, O mighty man of valor.”",
+   "ntText": "The angel appeared to her and said, “Greetings, you who are highly favored! The Lord is with you.”"
+  },
+  {
+   "ot": "Psalm 40:7",
+   "nt": "Luke 24:44",
+   "votes": 22,
+   "shared": {
+    "words": 6,
+    "text": "is written about me in the"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [],
+   "otText": "Then I said, “Here I am, I have come— it is written about me in the scroll:",
+   "ntText": "Jesus said to them, “These are the words I spoke to you while I was still with you: Everything must be fulfilled that is written about Me in the Law of Moses, the Prophets, and the Psalms.”"
+  },
+  {
+   "ot": "Micah 7:6",
+   "nt": "Matthew 10:36",
+   "votes": 22,
+   "shared": {
+    "words": 6,
+    "text": "the members of his own household"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [],
+   "otText": "For a son dishonors his father, a daughter rises against her mother, and a daughter-in-law against her mother-in-law. A man’s enemies are the members of his own household.",
+   "ntText": "A man’s enemies will be the members of his own household.’"
+  },
+  {
+   "ot": "Psalm 118:24-26",
+   "nt": "Matthew 21:9",
+   "votes": 22,
+   "shared": {
+    "words": 11,
+    "text": "blessed is he who comes in the name of the lord"
+   },
+   "formula": null,
+   "score": 3.34,
+   "sameOtAs": [],
+   "otText": "This is the day that the LORD has made; we will rejoice and be glad in it. O LORD, save us, we pray. We beseech You, O LORD, cause us to prosper! Blessed is he who comes in the name of the LORD. From the house of the LORD we bless you.",
+   "ntText": "The crowds that went ahead of Him and those that followed were shouting: “Hosanna to the Son of David!” “Blessed is He who comes in the name of the Lord!” “Hosanna in the highest!”"
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "James 2:8",
+   "votes": 21,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.32,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "If you really fulfill the royal law stated in Scripture, “Love your neighbor as yourself,” you are doing well."
+  },
+  {
+   "ot": "Isaiah 44:6",
+   "nt": "Revelation 1:17-18",
+   "votes": 21,
+   "shared": {
+    "words": 5,
+    "text": "i am the first and"
+   },
+   "formula": null,
+   "score": 3.32,
+   "sameOtAs": [],
+   "otText": "Thus says the LORD, the King and Redeemer of Israel, the LORD of Hosts: “I am the first and I am the last, and there is no God but Me.",
+   "ntText": "When I saw Him, I fell at His feet like a dead man. But He placed His right hand on me and said, “Do not be afraid. I am the First and the Last, the Living One. I was dead, and behold, now I am alive forever and ever! And I hold the keys of Death and of Hades."
+  },
+  {
+   "ot": "Hosea 10:8",
+   "nt": "Luke 23:30",
+   "votes": 21,
+   "shared": {
+    "words": 6,
+    "text": "they will say to the mountains"
+   },
+   "formula": null,
+   "score": 3.32,
+   "sameOtAs": [],
+   "otText": "The high places of Aven will be destroyed— it is the sin of Israel; thorns and thistles will overgrow their altars. Then they will say to the mountains, “Cover us!” and to the hills, “Fall on us!”",
+   "ntText": "At that time ‘they will say to the mountains, “Fall on us!” and to the hills, “Cover us!”’"
+  },
+  {
+   "ot": "Micah 4:5",
+   "nt": "Colossians 3:17",
+   "votes": 21,
+   "shared": {
+    "words": 6,
+    "text": "in the name of the lord"
+   },
+   "formula": null,
+   "score": 3.32,
+   "sameOtAs": [],
+   "otText": "Though each of the peoples may walk in the name of his god, yet we will walk in the name of the LORD our God forever and ever.",
+   "ntText": "And whatever you do, in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through Him."
+  },
+  {
+   "ot": "Jeremiah 51:45",
+   "nt": "Revelation 18:4",
+   "votes": 21,
+   "shared": {
+    "words": 6,
+    "text": "come out of her my people"
+   },
+   "formula": null,
+   "score": 3.32,
+   "sameOtAs": [],
+   "otText": "Come out of her, My people! Save your lives, each of you, from the fierce anger of the LORD.",
+   "ntText": "Then I heard another voice from heaven say: “Come out of her, My people, so that you will not share in her sins or contract any of her plagues."
+  },
+  {
+   "ot": "Daniel 7:25",
+   "nt": "Revelation 12:14",
+   "votes": 20,
+   "shared": {
+    "words": 9,
+    "text": "for a time and times and half a time"
+   },
+   "formula": null,
+   "score": 3.3,
+   "sameOtAs": [],
+   "otText": "He will speak out against the Most High and oppress the saints of the Most High, intending to change the appointed times and laws; and the saints will be given into his hand for a time, and times, and half a time.",
+   "ntText": "But the woman was given two wings of a great eagle to fly from the presence of the serpent to her place in the wilderness, where she was nourished for a time, and times, and half a time."
+  },
+  {
+   "ot": "Numbers 27:17",
+   "nt": "Matthew 9:36",
+   "votes": 20,
+   "shared": {
+    "words": 5,
+    "text": "like sheep without a shepherd"
+   },
+   "formula": null,
+   "score": 3.3,
+   "sameOtAs": [],
+   "otText": "who will go out and come in before them, and who will lead them out and bring them in, so that the congregation of the LORD will not be like sheep without a shepherd.”",
+   "ntText": "When He saw the crowds, He was moved with compassion for them, because they were harassed and helpless, like sheep without a shepherd."
+  },
+  {
+   "ot": "Micah 7:5-6",
+   "nt": "Matthew 10:35",
+   "votes": 20,
+   "shared": {
+    "words": 9,
+    "text": "a daughter in law against her mother in law"
+   },
+   "formula": null,
+   "score": 3.3,
+   "sameOtAs": [],
+   "otText": "Do not rely on a friend; do not trust in a companion. Seal the doors of your mouth from her who lies in your arms. For a son dishonors his father, a daughter rises against her mother, and a daughter-in-law against her mother-in-law. A man’s enemies are the members of his own household.",
+   "ntText": "For I have come to turn ‘a man against his father, a daughter against her mother, a daughter-in-law against her mother-in-law."
+  },
+  {
+   "ot": "Jeremiah 32:19",
+   "nt": "Romans 2:6",
+   "votes": 20,
+   "shared": {
+    "words": 5,
+    "text": "each one according to his"
+   },
+   "formula": null,
+   "score": 3.3,
+   "sameOtAs": [],
+   "otText": "the One great in counsel and mighty in deed, whose eyes are on all the ways of the sons of men, to reward each one according to his ways and according to the fruit of his deeds.",
+   "ntText": "God “will repay each one according to his deeds.”"
+  },
+  {
+   "ot": "Jeremiah 33:3",
+   "nt": "Revelation 2:17",
+   "votes": 62,
+   "shared": {
+    "words": 2,
+    "text": "i will"
+   },
+   "formula": {
+    "ref": "Rev.2.17",
+    "phrase": "…o has an ear, let him hear what the Spirit says to the churches. To the one who overcomes, I will…"
+   },
+   "score": 3.29,
+   "sameOtAs": [],
+   "otText": "Call to Me, and I will answer and show you great and unsearchable things you do not know.",
+   "ntText": "He who has an ear, let him hear what the Spirit says to the churches. To the one who overcomes, I will give the hidden manna. I will also give him a white stone inscribed with a new name, known only to the one who receives it."
+  },
+  {
+   "ot": "Deuteronomy 19:15",
+   "nt": "Matthew 18:16",
+   "votes": 19,
+   "shared": {
+    "words": 10,
+    "text": "be established by the testimony of two or three witnesses"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "A lone witness is not sufficient to establish any wrongdoing or sin against a man, regardless of what offense he may have committed. A matter must be established by the testimony of two or three witnesses.",
+   "ntText": "But if he will not listen, take one or two others along, so that ‘every matter may be established by the testimony of two or three witnesses.’"
+  },
+  {
+   "ot": "Isaiah 6:3",
+   "nt": "Revelation 4:8-9",
+   "votes": 19,
+   "shared": {
+    "words": 6,
+    "text": "holy holy holy is the lord"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "And they were calling out to one another: “Holy, holy, holy is the LORD of Hosts; all the earth is full of His glory.”",
+   "ntText": "And each of the four living creatures had six wings and was covered with eyes all around and within. Day and night they never stop saying: “Holy, Holy, Holy, is the Lord God Almighty, who was and is and is to come!” And whenever the living creatures give glory, honor, and thanks to the One seated on the throne who lives forever and ever,"
+  },
+  {
+   "ot": "Deuteronomy 24:1-4",
+   "nt": "Matthew 5:31",
+   "votes": 19,
+   "shared": {
+    "words": 5,
+    "text": "her a certificate of divorce"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "If a man marries a woman, but she becomes displeasing to him because he finds some indecency in her, he may write her a certificate of divorce, hand it to her, and send her away from his house. If, after leaving his house, she goes and becomes another man’s wife, and the second man hates her, writes her a certificate of divorce, hands it to her, and sends her away from his house, or if he dies, then the husband who divorced her first may not remarry her after she has been defiled, for that is an abomination to the LORD. You must not bring sin upon the land that the LORD your God is giving you as an inheritance.",
+   "ntText": "It has also been said, ‘Whoever divorces his wife must give her a certificate of divorce.’"
+  },
+  {
+   "ot": "Isaiah 13:10",
+   "nt": "Matthew 24:29",
+   "votes": 19,
+   "shared": {
+    "words": 12,
+    "text": "sun will be darkened and the moon will not give its light"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "For the stars of heaven and their constellations will not give their light. The rising sun will be darkened, and the moon will not give its light.",
+   "ntText": "Immediately after the tribulation of those days: ‘The sun will be darkened, and the moon will not give its light; the stars will fall from the sky, and the powers of the heavens will be shaken.’"
+  },
+  {
+   "ot": "Genesis 21:12",
+   "nt": "Romans 9:7",
+   "votes": 19,
+   "shared": {
+    "words": 7,
+    "text": "through isaac your offspring will be reckoned"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "But God said to Abraham, “Do not be distressed about the boy and your maidservant. Listen to everything that Sarah tells you, for through Isaac your offspring will be reckoned.",
+   "ntText": "Nor because they are Abraham’s descendants are they all his children. On the contrary, “Through Isaac your offspring will be reckoned.”"
+  },
+  {
+   "ot": "Psalm 102:26-27",
+   "nt": "Hebrews 1:12",
+   "votes": 19,
+   "shared": {
+    "words": 11,
+    "text": "but you remain the same and your years will never end"
+   },
+   "formula": null,
+   "score": 3.28,
+   "sameOtAs": [],
+   "otText": "They will perish, but You remain; they will all wear out like a garment. Like clothing You will change them, and they will be passed on. But You remain the same, and Your years will never end.",
+   "ntText": "You will roll them up like a robe; like a garment they will be changed; but You remain the same, and Your years will never end.”"
+  },
+  {
+   "ot": "Genesis 2:9",
+   "nt": "Revelation 22:14",
+   "votes": 18,
+   "shared": {
+    "words": 5,
+    "text": "the tree of life and"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [
+    "p70"
+   ],
+   "otText": "Out of the ground the LORD God gave growth to every tree that is pleasing to the eye and good for food. And in the middle of the garden were the tree of life and the tree of the knowledge of good and evil.",
+   "ntText": "Blessed are those who wash their robes, so that they may have the right to the tree of life and may enter the city by its gates."
+  },
+  {
+   "ot": "1 Samuel 17:37",
+   "nt": "2 Timothy 4:17-18",
+   "votes": 18,
+   "shared": {
+    "words": 5,
+    "text": "of the lion and the"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "David added, “The LORD, who delivered me from the claws of the lion and the bear, will deliver me from the hand of this Philistine.” “Go,” said Saul, “and may the LORD be with you.”",
+   "ntText": "But the Lord stood by me and strengthened me, so that through me the message would be fully proclaimed, and all the Gentiles would hear it. So I was delivered from the mouth of the lion. And the Lord will rescue me from every evil action and bring me safely into His heavenly kingdom. To Him be the glory forever and ever. Amen."
+  },
+  {
+   "ot": "Psalm 19:1",
+   "nt": "Romans 1:19-20",
+   "votes": 57,
+   "shared": {
+    "words": 1,
+    "text": "for"
+   },
+   "formula": {
+    "ref": "Rom.1.17",
+    "phrase": "…mes by faith from start to finish, just as it is written: “The righteous will live by faith.”"
+   },
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "For the choirmaster. A Psalm of David. The heavens declare the glory of God; the skies proclaim the work of His hands.",
+   "ntText": "For what may be known about God is plain to them, because God has made it plain to them. For since the creation of the world God’s invisible qualities, His eternal power and divine nature, have been clearly seen, being understood from His workmanship, so that men are without excuse."
+  },
+  {
+   "ot": "Psalm 95:11",
+   "nt": "Hebrews 4:3",
+   "votes": 18,
+   "shared": {
+    "words": 14,
+    "text": "so i swore on oath in my anger they shall never enter my rest"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "So I swore on oath in My anger, “They shall never enter My rest.”",
+   "ntText": "Now we who have believed enter that rest. As for the others, it is just as God has said: “So I swore on oath in My anger, ‘They shall never enter My rest.’” And yet His works have been finished since the foundation of the world."
+  },
+  {
+   "ot": "Psalm 118:26",
+   "nt": "Luke 19:38",
+   "votes": 18,
+   "shared": {
+    "words": 8,
+    "text": "who comes in the name of the lord"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "Blessed is he who comes in the name of the LORD. From the house of the LORD we bless you.",
+   "ntText": "“Blessed is the King who comes in the name of the Lord!” “Peace in heaven and glory in the highest!”"
+  },
+  {
+   "ot": "Isaiah 1:9",
+   "nt": "Romans 9:29",
+   "votes": 18,
+   "shared": {
+    "words": 11,
+    "text": "we would have become like sodom we would have resembled gomorrah"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "Unless the LORD of Hosts had left us a few survivors, we would have become like Sodom, we would have resembled Gomorrah.",
+   "ntText": "It is just as Isaiah foretold: “Unless the Lord of Hosts had left us descendants, we would have become like Sodom, we would have resembled Gomorrah.”"
+  },
+  {
+   "ot": "Isaiah 6:10",
+   "nt": "Acts 28:27",
+   "votes": 18,
+   "shared": {
+    "words": 20,
+    "text": "their eyes otherwise they might see with their eyes hear with their ears understand with their hearts and turn and"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "Make the hearts of this people calloused; deafen their ears and close their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn and be healed.”",
+   "ntText": "For this people’s heart has grown callous; they hardly hear with their ears, and they have closed their eyes. Otherwise they might see with their eyes, hear with their ears, understand with their hearts, and turn, and I would heal them.’"
+  },
+  {
+   "ot": "Isaiah 44:18",
+   "nt": "2 Corinthians 4:3-4",
+   "votes": 182,
+   "shared": {
+    "words": 4,
+    "text": "so they cannot see"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "They do not comprehend or discern, for He has shut their eyes so they cannot see and closed their minds so they cannot understand.",
+   "ntText": "And even if our gospel is veiled, it is veiled to those who are perishing. The god of this age has blinded the minds of unbelievers so they cannot see the light of the gospel of the glory of Christ, who is the image of God."
+  },
+  {
+   "ot": "Isaiah 59:21",
+   "nt": "John 7:39",
+   "votes": 58,
+   "shared": {
+    "words": 1,
+    "text": "for"
+   },
+   "formula": {
+    "ref": "John.7.38",
+    "phrase": "Whoever believes in Me, as the Scripture has said: ‘Streams of living water will flow from…"
+   },
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "“As for Me, this is My covenant with them,” says the LORD. “My Spirit will not depart from you, and My words that I have put in your mouth will not depart from your mouth or from the mouths of your children and grandchildren, from now on and forevermore,” says the LORD.",
+   "ntText": "He was speaking about the Spirit, whom those who believed in Him were later to receive. For the Spirit had not yet been given, because Jesus had not yet been glorified."
+  },
+  {
+   "ot": "Genesis 18:10",
+   "nt": "Romans 9:9",
+   "votes": 18,
+   "shared": {
+    "words": 5,
+    "text": "sarah will have a son"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [],
+   "otText": "Then the LORD said, “I will surely return to you at this time next year, and your wife Sarah will have a son!” Now Sarah was behind him, listening at the entrance to the tent.",
+   "ntText": "For this is what the promise stated: “At the appointed time I will return, and Sarah will have a son.”"
+  },
+  {
+   "ot": "Genesis 14:18-20",
+   "nt": "Hebrews 7:1",
+   "votes": 18,
+   "shared": {
+    "words": 5,
+    "text": "priest of god most high"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "Then Melchizedek king of Salem brought out bread and wine—since he was priest of God Most High— and he blessed Abram and said: “Blessed be Abram by God Most High, Creator of heaven and earth, and blessed be God Most High, who has delivered your enemies into your hand.” Then Abram gave Melchizedek a tenth of everything.",
+   "ntText": "This Melchizedek was king of Salem and priest of God Most High. He met Abraham returning from the slaughter of the kings and blessed him,"
+  },
+  {
+   "ot": "Habakkuk 2:3-4",
+   "nt": "Hebrews 10:37",
+   "votes": 18,
+   "shared": {
+    "words": 5,
+    "text": "come and will not delay"
+   },
+   "formula": null,
+   "score": 3.26,
+   "sameOtAs": [
+    "p54"
+   ],
+   "otText": "For the vision awaits an appointed time; it testifies of the end and does not lie. Though it lingers, wait for it, since it will surely come and will not delay. Look at the proud one; his soul is not upright— but the righteous will live by faith—",
+   "ntText": "For, “In just a little while, He who is coming will come and will not delay."
+  },
+  {
+   "ot": "Psalm 37:4",
+   "nt": "John 15:16",
+   "votes": 177,
+   "shared": {
+    "words": 4,
+    "text": "he will give you"
+   },
+   "formula": null,
+   "score": 3.25,
+   "sameOtAs": [],
+   "otText": "Delight yourself in the LORD, and He will give you the desires of your heart.",
+   "ntText": "You did not choose Me, but I chose you. And I appointed you to go and bear fruit—fruit that will remain—so that whatever you ask the Father in My name, He will give you."
+  },
+  {
+   "ot": "Isaiah 55:6",
+   "nt": "2 Corinthians 6:1-2",
+   "votes": 56,
+   "shared": {
+    "words": 1,
+    "text": "the"
+   },
+   "formula": {
+    "ref": "2Cor.6.2",
+    "phrase": "For He says: “In the time of favor I heard you, and in the da…"
+   },
+   "score": 3.25,
+   "sameOtAs": [],
+   "otText": "Seek the LORD while He may be found; call on Him while He is near.",
+   "ntText": "As God’s fellow workers, then, we urge you not to receive God’s grace in vain. For He says: “In the time of favor I heard you, and in the day of salvation I helped you.” Behold, now is the time of favor; now is the day of salvation!"
+  },
+  {
+   "ot": "Deuteronomy 11:11",
+   "nt": "Hebrews 6:7",
+   "votes": 17,
+   "shared": {
+    "words": 5,
+    "text": "that drinks in the rain"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "But the land that you are crossing the Jordan to possess is a land of mountains and valleys that drinks in the rain from heaven.",
+   "ntText": "For land that drinks in the rain often falling on it and that produces a crop useful to those for whom it is tended receives the blessing of God."
+  },
+  {
+   "ot": "Psalm 36:1",
+   "nt": "Romans 3:18",
+   "votes": 17,
+   "shared": {
+    "words": 7,
+    "text": "there is no fear of god before"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "For the choirmaster. A Psalm of David, the servant of the LORD. An oracle is in my heart regarding the transgression of the wicked man: There is no fear of God before his eyes.",
+   "ntText": "“There is no fear of God before their eyes.”"
+  },
+  {
+   "ot": "Daniel 7:9",
+   "nt": "Revelation 1:14",
+   "votes": 17,
+   "shared": {
+    "words": 6,
+    "text": "the hair of his head was"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "As I continued to watch, thrones were set in place, and the Ancient of Days took His seat. His clothing was white as snow, and the hair of His head was like pure wool. His throne was flaming with fire, and its wheels were all ablaze.",
+   "ntText": "The hair of His head was white like wool, as white as snow, and His eyes were like a blazing fire."
+  },
+  {
+   "ot": "Exodus 25:40",
+   "nt": "Hebrews 8:5",
+   "votes": 17,
+   "shared": {
+    "words": 16,
+    "text": "see to it that you make everything according to the pattern shown you on the mountain"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "See to it that you make everything according to the pattern shown you on the mountain.",
+   "ntText": "The place where they serve is a copy and shadow of what is in heaven. This is why Moses was warned when he was about to build the tabernacle: “See to it that you make everything according to the pattern shown you on the mountain.”"
+  },
+  {
+   "ot": "Genesis 22:17",
+   "nt": "Hebrews 11:12",
+   "votes": 17,
+   "shared": {
+    "words": 6,
+    "text": "the stars in the sky and"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "I will surely bless you, and I will multiply your descendants like the stars in the sky and the sand on the seashore. Your descendants will possess the gates of their enemies.",
+   "ntText": "And so from one man, and he as good as dead, came descendants as numerous as the stars in the sky and as countless as the sand on the seashore."
+  },
+  {
+   "ot": "Jeremiah 49:36",
+   "nt": "Revelation 7:1",
+   "votes": 17,
+   "shared": {
+    "words": 5,
+    "text": "the four corners of the"
+   },
+   "formula": null,
+   "score": 3.23,
+   "sameOtAs": [],
+   "otText": "I will bring the four winds against Elam from the four corners of the heavens, and I will scatter them to all these winds. There will not be a nation to which Elam’s exiles will not go.",
+   "ntText": "After this I saw four angels standing at the four corners of the earth, holding back its four winds so that no wind would blow on land or sea or on any tree."
+  },
+  {
+   "ot": "Isaiah 26:3",
+   "nt": "Romans 4:18-21",
+   "votes": 53,
+   "shared": {
+    "words": 1,
+    "text": "in"
+   },
+   "formula": {
+    "ref": "Rom.4.17",
+    "phrase": "As it is written: “I have made you a father of many nations.” He i…"
+   },
+   "score": 3.22,
+   "sameOtAs": [],
+   "otText": "You will keep in perfect peace the steadfast of mind, because he trusts in You.",
+   "ntText": "Against all hope, Abraham in hope believed and so became the father of many nations, just as he had been told, “So shall your offspring be.” Without weakening in his faith, he acknowledged the decrepitness of his body (since he was about a hundred years old) and the lifelessness of Sarah’s womb. Yet he did not waver through disbelief in the promise of God, but was strengthened in his faith and gave glory to God, being fully persuaded that God was able to do what He had promised."
+  },
+  {
+   "ot": "Isaiah 66:1-2",
+   "nt": "Acts 7:48",
+   "votes": 52,
+   "shared": {
+    "words": 1,
+    "text": "the"
+   },
+   "formula": {
+    "ref": "Acts.7.48",
+    "phrase": "…dwell in houses made by human hands. As the prophet says:"
+   },
+   "score": 3.22,
+   "sameOtAs": [],
+   "otText": "This is what the LORD says: “Heaven is My throne, and earth is My footstool. What kind of house will you build for Me? Or where will My place of repose be? Has not My hand made all these things? And so they came into being,” declares the LORD. “This is the one I will esteem: he who is humble and contrite in spirit, who trembles at My word.",
+   "ntText": "However, the Most High does not dwell in houses made by human hands. As the prophet says:"
+  },
+  {
+   "ot": "Genesis 1:1",
+   "nt": "Hebrews 1:2",
+   "votes": 50,
+   "shared": {
+    "words": 1,
+    "text": "in"
+   },
+   "formula": {
+    "ref": "Heb.1.1",
+    "phrase": "…t occasions and in many different ways, God spoke to our fathers through the prophets."
+   },
+   "score": 3.2,
+   "sameOtAs": [],
+   "otText": "In the beginning God created the heavens and the earth.",
+   "ntText": "But in these last days He has spoken to us by His Son, whom He appointed heir of all things, and through whom He made the universe."
+  },
+  {
+   "ot": "2 Chronicles 7:14",
+   "nt": "Acts 9:11",
+   "votes": 50,
+   "shared": {
+    "words": 1,
+    "text": "and"
+   },
+   "formula": {
+    "ref": "Acts.9.10",
+    "phrase": "…cus there was a disciple named Ananias. The Lord spoke to him in a vision, “Ananias!” “Here I am, Lord,”…"
+   },
+   "score": 3.2,
+   "sameOtAs": [],
+   "otText": "and if My people who are called by My name humble themselves and pray and seek My face and turn from their wicked ways, then I will hear from heaven, forgive their sin, and heal their land.",
+   "ntText": "“Get up!” the Lord told him. “Go to the house of Judas on Straight Street and ask for a man from Tarsus named Saul, for he is praying."
+  },
+  {
+   "ot": "Jeremiah 31:31",
+   "nt": "Hebrews 10:16-17",
+   "votes": 50,
+   "shared": {
+    "words": 3,
+    "text": "declares the lord"
+   },
+   "formula": {
+    "ref": "Heb.10.15",
+    "phrase": "…also testifies to us about this. First He says:"
+   },
+   "score": 3.2,
+   "sameOtAs": [
+    "p51"
+   ],
+   "otText": "Behold, the days are coming, declares the LORD, when I will make a new covenant with the house of Israel and with the house of Judah.",
+   "ntText": "“This is the covenant I will make with them after those days, declares the Lord. I will put My laws in their hearts and inscribe them on their minds.” Then He adds: “Their sins and lawless acts I will remember no more.”"
+  },
+  {
+   "ot": "2 Kings 1:8",
+   "nt": "Mark 1:6",
+   "votes": 16,
+   "shared": {
+    "words": 7,
+    "text": "with a leather belt around his waist"
+   },
+   "formula": null,
+   "score": 3.2,
+   "sameOtAs": [],
+   "otText": "“He was a hairy man,” they answered, “with a leather belt around his waist.” “It was Elijah the Tishbite,” said the king.",
+   "ntText": "John was clothed in camel’s hair, with a leather belt around his waist. His food was locusts and wild honey."
+  },
+  {
+   "ot": "Psalm 118:25-26",
+   "nt": "John 12:13",
+   "votes": 16,
+   "shared": {
+    "words": 11,
+    "text": "blessed is he who comes in the name of the lord"
+   },
+   "formula": null,
+   "score": 3.2,
+   "sameOtAs": [],
+   "otText": "O LORD, save us, we pray. We beseech You, O LORD, cause us to prosper! Blessed is he who comes in the name of the LORD. From the house of the LORD we bless you.",
+   "ntText": "They took palm branches and went out to meet Him, shouting: “Hosanna!” “Blessed is He who comes in the name of the Lord!” “Blessed is the King of Israel!”"
+  },
+  {
+   "ot": "Psalm 34:8",
+   "nt": "1 Peter 2:3",
+   "votes": 16,
+   "shared": {
+    "words": 5,
+    "text": "that the lord is good"
+   },
+   "formula": null,
+   "score": 3.2,
+   "sameOtAs": [],
+   "otText": "Taste and see that the LORD is good; blessed is the man who takes refuge in Him!",
+   "ntText": "now that you have tasted that the Lord is good."
+  },
+  {
+   "ot": "Genesis 14:18",
+   "nt": "Hebrews 6:20-7:3",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "priest of god most high"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "Then Melchizedek king of Salem brought out bread and wine—since he was priest of God Most High—",
+   "ntText": "where Jesus our forerunner has entered on our behalf. He has become a high priest forever in the order of Melchizedek. This Melchizedek was king of Salem and priest of God Most High. He met Abraham returning from the slaughter of the kings and blessed him, and Abraham apportioned to him a tenth of everything. First, his name means “king of righteousness.” Then also, “king of Salem” means “king of peace.” Without father or mother or genealogy, without beginning of days or end of life, like the Son of God, he remains a priest for all time."
+  },
+  {
+   "ot": "Exodus 20:12",
+   "nt": "Luke 18:20",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "honor your father and mother"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [],
+   "otText": "Honor your father and mother, so that your days may be long in the land that the LORD your God is giving you.",
+   "ntText": "You know the commandments: ‘Do not commit adultery, do not murder, do not steal, do not bear false witness, honor your father and mother.’”"
+  },
+  {
+   "ot": "Leviticus 19:18",
+   "nt": "Matthew 19:19",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "love your neighbor as yourself"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [
+    "p69",
+    "p76"
+   ],
+   "otText": "Do not seek revenge or bear a grudge against any of your people, but love your neighbor as yourself. I am the LORD.",
+   "ntText": "honor your father and mother, and love your neighbor as yourself.’”"
+  },
+  {
+   "ot": "Psalm 92:5",
+   "nt": "Revelation 15:3",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "are your works o lord"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [],
+   "otText": "How great are Your works, O LORD, how deep are Your thoughts!",
+   "ntText": "and they sang the song of God’s servant Moses and of the Lamb: “Great and wonderful are Your works, O Lord God Almighty! Just and true are Your ways, O King of the nations!"
+  },
+  {
+   "ot": "Isaiah 41:4",
+   "nt": "Revelation 22:13",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "the first and the last"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [],
+   "otText": "Who has performed this and carried it out, calling forth the generations from the beginning? I, the LORD—the first and the last— I am He.”",
+   "ntText": "I am the Alpha and the Omega, the First and the Last, the Beginning and the End.”"
+  },
+  {
+   "ot": "Deuteronomy 9:18",
+   "nt": "Matthew 4:2",
+   "votes": 15,
+   "shared": {
+    "words": 5,
+    "text": "forty days and forty nights"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [],
+   "otText": "Then I fell down before the LORD for forty days and forty nights, as I had done the first time. I did not eat bread or drink water because of all the sin you had committed in doing what was evil in the sight of the LORD and provoking Him to anger.",
+   "ntText": "After fasting forty days and forty nights, He was hungry."
+  },
+  {
+   "ot": "Isaiah 59:8",
+   "nt": "Romans 3:17",
+   "votes": 15,
+   "shared": {
+    "words": 8,
+    "text": "the way of peace they have not known"
+   },
+   "formula": null,
+   "score": 3.18,
+   "sameOtAs": [],
+   "otText": "The way of peace they have not known, and there is no justice in their tracks. They have turned them into crooked paths; no one who treads on them will know peace.",
+   "ntText": "and the way of peace they have not known.”"
+  },
+  {
+   "ot": "Isaiah 43:19",
+   "nt": "Luke 3:4-5",
+   "votes": 47,
+   "shared": {
+    "words": 3,
+    "text": "in the wilderness"
+   },
+   "formula": {
+    "ref": "Luke.3.4",
+    "phrase": "as it is written in the book of the words of Isaiah the prophet: “…"
+   },
+   "score": 3.17,
+   "sameOtAs": [],
+   "otText": "Behold, I am about to do something new; even now it is coming. Do you not see it? Indeed, I will make a way in the wilderness and streams in the desert.",
+   "ntText": "as it is written in the book of the words of Isaiah the prophet: “A voice of one calling in the wilderness, ‘Prepare the way for the Lord, make straight paths for Him. Every valley shall be filled in, and every mountain and hill made low. The crooked ways shall be made straight, and the rough ways smooth."
+  },
+  {
+   "ot": "Isaiah 45:17",
+   "nt": "1 Corinthians 1:30-31",
+   "votes": 47,
+   "shared": {
+    "words": 2,
+    "text": "the lord"
+   },
+   "formula": {
+    "ref": "1Cor.1.31",
+    "phrase": "Therefore, as it is written: “Let him who boasts boast in the Lord.”"
+   },
+   "score": 3.17,
+   "sameOtAs": [],
+   "otText": "But Israel will be saved by the LORD with an everlasting salvation; you will not be put to shame or humiliated, to ages everlasting.",
+   "ntText": "It is because of Him that you are in Christ Jesus, who has become for us wisdom from God: our righteousness, holiness, and redemption. Therefore, as it is written: “Let him who boasts boast in the Lord.”"
+  },
+  {
+   "ot": "Isaiah 55:7",
+   "nt": "James 4:8-10",
+   "votes": 46,
+   "shared": {
+    "words": 2,
+    "text": "the lord"
+   },
+   "formula": {
+    "ref": "Jas.4.6",
+    "phrase": "But He gives us more grace. This is why it says: “God opposes the proud, but gives grace to the h…"
+   },
+   "score": 3.16,
+   "sameOtAs": [],
+   "otText": "Let the wicked man forsake his own way and the unrighteous man his own thoughts; let him return to the LORD, that He may have compassion, and to our God, for He will freely pardon.",
+   "ntText": "Draw near to God, and He will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded. Grieve, mourn, and weep. Turn your laughter to mourning, and your joy to gloom. Humble yourselves before the Lord, and He will exalt you."
+  },
+  {
+   "ot": "Deuteronomy 19:15",
+   "nt": "2 Corinthians 13:1",
+   "votes": 14,
+   "shared": {
+    "words": 12,
+    "text": "matter must be established by the testimony of two or three witnesses"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "A lone witness is not sufficient to establish any wrongdoing or sin against a man, regardless of what offense he may have committed. A matter must be established by the testimony of two or three witnesses.",
+   "ntText": "This is the third time I am coming to you. “Every matter must be established by the testimony of two or three witnesses.”"
+  },
+  {
+   "ot": "1 Chronicles 29:11",
+   "nt": "Hebrews 1:3",
+   "votes": 45,
+   "shared": {
+    "words": 3,
+    "text": "glory and the"
+   },
+   "formula": {
+    "ref": "Heb.1.1",
+    "phrase": "…t occasions and in many different ways, God spoke to our fathers through the prophets."
+   },
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "Yours, O LORD, is the greatness and the power and the glory and the splendor and the majesty, for everything in heaven and on earth belongs to You. Yours, O LORD, is the kingdom, and You are exalted as head over all.",
+   "ntText": "The Son is the radiance of God’s glory and the exact representation of His nature, upholding all things by His powerful word. After He had provided purification for sins, He sat down at the right hand of the Majesty on high."
+  },
+  {
+   "ot": "Psalm 34:4",
+   "nt": "Hebrews 5:7",
+   "votes": 45,
+   "shared": {
+    "words": 2,
+    "text": "and he"
+   },
+   "formula": {
+    "ref": "Heb.5.6",
+    "phrase": "And in another passage God says: “You are a priest forever in the order of Melchi…"
+   },
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "I sought the LORD, and He answered me; He delivered me from all my fears.",
+   "ntText": "During the days of Jesus’ earthly life, He offered up prayers and petitions with loud cries and tears to the One who could save Him from death, and He was heard because of His reverence."
+  },
+  {
+   "ot": "Psalm 110:4",
+   "nt": "Hebrews 7:11",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "in the order of melchizedek"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "The LORD has sworn and will not change His mind: “You are a priest forever in the order of Melchizedek.”",
+   "ntText": "Now if perfection could have been attained through the Levitical priesthood (for on this basis the people received the law), why was there still need for another priest to appear—one in the order of Melchizedek and not in the order of Aaron?"
+  },
+  {
+   "ot": "Isaiah 35:5",
+   "nt": "John 11:37",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "the eyes of the blind"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [
+    "p19"
+   ],
+   "otText": "Then the eyes of the blind will be opened and the ears of the deaf unstopped.",
+   "ntText": "But some of them asked, “Could not this man who opened the eyes of the blind also have kept Lazarus from dying?”"
+  },
+  {
+   "ot": "Job 35:11",
+   "nt": "Matthew 6:26",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "the birds of the air"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "who teaches us more than the beasts of the earth and makes us wiser than the birds of the air?’",
+   "ntText": "Look at the birds of the air: They do not sow or reap or gather into barns—and yet your heavenly Father feeds them. Are you not much more valuable than they?"
+  },
+  {
+   "ot": "Jeremiah 1:8",
+   "nt": "Matthew 10:26",
+   "votes": 14,
+   "shared": {
+    "words": 7,
+    "text": "do not be afraid of them for"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "Do not be afraid of them, for I am with you to deliver you,” declares the LORD.",
+   "ntText": "So do not be afraid of them. For there is nothing concealed that will not be disclosed, and nothing hidden that will not be made known."
+  },
+  {
+   "ot": "Ezekiel 31:6",
+   "nt": "Matthew 13:32",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "the birds of the air"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "All the birds of the air nested in its branches, and all the beasts of the field gave birth beneath its boughs; all the great nations lived in its shade.",
+   "ntText": "Although it is the smallest of all seeds, yet it grows into the largest of garden plants and becomes a tree, so that the birds of the air come and nest in its branches.”"
+  },
+  {
+   "ot": "Psalm 106:48",
+   "nt": "Luke 1:68",
+   "votes": 14,
+   "shared": {
+    "words": 8,
+    "text": "blessed be the lord the god of israel"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "Blessed be the LORD, the God of Israel, from everlasting to everlasting. Let all the people say, “Amen!” Hallelujah!",
+   "ntText": "“Blessed be the Lord, the God of Israel, because He has visited and redeemed His people."
+  },
+  {
+   "ot": "2 Samuel 1:16",
+   "nt": "Acts 18:6",
+   "votes": 14,
+   "shared": {
+    "words": 6,
+    "text": "your blood be on your own"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "For David had said to the Amalekite, “Your blood be on your own head because your own mouth has testified against you, saying, ‘I killed the LORD’s anointed.’”",
+   "ntText": "But when they opposed and insulted him, he shook out his garments and told them, “Your blood be on your own heads! I am innocent of it. From now on I will go to the Gentiles.”"
+  },
+  {
+   "ot": "Isaiah 22:13",
+   "nt": "1 Corinthians 15:32",
+   "votes": 14,
+   "shared": {
+    "words": 9,
+    "text": "let us eat and drink for tomorrow we die"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "But look, there is joy and gladness, butchering of cattle and slaughtering of sheep, eating of meat and drinking of wine: “Let us eat and drink, for tomorrow we die!”",
+   "ntText": "If I fought wild beasts in Ephesus for human motives, what did I gain? If the dead are not raised, “Let us eat and drink, for tomorrow we die.”"
+  },
+  {
+   "ot": "Isaiah 51:6",
+   "nt": "Hebrews 1:11",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "wear out like a garment"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "Lift up your eyes to the heavens, and look at the earth below; for the heavens will vanish like smoke, the earth will wear out like a garment, and its people will die like gnats. But My salvation will last forever, and My righteousness will never fail.",
+   "ntText": "They will perish, but You remain; they will all wear out like a garment."
+  }
+ ]
+}

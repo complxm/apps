@@ -2980,12 +2980,18 @@
   }
  },
  "p78": {
-  "votes": null,
-  "links": [],
-  "linkCount": 0,
+  "votes": 3,
+  "links": [
+   [
+    "Col.2.16",
+    "Lev.23.1-44",
+    3
+   ]
+  ],
+  "linkCount": 1,
   "overlap": {
    "words": 2,
-   "text": "a sabbath"
+   "text": "but the"
   },
   "formula": null,
   "refs": {
@@ -3037,8 +3043,8 @@
   ],
   "linkCount": 1,
   "overlap": {
-   "words": 2,
-   "text": "the feast"
+   "words": 3,
+   "text": "of unleavened bread"
   },
   "formula": null,
   "refs": {
