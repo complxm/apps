@@ -18,7 +18,7 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - **Browse** with search, category chips and one filter drawer (book and relationship). Rows show what you have read and saved, and **Continue reading** picks up where you stopped.
 - **Tap a bridge** and it grows into a full-screen reader: promise, fulfilment, why they connect. The rest of the app is hidden. The top and bottom bars step aside as you read down and return on the way up.
 - **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.
-- **Bible**: the whole Berean Standard Bible, chapter by chapter. Tap any verse for all its cross-references (344,799 in total, strongest first), each with its text; tap one to jump there. Swipe between chapters. Every chapter, verse and bridge passage links to the NLT on Bible Gateway.
+- **Bible**: the whole Berean Standard Bible, chapter by chapter. Tap any verse for its cross-references in two groups, each strongest first with its text: **Points to** (the verse's own links, 344,799 in total) and **Referenced by** (verses whose links land here, 513,837 entries, since OpenBible lists each link one way only). Tap one to jump there. Swipe between chapters. Every chapter, verse and bridge passage links to the NLT on Bible Gateway.
 - **Threads** read as numbered sequences, the **Map** shows Old and New Testament books in two columns with the bridges between them, and **Saved** collects starred bridges.
 
 ### Bible data
@@ -27,6 +27,7 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 
 - Text: **Berean Standard Bible**, public domain (CC0). https://berean.bible
 - Cross-references: **OpenBible.info**, CC BY, export of 2024-11-04 (344,799 links). https://www.openbible.info/labs/cross-references/
+- `data/bible/xin/` holds the reverse direction, computed from the same file: every verse a link's target covers lists that link's source, minus any already in its own links.
 - Both taken from https://github.com/scrollmapper/bible_databases (`formats/json/BSB.json`, `sources/extras/cross_references.txt`).
 - The NLT is copyrighted by Tyndale House, so it is linked, not included.
 

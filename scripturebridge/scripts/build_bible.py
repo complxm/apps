@@ -12,6 +12,9 @@ Writes, next to this script's app folder:
   data/bible/bsb/<Osis>/<chapter>.json       ["verse 1 text", "verse 2 text", ...]  ("" = verse omitted by the BSB)
   data/bible/xref/<Osis>/<chapter>.json      {"<verse>": [[target, votes], ...]} sorted by votes, highest first
                                              target is "Osis.C.V", "Osis.C.V-V2" or "Osis.C.V-Osis2.C2.V2"
+  data/bible/xin/<Osis>/<chapter>.json       {"<verse>": [["Osis.C.V", votes], ...]} the verses that point HERE
+                                             (OpenBible lists each link one way only), excluding any already
+                                             listed under xref for that verse, sorted by votes
 """
 import json
 import os
@@ -54,6 +57,26 @@ def compact_target(t):
     return f"{a}-{bv}" if (ab, ac) == (bb, bc) else t
 
 
+def expand(target, verse_counts):
+    """All (book, chapter, verse) a target like Gen.1.1, Gen.1.1-Gen.1.3 or Gen.1.31-Gen.2.3 covers."""
+    a, _, b = target.partition("-")
+    ab, ac, av = a.split(".")
+    bb, bc, bv = (b.split(".") if b else (ab, ac, av))
+    i0, i1 = OSIS.index(ab), OSIS.index(bb)
+    out, (c, v) = [], (int(ac), int(av))
+    for bi in range(i0, i1 + 1):
+        book, counts = OSIS[bi], verse_counts[OSIS[bi]]
+        last_c = int(bc) if bi == i1 else len(counts)
+        while c <= last_c:
+            last_v = int(bv) if (bi == i1 and c == int(bc)) else counts[c - 1]
+            out += [(book, c, x) for x in range(v, min(last_v, counts[c - 1]) + 1)]
+            c, v = c + 1, 1
+        c, v = 1, 1
+        if len(out) > 200:  # guard against a malformed range
+            break
+    return out
+
+
 def main(bsb_path, xref_path):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = os.path.join(root, "data", "bible")
@@ -73,7 +96,9 @@ def main(bsb_path, xref_path):
             omitted += sum(1 for t in texts if not t)
         meta.append({"osis": osis, "name": name, "testament": "OT" if i < 39 else "NT", "verses": counts})
 
+    verse_counts = {BOOKS[i][0]: [len(ch["verses"]) for ch in book["chapters"]] for i, book in enumerate(bsb["books"])}
     xref = defaultdict(lambda: defaultdict(list))  # (osis, chapter) -> verse -> [[target, votes]]
+    xin = defaultdict(lambda: defaultdict(dict))   # (osis, chapter) -> verse -> {source: votes}
     links = 0
     with open(xref_path, encoding="utf-8") as f:
         header = f.readline()
@@ -87,18 +112,32 @@ def main(bsb_path, xref_path):
             assert b in OSIS and dst.split(".")[0] in OSIS, line
             xref[(b, int(c))][int(v)].append([compact_target(dst), int(votes)])
             links += 1
+            # Every verse the target covers gets this source as an incoming link.
+            for tb, tc, tv in expand(dst, verse_counts):
+                xin[(tb, tc)][tv][src] = max(int(votes), xin[(tb, tc)][tv].get(src, -10**9))
     for (b, c), by_verse in xref.items():
         write(os.path.join(out, "xref", b, f"{c}.json"),
               {str(v): sorted(lst, key=lambda x: -x[1]) for v, lst in sorted(by_verse.items())})
+    incoming = 0
+    for (b, c), by_verse in xin.items():
+        doc = {}
+        for v, sources in sorted(by_verse.items()):
+            already = {t.split("-")[0] for t, _ in xref.get((b, c), {}).get(v, [])}
+            lst = sorted(([s_, n] for s_, n in sources.items() if s_ not in already), key=lambda x: -x[1])
+            if lst:
+                doc[str(v)] = lst
+                incoming += len(lst)
+        if doc:
+            write(os.path.join(out, "xin", b, f"{c}.json"), doc)
 
     meta_doc = {
         "translation": {"id": "BSB", "name": "Berean Standard Bible", "licence": "Public domain (CC0)", "url": "https://berean.bible"},
         "crossReferences": {"source": "OpenBible.info", "licence": "CC BY", "url": "https://www.openbible.info/labs/cross-references/",
-                            "export": header.strip().split("#")[-1].strip(), "links": links},
+                            "export": header.strip().split("#")[-1].strip(), "links": links, "incoming": incoming},
         "books": meta,
     }
     write(os.path.join(out, "books.json"), meta_doc)
-    print(f"books 66, chapters {sum(len(m['verses']) for m in meta)}, verses {verses_total} ({omitted} omitted by the BSB), cross references {links}")
+    print(f"books 66, chapters {sum(len(m['verses']) for m in meta)}, verses {verses_total} ({omitted} omitted by the BSB), cross references {links}, incoming shown in reverse {incoming}")
 
 
 if __name__ == "__main__":

@@ -240,6 +240,7 @@ function cached(map, key, load) {
 const getJSON = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url); return r.json(); });
 const chapterText = (osis, c) => cached(BIB.text, `${osis}/${c}`, () => getJSON(`data/bible/bsb/${osis}/${c}.json`));
 const chapterXref = (osis, c) => cached(BIB.xref, `${osis}/${c}`, () => getJSON(`data/bible/xref/${osis}/${c}.json`).catch(() => ({})));
+const chapterXin = (osis, c) => cached(BIB.xref, `in:${osis}/${c}`, () => getJSON(`data/bible/xin/${osis}/${c}.json`).catch(() => ({})));
 const nltUrl = (q) => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(q) + '&version=NLT';
 const nltLink = (q, label = 'Read in NLT') => `<a class="ext" href="${nltUrl(q)}" target="_blank" rel="noopener">${label}<fvl-icon name="external-link"></fvl-icon></a>`;
 
@@ -322,8 +323,8 @@ async function renderBible() {
   const el = $('#chText');
   el.removeAttribute('aria-busy');
   el.innerHTML = text.map((t, i) => {
-    const n = i + 1, k = (xr[n] || []).length;
-    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="Verse ${n}${k ? `, ${k} cross-references` : ''}"><sup>${n}</sup>${t ? esc(t) : '<em class="omit">Not in the earliest manuscripts.</em>'}</span> `;
+    const n = i + 1;
+    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="Verse ${n}, show cross-references"><sup>${n}</sup>${t ? esc(t) : '<em class="omit">Not in the earliest manuscripts.</em>'}</span> `;
   }).join('');
   store.set('sb_bible_pos', { osis, c });
   if (verse) {
@@ -332,28 +333,36 @@ async function renderBible() {
   }
 }
 
+// OpenBible lists each link one way, so a verse shows two groups:
+// "Points to" (its own links) and "Referenced by" (verses whose links land here).
 async function openXref(osis, c, v) {
   const b = BIB.byOsis.get(osis);
-  const [text, xr] = await Promise.all([chapterText(osis, c), chapterXref(osis, c)]);
-  const list = xr[v] || [];
+  const [text, xo, xi] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c)]);
+  const out = xo[v] || [], inc = xi[v] || [];
   const dr = $('#xrefSheet');
   dr.setAttribute('heading', `${b.name} ${c}:${v}`);
-  dr.setAttribute('description', list.length ? `${list.length} cross-references, strongest first by OpenBible.info reader votes.` : 'No cross-references for this verse.');
-  S.xref = { list, shown: 12 };
+  const n = out.length + inc.length;
+  dr.setAttribute('description', n ? `${n.toLocaleString()} cross-references, strongest first by OpenBible.info reader votes.` : 'No cross-references for this verse.');
+  S.xref = { out: { list: out, shown: 12 }, inc: { list: inc, shown: 12 } };
+  const group = (key, label, hint, list) => list.length ? `<section class="xgroup" aria-label="${label}">
+      <div class="xgroup-head"><p class="p-label">${label} · ${list.length.toLocaleString()}</p><p class="note">${hint}</p></div>
+      <ol class="list sheet-list" id="x-${key}"></ol><div id="x-${key}-more"></div></section>` : '';
   $('#xrefBody').innerHTML = `<blockquote class="p-text">${text[v - 1] ? esc(text[v - 1]) : '<em class="omit">Not in the earliest manuscripts.</em>'}</blockquote>
     <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
-    <ol class="list sheet-list" id="xrefList"></ol><div id="xrefMore"></div>`;
-  renderXrefItems();
+    ${group('out', 'Points to', 'Where this verse leads.', out)}
+    ${group('inc', 'Referenced by', 'Verses that point here.', inc)}`;
+  if (out.length) renderXrefItems('out');
+  if (inc.length) renderXrefItems('inc');
   dr.show();
 }
-function renderXrefItems() {
-  const { list, shown } = S.xref;
-  $('#xrefList').innerHTML = list.slice(0, shown).map(([t, votes]) => {
+function renderXrefItems(key) {
+  const g = S.xref[key];
+  $(`#x-${key}`).innerHTML = g.list.slice(0, g.shown).map(([t, votes]) => {
     const r = parseTarget(t);
     return `<li><button type="button" class="row xref" data-go="${bibleHash(r)}"><span class="row-head"><span class="refs">${esc(refLabel(t))}</span><span class="kicker">${votes} ${Math.abs(votes) === 1 ? 'vote' : 'votes'}</span></span><span class="xtext" data-t="${esc(t)}">…</span></button></li>`;
   }).join('');
-  $('#xrefMore').innerHTML = list.length > shown ? `<fvl-button variant="secondary" size="sm" id="xrefMoreBtn">Show all ${list.length}</fvl-button>` : '';
-  $$('#xrefList .xtext').forEach(async (el) => {
+  $(`#x-${key}-more`).innerHTML = g.list.length > g.shown ? `<fvl-button variant="secondary" size="sm" data-more="${key}">Show all ${g.list.length.toLocaleString()}</fvl-button>` : '';
+  $$(`#x-${key} .xtext`).forEach(async (el) => {
     if (el.dataset.done) return;
     el.dataset.done = '1';
     try { el.textContent = (await targetText(el.dataset.t)) || 'Not in the earliest manuscripts.'; } catch { el.textContent = 'Could not load this verse.'; }
@@ -674,7 +683,8 @@ bibleView.addEventListener('touchend', (e) => {
   if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700) { const n = neighbour(S.bible.osis, S.bible.c, dx < 0 ? 1 : -1); if (n) location.hash = bibleHash(n); }
 }, { passive: true });
 $('#xrefSheet').addEventListener('click', (e) => {
-  if (e.target.closest('#xrefMoreBtn')) { S.xref.shown = S.xref.list.length; renderXrefItems(); return; }
+  const more = e.target.closest('[data-more]');
+  if (more) { const g = S.xref[more.dataset.more]; g.shown = g.list.length; renderXrefItems(more.dataset.more); return; }
   const link = e.target.closest('[data-go]'); if (!link) return;
   $('#xrefSheet').close();
   location.hash = link.dataset.go;

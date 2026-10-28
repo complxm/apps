@@ -351,6 +351,9 @@ fvl-button[hidden] { display: none; }
 }
 .omit { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); }
 .ch-nav { display: flex; justify-content: space-between; gap: var(--fvl-space-icon-gap); max-width: var(--fvl-layout-width-prose); padding-top: var(--fvl-space-stack-group); }
+.xgroup { display: flex; flex-direction: column; gap: var(--fvl-space-stack-related); }
+.xgroup + .xgroup { margin-top: var(--fvl-space-stack-group); }
+.xgroup-head { display: grid; gap: var(--fvl-space-stack-related); }
 .xref .refs { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); }
 .xtext { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
 
