@@ -7,13 +7,14 @@ Sources (both from github.com/scrollmapper/bible_databases):
   formats/json/PolUGdanska.json         Uwspółcześniona Biblia Gdańska, © Fundacja Wrota Nadziei, CC BY-ND 4.0
                                         (shared unchanged with credit; only surrounding whitespace is trimmed)
   formats/json/PolGdanska.json          Biblia Gdańska (1881), public domain
+  formats/json/KJV.json                 King James Version (1769 text), public domain outside the UK
 
 Usage:
-  python3 scripts/build_bible.py <path/to/BSB.json> <path/to/cross_references.txt> [<path/to/PolUGdanska.json> <path/to/PolGdanska.json>]
+  python3 scripts/build_bible.py <path/to/BSB.json> <path/to/cross_references.txt> [<path/to/PolUGdanska.json> <path/to/PolGdanska.json> [<path/to/KJV.json>]]
 
 Writes, next to this script's app folder:
   data/bible/books.json                      66 books: osis id, name, testament, verse counts per chapter
-  data/bible/<tr>/<Osis>/<chapter>.json      ["verse 1 text", "verse 2 text", ...] for tr = bsb, ubg, gdanska
+  data/bible/<tr>/<Osis>/<chapter>.json      ["verse 1 text", "verse 2 text", ...] for tr = bsb, kjv, ubg, gdanska
                                              ("" = no separate verse in that translation)
   data/bible/xref/<Osis>/<chapter>.json      {"<verse>": [[target, votes], ...]} sorted by votes, highest first
                                              target is "Osis.C.V", "Osis.C.V-V2" or "Osis.C.V-Osis2.C2.V2"
@@ -62,6 +63,8 @@ assert len(NAMES_PL) == 66
 TRANSLATIONS = [
     {"id": "bsb", "label": "BSB", "name": "Berean Standard Bible", "lang": "en",
      "licence": "Public domain (CC0)", "url": "https://berean.bible", "empty": "Not in the earliest manuscripts."},
+    {"id": "kjv", "label": "KJV", "name": "King James Version", "lang": "en",
+     "licence": "Public domain (Crown copyright in the UK)", "url": "https://github.com/scrollmapper/bible_databases", "empty": ""},
     {"id": "ubg", "label": "UBG", "name": "Uwspółcześniona Biblia Gdańska", "lang": "pl",
      "licence": "© Fundacja Wrota Nadziei, CC BY-ND 4.0", "url": "https://ebible.org/find/show.php?id=polubg",
      "empty": "Brak osobnego wersetu w tym przekładzie."},
@@ -122,7 +125,7 @@ def write_translation(tr_id, path, out, shape):
     return empty
 
 
-def main(bsb_path, xref_path, ubg_path=None, gdanska_path=None):
+def main(bsb_path, xref_path, ubg_path=None, gdanska_path=None, kjv_path=None):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = os.path.join(root, "data", "bible")
 
@@ -177,7 +180,7 @@ def main(bsb_path, xref_path, ubg_path=None, gdanska_path=None):
 
     shape = {m["osis"]: m["verses"] for m in meta}
     translations = [TRANSLATIONS[0]]
-    for tr, path in ((TRANSLATIONS[1], ubg_path), (TRANSLATIONS[2], gdanska_path)):
+    for tr, path in ((TRANSLATIONS[1], kjv_path), (TRANSLATIONS[2], ubg_path), (TRANSLATIONS[3], gdanska_path)):
         if path:
             n = write_translation(tr["id"], path, out, shape)
             translations.append(tr)
@@ -194,6 +197,6 @@ def main(bsb_path, xref_path, ubg_path=None, gdanska_path=None):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) not in (3, 5):
+    if len(sys.argv) not in (3, 5, 6):
         sys.exit(__doc__)
     main(*sys.argv[1:])

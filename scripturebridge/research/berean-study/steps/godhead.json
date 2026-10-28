@@ -1,0 +1,1175 @@
+{
+ "id": "godhead",
+ "title": "Who Do Men Say That I Am? – The Godhead Study",
+ "question": "Who is God according to Scripture, and how are the Father, the Son and the Holy Spirit related to Jesus?",
+ "summary": "Starting from Peter's confession in Matthew 16, the teacher traces the God who created the world, called Abraham and spoke to Moses as \"I AM,\" and argues from Jude, Hosea and Jesus' \"I am\" sayings in John 8 that this God was Jesus. A long run of Isaiah's \"I alone am God\" passages supports his case against the Trinity, which he calls a later, non-biblical teaching. He then covers the Father, the Son and the Holy Spirit in turn. He argues that the Father is God's spirit, the Son is the human body born of Mary, and the Holy Spirit is Christ's own spirit living in believers. He concludes that the one name in Matthew 28:19 is Jesus, which he promises to develop in a study on baptism.",
+ "topics": [
+  "Godhead",
+  "oneness of God",
+  "Jesus is God",
+  "I AM sayings",
+  "the Trinity",
+  "dual nature of Christ",
+  "Father, Son and Holy Spirit",
+  "the logos",
+  "baptism in Jesus' name",
+  "Holy Spirit as spirit of Christ"
+ ],
+ "claims": [
+  "The teacher holds that the God who created everything, spoke to Abraham and gave Moses the name \"I AM\" is Jesus before he took on flesh.",
+  "The teacher holds that God is one person, not three, and that the Trinity is a third- and fourth-century departure from the apostles' teaching.",
+  "The teacher holds that the Son of God is Jesus' human body, born of Mary and begotten with a beginning, while the Father is the divine spirit living in that body.",
+  "The teacher holds that Jesus' talk of the Father and the Son is parable (veiled speech, per John 16:25) separating his human and divine natures, not a conversation between persons.",
+  "The teacher holds that the Holy Spirit is the spirit of Christ, the Comforter or Wonderful Counsellor of Isaiah 9:6, living in believers.",
+  "The teacher holds that the single name of the Father, Son and Holy Ghost in Matthew 28:19 is Jesus, and that believing Jesus is God in the flesh is needed for salvation."
+ ],
+ "steps": [
+  {
+   "t": 2,
+   "ref": "Matthew 16:13-20",
+   "kind": "cited",
+   "version": "-",
+   "point": "He names this passage, where Jesus asks \"who do men say that I am,\" as the centre of the whole study on who God is."
+  },
+  {
+   "t": 405,
+   "ref": "Isaiah 53",
+   "kind": "cited",
+   "version": "-",
+   "point": "He mentions street interviews where Jews hear Isaiah 53 (with the end of chapter 52) read and say it sounds like Jesus, as an example of prophecy only Jesus fulfilled.",
+   "note": "He refers to Isaiah 52:13-53:12."
+  },
+  {
+   "t": 435,
+   "ref": "Psalms 22",
+   "kind": "cited",
+   "version": "-",
+   "point": "He lists Psalm 22 alongside Isaiah 53 as messianic prophecy (prophecy about the coming Messiah) that points to only one person in history."
+  },
+  {
+   "t": 720,
+   "ref": "Matthew 16:13-18",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads Peter's confession. He takes \"flesh and blood hath not revealed it\" to mean Jesus' human side did not reveal this; the Father, the Spirit dwelling in Jesus' body, did."
+  },
+  {
+   "t": 844,
+   "ref": "Matthew 16:20",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He skips to verse 20, where Jesus tells the disciples to keep quiet, and says Jesus was controlling when his identity would be made known. He then states his thesis: Jesus' body is the Son, his spirit is the Holy Spirit and the Father."
+  },
+  {
+   "t": 966,
+   "ref": "Genesis 1:1",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"In the beginning\" as the beginning of time, which God created; God himself, being spirit, stands outside time and has no beginning."
+  },
+  {
+   "t": 1060,
+   "ref": "John 1:1-5",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He sets John 1 beside Genesis 1 and explains that \"Word\" is the Greek logos, which he will go on to define."
+  },
+  {
+   "t": 1121,
+   "ref": "Genesis 1:1-5",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He links the Spirit of God moving on the waters with the Spirit later inside Christ. Since the sun was not made until the fourth day, he takes \"Let there be light\" as the logos: God's plan to step into time in flesh."
+  },
+  {
+   "t": 1244,
+   "ref": "John 1:1-5",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He returns to John 1 and reads the logos as God's plan of salvation by becoming flesh: the Word \"was God\" means the incarnation was God himself. The shift to \"him\" points to God's future appearing in flesh."
+  },
+  {
+   "t": 1458,
+   "ref": "Genesis 12:1-7",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads God's call of Abram and his promise of the land, so that later he can show that the God who befriended Abram is the one who speaks as Jesus."
+  },
+  {
+   "t": 1616,
+   "ref": "Genesis 17:1-6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads how the Almighty God renamed Abram as Abraham, \"a father of many nations.\" He says the God speaking here is Jesus."
+  },
+  {
+   "t": 1739,
+   "ref": "Exodus 3:1-15",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads the burning bush. God gives his name as \"I AM\" for all generations, so he argues that anyone later using that name is the same God who spoke to Abraham and Moses."
+  },
+  {
+   "t": 2045,
+   "ref": "Jude 1:1-5",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads Jude's warning about men who deny \"the only Lord God, and our Lord Jesus Christ,\" and the Lord who saved Israel out of Egypt."
+  },
+  {
+   "t": 2174,
+   "ref": "Jude 1:5-6",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He switches to the NLT, which says Jesus rescued Israel from Egypt, and the footnote on other manuscripts. He takes this as proof that Jesus was the God who sent Moses to Pharaoh."
+  },
+  {
+   "t": 2304,
+   "ref": "Joel 2:27",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads God saying he is among Israel, \"the Lord your God, and there is no other,\" as Old Testament witness that there is only one God."
+  },
+  {
+   "t": 2334,
+   "ref": "John 4:24",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He stresses \"God is Spirit\": Jesus' body did not speak to Moses or Abraham, but the Spirit living in that body did. He says the plagues on Egypt's gods were Jesus' doing."
+  },
+  {
+   "t": 2491,
+   "ref": "John 4:5-42",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the Samaritan woman story. It shows worship in spirit and truth needs no holy place. He sees Jesus saying plainly \"I am the Messiah,\" and the villagers calling him Saviour of the world."
+  },
+  {
+   "t": 2956,
+   "ref": "Hosea 13:4",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I have been the Lord your God ever since I brought you out of Egypt\" and \"no other savior.\" Since Jude says Jesus led Israel out, he argues this is Jesus speaking, which he says is a problem for Trinitarians."
+  },
+  {
+   "t": 3143,
+   "ref": "John 5:1-47",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the whole chapter. He takes \"the Son can do nothing by himself\" as Jesus' human nature speaking, and the Father as the deity in him. He says the son-and-father talk is parable (veiled speech), and honouring the Son as the Father means Jesus is God."
+  },
+  {
+   "t": 4009,
+   "ref": "Matthew 28:19",
+   "kind": "cited",
+   "version": "-",
+   "point": "At \"I have come to you in my Father's name\" he points to the baptism command and says the Father's name is Jesus."
+  },
+  {
+   "t": 4073,
+   "ref": "John 8:12-24",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He links \"I am the light of the world\" with the light of Genesis 1 and John 1. He reads \"unless you believe that I am\" as Jesus claiming God's name."
+  },
+  {
+   "t": 4259,
+   "ref": "Exodus 3:14",
+   "kind": "cited",
+   "version": "-",
+   "point": "He follows the NLT footnote on John 8:24 back to Exodus 3:14, where God tells Moses his name is \"I AM.\""
+  },
+  {
+   "t": 4291,
+   "ref": "John 8:24",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He compares the KJV and points out that \"he\" is in italics, meaning it was added by the translators. So the verse reads \"if ye believe not that I am, ye shall die in your sins.\""
+  },
+  {
+   "t": 4447,
+   "ref": "John 8:24-30",
+   "kind": "read",
+   "version": "NLT",
+   "point": "Back in the NLT, he says anyone who does not believe Jesus is the God who spoke to Moses cannot be saved. He reads \"when you have lifted up the Son of Man... you will know that I am\" as Jesus' human side obeying the deity within him."
+  },
+  {
+   "t": 4849,
+   "ref": "Genesis 17",
+   "kind": "cited",
+   "version": "-",
+   "point": "He recalls Genesis 12 and 17, Abram's call and new name, as setup for Jesus' words about Abraham in John 8.",
+   "note": "He also refers back to Genesis 12."
+  },
+  {
+   "t": 4880,
+   "ref": "John 8:31",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"you are truly my disciples if you remain faithful to my teachings\" and tells listeners to note it for the next study on how one is saved."
+  },
+  {
+   "t": 4941,
+   "ref": "Matthew 28:19",
+   "kind": "cited",
+   "version": "-",
+   "point": "He cites the baptism command to argue that baptism is required for disciples, not optional."
+  },
+  {
+   "t": 4971,
+   "ref": "John 8:32-59",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the debate about Abraham up to \"before Abraham was even born, I am.\" He says the attempt to stone Jesus shows Jesus was claiming to be the I AM of Exodus 3."
+  },
+  {
+   "t": 5278,
+   "ref": "Exodus 3:14",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I am who I am\" again in the NLT and says this settles that Jesus claimed to be God."
+  },
+  {
+   "t": 5309,
+   "ref": "Isaiah 40:25",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"To whom will you compare me? Who is my equal?\" against the Trinitarian idea of co-equal persons. He argues God does not change, so the verse still applies."
+  },
+  {
+   "t": 5370,
+   "ref": "Isaiah 41:14",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He stresses \"the Holy One of Israel,\" one and not three, and \"your Redeemer\": there is one redeemer, Jesus. He says the dove at Jesus' baptism shows God's Spirit, not a separate person."
+  },
+  {
+   "t": 5587,
+   "ref": "Isaiah 42:8",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads God's refusal to give his glory to another. He argues Jesus asking the Father to glorify him would be blasphemy unless the two are one person."
+  },
+  {
+   "t": 5652,
+   "ref": "John 1:14",
+   "kind": "cited",
+   "version": "-",
+   "point": "He explains \"the Word was made flesh\" as God stepping from outside time into time, like an invisible hand moving inside a leather glove."
+  },
+  {
+   "t": 5773,
+   "ref": "Isaiah 43:10-15",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I alone am God... no other Savior\" and \"your Holy One, Israel's Creator and King\" as proof there is no plurality of persons (more than one person) in God."
+  },
+  {
+   "t": 5863,
+   "ref": "Isaiah 44:6",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I am the First and the Last; there is no other God\" and says it matches Jesus' own words in Revelation."
+  },
+  {
+   "t": 5883,
+   "ref": "Revelation 22:13",
+   "kind": "cited",
+   "version": "-",
+   "point": "He recites from memory Jesus' words \"the beginning and the end, alpha and the omega, the first and the last\" to show the Isaiah wording is Jesus' own.",
+   "note": "Quoted from memory; he blends in \"he who was dead but is alive forevermore\" from Revelation 1:18."
+  },
+  {
+   "t": 5896,
+   "ref": "Isaiah 44:24",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I alone stretched out the heavens. Who was with me when I made the earth?\" A co-creating Son or Spirit would surely be named here, he argues."
+  },
+  {
+   "t": 5993,
+   "ref": "Isaiah 45:21",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"there is no other God but me, a righteous God and Savior\" and concludes it is \"just Jesus.\"",
+   "note": "He announced verses 21-22 but read only verse 21."
+  },
+  {
+   "t": 6056,
+   "ref": "Isaiah 46:5",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads God again asking \"Who is my equal?\" and says God is hammering home the point."
+  },
+  {
+   "t": 6086,
+   "ref": "Isaiah 46:9",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"I alone am God... there is none like me.\" If God were three persons, he argues, he would not speak this way."
+  },
+  {
+   "t": 6179,
+   "ref": "John 10:30",
+   "kind": "cited",
+   "version": "-",
+   "point": "He explains \"I and my Father are one\" as Jesus being the visible appearance of the Father, which is why no one comes to the Father except through him.",
+   "note": "Quoted from memory, in the KJV wording."
+  },
+  {
+   "t": 6210,
+   "ref": "Revelation 1:1",
+   "kind": "cited",
+   "version": "-",
+   "point": "He points to \"the revelation of Jesus Christ, which God gave unto him\" as the deity teaching Jesus' growing human nature who he was."
+  },
+  {
+   "t": 6270,
+   "ref": "2 John 1:7-9",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the warning about deceivers who deny Christ came in a real body. He applies it to anyone who denies Jesus is God in the flesh, and says only those in Christ's teaching have the Father and the Son."
+  },
+  {
+   "t": 6545,
+   "ref": "Genesis 6",
+   "kind": "cited",
+   "version": "-",
+   "point": "In an aside he cites Genesis 6. He says fallen angels had children with women, and the spirits of those children are demons."
+  },
+  {
+   "t": 6575,
+   "ref": "Colossians 2:8-9",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the warning against empty philosophy and \"in Christ lives all the fullness of God in a human body.\" He takes it to mean Father, Son and Holy Spirit are all Jesus' own ways of showing himself."
+  },
+  {
+   "t": 6671,
+   "ref": "Genesis 1:26",
+   "kind": "cited",
+   "version": "-",
+   "point": "He explains \"let us make man in our image\" as a royal plural, not several persons. He says humans mirror God as soul, body and spirit, matching Father, Son and Spirit."
+  },
+  {
+   "t": 6794,
+   "ref": "Acts 2",
+   "kind": "cited",
+   "version": "-",
+   "point": "He cites Acts 2's \"promise of the Father\": the Holy Spirit who lives in believers is Christ's own spirit, the Father."
+  },
+  {
+   "t": 6825,
+   "ref": "Malachi 2:10",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"Are we not all children of the same Father?\" and gives the KJV \"one father... one God.\" He says the Old Testament God calling himself Father is Jesus before he took flesh.",
+   "note": "He gives the KJV wording as well."
+  },
+  {
+   "t": 6888,
+   "ref": "John 4:24",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He returns to \"God is Spirit\": God is not a body, bush or bird; he is invisible, and Jesus put himself in a body.",
+   "note": "He says \"John 4:4\"; the verse read is John 4:24."
+  },
+  {
+   "t": 6918,
+   "ref": "Isaiah 63:1",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads of the one coming from Edom in red-stained robes, \"the Lord... who has the power to save,\" and says it refers to Jesus Christ."
+  },
+  {
+   "t": 6952,
+   "ref": "Isaiah 63:16",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"you are still our Father... our Redeemer\" to show that God's spirit is the Father."
+  },
+  {
+   "t": 6983,
+   "ref": "1 Corinthians 8:6",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"one God, the Father\" and \"one Lord, Jesus Christ.\" He takes \"Lord Jesus Christ\" as the human side and the Father as the deity, one God."
+  },
+  {
+   "t": 7013,
+   "ref": "Isaiah 9:6",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads the child's titles as the Godhead in one person: Wonderful Counselor (Holy Spirit), Mighty God, Everlasting Father, and Prince of Peace (the Son)."
+  },
+  {
+   "t": 7134,
+   "ref": "Jeremiah 3:19",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads God looking forward to Israel calling him Father, and says this is Jesus speaking as the Father before he took flesh."
+  },
+  {
+   "t": 7231,
+   "ref": "Psalms 89:26",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"You are my Father, my God, and the Rock of my salvation\" as the deity speaking in the Old Testament being the Father, whom he identifies with Jesus."
+  },
+  {
+   "t": 7261,
+   "ref": "John 10:30",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"The Father and I are one\" as Jesus speaking."
+  },
+  {
+   "t": 7291,
+   "ref": "John 10:38",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"the Father is in me, and I am in the Father.\" Jesus could not say outright he was the Father while in flesh, he says, but could say the Father was in that flesh."
+  },
+  {
+   "t": 7354,
+   "ref": "1 Timothy 3:16",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"Christ was revealed in a human body\" as the great mystery of the faith."
+  },
+  {
+   "t": 7387,
+   "ref": "John 12:44-45",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"when you see me, you are seeing the one who sent me.\" The Father sent a body to be born so he could live in it and shed blood, he says.",
+   "note": "He says \"John chapter 2 verse 44\" and corrects himself to 12:44-45."
+  },
+  {
+   "t": 7450,
+   "ref": "John 13:19-20",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads that whoever welcomes Jesus welcomes the Father who sent him. The Father is hidden in the flesh from the proud, he says."
+  },
+  {
+   "t": 7512,
+   "ref": "John 14:6-7",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"no one can come to the Father except through me... you have seen him\" as Jesus pulling the veil back a little.",
+   "note": "He announced verses 6-11 but read only 6-7."
+  },
+  {
+   "t": 7573,
+   "ref": "Revelation 21:22",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads that the Lord God Almighty and the Lamb are heaven's temple. He takes God as the Spirit and the Lamb as his body, so seeing Jesus' body is seeing the temple."
+  },
+  {
+   "t": 7605,
+   "ref": "John 16:25",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads Jesus' promise to stop speaking in figures of speech and speak plainly about the Father."
+  },
+  {
+   "t": 7636,
+   "ref": "John 16:25",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He turns to the KJV \"proverbs\" and the Greek word's definition: a veiled or figurative saying. He argues that all of Jesus' Father-and-Son language is parable, not two persons."
+  },
+  {
+   "t": 7731,
+   "ref": "John 10:6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He shows the same Greek word used for Jesus' parable in John 10:6."
+  },
+  {
+   "t": 7765,
+   "ref": "John 16:29",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads the disciples saying \"now speakest thou plainly, and speakest no proverb.\""
+  },
+  {
+   "t": 7774,
+   "ref": "2 Peter 2:22",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He gives one more use of the same word, \"the true proverb\" of the dog and the sow, to define it."
+  },
+  {
+   "t": 7918,
+   "ref": "John 5:43",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"I am come in my Father's name.\" He rejects the idea that this means only \"in his authority\" and says it means the Father's actual name."
+  },
+  {
+   "t": 7948,
+   "ref": "Matthew 28:19-20",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads the Great Commission. He argues the single name of the Father, the Son and the Holy Ghost is Jesus, like one man being husband, father and son at once."
+  },
+  {
+   "t": 8043,
+   "ref": "1 Timothy 1:17",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"the King eternal, immortal, invisible, the only wise God\" and says that invisible, eternal spirit is the spirit of Christ, the Father."
+  },
+  {
+   "t": 8073,
+   "ref": "Colossians 1:12-19",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that Christ is \"the image of the invisible God\" and creator of all things. On \"it pleased the Father that in him should all fulness dwell,\" he says \"the Father\" is in italics but fits."
+  },
+  {
+   "t": 8230,
+   "ref": "Colossians 2:8-9",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads the KJV \"fulness of the Godhead bodily\" and calls the Trinity a tradition of men. He says only the flesh, the Son, was begotten and had a beginning."
+  },
+  {
+   "t": 8351,
+   "ref": "Hebrews 1:1",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He begins Hebrews 1 in the KJV: God spoke in time past by the prophets.",
+   "note": "He first says \"Hebrews chapter 1-8\" and \"Hebrews 18\" before starting at 1:1."
+  },
+  {
+   "t": 8381,
+   "ref": "Hebrews 1:1-3",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads in the NLT that the Son expresses God's very character and sits at God's right hand. He says \"right hand\" means authority; there is one throne, and Jesus sits on it."
+  },
+  {
+   "t": 8474,
+   "ref": "Matthew 28:19",
+   "kind": "read",
+   "version": "NLT",
+   "point": "Moving to the Son, he reads the baptism command for context and says the Son's name is Jesus."
+  },
+  {
+   "t": 8504,
+   "ref": "Luke 1:26-38",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads Gabriel's announcement. \"Will be called the Son of God\" shows a body being prepared, he says, not a pre-existing Son leaving the Father in heaven. \"Nothing is impossible with God\" answers Jews and Muslims."
+  },
+  {
+   "t": 8778,
+   "ref": "John 16:25",
+   "kind": "cited",
+   "version": "-",
+   "point": "He returns to John 16:25: if there were literal separate persons, Jesus would never have said he spoke of the Father in parables."
+  },
+  {
+   "t": 8811,
+   "ref": "Galatians 4:4",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"God sent his Son, born of a woman, subject to the law,\" then the KJV \"made of a woman.\" A Son who was made and begotten had a beginning, he says, so he did not exist before as a separate person.",
+   "note": "He also reads the verse in the KJV."
+  },
+  {
+   "t": 8843,
+   "ref": "John 5:19",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"the Son can do nothing of himself\" as the helpless flesh, with the Father in it doing the miracles."
+  },
+  {
+   "t": 8904,
+   "ref": "Revelation 1:1",
+   "kind": "cited",
+   "version": "-",
+   "point": "He again cites \"the revelation of Jesus Christ, which God gave unto him\" as God's spirit teaching Christ's human nature what it was."
+  },
+  {
+   "t": 8935,
+   "ref": "John 5:30",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"I can of mine own self do nothing... not mine own will\" as the human will submitting to the deity."
+  },
+  {
+   "t": 8965,
+   "ref": "John 10:38",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"the Father is in me, and I in him\" as two natures kept distinct in one person. He compares Jesus' body to Moses' tabernacle, the tent God lived in."
+  },
+  {
+   "t": 9061,
+   "ref": "Hebrews 1:5-6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"this day have I begotten thee\" and the command for angels to worship the firstborn. \"Begotten\" means to begin, so he argues there was no eternal Son before Genesis 1:1, only the logos plan."
+  },
+  {
+   "t": 9222,
+   "ref": "Isaiah 53:2",
+   "kind": "cited",
+   "version": "-",
+   "point": "He compares the tabernacle, plain animal skins on the outside, with Jesus, who had \"no form\" or comeliness that anyone would desire.",
+   "note": "He names only \"Isaiah 53\"; the words he echoes are from verse 2."
+  },
+  {
+   "t": 9233,
+   "ref": "Isaiah 44:6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"I am the first and the last; and beside me there is no God\" to set beside Revelation."
+  },
+  {
+   "t": 9262,
+   "ref": "Revelation 1:8",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads Jesus saying \"I am Alpha and Omega, the beginning and the ending... the Almighty,\" and says this is Jesus speaking."
+  },
+  {
+   "t": 9281,
+   "ref": "Revelation 1:11",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He goes on to verse 11, \"I am Alpha and Omega, the first and the last,\" and says Jesus is claiming the title God gives himself in Isaiah 44:6."
+  },
+  {
+   "t": 9306,
+   "ref": "Isaiah 9:6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "Moving to the Holy Spirit, he rereads the child's titles and calls them \"the godhead right there\" in one child."
+  },
+  {
+   "t": 9336,
+   "ref": "Matthew 28:19",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads the baptism command once more and says the name of the Holy Ghost is also Jesus."
+  },
+  {
+   "t": 9366,
+   "ref": "1 Corinthians 15:45",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that the last Adam, a title of Jesus, \"was made a quickening spirit\" (a life-giving spirit)."
+  },
+  {
+   "t": 9397,
+   "ref": "2 Corinthians 3:14-18",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads of the veil over Israel's minds and \"Now the Lord is that Spirit,\" taking it as the Lord Jesus being the Spirit."
+  },
+  {
+   "t": 9459,
+   "ref": "Ephesians 4:4-7",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"one Spirit... one Lord... one God and Father of all\" as oneness, not a trinity."
+  },
+  {
+   "t": 9490,
+   "ref": "1 Corinthians 12:3",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that no one can say Jesus is Lord except by the Holy Ghost. He warns that whoever does not confess Jesus as Lord lacks the Spirit and is lost."
+  },
+  {
+   "t": 9584,
+   "ref": "Romans 8:8-11",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that \"the Spirit of God\" and \"the Spirit of Christ\" dwell in believers, and says these are one and the same Spirit."
+  },
+  {
+   "t": 9647,
+   "ref": "Colossians 1:27",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"Christ in you, the hope of glory\": Christ's spirit indwells believers and inspired the prophets."
+  },
+  {
+   "t": 9708,
+   "ref": "Ephesians 2:1",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that believers were \"quickened\" (made alive) from death in sin. He says it was Jesus' spirit that did this, and those without it are lost."
+  },
+  {
+   "t": 9739,
+   "ref": "John 4:24",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He cross-references \"God is a Spirit\": one God, one Jesus, one Lord, no plurality of persons."
+  },
+  {
+   "t": 9770,
+   "ref": "John 14:26",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads that the Father will send the Comforter in Jesus' name and looks up the Greek for \"Comforter\": advocate, intercessor, counsel for the defence."
+  },
+  {
+   "t": 9833,
+   "ref": "Isaiah 9:6",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He ties \"counsel for the defence\" to Isaiah's \"Wonderful, Counsellor\": the Comforter is Jesus' own title."
+  },
+  {
+   "t": 9864,
+   "ref": "John 14:26",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He rereads the verse, adding that the Holy Ghost is the spirit of Christ and the spirit of God."
+  },
+  {
+   "t": 9895,
+   "ref": "John 15:26",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads Jesus saying he himself will send the Comforter from the Father. Set against 14:26, he says this shows Jesus is the Father doing the sending."
+  },
+  {
+   "t": 9957,
+   "ref": "John 14:16-17",
+   "kind": "read",
+   "version": "KJV",
+   "point": "He reads \"I will pray the Father, and he shall give you another Comforter\" as Jesus' human will speaking. The Spirit who \"dwelleth with you\" in Jesus' body will be in them."
+  },
+  {
+   "t": 10018,
+   "ref": "Isaiah 9:6",
+   "kind": "cited",
+   "version": "-",
+   "point": "He links \"another Comforter\" to the Wonderful Counsellor of Isaiah 9:6 again."
+  },
+  {
+   "t": 10048,
+   "ref": "John 14:16-20",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads \"another Advocate\" (footnote: counselor), \"I will not abandon you as orphans,\" and \"I will come to you.\" Only a father keeps children from being orphans, he argues, so Jesus comes back as the Spirit."
+  },
+  {
+   "t": 10171,
+   "ref": "2 Peter 1:20-21",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads that the prophets were moved by the Holy Spirit and did not make up their messages.",
+   "note": "He first says \"Second Peter chapter 2,\" corrects to 1:21, then backs up to verse 20."
+  },
+  {
+   "t": 10264,
+   "ref": "1 Peter 1:10-12",
+   "kind": "read",
+   "version": "NLT",
+   "point": "He reads that \"the Spirit of Christ within\" the prophets foretold Christ's suffering. With 2 Peter 1:21, he concludes the Holy Spirit is Christ's spirit, so the Spirit's name is Jesus."
+  },
+  {
+   "t": 10327,
+   "ref": "Matthew 28:19",
+   "kind": "cited",
+   "version": "-",
+   "point": "He ties the prophets passages back to the baptism command and says the name of the Holy Spirit is Jesus."
+  },
+  {
+   "t": 10544,
+   "ref": "1 Timothy 3:16",
+   "kind": "cited",
+   "version": "-",
+   "point": "In closing he cites \"God was manifest in the flesh\" and the fulness dwelling in Christ bodily. This, he says, is what the apostles, the true early church fathers, believed.",
+   "note": "He also alludes to Colossians 1:19 here."
+  },
+  {
+   "t": 10606,
+   "ref": "Matthew 28:19",
+   "kind": "cited",
+   "version": "-",
+   "point": "He ends on the baptism command and promises that the next study will show which name the apostles invoked every time they baptised."
+  }
+ ],
+ "pl": {
+  "title": "Za kogo mnie ludzie uważają? – Studium o Bóstwie",
+  "question": "Kim jest Bóg według Pisma i jak Ojciec, Syn i Duch Święty mają się do Jezusa?",
+  "summary": "Wychodząc od wyznania Piotra w Ewangelii Mateusza 16, nauczyciel śledzi Boga, który stworzył świat, powołał Abrahama i przemówił do Mojżesza jako „JESTEM”. Na podstawie Judy, Ozeasza i słów Jezusa „JA JESTEM” z Jana 8 dowodzi, że tym Bogiem był Jezus. Długi ciąg fragmentów z Izajasza w rodzaju „tylko Ja jestem Bogiem” wspiera jego sprzeciw wobec nauki o Trójcy, którą uważa za późniejszą i niebiblijną. Potem omawia kolejno Ojca, Syna i Ducha Świętego: Ojciec to według niego duch Boga, Syn to ludzkie ciało narodzone z Marii, a Duch Święty to własny duch Chrystusa mieszkający w wierzących. Kończy wnioskiem, że jedno imię z Mateusza 28:19 to Jezus, i zapowiada rozwinięcie tego w studium o chrzcie.",
+  "claims": [
+   "Nauczyciel uważa, że Bóg, który wszystko stworzył, mówił do Abrahama i dał Mojżeszowi imię „JESTEM”, to Jezus, zanim przyjął ciało.",
+   "Nauczyciel uważa, że Bóg jest jedną osobą, a nie trzema, i że nauka o Trójcy to odejście od nauki apostołów z III i IV wieku.",
+   "Nauczyciel uważa, że Syn Boży to ludzkie ciało Jezusa, narodzone z Marii i zrodzone, czyli mające początek, a Ojciec to boski duch mieszkający w tym ciele.",
+   "Nauczyciel uważa, że mowa Jezusa o Ojcu i Synu to przypowieść (mowa zakryta, zob. Jana 16:25), która oddziela Jego ludzką i boską naturę, a nie rozmowa między osobami.",
+   "Nauczyciel uważa, że Duch Święty to duch Chrystusa, Pocieszyciel, czyli Cudowny Doradca z Izajasza 9:6, mieszkający w wierzących.",
+   "Nauczyciel uważa, że jedno imię Ojca, Syna i Ducha Świętego z Mateusza 28:19 to Jezus, a wiara w to, że Jezus jest Bogiem w ciele, jest konieczna do zbawienia."
+  ],
+  "topics": [
+   "Bóstwo",
+   "nauka o jedności Boga (Oneness)",
+   "Jezus jest Bogiem",
+   "słowa „JA JESTEM”",
+   "Trójca Święta",
+   "dwie natury Chrystusa",
+   "Ojciec, Syn i Duch Święty",
+   "logos",
+   "chrzest w imię Jezusa",
+   "Duch Święty jako duch Chrystusa"
+  ],
+  "steps": [
+   {
+    "point": "Wymienia ten fragment, w którym Jezus pyta „za kogo mnie ludzie uważają”, jako oś całego studium o tym, kim jest Bóg."
+   },
+   {
+    "point": "Wspomina uliczne rozmowy, w których Żydzi słyszą Izajasza 53 (z końcówką rozdziału 52) i mówią, że brzmi to jak opis Jezusa. Podaje to jako przykład proroctwa, które spełnił tylko Jezus.",
+    "note": "Chodzi o Izajasza 52:13–53:12."
+   },
+   {
+    "point": "Stawia Psalm 22 obok Izajasza 53 jako proroctwo mesjańskie (zapowiedź przyjścia Mesjasza), które wskazuje tylko na jedną osobę w historii."
+   },
+   {
+    "point": "Czyta wyznanie Piotra. Słowa „ciało i krew nie objawiły ci tego” odczytuje tak, że nie objawiła tego ludzka strona Jezusa, lecz Ojciec, czyli Duch mieszkający w ciele Jezusa."
+   },
+   {
+    "point": "Przechodzi do wersetu 20, gdzie Jezus każe uczniom milczeć, i mówi, że Jezus panował nad tym, kiedy ujawni, kim jest. Następnie przedstawia swoją tezę: ciało Jezusa to Syn, a Jego duch to Duch Święty i Ojciec."
+   },
+   {
+    "point": "Odczytuje „na początku” jako początek czasu, który Bóg stworzył. Sam Bóg, będąc duchem, jest poza czasem i nie ma początku."
+   },
+   {
+    "point": "Stawia Jana 1 obok Rodzaju 1 i wyjaśnia, że „Słowo” to greckie logos, które zamierza dalej zdefiniować."
+   },
+   {
+    "point": "Łączy Ducha Bożego unoszącego się nad wodami z Duchem, który później mieszkał w Chrystusie. Ponieważ słońce powstało dopiero czwartego dnia, odczytuje „Niech stanie się światłość” jako logos: Boży zamiar wejścia w czas w ciele."
+   },
+   {
+    "point": "Wraca do Jana 1 i odczytuje logos jako Boży plan zbawienia przez stanie się ciałem: „Słowo było Bogiem” znaczy, że wcielenie to sam Bóg. Przejście na „On” wskazuje jego zdaniem na przyszłe ukazanie się Boga w ciele."
+   },
+   {
+    "point": "Czyta o powołaniu Abrama i obietnicy ziemi, aby później pokazać, że Bóg, który zaprzyjaźnił się z Abramem, to Ten, który mówi jako Jezus."
+   },
+   {
+    "point": "Czyta, jak Bóg Wszechmogący zmienił imię Abrama na Abraham, „ojciec wielu narodów”. Mówi, że Bogiem, który tu przemawia, jest Jezus."
+   },
+   {
+    "point": "Czyta o płonącym krzewie. Bóg podaje swoje imię „JESTEM” na wszystkie pokolenia, więc nauczyciel uważa, że każdy, kto później używa tego imienia, jest tym samym Bogiem, który mówił do Abrahama i Mojżesza."
+   },
+   {
+    "point": "Czyta ostrzeżenie Judy przed ludźmi, którzy zapierają się „jedynego Pana Boga i Pana naszego Jezusa Chrystusa”, oraz o Panu, który wybawił Izraela z Egiptu."
+   },
+   {
+    "point": "Przechodzi na NLT, gdzie stoi, że to Jezus wyratował Izraela z Egiptu, i czyta przypis o innych rękopisach. Uznaje to za dowód, że Jezus był Bogiem, który posłał Mojżesza do faraona."
+   },
+   {
+    "point": "Czyta słowa Boga, że jest pośród Izraela, „Pan, wasz Bóg, i nie ma innego”, jako świadectwo Starego Testamentu, że jest tylko jeden Bóg."
+   },
+   {
+    "point": "Podkreśla, że „Bóg jest duchem”: to nie ciało Jezusa mówiło do Mojżesza i Abrahama, lecz Duch, który w tym ciele zamieszkał. Mówi, że plagi na bogów Egiptu były dziełem Jezusa."
+   },
+   {
+    "point": "Czyta historię Samarytanki. Jego zdaniem pokazuje ona, że oddawanie czci w duchu i prawdzie nie potrzebuje świętego miejsca. Widzi tu Jezusa mówiącego wprost „Ja jestem Mesjaszem” i mieszkańców wioski nazywających Go Zbawicielem świata."
+   },
+   {
+    "point": "Czyta „Jestem Panem, twoim Bogiem, od kiedy wyprowadziłem cię z Egiptu” oraz „nie ma innego zbawiciela”. Skoro Juda mówi, że to Jezus wyprowadził Izraela, uważa, że mówi tu Jezus, i nazywa to problemem dla zwolenników Trójcy."
+   },
+   {
+    "point": "Czyta cały rozdział. Słowa „Syn nie może nic czynić sam z siebie” odczytuje jako głos ludzkiej natury Jezusa, a Ojca jako bóstwo w Nim. Mówi, że rozmowa o Synu i Ojcu to przypowieść (mowa zakryta), a oddawanie czci Synowi tak jak Ojcu znaczy, że Jezus jest Bogiem."
+   },
+   {
+    "point": "Przy słowach „przyszedłem w imieniu mojego Ojca” odsyła do nakazu chrztu i mówi, że imię Ojca to Jezus."
+   },
+   {
+    "point": "Łączy „Ja jestem światłością świata” ze światłem z Rodzaju 1 i Jana 1. Słowa „jeśli nie uwierzycie, że JA JESTEM” odczytuje jako przypisanie sobie przez Jezusa Bożego imienia."
+   },
+   {
+    "point": "Idzie za przypisem NLT do Jana 8:24 aż do Wyjścia 3:14, gdzie Bóg mówi Mojżeszowi, że ma na imię „JESTEM”."
+   },
+   {
+    "point": "Porównuje z KJV i zwraca uwagę, że „he” (on) jest tam kursywą, czyli zostało dodane przez tłumaczy. Werset brzmi więc: „jeśli nie uwierzycie, że JA JESTEM, pomrzecie w grzechach swoich”."
+   },
+   {
+    "point": "Wracając do NLT, mówi, że kto nie wierzy, iż Jezus jest Bogiem, który mówił do Mojżesza, nie może być zbawiony. Słowa „gdy wywyższycie Syna Człowieczego… poznacie, że JA JESTEM” odczytuje jako posłuszeństwo ludzkiej strony Jezusa wobec bóstwa w Nim."
+   },
+   {
+    "point": "Przypomina Rodzaju 12 i 17, powołanie Abrama i jego nowe imię, jako przygotowanie do słów Jezusa o Abrahamie w Jana 8.",
+    "note": "Odwołuje się też do Rodzaju 12."
+   },
+   {
+    "point": "Czyta „jesteście prawdziwie moimi uczniami, jeśli trwacie w mojej nauce” i prosi słuchaczy, by zapamiętali ten werset na następne studium o tym, jak człowiek zostaje zbawiony."
+   },
+   {
+    "point": "Przytacza nakaz chrztu, aby pokazać, że chrzest jest dla uczniów obowiązkiem, a nie wyborem."
+   },
+   {
+    "point": "Czyta spór o Abrahama aż do słów „zanim Abraham się narodził, JA JESTEM”. Mówi, że próba ukamienowania Jezusa pokazuje, iż Jezus uważał się za JESTEM z Wyjścia 3."
+   },
+   {
+    "point": "Ponownie czyta w NLT „Jestem, który jestem” i mówi, że to rozstrzyga sprawę: Jezus twierdził, że jest Bogiem."
+   },
+   {
+    "point": "Czyta „Do kogo mnie porównacie? Kto mi dorówna?” przeciw idei Trójcy jako współrównych osób. Uważa, że Bóg się nie zmienia, więc ten werset nadal obowiązuje."
+   },
+   {
+    "point": "Podkreśla „Święty Izraela”, jeden, a nie trzech, oraz „twój Odkupiciel”: jest jeden odkupiciel, Jezus. Mówi, że gołębica przy chrzcie Jezusa ukazuje Ducha Bożego, a nie osobną osobę."
+   },
+   {
+    "point": "Czyta, że Bóg nie odda swojej chwały innemu. Uważa, że prośba Jezusa do Ojca o chwałę byłaby bluźnierstwem, gdyby nie byli jedną osobą."
+   },
+   {
+    "point": "Wyjaśnia „Słowo stało się ciałem” jako wejście Boga spoza czasu w czas, jak niewidzialna dłoń poruszająca się w skórzanej rękawiczce."
+   },
+   {
+    "point": "Czyta „Ja sam jestem Bogiem… nie ma innego Zbawiciela” oraz „wasz Święty, Stwórca i Król Izraela” jako dowód, że w Bogu nie ma wielości osób (więcej niż jednej osoby)."
+   },
+   {
+    "point": "Czyta „Ja jestem pierwszy i ostatni; nie ma innego Boga” i mówi, że zgadza się to ze słowami samego Jezusa w Objawieniu."
+   },
+   {
+    "point": "Przytacza z pamięci słowa Jezusa „początek i koniec, alfa i omega, pierwszy i ostatni”, aby pokazać, że słowa z Izajasza są słowami Jezusa.",
+    "note": "Cytuje z pamięci; dołącza „który był umarły, a żyje na wieki” z Objawienia 1:18."
+   },
+   {
+    "point": "Czyta „Ja sam rozpostarłem niebiosa. Kto był ze mną, gdy czyniłem ziemię?”. Uważa, że gdyby Syn albo Duch współtworzyli świat, z pewnością zostaliby tu wymienieni."
+   },
+   {
+    "point": "Czyta „nie ma innego Boga oprócz mnie, Boga sprawiedliwego i Zbawiciela” i wnioskuje, że to „po prostu Jezus”.",
+    "note": "Zapowiedział wersety 21–22, ale przeczytał tylko werset 21."
+   },
+   {
+    "point": "Czyta, jak Bóg znów pyta „Kto mi dorówna?”, i mówi, że Bóg mocno podkreśla tę myśl."
+   },
+   {
+    "point": "Czyta „Ja sam jestem Bogiem… nikt nie jest do mnie podobny”. Uważa, że gdyby Bóg był trzema osobami, nie mówiłby w ten sposób."
+   },
+   {
+    "point": "Wyjaśnia „Ja i Ojciec jedno jesteśmy” tak, że Jezus jest widzialnym ukazaniem się Ojca i dlatego nikt nie przychodzi do Ojca inaczej niż przez Niego.",
+    "note": "Cytuje z pamięci, w brzmieniu KJV."
+   },
+   {
+    "point": "Wskazuje na „objawienie Jezusa Chrystusa, które dał Mu Bóg” jako na bóstwo uczące rosnącą ludzką naturę Jezusa, kim On jest."
+   },
+   {
+    "point": "Czyta ostrzeżenie przed zwodzicielami, którzy zaprzeczają, że Chrystus przyszedł w prawdziwym ciele. Odnosi je do każdego, kto zaprzecza, że Jezus jest Bogiem w ciele, i mówi, że tylko ci, którzy trwają w nauce Chrystusa, mają Ojca i Syna."
+   },
+   {
+    "point": "Na marginesie przytacza Rodzaju 6. Mówi, że upadli aniołowie mieli dzieci z kobietami, a duchy tych dzieci to demony."
+   },
+   {
+    "point": "Czyta ostrzeżenie przed pustą filozofią i słowa „w Chrystusie mieszka cała pełnia Boga w ludzkim ciele”. Rozumie to tak, że Ojciec, Syn i Duch Święty to sposoby, w jakie sam Jezus się ukazuje."
+   },
+   {
+    "point": "Wyjaśnia „uczyńmy człowieka na nasz obraz” jako liczbę mnogą majestatu (królewską), a nie kilka osób. Mówi, że człowiek odzwierciedla Boga jako dusza, ciało i duch, co odpowiada Ojcu, Synowi i Duchowi."
+   },
+   {
+    "point": "Przytacza „obietnicę Ojca” z Dziejów 2: Duch Święty, który mieszka w wierzących, to własny duch Chrystusa, czyli Ojciec."
+   },
+   {
+    "point": "Czyta „Czy nie wszyscy jesteśmy dziećmi jednego Ojca?” i podaje brzmienie KJV „jeden ojciec… jeden Bóg”. Mówi, że Bóg Starego Testamentu nazywający siebie Ojcem to Jezus, zanim przyjął ciało.",
+    "note": "Podaje też brzmienie KJV."
+   },
+   {
+    "point": "Wraca do słów „Bóg jest duchem”: Bóg nie jest ciałem, krzewem ani ptakiem; jest niewidzialny, a Jezus wszedł w ciało.",
+    "note": "Mówi „Jana 4:4”; czytany werset to Jana 4:24."
+   },
+   {
+    "point": "Czyta o Tym, który przychodzi z Edomu w szatach splamionych na czerwono, „Pan… który ma moc zbawić”, i mówi, że chodzi o Jezusa Chrystusa."
+   },
+   {
+    "point": "Czyta „Ty nadal jesteś naszym Ojcem… naszym Odkupicielem”, aby pokazać, że duch Boga jest Ojcem."
+   },
+   {
+    "point": "Czyta „jeden Bóg, Ojciec” oraz „jeden Pan, Jezus Chrystus”. „Pana Jezusa Chrystusa” odczytuje jako stronę ludzką, a Ojca jako bóstwo; razem to jeden Bóg."
+   },
+   {
+    "point": "Czyta imiona dziecka jako Bóstwo w jednej osobie: Cudowny Doradca (Duch Święty), Bóg Mocny, Ojciec Odwieczny i Książę Pokoju (Syn)."
+   },
+   {
+    "point": "Czyta, jak Bóg czeka, aż Izrael nazwie Go Ojcem, i mówi, że to Jezus mówi jako Ojciec, zanim przyjął ciało."
+   },
+   {
+    "point": "Czyta „Ty jesteś moim Ojcem, moim Bogiem i Skałą mojego zbawienia” jako dowód, że bóstwo przemawiające w Starym Testamencie to Ojciec, którego utożsamia z Jezusem."
+   },
+   {
+    "point": "Czyta „Ja i Ojciec jedno jesteśmy” jako słowa Jezusa."
+   },
+   {
+    "point": "Czyta „Ojciec jest we mnie, a ja w Ojcu”. Mówi, że Jezus będąc w ciele nie mógł wprost powiedzieć, że jest Ojcem, ale mógł powiedzieć, że Ojciec jest w tym ciele."
+   },
+   {
+    "point": "Czyta „Chrystus objawił się w ludzkim ciele” jako wielką tajemnicę wiary."
+   },
+   {
+    "point": "Czyta „kto mnie widzi, widzi Tego, który mnie posłał”. Mówi, że Ojciec posłał ciało, by się narodziło, aby mógł w nim zamieszkać i przelać krew.",
+    "note": "Mówi „Jana rozdział 2 werset 44” i poprawia się na 12:44–45."
+   },
+   {
+    "point": "Czyta, że kto przyjmuje Jezusa, przyjmuje Ojca, który Go posłał. Mówi, że Ojciec jest ukryty w ciele przed pysznymi."
+   },
+   {
+    "point": "Czyta „nikt nie przychodzi do Ojca inaczej jak tylko przeze mnie… widzieliście Go” jako lekkie uchylenie przez Jezusa zasłony.",
+    "note": "Zapowiedział wersety 6–11, ale przeczytał tylko 6–7."
+   },
+   {
+    "point": "Czyta, że świątynią nieba są Pan Bóg Wszechmogący i Baranek. Boga rozumie jako Ducha, a Baranka jako Jego ciało, więc widzieć ciało Jezusa to widzieć świątynię."
+   },
+   {
+    "point": "Czyta obietnicę Jezusa, że przestanie mówić obrazowo i powie otwarcie o Ojcu."
+   },
+   {
+    "point": "Przechodzi do KJV, gdzie stoi „proverbs” (przypowieści), i do definicji greckiego słowa: mowa zakryta lub obrazowa. Uważa, że cała mowa Jezusa o Ojcu i Synu to przypowieść, a nie dwie osoby."
+   },
+   {
+    "point": "Pokazuje to samo greckie słowo użyte o przypowieści Jezusa w Jana 10:6."
+   },
+   {
+    "point": "Czyta słowa uczniów „teraz mówisz otwarcie i nie mówisz w przypowieści”."
+   },
+   {
+    "point": "Podaje jeszcze jedno użycie tego słowa, „prawdziwe przysłowie” o psie i świni, aby je zdefiniować."
+   },
+   {
+    "point": "Czyta „Przyszedłem w imieniu mojego Ojca”. Odrzuca pogląd, że znaczy to tylko „z Jego upoważnienia”, i mówi, że chodzi o rzeczywiste imię Ojca."
+   },
+   {
+    "point": "Czyta wielkie posłannictwo (nakaz misyjny). Uważa, że jedno imię Ojca, Syna i Ducha Świętego to Jezus, tak jak jeden człowiek może być jednocześnie mężem, ojcem i synem."
+   },
+   {
+    "point": "Czyta „Królowi wieków, nieśmiertelnemu, niewidzialnemu, jedynemu mądremu Bogu” i mówi, że ten niewidzialny, wieczny duch to duch Chrystusa, czyli Ojciec."
+   },
+   {
+    "point": "Czyta, że Chrystus jest „obrazem Boga niewidzialnego” i Stwórcą wszystkiego. Przy słowach „upodobało się Ojcu, aby w Nim zamieszkała cała pełnia” mówi, że „Ojciec” jest tam kursywą (dodane przez tłumaczy), ale pasuje do sensu."
+   },
+   {
+    "point": "Czyta w KJV „pełnię Bóstwa cieleśnie” i nazywa Trójcę tradycją ludzką. Mówi, że tylko ciało, czyli Syn, zostało zrodzone i miało początek."
+   },
+   {
+    "point": "Zaczyna Hebrajczyków 1 w KJV: Bóg mówił dawniej przez proroków.",
+    "note": "Najpierw mówi „Hebrajczyków rozdział 1–8” i „Hebrajczyków 18”, a potem zaczyna od 1:1."
+   },
+   {
+    "point": "Czyta w NLT, że Syn wyraża sam charakter Boga i zasiada po prawicy Boga. Mówi, że „prawica” oznacza władzę; w niebie jest jeden tron i zasiada na nim Jezus."
+   },
+   {
+    "point": "Przechodząc do tematu Syna, czyta dla kontekstu nakaz chrztu i mówi, że imię Syna to Jezus."
+   },
+   {
+    "point": "Czyta zwiastowanie Gabriela. Słowa „będzie nazwany Synem Bożym” pokazują jego zdaniem przygotowanie ciała, a nie istniejącego wcześniej Syna, który opuszcza Ojca w niebie. „Dla Boga nie ma nic niemożliwego” to według niego odpowiedź dla Żydów i muzułmanów."
+   },
+   {
+    "point": "Wraca do Jana 16:25: gdyby istniały dosłownie odrębne osoby, Jezus nigdy nie powiedziałby, że mówi o Ojcu w przypowieściach."
+   },
+   {
+    "point": "Czyta „Bóg zesłał swojego Syna, zrodzonego z niewiasty, poddanego Prawu”, a potem KJV „made of a woman” (uczynionego z niewiasty). Syn, który został uczyniony i zrodzony, miał początek, więc według niego nie istniał wcześniej jako odrębna osoba.",
+    "note": "Czyta ten werset także w KJV."
+   },
+   {
+    "point": "Czyta „Syn nie może nic czynić sam z siebie” jako mowę o bezradnym ciele, w którym cuda czyni Ojciec."
+   },
+   {
+    "point": "Ponownie przytacza „objawienie Jezusa Chrystusa, które dał Mu Bóg” jako Ducha Bożego uczącego ludzką naturę Chrystusa, czym ona jest."
+   },
+   {
+    "point": "Czyta „Ja sam z siebie nic nie mogę czynić… nie mojej woli” jako poddanie się woli ludzkiej bóstwu."
+   },
+   {
+    "point": "Czyta „Ojciec jest we mnie, a ja w Nim” jako dwie natury zachowane osobno w jednej osobie. Porównuje ciało Jezusa do przybytku Mojżesza, namiotu, w którym mieszkał Bóg."
+   },
+   {
+    "point": "Czyta „dziś Cię zrodziłem” i nakaz, by aniołowie oddali pokłon pierworodnemu. „Zrodzić” znaczy dać początek, więc uważa, że przed Rodzaju 1:1 nie było wiecznego Syna, a jedynie zamiar, czyli logos."
+   },
+   {
+    "point": "Porównuje przybytek, z zewnątrz zwykłe zwierzęce skóry, z Jezusem, który nie miał „postaci” ani urody, której ktoś mógłby pragnąć.",
+    "note": "Wymienia tylko „Izajasza 53”; słowa, do których nawiązuje, pochodzą z wersetu 2."
+   },
+   {
+    "point": "Czyta „Ja jestem pierwszy i ostatni, a oprócz mnie nie ma Boga”, aby zestawić to z Objawieniem."
+   },
+   {
+    "point": "Czyta słowa Jezusa „Ja jestem Alfa i Omega, początek i koniec… Wszechmogący” i mówi, że to mówi Jezus."
+   },
+   {
+    "point": "Przechodzi do wersetu 11, „Ja jestem Alfa i Omega, pierwszy i ostatni”, i mówi, że Jezus przypisuje sobie tytuł, który Bóg nadaje sobie w Izajasza 44:6."
+   },
+   {
+    "point": "Przechodząc do tematu Ducha Świętego, ponownie czyta imiona dziecka i nazywa je „Bóstwem właśnie tutaj” w jednym dziecku."
+   },
+   {
+    "point": "Jeszcze raz czyta nakaz chrztu i mówi, że imię Ducha Świętego to także Jezus."
+   },
+   {
+    "point": "Czyta, że ostatni Adam, czyli jeden z tytułów Jezusa, „stał się duchem ożywiającym” (dającym życie)."
+   },
+   {
+    "point": "Czyta o zasłonie na umysłach Izraela i słowa „Pan zaś jest Duchem”, rozumiejąc je tak, że Pan Jezus jest Duchem."
+   },
+   {
+    "point": "Czyta „jeden Duch… jeden Pan… jeden Bóg i Ojciec wszystkich” jako naukę o jedności Boga, a nie o trójcy."
+   },
+   {
+    "point": "Czyta, że nikt nie może powiedzieć „Jezus jest Panem” inaczej niż przez Ducha Świętego. Ostrzega, że kto nie wyznaje Jezusa jako Pana, nie ma Ducha i jest zgubiony."
+   },
+   {
+    "point": "Czyta, że w wierzących mieszka „Duch Boży” i „Duch Chrystusa”, i mówi, że to jeden i ten sam Duch."
+   },
+   {
+    "point": "Czyta „Chrystus w was, nadzieja chwały”: duch Chrystusa mieszka w wierzących i natchnął proroków."
+   },
+   {
+    "point": "Czyta, że wierzący zostali „ożywieni” ze śmierci w grzechach. Mówi, że uczynił to duch Jezusa, a ci, którzy go nie mają, są zgubieni."
+   },
+   {
+    "point": "Zestawia to ze słowami „Bóg jest duchem”: jeden Bóg, jeden Jezus, jeden Pan, bez wielości osób."
+   },
+   {
+    "point": "Czyta, że Ojciec pośle Pocieszyciela w imieniu Jezusa, i sprawdza greckie słowo „Pocieszyciel”: rzecznik, orędownik, obrońca."
+   },
+   {
+    "point": "Łączy „obrońcę” z „Cudownym Doradcą” z Izajasza: Pocieszyciel to tytuł samego Jezusa."
+   },
+   {
+    "point": "Czyta werset ponownie i dodaje, że Duch Święty to duch Chrystusa i duch Boga."
+   },
+   {
+    "point": "Czyta, że Jezus sam pośle Pocieszyciela od Ojca. Zestawiając to z 14:26, mówi, że pokazuje to, iż Jezus jest Ojcem, który posyła."
+   },
+   {
+    "point": "Czyta „Ja poproszę Ojca, a da wam innego Pocieszyciela” jako mowę ludzkiej woli Jezusa. Duch, który „przebywa z wami” w ciele Jezusa, będzie w nich."
+   },
+   {
+    "point": "Ponownie łączy „innego Pocieszyciela” z Cudownym Doradcą z Izajasza 9:6."
+   },
+   {
+    "point": "Czyta „innego Orędownika” (przypis: doradcę), „nie zostawię was sierotami” i „przyjdę do was”. Uważa, że tylko ojciec chroni dzieci przed sieroctwem, więc Jezus wraca jako Duch."
+   },
+   {
+    "point": "Czyta, że prorocy byli prowadzeni przez Ducha Świętego i nie wymyślali swoich przesłań.",
+    "note": "Najpierw mówi „Drugi Piotra rozdział 2”, poprawia się na 1:21, a potem cofa się do wersetu 20."
+   },
+   {
+    "point": "Czyta, że „Duch Chrystusa w” prorokach zapowiadał cierpienia Chrystusa. Razem z 2 Piotra 1:21 prowadzi go to do wniosku, że Duch Święty to duch Chrystusa, więc imię Ducha to Jezus."
+   },
+   {
+    "point": "Łączy fragmenty o prorokach z nakazem chrztu i mówi, że imię Ducha Świętego to Jezus."
+   },
+   {
+    "point": "Na zakończenie przytacza „Bóg objawił się w ciele” i pełnię mieszkającą w Chrystusie cieleśnie. Mówi, że w to wierzyli apostołowie, prawdziwi ojcowie wczesnego Kościoła.",
+    "note": "Nawiązuje tu też do Kolosan 1:19."
+   },
+   {
+    "point": "Kończy na nakazie chrztu i zapowiada, że następne studium pokaże, jakie imię apostołowie wzywali za każdym razem, gdy chrzcili."
+   }
+  ]
+ },
+ "dur": 10629,
+ "video": null
+}

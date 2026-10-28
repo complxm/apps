@@ -186,6 +186,8 @@ fvl-button[hidden] { display: none; }
   outline: none;
 }
 .row > span { display: block; }
+/* Kickers in rows keep their flex layout, so the dot separators are spaced. */
+.row > .kicker { display: flex; }
 .row-head { display: flex !important; align-items: center; justify-content: space-between; gap: var(--fvl-space-icon-gap); }
 .row-marks { display: inline-flex; gap: var(--fvl-space-stack-related); color: var(--fvl-color-text-muted); }
 .row-marks .saved { color: var(--fvl-color-accent-text); }
@@ -863,3 +865,42 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   cursor: pointer;
 }
 .link-btn:hover { text-decoration: underline; }
+
+/* Studies: the passages a teacher turns to, in his order. */
+#thMode { align-self: flex-start; }
+.st-group { display: grid; gap: var(--fvl-space-stack-related); }
+.st-group + .st-group { margin-top: var(--fvl-space-stack-group); }
+.st-group-h {
+  margin: 0;
+  display: grid;
+  gap: var(--fvl-space-stack-related);
+  font-family: var(--fvl-type-h3-family);
+  font-size: var(--fvl-type-h3-size);
+  font-weight: var(--fvl-type-h3-weight);
+  line-height: var(--fvl-type-h3-line-height);
+  letter-spacing: var(--fvl-type-h3-tracking);
+}
+.section-head .st-question {
+  color: var(--fvl-color-text-primary);
+  font-size: var(--fvl-type-lead-size);
+  line-height: var(--fvl-type-lead-line-height);
+  letter-spacing: var(--fvl-type-lead-tracking);
+}
+.st-claims {
+  display: grid;
+  gap: var(--fvl-space-stack-related);
+  max-width: var(--fvl-layout-width-prose);
+  background: var(--fvl-color-bg-surface);
+  border-radius: var(--fvl-radius-container);
+  padding: var(--fvl-space-inset-container);
+}
+.st-claims ul { margin: 0; padding-left: var(--fvl-space-inset-item-x); display: grid; gap: var(--fvl-space-stack-related); color: var(--fvl-color-text-secondary); }
+.st-time { font-family: var(--fvl-type-data-family); font-variant-numeric: var(--fvl-type-data-numeric); letter-spacing: 0; }
+/* A passage only mentioned reads quieter than one read aloud. */
+.row.is-cited .row-title { color: var(--fvl-color-text-secondary); }
+/* The study passage: one verse per line, inside the quotation rule. */
+.st-text { display: grid; padding-left: 0; }
+.st-text .verse { padding-left: 0; }
+.st-text .seg-ref { margin: var(--fvl-space-stack-related) 0 0; }
+.st-text .seg-gap { margin: 0; padding: var(--fvl-space-stack-related) 0; color: var(--fvl-color-text-muted); }
+.st-kjv { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--fvl-space-icon-gap); }
