@@ -19,7 +19,8 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - **Tap a bridge** and it grows into a full-screen reader: promise, fulfilment, why they connect. The rest of the app is hidden. The top and bottom bars step aside as you read down and return on the way up.
 - **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.
 - **Bible**: the whole Berean Standard Bible, chapter by chapter. Tap any verse for its cross-references in two groups, each strongest first with its text: **Points to** (the verse's own links, 344,799 in total) and **Referenced by** (verses whose links land here, 513,837 entries, since OpenBible lists each link one way only). Tap one to jump there. Swipe between chapters. Every chapter, verse and bridge passage links to the NLT on Bible Gateway.
-- **Threads** read as numbered sequences, the **Map** shows Old and New Testament books in two columns with the bridges between them, and **Saved** collects starred bridges.
+- **Threads** read as numbered sequences (including **The Appointed Times of Leviticus 23**, with each feast's next date), the **Map** shows Old and New Testament books in two columns with the bridges between them, and **Saved** collects starred bridges.
+- Every bridge ends with **How strong is this link**: how the New Testament uses the passage, how strong the connection is, and the evidence for it.
 
 ### Bible data
 
@@ -47,7 +48,24 @@ Tap a verse and the sheet shows it word by word in Hebrew (Old Testament) or Gre
 
 ### Evidence for each bridge
 
-`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage introduces the words as Scripture, reference checks, and how closely each quoted text matches its reference. The reading layout shows the real link strength. The vote counts in `prophecies_66_books.json` (318–890) matched no OpenBible data, so they are not shown there; the classic page still uses them.
+`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage refers to Scripture nearby, reference checks, and how closely each quoted text matches its reference. The vote counts in `prophecies_66_books.json` (318–890) matched no OpenBible data, so they are not shown in the reading layout; the classic page still uses them.
+
+### How strong is each link
+
+`data/review.json` holds a check of every bridge against the BSB text, the evidence above and the way the New Testament uses the Old, written with AI assistance as suggestions for the editor:
+
+- `link`: quotation, allusion or shared theme; `reading`: prophecy, typology, promise or parallel; `strength`: strong, moderate or weak.
+- `note` / `notePl`: a few plain sentences on how we know the connection is (or is not) there.
+- `keyOt`, `keyNt` (exact BSB phrases) and `keyOtPl`, `keyNtPl` (exact UBG phrases): the words that carry the link.
+- `verdict` (keep, revise, reconsider) and `issues`: editorial notes, not shown to readers.
+
+The reader now shows both passages from the chosen Bible (BSB, UBG or Gdańska) with those words marked, and a **How strong is this link** panel: strength, kind of link, the note, the strongest OpenBible cross-reference, shared wording and the verse that refers to Scripture. The bridge file's own quotations stay in `prophecies_66_books.json` for search and the classic page.
+
+### The appointed times (Leviticus 23)
+
+`data/appointed_times.json` (with `data/pl/appointed_times.json`) adds a seventh thread and seven bridges, p78–p84, beside the original data: the Sabbath, Passover, Unleavened Bread, Firstfruits, Weeks (Pentecost), Trumpets and Tabernacles; the Day of Atonement step uses the existing bridge p50. Their passages are quoted from the BSB. `times` gives each feast's Hebrew date, the New Testament basis (or says when a link is only a reading, as for Trumpets) and its key Hebrew and Greek words, which open the dictionary.
+
+The thread and each feast show the next date, computed in the browser from the Hebrew calendar in `Intl` (the calculated calendar of Jewish practice today). Firstfruits is counted from the weekly Sabbath during Unleavened Bread, so it and Weeks fall on Sundays; the rabbinic dates (16 Nisan, 6 Sivan) are shown beside them.
 
 Files: `index.html`, `ui.css`, `ui.js`, data loaded from `data/*.json`. The original single-file layout is kept as `bible_prophecy_explorer.html` (rebuilt by `scripts/generate_app.py`).
 

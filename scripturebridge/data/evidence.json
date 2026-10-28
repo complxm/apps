@@ -2978,5 +2978,185 @@
    "ot": 0.62,
    "nt": 0.71
   }
+ },
+ "p78": {
+  "votes": null,
+  "links": [],
+  "linkCount": 0,
+  "overlap": {
+   "words": 2,
+   "text": "a sabbath"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p79": {
+  "votes": 4,
+  "links": [
+   [
+    "Lev.23.5",
+    "1Cor.5.7-8",
+    4
+   ],
+   [
+    "Matt.26.2",
+    "Exod.12.11-14",
+    2
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "the passover"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p80": {
+  "votes": 4,
+  "links": [
+   [
+    "1Cor.5.8",
+    "Lev.23.6",
+    4
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "the feast"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p81": {
+  "votes": 3,
+  "links": [
+   [
+    "Lev.23.10",
+    "1Cor.15.20-23",
+    3
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 3,
+   "text": "the firstfruits of"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p82": {
+  "votes": 4,
+  "links": [
+   [
+    "Lev.23.16",
+    "Acts.2.1",
+    4
+   ],
+   [
+    "Acts.2.1",
+    "Lev.23.15-21",
+    3
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "the day"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p83": {
+  "votes": 9,
+  "links": [
+   [
+    "Lev.23.24",
+    "1Cor.15.52",
+    9
+   ],
+   [
+    "Lev.23.24",
+    "1Thess.4.16",
+    8
+   ]
+  ],
+  "linkCount": 2,
+  "overlap": {
+   "words": 2,
+   "text": "the first"
+  },
+  "formula": null,
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
+ },
+ "p84": {
+  "votes": 3,
+  "links": [
+   [
+    "Zech.14.16",
+    "John.7.37-39",
+    3
+   ]
+  ],
+  "linkCount": 1,
+  "overlap": {
+   "words": 2,
+   "text": "of the"
+  },
+  "formula": {
+   "ref": "John.7.38",
+   "phrase": "Whoever believes in Me, as the Scripture has said: ‘Streams of living water will flow from…"
+  },
+  "refs": {
+   "ot": "ok",
+   "nt": "ok"
+  },
+  "textMatch": {
+   "ot": 1.0,
+   "nt": 1.0
+  }
  }
 }

@@ -67,7 +67,7 @@ const STR = {
     'empty.desc': 'Try another word, or clear the filters.', clearFilters: 'Clear filters',
     all: 'All', allBooks: 'All books', ot: 'Old Testament', nt: 'New Testament', otBooks: 'Old Testament books', ntBooks: 'New Testament books',
     'filter.title': 'Filter bridges', 'filter.desc': 'Narrow the list by relationship and by book.', 'filter.rel': 'Relationship',
-    'threads.lead': 'Six paths from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
+    'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
     'saved.emptyH': 'Nothing saved yet', 'saved.emptyD': 'Open a bridge and tap the star to keep it here.', 'saved.lead': '{n} {bridge}, in the order you saved them.',
@@ -93,6 +93,13 @@ const STR = {
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
     wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
     passageErr: 'Could not load this passage.', loadErr: 'Could not load the bridges. Check your connection and reload.',
+    'ev.title': 'How strong is this link', 'ev.strong': 'Strong link', 'ev.moderate': 'Moderate link', 'ev.weak': 'Weak link',
+    'ev.quotation': 'Quoted', 'ev.allusion': 'Echoed', 'ev.theme': 'Shared theme',
+    'ev.prophecy': 'Prophecy', 'ev.typology': 'Typology', 'ev.promise': 'Promise', 'ev.parallel': 'Parallel',
+    'ev.votes': 'Strongest OpenBible.info cross-reference: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info lists no direct cross-reference between these passages.',
+    'ev.overlap': 'Shared wording, {n} {word} in a row:', 'ev.formula': '{ref} refers to Scripture:',
+    'moed.title': 'The appointed time', 'moed.next': 'Next', 'moed.today': 'today', 'moed.now': 'now, until {date}',
+    'moed.words': 'Key words', 'moed.reading': 'A reading', 'moed.nt': 'In the New Testament', 'moed.noCal': 'This browser cannot show Hebrew calendar dates.',
   },
   pl: {
     tagline: 'Obietnice Starego Testamentu i ich wypełnienie w Nowym Testamencie, we wszystkich 66 księgach.',
@@ -103,7 +110,7 @@ const STR = {
     'empty.desc': 'Spróbuj innego słowa albo wyczyść filtry.', clearFilters: 'Wyczyść filtry',
     all: 'Wszystkie', allBooks: 'Wszystkie księgi', ot: 'Stary Testament', nt: 'Nowy Testament', otBooks: 'Księgi Starego Testamentu', ntBooks: 'Księgi Nowego Testamentu',
     'filter.title': 'Filtruj mosty', 'filter.desc': 'Zawęź listę według rodzaju powiązania i księgi.', 'filter.rel': 'Rodzaj powiązania',
-    'threads.lead': 'Sześć ścieżek od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
+    'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
     'saved.emptyH': 'Nic jeszcze nie zapisano', 'saved.emptyD': 'Otwórz most i dotknij gwiazdki, aby go tu zachować.', 'saved.lead': '{n} {bridge}, w kolejności zapisywania.',
@@ -129,6 +136,13 @@ const STR = {
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
     wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
     passageErr: 'Nie udało się wczytać fragmentu.', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
+    'ev.title': 'Jak mocne jest to powiązanie', 'ev.strong': 'Mocne powiązanie', 'ev.moderate': 'Umiarkowane powiązanie', 'ev.weak': 'Słabe powiązanie',
+    'ev.quotation': 'Cytat', 'ev.allusion': 'Nawiązanie', 'ev.theme': 'Wspólny temat',
+    'ev.prophecy': 'Proroctwo', 'ev.typology': 'Typologia', 'ev.promise': 'Obietnica', 'ev.parallel': 'Paralela',
+    'ev.votes': 'Najmocniejszy odnośnik OpenBible.info: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info nie podaje bezpośredniego odnośnika między tymi fragmentami.',
+    'ev.overlap': 'Wspólne sformułowanie w angielskim BSB, {n} {word} z rzędu:', 'ev.formula': '{ref} odwołuje się do Pisma:',
+    'moed.title': 'Wyznaczony czas', 'moed.next': 'Najbliższy termin', 'moed.today': 'dziś', 'moed.now': 'trwa, do {date}',
+    'moed.words': 'Słowa kluczowe', 'moed.reading': 'Interpretacja', 'moed.nt': 'W Nowym Testamencie', 'moed.noCal': 'Ta przeglądarka nie pokazuje dat kalendarza hebrajskiego.',
   },
 };
 // Plural forms: English [one, other]; Polish [one, few (2–4, 22–24…), many].
@@ -154,6 +168,13 @@ function t(key, vars = {}) {
     if (FORMS.en[k]) return pluralForm(vars.n ?? 0, k);
     return m;
   });
+}
+// Like t(), escaped, with some placeholders filled by ready-made HTML (links).
+function tHTML(key, vars = {}, html = {}) {
+  const marks = [];
+  const v = { ...vars };
+  Object.keys(html).forEach((k, i) => { v[k] = `\u0001${i}\u0001`; marks.push(html[k]); });
+  return esc(t(key, v)).replace(/\u0001(\d+)\u0001/g, (m, i) => marks[+i]);
 }
 const catLabel = (p) => (lang() === 'pl' ? CAT_PL[p.category] : p.categoryLabel) || p.categoryLabel;
 const typeLabel = (ty) => (lang() === 'pl' ? TYPE_PL[ty] : ty) || ty;
@@ -193,7 +214,7 @@ function applyStatic() {
 const CATS = ['birth', 'ministry', 'passion', 'resurrection', 'covenant'];
 const TABS = ['bridges', 'bible', 'threads', 'map', 'saved'];
 const S = { tab: null, cat: 'all', type: 'all', book: null, q: '', mapCat: 'all', mapBook: null, mapScroll: false, bible: {}, thread: null, mapDrawn: false };
-const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {}, PL: {}, TPL: {}, EV: {} };
+const D = { P: [], byId: new Map(), T: {}, OT: [], NT: [], catLabel: {}, PL: {}, TPL: {}, EV: {}, RV: null, TIMES: [], TIMEBY: new Map(), CALNOTE: {} };
 let saved = store.get('scripturebridge_saved_v2', []);
 const readSet = new Set(store.get('sb_read_v1', []));
 let lastRead = store.get('sb_last_v1', null);
@@ -205,10 +226,27 @@ async function load() {
   D.P = P; D.T = T; D.OT = books.old_testament; D.NT = books.new_testament;
   P.forEach((p) => { D.byId.set(p.id, p); D.catLabel[p.category] = D.catLabel[p.category] || p.categoryLabel; });
   // Polish versions of the bridges and threads (English stays the master; missing pieces fall back to it).
-  const [pl, tpl, ev] = await Promise.all([get('pl/prophecies.json').catch(() => []), get('pl/threads.json').catch(() => ({})), get('evidence.json').catch(() => ({}))]);
+  const [pl, tpl, ev, at, atPl] = await Promise.all([get('pl/prophecies.json').catch(() => []), get('pl/threads.json').catch(() => ({})), get('evidence.json').catch(() => ({})),
+    get('appointed_times.json').catch(() => null), get('pl/appointed_times.json').catch(() => null)]);
   D.EV = ev; // checks computed from the texts and OpenBible (scripts/build_evidence.py)
   pl.forEach((x) => { D.PL[x.id] = x; });
   D.TPL = tpl;
+  // The appointed times of Leviticus 23: their bridges and thread live in their own file, beside the original data.
+  if (at) {
+    at.bridges.forEach((p) => { if (!D.byId.has(p.id)) { D.P.push(p); D.byId.set(p.id, p); } });
+    Object.assign(D.T, at.threads);
+    D.TIMES = at.times || [];
+    D.CALNOTE = at.calendarNote || {};
+    D.TIMES.forEach((x) => D.TIMEBY.set(x.bridge, x));
+  }
+  if (atPl) { atPl.bridges.forEach((x) => { D.PL[x.id] = x; }); Object.assign(D.TPL, atPl.threads); }
+  loadReview(); // notes, link strength and key phrases: only the reader needs them
+}
+// The review of each bridge (data/review.json): fetched after the first screen.
+let reviewP = null;
+function loadReview() {
+  reviewP ??= fetch('data/review.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})).then((d) => { D.RV = d.bridges || {}; return D.RV; });
+  return reviewP;
 }
 
 function filtered() {
@@ -278,6 +316,72 @@ function syncBookUI() {
   $$('.book').forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.book || null) === S.book)));
 }
 
+// ---------- appointed times (Leviticus 23) ----------
+// Dates come from the Hebrew calendar built into the browser (Intl), the fixed calendar of Jewish practice today.
+// Days are handled as UTC noons, so time zones and daylight saving never move a date.
+const DAY = 864e5;
+const HEBF = (() => {
+  try {
+    const f = new Intl.DateTimeFormat('en-u-ca-hebrew', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+    return /Nisan/.test(f.format(Date.UTC(2027, 3, 21, 12))) ? f : null;
+  } catch { return null; }
+})();
+const todayNoon = () => { const d = new Date(); return Date.UTC(d.getFullYear(), d.getMonth(), d.getDate(), 12); };
+let moedDays = null; // { today, marks: Map('Nisan 15' -> [dates]) } for 70 days back to 420 ahead
+function moedMarks() {
+  const today = todayNoon();
+  if (moedDays?.today === today) return moedDays;
+  const marks = new Map();
+  for (let i = -70; i <= 420; i++) {
+    const ms = today + i * DAY, parts = HEBF.formatToParts(ms);
+    const k = `${parts.find((x) => x.type === 'month').value} ${parts.find((x) => x.type === 'day').value}`;
+    if (!marks.has(k)) marks.set(k, []);
+    marks.get(k).push(ms);
+  }
+  return (moedDays = { today, marks });
+}
+// Next (or current) occurrence: { s, e } first and last day, plus alt (the other reckoning, or the eighth day).
+function moedNext(tm) {
+  const today = todayNoon(), w = tm.when;
+  if (w === 'weekly') { const s = today + ((6 - new Date(today).getUTCDay() + 7) % 7) * DAY; return { s, e: s }; }
+  if (!HEBF) return null;
+  const { marks } = moedMarks();
+  if (w === 'firstfruits' || w === 'weeks') {
+    // The Sunday within the seven days of Unleavened Bread (15–21 Nisan); Weeks is 49 days after it.
+    const add = w === 'weeks' ? 49 * DAY : 0;
+    for (const n15 of marks.get('Nisan 15') || []) {
+      let sun = n15;
+      while (new Date(sun).getUTCDay() !== 0) sun += DAY;
+      if (sun + add >= today) return { s: sun + add, e: sun + add, alt: n15 + DAY + add };
+    }
+    return null;
+  }
+  const len = (w.days || 1) - 1;
+  for (const s of marks.get(`${w.m} ${w.d}`) || []) {
+    if (s + len * DAY >= today) return { s, e: s + len * DAY, alt: w.eighth ? s + (len + 1) * DAY : null };
+  }
+  return null;
+}
+const dateLoc = () => (lang() === 'pl' ? 'pl-PL' : 'en-GB');
+const fmtDate = (ms, o) => new Intl.DateTimeFormat(dateLoc(), { timeZone: 'UTC', ...o }).format(ms);
+const longDate = (ms) => fmtDate(ms, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+function rangeText(r, short) {
+  const o = { weekday: short ? 'short' : 'long', day: 'numeric', month: 'long', year: 'numeric' };
+  if (r.s === r.e) return fmtDate(r.s, o);
+  const f = new Intl.DateTimeFormat(dateLoc(), { timeZone: 'UTC', ...o, weekday: 'short' });
+  try { return f.formatRange(r.s, r.e); } catch { return `${f.format(r.s)} – ${f.format(r.e)}`; }
+}
+function untilText(r) {
+  const today = todayNoon();
+  if (today >= r.s && today <= r.e) return r.s === r.e ? t('moed.today') : t('moed.now', { date: fmtDate(r.e, { day: 'numeric', month: 'long' }) });
+  const n = Math.round((r.s - today) / DAY);
+  try { return new Intl.RelativeTimeFormat(lang(), { numeric: 'auto' }).format(n, 'day'); } catch { return `+${n}`; }
+}
+function moedWhen(tm, short) {
+  const r = moedNext(tm);
+  return r ? `<span class="when-date">${esc(rangeText(r, short))}</span><span class="when-until">${esc(untilText(r))}</span>` : '';
+}
+
 // ---------- threads ----------
 function renderThreads() {
   const v = $('#view-threads');
@@ -288,14 +392,18 @@ function renderThreads() {
         <span class="kicker">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
     return;
   }
+  // A calendar thread (the appointed times) shows each step's next date.
+  const cal = th.calendar;
   v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/threads"><fvl-icon name="arrow-left"></fvl-icon>${esc(t('allThreads'))}</fvl-button></div>
-    <div class="section-head"><h2>${esc(th.title)}</h2><p>${esc(th.description)}</p></div>
+    <div class="section-head"><h2>${esc(th.title)}</h2><p>${esc(th.description)}</p>${cal && D.CALNOTE[lang()] ? `<p class="note">${esc(D.CALNOTE[lang()])}</p>` : ''}</div>
     <div class="actions"><fvl-button variant="primary" data-read-thread="${esc(S.thread)}">${esc(t('readThread'))}</fvl-button></div>
     <ol class="list">${th.steps.map((st, i) => {
       const p = D.byId.get(st.prophecyId);
+      const tm = cal && D.TIMEBY.get(st.prophecyId), when = tm ? moedWhen(tm, true) : '';
       return `<li><button type="button" class="row${p && readSet.has(p.id) ? ' is-read' : ''}" data-id="${esc(st.prophecyId)}" data-step="${i}">
         <span class="kicker"><span class="step-n">${i + 1}</span><span aria-hidden="true">·</span>${esc(locRef(st.ref))}</span>
-        <span class="row-title">${esc(st.stage.replace(/^\d+\.\s*/, ''))}</span><span class="row-sum">${esc(st.note)}</span></button></li>`;
+        <span class="row-title">${esc(st.stage.replace(/^\d+\.\s*/, ''))}</span><span class="row-sum">${esc(st.note)}</span>
+        ${when ? `<span class="row-when"><fvl-icon name="calendar"></fvl-icon>${when}</span>` : ''}</button></li>`;
     }).join('')}</ol>`;
 }
 
@@ -373,7 +481,7 @@ function renderSaved() {
 }
 
 // ---------- Bible: BSB text + OpenBible cross-references, one small file per chapter ----------
-const BIB = { meta: null, byOsis: new Map(), byName: new Map(), text: new Map(), xref: new Map() };
+const BIB = { meta: null, byOsis: new Map(), byName: new Map(), text: new Map(), done: new Map(), xref: new Map() };
 async function bibleMeta() {
   if (BIB.meta) return BIB.meta;
   const m = await fetch('data/bible/books.json').then((r) => { if (!r.ok) throw new Error('books.json'); return r.json(); });
@@ -394,7 +502,8 @@ const bookName = (b) => (trInfo().lang === 'pl' ? b.namePl : b.name) || b.name;
 // In references the Psalter reads as one psalm ("Psalm 23:1"), not "Psalms 23:1".
 const refName = (b) => (b.osis === 'Ps' ? 'Psalm' : bookName(b));
 const emptyVerse = () => `<em class="omit">${esc(trInfo().empty || 'Not in the earliest manuscripts.')}</em>`;
-const chapterText = (osis, c, tr = trInfo().id) => cached(BIB.text, `${tr}:${osis}/${c}`, () => getJSON(`data/bible/${tr}/${osis}/${c}.json`));
+const textKey = (osis, c, tr) => `${tr}:${osis}/${c}`;
+const chapterText = (osis, c, tr = trInfo().id) => cached(BIB.text, textKey(osis, c, tr), () => getJSON(`data/bible/${tr}/${osis}/${c}.json`).then((vs) => { BIB.done.set(textKey(osis, c, tr), vs); return vs; }));
 function trPicker() {
   const ts = BIB.meta.translations;
   if (ts.length < 2) return '';
@@ -459,15 +568,30 @@ function parseRefList(ref) {
   }
   return out;
 }
-async function passageHTML(ref) {
-  const segs = parseRefList(ref);
-  const parts = await Promise.all(segs.map(async (sg) => {
-    const vs = await chapterText(sg.osis, sg.c);
+function partsHTML(segs, arrays, key) {
+  const parts = segs.map((sg, i) => {
+    const vs = arrays[i];
     const pieces = (sg.ranges.length ? sg.ranges : [[1, vs.length]]).map(([a, b]) => vs.slice(a - 1, b).filter(Boolean).join(' '));
     return { label: `${refName(BIB.byOsis.get(sg.osis))} ${sg.c}${sg.spec ? ':' + sg.spec : ''}`, text: pieces.filter(Boolean).join(' … ') };
-  }));
-  if (parts.length === 1) return esc(parts[0].text);
-  return parts.map((x) => `<span class="seg"><span class="seg-ref">${esc(x.label)}</span> ${esc(x.text)}</span>`).join(' ');
+  });
+  if (parts.length === 1) return highlight(parts[0].text, key);
+  return parts.map((x) => `<span class="seg"><span class="seg-ref">${esc(x.label)}</span> ${highlight(x.text, key)}</span>`).join(' ');
+}
+async function passageHTML(ref, key) {
+  const segs = parseRefList(ref);
+  return partsHTML(segs, await Promise.all(segs.map((sg) => chapterText(sg.osis, sg.c))), key);
+}
+// The same, only if every chapter is already loaded (null otherwise).
+function passageHTMLNow(ref, key) {
+  const segs = parseRefList(ref), tr = trInfo().id;
+  const arrays = segs.map((sg) => BIB.done.get(textKey(sg.osis, sg.c, tr)));
+  return arrays.every(Boolean) ? partsHTML(segs, arrays, key) : null;
+}
+function prefetchBridge(id) {
+  const p = D.byId.get(id);
+  if (!p || !BIB.meta) return;
+  [p.ot.ref, p.nt.ref].forEach((ref) => parseRefList(ref).forEach((sg) => chapterText(sg.osis, sg.c).catch(() => {})));
+  loadReview();
 }
 async function passagePlain(ref) {
   const segs = parseRefList(ref);
@@ -566,22 +690,26 @@ async function openXref(osis, c, v) {
   dr.show();
 }
 // A word opens inside the same sheet (no second layer): meaning, Strong's number, every verse that uses it.
-async function openWord(strong) {
-  const body = $('#xrefBody'), dr = $('#xrefSheet'), sv = S.sheetVerse;
-  S.sheetBack = { html: body.innerHTML, heading: dr.getAttribute('heading'), description: dr.getAttribute('description'), scroll: body.closest('fvl-drawer') ? 0 : 0 };
+async function openWord(strong, { fresh = false } = {}) {
+  const body = $('#xrefBody'), dr = $('#xrefSheet');
+  const back = fresh ? null : { html: body.innerHTML, heading: dr.getAttribute('heading'), description: dr.getAttribute('description') };
   let e, occ;
   try { [e, occ] = await Promise.all([lexEntry(strong), occList(strong)]); } catch { toast.warning(t('wordErr')); return; }
   if (!e) { toast.warning(t('wordErr')); return; }
+  S.sheetBack = back;
+  if (fresh) S.sheetVerse = null;
+  const sv = S.sheetVerse;
   const heb = strong[0] === 'H';
   dr.setAttribute('heading', `${e.l} · ${e.t}`);
   dr.setAttribute('description', `${t(heb ? 'hebrew' : 'greek')} · ${strong} · ${t('wordTimes', { n: e.n })}`);
   S.occ = { list: occ, shown: 40 };
   const backRef = sv ? `${refName(BIB.byOsis.get(sv.osis))} ${sv.c}:${sv.v}` : '';
-  body.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-sheet-back><fvl-icon name="arrow-left"></fvl-icon>${esc(t('backTo', { ref: backRef }))}</fvl-button></div>
+  body.innerHTML = `${back && sv ? `<div class="actions"><fvl-button variant="tertiary" size="sm" data-sheet-back><fvl-icon name="arrow-left"></fvl-icon>${esc(t('backTo', { ref: backRef }))}</fvl-button></div>` : ''}
     <div class="wordhead"><span class="lemma" lang="${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${esc(e.l)}</span><span class="gloss">${esc(e.g)}</span></div>
     <section class="xgroup"><p class="p-label">${esc(t('definition'))}</p><p class="wdef" lang="en">${esc(e.d)}</p></section>
     <section class="xgroup"><p class="p-label">${esc(t('occurrences'))} · ${num(occ.length)} ${pluralForm(occ.length, 'verse')}</p><div class="occ" id="occList"></div><div id="occMore"></div></section>`;
   renderOcc();
+  if (fresh) { dr.show(); return; }
   gsap.fromTo(body, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
 }
 function renderOcc() {
@@ -613,9 +741,9 @@ function renderXrefItems(key) {
 
 // Citation text in the current language; Polish quotes come from the chosen Polish Bible, with its name.
 async function citation(p0) {
-  const p = L(p0), pl = lang() === 'pl';
-  const [ot, nt] = pl ? await Promise.all([passagePlain(p.ot.ref), passagePlain(p.nt.ref)]).catch(() => [p.ot.text, p.nt.text]) : [p.ot.text, p.nt.text];
-  const src = pl ? ` (${trInfo().name})` : '';
+  const p = L(p0);
+  const [ot, nt] = await Promise.all([passagePlain(p.ot.ref), passagePlain(p.nt.ref)]).catch(() => [p.ot.text, p.nt.text]);
+  const src = ` (${trInfo().name})`;
   const head = `${p.title} (${typeLabel(p.type)})`, a = locRef(p.ot.ref), b = locRef(p.nt.ref);
   return {
     plain: `${head}\n${a}: "${ot}"${src}\n${b}: "${nt}"${src}\n${t('why')}: ${p.bridge}`,
@@ -700,15 +828,67 @@ function positionLabel() {
   return t('pos.of', v);
 }
 
+// The words that carry the link, as an exact phrase of the translation being read (from the review, else the bridge).
+function keyOf(p0, side) {
+  const r = D.RV?.[p0.id];
+  if (lang() === 'pl') return (side === 'ot' ? r?.keyOtPl : r?.keyNtPl) || D.PL[p0.id]?.key?.[side] || '';
+  return (side === 'ot' ? r?.keyOt : r?.keyNt) || p0[side].keyPhrase || '';
+}
+// How we know: the review's judgement, then the checks computed from the texts and OpenBible.
+function evidenceHTML(id) {
+  const r = D.RV?.[id], e = D.EV[id];
+  if (!r && !e) return '';
+  const facts = [];
+  if (e) {
+    const top = e.links?.[0];
+    facts.push(top ? esc(t('ev.votes', { n: top[2], a: refLabel(top[0]), b: refLabel(top[1]) })) : esc(t('ev.noVotes')));
+    if (e.overlap?.words >= 4) facts.push(`${esc(t('ev.overlap', { n: e.overlap.words }))} <q lang="en">${esc(e.overlap.text)}</q>`);
+    if (e.formula) {
+      const f = parseTarget(e.formula.ref);
+      const link = `<a class="ext" href="${bibleHash(f)}" data-verse="${esc(e.formula.ref)}">${esc(refLabel(e.formula.ref))}</a>`;
+      facts.push(`${tHTML('ev.formula', {}, { ref: link })} <q class="ev-fq" lang="${esc(trInfo().lang)}" data-t="${esc(e.formula.ref)}">${lang() === 'en' ? esc(e.formula.phrase) : '…'}</q>`);
+    }
+  }
+  const tone = { strong: 'success', moderate: 'info', weak: 'warning' };
+  return `<section class="evidence" aria-label="${esc(t('ev.title'))}">
+    <p class="p-label">${esc(t('ev.title'))}</p>
+    ${r ? `<div class="ev-badges"><fvl-badge variant="${tone[r.strength] || 'neutral'}">${esc(t('ev.' + r.strength))}</fvl-badge><fvl-badge>${esc(t('ev.' + r.link))}</fvl-badge><fvl-badge>${esc(t('ev.' + r.reading))}</fvl-badge></div>
+    <p class="ev-note">${esc(lang() === 'pl' ? r.notePl : r.note)}</p>` : ''}
+    ${facts.length ? `<ul class="ev-facts">${facts.map((f) => `<li>${f}</li>`).join('')}</ul>` : ''}
+  </section>`;
+}
+// For a feast: its date in the Hebrew calendar, the next date, what the New Testament says, and its key words.
+function moedHTML(id) {
+  const tm = D.TIMEBY.get(id);
+  if (!tm) return '';
+  const lg = lang(), r = moedNext(tm), lev = humanRef(tm.lev);
+  const note = tm.note[lg].replace('{alt}', r?.alt ? longDate(r.alt) : '…');
+  const chips = (tm.words || []).map((st) => `<button type="button" class="wchip${st[0] === 'H' ? ' he' : ''}" data-word="${esc(st)}" data-lex="${esc(st)}">
+    <span class="w" lang="${st[0] === 'H' ? 'he' : 'grc'}" dir="${st[0] === 'H' ? 'rtl' : 'ltr'}">…</span><span class="tr"></span><span class="gl"></span></button>`).join('');
+  return `<section class="moed" aria-label="${esc(t('moed.title'))}">
+    <p class="p-label">${esc(t('moed.title'))}</p>
+    <div class="moed-card">
+      <p class="moed-head"><b>${esc(tm.name[lg])}</b><span>${esc(tm.heb[lg])}</span>${lev ? `<a class="ext" href="${bibleHash(lev)}" data-bible="${bibleHash(lev)}">${esc(locRef(tm.lev))}</a>` : ''}</p>
+      ${r ? `<p class="moed-date"><fvl-icon name="calendar" size="md"></fvl-icon><span><small>${esc(t('moed.next'))}</small><b>${esc(rangeText(r))}</b><span class="when-until">${esc(untilText(r))}</span></span></p>`
+        : `<p class="note">${esc(t('moed.noCal'))}</p>`}
+      <p class="note">${esc(note)}</p>
+    </div>
+    <p class="moed-basis"><fvl-badge variant="${tm.basis === 'reading' ? 'warning' : 'info'}">${esc(t(tm.basis === 'reading' ? 'moed.reading' : 'moed.nt'))}</fvl-badge><span>${esc(tm.basisText[lg])}</span></p>
+    ${chips ? `<div class="moed-words"><p class="p-label">${esc(t('moed.words'))}</p><div class="wgrid">${chips}</div></div>` : ''}
+    ${D.CALNOTE[lg] ? `<p class="note">${esc(D.CALNOTE[lg])}</p>` : ''}
+  </section>`;
+}
+
 let passageToken = 0;
 function renderReader() {
-  const p = L(D.byId.get(cur.id));
+  const p0 = D.byId.get(cur.id), p = L(p0);
   const nx = D.byId.get(cur.seq[cur.idx + 1]);
   const nextP = nx && L(nx);
   const step = cur.ctx.kind === 'thread' ? LT(cur.ctx.key).steps[cur.idx] : null;
-  // English keeps the bridge's own quotation with its key phrase; Polish reads the passage from the chosen Polish Bible.
+  // Both passages are read from the chosen Bible, with the words that carry the link marked.
+  // Already-loaded chapters render at once; otherwise a placeholder fills in when they arrive.
   const pl = lang() === 'pl';
-  const quote = (side) => (pl ? `<span class="p-loading" data-ref="${esc(p[side].ref)}">…</span>` : highlight(p[side].text, p[side].keyPhrase));
+  const quote = (side) => (D.RV && passageHTMLNow(p[side].ref, keyOf(p0, side))) ?? `<span class="p-loading" data-side="${side}" data-ref="${esc(p[side].ref)}">…</span>`;
   rBody.innerHTML = `<div class="r-in">
     ${step ? `<div class="r-step"><span class="kicker">${esc(step.stage)}</span><p>${esc(step.note)}</p></div>` : ''}
     <p class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}<span aria-hidden="true">·</span>${esc(typeLabel(p.type))}</p>
@@ -732,6 +912,8 @@ function renderReader() {
       <p class="p-label">${esc(t('why'))}</p>
       <p>${esc(p.bridge)}</p>
     </section>
+    ${moedHTML(p.id)}
+    <div class="ev-slot">${evidenceHTML(p.id)}</div>
     <div class="motifs" aria-label="${esc(t('motifs'))}">${p.keywords.map((k) => `<fvl-tag data-kw="${esc(k)}" tabindex="0" role="button">${esc(k)}</fvl-tag>`).join('')}</div>
     <div class="r-tools">
       <fvl-button variant="tertiary" size="sm" data-cite><fvl-icon name="copy"></fvl-icon>${esc(t('copyCite'))}</fvl-button>
@@ -750,13 +932,32 @@ function renderReader() {
   const next = $('#next');
   next.textContent = last ? t('finish') : t('next');
   next.setAttribute('aria-label', last ? t('finishA') : t('nextA', { t: nextP?.title || '' }));
-  if (pl) {
-    const tok = ++passageToken;
-    $$('.p-loading', rBody).forEach(async (el) => {
-      try { const html = await passageHTML(el.dataset.ref); if (tok === passageToken) el.outerHTML = html; }
-      catch { if (tok === passageToken) el.textContent = t('passageErr'); }
-    });
-  }
+  const tok = ++passageToken;
+  // Passages and the review arrive together, so the marked phrase is right the first time.
+  $$('.p-loading', rBody).forEach(async (el) => {
+    try {
+      const [html] = await Promise.all([loadReview().then(() => passageHTML(el.dataset.ref, keyOf(p0, el.dataset.side)))]);
+      if (tok === passageToken) el.outerHTML = html;
+    } catch { if (tok === passageToken) el.textContent = t('passageErr'); }
+  });
+  if (!D.RV) loadReview().then(() => { if (tok === passageToken) { const slot = $('.ev-slot', rBody); if (slot) slot.innerHTML = evidenceHTML(p.id); fillEvidence(tok); } });
+  fillEvidence(tok);
+  $$('[data-lex]', rBody).forEach(async (b) => {
+    const e = await lexEntry(b.dataset.lex).catch(() => null);
+    if (!e || tok !== passageToken) return;
+    $('.w', b).textContent = e.l; $('.tr', b).textContent = e.t; $('.gl', b).textContent = e.g;
+  });
+  // The next bridge is likely to be read next.
+  const nid = cur.seq[cur.idx + 1];
+  if (nid) prefetchBridge(nid);
+}
+// Polish: the verse that refers to Scripture, in the chosen Polish Bible.
+function fillEvidence(tok) {
+  $$('.ev-fq', rBody).forEach(async (q) => {
+    if (lang() === 'en' || q.dataset.done) return;
+    q.dataset.done = '1';
+    try { const s = await targetText(q.dataset.t); if (tok === passageToken) q.textContent = s; } catch { q.remove(); }
+  });
 }
 
 function insetFor(r) {
@@ -1069,6 +1270,8 @@ $('#xrefSheet').addEventListener('click', (e) => {
   location.hash = link.dataset.go;
 });
 
+// Start loading a bridge's passages the moment a finger lands on it.
+browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.row[data-id], .continue[data-id]'); if (row) prefetchBridge(row.dataset.id); }, { passive: true });
 // Browse: one delegated handler for rows and actions.
 browse.addEventListener('click', (e) => {
   const link = e.target.closest('[data-go]'); if (link) { location.hash = link.dataset.go; return; }
@@ -1095,6 +1298,8 @@ $('#next').addEventListener('click', () => go(1));
 $('#star').addEventListener('click', () => cur && toggleSave(cur.id));
 rBody.addEventListener('click', (e) => {
   if (e.target.closest('[data-next]')) { go(1); return; }
+  const wd = e.target.closest('[data-word]');
+  if (wd) { openWord(wd.dataset.word, { fresh: true }); return; }
   const vl = e.target.closest('[data-verse]');
   if (vl) { e.preventDefault(); const [o, c, v] = vl.dataset.verse.split('.'); openXref(o, +c, +v).catch(() => toast.warning(t('xrefErr'))); return; }
   const bl = e.target.closest('[data-bible]');

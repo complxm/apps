@@ -1,0 +1,221 @@
+{
+ "bridges": [
+  {
+   "id": "p78",
+   "key": {
+    "ot": "siódmy dzień będzie szabatem odpoczynku",
+    "nt": "A tak zostaje jeszcze odpoczynek dla ludu Bożego"
+   },
+   "title": "Szabat: odpoczynek, który pozostaje",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 30 / 65 r. n.e.",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Wyznaczone czasy zaczynają się od cotygodniowego szabatu: sześć dni pracy, a siódmego dnia całkowity odpoczynek i święte zgromadzenie."
+   },
+   "nt": {
+    "author": "Autor Listu do Hebrajczyków / Mateusz",
+    "context": "List do Hebrajczyków mówi, że dla ludu Bożego wciąż pozostaje odpoczynek; Jezus wzywa utrudzonych, by przyszli do Niego po odpoczynek."
+   },
+   "bridge": "Kapłańska 23 zaczyna wyliczanie wyznaczonych czasów Pana od cotygodniowego szabatu. List do Hebrajczyków 4 odczytuje ten odpoczynek jako zapowiedź: Jozue nie dał Izraelowi ostatecznego odpoczynku, więc odpoczynek wciąż pozostaje, a kto przez wiarę wchodzi do Bożego odpoczynku, „odpoczywa od swoich czynów, tak jak Bóg od swoich”. Paweł nazywa szabat i święta „cieniem rzeczy przyszłych”, których rzeczywistość należy do Chrystusa (Kolosan 2:16-17).",
+   "keywords": [
+    "Szabat",
+    "Odpoczynek",
+    "Cień i rzeczywistość",
+    "Wyznaczone czasy"
+   ]
+  },
+  {
+   "id": "p79",
+   "key": {
+    "ot": "Gdy bowiem ujrzę krew, ominę was",
+    "nt": "Chrystus bowiem, nasza Pascha, został ofiarowany za nas"
+   },
+   "title": "Pascha: Chrystus, nasz Baranek paschalny",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 33 / 55 r. n.e.",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Paschę obchodzi się o zmierzchu czternastego dnia pierwszego miesiąca, na pamiątkę nocy, w której krew baranka na odrzwiach odwróciła wyrok w Egipcie."
+   },
+   "nt": {
+    "author": "Paweł / Mateusz",
+    "context": "Paweł nazywa Chrystusa Paschą; na dwa dni przed świętem Jezus mówi uczniom, że zostanie wydany na ukrzyżowanie."
+   },
+   "bridge": "Jezus został ukrzyżowany w czasie Paschy, tak jak zapowiedział (Mateusza 26:2), a Paweł mówi wprost: „Chrystus, nasza Pascha, został ofiarowany”. W Egipcie wyrok ominął każdy dom oznaczony krwią baranka; teraz takim schronieniem jest krew Chrystusa. Jan dodaje, że jak wymagało prawo dla baranka paschalnego, żadna z Jego kości nie została złamana (Jana 19:36; Wyjścia 12:46).",
+   "keywords": [
+    "Pascha",
+    "Baranek",
+    "Krew",
+    "Wybawienie"
+   ]
+  },
+  {
+   "id": "p80",
+   "key": {
+    "ot": "Przez siedem dni będziecie jeść przaśne chleby",
+    "nt": "w przaśnikach szczerości i prawdy"
+   },
+   "title": "Przaśniki: szczerość i prawda",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 33 / 55 r. n.e.",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Od piętnastego dnia pierwszego miesiąca przez siedem dni je się chleb bez zakwasu; pierwszy i siódmy dzień to święte zgromadzenia."
+   },
+   "nt": {
+    "author": "Paweł / Łukasz",
+    "context": "Paweł wzywa Kościół, by obchodził święto w przaśnikach szczerości i prawdy; podczas wieczerzy paschalnej Jezus daje chleb jako swoje ciało."
+   },
+   "bridge": "Trochę zakwasu zakwasza całe ciasto (1 Koryntian 5:6), dlatego na siedem dni tego święta Izrael usuwał go ze swoich domów (Wyjścia 12:15). Paweł odnosi to święto wprost do Kościoła: skoro Chrystus, nasza Pascha, został ofiarowany, „obchodźmy święto” nie ze starym zakwasem złośliwości i przewrotności, ale w przaśnikach szczerości i prawdy. Podczas wieczerzy paschalnej, w „dzień Przaśników” (Łukasza 22:7), Jezus wziął chleb i powiedział: „To jest moje ciało, które jest za was dane”.",
+   "keywords": [
+    "Przaśniki",
+    "Zakwas",
+    "Szczerość i prawda",
+    "Wieczerza Pańska"
+   ]
+  },
+  {
+   "id": "p81",
+   "key": {
+    "ot": "Nazajutrz po sabacie kapłan będzie nim kołysał",
+    "nt": "stał się pierwszym plonem tych, którzy zasnęli"
+   },
+   "title": "Pierwociny: Chrystus wskrzeszony jako pierwszy plon",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 33 / 55 r. n.e.",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Gdy zaczynają się żniwa, pierwszy snop przynosi się do kapłana, który kołysze nim przed Panem nazajutrz po szabacie, aby plon został przyjęty."
+   },
+   "nt": {
+    "author": "Paweł / Mateusz",
+    "context": "Paweł nazywa zmartwychwstałego Chrystusa pierwszym plonem tych, którzy zasnęli; kobiety przyszły do grobu, gdy skończył się szabat, o świcie pierwszego dnia tygodnia."
+   },
+   "bridge": "Pierwszy snop składano w ofierze, zanim wolno było jeść z nowego plonu (Kapłańska 23:14); był rękojmią, że reszta żniwa nadejdzie. Paweł używa słowa z tego święta o zmartwychwstałym Chrystusie: „pierwszy plon”, a ci, „którzy należą do Chrystusa”, pójdą za Nim w czasie Jego przyjścia. Kapłańska wyznacza snop „nazajutrz po szabacie”, a grób znaleziono pusty, „gdy skończył się szabat i świtało pierwszego dnia tygodnia”.",
+   "keywords": [
+    "Pierwociny",
+    "Pierwszy snop",
+    "Zmartwychwstanie",
+    "Żniwo"
+   ]
+  },
+  {
+   "id": "p82",
+   "key": {
+    "ot": "odliczycie pięćdziesiąt dni",
+    "nt": "A gdy nadszedł dzień Pięćdziesiątnicy"
+   },
+   "title": "Święto Tygodni: Duch wylany w Pięćdziesiątnicę",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 33 r. n.e.",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Od dnia pierwszego snopa odlicza się siedem pełnych tygodni, w sumie pięćdziesiąt dni; wtedy przynosi się Panu dwa chleby z nowego zboża jako pierwociny."
+   },
+   "nt": {
+    "author": "Łukasz",
+    "context": "W dniu Pięćdziesiątnicy uczniowie są razem w Jerozolimie i wszyscy zostają napełnieni Duchem Świętym."
+   },
+   "bridge": "„Pięćdziesiątnica” znaczy „pięćdziesiąty dzień”: to Święto Tygodni, liczone pięćdziesiąt dni od pierwszego snopa. Tego dnia, gdy w Jerozolimie byli Żydzi ze wszystkich narodów (Dzieje Apostolskie 2:5), został wylany Duch, a przyłączyło się około trzech tysięcy ludzi (Dzieje Apostolskie 2:41): pierwsze żniwo zebrane po Chrystusie, pierwszym plonie. Piotr wyjaśnia ten dzień obietnicą Ducha z Księgi Joela (Dzieje Apostolskie 2:16-21).",
+   "keywords": [
+    "Święto Tygodni",
+    "Pięćdziesiątnica",
+    "Duch Święty",
+    "Żniwo"
+   ]
+  },
+  {
+   "id": "p83",
+   "key": {
+    "ot": "upamiętnienie przez trąbienie",
+    "nt": "dźwiękiem trąby Bożej"
+   },
+   "title": "Święto Trąb: trąba Boża",
+   "eraGap": "ok. 1440 r. p.n.e. → ok. 51 / 55 r. n.e. (wciąż oczekiwane)",
+   "ot": {
+    "author": "Mojżesz",
+    "context": "Pierwszy dzień siódmego miesiąca otwiera jesienne święta: dzień odpoczynku i święte zgromadzenie ogłaszane dźwiękiem trąb."
+   },
+   "nt": {
+    "author": "Paweł",
+    "context": "Paweł opisuje powrót Pana z dźwiękiem trąby Bożej i umarłych wskrzeszonych na ostatnią trąbę."
+   },
+   "bridge": "W Izraelu trąby zwoływały lud i rozbrzmiewały w czasie wyznaczonych świąt (Liczb 10:2-10). Paweł dwukrotnie łączy wskrzeszenie umarłych z trąbą: „trąba Boża” i „ostatnia trąba”. Nie wymienia jednak tego święta, więc to powiązanie jest interpretacją, a nie stwierdzeniem tekstu. Wielu chrześcijan uważa, że jesienne święta wciąż czekają na wypełnienie przy powrocie Chrystusa.",
+   "keywords": [
+    "Trąby",
+    "Powrót Chrystusa",
+    "Zmartwychwstanie",
+    "Zgromadzenie"
+   ]
+  },
+  {
+   "id": "p84",
+   "key": {
+    "ot": "Przez siedem dni będziecie mieszkać w szałasach",
+    "nt": "mieszkało wśród nas"
+   },
+   "title": "Święto Namiotów: Bóg mieszkający ze swoim ludem",
+   "eraGap": "ok. 1440 / 520 r. p.n.e. → ok. 30 / 95 r. n.e.",
+   "ot": {
+    "author": "Mojżesz / Zachariasz",
+    "context": "Przez siedem dni Izrael mieszka w szałasach na pamiątkę tego, jak Bóg wyprowadził go z Egiptu; Zachariasz widzi narody przychodzące rok po roku, by obchodzić to święto."
+   },
+   "nt": {
+    "author": "Jan",
+    "context": "Słowo zamieszkało wśród nas; ostatniego dnia tego święta Jezus ofiaruje wodę żywą; w nowym stworzeniu przybytek Boga jest z ludźmi."
+   },
+   "bridge": "Słowo „zamieszkało” u Jana to po grecku skēnoō, od skēnē, czyli namiot, przybytek. W samym Święcie Namiotów (Jana 7:2), w jego ostatnim, wielkim dniu, Jezus wołał, by spragnieni przyszli do Niego i pili. Objawienie kończy się tymi samymi słowami: „przybytek (skēnē) Boga jest z ludźmi i będzie mieszkał (skēnoō) z nimi”. Zachariasz zapowiada, że narody będą obchodzić to święto, a chrześcijanie odczytują jego pełne znaczenie jako wciąż przyszłe.",
+   "keywords": [
+    "Święto Namiotów",
+    "Szałasy",
+    "Bóg z nami",
+    "Woda żywa"
+   ]
+  }
+ ],
+ "threads": {
+  "feasts": {
+   "title": "Wyznaczone czasy z Księgi Kapłańskiej 23",
+   "subtitle": "Od cotygodniowego szabatu do Święta Namiotów: kalendarz Pana odczytany w Chrystusie",
+   "description": "Kapłańska 23 wylicza wyznaczone czasy Pana: cotygodniowy szabat i siedem dorocznych świąt, wiosną i jesienią. Paweł nazywa takie dni „cieniem rzeczy przyszłych”, którego rzeczywistość należy do Chrystusa (Kolosan 2:17). Święta wiosenne odpowiadają Jego śmierci, zmartwychwstaniu i darowi Ducha. Święta jesienne często odczytuje się jako wciąż wskazujące naprzód, na Jego powrót; każdy krok mówi, gdzie powiązanie jest interpretacją, a nie stwierdzeniem tekstu.",
+   "steps": [
+    {
+     "stage": "1. Szabat (co siódmy dzień)",
+     "note": "Lista zaczyna się od cotygodniowego dnia odpoczynku; List do Hebrajczyków mówi, że dla ludu Bożego wciąż pozostaje odpoczynek.",
+     "highlight": "Odpoczynek ofiarowany w Chrystusie."
+    },
+    {
+     "stage": "2. Pascha (14 nisan)",
+     "note": "Baranek, którego krew odwróciła wyrok w Egipcie; Jezus umarł w czasie Paschy, „nasza Pascha”.",
+     "highlight": "Wypełnione w Jego śmierci."
+    },
+    {
+     "stage": "3. Przaśniki (15–21 nisan)",
+     "note": "Siedem dni bez zakwasu; Paweł wzywa Kościół, by obchodził święto w szczerości i prawdzie.",
+     "highlight": "Obchodzone w życiu oczyszczonym ze starego zakwasu."
+    },
+    {
+     "stage": "4. Pierwociny (nazajutrz po szabacie)",
+     "note": "Pierwszy snop kołysany przed Panem; Chrystus został wskrzeszony jako „pierwszy plon tych, którzy zasnęli”.",
+     "highlight": "Wypełnione w Jego zmartwychwstaniu."
+    },
+    {
+     "stage": "5. Święto Tygodni, czyli Pięćdziesiątnica (pięćdziesiąt dni później)",
+     "note": "Pięćdziesiąt dni od pierwszego snopa; tego dnia przyszedł Duch Święty.",
+     "highlight": "Wypełnione w darze Ducha."
+    },
+    {
+     "stage": "6. Święto Trąb (1 tiszri)",
+     "note": "Dzień ogłaszany dźwiękiem trąb; Paweł łączy wskrzeszenie umarłych z „trąbą Bożą”. Nowy Testament nie wymienia tego święta.",
+     "highlight": "Odczytywane jako wciąż przyszłe: Jego powrót."
+    },
+    {
+     "stage": "7. Dzień Przebłagania (10 tiszri)",
+     "note": "Raz w roku najwyższy kapłan wchodził z krwią za zasłonę; List do Hebrajczyków mówi, że Chrystus raz na zawsze wszedł do samego nieba i „drugi raz ukaże się”.",
+     "highlight": "Przebłaganie dokonane; Jego ukazanie się oczekiwane."
+    },
+    {
+     "stage": "8. Święto Namiotów (15–21 tiszri)",
+     "note": "Siedem dni w szałasach; Słowo „zamieszkało wśród nas”, a na końcu „przybytek Boga jest z ludźmi”.",
+     "highlight": "Rozpoczęte w Jego przyjściu; dopełnione w nowym stworzeniu."
+    }
+   ]
+  }
+ }
+}

@@ -31,6 +31,13 @@ GRK_FILES = ["TAGNT Mat-Jhn", "TAGNT Act-Rev"]
 LINE = re.compile(r"^([1-3]?[A-Z][a-z]+)\.(\d+)\.(\d+)(?:\([^)]*\))?#\d+=(\S+)\t")
 
 
+# Greek letters with "oxia" (U+1F71 ...) are canonically the same as the "tonos" letters (U+03AC ...); NFC maps them
+# so, and many fonts only draw the tonos forms. Only these Greek singletons are mapped, so Hebrew text is left exactly as it is.
+OXIA = str.maketrans({"\u1f71": "\u03ac", "\u1f73": "\u03ad", "\u1f75": "\u03ae", "\u1f77": "\u03af", "\u1f79": "\u03cc", "\u1f7b": "\u03cd",
+                      "\u1f7d": "\u03ce", "\u1fbb": "\u0386", "\u1fc9": "\u0388", "\u1fcb": "\u0389", "\u1fdb": "\u038a", "\u1ff9": "\u038c",
+                      "\u1feb": "\u038e", "\u1ffb": "\u038f", "\u1fd3": "\u0390", "\u1fe3": "\u03b0"})
+
+
 def write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -72,7 +79,7 @@ def read_lexicon(path, limit):
         key = cols[1].split(" ")[0].strip() or cols[0].strip()
         if not re.match(r"^[HG]\d{4}[A-Za-z]?$", key) or key in lex:
             continue
-        lex[key] = {"l": cols[3].strip(), "t": cols[4].strip().replace(".", ""), "g": cols[6].strip(), "d": clean_def(cols[7], limit)}
+        lex[key] = {"l": cols[3].strip().translate(OXIA), "t": cols[4].strip().replace(".", ""), "g": cols[6].strip(), "d": clean_def(cols[7], limit).translate(OXIA)}
     return lex
 
 
@@ -114,6 +121,7 @@ def main(src):
             c, v = int(m.group(2)), int(m.group(3))
             wm = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", cols[1].strip())
             w, tr = (wm.group(1), wm.group(2)) if wm else (cols[1].strip(), "")
+            w = w.translate(OXIA)
             gl = re.sub(r"\s+", " ", cols[2]).strip()
             s = strong_key(cols[3].split("=")[0])
             words[(o, c)][v].append([w, tr, gl, s])

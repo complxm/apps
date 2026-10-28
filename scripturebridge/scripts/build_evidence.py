@@ -1,6 +1,6 @@
 """Evidence for each bridge, computed from the texts and the OpenBible links (no opinions, only checks).
 
-Reads data/prophecies_66_books.json, data/bible/books.json, data/bible/bsb/*, data/bible/xref/*
+Reads data/prophecies_66_books.json and data/appointed_times.json (the bridges), data/bible/books.json, data/bible/bsb/*, data/bible/xref/*
 Writes data/evidence.json:
   { "<bridge id>": {
       "votes": strongest OpenBible link between the two passages (either direction), or null,
@@ -167,6 +167,9 @@ def match_share(quoted, actual):
 
 def main():
     bridges = json.load(open(os.path.join(D, "prophecies_66_books.json"), encoding="utf-8"))
+    extra = os.path.join(D, "appointed_times.json")
+    if os.path.exists(extra):
+        bridges += json.load(open(extra, encoding="utf-8"))["bridges"]
     out = {}
     for p in bridges:
         ot, ot_prob = parse_refs(p["ot"]["ref"])
