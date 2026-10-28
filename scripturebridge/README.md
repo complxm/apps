@@ -28,6 +28,7 @@ The default page is a calm reader built on the Flow Visual Language (FVL) and GS
 - Text: **Berean Standard Bible**, public domain (CC0). https://berean.bible
 - Polish text: **Uwspółcześniona Biblia Gdańska (UBG)**, © Fundacja Wrota Nadziei, CC BY-ND 4.0 (shared unchanged, with credit). https://ebible.org/find/show.php?id=polubg
 - Polish text: **Biblia Gdańska (1881)**, public domain.
+- Choosing a Polish Bible also switches the app to Polish: every label, the 77 bridges and 6 threads (`data/pl/`, translated from the English master, which stays the source), and the bridge passages, which are then read from the chosen Polish Bible. First-time visitors pick their Bible on a welcome card; the globe button changes it later.
 - All three share the same chapter and verse numbering, so the cross-references apply to each. The Bible tab has a BSB / UBG / Gdańska switch, remembered per device; Polish book names are used with the Polish texts.
 - Cross-references: **OpenBible.info**, CC BY, export of 2024-11-04 (344,799 links). https://www.openbible.info/labs/cross-references/
 - `data/bible/xin/` holds the reverse direction, computed from the same file: every verse a link's target covers lists that link's source, minus any already in its own links.

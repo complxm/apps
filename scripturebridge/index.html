@@ -10,7 +10,7 @@
 <link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
 <link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
 <link rel="stylesheet" href="/apps/vendor/fvl/css/fvl.css">
-<link rel="stylesheet" href="ui.css?v=20261028c">
+<link rel="stylesheet" href="ui.css?v=20261028f">
 <script>
   // FVL context: daylight from the clock (dawn 05–09, day 09–17, dusk 17–21, night 21–05). Theme follows the OS.
   (function () {
@@ -23,21 +23,21 @@
 
 <div id="browse">
   <header class="masthead wrap">
-    <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
+    <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation" aria-haspopup="dialog" aria-expanded="false"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
     <div class="brand">
       <h1>ScriptureBridge</h1>
-      <p>Old Testament promises and their New Testament fulfilments, across all 66 books.</p>
+      <p data-i18n="tagline">Old Testament promises and their New Testament fulfilments, across all 66 books.</p>
     </div>
   </header>
   <div class="top" id="top">
     <div class="wrap">
       <div class="nav-scroll">
-        <fvl-segmented id="nav" value="bridges" aria-label="Sections">
-          <fvl-segment value="bridges">Bridges</fvl-segment>
-          <fvl-segment value="bible">Bible</fvl-segment>
-          <fvl-segment value="threads">Threads</fvl-segment>
-          <fvl-segment value="map">Map</fvl-segment>
-          <fvl-segment value="saved">Saved</fvl-segment>
+        <fvl-segmented id="nav" value="bridges" aria-label="Sections" data-i18n-attr="aria-label:sections">
+          <fvl-segment value="bridges" data-i18n="tab.bridges">Bridges</fvl-segment>
+          <fvl-segment value="bible" data-i18n="tab.bible">Bible</fvl-segment>
+          <fvl-segment value="threads" data-i18n="tab.threads">Threads</fvl-segment>
+          <fvl-segment value="map" data-i18n="tab.map">Map</fvl-segment>
+          <fvl-segment value="saved" data-i18n="tab.saved">Saved</fvl-segment>
         </fvl-segmented>
       </div>
     </div>
@@ -45,97 +45,109 @@
 
   <main class="wrap">
     <!-- Bridges -->
-    <section id="view-bridges" class="view stack" aria-label="Bridges">
+    <section id="view-bridges" class="view stack" aria-label="Bridges" data-i18n-attr="aria-label:tab.bridges">
       <div id="continue"></div>
-      <fvl-search id="q" placeholder="Search verses, books or words" aria-label="Search bridges"></fvl-search>
+      <fvl-search id="q" placeholder="Search verses, books or words" aria-label="Search bridges" data-i18n-attr="placeholder:search.ph;aria-label:search.label;clear-label:search.clear"></fvl-search>
       <div>
-        <div class="chips" id="cats" role="group" aria-label="Category"></div>
+        <div class="chips" id="cats" role="group" aria-label="Category" data-i18n-attr="aria-label:category"></div>
         <div class="actions">
           <fvl-button id="filterBtn" variant="secondary" size="sm"><fvl-icon name="list-filter"></fvl-icon><span id="filterLabel">Book and relationship</span></fvl-button>
-          <fvl-button id="clearBtn" variant="tertiary" size="sm" hidden>Clear</fvl-button>
+          <fvl-button id="clearBtn" variant="tertiary" size="sm" hidden data-i18n="clear">Clear</fvl-button>
         </div>
       </div>
-      <p class="count" id="count" aria-live="polite">Loading…</p>
+      <p class="count" id="count" aria-live="polite" data-i18n="loading">Loading…</p>
       <ol class="list" id="list"></ol>
     </section>
 
     <!-- Threads -->
-    <section id="view-threads" class="view stack" aria-label="Threads" hidden></section>
+    <section id="view-threads" class="view stack" aria-label="Threads" data-i18n-attr="aria-label:tab.threads" hidden></section>
 
     <!-- Map -->
-    <section id="view-map" class="view stack" aria-label="Map" hidden>
+    <section id="view-map" class="view stack" aria-label="Map" data-i18n-attr="aria-label:tab.map" hidden>
       <div class="section-head">
-        <h2>Bridge map</h2>
-        <p>Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.</p>
+        <h2 data-i18n="map.title">Bridge map</h2>
+        <p data-i18n="map.lead">Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.</p>
       </div>
-      <div class="chips" id="mapCats" role="group" aria-label="Category"></div>
+      <div class="chips" id="mapCats" role="group" aria-label="Category" data-i18n-attr="aria-label:category"></div>
       <div class="bmap" id="bmap">
-        <span class="bhead">Old Testament</span><span></span><span class="bhead nt">New Testament</span>
-        <div class="bcol ot" id="otCol" role="group" aria-label="Old Testament books"></div>
+        <span class="bhead" data-i18n="ot">Old Testament</span><span></span><span class="bhead nt" data-i18n="nt">New Testament</span>
+        <div class="bcol ot" id="otCol" role="group" aria-label="Old Testament books" data-i18n-attr="aria-label:otBooks"></div>
         <svg class="bcurves" id="curves" preserveAspectRatio="none" aria-hidden="true"></svg>
-        <div class="bcol nt" id="ntCol" role="group" aria-label="New Testament books"></div>
+        <div class="bcol nt" id="ntCol" role="group" aria-label="New Testament books" data-i18n-attr="aria-label:ntBooks"></div>
       </div>
       <div class="map-bar" id="mapBar" hidden>
         <div class="map-bar-in">
           <div class="mb-text"><small id="mbSide"></small><b id="mbBook"></b><span id="mbCount"></span></div>
-          <fvl-button variant="tertiary" icon aria-label="Clear selection" id="mbClear"><fvl-icon name="x" size="md"></fvl-icon></fvl-button>
-          <fvl-button variant="secondary" size="sm" id="mbList">List</fvl-button>
-          <fvl-button variant="primary" size="sm" id="mbRead">Read</fvl-button>
+          <fvl-button variant="tertiary" icon aria-label="Clear selection" id="mbClear" data-i18n-attr="aria-label:map.clear"><fvl-icon name="x" size="md"></fvl-icon></fvl-button>
+          <fvl-button variant="secondary" size="sm" id="mbList" data-i18n="list">List</fvl-button>
+          <fvl-button variant="primary" size="sm" id="mbRead" data-i18n="read">Read</fvl-button>
         </div>
       </div>
     </section>
 
     <!-- Saved -->
-    <section id="view-saved" class="view stack" aria-label="Saved" hidden></section>
+    <section id="view-saved" class="view stack" aria-label="Saved" data-i18n-attr="aria-label:tab.saved" hidden></section>
 
     <!-- Bible: BSB text, tap a verse for its cross-references -->
-    <section id="view-bible" class="view stack" aria-label="Bible" hidden></section>
+    <section id="view-bible" class="view stack" aria-label="Bible" data-i18n-attr="aria-label:tab.bible" hidden></section>
 
     <footer class="foot stack-tight">
-      <p class="note">Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.</p>
-      <a href="bible_prophecy_explorer.html">Classic layout</a>
+      <p class="note" data-i18n-html="credits">Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.</p>
+      <a href="bible_prophecy_explorer.html" data-i18n="classic">Classic layout</a>
     </footer>
   </main>
 </div>
 
 <!-- Reader: one bridge at a time, nothing else on screen -->
-<section id="reader" class="reader" hidden aria-label="Reader">
+<section id="reader" class="reader" hidden aria-label="Reader" data-i18n-attr="aria-label:reader">
   <div class="r-top" id="rTop">
     <div class="r-top-in">
-      <fvl-button id="back" variant="tertiary" icon aria-label="Back to list"><fvl-icon name="arrow-left" size="md"></fvl-icon></fvl-button>
+      <fvl-button id="back" variant="tertiary" icon aria-label="Back to list" data-i18n-attr="aria-label:back"><fvl-icon name="arrow-left" size="md"></fvl-icon></fvl-button>
       <span class="r-pos" id="rPos"></span>
       <fvl-button id="star" variant="tertiary" icon aria-label="Save" aria-pressed="false"><fvl-icon name="star" size="md"></fvl-icon></fvl-button>
     </div>
   </div>
   <article class="r-body" id="rBody"></article>
-  <nav class="r-bar" id="rBar" aria-label="Bridge navigation">
+  <nav class="r-bar" id="rBar" aria-label="Bridge navigation" data-i18n-attr="aria-label:readerNav">
     <div class="r-bar-in">
-      <fvl-button id="prev" variant="secondary" icon aria-label="Previous bridge"><fvl-icon name="chevron-left" size="md"></fvl-icon></fvl-button>
+      <fvl-button id="prev" variant="secondary" icon aria-label="Previous bridge" data-i18n-attr="aria-label:prevA"><fvl-icon name="chevron-left" size="md"></fvl-icon></fvl-button>
       <fvl-button id="next" variant="primary">Next</fvl-button>
     </div>
   </nav>
 </section>
 
-<fvl-drawer id="books" placement="bottom" heading="Filter bridges" description="Narrow the list by relationship and by book.">
-  <div class="book-group"><h3>Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship"></div></div>
+<fvl-drawer id="books" placement="bottom" heading="Filter bridges" description="Narrow the list by relationship and by book." data-i18n-attr="heading:filter.title;description:filter.desc">
+  <div class="book-group"><h3 data-i18n="filter.rel">Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship" data-i18n-attr="aria-label:filter.rel"></div></div>
   <div class="book-group"><div id="bookGroups"></div></div>
   <fvl-button slot="footer" variant="primary" id="applyBtn">Show bridges</fvl-button>
 </fvl-drawer>
 
-<fvl-drawer id="trSheet" placement="bottom" heading="Bible translation" description="Used in the Bible tab and in every verse sheet. Cross-references work with all three.">
-  <div class="tr-list" id="trList" role="radiogroup" aria-label="Bible translation"></div>
-</fvl-drawer>
+<!-- Translation menu: springs open from the globe button -->
+<div class="tr-pop" id="trPop" hidden role="dialog" aria-label="Bible translation" data-i18n-attr="aria-label:tr.title">
+  <p class="tr-pop-head" data-i18n="tr.title">Bible translation</p>
+  <p class="tr-pop-desc" data-i18n="tr.desc">Also sets the app language.</p>
+  <div class="tr-list" id="trList" role="radiogroup" aria-label="Bible translation" data-i18n-attr="aria-label:tr.title"></div>
+</div>
+
+<!-- First visit: choose the Bible, and with it the app language -->
+<div class="welcome" id="welcome" hidden>
+  <div class="welcome-card" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" tabindex="-1">
+    <h2 id="welcomeTitle">Choose your Bible <span>Wybierz Biblię</span></h2>
+    <p>This also sets the app language. You can change it any time with the globe button.<br><span lang="pl">Ustawia też język aplikacji. Możesz to zmienić w każdej chwili przyciskiem z globusem.</span></p>
+    <div class="tr-list" id="welcomeList" role="radiogroup" aria-labelledby="welcomeTitle"></div>
+  </div>
+</div>
 
 <fvl-drawer id="xrefSheet" placement="bottom" heading="Cross-references">
   <div id="xrefBody" class="stack"></div>
 </fvl-drawer>
 
-<fvl-drawer id="mapList" placement="bottom" heading="Bridges">
+<fvl-drawer id="mapList" placement="bottom" heading="Bridges" data-i18n-attr="heading:tab.bridges">
   <ol class="list sheet-list" id="mapListRows"></ol>
 </fvl-drawer>
 
 <script src="/apps/vendor/gsap/gsap.min.js"></script>
 <script src="/apps/vendor/gsap/DrawSVGPlugin.min.js"></script>
-<script type="module" src="ui.js?v=20261028c"></script>
+<script type="module" src="ui.js?v=20261028f"></script>
 </body>
 </html>
