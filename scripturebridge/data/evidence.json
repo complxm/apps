@@ -1,22 +1,37 @@
 {
  "p1": {
-  "votes": 43,
+  "votes": 144,
   "links": [
    [
     "Gen.3.15",
-    "Gal.4.4",
-    43
+    "Rom.16.20",
+    144
    ],
    [
-    "Gal.4.4",
     "Gen.3.15",
-    5
+    "Rev.12.17",
+    57
+   ],
+   [
+    "Gen.3.15",
+    "Rev.12.7-13",
+    23
+   ],
+   [
+    "Rom.16.20",
+    "Gen.3.15",
+    20
+   ],
+   [
+    "Rev.12.17",
+    "Gen.3.15",
+    16
    ]
   ],
-  "linkCount": 2,
+  "linkCount": 5,
   "overlap": {
-   "words": 2,
-   "text": "and her"
+   "words": 3,
+   "text": "you and the"
   },
   "formula": null,
   "refs": {
@@ -25,7 +40,7 @@
   },
   "textMatch": {
    "ot": 1.0,
-   "nt": 0.8
+   "nt": 1.0
   }
  },
  "p2": {
@@ -66,8 +81,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.86,
-   "nt": 0.81
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p3": {
@@ -77,9 +92,14 @@
     "Rev.5.5",
     "Gen.49.9-10",
     16
+   ],
+   [
+    "Gen.49.9",
+    "Rev.5.5",
+    7
    ]
   ],
-  "linkCount": 1,
+  "linkCount": 2,
   "overlap": {
    "words": 2,
    "text": "of the"
@@ -90,8 +110,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.69,
-   "nt": 0.78
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p4": {
@@ -129,8 +149,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.79,
-   "nt": 0.84
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p5": {
@@ -153,8 +173,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.78,
-   "nt": 0.73
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p6": {
@@ -166,25 +186,30 @@
     26
    ],
    [
-    "Luke.1.69",
-    "1Sam.2.10",
+    "1Sam.2.1",
+    "Luke.1.46-56",
+    15
+   ],
+   [
+    "1Sam.2.5",
+    "Luke.1.53",
+    9
+   ],
+   [
+    "Luke.1.52",
+    "1Sam.2.6-8",
+    9
+   ],
+   [
+    "1Sam.2.8",
+    "Luke.1.51-52",
     8
-   ],
-   [
-    "Luke.1.51",
-    "1Sam.2.9-10",
-    3
-   ],
-   [
-    "1Sam.2.10",
-    "Luke.1.69",
-    2
    ]
   ],
-  "linkCount": 4,
+  "linkCount": 15,
   "overlap": {
    "words": 2,
-   "text": "those who"
+   "text": "rejoices in"
   },
   "formula": null,
   "refs": {
@@ -192,8 +217,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.68,
-   "nt": 0.6
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p7": {
@@ -236,8 +261,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.92,
-   "nt": 0.94
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p8": {
@@ -268,8 +293,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.77,
-   "nt": 0.43
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p9": {
@@ -286,20 +311,20 @@
     42
    ],
    [
-    "John.14.27",
-    "Isa.9.6",
-    25
+    "Isa.9.7",
+    "Luke.1.32-33",
+    34
    ],
    [
-    "Isa.9.6",
-    "John.14.27",
-    22
+    "Luke.1.32",
+    "Isa.9.6-7",
+    27
    ]
   ],
   "linkCount": 4,
   "overlap": {
-   "words": 2,
-   "text": "of david"
+   "words": 3,
+   "text": "and he will"
   },
   "formula": null,
   "refs": {
@@ -307,8 +332,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.89,
-   "nt": 0.86
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p10": {
@@ -354,8 +379,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.64,
-   "nt": 0.64
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p11": {
@@ -401,8 +426,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.68,
-   "nt": 0.77
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p12": {
@@ -433,8 +458,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.74,
-   "nt": 0.76
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p13": {
@@ -466,7 +491,7 @@
   },
   "textMatch": {
    "ot": 1.0,
-   "nt": 0.7
+   "nt": 1.0
   }
  },
  "p14": {
@@ -512,13 +537,28 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.75,
-   "nt": 0.77
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p15": {
-  "votes": 8,
+  "votes": 52,
   "links": [
+   [
+    "Matt.24.15",
+    "Dan.9.27",
+    52
+   ],
+   [
+    "Dan.9.27",
+    "Matt.24.15",
+    13
+   ],
+   [
+    "Matt.24.15",
+    "Dan.9.25",
+    9
+   ],
    [
     "Mark.1.15",
     "Dan.9.25",
@@ -528,31 +568,24 @@
     "Luke.19.44",
     "Dan.9.24",
     6
-   ],
-   [
-    "Dan.9.26",
-    "Luke.19.43-44",
-    4
-   ],
-   [
-    "Luke.19.43",
-    "Dan.9.26-27",
-    3
    ]
   ],
-  "linkCount": 4,
+  "linkCount": 8,
   "overlap": {
    "words": 2,
-   "text": "the city"
+   "text": "holy place"
   },
-  "formula": null,
+  "formula": {
+   "ref": "Matt.24.15",
+   "phrase": "…bomination of desolation,’ described by the prophet Daniel (let the reader understand),"
+  },
   "refs": {
    "ot": "ok",
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.76,
-   "nt": 0.88
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p16": {
@@ -598,8 +631,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.65,
-   "nt": 0.64
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p17": {
@@ -645,8 +678,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.74,
-   "nt": 0.61
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p18": {
@@ -692,8 +725,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.81,
-   "nt": 0.61
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p19": {
@@ -736,8 +769,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.85,
-   "nt": 0.75
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p20": {
@@ -768,8 +801,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.25,
-   "nt": 0.67
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p21": {
@@ -815,8 +848,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.76,
-   "nt": 0.52
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p22": {
@@ -830,8 +863,8 @@
   ],
   "linkCount": 1,
   "overlap": {
-   "words": 2,
-   "text": "for the"
+   "words": 1,
+   "text": "was"
   },
   "formula": null,
   "refs": {
@@ -839,8 +872,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.56,
-   "nt": 0.78
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p23": {
@@ -858,6 +891,11 @@
    ],
    [
     "John.6.31",
+    "Ps.78.24-25",
+    9
+   ],
+   [
+    "John.6.31",
     "Exod.16.4-15",
     8
    ],
@@ -865,17 +903,12 @@
     "Exod.16.15",
     "John.6.31-32",
     7
-   ],
-   [
-    "Exod.16.15",
-    "1Cor.10.3",
-    5
    ]
   ],
-  "linkCount": 6,
+  "linkCount": 14,
   "overlap": {
-   "words": 2,
-   "text": "for they"
+   "words": 4,
+   "text": "bread from heaven for"
   },
   "formula": {
    "ref": "John.6.31",
@@ -886,8 +919,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.73,
-   "nt": 0.93
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p24": {
@@ -920,8 +953,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.86,
-   "nt": 0.72
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p25": {
@@ -964,8 +997,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.74,
-   "nt": 0.71
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p26": {
@@ -1011,8 +1044,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.71,
-   "nt": 0.58
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p27": {
@@ -1053,8 +1086,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.47,
-   "nt": 0.38
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p28": {
@@ -1095,8 +1128,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.73,
-   "nt": 0.6
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p29": {
@@ -1142,8 +1175,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.81,
-   "nt": 0.54
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p30": {
@@ -1189,8 +1222,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.71,
-   "nt": 0.71
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p31": {
@@ -1207,6 +1240,11 @@
     30
    ],
    [
+    "Isa.53.7",
+    "Matt.26.63",
+    27
+   ],
+   [
     "1Pet.2.23",
     "Isa.53.7",
     24
@@ -1215,14 +1253,9 @@
     "Isa.53.7",
     "1Pet.2.23",
     23
-   ],
-   [
-    "Isa.53.7",
-    "Matt.27.12-14",
-    16
    ]
   ],
-  "linkCount": 6,
+  "linkCount": 10,
   "overlap": {
    "words": 9,
    "text": "is silent so he did not open his mouth"
@@ -1233,8 +1266,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.86,
-   "nt": 0.33
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p32": {
@@ -1261,12 +1294,12 @@
     8
    ],
    [
-    "Matt.27.26",
+    "Luke.18.32",
     "Isa.50.6",
-    5
+    6
    ]
   ],
-  "linkCount": 10,
+  "linkCount": 7,
   "overlap": {
    "words": 1,
    "text": "to"
@@ -1277,8 +1310,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.75,
-   "nt": 0.62
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p33": {
@@ -1306,8 +1339,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.5,
-   "nt": 0.73
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p34": {
@@ -1339,7 +1372,7 @@
   },
   "textMatch": {
    "ot": 1.0,
-   "nt": 0.57
+   "nt": 1.0
   }
  },
  "p35": {
@@ -1356,25 +1389,25 @@
     127
    ],
    [
-    "Luke.23.34",
+    "1Pet.2.25",
+    "Isa.53.6",
+    119
+   ],
+   [
+    "Isa.53.6",
+    "1Pet.2.25",
+    49
+   ],
+   [
+    "Luke.22.37",
     "Isa.53.12",
     26
-   ],
-   [
-    "Isa.53.12",
-    "Luke.23.32-34",
-    8
-   ],
-   [
-    "Isa.53.12",
-    "Mark.15.27",
-    8
    ]
   ],
-  "linkCount": 5,
+  "linkCount": 8,
   "overlap": {
-   "words": 3,
-   "text": "by his stripes"
+   "words": 7,
+   "text": "and he was numbered with the transgressors"
   },
   "formula": null,
   "refs": {
@@ -1382,8 +1415,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.82,
-   "nt": 0.73
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p36": {
@@ -1426,8 +1459,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.67,
-   "nt": 0.74
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p37": {
@@ -1468,8 +1501,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.75,
-   "nt": 0.67
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p38": {
@@ -1515,8 +1548,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.74,
-   "nt": 0.63
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p39": {
@@ -1554,8 +1587,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.46,
-   "nt": 0.88
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p40": {
@@ -1583,8 +1616,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.83,
-   "nt": 0.65
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p41": {
@@ -1606,20 +1639,20 @@
     50
    ],
    [
+    "Ps.16.8",
+    "Acts.2.25-28",
+    48
+   ],
+   [
     "Ps.16.10",
     "Acts.13.35-38",
     31
-   ],
-   [
-    "Acts.2.27",
-    "Ps.16.10",
-    17
    ]
   ],
-  "linkCount": 10,
+  "linkCount": 11,
   "overlap": {
-   "words": 16,
-   "text": "nor will you let your holy one see decay you have made known to me the"
+   "words": 31,
+   "text": "the lord always before me because he is at my right hand i will not be shaken therefore my heart is glad and my tongue rejoices my body also will dwell"
   },
   "formula": {
    "ref": "Acts.2.25",
@@ -1630,8 +1663,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.61,
-   "nt": 0.71
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p42": {
@@ -1677,8 +1710,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.91,
-   "nt": 0.91
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p43": {
@@ -1701,8 +1734,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.92,
-   "nt": 0.92
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p44": {
@@ -1748,8 +1781,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.7,
-   "nt": 0.26
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p45": {
@@ -1771,14 +1804,14 @@
     25
    ],
    [
-    "Ps.110.4",
-    "Heb.7.21",
-    22
-   ],
-   [
     "Acts.2.34",
     "Ps.110.1",
     21
+   ],
+   [
+    "Heb.7.1",
+    "Gen.14.18-20",
+    18
    ]
   ],
   "linkCount": 10,
@@ -1795,8 +1828,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.67,
-   "nt": 0.75
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p46": {
@@ -1827,8 +1860,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.73,
-   "nt": 0.68
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p47": {
@@ -1871,8 +1904,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.72,
-   "nt": 0.79
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p48": {
@@ -1915,8 +1948,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.72,
-   "nt": 0.82
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p49": {
@@ -1957,8 +1990,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.77,
-   "nt": 0.9
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p50": {
@@ -1970,15 +2003,20 @@
     4
    ],
    [
-    "Matt.27.51",
-    "Lev.16.12-15",
-    2
+    "Lev.16.22",
+    "Heb.9.28",
+    3
+   ],
+   [
+    "Heb.10.20",
+    "Lev.16.15",
+    3
    ]
   ],
-  "linkCount": 2,
+  "linkCount": 3,
   "overlap": {
    "words": 2,
-   "text": "the veil"
+   "text": "he did"
   },
   "formula": null,
   "refs": {
@@ -1986,8 +2024,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.8,
-   "nt": 0.86
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p51": {
@@ -2030,8 +2068,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.82,
-   "nt": 0.75
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p52": {
@@ -2063,10 +2101,10 @@
     20
    ]
   ],
-  "linkCount": 6,
+  "linkCount": 7,
   "overlap": {
    "words": 2,
-   "text": "of flesh"
+   "text": "and you"
   },
   "formula": null,
   "refs": {
@@ -2074,8 +2112,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.91,
-   "nt": 0.69
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p53": {
@@ -2121,8 +2159,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.65,
-   "nt": 0.68
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p54": {
@@ -2168,8 +2206,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.62,
-   "nt": 0.73
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p55": {
@@ -2210,8 +2248,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.45,
-   "nt": 0.68
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p56": {
@@ -2247,8 +2285,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.62,
-   "nt": 0.7
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p57": {
@@ -2291,7 +2329,7 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.55,
+   "ot": 1.0,
    "nt": 1.0
   }
  },
@@ -2317,14 +2355,9 @@
     "Isa.56.7",
     "Eph.2.11-13",
     6
-   ],
-   [
-    "2Chr.6.32",
-    "Eph.2.12-13",
-    4
    ]
   ],
-  "linkCount": 5,
+  "linkCount": 4,
   "overlap": {
    "words": 12,
    "text": "my house will be called a house of prayer for all the"
@@ -2335,26 +2368,55 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.73,
-   "nt": 0.79
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p59": {
-  "votes": null,
-  "links": [],
-  "linkCount": 0,
+  "votes": 79,
+  "links": [
+   [
+    "Heb.1.8",
+    "Ps.45.6-7",
+    79
+   ],
+   [
+    "Gen.2.24",
+    "Eph.5.28-31",
+    60
+   ],
+   [
+    "Heb.1.9",
+    "Ps.45.7",
+    37
+   ],
+   [
+    "Eph.5.25",
+    "Gen.2.24",
+    36
+   ],
+   [
+    "Ps.45.7",
+    "Heb.1.9",
+    30
+   ]
+  ],
+  "linkCount": 7,
   "overlap": {
-   "words": 2,
-   "text": "me to"
+   "words": 38,
+   "text": "your throne o god endures forever and ever and justice is the scepter of your kingdom you have loved righteousness and hated wickedness therefore god your god has anointed you above your companions with the oil of joy"
   },
-  "formula": null,
+  "formula": {
+   "ref": "Heb.1.6",
+   "phrase": "…od brings His firstborn into the world, He says: “Let all God’s angels worship Him.”"
+  },
   "refs": {
    "ot": "ok",
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.89,
-   "nt": 0.77
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p60": {
@@ -2373,8 +2435,8 @@
   ],
   "linkCount": 2,
   "overlap": {
-   "words": 2,
-   "text": "of the"
+   "words": 1,
+   "text": "futility"
   },
   "formula": null,
   "refs": {
@@ -2382,8 +2444,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.48,
-   "nt": 0.65
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p61": {
@@ -2414,8 +2476,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.67,
-   "nt": 0.55
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p62": {
@@ -2429,8 +2491,8 @@
   ],
   "linkCount": 1,
   "overlap": {
-   "words": 2,
-   "text": "of the"
+   "words": 3,
+   "text": "the law of"
   },
   "formula": {
    "ref": "Luke.24.45",
@@ -2441,8 +2503,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.58,
-   "nt": 0.6
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p63": {
@@ -2450,20 +2512,17 @@
   "links": [],
   "linkCount": 0,
   "overlap": {
-   "words": 2,
-   "text": "it is"
+   "words": 1,
+   "text": "for"
   },
-  "formula": {
-   "ref": "Gal.3.13",
-   "phrase": "…the law by becoming a curse for us. For it is written: “Cursed is everyone who is hung on a tree.”"
-  },
+  "formula": null,
   "refs": {
    "ot": "ok",
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.75,
-   "nt": 0.73
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p64": {
@@ -2491,23 +2550,13 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.85,
-   "nt": 0.62
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p65": {
-  "votes": 86,
+  "votes": 43,
   "links": [
-   [
-    "2Tim.2.19",
-    "Nah.1.7",
-    86
-   ],
-   [
-    "Nah.1.7",
-    "2Tim.2.19",
-    61
-   ],
    [
     "Rom.10.15",
     "Nah.1.15",
@@ -2524,10 +2573,10 @@
     7
    ]
   ],
-  "linkCount": 5,
+  "linkCount": 3,
   "overlap": {
    "words": 3,
-   "text": "of the lord"
+   "text": "the feet of"
   },
   "formula": {
    "ref": "Rom.10.15",
@@ -2538,8 +2587,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.62,
-   "nt": 0.72
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p66": {
@@ -2575,8 +2624,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.86,
-   "nt": 0.78
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p67": {
@@ -2619,8 +2668,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.73,
-   "nt": 0.55
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p68": {
@@ -2661,17 +2710,27 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.6,
-   "nt": 0.61
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p69": {
-  "votes": 30,
+  "votes": 65,
   "links": [
+   [
+    "2Pet.3.8",
+    "Ps.90.4",
+    65
+   ],
    [
     "Jude.1.9",
     "Zech.3.2",
     30
+   ],
+   [
+    "Ps.90.4",
+    "2Pet.3.8",
+    19
    ],
    [
     "Zech.3.2",
@@ -2679,10 +2738,10 @@
     10
    ]
   ],
-  "linkCount": 2,
+  "linkCount": 4,
   "overlap": {
-   "words": 2,
-   "text": "the lord"
+   "words": 4,
+   "text": "a thousand years are"
   },
   "formula": null,
   "refs": {
@@ -2690,8 +2749,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.68,
-   "nt": 0.68
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p70": {
@@ -2734,8 +2793,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.88,
-   "nt": 0.9
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p71": {
@@ -2773,8 +2832,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.78,
-   "nt": 0.62
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p72": {
@@ -2820,8 +2879,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.61,
-   "nt": 0.81
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p73": {
@@ -2854,8 +2913,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.93,
-   "nt": 0.6
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p74": {
@@ -2888,8 +2947,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.46,
-   "nt": 0.78
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p75": {
@@ -2914,7 +2973,7 @@
   "linkCount": 3,
   "overlap": {
    "words": 2,
-   "text": "you will"
+   "text": "for the"
   },
   "formula": null,
   "refs": {
@@ -2922,8 +2981,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.67,
-   "nt": 0.95
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p76": {
@@ -2946,8 +3005,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.9,
-   "nt": 0.67
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p77": {
@@ -2975,8 +3034,8 @@
    "nt": "ok"
   },
   "textMatch": {
-   "ot": 0.62,
-   "nt": 0.71
+   "ot": 1.0,
+   "nt": 1.0
   }
  },
  "p78": {

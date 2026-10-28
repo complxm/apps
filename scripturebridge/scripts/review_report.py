@@ -27,12 +27,14 @@ def main():
     out = ["# Bridge review", "",
            "Each bridge was checked against the Berean Standard Bible text, the OpenBible.info cross-references and the way the New "
            "Testament uses the Old (written with AI assistance; `data/review.json`, generated report `scripts/review_report.py`). "
-           "The verdicts are suggestions for you to decide on; the app only shows the strength, kind of link and note.", "",
+           "The app shows each bridge's strength, kind of link and note; the verdicts and issues below are the review's record.", "",
            "Terms: **quoted** = the New Testament cites the words; **echoed** = a clear allusion (a hint at the words or story without "
            "quoting); **shared theme** = only the idea is shared. **Typology** = an earlier person, event or institution that "
            "foreshadows Christ. **Votes** = the strongest OpenBible.info reader-voted cross-reference between the two passages.", "",
-           f"{len(groups['reconsider'])} reconsider · {len(groups['revise'])} revise · {len(groups['keep'])} keep "
-           f"(the seven appointed-times bridges, p78-p84, were corrected after their review).", ""]
+           f"{len(groups['reconsider'])} reconsider · {len(groups['revise'])} revise · {len(groups['keep'])} keep. "
+           "Every issue listed here has since been corrected in the app's data (English and Polish) and the corrections were "
+           "checked again independently; the italic line under each bridge says what changed. The verdicts and issues are kept as "
+           "the record of the review.", ""]
     for verdict in ("reconsider", "revise", "keep"):
         ids = sorted(groups[verdict], key=lambda x: int(x[1:]))
         out += [f"## {words['verdict'][verdict]} ({len(ids)})", ""]
@@ -40,7 +42,7 @@ def main():
             p, r, e = by_id[pid], review[pid], ev.get(pid, {})
             votes = e.get("votes")
             out.append(f"### {pid} · {p['title']}")
-            out.append(f"{p['ot']['ref']} → {p['nt']['ref']} · listed as *{p['type']}* · review: {r['strength']} link, "
+            out.append(f"{p['ot']['ref']} → {p['nt']['ref']} · now *{p['type']}* · {r['strength']} link, "
                        f"{words['link'][r['link']]}, {r['reading']}" + (f" · {votes} votes" if votes else " · no direct OpenBible link"))
             out.append("")
             out.append(r["note"])

@@ -58,7 +58,7 @@ The verse sheet lists the people and places named in the verse. Tap a person for
 
 ### Evidence for each bridge
 
-`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage refers to Scripture nearby, reference checks, and how closely each quoted text matches its reference. The vote counts in `prophecies_66_books.json` (318–890) matched no OpenBible data, so they are not shown in the reading layout; the classic page still uses them.
+`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage refers to Scripture nearby, reference checks, and how closely each quoted text matches its reference. The original vote counts (318–890, and 300–620 in the classic page's index) matched no OpenBible data; every `votes` value, in `prophecies_66_books.json`, `tsk_high_impact_index.json` and the classic page, is now the strongest real OpenBible link between the passages (0 where there is none).
 
 ### How strong is each link
 
@@ -67,9 +67,11 @@ The verse sheet lists the people and places named in the verse. Tap a person for
 - `link`: quotation, allusion or shared theme; `reading`: prophecy, typology, promise or parallel; `strength`: strong, moderate or weak.
 - `note` / `notePl`: a few plain sentences on how we know the connection is (or is not) there.
 - `keyOt`, `keyNt` (exact BSB phrases) and `keyOtPl`, `keyNtPl` (exact UBG phrases): the words that carry the link.
-- `verdict` (keep, revise, reconsider) and `issues`: editorial notes, not shown to readers.
+- `verdict` (keep, revise, reconsider), `issues` and `resolved`: the editorial record, not shown to readers.
 
-The reader now shows both passages from the chosen Bible (BSB, UBG or Gdańska) with those words marked, and a **How strong is this link** panel: strength, kind of link, the note, the strongest OpenBible cross-reference, shared wording and the verse that refers to Scripture. The bridge file's own quotations stay in `prophecies_66_books.json` for search and the classic page.
+All of the review's corrections were applied on 2026-10-28, in English and Polish, to the 66 original bridges that had any issue (34 to revise, 6 to reconsider, 26 with minor notes; none was removed), and the corrections were checked again by an independent pass. Labels now say what the texts show: 23 bridges are *Thematic Parallel* (an association the New Testament itself does not make). `research/bridge-review.md` lists every issue and what changed.
+
+The reader shows both passages from the chosen Bible (BSB, UBG or Gdańska) with those words marked, and a **How strong is this link** panel: strength, kind of link, the note, the strongest OpenBible cross-reference, shared wording and the verse that refers to Scripture. Every bridge's stored quotation (`text`, `keyPhrase`) is now the BSB text of its references.
 
 ### The appointed times (Leviticus 23)
 

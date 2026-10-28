@@ -1,1542 +1,1543 @@
 [
- {
-  "id": "p1",
-  "title": "Potomstwo niewiasty (Protoewangelia)",
-  "eraGap": "ok. 1400 r. p.n.e. → ok. 50 r. n.e. (1450 lat)",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Boży wyrok nad wężem w Edenie po upadku człowieka."
-  },
-  "nt": {
-   "author": "Paweł / Jan",
-   "context": "Wcielenie: Ten, który w wyjątkowy sposób narodził się z niewiasty, aby złamać władzę węża."
-  },
-  "bridge": "Od wieków nazywany „pierwszą Ewangelią” (Protoewangelią). Zapowiada potomka Ewy, który dozna bolesnej rany pięty (krzyż), a zarazem zada złu śmiertelny cios w głowę.",
-  "keywords": [
-   "Potomstwo niewiasty",
-   "Eden",
-   "Zmiażdżenie węża",
-   "Wcielenie"
-  ]
- },
- {
-  "id": "p2",
-  "title": "Błogosławieństwo dla wszystkich narodów przez potomstwo Abrahama",
-  "eraGap": "ok. 2000 r. p.n.e. → ok. 55 r. n.e. (2055 lat)",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Przymierze z Abrahamem potwierdzone na górze Moria, gdy Izaak został oszczędzony."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł wyjaśnia, że rzeczownik zbiorowy w liczbie pojedynczej, „potomstwo”, znajduje swoje zwieńczenie w Chrystusie."
-  },
-  "bridge": "Boże przymierze z Abrahamem na górze Moria zawęża perspektywę z całej ludzkości do jednej rodziny patriarchy i wypełnia się w jednym Mesjaszu, który wprowadza narody pogańskie w błogosławieństwo przymierza.",
-  "keywords": [
-   "Abraham",
-   "Góra Moria",
-   "Błogosławieństwo narodów",
-   "Potomstwo"
-  ]
- },
- {
-  "id": "p3",
-  "title": "Królewskie berło Judy i przyjście Szilo",
-  "eraGap": "ok. 1850 r. p.n.e. → ok. 95 r. n.e. (1945 lat)",
-  "ot": {
-   "author": "Jakub (spisane przez Mojżesza)",
-   "context": "Prorocze błogosławieństwo, którego Jakub na łożu śmierci udzielił w Egipcie swoim dwunastu synom."
-  },
-  "nt": {
-   "author": "Jan / Łukasz",
-   "context": "Wizja niebiańskiej sali tronowej, w której Jezus zostaje ukazany jako zwycięski Lew z pokolenia Judy."
-  },
-  "bridge": "Spośród dwunastu synów Jakuba królewska władza („berło”) została przypisana właśnie Judzie, aż do przyjścia „Szilo” (co znaczy „Ten, do którego ono należy”). Wypełniło się to w Jezusie, potomku z rodu Judy.",
-  "keywords": [
-   "Berło",
-   "Pokolenie Judy",
-   "Szilo",
-   "Lew z Judy"
-  ]
- },
- {
-  "id": "p4",
-  "title": "Gwiazda wschodząca z Jakuba",
-  "eraGap": "ok. 1400 r. p.n.e. → ok. 4 r. p.n.e. (1400 lat)",
-  "ot": {
-   "author": "Balaam (spisane przez Mojżesza)",
-   "context": "Czwarta prorocza wyrocznia Balaama, wypowiedziana nad równinami Moabu."
-  },
-  "nt": {
-   "author": "Mateusz / Jan",
-   "context": "Mędrcy ze Wschodu przybywają do Jerozolimy, idąc za gwiazdą Mesjasza."
-  },
-  "bridge": "Balaam, prorok ze Wschodu, z Mezopotamii, zapowiedział królewską „Gwiazdę z Jakuba”. To proroctwo, zachowane we wschodnich tradycjach mędrców, przywiodło Mędrców do Judei w czasie narodzin Jezusa.",
-  "keywords": [
-   "Gwiazda z Jakuba",
-   "Balaam",
-   "Mędrcy ze Wschodu",
-   "Gwiazda Poranna"
-  ]
- },
- {
-  "id": "p5",
-  "title": "Krewny-odkupiciel w rodowodzie z Betlejem",
-  "eraGap": "ok. 1100 r. p.n.e. → ok. 60 r. n.e. (1160 lat)",
-  "ot": {
-   "author": "Samuel (wg tradycji)",
-   "context": "Booz wykupuje Rut w Betlejem, dając początek królewskiemu rodowi Dawida."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Królewski rodowód Jezusa Chrystusa, który wyraźnie wymienia Rut i Booza."
-  },
-  "bridge": "W prawie hebrajskim „Go'el” (krewny-odkupiciel) musiał być krewnym po krwi, gotowym i dość zamożnym, by wykupić utracone dziedzictwo i pannę młodą. Booz z Betlejem jest zarazem zapowiedzią Chrystusa i przodkiem Jego królewskiej linii.",
-  "keywords": [
-   "Krewny-odkupiciel",
-   "Rut i Booz",
-   "Betlejem",
-   "Rodowód"
-  ]
- },
- {
-  "id": "p6",
-  "title": "Pomazany Król Boga i róg zbawienia",
-  "eraGap": "ok. 1050 r. p.n.e. → ok. 4 r. p.n.e. (1050 lat)",
-  "ot": {
-   "author": "Hanna",
-   "context": "Prorocza modlitwa Hanny w przybytku w Szilo, zanim Izrael w ogóle miał króla."
-  },
-  "nt": {
-   "author": "Łukasz (Magnificat Marii i Zachariasz)",
-   "context": "W słowach Marii i Zachariasza, wypowiedzianych przy zapowiedzi narodzin Jezusa, rozbrzmiewa echo pieśni Hanny."
-  },
-  "bridge": "Modlitwa Hanny z 1 Samuela 2 to pierwsze miejsce w Piśmie, gdzie tytuł „Pomazaniec” (Mesjasz) odnosi się do przyszłego, idealnego Króla. Magnificat Marii i Benedictus Zachariasza wprost odzwierciedlają jej słowa.",
-  "keywords": [
-   "Róg zbawienia",
-   "Modlitwa Hanny",
-   "Magnificat",
-   "Pomazany Król"
-  ]
- },
- {
-  "id": "p7",
-  "title": "Wieczny tron Dawida i synostwo",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 30 r. n.e. (1030 lat)",
-  "ot": {
-   "author": "Prorok Natan",
-   "context": "Przymierze z Dawidem przekazane królowi Dawidowi w Jerozolimie."
-  },
-  "nt": {
-   "author": "Łukasz",
-   "context": "Anioł Gabriel zwiastuje Marii w Nazarecie narodziny Jezusa."
-  },
-  "bridge": "Śmiertelni królowie umierają, a dynastie upadają, dlatego Boża przysięga złożona Dawidowi wymagała nieśmiertelnego potomka, który zasiądzie na wiecznym tronie. Gabriel wprost przytacza 2 Samuela 7, by wskazać Jezusa jako tego dziedzica.",
-  "keywords": [
-   "Przymierze z Dawidem",
-   "Wieczny tron",
-   "Syn Dawida",
-   "Królestwo bez końca"
-  ]
- },
- {
-  "id": "p8",
-  "title": "Narodzenie z Dziewicy i znak Emmanuela",
-  "eraGap": "ok. 734 r. p.n.e. → ok. 4 r. p.n.e. (730 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Proroctwo dane domowi Dawida w czasie kryzysu syro-efraimskiego."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Anioł wyjaśnia Józefowi, że Maria w cudowny sposób poczęła z Ducha Świętego."
-  },
-  "bridge": "Znak Izajasza, skierowany do całego „domu Dawida” (w liczbie mnogiej), osiąga swój ostateczny horyzont w dziewiczym poczęciu Jezusa, który uosabia dosłowne znaczenie imienia Emmanuel: „Bóg z nami”.",
-  "keywords": [
-   "Narodzenie z Dziewicy",
-   "Emmanuel",
-   "Bóg z nami",
-   "Znak"
-  ]
- },
- {
-  "id": "p9",
-  "title": "Narodziło się nam Dziecię, Książę Pokoju",
-  "eraGap": "ok. 730 r. p.n.e. → ok. 4 r. p.n.e. (726 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Kulminacyjna mesjańska wyrocznia o Boskim Królu, który panuje na tronie Dawida."
-  },
-  "nt": {
-   "author": "Łukasz",
-   "context": "Anielskie zwiastowanie pasterzom z Betlejem w noc Narodzenia."
-  },
-  "bridge": "Izajasz łączy ludzkie narodziny („narodzi się Dziecię”) z Boską preegzystencją, czyli istnieniem przed narodzeniem („zostanie dany Syn”, „Bóg Mocny”), kładąc fundament pod nowotestamentową naukę o Wcieleniu.",
-  "keywords": [
-   "Narodzi się Dziecię",
-   "Bóg Mocny",
-   "Książę Pokoju",
-   "Tron Dawida"
-  ]
- },
- {
-  "id": "p10",
-  "title": "Różdżka z pnia Jessego",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 57 r. n.e. (757 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Gdy królewskie drzewo Dawida zostaje ścięte aż do pnia, wyrasta z niego nowa Latorośl."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł przytacza Izajasza 11, aby wykazać, że misja Chrystusa obejmuje także pogan."
-  },
-  "bridge": "Nazywając Mesjasza „różdżką z pnia Jessego” (skromnego ojca Dawida), a nie odwołując się do pałacu Salomona, Izajasz zapowiedział, że królewski ród popadnie z powrotem w chłopskie zapomnienie, zanim narodzi się Mesjasz.",
-  "keywords": [
-   "Pień Jessego",
-   "Latorośl",
-   "Siedmioraki Duch",
-   "Nadzieja pogan"
-  ]
- },
- {
-  "id": "p11",
-  "title": "Narodzony w Betlejem Efrata",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 4 r. p.n.e. (696 lat)",
-  "ot": {
-   "author": "Micheasz",
-   "context": "Proroctwo przeciwstawiające dumną Jerozolimę maleńkiemu Betlejem w czasie oblężenia asyryjskiego."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Arcykapłani przytaczają Micheasza 5:2, gdy Herod pyta, gdzie ma się narodzić Mesjasz."
-  },
-  "bridge": "Cesarski spis podatkowy Cezara Augusta sprawił, że Józef i Maria przeszli 90 mil na południe, z Nazaretu do Betlejem, wioski swoich przodków, akurat na czas narodzin Jezusa.",
-  "keywords": [
-   "Betlejem",
-   "Efrata",
-   "Władca w Izraelu",
-   "Od wieczności"
-  ]
- },
- {
-  "id": "p12",
-  "title": "Płacz w Rama nad zabitymi dziećmi",
-  "eraGap": "ok. 600 r. p.n.e. → ok. 3 r. p.n.e. (597 lat)",
-  "ot": {
-   "author": "Jeremiasz",
-   "context": "Matka rodu, Rachela, ukazana jako płacząca w Rama, gdy judzkich jeńców pędzi się na wygnanie."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Król Herod nakazuje rzeź chłopców w Betlejem i w całej jego okolicy."
-  },
-  "bridge": "Grób Racheli znajdował się w pobliżu Betlejem/Rama. W Księdze Jeremiasza 31 po jej żałobie od razu następuje Boża obietnica powrotu i Nowego Przymierza. Ten sam wzór powtarza się u zarania życia Mesjasza.",
-  "keywords": [
-   "Rama",
-   "Płacz Racheli",
-   "Herod",
-   "Betlejem"
-  ]
- },
- {
-  "id": "p13",
-  "title": "Ucieczka i powrót: „Z Egiptu przywołałem mojego Syna”",
-  "eraGap": "ok. 750 r. p.n.e. → ok. 2 r. p.n.e. (748 lat)",
-  "ot": {
-   "author": "Ozeasz",
-   "context": "Wspomnienie ojcowskiej miłości Boga do Izraela, gdy wyprowadził naród z niewoli egipskiej."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Józef zabiera Marię i Jezusa do Egiptu aż do śmierci Heroda, a potem wraca do ziemi Izraela."
-  },
-  "bridge": "Klasyczna typologia biblijna: Izrael był zbiorowym synem Boga, wezwanym z Egiptu (Wyjścia 4:22), a Jezus, prawdziwy i wierny Syn, przechodzi na nowo drogę Izraela: z Egiptu, przez wody chrztu, na pustynię.",
-  "keywords": [
-   "Egipt",
-   "Przywołałem Syna",
-   "Typologia",
-   "Nowe Wyjście"
-  ]
- },
- {
-  "id": "p14",
-  "title": "Posłaniec przygotowujący drogę Pana",
-  "eraGap": "ok. 700 / 430 r. p.n.e. → ok. 26 r. n.e.",
-  "ot": {
-   "author": "Izajasz i Malachiasz",
-   "context": "Zamykające słowa hebrajskich proroków, zapowiadające poprzednika, który przyjdzie, zanim Pan wejdzie do swojej świątyni."
-  },
-  "nt": {
-   "author": "Marek / Mateusz",
-   "context": "Jan Chrzciciel pojawia się na Pustyni Judzkiej i wzywa naród do nawrócenia."
-  },
-  "bridge": "Zwróć uwagę na Boskość ukrytą w tym odniesieniu: w Księdze Izajasza 40:3 i Malachiasza 3:1 droga zostaje przygotowana dla samego Jahwe, a w Ewangeliach Jan przygotowuje tę drogę dla Jezusa.",
-  "keywords": [
-   "Głos na pustyni",
-   "Posłaniec",
-   "Jan Chrzciciel",
-   "Poprzednik"
-  ]
- },
- {
-  "id": "p15",
-  "title": "Siedemdziesiąt tygodni Daniela: chronologia aż do Mesjasza-Księcia",
-  "eraGap": "ok. 538 r. p.n.e. → ok. 30 r. n.e. (568 lat)",
-  "ot": {
-   "author": "Daniel (przez anioła Gabriela)",
-   "context": "Gabriel objawia proroczy zegar 490 lat („siedemdziesiąt siódemek”), liczony od dekretu o odbudowie Jerozolimy."
-  },
-  "nt": {
-   "author": "Marek / Łukasz",
-   "context": "Jezus ogłasza w latach 27–30 n.e., że proroczy zegar czasu osiągnął swoje wypełnienie."
-  },
-  "bridge": "Odliczenie 69 „tygodni” lat (483 lata) od perskich dekretów (Ezdrasza 7 / Nehemiasza 2) prowadzi chronologię wprost do wystąpienia Jezusa w I wieku i Jego ukrzyżowania („zostanie zgładzony”) przed zburzeniem drugiej świątyni w 70 r. n.e.",
-  "keywords": [
-   "Siedemdziesiąt tygodni",
-   "Mesjasz-Książę",
-   "Zgładzony",
-   "Wypełnienie czasu"
-  ]
- },
- {
-  "id": "p16",
-  "title": "Wielkie światło wschodzi nad Galileą pogan",
-  "eraGap": "ok. 730 r. p.n.e. → ok. 28 r. n.e. (758 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Obietnica, że północne pokolenia Zabulona i Neftalego, jako pierwsze upokorzone przez Asyrię, ujrzą chwałę."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Jezus przenosi się z Nazaretu do Kafarnaum, na pograniczu ziem Zabulona i Neftalego."
-  },
-  "bridge": "Zamiast rozpocząć swoją służbę w prestiżowej Judei, Jezus uczynił Kafarnaum w Galilei swoim ośrodkiem i przyniósł Boże światło właśnie do tej krainy, która jako pierwsza pogrążyła się w asyryjskiej ciemności.",
-  "keywords": [
-   "Galilea",
-   "Zabulon i Neftali",
-   "Wielkie światło",
-   "Kafarnaum"
-  ]
- },
- {
-  "id": "p17",
-  "title": "Namaszczony, by ogłosić jubileusz i uleczyć zranione serca",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 28 r. n.e. (728 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Sługa namaszczony Duchem ogłasza czas Pańskiej łaski, czyli jubileusz."
-  },
-  "nt": {
-   "author": "Łukasz",
-   "context": "Jezus czyta ze zwoju Izajasza w synagodze w Nazarecie."
-  },
-  "bridge": "Jezus przerwał czytanie w pół zdania w Izajasza 61:2, tuż po słowach o „roku Pańskiej przychylności”, a tuż przed słowami o „dniu odpłaty naszego Boga”. Tak oddzielił swoje pierwsze przyjście w łasce od przyszłego powrotu na sąd.",
-  "keywords": [
-   "Jubileusz",
-   "Synagoga w Nazarecie",
-   "Namaszczony Duchem",
-   "Wolność dla jeńców"
-  ]
- },
- {
-  "id": "p18",
-  "title": "Prorok podobny do Mojżesza",
-  "eraGap": "ok. 1400 r. p.n.e. → ok. 30 r. n.e. (1430 lat)",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Pożegnalna mowa Mojżesza z obietnicą przyszłego Proroka-Pośrednika, który będzie przekazywał same słowa Boga."
-  },
-  "nt": {
-   "author": "Piotr / Jan",
-   "context": "Piotr przemawia w Portyku Salomona w świątyni jerozolimskiej."
-  },
-  "bridge": "Podobnie jak Mojżesz, Jezus po narodzeniu uszedł dzieciobójstwu nakazanemu przez tyrana, został wezwany z Egiptu, pościł 40 dni, nakarmił chlebem rzesze na pustkowiu, wstąpił na górę, by nauczać Bożego Prawa, i stał się pośrednikiem przymierza.",
-  "keywords": [
-   "Prorok jak Mojżesz",
-   "Pośrednik",
-   "Jego słuchajcie",
-   "Przemienienie"
-  ]
- },
- {
-  "id": "p19",
-  "title": "Cuda: wzrok dla niewidomych i słuch dla głuchych",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 29 r. n.e. (729 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Wizja mesjańskiej odnowy, gdy Bóg przychodzi, by zbawić swój lud."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Jezus odpowiada wysłannikom Jana Chrzciciela, przysłanym z więzienia, na pytanie o Jego mesjańskie znamiona."
-  },
-  "bridge": "W całym Starym Testamencie nie ma zapisu o niewidomym, który odzyskałby wzrok dzięki cudowi proroka. Księga Izajasza 35 zastrzega otwieranie oczu niewidomych jako szczególne znamię ery mesjańskiej.",
-  "keywords": [
-   "Oczy niewidomych",
-   "Chromi chodzą",
-   "Głusi słyszą",
-   "Znaki Mesjasza"
-  ]
- },
- {
-  "id": "p20",
-  "title": "Ukryte prawdy Królestwa w przypowieściach",
-  "eraGap": "ok. 950 r. p.n.e. → ok. 29 r. n.e. (979 lat)",
-  "ot": {
-   "author": "Asaf",
-   "context": "Psalm mądrościowy opowiadający dzieje odkupienia Izraela w formie zagadek i przypowieści."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Jezus naucza tłumy nad Jeziorem Galilejskim w przypowieściach o Królestwie."
-  },
-  "bridge": "Jezus posługiwał się przypowieściami, aby jednocześnie odsłaniać tajemnice Królestwa uczniom spragnionym duchowo i oddzielać słuchaczy o zatwardziałych sercach.",
-  "keywords": [
-   "Przypowieści",
-   "Tajemnice",
-   "Asaf",
-   "Od założenia świata"
-  ]
- },
- {
-  "id": "p21",
-  "title": "Łagodny Sługa, który nie złamie nadłamanej trzciny",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 29 r. n.e. (729 lat)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Pierwsza Pieśń o Słudze Pańskim, przedstawiająca łagodnego, napełnionego Duchem Sługę Bożego, który przynosi narodom sprawiedliwość."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Jezus po cichu uzdrawia chorych, unikając politycznej konfrontacji z faryzeuszami."
-  },
-  "bridge": "W przeciwieństwie do politycznych zelotów, którzy w pogoni za władzą miażdżyli słabych, Jezus troszczył się o „nadłamane trzciny” i „tlące się knoty” — o złamanych, odrzuconych i wyczerpanych.",
-  "keywords": [
-   "Nadłamana trzcina",
-   "Tlący się knot",
-   "Pieśń o Słudze",
-   "Ufność pogan"
-  ]
- },
- {
-  "id": "p22",
-  "title": "Wódz zastępów Pańskich",
-  "eraGap": "ok. 1400 r. p.n.e. → ok. 95 r. n.e. (1495 lat)",
-  "ot": {
-   "author": "Jozue",
-   "context": "Przed bitwą o Jerycho Jozue spotyka Bożego Wojownika, który na świętej ziemi przyjmuje oddawaną Mu cześć."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków / Jan",
-   "context": "Chrystus jako prawdziwy „Jozue” (Yeshua), który wprowadza lud Boży do wiecznego odpocznienia i prowadzi niebiańskie wojska."
-  },
-  "bridge": "Hebrajskie imię „Jozue” (Yeshua) to dokładnie to samo imię co greckie „Jezus” (Iesous). Aniołowie stanowczo odmawiają przyjęcia czci (Objawienie 22:9), tymczasem Wódz z Jozuego 5 przyjmuje pokłon i każe Jozuemu zdjąć sandały — tak samo jak Jahwe przy płonącym krzewie.",
-  "keywords": [
-   "Jozue / Yeshua",
-   "Wódz zastępów Pańskich",
-   "Święta ziemia",
-   "Szabatowe odpocznienie"
-  ]
- },
- {
-  "id": "p23",
-  "title": "Manna z nieba i woda z uderzonej skały",
-  "eraGap": "ok. 1440 r. p.n.e. → ok. 30 / 55 r. n.e.",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Bóg podtrzymuje Izraela na pustyni codziennym chlebem z nieba i wodą ze skały na Horebie."
-  },
-  "nt": {
-   "author": "Paweł / Jan",
-   "context": "Jezus ogłasza: „Ja jestem Chlebem Życia”, a Paweł utożsamia skałę z pustyni z Chrystusem."
-  },
-  "bridge": "Dary na pustyni były fizycznymi cieniami rzeczywistości duchowych: Chrystus jest prawdziwym Chlebem z nieba i to On został raz uderzony laską Prawa Mojżeszowego, aby woda żywa mogła popłynąć do spragnionego świata.",
-  "keywords": [
-   "Manna",
-   "Chleb Życia",
-   "Skała na Horebie",
-   "Woda żywa"
-  ]
- },
- {
-  "id": "p24",
-  "title": "Wąż miedziany wywyższony na pustyni",
-  "eraGap": "ok. 1400 r. p.n.e. → ok. 30 r. n.e. (1430 lat)",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Bóg poleca Mojżeszowi umieścić miedzianego węża na palu, aby każdy ukąszony, kto spojrzy na niego z wiarą, pozostał przy życiu."
-  },
-  "nt": {
-   "author": "Jan (słowa Jezusa do Nikodema)",
-   "context": "Jezus wyjaśnia Nikodemowi konieczność krzyża tuż przed słowami z Jana 3:16."
-  },
-  "bridge": "Dlaczego właśnie wąż z miedzi? W Biblii miedź, czyli brąz, była metalem sądu (miedziany ołtarz), a wąż uosabiał przekleństwo grzechu. Na krzyżu Chrystus stał się za nas grzechem (2 Koryntian 5:21), tak że spojrzenie na Niego z wiarą leczy ze śmiertelnego jadu grzechu.",
-  "keywords": [
-   "Wąż miedziany",
-   "Wywyższony",
-   "Nikodem",
-   "Spójrz i żyj"
-  ]
- },
- {
-  "id": "p25",
-  "title": "Cuda Elizeusza: rozmnożenie chlebów i oczyszczenie Naamana",
-  "eraGap": "ok. 850 r. p.n.e. → ok. 29 r. n.e. (879 lat)",
-  "ot": {
-   "author": "Jeremiasz / kronikarze królewscy",
-   "context": "Elizeusz rozmnaża dwadzieścia jęczmiennych chlebów dla stu mężczyzn, tak że jeszcze zostaje, i uzdrawia trędowatego poganina Naamana."
-  },
-  "nt": {
-   "author": "Jan / Łukasz",
-   "context": "Jezus rozmnaża pięć jęczmiennych chlebów dla pięciu tysięcy mężczyzn, a zostaje jeszcze dwanaście koszów."
-  },
-  "bridge": "Jak po Eliaszu (proroku pustyni w szacie z sierści wielbłądziej) przyszedł Elizeusz (którego imię znaczy „Bóg jest zbawieniem” i który czynił cuda łaski), tak po Janie Chrzcicielu przyszedł Jezus, który cud Elizeusza z jęczmiennymi chlebami powtórzył na ogromną skalę.",
-  "keywords": [
-   "Chleby jęczmienne",
-   "Elizeusz",
-   "Nakarmienie 5000",
-   "Naaman"
-  ]
- },
- {
-  "id": "p26",
-  "title": "Triumfalny wjazd na pokornym osiołku",
-  "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
-  "ot": {
-   "author": "Zachariasz",
-   "context": "Proroctwo z czasów po wygnaniu, wzywające Jerozolimę do radości z powodu jej sprawiedliwego i pokornego Króla."
-  },
-  "nt": {
-   "author": "Mateusz / Jan",
-   "context": "Niedziela Palmowa: Jezus wjeżdża do Jerozolimy na nieujeżdżonym oślęciu wśród okrzyków „Hosanna”."
-  },
-  "bridge": "Ziemscy zdobywcy wjeżdżali do miast na bojowych rumakach; w starożytnym Izraelu królowie przybywający w pokoju jechali na osłach (1 Królewska 1:33). Jezus świadomie urzeczywistnił słowa Zachariasza 9:9, aby pokazać, jakie jest Jego Królestwo.",
-  "keywords": [
-   "Triumfalny wjazd",
-   "Niedziela Palmowa",
-   "Córa Syjonu",
-   "Oślę"
-  ]
- },
- {
-  "id": "p27",
-  "title": "Gorliwość o dom Ojca i uwielbienie dzieci w świątyni",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 30-33 r. n.e. (1030 lat)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Żarliwe pragnienie Dawida, by Boże sanktuarium pozostało czyste, oraz chwała płynąca z ust niemowląt."
-  },
-  "nt": {
-   "author": "Jan / Mateusz",
-   "context": "Jezus oczyszcza dziedzińce świątyni i staje w obronie dzieci wołających: „Hosanna Synowi Dawida!”"
-  },
-  "bridge": "Gdy arcykapłani oburzyli się, że dzieci na dziedzińcach świątyni wysławiają Jezusa jako Syna Dawida, Jezus przytoczył Psalm 8:2 — w którym chwała jest skierowana do Jahwe — i odniósł te słowa wprost do siebie.",
-  "keywords": [
-   "Oczyszczenie świątyni",
-   "Gorliwość o dom",
-   "Uwielbienie dzieci",
-   "Psalm 8"
-  ]
- },
- {
-  "id": "p28",
-  "title": "Zdradzony przez zaufanego przyjaciela, który dzielił z Nim chleb",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Dawid opłakuje zdradę Achitofela, doradcy z najbliższego otoczenia."
-  },
-  "nt": {
-   "author": "Jan",
-   "context": "Ostatnia Wieczerza: Jezus podaje Judaszowi Iskariocie umoczony kęs chleba."
-  },
-  "bridge": "W kulturze starożytnego Bliskiego Wschodu dzielenie chleba przy stole było świętym zobowiązaniem do wierności. Jak doradca Dawida, Achitofel, zdradził go, a potem się powiesił (2 Samuela 17:23), tak Judasz jadł chleb Jezusa, zanim Go wydał.",
-  "keywords": [
-   "Judasz Iskariota",
-   "Achitofel",
-   "Wspólny chleb",
-   "Ostatnia Wieczerza"
-  ]
- },
- {
-  "id": "p29",
-  "title": "Sprzedany za trzydzieści srebrników, które rzucono garncarzowi",
-  "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
-  "ot": {
-   "author": "Zachariasz",
-   "context": "Dobry Pasterz wyceniony na cenę niewolnika ubodzonego przez wołu (30 syklów), a srebro rzucone w świątyni dla garncarza."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Judasz ciska 30 srebrników do przybytku świątyni, a kapłani kupują za nie pole garncarza."
-  },
-  "bridge": "Zbiegają się tu cztery odrębne szczegóły: (1) dokładna cena 30 srebrników, (2) zapłacona przez przywódców narodu, (3) rzucona w domu Pańskim i (4) przeznaczona dla garncarza.",
-  "keywords": [
-   "Trzydzieści srebrników",
-   "Pole garncarza",
-   "Przybytek świątyni",
-   "Dobry Pasterz"
-  ]
- },
- {
-  "id": "p30",
-  "title": "Uderz Pasterza, a owce zostaną rozproszone",
-  "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
-  "ot": {
-   "author": "Zachariasz",
-   "context": "Proroczy rozkaz, by miecz uderzył Pasterza Pańskiego, co rozprasza trzodę."
-  },
-  "nt": {
-   "author": "Marek / Mateusz",
-   "context": "W drodze do Getsemani Jezus ostrzega uczniów, że wszyscy uciekną, gdy zostanie pojmany."
-  },
-  "bridge": "Zwróć uwagę, że w Zachariasza 13:7 Jahwe nazywa uderzonego Pasterza „mężem, który jest Moim towarzyszem [Mnie równym]” — co wskazuje na tajemnicę boskiej natury, którą Chrystus dzieli z Ojcem, oraz na Jego zastępczą śmierć.",
-  "keywords": [
-   "Uderz Pasterza",
-   "Rozproszone owce",
-   "Getsemani",
-   "Ucieczka uczniów"
-  ]
- },
- {
-  "id": "p31",
-  "title": "Milczący jak baranek przed strzygącymi",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Cierpiący Sługa poddaje się dobrowolnie, nie podejmując obrony."
-  },
-  "nt": {
-   "author": "Łukasz / Mateusz / Piotr",
-   "context": "Jezus milczy przed Kajfaszem, Herodem Antypasem i Piłatem; etiopski eunuch czyta fragment z Izajasza 53."
-  },
-  "bridge": "To właśnie ten werset czytał w swoim rydwanie etiopski eunuch w Dziejach Apostolskich 8, gdy Filip wyjaśnił mu Ewangelię — co pokazuje, jak centralne miejsce w najwcześniejszym chrześcijańskim przepowiadaniu zajmował tekst Izajasza 53.",
-  "keywords": [
-   "Milczący Baranek",
-   "Proces przed Piłatem",
-   "Etiopski eunuch",
-   "Izajasza 53"
-  ]
- },
- {
-  "id": "p32",
-  "title": "Bity, opluty, z wyrwaną brodą",
-  "eraGap": "ok. 700 / 500 r. p.n.e. → ok. 33 r. n.e.",
-  "ot": {
-   "author": "Izajasz i Micheasz",
-   "context": "Trzecia Pieśń o Słudze Pańskim opisuje fizyczne znęcanie się, znoszone bez odwetu."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Strażnicy Sanhedrynu i rzymscy żołnierze biczują Jezusa, plują na Niego i biją Go trzciną."
-  },
-  "bridge": "Trzy rozdziały przed Izajasza 53 werset Izajasza 50:6 kreśli w pierwszej osobie portret Sługi, który dobrowolnie wystawia plecy na biczowanie, a twarz na plucie.",
-  "keywords": [
-   "Biczowanie",
-   "Plucie",
-   "Bity trzciną",
-   "Cierpiący Sługa"
-  ]
- },
- {
-  "id": "p33",
-  "title": "Przebite ręce i nogi (zapowiedź ukrzyżowania)",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Sugestywny opis egzekucji przez przebicie, który Dawid spisał na wieki przed powstaniem Rzymu."
-  },
-  "nt": {
-   "author": "Jan / Łukasz",
-   "context": "Zmartwychwstały Jezus pokazuje Tomaszowi i uczniom swoje przebite gwoździami ręce i nogi."
-  },
-  "bridge": "Psalm 22 — co potwierdzają Zwoje znad Morza Martwego (zwój z Nahal Hever z odczytaniem „ka'aru” — „przebili”) — opisuje odwodnienie, wywichnięte stawy, wyszydzane modlitwy oraz przebite ręce i nogi na wieki przed wynalezieniem rzymskiego ukrzyżowania.",
-  "keywords": [
-   "Przebite ręce i nogi",
-   "Psalm 22",
-   "Zwoje znad Morza Martwego",
-   "Ukrzyżowanie"
-  ]
- },
- {
-  "id": "p34",
-  "title": "Podział szat i rzucanie losów o Jego tunikę",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Oprawcy dzielą między siebie wierzchnie szaty cierpiącego, a o jego spodnią szatę rzucają losy."
-  },
-  "nt": {
-   "author": "Jan (naoczny świadek pod krzyżem)",
-   "context": "Czterech rzymskich żołnierzy dzieli wierzchni płaszcz Jezusa na cztery części, a potem rzuca kości o Jego tunikę bez szwu."
-  },
-  "bridge": "Jan zaznacza, że żołnierze zarówno „podzielili” wierzchnie szaty, JAK I „rzucili losy” o spodnią tunikę bez szwu — wypełniając obie połowy hebrajskiego paralelizmu poetyckiego w Psalmie 22:18.",
-  "keywords": [
-   "Rzucanie losów",
-   "Tunika bez szwu",
-   "Rzymscy żołnierze",
-   "Psalm 22:18"
-  ]
- },
- {
-  "id": "p35",
-  "title": "Przebity za nasze występki i zaliczony do przestępców",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Serce Czwartej Pieśni o Słudze Pańskim, wyjaśniające zastępcze przebłaganie i wstawiennictwo za grzesznikami."
-  },
-  "nt": {
-   "author": "Piotr / Marek / Łukasz",
-   "context": "Jezus ukrzyżowany między dwoma złoczyńcami modli się: „Ojcze, przebacz im”, i dźwiga grzech ludzkości."
-  },
-  "bridge": "Ukrzyżowany między dwoma łotrami („zaliczony do przestępców”) i modlący się: „Ojcze, przebacz im” („wstawił się za przestępcami”), Jezus wypełnił każde wyrażenie Izajasza 53.",
-  "keywords": [
-   "Zastępcze przebłaganie",
-   "Jego ranami",
-   "Dwaj łotrzy",
-   "Ojcze, przebacz im"
-  ]
- },
- {
-  "id": "p36",
-  "title": "Okrzyk opuszczenia i szyderstwa pod krzyżem („Niech Bóg Go wybawi!”)",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Początkowe wołanie Psalmu 22 i dokładne szyderstwa gapiów kiwających głowami."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Przechodnie kiwają głowami, arcykapłani szydzą, a Jezus woła pierwszymi słowami Psalmu 22."
-  },
-  "bridge": "W I wieku, zanim istniał podział na rozdziały i wersety, przytoczenie pierwszego wiersza psalmu przywoływało cały psalm — a ten w Psalmie 22:27-31 kończy się obrazem wszystkich rodzin narodów oddających cześć Panu i ostatnimi słowami: „On tego dokonał!” („Wykonało się!”).",
-  "keywords": [
-   "Eli Eli lama sabachthani",
-   "Szydercy kiwający głowami",
-   "Psalm 22:1",
-   "Wykonało się"
-  ]
- },
- {
-  "id": "p37",
-  "title": "Żółć i kwaśne wino (ocet) podane w pragnieniu",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Sprawiedliwemu cierpiącemu w palącej udręce pragnienia podaje się gorzką żółć i kwaśny ocet."
-  },
-  "nt": {
-   "author": "Jan",
-   "context": "Żołnierze podnoszą do ust Jezusa gąbkę nasączoną kwaśnym winem, umieszczoną na łodydze hizopu."
-  },
-  "bridge": "Zwróć uwagę na szczegół łodygi „hizopu” w Jana 19:29 — to ta sama roślina, której według Wyjścia 12:22 użyto, by pomazać odrzwia krwią baranka paschalnego.",
-  "keywords": [
-   "Ocet",
-   "Żółć",
-   "Pragnę",
-   "Łodyga hizopu"
-  ]
- },
- {
-  "id": "p38",
-  "title": "Kość nie zostanie złamana; będą patrzeć na Tego, którego przebili",
-  "eraGap": "ok. 1440 / 520 r. p.n.e. → ok. 33 r. n.e.",
-  "ot": {
-   "author": "Mojżesz, Dawid i Zachariasz",
-   "context": "Barankowi paschalnemu nie wolno łamać kości; Jahwe oznajmia: „będą patrzeć na Mnie, którego przebili”."
-  },
-  "nt": {
-   "author": "Jan",
-   "context": "Rzymscy żołnierze nie łamią Jezusowi nóg, lecz przebijają Mu bok włócznią."
-  },
-  "bridge": "W Zachariasza 12:10 mówi sam Bóg („będą patrzeć na MNIE, którego przebili”), a jednak w dalszej części zdania opłakują „GO jak jedynaka” — to niezwykłe okno Starego Testamentu na tajemnicę Trójcy.",
-  "keywords": [
-   "Kości niezłamane",
-   "Spojrzą na Przebitego",
-   "Baranek paschalny",
-   "Włócznia"
-  ]
- },
- {
-  "id": "p39",
-  "title": "Ciemność w południe w dniu ukrzyżowania",
-  "eraGap": "ok. 760 r. p.n.e. → ok. 33 r. n.e. (793 lata)",
-  "ot": {
-   "author": "Amos",
-   "context": "Proroctwo o słońcu zachodzącym w południe i ziemi zaciemnionej w biały dzień, połączone z żałobą jak po „jedynaku”."
-  },
-  "nt": {
-   "author": "Łukasz / Mateusz",
-   "context": "Trzy godziny nadprzyrodzonej ciemności okrywającej ziemię od godziny szóstej (południe) do godziny dziewiątej (15:00)."
-  },
-  "bridge": "Pascha przypada zawsze podczas pełni księżyca (gdy naturalne zaćmienie Słońca jest astronomicznie niemożliwe). Trzy godziny ciemności od południa do 15:00 były echem zarówno dziewiątej plagi egipskiej (Wyjścia 10:22), jak i Amosa 8:9-10.",
-  "keywords": [
-   "Ciemność w południe",
-   "Amosa 8:9",
-   "Godzina szósta",
-   "Żałoba po jedynaku"
-  ]
- },
- {
-  "id": "p40",
-  "title": "Pochowany w grobie bogacza",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Wyznaczono Mu grób wśród przestępców, lecz po śmierci spoczął u bogatego."
-  },
-  "nt": {
-   "author": "Mateusz",
-   "context": "Józef z Arymatei, zamożny członek Rady, składa Jezusa we własnym, świeżo wykutym w skale grobie."
-  },
-  "bridge": "Ciała ukrzyżowanych zwykle zostawiano na krzyżach albo wrzucano do wspólnych dołów dla przestępców. Odważna prośba Józefa z Arymatei skierowana do Piłata sprawiła, że Jezus spoczął w kosztownym, strzeżonym grobie w ogrodzie.",
-  "keywords": [
-   "Grób bogacza",
-   "Józef z Arymatei",
-   "Izajasza 53:9",
-   "Pogrzeb"
-  ]
- },
- {
-  "id": "p41",
-  "title": "Święty nie zazna rozkładu ciała (Zmartwychwstanie)",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
-  "ot": {
-   "author": "Dawid",
-   "context": "„Złoty” psalm Dawida, w którym ogłasza, że Bóg nie zostawi swojego Świętego w Szeolu ani nie dopuści, by Jego ciało uległo rozkładowi."
-  },
-  "nt": {
-   "author": "Piotr i Paweł (spisane przez Łukasza)",
-   "context": "Kazanie Piotra w Jerozolimie w dniu Pięćdziesiątnicy oraz kazanie Pawła w synagodze w Antiochii Pizydyjskiej."
-  },
-  "bridge": "Zarówno Piotr (Dzieje Apostolskie 2), jak i Paweł (Dzieje Apostolskie 13) zwracają uwagę, że król Dawid umarł, został pochowany, a jego ciało uległo rozkładowi — co dowodzi, że Psalm 16:10 był bezpośrednim proroctwem o Mesjaszu, który powstanie z martwych, zanim jego ciało zacznie ulegać rozkładowi.",
-  "keywords": [
-   "Zmartwychwstanie",
-   "Bez rozkładu",
-   "Psalm 16",
-   "Kazanie w Pięćdziesiątnicę"
-  ]
- },
- {
-  "id": "p42",
-  "title": "Znak Jonasza i zmartwychwstanie trzeciego dnia",
-  "eraGap": "ok. 760 r. p.n.e. → ok. 33 r. n.e. (793 lata)",
-  "ot": {
-   "author": "Jonasz i Ozeasz",
-   "context": "Jonasz przez trzy dni pogrzebany w głębinach morza; obietnica Ozeasza o podniesieniu trzeciego dnia."
-  },
-  "nt": {
-   "author": "Mateusz / Paweł",
-   "context": "Jezus daje znak Jonasza jako ostateczny dowód swojego autorytetu."
-  },
-  "bridge": "Jonasz zstąpił w paszczę śmierci, by uciszyć burzę gniewu nad żeglarzami na statku, a potem trzeciego dnia wyszedł żywy, by doprowadzić narody pogańskie do nawrócenia — to wyrazisty zarys śmierci i zmartwychwstania Chrystusa.",
-  "keywords": [
-   "Znak Jonasza",
-   "Trzeci dzień",
-   "Ozeasza 6:2",
-   "Zmartwychwstanie"
-  ]
- },
- {
-  "id": "p43",
-  "title": "Wiem, że mój Odkupiciel żyje (zmartwychwstanie ciała)",
-  "eraGap": "ok. 2000 r. p.n.e. → ok. 55 r. n.e. (2055 lat)",
-  "ot": {
-   "author": "Hiob",
-   "context": "W najgłębszym punkcie swojego cierpienia Hiob wyznaje wiarę w żyjącego Odkupiciela-krewnego, który stanie na ziemi."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł wyjaśnia cielesne zmartwychwstanie wierzących w chwili powrotu żyjącego Odkupiciela."
-  },
-  "bridge": "Księga Hioba, często uważana za najstarszą księgę Biblii, sięga przez tysiąclecia, by ogłosić zarówno żyjącego Odkupiciela („Go'el”), który stanie na prochu ziemi, jak i fizyczne zmartwychwstanie ciała.",
-  "keywords": [
-   "Odkupiciel żyje",
-   "Hioba 19:25",
-   "Zmartwychwstanie ciała",
-   "Ujrzeć Boga w ciele"
-  ]
- },
- {
-  "id": "p44",
-  "title": "Kamień odrzucony przez budowniczych staje się kamieniem węgielnym",
-  "eraGap": "ok. 950 r. p.n.e. → ok. 33 r. n.e. (983 lata)",
-  "ot": {
-   "author": "Psalmista i Izajasz",
-   "context": "Psalm z paschalnego Hallelu, sławiący odrzucony kamień wywyższony na najważniejsze miejsce."
-  },
-  "nt": {
-   "author": "Piotr / Mateusz",
-   "context": "Piotr staje przed tym samym Sanhedrynem, który niedawno skazał Jezusa."
-  },
-  "bridge": "Psalm 118:22, przytaczany przez Jezusa, Piotra i Pawła, wyjaśnia centralny paradoks Ewangelii: jak oficjalni religijni „budowniczowie” Izraela mogli skazać Mesjasza i jak Bóg uchylił ich wyrok, wskrzeszając Go z martwych.",
-  "keywords": [
-   "Kamień węgielny",
-   "Odrzucony kamień",
-   "Psalm 118",
-   "Żywy kamień"
-  ]
- },
- {
-  "id": "p45",
-  "title": "Zasiadający po prawicy Boga i Kapłan na wieki na wzór Melchizedeka",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 33-65 r. n.e.",
-  "ot": {
-   "author": "Dawid",
-   "context": "Najczęściej cytowany w Nowym Testamencie rozdział Starego Testamentu: Pan Dawida intronizowany jako wieczny Kapłan-Król."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków / Piotr",
-   "context": "Wyjaśnienie wstąpienia Jezusa na prawicę Ojca oraz Jego królewskiego kapłaństwa."
-  },
-  "bridge": "W ziemskim przybytku nie było krzeseł — lewiccy kapłani stali nieustannie, bo ich praca nigdy się nie kończyła. Chrystus złożył jedną doskonałą ofiarę i „usiadł” po prawicy Boga jako nasz wieczny Kapłan-Król na wzór Melchizedeka.",
-  "keywords": [
-   "Psalm 110",
-   "Prawica Boga",
-   "Melchizedek",
-   "Kapłan-Król"
-  ]
- },
- {
-  "id": "p46",
-  "title": "Wstąpił na wysokość i dał ludziom dary",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 60 r. n.e. (1060 lat)",
-  "ot": {
-   "author": "Dawid",
-   "context": "Triumfalny pochód Boga, który po rozgromieniu wrogów wstępuje na swoją świętą górę."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł łączy cielesne wniebowstąpienie Chrystusa z rozdzieleniem darów duchowych, które budują Kościół."
-  },
-  "bridge": "Jak zwycięski starożytny król, który wstępuje na wzgórze swojej stolicy i rozdaje łupy poddanym, tak zmartwychwstały Chrystus wstąpił ponad niebiosa i wylał dary duchowe na swoje ciało — Kościół.",
-  "keywords": [
-   "Wniebowstąpienie",
-   "Uprowadził jeńców",
-   "Dary duchowe",
-   "Efezjan 4"
-  ]
- },
- {
-  "id": "p47",
-  "title": "Syn Człowieczy przychodzący na obłokach z wieczną władzą",
-  "eraGap": "ok. 550 r. p.n.e. → ok. 33-95 r. n.e.",
-  "ot": {
-   "author": "Daniel",
-   "context": "Widzenie „Kogoś podobnego do Syna Człowieczego”, który przybywa na obłokach do Przedwiecznego i odbiera hołd od wszystkich ludów."
-  },
-  "nt": {
-   "author": "Mateusz / Jan",
-   "context": "Ulubiony tytuł, którym Jezus określał samego siebie („Syn Człowieczy”), osiąga punkt kulminacyjny podczas Jego procesu przed Kajfaszem i w Objawieniu."
-  },
-  "bridge": "Wielu zakłada, że „Syn Człowieczy” odnosi się jedynie do człowieczeństwa Jezusa. W rzeczywistości Jezus przypisuje sobie w ten sposób wprost tekst z Księgi Daniela 7:13 — postać boską i zarazem ludzką, która przybywa na obłokach nieba i odbiera hołd wszystkich narodów.",
-  "keywords": [
-   "Syn Człowieczy",
-   "Obłoki nieba",
-   "Przedwieczny",
-   "Daniela 7"
-  ]
- },
- {
-  "id": "p48",
-  "title": "Śmierć pochłonięta przez zwycięstwo",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 55 r. n.e. (755 lat)",
-  "ot": {
-   "author": "Izajasz i Ozeasz",
-   "context": "Proroctwo o kosmicznej uczcie na górze Boga, gdzie całun śmierci zostaje zniszczony na zawsze."
-  },
-  "nt": {
-   "author": "Paweł / Jan",
-   "context": "Punkt kulminacyjny rozdziału o zmartwychwstaniu w 1 Koryntian 15 oraz Nowe Jeruzalem w Objawieniu 21."
-  },
-  "bridge": "Paweł splata słowa z Księgi Izajasza 25:8 i Ozeasza 13:14 w jeden hymn zwycięstwa nad grobem, a Jan w Objawieniu 21:4 przytacza drugą połowę Izajasza 25:8 („otrze każdą łzę”).",
-  "keywords": [
-   "Śmierć pochłonięta",
-   "Gdzie twoje żądło",
-   "Otrze łzy",
-   "Zwycięstwo zmartwychwstania"
-  ]
- },
- {
-  "id": "p49",
-  "title": "Zegnie się każde kolano i każdy język wyzna",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 62 r. n.e. (762 lata)",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Najbardziej stanowczo monoteistyczna mowa Starego Testamentu: Jahwe oznajmia, że poza Nim nie ma innego Boga."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Hymn o Chrystusie, sławiący wywyższenie Jezusa po tym, jak uniżył samego siebie aż do śmierci na krzyżu."
-  },
-  "bridge": "W Księdze Izajasza 45:23 Jahwe przysięga, że każde kolano zegnie się wyłącznie przed Nim. W Liście do Filipian 2:10-11 Paweł odnosi dokładnie ten monoteistyczny tekst do zmartwychwstałego Jezusa, utożsamiając wyznanie „Jezus Chrystus jest Panem” z Bożym imieniem JHWH.",
-  "keywords": [
-   "Zegnie się każde kolano",
-   "Każdy język wyzna",
-   "Jezus jest Panem",
-   "Filipian 2"
-  ]
- },
- {
-  "id": "p50",
-  "title": "Dzień Przebłagania (Jom Kippur) i wejście poza zasłonę",
-  "eraGap": "ok. 1440 r. p.n.e. → ok. 65 r. n.e. (1505 lat)",
-  "ot": {
-   "author": "Mojżesz",
-   "context": "Raz w roku arcykapłan wchodzi z krwią do Miejsca Najświętszego i składa grzechy Izraela na kozła ofiarnego."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków",
-   "context": "Chrystus raz na zawsze wchodzi z własną krwią do niebiańskiego przybytku, gdy zasłona Świątyni rozdziera się na dwoje."
-  },
-  "bridge": "Rozdział 16 Księgi Kapłańskiej jest architektonicznym kluczem do krzyża: Chrystus jest jednocześnie wielkim Arcykapłanem, zabitym kozłem, którego krew oczyszcza przybytek, i kozłem ofiarnym, który wynosi nasze grzechy „poza obóz” (Hebrajczyków 13:11-12).",
-  "keywords": [
-   "Dzień Przebłagania",
-   "Jom Kippur",
-   "Rozdarta zasłona",
-   "Miejsce Najświętsze"
-  ]
- },
- {
-  "id": "p51",
-  "title": "Nowe przymierze wypisane na sercu",
-  "eraGap": "ok. 600 r. p.n.e. → ok. 33 r. n.e. (633 lata)",
-  "ot": {
-   "author": "Jeremiasz",
-   "context": "Obietnica nowego przymierza, które przynosi wewnętrzną przemianę i całkowite przebaczenie grzechów."
-  },
-  "nt": {
-   "author": "Łukasz / List do Hebrajczyków / Paweł",
-   "context": "Jezus ustanawia nowe przymierze w swojej krwi podczas Ostatniej Wieczerzy; Paweł opisuje serca zapisane przez Ducha."
-  },
-  "bridge": "Przymierze z Synaju dało zewnętrzną miarę wypisaną na kamiennych tablicach, ale nie mogło przemienić ludzkiego serca; nowe przymierze, zawarte we krwi Jezusa, przez Ducha wpisuje w nas pragnienia Boga.",
-  "keywords": [
-   "Nowe przymierze",
-   "Jeremiasza 31",
-   "Wypisane na sercach",
-   "Kielich przymierza"
-  ]
- },
- {
-  "id": "p52",
-  "title": "Nowe serce i mój Duch w was",
-  "eraGap": "ok. 585 r. p.n.e. → ok. 30 r. n.e. (615 lat)",
-  "ot": {
-   "author": "Ezechiel",
-   "context": "Bóg obiecuje oczyścić swój lud na wygnaniu czystą wodą, zastąpić jego kamienne serce i złożyć w nim swojego Ducha."
-  },
-  "nt": {
-   "author": "Jan / Paweł",
-   "context": "Jezus wyjaśnia Nikodemowi nowe narodzenie „z wody i z Ducha”; Paweł opisuje odrodzenie w Liście do Tytusa."
-  },
-  "bridge": "Gdy Jezus zapytał Nikodema w Ewangelii Jana 3:10: „Jesteś nauczycielem Izraela i tego nie rozumiesz?”, wskazywał wprost na Księgę Ezechiela 36:25-27 — obietnicę oczyszczającej wody i Ducha, który zamieszka w człowieku.",
-  "keywords": [
-   "Nowe serce",
-   "Woda i Duch",
-   "Nowe narodzenie",
-   "Odrodzenie"
-  ]
- },
- {
-  "id": "p53",
-  "title": "Wylanie Ducha Świętego na wszelkie ciało",
-  "eraGap": "ok. 800 r. p.n.e. → ok. 33 r. n.e. (833 lata)",
-  "ot": {
-   "author": "Joel",
-   "context": "Proroctwo, że Bóg wyleje swojego Ducha nie tylko na królów i proroków, ale także na synów, córki i sługi."
-  },
-  "nt": {
-   "author": "Piotr (spisane przez Łukasza) / Paweł",
-   "context": "Dzień Pięćdziesiątnicy w Jerozolimie, gdy Duch Święty zstępuje na uczniów."
-  },
-  "bridge": "W Starym Testamencie Duch zstępował na wybranych przywódców do konkretnych zadań. Joel zapowiedział wylanie Ducha na wszystkich wierzących bez różnicy — wypełnione w dniu Pięćdziesiątnicy i powiązane z wzywaniem imienia Jezusa (Rzymian 10:9-13).",
-  "keywords": [
-   "Pięćdziesiątnica",
-   "Joela 2",
-   "Wyleję mojego Ducha",
-   "Wzywanie Pana"
-  ]
- },
- {
-  "id": "p54",
-  "title": "Sprawiedliwy będzie żył dzięki swojej wierze",
-  "eraGap": "ok. 605 r. p.n.e. → ok. 57 r. n.e. (662 lata)",
-  "ot": {
-   "author": "Habakuk",
-   "context": "Odpowiedź Boga dla Habakuka stojącego na strażnicy, gdy zbliża się sąd przez Babilon."
-  },
-  "nt": {
-   "author": "Paweł / Autor Listu do Hebrajczyków",
-   "context": "Główna teza Listu do Rzymian i kamień węgielny nauki o usprawiedliwieniu z wiary."
-  },
-  "bridge": "Trzy różne księgi Nowego Testamentu przytaczają to jedno, siedmiowyrazowe hebrajskie zdanie Habakuka: List do Rzymian akcentuje „SPRAWIEDLIWY” (jak człowiek zostaje uznany za sprawiedliwego), List do Galacjan — „Z WIARY” (a nie z Prawa), a List do Hebrajczyków — „BĘDZIE ŻYŁ” (wytrwałość do końca).",
-  "keywords": [
-   "Usprawiedliwienie z wiary",
-   "Habakuka 2:4",
-   "Rzymian 1:17",
-   "Sprawiedliwość"
-  ]
- },
- {
-  "id": "p55",
-  "title": "Odbudowa upadłego namiotu Dawida dla wszystkich narodów",
-  "eraGap": "ok. 760 r. p.n.e. → ok. 49 r. n.e. (809 lat)",
-  "ot": {
-   "author": "Amos",
-   "context": "Końcowa obietnica Amosa, że Bóg podniesie upadły szałas Dawida, aby poganie nazwani Jego imieniem mogli Go szukać."
-  },
-  "nt": {
-   "author": "Jakub (na Soborze Jerozolimskim)",
-   "context": "Jakub przytacza Amosa 9 na Soborze Jerozolimskim, by potwierdzić, że poganie są zbawieni z łaski, bez stawania się żydowskimi prozelitami."
-  },
-  "bridge": "Na przełomowym Soborze Jerozolimskim (Dzieje Apostolskie 15) Jakub posługuje się tekstem Amosa 9:11-12 (w przekładzie Septuaginty), aby wykazać, że Bożym zamiarem od początku było przyjęcie pogan wprost do mesjańskiej rodziny — właśnie jako pogan.",
-  "keywords": [
-   "Namiot Dawida",
-   "Sobór Jerozolimski",
-   "Włączenie pogan",
-   "Amosa 9"
-  ]
- },
- {
-  "id": "p56",
-  "title": "Chwała późniejszej świątyni i Upragniony wszystkich narodów",
-  "eraGap": "ok. 520 r. p.n.e. → ok. 30-65 r. n.e.",
-  "ot": {
-   "author": "Aggeusz",
-   "context": "Pokrzepienie budowniczych, którzy płakali nad skromną Drugą Świątynią: jej przyszła chwała miała przewyższyć świątynię Salomona."
-  },
-  "nt": {
-   "author": "Łukasz / List do Hebrajczyków / Jan",
-   "context": "Sam Jezus chodzi po Drugiej Świątyni, a Symeon trzyma na rękach niemowlę-Mesjasza na jej dziedzińcach."
-  },
-  "bridge": "W Drugiej Świątyni nie było Arki Przymierza ani obłoku Szekiny, który napełnił świątynię Salomona — a jednak jej chwała przewyższyła pierwszą, bo wcielony Syn Boży osobiście nauczał na jej dziedzińcach i został w niej ofiarowany.",
-  "keywords": [
-   "Druga Świątynia",
-   "Aggeusza 2",
-   "Większa chwała",
-   "Symeon"
-  ]
- },
- {
-  "id": "p57",
-  "title": "Boża Mądrość obecna przy stworzeniu",
-  "eraGap": "ok. 950 r. p.n.e. → ok. 60-90 r. n.e.",
-  "ot": {
-   "author": "Salomon i Agur",
-   "context": "Uosobiona Mądrość u boku Pana jako mistrzyni dzieła stworzenia; Agur pyta: „Jak brzmi Jego imię i jak imię Jego Syna?”"
-  },
-  "nt": {
-   "author": "Paweł / Jan",
-   "context": "Chrystus ogłoszony jako Mądrość Boża i Ten, przez którego wszystko zostało stworzone."
-  },
-  "bridge": "Nowy Testament utożsamia uosobioną Mądrość (Chokmah / Sophia) z Księgi Przypowieści 8 i stwórcze Słowo (Logos) z Księgi Rodzaju 1 z Jezusem Chrystusem, w którym „kryją się wszystkie skarby mądrości i wiedzy” (Kolosan 2:3).",
-  "keywords": [
-   "Mądrość Boża",
-   "Mistrz budowniczy",
-   "Kolosan 1",
-   "Logos"
-  ]
- },
- {
-  "id": "p58",
-  "title": "Modlitwa Salomona w świątyni za cudzoziemca i dom modlitwy",
-  "eraGap": "ok. 960 r. p.n.e. → ok. 33 r. n.e.",
-  "ot": {
-   "author": "Salomon i Izajasz",
-   "context": "Podczas poświęcenia Pierwszej Świątyni Salomon modli się, aby cudzoziemcy z dalekich krajów poznali imię Boga."
-  },
-  "nt": {
-   "author": "Marek / Paweł",
-   "context": "Jezus oczyszcza Dziedziniec Pogan, a Paweł ogłasza, że poganie są współobywatelami i domownikami Boga."
-  },
-  "bridge": "Gdy kupcy zapełnili zewnętrzny Dziedziniec Pogan bydłem i stołami do wymiany pieniędzy, zablokowali właśnie to miejsce, które Salomon poświęcił na modlitwę narodów — to wyjaśnia słuszne oburzenie Jezusa.",
-  "keywords": [
-   "Dom modlitwy",
-   "Wszystkie narody",
-   "Świątynia Salomona",
-   "Dziedziniec Pogan"
-  ]
- },
- {
-  "id": "p59",
-  "title": "Oblubieniec i Oblubienica (królewska pieśń weselna)",
-  "eraGap": "ok. 950 r. p.n.e. → ok. 55-95 r. n.e.",
-  "ot": {
-   "author": "Salomon",
-   "context": "Poezja miłości przymierza, sławiąca oddanie między królewskim Oblubieńcem a Jego umiłowaną Oblubienicą."
-  },
-  "nt": {
-   "author": "Paweł / Jan",
-   "context": "Małżeństwo objawione jako żywa tajemnica, która wskazuje na Chrystusa-Oblubieńca i Kościół jako Jego Oblubienicę."
-  },
-  "bridge": "Pismo zaczyna się od ludzkiego wesela w ogrodzie (Rodzaju 2), sławi miłość przymierza w Pieśni nad pieśniami, a swój szczyt osiąga w Uczcie Weselnej Baranka w mieście-ogrodzie (Objawienie 19-22).",
-  "keywords": [
-   "Oblubieniec",
-   "Gody Baranka",
-   "Pieśń nad pieśniami",
-   "Oblubienica Chrystusa"
-  ]
- },
- {
-  "id": "p60",
-  "title": "Stworzenie poddane marności i tęskniące za odkupieniem",
-  "eraGap": "ok. 935 r. p.n.e. → ok. 57 r. n.e. (992 lata)",
-  "ot": {
-   "author": "Salomon (Kohelet)",
-   "context": "Kaznodzieja rozpoznaje daremność („hevel” / marność) życia „pod słońcem” bez wiecznego odkupienia."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł używa dokładnie tego samego greckiego słowa z Septuaginty Księgi Kaznodziei („mataiotes” / daremność), aby wyjaśnić, jak Zmartwychwstanie łamie przekleństwo."
-  },
-  "bridge": "W greckim Starym Testamencie (Septuagincie) refren Księgi Kaznodziei to „mataiotes” (daremność/marność). Paweł odpowiada wprost Koheletowi: po upadku stworzenie zostało poddane „mataiotes”, lecz w Chrystusie nasz trud „nie jest daremny w Panu” (1 Koryntian 15:58).",
-  "keywords": [
-   "Marność / daremność",
-   "Księga Kaznodziei",
-   "Rzymian 8",
-   "Odkupienie stworzenia"
-  ]
- },
- {
-  "id": "p61",
-  "title": "Wybawcy powołani przez Ducha i moc wyrastająca ze słabości",
-  "eraGap": "ok. 1200 r. p.n.e. → ok. 65 r. n.e.",
-  "ot": {
-   "author": "Samuel (wg tradycji)",
-   "context": "Bóg raz po raz powołuje wybawców uzdolnionych przez Ducha (Gedeona, Baraka, Samsona), których słabości pokazują, jak bardzo potrzebny jest bezgrzeszny Zbawiciel i Król."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków",
-   "context": "Galeria wiary, która sławi niedoskonałych wybawców zwyciężających przez wiarę i wskazuje na Jezusa, który własną śmiercią pokonał śmierć."
-  },
-  "bridge": "Każdy wybawca z Księgi Sędziów jest tylko częściowym cieniem: Gedeon zwycięża z maleńką resztą, a Samson, umierając, rozpostartymi ramionami obala dom wrogów — to, co Chrystus wypełnia w nieskończenie doskonalszy sposób.",
-  "keywords": [
-   "Księga Sędziów",
-   "Galeria wiary",
-   "Wybawca",
-   "Zwycięstwo przez śmierć"
-  ]
- },
- {
-  "id": "p62",
-  "title": "Powrót z wygnania, odbudowa murów i woda Słowa",
-  "eraGap": "ok. 538 / 445 r. p.n.e. → ok. 60-95 r. n.e.",
-  "ot": {
-   "author": "Ezdrasz i Nehemiasz",
-   "context": "Dekret Cyrusa o odbudowie domu Bożego w Jerozolimie oraz Ezdrasz, który wyraźnie odczytuje Księgę Prawa, aby lud mógł ją zrozumieć."
-  },
-  "nt": {
-   "author": "Łukasz / Piotr / Jan",
-   "context": "Zmartwychwstały Jezus otwiera umysły uczniów, aby rozumieli Pisma, a Kościół zostaje zbudowany z żywych kamieni."
-  },
-  "bridge": "Po niewoli babilońskiej Ezdrasz i Nehemiasz odbudowali świątynię, wspólnotę przymierza i mury Jerozolimy — przygotowując w Judei historyczną scenę na przyjście Mesjasza zgodnie z 70 tygodniami Daniela.",
-  "keywords": [
-   "Ezdrasz i Nehemiasz",
-   "Odbudowa Jerozolimy",
-   "Zrozumienie Pisma",
-   "Żywe kamienie"
-  ]
- },
- {
-  "id": "p63",
-  "title": "Na taki czas jak ten: królewskie wstawiennictwo ratujące lud przymierza",
-  "eraGap": "ok. 473 r. p.n.e. → ok. 33-65 r. n.e.",
-  "ot": {
-   "author": "Mardocheusz (wg tradycji)",
-   "context": "Królowa Estera ryzykuje życie, wchodząc niewezwana na wewnętrzny dziedziniec króla, aby ocalić swój lud przed dekretem zagłady wydanym przez Hamana."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków / Paweł",
-   "context": "Chrystus, nasz królewski Pośrednik, który nie tylko zaryzykował śmierć, lecz oddał swoje życie, aby odwrócić wyrok śmierci i otworzyć nam śmiały przystęp do tronu łaski."
-  },
-  "bridge": "Gdyby Hamanowi udało się wytępić lud żydowski w Persji, mesjańska linia Dawida zgasłaby pięć wieków przed Betlejem. Ukryta Boża opatrzność w Księdze Estery zachowała obietnicę.",
-  "keywords": [
-   "Estera",
-   "Królewski orędownik",
-   "Tron łaski",
-   "Zachowanie rodu"
-  ]
- },
- {
-  "id": "p64",
-  "title": "Lamentacje nad upadłą Jerozolimą i miłosierdzie odnawiane każdego ranka",
-  "eraGap": "ok. 586 r. p.n.e. → ok. 33 r. n.e.",
-  "ot": {
-   "author": "Jeremiasz",
-   "context": "Jeremiasz opłakuje zburzenie Jerozolimy, a zarazem zakotwicza nadzieję w niezawodnym Bożym zmiłowaniu."
-  },
-  "nt": {
-   "author": "Łukasz / Mateusz / Paweł",
-   "context": "Jezus płaczący nad Jerozolimą w Niedzielę Palmową; przechodnie kiwający głowami pod krzyżem; Bóg, który pozostaje wierny."
-  },
-  "bridge": "Jeremiasz, „płaczący prorok” opłakujący Jerozolimę (Lamentacje), zapowiada Jezusa, który na Górze Oliwnej płacze nad tym samym miastem i znosi drwiny przechodniów kiwających głowami (Lamentacje 2:15 → Mateusza 27:39).",
-  "keywords": [
-   "Płacz nad Jerozolimą",
-   "Lamentacje",
-   "Wielka jest Twoja wierność",
-   "2 Tymoteusza"
-  ]
- },
- {
-  "id": "p65",
-  "title": "Królestwo będzie należeć do Pana i sąd nad pychą",
-  "eraGap": "ok. 586 / 650 r. p.n.e. → ok. 95 r. n.e.",
-  "ot": {
-   "author": "Abdiasz i Nahum",
-   "context": "Wyrocznie przeciw Edomowi i Niniwie, które zapowiadają Dzień Pański, stopy zwiastuna dobrej nowiny i ostateczne panowanie Pana."
-  },
-  "nt": {
-   "author": "Jan / Paweł",
-   "context": "Siódma trąba w Objawieniu ogłasza, że królestwa tego świata stały się królestwem naszego Pana i Jego Pomazańca."
-  },
-  "bridge": "Kulminacja na końcu Księgi Abdiasza („a władza królewska przypadnie Panu”) i zwiastun u Nahuma („Spójrzcie, na górach widać kroki posłańca, który niesie dobrą wieść i obwieszcza pokój” — echo Izajasza 52:7) znajdują swoje wypełnienie w Ewangelii i w panowaniu Chrystusa.",
-  "keywords": [
-   "Królestwo należy do Pana",
-   "Abdiasza 21",
-   "Nahuma 1:15",
-   "Stopy zwiastuna Ewangelii"
-  ]
- },
- {
-  "id": "p66",
-  "title": "Pan śpiewający nad swoją odkupioną Oblubienicą na Syjonie",
-  "eraGap": "ok. 630 r. p.n.e. → ok. 30-95 r. n.e.",
-  "ot": {
-   "author": "Sofoniasz",
-   "context": "Po oczyszczającym sądzie Dnia Pańskiego sam Bóg raduje się swoim ludem i śpiewa nad nim z radości."
-  },
-  "nt": {
-   "author": "Jan / Autor Listu do Hebrajczyków",
-   "context": "Bóg zamieszkuje pośród swojego odkupionego ludu, raduje się nim i usuwa wszelki lęk."
-  },
-  "bridge": "W Księdze Sofoniasza 3:14-17 znajdujemy jeden z najczulszych portretów Boga u hebrajskich proroków: potężnego Wojownika („Gibbor”), który ratuje swój lud, mieszka pośród niego i śpiewa nad nim z radością.",
-  "keywords": [
-   "Sofoniasza 3:17",
-   "Bóg pośród ciebie",
-   "Radość i śpiew",
-   "Przybytek Boga"
-  ]
- },
- {
-  "id": "p67",
-  "title": "Słońce sprawiedliwości wschodzące z uzdrowieniem na swoich skrzydłach",
-  "eraGap": "ok. 430 r. p.n.e. → ok. 4 r. p.n.e. – 95 r. n.e.",
-  "ot": {
-   "author": "Malachiasz",
-   "context": "Ostatnia karta kanonu Starego Testamentu, obiecująca wschód Słońca sprawiedliwości i przyjście Eliasza."
-  },
-  "nt": {
-   "author": "Łukasz / Mateusz / Piotr",
-   "context": "Zachariasz sławi „Wschodzące Słońce z wysoka”, a kobieta zostaje uzdrowiona, dotykając frędzli („skrzydeł” / tzitzit) szaty Jezusa."
-  },
-  "bridge": "Po hebrajsku „skrzydła” (kanaph) szaty oznaczały jej narożne frędzle (Liczb 15:38). W Ewangelii Mateusza 9:20 i 14:36 chorzy z wiarą wyciągali ręce, by dotknąć „skrzydeł” (brzegu, frędzli) płaszcza Jezusa, i natychmiast odzyskiwali zdrowie.",
-  "keywords": [
-   "Słońce sprawiedliwości",
-   "Uzdrowienie w Jego skrzydłach",
-   "Wschodzące Słońce",
-   "Malachiasza 4"
-  ]
- },
- {
-  "id": "p68",
-  "title": "Pasienie trzody i strzeżenie powierzonego depozytu prawdy",
-  "eraGap": "ok. 1400 / 700 r. p.n.e. → ok. 63-90 r. n.e.",
-  "ot": {
-   "author": "Mojżesz i Izajasz",
-   "context": "Boża troska o tych, którzy pracują, Dobry Pasterz doglądający swojej trzody i Pan, który zna tych, którzy do Niego należą."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł w 1 Liście do Tymoteusza przytacza Powtórzonego Prawa 25:4 obok słów Jezusa jako Pismo, a w Liście do Filemona odzwierciedla zastępcze spłacenie długu przez Chrystusa."
-  },
-  "bridge": "W 1 Tymoteusza 5:18 Paweł zestawia cytat z Mojżesza (Powtórzonego Prawa 25:4) i cytat z Ewangelii Łukasza (Łukasza 10:7) pod jednym wspólnym wprowadzeniem „bo Pismo mówi” — co ukazuje kanoniczną jedność Starego i Nowego Testamentu. Z kolei w Liście do Filemona 1:18 widać odbicie zastępczego rozrachunku z Księgi Izajasza 53.",
-  "keywords": [
-   "1 Tymoteusza",
-   "Filemona",
-   "Imputacja",
-   "Dobry Pasterz"
-  ]
- },
- {
-  "id": "p69",
-  "title": "Chodzenie w prawdzie i miłości oraz walka o wiarę",
-  "eraGap": "ok. 1400 / 520 r. p.n.e. → ok. 65-90 r. n.e.",
-  "ot": {
-   "author": "Mojżesz i Zachariasz",
-   "context": "Królewskie przykazanie miłości bliźniego, Pan karcący przeciwnika (Zachariasza 3:2) i tysiąc lat w Bożych oczach (Psalm 90:4)."
-  },
-  "nt": {
-   "author": "Jan i Juda",
-   "context": "Listy Jana i List Judy zakorzeniają chrześcijańską miłość, gościnność w prawdzie i duchową walkę w Pismach Hebrajskich."
-  },
-  "bridge": "Listy powszechne — 1, 2 i 3 Jana, 2 Piotra (cytujący Psalm 90:4 w 2 Piotra 3:8) oraz Judy (cytujący Zachariasza 3:2 w Judy 1:9) — wplatają Torę i Proroków w apostolskie napomnienia.",
-  "keywords": [
-   "Ofiara przebłagalna",
-   "1-3 Jana",
-   "List Judy",
-   "Zachariasza 3:2"
-  ]
- },
- {
-  "id": "p70",
-  "title": "Od drzewa życia w Edenie do nowego nieba, nowej ziemi i rzeki życia",
-  "eraGap": "ok. 1400 / 700 r. p.n.e. → ok. 95 r. n.e. (wielka inkluzja)",
-  "ot": {
-   "author": "Mojżesz, Izajasz i Ezechiel",
-   "context": "Drzewo życia w Edenie, proroctwo Izajasza o nowych niebiosach i nowej ziemi oraz widzenie Ezechiela o uzdrawiającej rzece wypływającej ze świątyni."
-  },
-  "nt": {
-   "author": "Jan",
-   "context": "Wielki finał Biblii: przywrócony raj, zniesione przekleństwo i drzewo życia otwarte dla narodów."
-  },
-  "bridge": "Biblię spina wielka literacka klamra (inkluzja): wszystko, co utracono w Księdze Rodzaju 1-3 (drzewo życia, rzeka, chodzenie z Bogiem twarzą w twarz, wolność od przekleństwa), zostaje przywrócone i pomnożone w Objawieniu 21-22 przez Baranka.",
-  "keywords": [
-   "Drzewo życia",
-   "Nowe niebo i nowa ziemia",
-   "Rzeka życia",
-   "Koniec przekleństwa"
-  ]
- },
- {
-  "id": "p71",
-  "title": "Dziękczynny psalm Dawida i przymierze wiecznego królestwa",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 30-95 r. n.e.",
-  "ot": {
-   "author": "Ezdrasz / Kronikarz",
-   "context": "Boża obietnica przymierza dana Dawidowi, gdy Arka Przymierza zostaje wniesiona do Jerozolimy."
-  },
-  "nt": {
-   "author": "Autor Listu do Hebrajczyków / Łukasz",
-   "context": "Pierwszy rozdział Listu do Hebrajczyków bezpośrednio cytuje przymierze z Dawidem, aby dowieść wyższości Syna Bożego."
-  },
-  "bridge": "W 1 Kronik 17 pominięto wzmiankę o możliwym grzechu Salomona (obecną w 2 Samuela 7:14), aby skupić uwagę wyłącznie na bezwarunkowym, mesjańskim horyzoncie przyszłego Syna Dawida, którego tron trwa na wieki.",
-  "keywords": [
-   "1 Kronik 17",
-   "Syn Dawida",
-   "Hebrajczyków 1:5",
-   "Wieczny tron"
-  ]
- },
- {
-  "id": "p72",
-  "title": "Krew Zachariasza i ogień z nieba na ołtarzu",
-  "eraGap": "ok. 800 r. p.n.e. → ok. 33 r. n.e.",
-  "ot": {
-   "author": "Ezdrasz / Kronikarz",
-   "context": "Męczeńska śmierć Zachariasza, syna Jojady, na dziedzińcu świątyni — ostatniego męczennika odnotowanego w układzie Biblii Hebrajskiej."
-  },
-  "nt": {
-   "author": "Łukasz / Mateusz",
-   "context": "Jezus obciąża przywódców religijnych winą za krew wszystkich proroków, od Abla (Rodzaju) do Zachariasza (2 Kronik)."
-  },
-  "bridge": "W tradycyjnej Biblii Hebrajskiej (Tanach) Księga Rodzaju jest pierwszą księgą, a 2 Kronik — ostatnią. Mówiąc „od Abla do Zachariasza”, Jezus mówił w istocie „od A do Z” — przez cały kanon hebrajski!",
-  "keywords": [
-   "Od Abla do Zachariasza",
-   "2 Kronik 24",
-   "Kanon hebrajski",
-   "Męczeństwo"
-  ]
- },
- {
-  "id": "p73",
-  "title": "Tchnienie Pana uśmiercające Niegodziwca",
-  "eraGap": "ok. 700 r. p.n.e. → ok. 51 r. n.e.",
-  "ot": {
-   "author": "Izajasz",
-   "context": "Mesjański Król sądzi ziemię w sprawiedliwości i tchnieniem swoich warg uśmierca bezbożnego."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł opisuje powtórne przyjście Jezusa i obalenie „człowieka grzechu” (Niegodziwca)."
-  },
-  "bridge": "W 2 Tesaloniczan 2:8 Paweł bezpośrednio przytacza Izajasza 11:4 („samym tchnieniem swoich warg zgładzi bezbożnego”), aby pokazać, z jaką łatwością powracający Chrystus pokona zło w chwili swojej paruzji (przyjścia).",
-  "keywords": [
-   "Tchnienie Jego ust",
-   "2 Tesaloniczan 2",
-   "Izajasza 11:4",
-   "Powtórne przyjście"
-  ]
- },
- {
-  "id": "p74",
-  "title": "„Zapisz to na mój rachunek”: wstawiennictwo w przymierzu i imputacja",
-  "eraGap": "ok. 1850 / 700 r. p.n.e. → ok. 61 r. n.e.",
-  "ot": {
-   "author": "Mojżesz i Izajasz",
-   "context": "Juda ofiarowuje siebie jako poręczyciela w miejsce Beniamina w Egipcie; Sługa z Księgi Izajasza dźwiga dług innych."
-  },
-  "nt": {
-   "author": "Paweł",
-   "context": "Paweł wstawia się za zbiegłym niewolnikiem Onezymem i proponuje, że sam spłaci cały jego dług."
-  },
-  "bridge": "Poręczenie Judy za Beniamina (Rodzaju 44) i prośba Pawła za Onezymem w Liście do Filemona („przyjmij go jak mnie samego; jego dług zapisz na mój rachunek”) to żywe obrazy zastępczego przebłagania dokonanego przez Chrystusa.",
-  "keywords": [
-   "Zapisz to na mój rachunek",
-   "Filemona",
-   "Poręczenie Judy",
-   "Imputacja"
-  ]
- },
- {
-  "id": "p75",
-  "title": "Krew, która oczyszcza z wszelkiego grzechu, i ofiara przebłagalna",
-  "eraGap": "ok. 1440 r. p.n.e. → ok. 90 r. n.e.",
-  "ot": {
-   "author": "Mojżesz, Izajasz i Zachariasz",
-   "context": "Przebłagalnia („hilasterion” / przebłaganie) skrapiana krwią, aby oczyścić lud Boży ze wszystkich jego grzechów."
-  },
-  "nt": {
-   "author": "Jan",
-   "context": "Jan ukazuje Jezusa jako naszego sprawiedliwego Orędownika i jako Przebłagalnię, w której dokonuje się przebłaganie („ofiara przebłagalna”) za cały świat."
-  },
-  "bridge": "Pierwszy List Jana używa dokładnie tego słowa z Septuaginty, które odnosi się do złotej Przebłagalni na Arce Przymierza („hilasmos” / przebłaganie), oraz dokładnie języka z Księgi Kapłańskiej 16:30 („oczyszcza z wszelkiego grzechu”), aby pokazać, jak Jezus wypełnia Przybytek.",
-  "keywords": [
-   "Przebłagalnia",
-   "Ofiara przebłagalna",
-   "1 Jana 1:7",
-   "Oczyszczeni z wszelkiego grzechu"
-  ]
- },
- {
-  "id": "p76",
-  "title": "Chodzenie w prawdzie wcielonego Chrystusa",
-  "eraGap": "ok. 1000 / 700 r. p.n.e. → ok. 90 r. n.e.",
-  "ot": {
-   "author": "Dawid i Mojżesz",
-   "context": "Chodzenie w Bożej prawdzie z niepodzielnym sercem i wzajemna miłość zgodnie z przykazaniem danym od początku."
-  },
-  "nt": {
-   "author": "Jan Starszy",
-   "context": "Jan raduje się, że wierzący chodzą w prawdzie i miłości, a zarazem ostrzega przed tymi, którzy zaprzeczają cielesnemu Wcieleniu Mesjasza."
-  },
-  "bridge": "Drugi List Jana łączy starożytne przykazanie Tory („od początku: żebyśmy kochali jedni drugich”) z wyznaniem, że „Jezus Chrystus przyszedł w ciele” — jednocząc starotestamentową miłość przymierza z nowotestamentową prawdą o Wcieleniu.",
-  "keywords": [
-   "Chodzenie w prawdzie",
-   "2 Jana",
-   "Wcielenie",
-   "Miłujcie się wzajemnie"
-  ]
- },
- {
-  "id": "p77",
-  "title": "Gościnność wobec posłańców Imienia i naśladowanie dobra",
-  "eraGap": "ok. 1000 r. p.n.e. → ok. 90 r. n.e.",
-  "ot": {
-   "author": "Dawid i Salomon",
-   "context": "Odwrócenie się od zła, by czynić dobro (Psalm 34:14), i gościnność okazywana sługom Bożym (jak u Szunamitki, która przyjęła Elizeusza)."
-  },
-  "nt": {
-   "author": "Jan Starszy",
-   "context": "Jan chwali Gajusa za przyjmowanie wędrownych nauczycieli Ewangelii, którzy wyruszyli „dla Imienia”, i zachęca go, by naśladował to, co dobre."
-  },
-  "bridge": "W 3 Jana 7 „Imię” (HaShem) to otoczone czcią żydowskie określenie Jahwe w Starym Testamencie — teraz odniesione wprost do imienia Jezusa Chrystusa, dla którego wędrują posłańcy Ewangelii.",
-  "keywords": [
-   "3 Jana",
-   "Dla Imienia",
-   "Psalm 34:14",
-   "Współpracownicy prawdy"
-  ]
- }
+  {
+    "id": "p1",
+    "title": "Potomstwo niewiasty (Protoewangelia)",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 57 r. n.e. (1457 lat)",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Boży wyrok nad wężem w Edenie po upadku człowieka."
+    },
+    "nt": {
+      "author": "Paweł / Jan",
+      "context": "Paweł zapowiada, że Bóg wkrótce zetrze szatana; w wizji Jana smok, „wąż starodawny”, zostaje strącony i walczy z potomstwem kobiety."
+    },
+    "bridge": "Po upadku człowieka Bóg zapowiada wężowi nieprzyjaźń, czyli trwałą wrogość, między jego potomstwem a potomstwem kobiety: „Ono zrani ci głowę, a ty zranisz mu piętę”. Chrześcijanie od pierwszych wieków czytają ten werset jako pierwszą zapowiedź Ewangelii, często nazywaną Protoewangelią: obietnicę, że potomek Ewy pokona zło za cenę własnego cierpienia; wielu widzi w zranionej pięcie krzyż. Nowy Testament nigdy nie cytuje tego wersetu, ale do niego nawiązuje. Paweł pisze, że „Bóg pokoju wkrótce zetrze szatana pod waszymi stopami”. W Objawieniu smok to „wąż starodawny, zwany diabłem i szatanem”, który walczy „z resztą jej potomstwa”; grecki tekst używa tu tego samego słowa co grecki przekład Rodzaju 3:15.",
+    "keywords": [
+      "Potomstwo niewiasty",
+      "Eden",
+      "Zmiażdżenie węża",
+      "Wąż starodawny"
+    ]
+  },
+  {
+    "id": "p2",
+    "title": "Błogosławieństwo dla wszystkich narodów przez potomstwo Abrahama",
+    "eraGap": "ok. 2000 r. p.n.e. → ok. 55 r. n.e. (2055 lat)",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Gdy Izaak zostaje oszczędzony na górze w ziemi Moria, Bóg ponawia obietnicę przymierza z Abrahamem."
+    },
+    "nt": {
+      "author": "Paweł / Piotr (w relacji Łukasza)",
+      "context": "Paweł dowodzi, że obiecanym potomkiem jest Chrystus; Piotr przytacza obietnicę tłumowi w świątyni jerozolimskiej."
+    },
+    "bridge": "Po próbie, której Bóg poddał Abrahama w ziemi Moria, pada obietnica: „w twoim potomstwie będą błogosławione wszystkie narody ziemi”. Sięgają po nią dwa fragmenty Nowego Testamentu. W Dziejach Apostolskich 3:25 Piotr przytacza ją tłumowi w świątyni i mówi słuchaczom, że są „synami proroków i przymierza”. W Liście do Galacjan 3:16 Paweł dowodzi, że obietnice mówią o potomku w liczbie pojedynczej, a więc o jednej osobie, Chrystusie; to w Nim, jak pisze, „błogosławieństwo Abrahama” ma przejść na pogan (Galacjan 3:14). Hebrajskie słowo oznaczające potomstwo może dotyczyć jednego potomka albo wielu, więc skupienie na jednej osobie to odczytanie Pawła, za którym poszli chrześcijanie.",
+    "keywords": [
+      "Abraham",
+      "Góra Moria",
+      "Błogosławieństwo narodów",
+      "Potomstwo"
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "Królewskie berło Judy i przyjście Szylo",
+    "eraGap": "ok. 1850 r. p.n.e. → ok. 95 r. n.e. (1945 lat)",
+    "ot": {
+      "author": "Jakub (spisane przez Mojżesza)",
+      "context": "Błogosławieństwo, którego Jakub na łożu śmierci udzielił w Egipcie dwunastu synom; Juda zostaje w nim porównany do lwa i otrzymuje obietnicę berła."
+    },
+    "nt": {
+      "author": "Jan / Łukasz",
+      "context": "W wizji niebiańskiej sali tronowej jeden ze starszych nazywa Jezusa lwem z pokolenia Judy; rodowód Jezusa u Łukasza sięga aż do Judy."
+    },
+    "bridge": "W błogosławieństwie udzielonym na łożu śmierci Jakub porównuje Judę do lwa i zapowiada: „Nie będzie odjęte berło od Judy”, aż przyjdzie Szylo. Nowy Testament nigdy nie cytuje tej obietnicy ani nie wspomina o Szylo, ale Objawienie 5:5 mówi o Jezusie: „zwyciężył lew z pokolenia Judy” – to tytuł zaczerpnięty z obrazu lwa w Rodzaju 49:9. Rodowód u Łukasza wywodzi Jezusa od Judy (Łukasza 3:33), choć nie mówi nic o berle. Żydowscy i chrześcijańscy komentatorzy od dawna odczytują obietnicę berła jako zapowiedź Mesjasza (obiecanego przez Boga namaszczonego króla). Znaczenie słowa Szylo jest niepewne: może to być imię lub tytuł albo wyrażenie oznaczające tego, do którego berło należy, i żadne z tych odczytań nie jest przesądzone.",
+    "keywords": [
+      "Berło",
+      "Pokolenie Judy",
+      "Szylo",
+      "Lew z Judy"
+    ]
+  },
+  {
+    "id": "p4",
+    "title": "Gwiazda wschodząca z Jakuba",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 4 r. p.n.e. (1400 lat)",
+    "ot": {
+      "author": "Balaam (spisane przez Mojżesza)",
+      "context": "Czwarta prorocza wyrocznia Balaama, wypowiedziana nad równinami Moabu."
+    },
+    "nt": {
+      "author": "Mateusz / Jan",
+      "context": "Mędrcy ze Wschodu przybywają do Jerozolimy, szukając nowo narodzonego króla Żydów, którego gwiazdę widzieli; w Objawieniu Jezus mówi o sobie, że jest „jasną gwiazdą poranną”."
+    },
+    "bridge": "Balaam był wieszczem sprowadzonym „z gór wschodnich” (Liczb 23:7), którego król Moabu najął, by przeklął Izraela. Zamiast tego ujrzał przyszłego władcę: gwiazdę z Jakuba i berło z Izraela, czyli obrazy króla. Mateusz nie cytuje tej wyroczni, choć w tym samym rozdziale przytacza inne proroctwa. Jego mędrcy, także przybysze ze Wschodu, pytają jednak: „Gdzież jest ten król Żydów, który się urodził? Widzieliśmy bowiem jego gwiazdę na Wschodzie”, a wielu czytelników słyszy w tym echo słów Balaama, podobnie jak w słowach Jezusa, że jest „jasną gwiazdą poranną” (Objawienie 22:16). Mateusz nie wyjaśnia, jak mędrcy powiązali gwiazdę z królem żydowskim.",
+    "keywords": [
+      "Gwiazda z Jakuba",
+      "Balaam",
+      "Mędrcy ze Wschodu",
+      "Gwiazda Poranna"
+    ]
+  },
+  {
+    "id": "p5",
+    "title": "Krewny-odkupiciel w rodowodzie z Betlejem",
+    "eraGap": "ok. 1100 r. p.n.e. → ok. 60 r. n.e. (1160 lat)",
+    "ot": {
+      "author": "Samuel (wg tradycji)",
+      "context": "W bramie Betlejem Booz wykupuje ziemię Elimelecha i bierze Rut za żonę; kobiety błogosławią Pana za wnuka Noemi, Obeda, dziadka Dawida."
+    },
+    "nt": {
+      "author": "Mateusz / Paweł",
+      "context": "Rodowód Jezusa u Mateusza wymienia Booza, Rut i Obeda; Paweł pisze, że Bóg posłał swego Syna, zrodzonego pod prawem, aby wykupił tych, którzy byli pod prawem."
+    },
+    "bridge": "Scena z Rut 4 opiera się na dwóch przepisach Prawa: najbliższy krewny mógł wykupić ziemię sprzedaną przez zubożałego brata (Kapłańska 25:25), a brat zmarłego miał poślubić wdowę po nim, jeśli zmarły nie zostawił dziecka, aby jego imię nie zginęło (Powtórzonego Prawa 25:5-6). Booz, krewny-odkupiciel (po hebrajsku go’el, krewny mający prawo wykupu), łączy obie te sprawy: nabywa ziemię Elimelecha i bierze Rut za żonę, „aby wzbudzić imię zmarłego na jego dziedzictwie”, choć nie jest bratem zmarłego. Kobiety błogosławią potem Pana za krewnego, którym jest najpewniej nowo narodzony Obed, dziadek Dawida, a Mateusz wymienia Booza, Rut i Obeda wśród przodków Jezusa. Chrześcijanie od dawna widzą w Boozie obraz Chrystusa, posłanego, „aby wykupił tych, którzy byli pod prawem” (Galacjan 4:5), ale żaden tekst Nowego Testamentu nie przedstawia Booza jako obrazu Chrystusa.",
+    "keywords": [
+      "Krewny-odkupiciel",
+      "Rut i Booz",
+      "Betlejem",
+      "Rodowód"
+    ]
+  },
+  {
+    "id": "p6",
+    "title": "Pomazany Król Boga i róg zbawienia",
+    "eraGap": "ok. 1050 r. p.n.e. → ok. 4 r. p.n.e. (1050 lat)",
+    "ot": {
+      "author": "Anna",
+      "context": "Prorocza modlitwa Anny w przybytku w Szilo, zanim Izrael w ogóle miał króla."
+    },
+    "nt": {
+      "author": "Łukasz (Magnificat Marii i Zachariasz)",
+      "context": "Pieśń Marii po zapowiedzi narodzin Jezusa i pieśń Zachariasza po narodzinach jego syna Jana – w obu rozbrzmiewa echo modlitwy Anny."
+    },
+    "bridge": "Modlitwa Anny to pierwsze miejsce w Biblii, w którym król zostaje nazwany Bożym pomazańcem (hebr. masziach, stąd słowo „Mesjasz”), na wiele lat przed Saulem, pierwszym królem Izraela. Łukasz jej nie cytuje, ale pieśń Marii (zwana Magnificat) idzie za wzorem jej modlitwy: Bóg strąca pysznych i możnych, wywyższa pokornych i nasyca głodnych (porównaj 1 Samuela 2:4-8 z Łukasza 1:51-53). Słowa Zachariasza „wzbudził nam róg zbawienia w domu Dawida” nawiązują do ostatniego wersetu modlitwy Anny: „wywyższy róg swego pomazańca” („róg” to biblijny obraz siły). Przypominają też Psalm 18:2, gdzie Bóg jest „rogiem mego zbawienia”. Chrześcijanie od dawna widzą odpowiedź na nadzieję Anny w Jezusie, Synu Dawida.",
+    "keywords": [
+      "Róg zbawienia",
+      "Modlitwa Anny",
+      "Magnificat",
+      "Pomazany Król"
+    ]
+  },
+  {
+    "id": "p7",
+    "title": "Wieczny tron Dawida i synostwo",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 30 r. n.e. (1030 lat)",
+    "ot": {
+      "author": "Prorok Natan",
+      "context": "Przymierze z Dawidem przekazane królowi Dawidowi w Jerozolimie."
+    },
+    "nt": {
+      "author": "Łukasz / Autor Listu do Hebrajczyków",
+      "context": "Anioł Gabriel zwiastuje Marii w Nazarecie narodziny Jezusa; List do Hebrajczyków odnosi do Chrystusa Bożą obietnicę o synu Dawida."
+    },
+    "bridge": "Przez proroka Natana Bóg obiecuje Dawidowi potomka, którego tron utwierdzi na wieki, i mówi: „Ja będę mu ojcem, a on będzie mi synem”. W pierwotnym kontekście obietnica dotyczyła Salomona, który miał zbudować świątynię, i przewiduje nawet, że ten syn może zgrzeszyć i zostać skarcony. Ponieważ obietnica mówi „na wieki”, Izrael zaczął z nadzieją oczekiwać większego syna Dawida, a Nowy Testament przedstawia Jezusa jako tego dziedzica. Gabriel nie cytuje 2 Samuela 7, ale jego słowa do Marii wyraźnie do niego nawiązują: Syn Najwyższego, tron Jego ojca Dawida, królestwo bez końca. List do Hebrajczyków 1:5 przytacza potem tę obietnicę dosłownie i odnosi ją do Chrystusa.",
+    "keywords": [
+      "Przymierze z Dawidem",
+      "Wieczny tron",
+      "Syn Dawida",
+      "Królestwo bez końca"
+    ]
+  },
+  {
+    "id": "p8",
+    "title": "Narodzenie z Dziewicy i znak Emmanuela",
+    "eraGap": "ok. 734 r. p.n.e. → ok. 4 r. p.n.e. (730 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Znak dany królowi Achazowi i domowi Dawida, gdy Syria i Izrael (Efraim) wyruszyły przeciw Jerozolimie, czyli w czasie tzw. kryzysu syro-efraimskiego."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Gdy anioł mówi Józefowi, że dziecko Marii jest z Ducha Świętego, Mateusz łączy te narodziny ze znakiem Izajasza."
+    },
+    "bridge": "Izajasz dał ten znak królowi Achazowi i całemu domowi Dawida („Posłuchaj teraz, domu Dawida!”, Izajasza 7:13), gdy Jerozolimie zagrażali dwaj wrodzy królowie. Znak dotyczył też tamtego kryzysu: zanim dziecko nauczy się odrzucać zło i wybierać dobro, zagrożenie ze strony obu królów minie (Izajasza 7:16). Mateusz cytuje ten werset jako wypełniony w narodzeniu Jezusa z Marii, która, zanim zamieszkała z Józefem, okazała się „brzemienna z Ducha Świętego” (Mateusza 1:18). Hebrajskie słowo użyte przez Izajasza, alma, oznacza młodą kobietę w wieku zamążpójścia, a grecki przekład, za którym idzie Mateusz, mówi „dziewica”. Mateusz przedstawia Jezusa jako najpełniejsze znaczenie tego znaku: Emmanuela, czyli „Bóg z nami”.",
+    "keywords": [
+      "Narodzenie z Dziewicy",
+      "Emmanuel",
+      "Bóg z nami",
+      "Znak"
+    ]
+  },
+  {
+    "id": "p9",
+    "title": "Narodziło się nam Dziecię, Książę Pokoju",
+    "eraGap": "ok. 730 r. p.n.e. → ok. 4 r. p.n.e. (726 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Proroctwo Izajasza o świetle po ciemności: królewskie dziecko narodzone, by panować na tronie Dawida w sprawiedliwości i pokoju."
+    },
+    "nt": {
+      "author": "Łukasz",
+      "context": "Gabriel zapowiada Maryi, że jej syn otrzyma tron Dawida i królestwo bez końca; anioł ogłasza Jego narodziny pasterzom w okolicy Betlejem."
+    },
+    "bridge": "Izajasz zapowiada królewskie dziecko: „Dziecko bowiem narodziło się nam, syn został nam dany”. Oba zdania to hebrajski paralelizm (ta sama myśl wyrażona dwa razy innymi słowami), więc mówią o tych samych narodzinach – króla, który „zasiądzie na tronie Dawida”, a rozszerzaniu jego władzy i pokoju „nie będzie końca”. Żaden autor Nowego Testamentu nie cytuje tych wersetów, ale opis narodzin u Łukasza je przywołuje: Gabriel zapowiada, że Bóg da Jezusowi „tron jego ojca Dawida”, a „jego królestwu nie będzie końca” (Łukasza 1:32-33), anioł zaś ogłasza pasterzom narodziny Zbawiciela „w mieście Dawida”. Chrześcijanie później odczytali słowa „syn został nam dany” i tytuł „Bóg Mocny” w świetle Wcielenia (Bóg Syn staje się człowiekiem w Jezusie); jest to jednak odczytanie teologiczne, a nie coś, co same równoległe wersy stwierdzają.",
+    "keywords": [
+      "Dziecko narodziło się nam",
+      "Bóg Mocny",
+      "Książę Pokoju",
+      "Tron Dawida"
+    ]
+  },
+  {
+    "id": "p10",
+    "title": "Różdżka z pnia Jessego",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 57 r. n.e. (757 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Obraz Izajasza: drzewo rodu Jessego ścięte aż do pnia, z którego wyrasta nowa gałązka."
+    },
+    "nt": {
+      "author": "Paweł / Mateusz",
+      "context": "Paweł przytacza Izajasza 11:10, aby wykazać, że misja Chrystusa obejmuje także pogan; przy chrzcie Jezusa Duch Boży zstępuje i przychodzi na Niego."
+    },
+    "bridge": "Izajasz przedstawia ród Jessego, ojca Dawida, jako drzewo ścięte aż do pnia. Z tego pnia wyrasta nowy władca, o którym czytamy: „spocznie na nim Duch Pana”. Wielu odczytuje ten obraz jako nadzieję, że królewski ród Dawida, choć ścięty, znów wypuści pęd. Paweł cytuje Izajasza 11:10 w starożytnym przekładzie greckim (Rzymian 15:12), aby pokazać, że ten korzeń Jessego przynosi nadzieję poganom. Wielu słyszy też echo wersetu 11:2 w opisie chrztu Jezusa, gdy Duch Boży zstępuje i przychodzi na Niego (Mateusza 3:16), choć Mateusz nie powołuje się tam na Izajasza.",
+    "keywords": [
+      "Pień Jessego",
+      "Latorośl",
+      "Siedmioraki Duch",
+      "Nadzieja pogan"
+    ]
+  },
+  {
+    "id": "p11",
+    "title": "Narodzony w Betlejem Efrata",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 4 r. p.n.e. (696 lat)",
+    "ot": {
+      "author": "Micheasz",
+      "context": "Gdy Jerozolima jest oblężona (Micheasza 5:1), prorok zapowiada, że z małego Betlejem wyjdzie władca Izraela."
+    },
+    "nt": {
+      "author": "Mateusz / Jan",
+      "context": "Gdy Herod pyta, gdzie ma się narodzić Chrystus, naczelni kapłani i nauczyciele ludu cytują Micheasza; w Jana 7:42 tłum przypomina to samo oczekiwanie."
+    },
+    "bridge": "Micheasz, prorok z VIII wieku przed Chrystusem, zapowiada, że z Betlejem Efrata, choć „najmniejsze wśród tysięcy w Judzie”, wyjdzie władca Izraela, a „jego wyjścia są od dawna, od dni wiecznych”. Gdy Herod pyta, gdzie ma się narodzić Chrystus, naczelni kapłani i nauczyciele ludu odpowiadają: „W Betlejem w Judei”, i przytaczają ten werset (Mateusza 2:5-6). Ich cytat jest swobodniejszy: „A ty, Betlejem, ziemio Judy, wcale nie jesteś najmniejsze wśród władców Judei”, a władca ma rządzić „moim ludem, Izraelem”, co przypomina słowa Boga do Dawida: „Ty będziesz pasł mój lud Izraela” (2 Samuela 5:2). Jana 7:42 pokazuje, że tłumy żywiły tę samą nadzieję: Chrystus miał przyjść „z potomstwa Dawida i z miasteczka Betlejem”. Łukasz opowiada, jak Józef, pochodzący z rodu Dawida, przybył do Betlejem na spis ludności (Łukasza 2:4-5).",
+    "keywords": [
+      "Betlejem",
+      "Efrata",
+      "Władca w Izraelu",
+      "Od wieczności"
+    ]
+  },
+  {
+    "id": "p12",
+    "title": "Płacz w Rama nad zabitymi dziećmi",
+    "eraGap": "ok. 600 r. p.n.e. → ok. 3 r. p.n.e. (597 lat)",
+    "ot": {
+      "author": "Jeremiasz",
+      "context": "Rachel, jedna z matek rodu Izraela, ukazana jako płacząca w Rama, na północ od Jerozolimy, gdy jej potomków uprowadza się na wygnanie."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Król Herod nakazuje rzeź chłopców w Betlejem i w całej jego okolicy."
+    },
+    "bridge": "Mateusz cytuje Jeremiasza 31:15 po tym, jak Herod każe zabić chłopców w Betlejem. U Jeremiasza Rachel (żona Jakuba, jedna z matek rodu Izraela) płacze w Rama nad potomkami uprowadzonymi na wygnanie; Rama, na północ od Jerozolimy, była miejscem, gdzie zbierano jeńców prowadzonych do Babilonu (Jeremiasza 40:1). Betlejem leży na południe od Jerozolimy, około 16 km od Rama, a Rodzaju 35:19 umieszcza grób Racheli przy drodze do Betlejem. U Jeremiasza po jej płaczu od razu pada Boża obietnica: „twoi synowie powrócą do swojej krainy” (Jeremiasza 31:17), a dalej zapowiedź nowego przymierza (Jeremiasza 31:31). Wielu czytelników rozumie, że Mateusz widzi ten sam wzór na początku życia Jezusa: gorzki płacz, a potem Boże wybawienie.",
+    "keywords": [
+      "Rama",
+      "Płacz Racheli",
+      "Herod",
+      "Betlejem"
+    ]
+  },
+  {
+    "id": "p13",
+    "title": "Ucieczka i powrót: „Z Egiptu przywołałem mojego Syna”",
+    "eraGap": "ok. 750 r. p.n.e. → ok. 2 r. p.n.e. (748 lat)",
+    "ot": {
+      "author": "Ozeasz",
+      "context": "Wspomnienie ojcowskiej miłości Boga do Izraela, gdy wyprowadził naród z niewoli egipskiej."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Józef zabiera Marię i Jezusa do Egiptu aż do śmierci Heroda, a potem wraca do ziemi Izraela."
+    },
+    "bridge": "Klasyczna typologia biblijna: Izrael był zbiorowym synem Boga, wezwanym z Egiptu (Wyjścia 4:22), a Jezus, prawdziwy i wierny Syn, przechodzi na nowo drogę Izraela: z Egiptu, przez wody chrztu, na pustynię.",
+    "keywords": [
+      "Egipt",
+      "Przywołałem Syna",
+      "Typologia",
+      "Nowe Wyjście"
+    ]
+  },
+  {
+    "id": "p14",
+    "title": "Posłaniec przygotowujący drogę Pana",
+    "eraGap": "ok. 700 / 430 r. p.n.e. → ok. 26 r. n.e.",
+    "ot": {
+      "author": "Izajasz i Malachiasz",
+      "context": "Zamykające słowa hebrajskich proroków, zapowiadające poprzednika, który przyjdzie, zanim Pan wejdzie do swojej świątyni."
+    },
+    "nt": {
+      "author": "Marek / Mateusz",
+      "context": "Jan Chrzciciel pojawia się na Pustyni Judzkiej i wzywa naród do nawrócenia."
+    },
+    "bridge": "Zwróć uwagę na Boskość ukrytą w tym odniesieniu: w Księdze Izajasza 40:3 i Malachiasza 3:1 droga zostaje przygotowana dla samego Jahwe, a w Ewangeliach Jan przygotowuje tę drogę dla Jezusa.",
+    "keywords": [
+      "Głos na pustyni",
+      "Posłaniec",
+      "Jan Chrzciciel",
+      "Poprzednik"
+    ]
+  },
+  {
+    "id": "p15",
+    "title": "Siedemdziesiąt tygodni Daniela: pomazaniec i spustoszenie",
+    "eraGap": "ok. 538 r. p.n.e. → ok. 30 r. n.e. (568 lat)",
+    "ot": {
+      "author": "Daniel (przez anioła Gabriela)",
+      "context": "Gabriel zapowiada Danielowi siedemdziesiąt tygodni dla Jerozolimy: przyjdzie pomazaniec, który zostanie zgładzony, a miasto i świątynia zostaną zniszczone."
+    },
+    "nt": {
+      "author": "Mateusz / Marek / Łukasz",
+      "context": "Jezus zapowiada, że uczniowie zobaczą „obrzydliwość spustoszenia”, ogłasza: „Wypełnił się czas”, i przepowiada zburzenie Jerozolimy."
+    },
+    "bridge": "Gabriel zapowiada Danielowi siedemdziesiąt tygodni (siedemdziesiąt siódemek, zwykle rozumianych jako 490 lat): „aż do Księcia Mesjasza” upłynie 69 tygodni, potem pomazaniec zostanie zgładzony, a miasto i świątynia zostaną zniszczone. Wielu chrześcijan liczy 69 tygodni (483 lata) od perskiego dekretu i dochodzi do czasów Jezusa, ale wynik zależy od tego, który dekret i jaką długość roku się przyjmie. Wielu badaczy odnosi ten fragment do II wieku p.n.e., gdy grecki król zbezcześcił świątynię, a hebrajskie słowa można też oddać po prostu jako pomazaniec, książę. Nowy Testament nigdy nie korzysta z tej rachuby; Marka 1:15 i Łukasza 19:43-44 łączy z Danielem tylko myśl o wyznaczonym czasie i upadku miasta. Wyraźnym nawiązaniem do tego fragmentu jest ostrzeżenie Jezusa: uczniowie zobaczą „obrzydliwość spustoszenia, o której mówił prorok Daniel”, czyli świętokradztwo w świątyni (Mateusza 24:15), co opiera się na Daniela 9:27 i podobnych wersetach.",
+    "keywords": [
+      "Siedemdziesiąt tygodni",
+      "Pomazaniec",
+      "Obrzydliwość spustoszenia",
+      "Wypełnienie czasu"
+    ]
+  },
+  {
+    "id": "p16",
+    "title": "Wielkie światło wschodzi nad Galileą pogan",
+    "eraGap": "ok. 730 r. p.n.e. → ok. 28 r. n.e. (758 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Obietnica, że północne pokolenia Zabulona i Neftalego, jako pierwsze upokorzone przez Asyrię, ujrzą chwałę."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Jezus przenosi się z Nazaretu do Kafarnaum, na pograniczu ziem Zabulona i Neftalego."
+    },
+    "bridge": "Zamiast rozpocząć swoją służbę w prestiżowej Judei, Jezus uczynił Kafarnaum w Galilei swoim ośrodkiem i przyniósł Boże światło właśnie do tej krainy, która jako pierwsza pogrążyła się w asyryjskiej ciemności.",
+    "keywords": [
+      "Galilea",
+      "Zabulon i Neftali",
+      "Wielkie światło",
+      "Kafarnaum"
+    ]
+  },
+  {
+    "id": "p17",
+    "title": "Namaszczony, by głosić dobrą nowinę i miłościwy rok Pana",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 28 r. n.e. (728 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Mówca namaszczony przez Ducha ogłasza dobrą nowinę ubogim, wolność uwięzionym i miłościwy rok Pana."
+    },
+    "nt": {
+      "author": "Łukasz",
+      "context": "Jezus czyta ze zwoju Izajasza w synagodze w Nazarecie."
+    },
+    "bridge": "W synagodze w Nazarecie Jezus czyta Izajasza 61:1-2, a potem mówi: „Dziś wypełniły się te słowa Pisma w waszych uszach”. Tekst u Łukasza idzie za starożytnym greckim przekładem Izajasza i dodaje zwrot z Izajasza 58:6 („puścić wolno uciśnionych”). Zapowiedź wolności dla uwięzionych przywodzi na myśl jubileusz, czyli pięćdziesiąty rok, w którym ogłaszano „wolność w ziemi”, a każdy wracał do swojej posiadłości (Kapłańska 25:10). Czytanie kończy się na słowach „Abym głosił miłościwy rok Pana”, tuż przed dalszym ciągiem u Izajasza: „i dzień pomsty naszego Boga”. Wielu chrześcijan widzi w tym miejscu granicę między pierwszym przyjściem Chrystusa w łasce a Jego powrotem na sąd, ale Łukasz nie podaje powodu.",
+    "keywords": [
+      "Jubileusz",
+      "Synagoga w Nazarecie",
+      "Namaszczony Duchem",
+      "Wolność dla jeńców"
+    ]
+  },
+  {
+    "id": "p18",
+    "title": "Prorok podobny do Mojżesza",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 30 r. n.e. (1430 lat)",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Pożegnalna mowa Mojżesza z obietnicą przyszłego Proroka-Pośrednika, który będzie przekazywał same słowa Boga."
+    },
+    "nt": {
+      "author": "Piotr / Jan",
+      "context": "Piotr przemawia w Portyku Salomona w świątyni jerozolimskiej."
+    },
+    "bridge": "Podobnie jak Mojżesz, Jezus po narodzeniu uszedł dzieciobójstwu nakazanemu przez tyrana, został wezwany z Egiptu, pościł 40 dni, nakarmił chlebem rzesze na pustkowiu, wstąpił na górę, by nauczać Bożego Prawa, i stał się pośrednikiem przymierza.",
+    "keywords": [
+      "Prorok jak Mojżesz",
+      "Pośrednik",
+      "Jego słuchajcie",
+      "Przemienienie"
+    ]
+  },
+  {
+    "id": "p19",
+    "title": "Cuda: wzrok dla niewidomych i słuch dla głuchych",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 29 r. n.e. (729 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Wizja Izajasza: pustynia rozkwita, a odkupieni wracają na Syjon, gdy Bóg przychodzi zbawić swój lud."
+    },
+    "nt": {
+      "author": "Mateusz / Marek",
+      "context": "Jezus odpowiada wysłannikom, których Jan Chrzciciel przysłał z więzienia, a tłum zdumiewa się, gdy Jezus uzdrawia głuchego, który z trudem mówił."
+    },
+    "bridge": "W 35. rozdziale Księgi Izajasza prorok opisuje dzień, w którym Bóg przychodzi zbawić swój lud: „Wtedy otworzą się oczy ślepych i otworzą się uszy głuchych”. Gdy Jan Chrzciciel posyła z więzienia uczniów z pytaniem, czy Jezus jest „tym, który ma przyjść” (Mateusza 11:3), Jezus odpowiada, wskazując właśnie te znaki: ślepi widzą, chromi chodzą, głusi słyszą. Nie cytuje Izajasza, ale nawiązanie jest wyraźne, a Jego lista przypomina też dobrą nowinę zapowiedzianą w Izajasza 61:1. Marek, opisując głuchego, „który miał trudności z mówieniem” (Marka 7:32), używa rzadkiego greckiego słowa, które grecki przekład Starego Testamentu zna tylko z Izajasza 35:6. Chrześcijanie widzą w tych uzdrowieniach znak, że obiecane przez Boga zbawienie przyszło w Jezusie.",
+    "keywords": [
+      "Oczy niewidomych",
+      "Chromi chodzą",
+      "Głusi słyszą",
+      "Znaki zbawienia"
+    ]
+  },
+  {
+    "id": "p20",
+    "title": "Ukryte prawdy Królestwa w przypowieściach",
+    "eraGap": "ok. 950 r. p.n.e. → ok. 29 r. n.e. (979 lat)",
+    "ot": {
+      "author": "Asaf",
+      "context": "Pouczający psalm Asafa, który opowiada dzieje Izraela, od wyjścia z Egiptu po króla Dawida, jako lekcję dla następnych pokoleń."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Jezus naucza tłumy nad Jeziorem Galilejskim w przypowieściach o Królestwie."
+    },
+    "bridge": "Psalm 78 zaczyna się od zapowiedzi Asafa: „Otworzę moje usta do przypowieści, opowiem starodawne tajemnice”. Chodzi mu o lekcje z dziejów Izraela, które ojcowie przekazywali synom, aby pokładali w Bogu nadzieję (Psalm 78:3-7). Mateusz zauważa, że Jezus mówił do tłumów tylko w przypowieściach, i dodaje, że stało się tak, „aby się wypełniło, co zostało powiedziane przez proroka”. Sam psalm nie jest przepowiednią, więc wielu uważa, że Mateusz dostrzega tu wzorzec, a nie spełnienie zapowiedzi: jak Asaf wydobywał ukryte lekcje z dziejów Izraela, tak Jezus odsłania „rzeczy ukryte od założenia świata”.",
+    "keywords": [
+      "Przypowieści",
+      "Tajemnice",
+      "Asaf",
+      "Od założenia świata"
+    ]
+  },
+  {
+    "id": "p21",
+    "title": "Łagodny Sługa, który nie złamie nadłamanej trzciny",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 29 r. n.e. (729 lat)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Pierwsza Pieśń o Słudze Pańskim, przedstawiająca łagodnego, napełnionego Duchem Sługę Bożego, który przynosi narodom sprawiedliwość."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Jezus po cichu uzdrawia chorych, unikając politycznej konfrontacji z faryzeuszami."
+    },
+    "bridge": "W przeciwieństwie do politycznych zelotów, którzy w pogoni za władzą miażdżyli słabych, Jezus troszczył się o „nadłamane trzciny” i „tlące się knoty” — o złamanych, odrzuconych i wyczerpanych.",
+    "keywords": [
+      "Nadłamana trzcina",
+      "Tlący się knot",
+      "Pieśń o Słudze",
+      "Ufność pogan"
+    ]
+  },
+  {
+    "id": "p22",
+    "title": "Wódz zastępów Pańskich",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 95 r. n.e. (1495 lat)",
+    "ot": {
+      "author": "Jozue",
+      "context": "W pobliżu Jerycha mąż z wydobytym mieczem mówi Jozuemu, że przyszedł jako wódz wojska Pana, i każe mu zdjąć obuwie, bo miejsce jest święte."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Jan widzi otwarte niebo i Jeźdźca zwanego Wiernym i Prawdziwym, Słowo Boże, który sądzi i walczy, a za nim podążają wojska w niebie."
+    },
+    "bridge": "W pobliżu Jerycha Jozue spotyka męża z wydobytym mieczem, który mówi: „jako wódz wojska Pana teraz przyszedłem”. Jozue pada przed nim twarzą do ziemi – taki pokłon oddawano też królom (2 Samuela 14:4) – i słyszy, że ma zdjąć obuwie, bo miejsce jest święte, tak jak Mojżesz przy płonącym krzewie (Wyjścia 3:5). Z powodu tego podobieństwa wielu chrześcijan widzi w tej postaci chrystofanię (ukazanie się Syna Bożego przed Jego narodzeniem jako człowieka). Nowy Testament nigdzie jednak nie wspomina tej sceny ani nie mówi, kim jest ów wódz. Objawienie 19:11-14 jest tylko luźną paralelą: Jeździec zwany Wiernym i Prawdziwym, którego imię brzmi „Słowo Boże”, prowadzi „wojska w niebie”, ale oba teksty łączy obraz, a nie słowa.",
+    "keywords": [
+      "Wódz zastępów Pańskich",
+      "Święta ziemia",
+      "Wojska w niebie",
+      "Wierny i Prawdziwy"
+    ]
+  },
+  {
+    "id": "p23",
+    "title": "Manna z nieba i woda z uderzonej skały",
+    "eraGap": "ok. 1440 / 950 r. p.n.e. → ok. 30 / 55 r. n.e.",
+    "ot": {
+      "author": "Mojżesz / Asaf",
+      "context": "Bóg podtrzymuje Izraela na pustyni codziennym chlebem z nieba i wodą ze skały na Horebie; Psalm 78 wspomina później mannę."
+    },
+    "nt": {
+      "author": "Jan / Paweł",
+      "context": "Jezus ogłasza: „Ja jestem chlebem życia”, a Paweł utożsamia skałę z pustyni z Chrystusem."
+    },
+    "bridge": "W Jana 6 tłum przywołuje mannę słowami Pisma: „Chleb z nieba dał im do jedzenia”; to zdanie łączy Wyjścia 16:4, 15 i Psalm 78:24. Jezus odpowiada, że to Jego Ojciec daje „prawdziwy chleb z nieba”, i mówi: „Ja jestem chlebem życia”. Paweł nazywa pokarm i napój Izraela na pustyni duchowymi i mówi o skale, z której płynęła woda: „tą skałą był Chrystus”. Tak więc sam Nowy Testament odczytuje oba dary typologicznie (typologia to odczytywanie wcześniejszych wydarzeń jako zapowiedzi Chrystusa). Niektórzy chrześcijanie widzą też w uderzeniu skały obraz cierpienia Chrystusa, ale Paweł tego nie mówi.",
+    "keywords": [
+      "Manna",
+      "Chleb Życia",
+      "Skała na Horebie",
+      "Skała duchowa"
+    ]
+  },
+  {
+    "id": "p24",
+    "title": "Wąż miedziany wywyższony na pustyni",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 30 r. n.e. (1430 lat)",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Bóg poleca Mojżeszowi umieścić miedzianego węża na palu, aby każdy ukąszony, kto spojrzy na niego z wiarą, pozostał przy życiu."
+    },
+    "nt": {
+      "author": "Jan (słowa Jezusa do Nikodema)",
+      "context": "Jezus wyjaśnia Nikodemowi konieczność krzyża tuż przed słowami z Jana 3:16."
+    },
+    "bridge": "Gdy jadowite węże zabijały Izraelitów, Bóg polecił Mojżeszowi umieścić miedzianego węża na drzewcu, a każdy ukąszony, kto na niego spojrzał, pozostawał przy życiu. Sam Jezus przeprowadza to porównanie: „jak Mojżesz wywyższył węża na pustyni, tak musi być wywyższony Syn Człowieczy”, aby każdy, kto w Niego wierzy, miał życie wieczne. Dlaczego wąż? Pismo tego nie wyjaśnia, ale wielu chrześcijan łączy to ze słowami Pawła o Chrystusie, którego Bóg „za nas grzechem uczynił” (2 Koryntian 5:21): obraz tego, co zabijało lud, stał się środkiem jego uzdrowienia. Niektórzy późniejsi komentatorzy widzieli też w miedzi (brązie) symbol sądu, ale to odczytanie symboliczne, a nie coś, co mówi Biblia.",
+    "keywords": [
+      "Wąż miedziany",
+      "Wywyższony",
+      "Nikodem",
+      "Spójrz i żyj"
+    ]
+  },
+  {
+    "id": "p25",
+    "title": "Cuda Elizeusza: rozmnożenie chlebów i oczyszczenie Naamana",
+    "eraGap": "ok. 850 r. p.n.e. → ok. 29 r. n.e. (879 lat)",
+    "ot": {
+      "author": "Autor anonimowy (późniejsza tradycja żydowska: Jeremiasz)",
+      "context": "Elizeusz karmi stu mężczyzn dwudziestoma chlebami jęczmiennymi, tak że jeszcze zostaje; później Naaman, syryjski dowódca, na słowo Elizeusza zanurza się w Jordanie i zostaje oczyszczony z trądu."
+    },
+    "nt": {
+      "author": "Jan / Łukasz",
+      "context": "Jan: Jezus karmi około pięciu tysięcy mężczyzn pięcioma chlebami jęczmiennymi, a zostaje dwanaście koszy kawałków. Łukasz: w Nazarecie Jezus przypomina, że za czasów Elizeusza oczyszczony został tylko Naaman Syryjczyk."
+    },
+    "bridge": "Elizeusz nakarmił kiedyś stu mężczyzn dwudziestoma chlebami jęczmiennymi; jego sługa uważał, że to za mało, a jednak „ci jedli i jeszcze zostawili” (2 Królewska 4:44). Tylko Ewangelia Jana podaje, że chleby, którymi Jezus nakarmił tłum, były jęczmienne, i powtarza ten sam układ: pomocnik wątpi, wszyscy jedzą, a zostaje dwanaście koszy kawałków. Jan nie wymienia Elizeusza, ale wielu czytelników widzi tu zamierzone echo, w którym Jezus czyni znacznie więcej niż prorok. Niektórzy idą dalej: Jezus nazwał Jana Chrzciciela Eliaszem, „który miał przyjść” (Mateusza 11:14), a jak po Eliaszu przyszedł Elizeusz, tak po Janie przyszedł Jezus. Imię Elizeusza pada w Łukasza 4:27, gdzie Jezus przypomina oczyszczenie Naamana jako przykład Bożego miłosierdzia wobec cudzoziemca, a nie jako zapowiedź własnych uzdrowień.",
+    "keywords": [
+      "Chleby jęczmienne",
+      "Elizeusz",
+      "Nakarmienie 5000",
+      "Naaman"
+    ]
+  },
+  {
+    "id": "p26",
+    "title": "Triumfalny wjazd na pokornym osiołku",
+    "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
+    "ot": {
+      "author": "Zachariasz",
+      "context": "Proroctwo z czasów po wygnaniu, wzywające Jerozolimę do radości z powodu jej sprawiedliwego i pokornego Króla."
+    },
+    "nt": {
+      "author": "Mateusz / Jan",
+      "context": "Jezus wjeżdża do Jerozolimy na oślątku, a tłumy ścielą gałązki i wołają „Hosanna”."
+    },
+    "bridge": "Król z proroctwa Zachariasza przychodzi do Jerozolimy „cichy i siedzący na ośle”, a następny werset zapowiada zniszczenie rydwanów i koni oraz to, że „ogłosi pokój narodom” (Zachariasza 9:10). Królowie Izraela nie zawsze jeździli na koniach bojowych: Salomon jechał na swoje namaszczenie na mulicy króla Dawida (1 Królewska 1:33). Jezus posyła uczniów po oślicę i oślątko (Mateusza 21:2), a Mateusz i Jan przedstawiają Jego wjazd jako wypełnienie tych słów. Wielu widzi w tej scenie obraz Króla, który przychodzi w pokorze i pokoju, a nie jako zdobywca na bojowym rumaku.",
+    "keywords": [
+      "Triumfalny wjazd",
+      "Niedziela Palmowa",
+      "Córa Syjonu",
+      "Oślę"
+    ]
+  },
+  {
+    "id": "p27",
+    "title": "Gorliwość o dom Ojca i uwielbienie dzieci w świątyni",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 30-33 r. n.e. (1030 lat)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Żarliwe pragnienie Dawida, by Boże sanktuarium pozostało czyste, oraz chwała płynąca z ust niemowląt."
+    },
+    "nt": {
+      "author": "Jan / Mateusz",
+      "context": "Jezus oczyszcza dziedzińce świątyni i staje w obronie dzieci wołających: „Hosanna Synowi Dawida!”"
+    },
+    "bridge": "Gdy arcykapłani oburzyli się, że dzieci na dziedzińcach świątyni wysławiają Jezusa jako Syna Dawida, Jezus przytoczył Psalm 8:2 — w którym chwała jest skierowana do Jahwe — i odniósł te słowa wprost do siebie.",
+    "keywords": [
+      "Oczyszczenie świątyni",
+      "Gorliwość o dom",
+      "Uwielbienie dzieci",
+      "Psalm 8"
+    ]
+  },
+  {
+    "id": "p28",
+    "title": "Zdradzony przez zaufanego przyjaciela, który dzielił z Nim chleb",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Dawid ubolewa, że zaufany przyjaciel, który jadł jego chleb, zwrócił się przeciwko niemu; tradycja często łączy te psalmy z Achitofelem, choć żaden z nich go nie wymienia."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Ostatnia Wieczerza: Jezus podaje Judaszowi Iskariocie umoczony kęs chleba."
+    },
+    "bridge": "Podczas Ostatniej Wieczerzy Jezus przytacza Psalm 41:9 jako Pismo, które ma się wypełnić: „Ten, który je ze mną chleb, podniósł przeciwko mnie swoją piętę”. W psalmie zdrajcą jest „mój przyjaciel, któremu ufałem”, a podniesienie pięty to obraz zwrócenia się przeciwko komuś. Następnie Jezus podaje umoczony kawałek chleba Judaszowi. Psalm 55:12-14 nie jest cytowany w Nowym Testamencie, ale wyraża ten sam ból zdrady ze strony bliskiego przyjaciela. Wielu czytelników łączy oba psalmy z Achitofelem, doradcą Dawida, który przyłączył się do spisku Absaloma, a potem się powiesił (2 Samuela 15:12, 31; 17:23), podobnie jak Judasz (Mateusza 27:5), choć żaden z psalmów nie wymienia go z imienia.",
+    "keywords": [
+      "Judasz Iskariota",
+      "Achitofel",
+      "Wspólny chleb",
+      "Ostatnia Wieczerza"
+    ]
+  },
+  {
+    "id": "p29",
+    "title": "Sprzedany za trzydzieści srebrników, które rzucono garncarzowi",
+    "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
+    "ot": {
+      "author": "Zachariasz",
+      "context": "Prorok, który pasie owce przeznaczone na rzeź, otrzymuje trzydzieści srebrników – tyle Prawo kazało zapłacić za niewolnika ubodzonego przez wołu (Wyjścia 21:32) – i rzuca je przed garncarza w domu Pana."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Judasz rzuca trzydzieści srebrników w świątyni, a kapłani kupują za nie pole garncarza; Mateusz pisze, że wypełniły się słowa proroka Jeremiasza."
+    },
+    "bridge": "U Zachariasza 11 prorok, który pasie owce przeznaczone na rzeź, otrzymuje zapłatę: trzydzieści srebrników („Wspaniała to zapłata, na jaką mnie tak drogo oszacowali!”), a Pan każe mu rzucić je przed garncarza w domu Pana. Mateusz odnajduje te same szczegóły w historii Judasza: naczelni kapłani wyznaczają mu trzydzieści srebrników (Mateusza 26:15), Judasz rzuca je w świątyni, a kapłani kupują za nie pole garncarza. Mateusz pisze, że wypełniło się to, „co zostało powiedziane przez proroka Jeremiasza”, choć słowa pochodzą głównie od Zachariasza. Zwykle tłumaczy się to jako cytat łączony (słowa więcej niż jednego proroka podane pod jednym imieniem): także Jeremiasz poszedł do domu garncarza, kupił od garncarza gliniany dzban i kupił pole (Jeremiasza 18:2-3; 19:1; 32:9).",
+    "keywords": [
+      "Trzydzieści srebrników",
+      "Pole garncarza",
+      "Przybytek świątyni",
+      "Zapłata pasterza"
+    ]
+  },
+  {
+    "id": "p30",
+    "title": "Uderz Pasterza, a owce zostaną rozproszone",
+    "eraGap": "ok. 520 r. p.n.e. → ok. 33 r. n.e. (553 lata)",
+    "ot": {
+      "author": "Zachariasz",
+      "context": "Proroczy rozkaz, by miecz uderzył Pasterza Pańskiego, co rozprasza trzodę."
+    },
+    "nt": {
+      "author": "Mateusz / Marek",
+      "context": "W drodze do Getsemani Jezus ostrzega uczniów, że wszyscy uciekną, gdy zostanie pojmany."
+    },
+    "bridge": "Jezus cytuje Zachariasza 13:7, zaczynając od słów „jest napisane”, i odnosi je do tej nocy: do swojego pojmania i ucieczki uczniów. Rozkaz „Uderz pasterza” zamienia w zapowiedź działania samego Boga: „Uderzę pasterza”. Mateusz relacjonuje potem, że „wszyscy uczniowie opuścili go i uciekli”. U Zachariasza Bóg mówi o Pasterzu jako o „mężczyźnie, który jest moim towarzyszem”; hebrajskie słowo oznacza towarzysza lub bliskiego współpracownika, a nie kogoś równego, choć niektórzy chrześcijanie widzą w tej bliskości aluzję do boskiej natury Chrystusa. Ewangelie odnoszą ten werset do rozproszenia uczniów, a Jezus od razu dodaje: „gdy zmartwychwstanę, udam się do Galilei przed wami” (Mateusza 26:32).",
+    "keywords": [
+      "Uderz Pasterza",
+      "Rozproszone owce",
+      "Getsemani",
+      "Ucieczka uczniów"
+    ]
+  },
+  {
+    "id": "p31",
+    "title": "Milczący jak baranek przed strzygącymi",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Cierpiący Sługa poddaje się dobrowolnie, nie podejmując obrony."
+    },
+    "nt": {
+      "author": "Łukasz / Mateusz / Piotr",
+      "context": "Jezus milczy przed Kajfaszem, Herodem Antypasem i Piłatem; później etiopski dworzanin czyta fragment Izajasza 53:7-8, a Filip wyjaśnia mu, że mówi on o Jezusie."
+    },
+    "bridge": "W Izajasza 53 prorok opisuje Sługę Pana, często nazywanego Cierpiącym Sługą, który cierpi bez sprzeciwu: jak owca przed strzygącymi „zamilkł i nie otworzył swoich ust”. Ewangelie pokazują, że Jezus milczał tak samo przed najwyższym kapłanem, przed Herodem i przed Piłatem, który bardzo się dziwił, że nic nie odpowiada. W tych miejscach nie cytują Izajasza, choć wielu czytelników słyszy w nich echo jego słów. Dzieje Apostolskie mówią o tym wprost: etiopski dworzanin czytał właśnie ten fragment, a Filip, „zaczynając od tego fragmentu Pisma, głosił mu Jezusa”. Także Piotr stawia Jezusa za wzór: „gdy mu złorzeczono, nie odpowiadał złorzeczeniem”.",
+    "keywords": [
+      "Milczący Baranek",
+      "Proces przed Piłatem",
+      "Etiopski eunuch",
+      "Izajasza 53"
+    ]
+  },
+  {
+    "id": "p32",
+    "title": "Bity, opluty i ubiczowany",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "W trzeciej Pieśni o Słudze Pańskim (jednym z poematów Izajasza o Słudze Pana) mówiący nadstawia plecy bijącym i nie zakrywa twarzy przed pluciem."
+    },
+    "nt": {
+      "author": "Mateusz / Łukasz",
+      "context": "Jezus zostaje opluty i pobity podczas przesłuchania przed Wysoką Radą, ubiczowany na rozkaz Piłata i bity przez żołnierzy; wcześniej zapowiada Dwunastu, że wypełni się to, co napisali prorocy."
+    },
+    "bridge": "W Izajasza 50:6 mówiący, zwykle utożsamiany ze Sługą Pana (Izajasza 50:10), wyznaje: „Podałem moje plecy bijącym”, i dodaje, że nie zakrywał twarzy „przed zniewagami i pluciem”. Mateusz opisuje, jak podczas przesłuchania przed Wysoką Radą (Sanhedrynem) pluto Jezusowi w twarz i bito Go, jak Piłat kazał Go ubiczować i jak rzymscy żołnierze pluli na Niego i bili Go trzciną po głowie. Mateusz nie cytuje tu Izajasza. Jezus zapowiedział jednak Dwunastu, że „wypełni się wszystko, co zostało napisane przez proroków o Synu Człowieczym”: zostanie opluty i ubiczowany (Łukasza 18:31-33). Chrześcijanie od dawna odczytują Izajasza 50:6 jako jeden z tych tekstów, choć Ewangelie nie wspominają o wyrywaniu brody, o którym mówi Izajasz.",
+    "keywords": [
+      "Biczowanie",
+      "Plucie",
+      "Bity trzciną",
+      "Cierpiący Sługa"
+    ]
+  },
+  {
+    "id": "p33",
+    "title": "Przebite ręce i nogi a ślady gwoździ",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Lament Dawida: otoczony przez wrogów cierpiący woła do Boga, a psalm kończy się uwielbieniem za ocalenie."
+    },
+    "nt": {
+      "author": "Jan / Łukasz",
+      "context": "Zmartwychwstały Jezus pokazuje uczniom ręce i nogi i zachęca wątpiącego Tomasza, by dotknął Jego ran."
+    },
+    "bridge": "Psalm 22 to lament (modlitwa w głębokim cierpieniu), w którym otoczony przez wrogów cierpiący mówi: „przebili moje ręce i nogi”. Ewangelie przytaczają przy krzyżu inne wersety tego psalmu (Mateusza 27:46; Jana 19:24), ale żaden autor Nowego Testamentu nie cytuje tego wersetu. Zmartwychwstały Jezus pokazuje uczniom ręce i nogi (Łukasza 24:39-40), a Tomasz mówi o śladach gwoździ na Jego rękach, dlatego chrześcijanie od dawna odczytują ten werset jako obraz ukrzyżowania. Brzmienie tekstu jest niepewne: standardowy tekst hebrajski porównuje tu napastników do lwa, a starożytny przekład grecki i fragment zwoju z Nahal Hever nad Morzem Martwym wskazują na czasownik, którego dokładne znaczenie wciąż jest dyskutowane.",
+    "keywords": [
+      "Przebite ręce i nogi",
+      "Psalm 22",
+      "Zwoje znad Morza Martwego",
+      "Ukrzyżowanie"
+    ]
+  },
+  {
+    "id": "p34",
+    "title": "Podział szat i rzucanie losów o Jego tunikę",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Cierpiący, otoczony przez wrogów, widzi, jak dzielą między siebie jego szaty i rzucają o nie losy; oba wersy mówią to samo dwa razy, jak często w poezji hebrajskiej."
+    },
+    "nt": {
+      "author": "Jan (naoczny świadek pod krzyżem)",
+      "context": "Żołnierze pod krzyżem dzielą szaty Jezusa na cztery części, po jednej dla każdego, a o Jego tunikę bez szwu rzucają losy."
+    },
+    "bridge": "Psalm 22:18 to poezja hebrajska, która często mówi to samo dwa razy, innymi słowami; nazywa się to paralelizmem. W psalmie oba wersy opisują jedną scenę: „Dzielą między siebie moje szaty i o moją tunikę rzucają losy”. Jan widzi, że pod krzyżem oba wersy spełniły się osobno: żołnierze podzielili szaty Jezusa na cztery części, a o tunikę bez szwu rzucili losy, zamiast ją rozciąć. Wprowadza psalm słowami „aby się wypełniło Pismo” i dodaje: „To właśnie zrobili żołnierze”.",
+    "keywords": [
+      "Rzucanie losów",
+      "Tunika bez szwu",
+      "Rzymscy żołnierze",
+      "Psalm 22:18"
+    ]
+  },
+  {
+    "id": "p35",
+    "title": "Przebity za nasze występki i zaliczony do przestępców",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Sedno czwartej Pieśni o Słudze Pańskim: Sługa cierpi za grzechy innych, zostaje zaliczony do przestępców i wstawia się za nimi."
+    },
+    "nt": {
+      "author": "Piotr / Łukasz",
+      "context": "Jezus mówi, że musi się na Nim wypełnić słowo: „Zaliczono go w poczet złoczyńców”; zostaje ukrzyżowany między dwoma złoczyńcami i modli się: „Ojcze, przebacz im”; Piotr odnosi Izajasza 53 do Jego śmierci."
+    },
+    "bridge": "W czwartej Pieśni o Słudze Pańskim (poemacie Izajasza o cierpiącym Słudze Pana) Sługa był „zraniony za nasze występki”, został „zaliczony do przestępców”, a jednak „wstawił się za przestępcami”. Nowy Testament odnosi do Jezusa konkretne wersety: Piotr cytuje słowa „przez jego rany zostaliście uzdrowieni” i „byliście bowiem jak zbłąkane owce” (1 Piotra 2:24-25), czerpiąc z Izajasza 53:5-6. W noc pojmania sam Jezus mówi, że musi się na Nim wypełnić słowo: „Zaliczono go w poczet złoczyńców” (Łukasza 22:37), a potem zostaje ukrzyżowany między dwoma złoczyńcami. Jego modlitwę „Ojcze, przebacz im” często odczytuje się jako wstawiennictwo Sługi, choć Łukasz nie cytuje tu Izajasza.",
+    "keywords": [
+      "Zastępcze przebłaganie",
+      "Jego ranami",
+      "Dwaj złoczyńcy",
+      "Ojcze, przebacz im"
+    ]
+  },
+  {
+    "id": "p36",
+    "title": "Okrzyk opuszczenia i szyderstwa pod krzyżem („Niech go teraz wybawi”)",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Początkowe wołanie Psalmu 22 i szyderstwa ludzi, którzy kiwają głowami."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Przechodnie kiwają głowami, arcykapłani szydzą, a Jezus woła pierwszymi słowami Psalmu 22."
+    },
+    "bridge": "Okrzyk Jezusa „Eli, Eli, lama sabachthani?” to pierwszy wers Psalmu 22, a Mateusz tłumaczy go swoim czytelnikom. Mateusz opisuje też szyderców słowami psalmu: przechodnie kiwają głowami (Psalm 22:7), a przywódcy mówią: „Ufał Bogu, niech go teraz wybawi” (por. Psalm 22:8). Wielu czytelników uważa, że przytoczenie pierwszego wersu psalmu mogło przywoływać cały psalm, choć jest to kwestia sporna. Jeśli tak, okrzyk wskazuje też na zakończenie psalmu, gdzie „oddadzą pokłon przed twoim obliczem wszystkie rodziny narodów” (Psalm 22:27), a nienarodzonemu jeszcze ludowi zostanie opowiedziane, „że on tak uczynił” (Psalm 22:31). Niektórzy chrześcijanie słyszą w tym echo słów „Wykonało się” (Jana 19:30), ale to pobożne skojarzenie, a nie powiązanie dokonane przez Nowy Testament.",
+    "keywords": [
+      "Eli Eli lama sabachthani",
+      "Szydercy kiwający głowami",
+      "Psalm 22:1",
+      "Niech go teraz wybawi"
+    ]
+  },
+  {
+    "id": "p37",
+    "title": "Żółć i kwaśne wino (ocet) podane w pragnieniu",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Sprawiedliwemu cierpiącemu w palącej udręce pragnienia podaje się gorzką żółć i kwaśny ocet."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Żołnierze podnoszą do ust Jezusa gąbkę nasączoną kwaśnym winem, umieszczoną na łodydze hizopu."
+    },
+    "bridge": "Zwróć uwagę na szczegół łodygi „hizopu” w Jana 19:29 — to ta sama roślina, której według Wyjścia 12:22 użyto, by pomazać odrzwia krwią baranka paschalnego.",
+    "keywords": [
+      "Ocet",
+      "Żółć",
+      "Pragnę",
+      "Łodyga hizopu"
+    ]
+  },
+  {
+    "id": "p38",
+    "title": "Kość nie zostanie złamana; będą patrzeć na Tego, którego przebili",
+    "eraGap": "ok. 1440 / 520 r. p.n.e. → ok. 33 r. n.e.",
+    "ot": {
+      "author": "Mojżesz, Dawid i Zachariasz",
+      "context": "Barankowi paschalnemu nie wolno łamać kości; psalm ufności mówi: „ani jedna z nich nie będzie złamana”; przez Zachariasza Bóg zapowiada: „Będą patrzyć na mnie, którego przebili”."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Żołnierze nie łamią Jezusowi goleni, lecz przebijają Mu bok włócznią, a Jan wskazuje dwa wypełnione teksty Pisma; Objawienie 1:7 odnosi słowa Zachariasza do powrotu Chrystusa."
+    },
+    "bridge": "Jan widzi przy krzyżu wypełnienie dwóch tekstów Pisma. Żołnierze nie łamią Jezusowi goleni, a Jan przytacza słowa: „Żadna jego kość nie będzie złamana”, które przywołują przepis o baranku paschalnym, któremu nie wolno łamać kości, oraz psalm: „ani jedna z nich nie będzie złamana”. Księga Wyjścia podaje przepis, a nie zapowiedź, więc Jan czyta go typologicznie (typologia to dostrzeganie we wcześniejszej osobie, wydarzeniu lub instytucji zapowiedzi Chrystusa) i przedstawia Jezusa jako prawdziwego Baranka paschalnego. Przy przebiciu boku Jan cytuje Zachariasza 12:10 w brzmieniu: „Ujrzą tego, którego przebili”. U Zachariasza Bóg mówi: „Będą patrzyć na mnie, którego przebili”, a zaraz potem, że „będą go opłakiwać”; wielu chrześcijan widzi w tym zapowiedź nauki o Trójcy (jednym Bogu w trzech osobach), choć Nowy Testament tego nie rozwija.",
+    "keywords": [
+      "Kości niezłamane",
+      "Spojrzą na Przebitego",
+      "Baranek paschalny",
+      "Włócznia"
+    ]
+  },
+  {
+    "id": "p39",
+    "title": "Ciemność w południe w dniu ukrzyżowania",
+    "eraGap": "ok. 760 r. p.n.e. → ok. 33 r. n.e. (793 lata)",
+    "ot": {
+      "author": "Amos",
+      "context": "Amos zapowiada dzień sądu nad Izraelem: słońce zajdzie o południu, a w ziemi zapanuje żałoba jak po jedynaku."
+    },
+    "nt": {
+      "author": "Mateusz / Łukasz",
+      "context": "Od godziny szóstej (południe) do dziewiątej (godz. 15.00) ciemność ogarnia całą ziemię, gdy Jezus wisi na krzyżu."
+    },
+    "bridge": "Amos zapowiedział dzień sądu, w którym Bóg sprawi, „że słońce zajdzie o południu”, a święta Izraela zamieni w żałobę: będzie to „żałoba jak po jedynaku” (Amosa 8:9-10). Ewangelie podają, że gdy Jezus wisiał na krzyżu, od godziny szóstej (południe) do dziewiątej (godz. 15.00) ciemność ogarnęła całą ziemię. Nie wspominają Amosa, więc to podobieństwo dostrzegają dopiero czytelnicy: ciemność w środku dnia i żałoba jak po jedynym synu przy śmierci Tego, o którym setnik powiedział: „On prawdziwie był Synem Bożym” (Mateusza 27:54). Niektórzy przywołują też dziewiątą plagę, gdy ciemność okryła Egipt (Wyjścia 10:22). Nie mogło to być zaćmienie Słońca: w czasie Paschy księżyc był w pełni, a zaćmienie Słońca zdarza się tylko podczas nowiu.",
+    "keywords": [
+      "Ciemność w południe",
+      "Amosa 8:9-10",
+      "Godzina szósta",
+      "Żałoba po jedynaku"
+    ]
+  },
+  {
+    "id": "p40",
+    "title": "Pochowany w grobie bogacza",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 33 r. n.e. (733 lata)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Z Izajaszowej pieśni o cierpiącym Słudze: choć nie uczynił nieprawości, wyznaczono mu grób z niegodziwcami, a w śmierci był z bogaczami."
+    },
+    "nt": {
+      "author": "Mateusz",
+      "context": "Józef z Arymatei, bogaty uczeń Jezusa, prosi Piłata o ciało i składa je we własnym nowym grobowcu wykutym w skale."
+    },
+    "bridge": "Izajasz mówi o Słudze: „I wyznaczono mu grób z niegodziwcami, a z bogaczami była jego śmierć”. Spośród ewangelistów tylko Mateusz pisze, że wieczorem „przyszedł bogaty człowiek z Arymatei”, Józef, który złożył ciało Jezusa „w swoim nowym grobowcu, który wykuł w skale”. Wielu czytelników widzi tu kontrast: człowiek stracony między dwoma bandytami (Mateusza 27:38), a pochowany przez bogacza. W poezji hebrajskiej „niegodziwcy” i „bogacze” mogą jednak oznaczać tę samą grupę ludzi, więc ten kontrast to możliwa, ale niepewna interpretacja. Nowy Testament odnosi natomiast do Jezusa drugą połowę tego wersetu, mówiącą o niewinności Sługi (1 Piotra 2:22).",
+    "keywords": [
+      "Grób bogacza",
+      "Józef z Arymatei",
+      "Izajasza 53:9",
+      "Pogrzeb"
+    ]
+  },
+  {
+    "id": "p41",
+    "title": "Święty nie zazna rozkładu ciała (Zmartwychwstanie)",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33 r. n.e. (1033 lata)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Psalm ufności Dawida: mając Pana po swojej prawicy, jest pewny, że Bóg nie zostawi go w Szeolu (krainie umarłych; UBG: „w piekle”) ani nie da swemu Świętemu doznać zniszczenia."
+    },
+    "nt": {
+      "author": "Piotr i Paweł (spisane przez Łukasza)",
+      "context": "Kazanie Piotra w Jerozolimie w dniu Pięćdziesiątnicy oraz kazanie Pawła w synagodze w Antiochii Pizydyjskiej."
+    },
+    "bridge": "W kazaniu w dniu Pięćdziesiątnicy Piotr przytacza Psalm 16:8-11 (Dzieje Apostolskie 2:25-28). Potem przypomina słuchaczom, że Dawid umarł i został pogrzebany, a jego grobowiec wciąż się u nich znajduje. Dlatego, jak dowodzi Piotr, Dawid mówił jako prorok o zmartwychwstaniu Chrystusa, że Jego ciało „nie dozna zniszczenia”. Paweł rozumuje tak samo w Antiochii Pizydyjskiej: Dawid „doznał zniszczenia”, ale „ten, którego Bóg wskrzesił, nie doznał zniszczenia” (Dzieje Apostolskie 13:36-37). Obaj apostołowie przedstawiają ten psalm jako proroctwo, które spełniło się w zmartwychwstaniu Jezusa.",
+    "keywords": [
+      "Zmartwychwstanie",
+      "Bez rozkładu",
+      "Psalm 16",
+      "Kazanie w Pięćdziesiątnicę"
+    ]
+  },
+  {
+    "id": "p42",
+    "title": "Znak Jonasza i zmartwychwstanie trzeciego dnia",
+    "eraGap": "ok. 760 r. p.n.e. → ok. 33 r. n.e. (793 lata)",
+    "ot": {
+      "author": "Jonasz i Ozeasz",
+      "context": "Jonasz spędza trzy dni i trzy noce we wnętrznościach wielkiej ryby; u Ozeasza lud wyraża nadzieję: „Ożywi nas po dwóch dniach, a trzeciego dnia wzbudzi nas”."
+    },
+    "nt": {
+      "author": "Mateusz / Paweł",
+      "context": "Gdy żądają znaku, Jezus zapowiada jedynie znak Jonasza: Syn Człowieczy będzie trzy dni i trzy noce w sercu ziemi. Paweł pisze, że Chrystus zmartwychwstał trzeciego dnia zgodnie z Pismem."
+    },
+    "bridge": "Porównanie przeprowadza sam Jezus: „Jak bowiem Jonasz był w brzuchu wieloryba trzy dni i trzy noce, tak Syn Człowieczy będzie w sercu ziemi trzy dni i trzy noce”. Dodaje, że mieszkańcy Niniwy „pokutowali wskutek głoszenia Jonasza” (Mateusza 12:41). To więc typologia (osoba lub wydarzenie zapowiadające Chrystusa) wskazana przez Niego samego: Jonasz staje się znakiem Jego pogrzebu i zmartwychwstania. Paweł pisze, że Chrystus zmartwychwstał trzeciego dnia „zgodnie z Pismem” (1 Koryntian 15:4), ale nie mówi, które teksty ma na myśli. Często wskazuje się Ozeasza 6:2, choć werset ten mówi o odrodzeniu całego Izraela („trzeciego dnia wzbudzi nas”), a nie o zmartwychwstaniu jednej osoby.",
+    "keywords": [
+      "Znak Jonasza",
+      "Trzeci dzień",
+      "Ozeasza 6:2",
+      "Zmartwychwstanie"
+    ]
+  },
+  {
+    "id": "p43",
+    "title": "Wiem, że mój Odkupiciel żyje, i nadzieja zmartwychwstania",
+    "eraGap": "ok. 2000 r. p.n.e. → ok. 55 r. n.e. (2055 lat)",
+    "ot": {
+      "author": "Hiob",
+      "context": "W najgłębszym punkcie swojego cierpienia Hiob wyznaje, że jego Odkupiciel żyje i że on sam ujrzy Boga."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł naucza, że Chrystus został wskrzeszony i że umarli zostaną wskrzeszeni, gdy Pan powróci."
+    },
+    "bridge": "Historię Hioba zwykle umieszcza się w czasach patriarchów (Abrahama, Izaaka i Jakuba) i wielu uważa tę księgę za najstarszą w Biblii, ale nie wiadomo, kiedy powstała. W głębokim cierpieniu Hiob mówi: „mój Odkupiciel żyje” (hebr. go'el – krewny, który bronił rodziny lub ją wykupywał), i spodziewa się ujrzeć Boga. Nowy Testament nigdy nie cytuje tych słów ani do nich nie nawiązuje: Paweł opiera nadzieję zmartwychwstania na zmartwychwstaniu Chrystusa, a słowa przytoczone w 1 Koryntian 15:54 pochodzą z Izajasza 25:8. Hebrajski tekst Hioba 19:26 jest niepewny (może mówić o oglądaniu Boga „w swoim ciele” albo poza ciałem), więc czytelnicy różnią się co do tego, czy Hiob oczekiwał zmartwychwstania ciała. Chrześcijanie od dawna słyszą w jego słowach nadzieję, na którą odpowiada zmartwychwstanie Chrystusa, ale to paralela tematyczna, a nie spełnienie, o którym mówi Nowy Testament.",
+    "keywords": [
+      "Odkupiciel żyje",
+      "Hioba 19:25",
+      "Nadzieja zmartwychwstania",
+      "Ujrzeć Boga"
+    ]
+  },
+  {
+    "id": "p44",
+    "title": "Kamień odrzucony przez budowniczych staje się kamieniem węgielnym",
+    "eraGap": "ok. 950 r. p.n.e. → ok. 33 r. n.e. (983 lata)",
+    "ot": {
+      "author": "Psalmista i Izajasz",
+      "context": "Psalm z Hallelu (Psalmy 113–118, śpiewane w czasie Paschy) sławi odrzucony kamień, który stał się kamieniem węgielnym; Izajasza 28:16 dodaje wypróbowany, drogocenny kamień węgielny położony na Syjonie."
+    },
+    "nt": {
+      "author": "Piotr / Mateusz",
+      "context": "Piotr, sądzony przez Sanhedryn, który kilka tygodni wcześniej skazał Jezusa, nazywa Go odrzuconym kamieniem; sam Jezus cytuje ten psalm w Mateusza 21:42, a 1 Piotra łączy go z Izajasza 28:16."
+    },
+    "bridge": "Psalm 118 opiewa kamień, który budowniczowie odrzucili, a który stał się kamieniem węgielnym, czyli najważniejszym kamieniem budowli. Jezus cytuje go dosłownie w Mateusza 21:42, a Piotr mówi Sanhedrynowi, który skazał Jezusa, że On jest „tym kamieniem odrzuconym przez was, budujących”, którego Bóg wskrzesił z martwych (Dzieje Apostolskie 4:10-11). 1 Piotra 2:6-7 łączy psalm z Izajasza 28:16, gdzie Bóg zapowiada drogocenny kamień węgielny na Syjonie. Paweł również korzysta z kamienia z Księgi Izajasza (Rzymian 9:33), ale nie z psalmu. W przepowiadaniu Piotra psalm wyjaśnia, jak przywódcy mogli odrzucić Mesjasza i jak Bóg uchylił ich wyrok, wskrzeszając Go.",
+    "keywords": [
+      "Kamień węgielny",
+      "Odrzucony kamień",
+      "Psalm 118",
+      "Żywy kamień"
+    ]
+  },
+  {
+    "id": "p45",
+    "title": "Zasiadający po prawicy Boga i Kapłan na wieki na wzór Melchizedeka",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 33-65 r. n.e.",
+    "ot": {
+      "author": "Dawid / Mojżesz",
+      "context": "W psalmie Dawida Pan zaprasza „mego Pana”, by zasiadł po Jego prawicy, i przysięga, że jest on kapłanem na wieki na wzór Melchizedeka – króla i kapłana, który pobłogosławił Abrahama (Rodzaju 14)."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków / Piotr (w relacji Łukasza)",
+      "context": "Piotr w kazaniu w dniu Pięćdziesiątnicy i List do Hebrajczyków odnoszą Psalm 110 do zmartwychwstałego Jezusa; Hebrajczyków 7 przypomina spotkanie Melchizedeka z Abrahamem."
+    },
+    "bridge": "W Psalmie 110 Pan mówi do „mego Pana”: „Usiądź po mojej prawicy”, i przysięga: „Ty jesteś kapłanem na wieki według porządku Melchizedeka”. Melchizedek, król Salemu i kapłan Boga Najwyższego, pobłogosławił niegdyś Abrama (Rodzaju 14:18-20). W kazaniu w dniu Pięćdziesiątnicy Piotr cytuje Psalm 110:1 i dowodzi, że Dawid nie mówił o sobie, lecz o Jezusie wywyższonym na prawicę Boga (Dzieje Apostolskie 2:34-36). List do Hebrajczyków w rozdziale 7 przypomina historię Melchizedeka i cytuje Psalm 110:4, aby pokazać, że kapłaństwo Jezusa jest nieprzemijające. W Hebrajczyków 10:11-13 kapłanom, którzy codziennie stają do służby, przeciwstawiony jest Chrystus, który złożył jedną ofiarę i „zasiadł po prawicy Boga”.",
+    "keywords": [
+      "Psalm 110",
+      "Prawica Boga",
+      "Melchizedek",
+      "Kapłan-Król"
+    ]
+  },
+  {
+    "id": "p46",
+    "title": "Wstąpił na wysokość i dał ludziom dary",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 60 r. n.e. (1060 lat)",
+    "ot": {
+      "author": "Dawid",
+      "context": "Triumfalny pochód Boga, który po rozgromieniu wrogów wstępuje na swoją świętą górę."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł łączy wniebowstąpienie Chrystusa z darami, których On udziela, aby budować Kościół."
+    },
+    "bridge": "Psalm 68 opiewa Boga, który jak zwycięski król wstępuje na swoją świętą górę: „Wstąpiłeś na wysokość, poprowadziłeś pojmanych jeńców, przyjąłeś dary dla ludzi”. Paweł cytuje ten werset i odnosi go do Chrystusa, który „wstąpił wysoko ponad wszystkie niebiosa” (Efezjan 4:10). Zmienia przy tym jedno sformułowanie: zamiast o przyjmowaniu darów pisze, że Chrystus „dał ludziom dary” – podobnie odczytywała ten psalm część dawnej interpretacji żydowskiej. Ta zmiana pasuje do myśli Pawła: jak zwycięski król dzielący się łupem, zmartwychwstały Chrystus obdarza swój lud darami, aby budować Kościół (Efezjan 4:11-12).",
+    "keywords": [
+      "Wniebowstąpienie",
+      "Poprowadził jeńców",
+      "Dary duchowe",
+      "Efezjan 4"
+    ]
+  },
+  {
+    "id": "p47",
+    "title": "Syn Człowieczy przychodzący na obłokach z wieczną władzą",
+    "eraGap": "ok. 550 r. p.n.e. → ok. 33-95 r. n.e.",
+    "ot": {
+      "author": "Daniel",
+      "context": "W nocnym widzeniu Daniel widzi kogoś podobnego do Syna Człowieka, który przybywa w obłokach nieba do Odwiecznego (Boga na tronie) i otrzymuje wieczne królestwo, któremu mają służyć wszystkie narody."
+    },
+    "nt": {
+      "author": "Mateusz / Jan",
+      "context": "Na procesie przed najwyższym kapłanem Kajfaszem Jezus odpowiada słowami Daniela; Objawienie 1:7 zapowiada, że „przychodzi z obłokami”, a Jan widzi potem „kogoś podobnego do Syna Człowieczego”."
+    },
+    "bridge": "Tytułem Syn Człowieczy Jezus najczęściej określa samego siebie. Wyrażenie to może po prostu oznaczać człowieka, jak wtedy, gdy Bóg zwraca się do Ezechiela: „Synu człowieczy” (Ezechiela 2:1), więc nie każde jego użycie odsyła do Daniela. Podczas procesu Jezus wyraźnie nawiązuje jednak do Daniela 7:13: zapowiada, że ujrzą „Syna Człowieczego siedzącego po prawicy mocy Boga i przychodzącego na obłokach niebieskich”. U Daniela ktoś „podobny do Syna Człowieka” przybywa do Odwiecznego i otrzymuje wieczne królestwo. Jednak według Daniela 7:18, 27 królestwo otrzymują „święci Najwyższego”, dlatego badacze spierają się, czy ta postać jest niebiańskim królem, symbolem ludu Bożego, czy jednym i drugim; Nowy Testament odnosi ją do Jezusa.",
+    "keywords": [
+      "Syn Człowieczy",
+      "Obłoki nieba",
+      "Odwieczny",
+      "Daniela 7"
+    ]
+  },
+  {
+    "id": "p48",
+    "title": "Śmierć pochłonięta przez zwycięstwo",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 55 r. n.e. (755 lat)",
+    "ot": {
+      "author": "Izajasz i Ozeasz",
+      "context": "Proroctwo o kosmicznej uczcie na górze Boga, gdzie całun śmierci zostaje zniszczony na zawsze."
+    },
+    "nt": {
+      "author": "Paweł / Jan",
+      "context": "Punkt kulminacyjny rozdziału o zmartwychwstaniu w 1 Koryntian 15 oraz Nowe Jeruzalem w Objawieniu 21."
+    },
+    "bridge": "Paweł splata słowa z Księgi Izajasza 25:8 i Ozeasza 13:14 w jeden hymn zwycięstwa nad grobem, a Jan w Objawieniu 21:4 przytacza drugą połowę Izajasza 25:8 („otrze każdą łzę”).",
+    "keywords": [
+      "Śmierć pochłonięta",
+      "Gdzie twoje żądło",
+      "Otrze łzy",
+      "Zwycięstwo zmartwychwstania"
+    ]
+  },
+  {
+    "id": "p49",
+    "title": "Zegnie się każde kolano i każdy język wyzna",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 62 r. n.e. (762 lata)",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Najbardziej stanowczo monoteistyczna mowa Starego Testamentu: Jahwe oznajmia, że poza Nim nie ma innego Boga."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Hymn o Chrystusie, sławiący wywyższenie Jezusa po tym, jak uniżył samego siebie aż do śmierci na krzyżu."
+    },
+    "bridge": "W Księdze Izajasza 45:23 Jahwe przysięga, że każde kolano zegnie się wyłącznie przed Nim. W Liście do Filipian 2:10-11 Paweł odnosi dokładnie ten monoteistyczny tekst do zmartwychwstałego Jezusa, utożsamiając wyznanie „Jezus Chrystus jest Panem” z Bożym imieniem JHWH.",
+    "keywords": [
+      "Zegnie się każde kolano",
+      "Każdy język wyzna",
+      "Jezus jest Panem",
+      "Filipian 2"
+    ]
+  },
+  {
+    "id": "p50",
+    "title": "Dzień Przebłagania (Jom Kippur) i wejście poza zasłonę",
+    "eraGap": "ok. 1440 r. p.n.e. → ok. 65 r. n.e. (1505 lat)",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Raz w roku najwyższy kapłan wchodzi z krwią do Miejsca Najświętszego i składa grzechy Izraela na głowę żywego kozła, wypuszczanego potem na pustynię."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków",
+      "context": "List do Hebrajczyków przedstawia Chrystusa jako najwyższego kapłana, który przez własną krew raz na zawsze wszedł do samego nieba i drugi raz się ukaże, otwierając wierzącym drogę przez zasłonę."
+    },
+    "bridge": "W Dniu Przebłagania najwyższy kapłan wnosił krew kozła ofiary za grzech ludu „poza zasłonę” (Kapłańska 16:15), a potem wyznawał grzechy Izraela nad żywym kozłem, który wynosił je na pustynię. List do Hebrajczyków odczytuje ten dzień jako obraz Chrystusa: On „przez własną krew wszedł raz do Miejsca Najświętszego”, i to „do samego nieba”, a „drugi raz ukaże się” (Hebrajczyków 9:12, 24, 28). Wierzący mogą teraz wejść do Najświętszego Miejsca „drogą nową i żywą” przez zasłonę (Hebrajczyków 10:19-20). Nowy Testament nigdzie wprost nie nazywa Chrystusa kozłem wypuszczanym na pustynię; Hebrajczyków 13:11-12 porównuje Jego śmierć poza bramą miasta z ciałami zwierząt ofiarnych palonymi poza obozem (Kapłańska 16:27). Wielu łączy z tym dniem także rozdarcie zasłony świątyni w chwili Jego śmierci (Mateusza 27:51), choć Mateusz tego nie wyjaśnia.",
+    "keywords": [
+      "Dzień Przebłagania",
+      "Jom Kippur",
+      "Wejście poza zasłonę",
+      "Miejsce Najświętsze"
+    ]
+  },
+  {
+    "id": "p51",
+    "title": "Nowe przymierze wypisane na sercu",
+    "eraGap": "ok. 600 r. p.n.e. → ok. 33 r. n.e. (633 lata)",
+    "ot": {
+      "author": "Jeremiasz",
+      "context": "Obietnica nowego przymierza, które przynosi wewnętrzną przemianę i całkowite przebaczenie grzechów."
+    },
+    "nt": {
+      "author": "Łukasz / List do Hebrajczyków / Paweł",
+      "context": "Jezus ustanawia nowe przymierze w swojej krwi podczas Ostatniej Wieczerzy; Paweł opisuje serca zapisane przez Ducha."
+    },
+    "bridge": "Przymierze z Synaju dało zewnętrzną miarę wypisaną na kamiennych tablicach, ale nie mogło przemienić ludzkiego serca; nowe przymierze, zawarte we krwi Jezusa, przez Ducha wpisuje w nas pragnienia Boga.",
+    "keywords": [
+      "Nowe przymierze",
+      "Jeremiasza 31",
+      "Wypisane na sercach",
+      "Kielich przymierza"
+    ]
+  },
+  {
+    "id": "p52",
+    "title": "Nowe serce i mój Duch w was",
+    "eraGap": "ok. 585 r. p.n.e. → ok. 30 r. n.e. (615 lat)",
+    "ot": {
+      "author": "Ezechiel",
+      "context": "Bóg obiecuje oczyścić swój lud na wygnaniu czystą wodą, zastąpić jego kamienne serce i złożyć w nim swojego Ducha."
+    },
+    "nt": {
+      "author": "Jan / Paweł",
+      "context": "Jezus wyjaśnia Nikodemowi nowe narodzenie „z wody i z Ducha”; Paweł opisuje odrodzenie w Liście do Tytusa."
+    },
+    "bridge": "Jezus mówi Nikodemowi, że nikt nie może wejść do królestwa Bożego, jeśli się „nie narodzi z wody i z Ducha”, i dziwi się, że nauczyciel w Izraelu tego nie wie (Jana 3:10). Nie cytuje żadnego wersetu, ale wielu czytelników uważa, że ma na myśli Ezechiela 36:25-27. Tam Bóg obiecuje pokropić swój lud czystą wodą, dać mu nowe serce i włożyć do jego wnętrza swojego Ducha. Podobnie Tytusa 3:5 mówi o zbawieniu „przez obmycie odrodzenia i odnowienie Ducha Świętego” (odrodzenie to inaczej nowe narodzenie). W tym odczytaniu narodzenie na nowo to wewnętrzna odnowa zapowiedziana przez proroków.",
+    "keywords": [
+      "Nowe serce",
+      "Woda i Duch",
+      "Nowe narodzenie",
+      "Odrodzenie"
+    ]
+  },
+  {
+    "id": "p53",
+    "title": "Wylanie Ducha Świętego na wszelkie ciało",
+    "eraGap": "ok. 800 r. p.n.e. → ok. 33 r. n.e. (833 lata)",
+    "ot": {
+      "author": "Joel",
+      "context": "Proroctwo, że Bóg wyleje swojego Ducha nie tylko na królów i proroków, ale także na synów, córki i sługi."
+    },
+    "nt": {
+      "author": "Piotr (spisane przez Łukasza) / Paweł",
+      "context": "Dzień Pięćdziesiątnicy w Jerozolimie, gdy Duch Święty zstępuje na uczniów."
+    },
+    "bridge": "W Starym Testamencie Duch zstępował na wybranych przywódców do konkretnych zadań. Joel zapowiedział wylanie Ducha na wszystkich wierzących bez różnicy — wypełnione w dniu Pięćdziesiątnicy i powiązane z wzywaniem imienia Jezusa (Rzymian 10:9-13).",
+    "keywords": [
+      "Pięćdziesiątnica",
+      "Joela 2",
+      "Wyleję mojego Ducha",
+      "Wzywanie Pana"
+    ]
+  },
+  {
+    "id": "p54",
+    "title": "Sprawiedliwy będzie żył dzięki swojej wierze",
+    "eraGap": "ok. 605 r. p.n.e. → ok. 57 r. n.e. (662 lata)",
+    "ot": {
+      "author": "Habakuk",
+      "context": "Odpowiedź Boga dla Habakuka stojącego na strażnicy, gdy zbliża się sąd przez Babilon."
+    },
+    "nt": {
+      "author": "Paweł / Autor Listu do Hebrajczyków",
+      "context": "Paweł cytuje to zdanie w głównej tezie Listu do Rzymian i w sporze o usprawiedliwienie z Prawa w Liście do Galacjan; List do Hebrajczyków używa go, by wezwać do wytrwałości."
+    },
+    "bridge": "Bóg odpowiada na skargę Habakuka, zaniepokojonego nadchodzącym najazdem Babilończyków, krótkim zdaniem, które po hebrajsku liczy tylko trzy słowa: „sprawiedliwy będzie żył ze swojej wiary”. W tym kontekście jest to obietnica, że sprawiedliwy przetrwa sąd dzięki ufności i wierności Bogu; hebrajskie słowo oznacza zarówno wiarę, jak i wierność. Paweł cytuje je w Rzymian 1:17 i Galacjan 3:11, aby pokazać, że człowiek zostaje usprawiedliwiony, czyli uznany za sprawiedliwego przed Bogiem, z wiary, a nie przez przestrzeganie Prawa. List do Hebrajczyków 10:38 przytacza je, by zachęcić wierzących do wytrwałości, aby się nie cofali. Kaznodzieje czasem przypisują każdej z tych ksiąg inną część zdania, ale to schemat kazania, a nie coś, co mówią same teksty.",
+    "keywords": [
+      "Usprawiedliwienie z wiary",
+      "Habakuka 2:4",
+      "Rzymian 1:17",
+      "Sprawiedliwość"
+    ]
+  },
+  {
+    "id": "p55",
+    "title": "Odbudowa upadłego przybytku Dawida dla wszystkich narodów",
+    "eraGap": "ok. 760 r. p.n.e. → ok. 49 r. n.e. (809 lat)",
+    "ot": {
+      "author": "Amos",
+      "context": "Końcowa obietnica Amosa: Bóg podniesie upadły przybytek Dawida, aby Izrael posiadł resztki Edomu i wszystkie narody, nad którymi wzywano Jego imienia."
+    },
+    "nt": {
+      "author": "Jakub (na Soborze Jerozolimskim, w relacji Łukasza)",
+      "context": "Jakub cytuje Amosa na Soborze Jerozolimskim, który uznaje, że poganie, którzy uwierzyli, nie muszą przyjmować obrzezania, by należeć do Bożego ludu."
+    },
+    "bridge": "Księga Amosa kończy się obietnicą, że Bóg podniesie „upadły przybytek Dawida”, co zwykle rozumie się jako królewski ród Dawida, który popadł w ruinę. Na Soborze Jerozolimskim, czyli zgromadzeniu apostołów i starszych, które rozstrzygało, czy poganie, którzy uwierzyli, muszą przyjąć obrzezanie (Dzieje Apostolskie 15:5), Jakub cytuje tę obietnicę. Idzie przy tym za Septuagintą (starożytnym greckim przekładem Starego Testamentu), dlatego w Dziejach Apostolskich 15:17 czytamy: „Aby ludzie, którzy pozostali, szukali Pana”, podczas gdy hebrajski tekst Amosa mówi: „Aby posiedli resztki Edomu”. Obie wersje mówią o narodach, nad którymi wzywane jest imię Boga. Jakub wnioskuje, że Bóg wybiera sobie lud spośród pogan, więc nie należy czynić im trudności (Dzieje Apostolskie 15:14, 19).",
+    "keywords": [
+      "Upadły przybytek Dawida",
+      "Sobór Jerozolimski",
+      "Włączenie pogan",
+      "Amosa 9"
+    ]
+  },
+  {
+    "id": "p56",
+    "title": "Większa chwała tego domu i niezachwiane królestwo",
+    "eraGap": "ok. 520 r. p.n.e. → ok. 30-65 r. n.e.",
+    "ot": {
+      "author": "Aggeusz",
+      "context": "Aggeusz dodaje otuchy budowniczym drugiej świątyni, która wydawała się niczym w porównaniu ze świątynią Salomona, obietnicą większej chwały."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków / Łukasz / Jan",
+      "context": "List do Hebrajczyków odnosi wstrząśnienie z Aggeusza do niezachwianego królestwa Bożego; Symeon bierze na ręce małego Jezusa w świątyni; Jezus mówi o swoim ciele jako o świątyni."
+    },
+    "bridge": "Aggeusz dodaje otuchy budowniczym drugiej świątyni (odbudowanej po wygnaniu), która w porównaniu ze świątynią Salomona wydawała się niczym (Aggeusza 2:3). Bóg zapowiada: „wstrząsnę niebem i ziemią”, obiecuje napełnić ten dom chwałą i mówi, że „chwała tego domu będzie większa od tej, jaką miał tamten dawny”. Hebrajczyków 12:26-28 cytuje pierwsze z tych zdań i odnosi je do usunięcia tego, co stworzone, aby pozostało jedynie niezachwiane królestwo Boże. Chrześcijanie od dawna widzą tę większą chwałę w obecności Jezusa w tej świątyni, gdzie Symeon wziął Go na ręce jako niemowlę (Łukasza 2:27-28), oraz w tym, że Jezus nazwał świątynią swoje ciało (Jana 2:21), choć żaden z tych fragmentów nie wspomina o Aggeuszu. UBG, podobnie jak dawniejsze przekłady, oddaje Aggeusza 2:7 słowami „przyjdzie Pożądany przez wszystkie narody”, co często odczytywano jako tytuł Mesjasza; tekst hebrajski mówi raczej o skarbach narodów.",
+    "keywords": [
+      "Druga Świątynia",
+      "Większa chwała",
+      "Królestwo niezachwiane",
+      "Symeon"
+    ]
+  },
+  {
+    "id": "p57",
+    "title": "Boża Mądrość obecna przy stworzeniu",
+    "eraGap": "ok. 950 r. p.n.e. → ok. 60-90 r. n.e.",
+    "ot": {
+      "author": "Salomon",
+      "context": "Mądrość, ukazana jako kobieta, mówi, że była przy Panu, zanim powstał świat, i była przy Nim, gdy tworzył niebiosa, morze i ziemię."
+    },
+    "nt": {
+      "author": "Paweł / Jan",
+      "context": "Paweł i Jan opisują Chrystusa jako Tego, przez którego wszystko zostało stworzone; Paweł głosi też Chrystusa jako „moc Bożą i mądrość Bożą”."
+    },
+    "bridge": "W 8. rozdziale Przypowieści Mądrość mówi jak osoba; to personifikacja, czyli przedstawianie jakiejś cechy tak, jakby była osobą. Mówi, że była przy Panu, zanim powstał świat: „Kiedy przygotowywał niebiosa, byłam tam”. Żaden fragment Nowego Testamentu nie cytuje Przypowieści 8, ale Jana 1:1-3 (o Słowie, gr. Logos) i Kolosan 1:15-17 opisują Chrystusa podobnie: jest u Boga na początku, przed wszystkim, i przez Niego wszystko powstało. Wielu badaczy uważa, że autorzy ci czerpali z żydowskiego obrazu Mądrości, a Paweł głosi Chrystusa jako „moc Bożą i mądrość Bożą”, choć chodzi mu tam o przesłanie krzyża (1 Koryntian 1:18-24). Nowy Testament nigdy jednak nie cytuje Przypowieści 8:22, gdzie hebrajski czasownik może znaczyć „stworzył” albo „posiadł” (UBG: „Pan posiadł mnie”); przejmuje rolę Mądrości przy stworzeniu, a nie ten werset.",
+    "keywords": [
+      "Mądrość Boża",
+      "Mistrz budowniczy",
+      "Kolosan 1",
+      "Logos"
+    ]
+  },
+  {
+    "id": "p58",
+    "title": "Modlitwa Salomona w świątyni za cudzoziemca i dom modlitwy",
+    "eraGap": "ok. 960 r. p.n.e. → ok. 33 r. n.e.",
+    "ot": {
+      "author": "Salomon i Izajasz",
+      "context": "Podczas poświęcenia pierwszej świątyni Salomon modli się, aby cudzoziemcy z dalekich krajów poznali imię Boga; Izajasz zapowiada, że Boży dom będzie nazywany domem modlitwy dla wszystkich narodów."
+    },
+    "nt": {
+      "author": "Marek / Paweł",
+      "context": "Oczyszczając dziedzińce świątyni, Jezus cytuje Izajasza 56:7; Paweł mówi poganom, którzy niegdyś byli daleko, że są teraz współobywatelami świętych i razem budują się w świątynię Boga."
+    },
+    "bridge": "Podczas poświęcenia świątyni Salomon prosi Boga, by wysłuchał cudzoziemca, który przybędzie „z dalekiej ziemi przez wzgląd na twoje imię”, „aby wszystkie narody ziemi poznały twoje imię”. Później Izajasz obiecuje takim cudzoziemcom miejsce w Bożym domu, „bo mój dom będzie nazywany domem modlitwy dla wszystkich narodów” (Izajasza 56:6-7). Oczyszczając dziedzińce świątyni, Jezus pyta: „Czyż nie jest napisane”, cytuje te słowa Izajasza i dodaje: „Lecz wy zrobiliście z niego jaskinię zbójców”, nawiązując do Jeremiasza 7:11. Handel odbywał się prawdopodobnie na zewnętrznym dziedzińcu świątyni Heroda, jedynym dostępnym dla pogan, dlatego wielu widzi w tym obronę miejsca modlitwy narodów. List do Efezjan nie cytuje tych tekstów, ale podziela ich nadzieję, gdy mówi poganom: „wy, którzy niegdyś byliście daleko, staliście się bliscy”, i opisuje budowlę, która rośnie w „świętą świątynię w Panu”.",
+    "keywords": [
+      "Dom modlitwy",
+      "Wszystkie narody",
+      "Świątynia Salomona",
+      "Dziedziniec Pogan"
+    ]
+  },
+  {
+    "id": "p59",
+    "title": "Oblubieniec i Oblubienica (królewska pieśń weselna)",
+    "eraGap": "ok. 1400 / 950 r. p.n.e. → ok. 55-95 r. n.e.",
+    "ot": {
+      "author": "Mojżesz, synowie Korego i Salomon",
+      "context": "Małżeństwo jako jedno ciało (Rodzaju 2:24), pieśń miłosna na królewskie wesele (Psalm 45) i poezja miłosna Pieśni nad pieśniami."
+    },
+    "nt": {
+      "author": "Paweł / Autor Listu do Hebrajczyków / Jan",
+      "context": "Paweł odnosi Rodzaju 2:24 do Chrystusa i kościoła, List do Hebrajczyków odnosi Psalm 45:6-7 do Syna, a Objawienie opisuje wesele Baranka."
+    },
+    "bridge": "W Liście do Efezjan 5:31-32 Paweł cytuje Rodzaju 2:24 o małżeństwie, a potem dodaje: „Tajemnica to wielka, lecz ja mówię w odniesieniu do Chrystusa i kościoła” (tajemnica to u Pawła prawda dawniej ukryta, a teraz objawiona). Nowy Testament odczytuje więc małżeństwo typologicznie (typologia to odczytywanie wcześniejszych wydarzeń lub instytucji jako zapowiedzi Chrystusa): jako obraz Chrystusa i kościoła. Objawienie 19 używa tego samego obrazu: „nadeszło wesele Baranka, a jego małżonka się przygotowała”. Psalm 45 to pieśń na królewskie wesele, a Hebrajczyków 1:8-9 odnosi jego wersety 6-7 do Syna, ale do Jego tronu, nie do oblubienicy. Żaden tekst Nowego Testamentu nie cytuje Pieśni nad pieśniami; odczytywanie jej jako obrazu Chrystusa i Jego ludu to dawna chrześcijańska tradycja alegorii (czytania tekstu jako obrazu głębszej prawdy), a nie powiązanie dokonane przez Nowy Testament.",
+    "keywords": [
+      "Oblubieniec",
+      "Wesele Baranka",
+      "Pieśń nad pieśniami",
+      "Oblubienica Chrystusa",
+      "Jedno ciało"
+    ]
+  },
+  {
+    "id": "p60",
+    "title": "Stworzenie poddane marności i tęskniące za odkupieniem",
+    "eraGap": "ok. 935 r. p.n.e. → ok. 57 r. n.e. (992 lata)",
+    "ot": {
+      "author": "Salomon (Kohelet)",
+      "context": "Kaznodzieja (Kohelet) nazywa wszystko hevel, czyli marnością, dosłownie oddechem, i pyta: „Jaki pożytek ma człowiek z całego swego trudu, który podejmuje pod słońcem?”"
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł pisze, że „stworzenie jest poddane marności” w nadziei na wyzwolenie, i używa słowa, którym grecki Stary Testament oddaje refren Kaznodziei; w innym liście zapewnia wierzących, że ich praca nie jest daremna w Panu."
+    },
+    "bridge": "Księga Kaznodziei podsumowuje życie „pod słońcem” jednym hebrajskim słowem hevel (marność, dosłownie oddech): „Wszystko jest marnością”. Septuaginta, czyli starożytny grecki przekład Starego Testamentu, oddaje je słowem mataiotes, tym samym, którego używa Paweł, pisząc, że „stworzenie jest poddane marności”, ale w nadziei na wyzwolenie. Nie wiadomo, czy Paweł myślał o Księdze Kaznodziei; wyraźniejszym tłem Rzymian 8:20 jest przekleństwo ziemi po upadku człowieka (Rodzaju 3:17-19). Czytane obok siebie, obie księgi tworzą wymowną parę: Kaznodzieja pyta: „Jaki pożytek ma człowiek z całego swego trudu”, a Paweł zapewnia wierzących, że ich „praca nie jest daremna w Panu”, choć używa tam innego greckiego słowa, oznaczającego po prostu coś pustego.",
+    "keywords": [
+      "Marność / daremność",
+      "Księga Kaznodziei",
+      "Rzymian 8",
+      "Odkupienie stworzenia"
+    ]
+  },
+  {
+    "id": "p61",
+    "title": "Wybawcy wzbudzeni przez Pana i siła ze słabości",
+    "eraGap": "ok. 1200 r. p.n.e. → ok. 65 r. n.e.",
+    "ot": {
+      "author": "Autor anonimowy (tradycja żydowska: Samuel)",
+      "context": "Pan wzbudza sędziów, by ratowali Izraela: Anioł Pana pozdrawia Gedeona słowami „Pan z tobą, dzielny wojowniku”, a Samson ginie, gdy na Filistynów wali się dom, w którym się zebrali."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków",
+      "context": "Hebrajczyków 11 (często nazywany galerią wiary) wymienia Gedeona, Baraka i Samsona wśród tych, którzy działali przez wiarę; Hebrajczyków 2:14 mówi, że Jezus stał się uczestnikiem ciała i krwi, aby przez śmierć zniszczyć diabła."
+    },
+    "bridge": "W Księdze Sędziów „Pan wzbudził sędziów”, aby wyzwalali Izraela z rąk wrogów (Sędziów 2:16). Hebrajczyków 11:32-34 wymienia Gedeona, Baraka i Samsona wśród tych, którzy działali przez wiarę i „umocnieni powstawali z niemocy”. List przedstawia ich jako przykłady wiary; nie nazywa ich obrazami Chrystusa. Ich zwycięstwa często przychodziły wbrew wszelkim przewidywaniom: wojsko Gedeona zmniejszono do trzystu mężczyzn (Sędziów 7:7), a Samson przy swojej śmierci zabił więcej niż za życia (Sędziów 16:30). Chrześcijanie od dawna widzą w tych wybawieniach, a zwłaszcza w śmierci Samsona, odległy obraz Chrystusa, który przez śmierć miał zniszczyć „tego, który miał władzę nad śmiercią” (Hebrajczyków 2:14); to powiązanie pochodzi jednak z późniejszej chrześcijańskiej lektury, a nie z Nowego Testamentu.",
+    "keywords": [
+      "Księga Sędziów",
+      "Galeria wiary",
+      "Wybawca",
+      "Zwycięstwo przez śmierć"
+    ]
+  },
+  {
+    "id": "p62",
+    "title": "Powrót z wygnania: odbudowa domu Bożego i zrozumienie Pisma",
+    "eraGap": "ok. 538 / 445 r. p.n.e. → ok. 60-65 r. n.e.",
+    "ot": {
+      "author": "Ezdrasz i Nehemiasz",
+      "context": "Cyrus pozwala wygnańcom wrócić i odbudować dom Pana w Jerozolimie; później Ezdrasz i lewici czytają Prawo i wyjaśniają je, aby lud mógł je zrozumieć."
+    },
+    "nt": {
+      "author": "Łukasz / Piotr",
+      "context": "Zmartwychwstały Jezus otwiera umysły uczniów, aby rozumieli Pisma, a Piotr opisuje wierzących jako żywe kamienie budowane w duchowy dom."
+    },
+    "bridge": "Po wygnaniu Cyrus, król Persji, pozwala Żydom wrócić: każdy z ludu Bożego „niech uda się do Jerozolimy w Judzie i niech buduje dom Pana”. Później Ezdrasz i lewici czytają Prawo i wyjaśniają je, „żeby zrozumiano to, co czytali”. Nowy Testament nigdy nie cytuje Ezdrasza ani Nehemiasza i ich nie wymienia, więc to zestawienie jest paralelą tematyczną (powiązaniem zaproponowanym przez aplikację, a nie przez Nowy Testament). Dwa jego motywy powracają jednak w Nowym Testamencie: zmartwychwstały Jezus, mówiąc o tym, co jest o nim napisane w Prawie Mojżesza, u Proroków i w Psalmach, „otworzył ich umysły, żeby rozumieli Pisma” (Łukasza 24:44-45), a Piotr pisze do wierzących: „jak żywe kamienie, jesteście budowani w duchowy dom” (1 Piotra 2:5). Chrześcijanie mogą widzieć w obu historiach Boga, który odbudowuje swój lud, ale to raczej temat do rozważania niż powiązanie, które tworzą same teksty.",
+    "keywords": [
+      "Ezdrasz i Nehemiasz",
+      "Odbudowa domu Bożego",
+      "Zrozumienie Pisma",
+      "Żywe kamienie"
+    ]
+  },
+  {
+    "id": "p63",
+    "title": "Na taki czas jak ten: królewskie wstawiennictwo ratujące lud przymierza",
+    "eraGap": "ok. 473 r. p.n.e. → ok. 57-65 r. n.e.",
+    "ot": {
+      "author": "Mardocheusz i Estera (autor księgi nieznany)",
+      "context": "Królowa Estera ryzykuje życie, wchodząc niewezwana na wewnętrzny dziedziniec króla, aby ocalić swój lud przed dekretem zagłady wydanym przez Hamana."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków / Paweł",
+      "context": "List do Hebrajczyków zachęca wierzących, by z ufnością przystępowali do tronu łaski; Paweł mówi, że zmartwychwstały Chrystus jest po prawicy Boga i wstawia się za nami."
+    },
+    "bridge": "Gdy dekret Hamana skazał na zagładę wszystkich Żydów w państwie perskim (Estery 3:13), Mardocheusz zapytał królową Esterę: „A kto wie, czy nie na tę właśnie chwilę dostąpiłaś godności królestwa?” Postanowiła wejść do króla niewezwana, wbrew prawu: „A jeśli zginę, to zginę”. Księga ani razu nie wymienia Boga, ale wielu czytelników widzi Jego ukrytą opiekę w ocaleniu ludu, z którego miał później przyjść Mesjasz. Nowy Testament nigdy nie cytuje Księgi Estery ani o niej nie wspomina, więc powiązanie jej z Chrystusem to paralela zaproponowana przez aplikację, którą najlepiej czytać jako kontrast. Estera zbliżała się do ziemskiego tronu z narażeniem życia, a Hebrajczyków 4:16 wzywa: „Przystąpmy więc z ufnością do tronu łaski”, Paweł zaś mówi, że zmartwychwstały Chrystus „wstawia się za nami” (Rzymian 8:34).",
+    "keywords": [
+      "Estera",
+      "Królewski orędownik",
+      "Tron łaski",
+      "Na taki czas jak ten"
+    ]
+  },
+  {
+    "id": "p64",
+    "title": "Lamentacje nad upadłą Jerozolimą i miłosierdzie odnawiane każdego ranka",
+    "eraGap": "ok. 586 r. p.n.e. → ok. 33 r. n.e.",
+    "ot": {
+      "author": "Jeremiasz (wg tradycji)",
+      "context": "Autor Lamentacji (według tradycji Jeremiasz) opłakuje zburzenie Jerozolimy, a zarazem zakotwicza nadzieję w niezawodnym Bożym zmiłowaniu."
+    },
+    "nt": {
+      "author": "Łukasz / Mateusz / Paweł",
+      "context": "Jezus płaczący nad Jerozolimą w Niedzielę Palmową; przechodnie kiwający głowami pod krzyżem; Chrystus, który pozostaje wierny."
+    },
+    "bridge": "Lamentacje opłakują Jerozolimę po jej upadku w 586 r. p.n.e.: przechodnie „świstają i kiwają głowami nad córką Jerozolimy”, a jednak autor mówi do Pana: „wielka jest twoja wierność”. Wieki później Jezus płacze nad tym samym miastem, zapowiadając jego zburzenie (Łukasza 19:41-44). Pod krzyżem ci, „którzy przechodzili obok”, kiwają nad Nim głowami (Mateusza 27:39); scena ta nawiązuje głównie do Psalmu 22:7, ale przechodnie mogą też przypominać Lamentacje 2:15. Słowa Pawła „on pozostaje wierny” (2 Tymoteusza 2:13) wyrażają tę samą nadzieję co Lamentacje 3:22-23. To paralele tematyczne – Nowy Testament nie cytuje tu Lamentacji.",
+    "keywords": [
+      "Płacz nad Jerozolimą",
+      "Lamentacje",
+      "Wielka jest Twoja wierność",
+      "2 Tymoteusza"
+    ]
+  },
+  {
+    "id": "p65",
+    "title": "Królestwo będzie należeć do Pana i zwiastun dobrej nowiny",
+    "eraGap": "ok. 586 / 650 r. p.n.e. → ok. 95 r. n.e.",
+    "ot": {
+      "author": "Abdiasz i Nahum",
+      "context": "Wyrocznie przeciw Edomowi i Niniwie: bliski dzień Pana dla wszystkich narodów, posłaniec niosący Judzie wieść o pokoju i królestwo należące do Pana."
+    },
+    "nt": {
+      "author": "Jan / Paweł",
+      "context": "Siódma trąba w Objawieniu ogłasza, że królestwa świata stały się królestwami naszego Pana i Jego Chrystusa; Paweł pisze o nogach tych, którzy zwiastują dobrą nowinę."
+    },
+    "bridge": "Żaden tekst Nowego Testamentu nie cytuje Abdiasza ani Nahuma, więc jest to paralela tematyczna zaproponowana przez aplikację. Werset Nahuma 1:15 ukazuje na górach posłańca, który niesie Judzie wieść o pokoju, bo asyryjski wróg zostanie zgładzony. Rzymian 10:15 mówi niemal tymi samymi słowami o głosicielach ewangelii, ale Paweł cytuje Izajasza 52:7, bliźniaczy werset: „O jak piękne są na górach nogi tego, kto zwiastuje dobre wieści i ogłasza pokój”. Abdiasz ostrzega, że dzień Pana jest bliski dla wszystkich narodów, i kończy słowami: „królestwo będzie należeć do Pana”. Objawienie 11:15 ogłasza: „Królestwa świata stały się królestwami naszego Pana i jego Chrystusa”; może to być echo Abdiasza, ale tę samą nadzieję wyrażają też inne teksty, np. Psalm 2:2 i Daniela 7:14.",
+    "keywords": [
+      "Królestwo należy do Pana",
+      "Abdiasza 1:21",
+      "Nahuma 1:15",
+      "Nogi zwiastuna"
+    ]
+  },
+  {
+    "id": "p66",
+    "title": "Pan śpiewający nad swoim ludem na Syjonie",
+    "eraGap": "ok. 630 r. p.n.e. → ok. 30-95 r. n.e.",
+    "ot": {
+      "author": "Sofoniasz",
+      "context": "Po oczyszczającym sądzie Dnia Pańskiego sam Bóg raduje się swoim ludem i śpiewa nad nim z radości."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Jezus wjeżdża do Jerozolimy jako Król Syjonu, a Jan przytacza Pismo: „Nie bój się, córko Syjonu”; w ostatniej wizji Jana Bóg zamieszkuje pośród swojego ludu."
+    },
+    "bridge": "Księga Sofoniasza kończy się wezwaniem: „Zaśpiewaj, córko Syjonu!”, bo Pan, Król Izraela, jest pośród niej, oraz niezwykłym obrazem samego Boga, który „rozweseli się nad tobą ze śpiewaniem”. Gdy Jezus wjeżdża do Jerozolimy, Jan przytacza Pismo: „Nie bój się, córko Syjonu. Oto twój król przychodzi”. Większość tych słów pochodzi z Zachariasza 9:9, ale ich początek może być zapożyczony z Sofoniasza 3:16 („Nie bój się!”), choć innym możliwym źródłem jest Izajasza 40:9. Objawienie 21:3 dzieli z Sofoniaszem nadzieję, że Bóg zamieszka pośród swojego ludu. Żaden tekst Nowego Testamentu nie mówi jednak o Bogu śpiewającym nad swoim ludem, więc ta część powiązania jest tylko tematyczna.",
+    "keywords": [
+      "Sofoniasza 3:17",
+      "Bóg pośród ciebie",
+      "Radość i śpiew",
+      "Córka Syjonu"
+    ]
+  },
+  {
+    "id": "p67",
+    "title": "Eliasz posłany przed dniem Pana i wschodzące Słońce sprawiedliwości",
+    "eraGap": "ok. 430 r. p.n.e. → ok. 4 r. p.n.e. – 95 r. n.e.",
+    "ot": {
+      "author": "Malachiasz",
+      "context": "Ostatnie słowa Malachiasza, ostatniej księgi chrześcijańskiego Starego Testamentu: wzejdzie Słońce sprawiedliwości, a przed dniem Pana przyjdzie Eliasz."
+    },
+    "nt": {
+      "author": "Łukasz / Mateusz / Piotr",
+      "context": "Słowa anioła o Janie Chrzcicielu, pieśń Zachariasza o wschodzie słońca z wysoka, kobieta dotykająca brzegu szaty Jezusa i jutrzenka u Piotra."
+    },
+    "bridge": "Malachiasz kończy dwiema obietnicami: „wzejdzie Słońce sprawiedliwości z uzdrowieniem na swoich skrzydłach”, a przed dniem Pana Bóg pośle „Eliasza proroka”. Łukasza 1:17 odnosi tę drugą do Jana Chrzciciela, który pójdzie „w duchu i mocy Eliasza, aby zwrócić serca ojców ku dzieciom”. Słowa „nawiedził nas wschód słońca z wysoka” (Łukasza 1:78) i jutrzenka z 2 Piotra 1:19 mogą nawiązywać do wschodzącego słońca z Malachiasza, choć proponuje się też inne teksty, na przykład gwiazdę z Liczb 24:17. Skrzydła u Malachiasza zwykle rozumie się jako promienie słońca, ale niektórzy współcześni nauczyciele łączą je z brzegiem szaty, którego dotknęła chora kobieta (Mateusza 9:20), bo hebrajskie słowo oznaczające skrzydła oznacza też rogi szaty, na których wisiały frędzle (Liczb 15:38). Mateusz jednak w ogóle nie wspomina Malachiasza, a jego greckie słowo na brzeg (frędzel) szaty nie jest tym, którym grecki przekład Malachiasza oddaje skrzydła.",
+    "keywords": [
+      "Słońce sprawiedliwości",
+      "Duch i moc Eliasza",
+      "Wschód słońca z wysoka",
+      "Malachiasza 4"
+    ]
+  },
+  {
+    "id": "p68",
+    "title": "Zapłata robotnika i Pan, który zna swoich",
+    "eraGap": "ok. 1400 r. p.n.e. → ok. 63-90 r. n.e.",
+    "ot": {
+      "author": "Mojżesz",
+      "context": "Prawo zakazujące zawiązywania pyska wołowi przy młocce oraz słowa Mojżesza do Koracha i jego buntowników: Pan pokaże, kto do Niego należy."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł prosi o wsparcie dla starszych, którzy głoszą słowo i nauczają, i zapewnia Tymoteusza, że Boży fundament stoi niewzruszony mimo fałszywych nauczycieli."
+    },
+    "bridge": "Paweł przytacza przepis Mojżesza „Nie zawiążesz pyska młócącemu wołowi”, poprzedzając go słowami „Mówi bowiem Pismo”, i uzasadnia nim wspieranie starszych, którzy „pracują w słowie i w nauce” (1 Tymoteusza 5:17). Dodaje: „Godny jest robotnik swojej zapłaty” – te słowa wypowiada Jezus w Łukasza 10:7 – i nie ma zgody co do tego, czy wprowadzenie „Mówi bowiem Pismo” obejmuje także to drugie powiedzenie. W 2 Tymoteusza 2:19, po ostrzeżeniu przed fałszywymi nauczycielami (2 Tymoteusza 2:17-18), Paweł pisze, że fundament Boży ma pieczęć: „Zna Pan tych, którzy należą do niego”, co odpowiada słowom Mojżesza do Koracha z Księgi Liczb 16:5, najwierniej w Septuagincie (starożytnym greckim przekładzie Starego Testamentu).",
+    "keywords": [
+      "1 Tymoteusza",
+      "Młócący wół",
+      "Zapłata robotnika",
+      "Pan zna swoich"
+    ]
+  },
+  {
+    "id": "p69",
+    "title": "Echa Starego Testamentu w listach Jana, Piotra i Judy",
+    "eraGap": "ok. 1400 / 520 r. p.n.e. → ok. 65-90 r. n.e.",
+    "ot": {
+      "author": "Mojżesz i Zachariasz",
+      "context": "Przykazanie miłości bliźniego (Kapłańska 19:18), Pan karcący szatana w widzeniu Zachariasza (Zachariasza 3:2) i modlitwa Mojżesza o tym, że w Bożych oczach tysiąc lat jest jak jeden dzień (Psalm 90:4)."
+    },
+    "nt": {
+      "author": "Jan, Piotr i Juda",
+      "context": "Jan wzywa wierzących do wzajemnej miłości; Piotr przypomina, że u Pana jeden dzień jest jak tysiąc lat; Juda opowiada, jak archanioł Michał pozostawił zgromienie diabła Panu."
+    },
+    "bridge": "Listy powszechne (listy Nowego Testamentu od Jakuba do Judy) często nawiązują do Starego Testamentu, nie cytując go wprost. W Judy 1:9 archanioł Michał, spierając się z diabłem o ciało Mojżesza (wątek z żydowskiej tradycji), mówi: „Niech cię Pan zgromi” – tymi samymi słowami Pan zwraca się do szatana w Zachariasza 3:2. Słowa Piotra, że „jeden dzień u Pana jest jak tysiąc lat” (2 Piotra 3:8), są echem Psalmu 90:4. W 1 i 2 Jana wezwanie, „abyśmy się wzajemnie miłowali”, powtarza przykazanie Jezusa z Jana 13:34. Podziela ono myśl Kapłańskiej 19:18: „będziesz miłował swego bliźniego jak samego siebie”, ale Jan nie cytuje tego wersetu.",
+    "keywords": [
+      "Wzajemna miłość",
+      "List Judy",
+      "Zachariasza 3:2",
+      "Psalm 90:4"
+    ]
+  },
+  {
+    "id": "p70",
+    "title": "Od drzewa życia w Edenie do nowego nieba, nowej ziemi i rzeki życia",
+    "eraGap": "ok. 1400 / 700 r. p.n.e. → ok. 95 r. n.e. (wielka inkluzja)",
+    "ot": {
+      "author": "Mojżesz, Izajasz i Ezechiel",
+      "context": "Drzewo życia w Edenie, proroctwo Izajasza o nowych niebiosach i nowej ziemi oraz widzenie Ezechiela o uzdrawiającej rzece wypływającej ze świątyni."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Końcowa wizja Jana: nowe niebo i nowa ziemia, Bóg mieszkający z ludźmi, rzeka wody życia, drzewo życia i koniec przekleństwa."
+    },
+    "bridge": "Objawienie nigdy nie wprowadza formalnego cytatu, ale jego końcowa wizja jest zbudowana ze słów Starego Testamentu. Jan widzi „nowe niebo i nową ziemię”, jak zapowiadał Izajasz (Izajasza 65:17). Rzeka wypływająca z tronu Boga, z drzewem życia po obu stronach, które owocuje co miesiąc i którego liście służą do uzdrawiania narodów, ściśle odpowiada rzece Ezechiela płynącej ze świątyni, nad którą rosną drzewa owocowe o leczniczych liściach (Ezechiela 47:12). Drzewo życia, do którego drogi od czasu Edenu strzegli cherubini (Rodzaju 2:9; 3:24), znów stoi nad rzeką i „nie będzie już żadnego przekleństwa”. Wielu czytelników widzi tu klamrę spinającą całą Biblię, czyli inkluzję (opowieść, która kończy się tam, gdzie się zaczęła): to, co utracono w Rodzaju 3, Baranek przywraca, i to w pełniejszej postaci.",
+    "keywords": [
+      "Drzewo życia",
+      "Nowe niebo i nowa ziemia",
+      "Rzeka życia",
+      "Koniec przekleństwa"
+    ]
+  },
+  {
+    "id": "p71",
+    "title": "Przymierze Boga z Dawidem i wieczny tron Syna",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 30-95 r. n.e.",
+    "ot": {
+      "author": "Kronikarz (według tradycji Ezdrasz)",
+      "context": "Boża obietnica przymierza dana Dawidowi przez Natana, gdy Dawid chce zbudować Bogu dom (1 Kronik 17:1-4)."
+    },
+    "nt": {
+      "author": "Autor Listu do Hebrajczyków / Łukasz",
+      "context": "Pierwszy rozdział Listu do Hebrajczyków cytuje obietnicę daną Dawidowi, aby pokazać, że Syn przewyższa aniołów; w Łukasza 1 anioł zapowiada Marii, że jej Syn otrzyma tron Dawida."
+    },
+    "bridge": "Gdy Dawid chce zbudować Bogu dom (1 Kronik 17:1-4), Bóg w zamian obiecuje wzbudzić jego potomka i mówi: „utwierdzę jego tron na wieki”. List do Hebrajczyków 1:5 cytuje słowa „Ja będę mu Ojcem, a on będzie mi Synem” i odnosi je do Jezusa, aby pokazać, że przewyższa On aniołów. Łukasza 1:32-33 nawiązuje do tej samej obietnicy: Jezus otrzyma „tron jego ojca Dawida”, a „jego królestwu nie będzie końca”. Wersja z 1 Kronik pomija zdanie z 2 Samuela 7:14: „Jeśli zgrzeszy, skarcę go rózgą ludzką”. Wielu czytelników widzi w tym skupienie uwagi na trwałej obietnicy, co pasuje do tego, jak List do Hebrajczyków odnosi ją do Chrystusa.",
+    "keywords": [
+      "1 Kronik 17",
+      "Syn Dawida",
+      "Hebrajczyków 1:5",
+      "Wieczny tron"
+    ]
+  },
+  {
+    "id": "p72",
+    "title": "Od krwi Abla aż do krwi Zachariasza",
+    "eraGap": "ok. 800 r. p.n.e. → ok. 33 r. n.e.",
+    "ot": {
+      "author": "Kronikarz (tradycyjnie Ezdrasz)",
+      "context": "Na rozkaz króla Joasza kapłan Zachariasz, syn Jehojady, zostaje ukamienowany na dziedzińcu świątyni za to, że upomniał lud; umierając, prosi, by Pan to zobaczył i pomścił."
+    },
+    "nt": {
+      "author": "Mateusz / Łukasz",
+      "context": "Jezus obciąża przywódców religijnych winą za krew wszystkich proroków, od Abla (Rodzaju) do Zachariasza (2 Kronik)."
+    },
+    "bridge": "Jezus zapowiada, że od tego pokolenia będzie się dopominać „krwi wszystkich proroków”: od Abla, pierwszej ofiary zabójstwa (Rodzaju 4:8), aż do Zachariasza, który „zginął między ołtarzem a świątynią”. Nie cytuje 2 Kronik, lecz przywołuje śmierć kapłana Zachariasza, którego na rozkaz króla Joasza ukamienowano na dziedzińcu świątyni i który, umierając, powiedział: „Niech Pan to zobaczy i zemści się”. Ponieważ Kroniki zamykają tradycyjny układ Biblii Hebrajskiej, wielu uważa, że słowa „od krwi sprawiedliwego Abla aż do krwi Zachariasza” obejmują całe Pismo, od pierwszego męczennika do ostatniego, choć nie wiemy na pewno, czy ten układ obowiązywał już za czasów Jezusa. Mateusz mówi o krwi „Zachariasza, syna Barachiasza”, a według 2 Kronik 24:20 był on synem Jehojady; to od dawna dyskutowana trudność, tym bardziej że synem Berechiasza był późniejszy prorok Zachariasz (Zachariasza 1:1).",
+    "keywords": [
+      "Od Abla do Zachariasza",
+      "2 Kronik 24",
+      "Kanon hebrajski",
+      "Męczeństwo"
+    ]
+  },
+  {
+    "id": "p73",
+    "title": "Tchnienie Pana uśmiercające Niegodziwca",
+    "eraGap": "ok. 700 r. p.n.e. → ok. 51 r. n.e.",
+    "ot": {
+      "author": "Izajasz",
+      "context": "Obiecany potomek Jessego (Izajasza 11:1) sądzi w sprawiedliwości i tchnieniem swoich warg zabija niegodziwego; Pan przychodzi w ogniu, by sądzić."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł opisuje Pana Jezusa, który objawi się z nieba w ogniu płomienistym i przy swoim przyjściu zniszczy niegodziwca."
+    },
+    "bridge": "W Izajasza 11 prorok zapowiada potomka Jessego, ojca Dawida (Izajasza 11:1), który w sprawiedliwości będzie sądził ubogich, „a tchnieniem swoich warg zabije niegodziwego”. W 2 Tesaloniczan 2:8 Paweł odnosi ten sam obraz do Pana Jezusa w chwili Jego przyjścia: to On zabije niegodziwca „duchem swoich ust”, czyli człowieka grzechu, o którym Paweł mówił chwilę wcześniej (2 Tesaloniczan 2:3-4). Paweł nie wprowadza tych słów jako cytatu z Pisma i zamiast o wargach mówi o ustach, jest to więc wyraźna aluzja (zapożyczone słowa, nieoznaczone jako cytat), a nie formalny cytat. Podobnie 2 Tesaloniczan 1:7-8 ukazuje Jezusa objawiającego się „w ogniu płomienistym wywierając zemstę”, co przypomina Izajasza 66:15, gdzie Pan przychodzi w ogniu.",
+    "keywords": [
+      "Tchnienie Jego ust",
+      "2 Tesaloniczan 2",
+      "Izajasza 11:4",
+      "Powtórne przyjście"
+    ]
+  },
+  {
+    "id": "p74",
+    "title": "„Policz to na mój rachunek”: wstawiennictwo i imputacja",
+    "eraGap": "ok. 1850 / 700 r. p.n.e. → ok. 61 r. n.e.",
+    "ot": {
+      "author": "Mojżesz i Izajasz",
+      "context": "Juda proponuje, że zostanie w Egipcie niewolnikiem zamiast Beniamina; Sługa z Księgi Izajasza dźwiga nieprawości innych."
+    },
+    "nt": {
+      "author": "Paweł",
+      "context": "Paweł prosi Filemona, by przyjął Onezyma jak jego samego, i obiecuje oddać wszystko, co Onezym jest winien; pisze też, że Bóg Chrystusa „za nas grzechem uczynił”."
+    },
+    "bridge": "Gdy Beniamin ma zostać niewolnikiem w Egipcie, Juda wstawia się za nim i proponuje, że zajmie jego miejsce: „niech twój sługa zostanie niewolnikiem mego pana zamiast tego chłopca”. Podobnie Paweł wstawia się za Onezymem, pisząc do Filemona: „A jeśli wyrządził ci jakąś szkodę albo jest ci coś winien, policz to na mój rachunek”. Nic w Liście do Filemona nie odsyła do Judy ani do Izajasza; obie historie łączy jedynie myśl o kimś, kto staje na miejscu drugiego. Chrześcijanie często posługują się nimi jako obrazem imputacji (zaliczenia długu lub grzechu jednej osoby na rachunek drugiej), o której mówią słowa Izajasza: „Pan włożył na niego nieprawość nas wszystkich”, i Pawła: Bóg „tego, który nie znał grzechu, za nas grzechem uczynił”. Zestawienie tych fragmentów to ilustracja zaproponowana przez aplikację, a nie powiązanie, które tworzy sam Nowy Testament.",
+    "keywords": [
+      "Policz to na mój rachunek",
+      "Filemona",
+      "Poręczenie Judy",
+      "Imputacja"
+    ]
+  },
+  {
+    "id": "p75",
+    "title": "Krew, która oczyszcza z wszelkiego grzechu, i ofiara przebłagalna",
+    "eraGap": "ok. 1440 r. p.n.e. → ok. 90 r. n.e.",
+    "ot": {
+      "author": "Mojżesz, Izajasz i Zachariasz",
+      "context": "W Dniu Przebłagania najwyższy kapłan kropi krwią przebłagalnię (złote wieko arki) i dokonuje przebłagania, aby oczyścić Izraela ze wszystkich grzechów; prorocy dodają obrazy grzechów wybielonych jak śnieg i źródła, które obmywa z grzechu."
+    },
+    "nt": {
+      "author": "Jan",
+      "context": "Jan ukazuje Jezusa jako naszego sprawiedliwego orędownika u Ojca i przebłaganie za grzechy całego świata, którego krew oczyszcza z wszelkiego grzechu."
+    },
+    "bridge": "W Dniu Przebłagania najwyższy kapłan kropił krwią przebłagalnię, złote wieko arki (Kapłańska 16:15), a Bóg zapowiedział, że dokona się przebłaganie, „aby was oczyścić od wszystkich waszych grzechów”. 1 Jana 1:7 wyraźnie nawiązuje do tej obietnicy: „krew Jezusa Chrystusa, jego Syna, oczyszcza nas z wszelkiego grzechu”. Izajasza 1:18 i Zachariasza 13:1 dodają prorockie obrazy: grzechy, które „jak śnieg wybieleją”, i źródło otwarte „dla obmycia grzechu i nieczystości”. Jan nazywa też Jezusa „przebłaganiem za nasze grzechy” (gr. hilasmos); to słowo pokrewne, ale nie to samo co hilastērion, którym grecki przekład Starego Testamentu nazywa przebłagalnię (podobnie różnią się polskie słowa przebłaganie i przebłagalnia). Chrześcijanie od dawna widzą w Dniu Przebłagania typologię (instytucję zapowiadającą Chrystusa), a Hebrajczyków 9:11-12 mówi o tym wprost.",
+    "keywords": [
+      "Przebłagalnia",
+      "Ofiara przebłagalna",
+      "1 Jana 1:7",
+      "Oczyszczeni z wszelkiego grzechu"
+    ]
+  },
+  {
+    "id": "p76",
+    "title": "Chodzenie w prawdzie i miłości",
+    "eraGap": "ok. 1400 / 1000 r. p.n.e. → ok. 90 r. n.e.",
+    "ot": {
+      "author": "Dawid i Mojżesz",
+      "context": "Dawid prosi, by mógł chodzić w Bożej prawdzie; Prawo wzywa Izraela, by miłował Pana całym sercem, a bliźniego jak samego siebie."
+    },
+    "nt": {
+      "author": "Jan Starszy",
+      "context": "Starszy cieszy się, że niektóre dzieci adresatki postępują w prawdzie, i przypomina czytelnikom przykazanie, które mieli od początku: wzajemną miłość."
+    },
+    "bridge": "Starszy cieszy się, że wśród dzieci adresatki znalazł takie, które „postępują w prawdzie”, i prosi, „abyśmy się wzajemnie miłowali” – zgodnie z przykazaniem, „które mieliśmy od początku”. List nie wspomina Prawa Mojżesza: „od początku” oznacza najpewniej początek wiary czytelników, gdy usłyszeli polecenie Jezusa o wzajemnej miłości (Jana 13:34). Słownictwo listu ma jednak głębokie korzenie w Starym Testamencie: psalmista prosi, „abym chodził w twojej prawdzie” (Psalm 86:11), a Prawo nakazuje Izraelowi miłować Pana całym sercem (Powtórzonego Prawa 6:5) oraz mówi: „będziesz miłował swego bliźniego jak samego siebie” (Kapłańska 19:18). To paralela tematyczna wskazana przez aplikację: sam list nie cytuje tych wersetów ani wyraźnie do nich nie nawiązuje.",
+    "keywords": [
+      "Chodzenie w prawdzie",
+      "2 Jana",
+      "Miłujcie się wzajemnie",
+      "Od początku"
+    ]
+  },
+  {
+    "id": "p77",
+    "title": "Gościnność wobec posłańców Imienia i naśladowanie dobra",
+    "eraGap": "ok. 1000 r. p.n.e. → ok. 90 r. n.e.",
+    "ot": {
+      "author": "Dawid, Salomon i autor Ksiąg Królewskich",
+      "context": "Odwrócenie się od zła, by czynić dobro (Psalm 34:14), nieodmawianie dobra potrzebującemu (Przypowieści 3:27) i Szunamitka, która przygotowała pokój dla proroka Elizeusza (2 Królewska 4:8-10)."
+    },
+    "nt": {
+      "author": "Jan Starszy",
+      "context": "Jan chwali Gajusa za wspieranie wędrownych nauczycieli, którzy wyruszyli „dla jego imienia”, i zachęca go, by naśladował to, co dobre."
+    },
+    "bridge": "3 Jana nie cytuje żadnego z tych wersetów Starego Testamentu; łączą je wspólne myśli. Wezwanie „nie naśladuj tego, co złe, lecz to, co dobre” przypomina słowa „Odwróć się od zła i czyń dobrze” (Psalm 34:14), a troska Gajusa o wędrownych nauczycieli przywodzi na myśl pokój, który Szunamitka przygotowała dla Elizeusza. Nauczyciele wyruszyli „dla jego imienia” (3 Jana 1:7); w najstarszych rękopisach greckich jest po prostu „Imię”, a Jan nie mówi, czyje – większość czytelników rozumie, że chodzi o imię Jezusa (por. Dzieje Apostolskie 5:41). Jeśli tak, Jan odnosi do Jezusa określenie, którego Izrael z czcią używał wobec Boga: hebrajski tekst Kapłańskiej 24:11 mówi po prostu o „Imieniu”, a późniejsi Żydzi nazywali Boga HaSzem (hebr. „Imię”), by nie wymawiać Jego imienia.",
+    "keywords": [
+      "3 Jana",
+      "Dla Imienia",
+      "Psalm 34:14",
+      "Współpracownicy prawdy"
+    ]
+  }
 ]

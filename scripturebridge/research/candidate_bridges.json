@@ -158,25 +158,6 @@
    "ntText": "And the Scripture was fulfilled that says, “Abraham believed God, and it was credited to him as righteousness,” and he was called a friend of God."
   },
   {
-   "ot": "Psalm 45:6-7",
-   "nt": "Hebrews 1:8",
-   "votes": 79,
-   "shared": {
-    "words": 16,
-    "text": "your throne o god endures forever and ever and justice is the scepter of your kingdom"
-   },
-   "formula": {
-    "ref": "Heb.1.6",
-    "phrase": "…od brings His firstborn into the world, He says: “Let all God’s angels worship Him.”"
-   },
-   "score": 5.4,
-   "sameOtAs": [
-    "p59"
-   ],
-   "otText": "Your throne, O God, endures forever and ever, and justice is the scepter of Your kingdom. You have loved righteousness and hated wickedness; therefore God, your God, has anointed you above your companions with the oil of joy.",
-   "ntText": "But about the Son He says: “Your throne, O God, endures forever and ever, and justice is the scepter of Your kingdom."
-  },
-  {
    "ot": "Psalm 51:4",
    "nt": "Romans 3:4",
    "votes": 80,
@@ -279,6 +260,23 @@
    "sameOtAs": [],
    "otText": "For He will command His angels concerning you to guard you in all your ways.",
    "ntText": "For it is written: ‘He will command His angels concerning You to guard You carefully; and they will lift You up in their hands, so that You will not strike Your foot against a stone.’”"
+  },
+  {
+   "ot": "Deuteronomy 21:23",
+   "nt": "Galatians 3:13",
+   "votes": 58,
+   "shared": {
+    "words": 6,
+    "text": "who is hung on a tree"
+   },
+   "formula": {
+    "ref": "Gal.3.13",
+    "phrase": "…the law by becoming a curse for us. For it is written: “Cursed is everyone who is hung on a tree.”"
+   },
+   "score": 5.26,
+   "sameOtAs": [],
+   "otText": "you must not leave the body on the tree overnight, but you must be sure to bury him that day, because anyone who is hung on a tree is under God’s curse. You must not defile the land that the LORD your God is giving you as an inheritance.",
+   "ntText": "Christ redeemed us from the curse of the law by becoming a curse for us. For it is written: “Cursed is everyone who is hung on a tree.”"
   },
   {
    "ot": "Psalm 44:22",
@@ -552,7 +550,9 @@
     "phrase": "But Jesus told them, “Moses wrote this commandment for you because of your hardness…"
    },
    "score": 5.17,
-   "sameOtAs": [],
+   "sameOtAs": [
+    "p59"
+   ],
    "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
    "ntText": "However, from the beginning of creation, ‘God made them male and female.’ ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh.’ So they are no longer two, but one flesh. Therefore what God has joined together, let man not separate.”"
   },
@@ -765,25 +765,6 @@
    "ntText": "As it is written: “I have made you a father of many nations.” He is our father in the presence of God, in whom he believed, the God who gives life to the dead and calls into being what does not yet exist."
   },
   {
-   "ot": "Psalm 45:7",
-   "nt": "Hebrews 1:9",
-   "votes": 37,
-   "shared": {
-    "words": 22,
-    "text": "you have loved righteousness and hated wickedness therefore god your god has anointed you above your companions with the oil of joy"
-   },
-   "formula": {
-    "ref": "Heb.1.7",
-    "phrase": "Now about the angels He says: “He makes His angels winds, His servants flames…"
-   },
-   "score": 5.07,
-   "sameOtAs": [
-    "p59"
-   ],
-   "otText": "You have loved righteousness and hated wickedness; therefore God, your God, has anointed you above your companions with the oil of joy.",
-   "ntText": "You have loved righteousness and hated wickedness; therefore God, Your God, has anointed You above Your companions with the oil of joy.”"
-  },
-  {
    "ot": "Isaiah 65:1",
    "nt": "Romans 10:20",
    "votes": 36,
@@ -958,6 +939,23 @@
    "sameOtAs": [],
    "otText": "“Shout for joy, O barren woman, who bears no children; break forth in song and cry aloud, you who have never travailed; because more are the children of the desolate woman than of her who has a husband,” says the LORD.",
    "ntText": "For it is written: “Rejoice, O barren woman, who bears no children; break forth and cry aloud, you who have never travailed; because more are the children of the desolate woman than of her who has a husband.”"
+  },
+  {
+   "ot": "Psalm 22:22",
+   "nt": "Hebrews 2:12",
+   "votes": 31,
+   "shared": {
+    "words": 10,
+    "text": "i will proclaim your name to my brothers i will"
+   },
+   "formula": {
+    "ref": "Heb.2.12",
+    "phrase": "He says: “I will proclaim Your name to My brothers; I wil…"
+   },
+   "score": 4.99,
+   "sameOtAs": [],
+   "otText": "I will proclaim Your name to my brothers; I will praise You in the assembly.",
+   "ntText": "He says: “I will proclaim Your name to My brothers; I will sing Your praises in the assembly.”"
   },
   {
    "ot": "Psalm 69:22-23",
@@ -1577,7 +1575,9 @@
     "phrase": "But Jesus told them, “Moses wrote this commandment for you because of your hardness…"
    },
    "score": 4.68,
-   "sameOtAs": [],
+   "sameOtAs": [
+    "p59"
+   ],
    "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
    "ntText": "‘For this reason a man will leave his father and mother and be united to his wife,"
   },
@@ -2078,23 +2078,6 @@
    "ntText": "Like newborn babies, crave pure spiritual milk, so that by it you may grow up in your salvation, now that you have tasted that the Lord is good."
   },
   {
-   "ot": "Daniel 12:11",
-   "nt": "Matthew 24:15",
-   "votes": 33,
-   "shared": {
-    "words": 4,
-    "text": "the abomination of desolation"
-   },
-   "formula": {
-    "ref": "Matt.24.15",
-    "phrase": "…bomination of desolation,’ described by the prophet Daniel (let the reader understand),"
-   },
-   "score": 4.02,
-   "sameOtAs": [],
-   "otText": "And from the time the daily sacrifice is abolished and the abomination of desolation set up, there will be 1,290 days.",
-   "ntText": "So when you see standing in the holy place ‘the abomination of desolation,’ described by the prophet Daniel (let the reader understand),"
-  },
-  {
    "ot": "Deuteronomy 6:5",
    "nt": "Matthew 22:37",
    "votes": 102,
@@ -2243,7 +2226,9 @@
    },
    "formula": null,
    "score": 3.88,
-   "sameOtAs": [],
+   "sameOtAs": [
+    "p59"
+   ],
    "otText": "For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
    "ntText": "Then some Pharisees came and tested Him by asking, “Is it lawful for a man to divorce his wife for any reason?” Jesus answered, “Have you not read that from the beginning the Creator ‘made them male and female,’ and said, ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh’? So they are no longer two, but one flesh. Therefore what God has joined together, let man not separate.”"
   },
@@ -3182,7 +3167,9 @@
    },
    "formula": null,
    "score": 3.56,
-   "sameOtAs": [],
+   "sameOtAs": [
+    "p59"
+   ],
    "otText": "So the LORD God caused the man to fall into a deep sleep, and while he slept, He took one of the man’s ribs and closed up the area with flesh. And from the rib that the LORD God had taken from the man, He made a woman and brought her to him. And the man said: “This is now bone of my bones and flesh of my flesh; she shall be called ‘woman,’ for out of man she was taken.” For this reason a man will leave his father and mother and be united to his wife, and they will become one flesh.",
    "ntText": "and said, ‘For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh’?"
   },
@@ -3470,22 +3457,6 @@
    "ntText": "But we see Jesus, who was made a little lower than the angels, now crowned with glory and honor because He suffered death, so that by the grace of God He might taste death for everyone."
   },
   {
-   "ot": "Isaiah 53:12",
-   "nt": "Luke 22:37",
-   "votes": 26,
-   "shared": {
-    "words": 7,
-    "text": "and he was numbered with the transgressors"
-   },
-   "formula": null,
-   "score": 3.41,
-   "sameOtAs": [
-    "p35"
-   ],
-   "otText": "Therefore I will allot Him a portion with the great, and He will divide the spoils with the strong, because He has poured out His life unto death, and He was numbered with the transgressors. Yet He bore the sin of many and made intercession for the transgressors.",
-   "ntText": "For I tell you that this Scripture must be fulfilled in Me: ‘And He was numbered with the transgressors.’ For what is written about Me is reaching its fulfillment.”"
-  },
-  {
    "ot": "Micah 7:6",
    "nt": "Matthew 10:35-36",
    "votes": 26,
@@ -3752,18 +3723,20 @@
    "ntText": "The angel appeared to her and said, “Greetings, you who are highly favored! The Lord is with you.”"
   },
   {
-   "ot": "Psalm 40:7",
-   "nt": "Luke 24:44",
+   "ot": "Psalm 110:4",
+   "nt": "Hebrews 7:21",
    "votes": 22,
    "shared": {
-    "words": 6,
-    "text": "is written about me in the"
+    "words": 15,
+    "text": "the lord has sworn and will not change his mind you are a priest forever"
    },
    "formula": null,
    "score": 3.34,
-   "sameOtAs": [],
-   "otText": "Then I said, “Here I am, I have come— it is written about me in the scroll:",
-   "ntText": "Jesus said to them, “These are the words I spoke to you while I was still with you: Everything must be fulfilled that is written about Me in the Law of Moses, the Prophets, and the Psalms.”"
+   "sameOtAs": [
+    "p45"
+   ],
+   "otText": "The LORD has sworn and will not change His mind: “You are a priest forever in the order of Melchizedek.”",
+   "ntText": "but Jesus became a priest with an oath by the One who said to Him: “The Lord has sworn and will not change His mind: ‘You are a priest forever.’”"
   },
   {
    "ot": "Micah 7:6",
@@ -4172,22 +4145,6 @@
    "ntText": "For this is what the promise stated: “At the appointed time I will return, and Sarah will have a son.”"
   },
   {
-   "ot": "Genesis 14:18-20",
-   "nt": "Hebrews 7:1",
-   "votes": 18,
-   "shared": {
-    "words": 5,
-    "text": "priest of god most high"
-   },
-   "formula": null,
-   "score": 3.26,
-   "sameOtAs": [
-    "p45"
-   ],
-   "otText": "Then Melchizedek king of Salem brought out bread and wine—since he was priest of God Most High— and he blessed Abram and said: “Blessed be Abram by God Most High, Creator of heaven and earth, and blessed be God Most High, who has delivered your enemies into your hand.” Then Abram gave Melchizedek a tenth of everything.",
-   "ntText": "This Melchizedek was king of Salem and priest of God Most High. He met Abraham returning from the slaughter of the kings and blessed him,"
-  },
-  {
    "ot": "Habakkuk 2:3-4",
    "nt": "Hebrews 10:37",
    "votes": 18,
@@ -4446,22 +4403,6 @@
    "sameOtAs": [],
    "otText": "Taste and see that the LORD is good; blessed is the man who takes refuge in Him!",
    "ntText": "now that you have tasted that the Lord is good."
-  },
-  {
-   "ot": "Genesis 14:18",
-   "nt": "Hebrews 6:20-7:3",
-   "votes": 15,
-   "shared": {
-    "words": 5,
-    "text": "priest of god most high"
-   },
-   "formula": null,
-   "score": 3.18,
-   "sameOtAs": [
-    "p45"
-   ],
-   "otText": "Then Melchizedek king of Salem brought out bread and wine—since he was priest of God Most High—",
-   "ntText": "where Jesus our forerunner has entered on our behalf. He has become a high priest forever in the order of Melchizedek. This Melchizedek was king of Salem and priest of God Most High. He met Abraham returning from the slaughter of the kings and blessed him, and Abraham apportioned to him a tenth of everything. First, his name means “king of righteousness.” Then also, “king of Salem” means “king of peace.” Without father or mother or genealogy, without beginning of days or end of life, like the Son of God, he remains a priest for all time."
   },
   {
    "ot": "Exodus 20:12",
@@ -4778,6 +4719,65 @@
    "sameOtAs": [],
    "otText": "Lift up your eyes to the heavens, and look at the earth below; for the heavens will vanish like smoke, the earth will wear out like a garment, and its people will die like gnats. But My salvation will last forever, and My righteousness will never fail.",
    "ntText": "They will perish, but You remain; they will all wear out like a garment."
+  },
+  {
+   "ot": "Genesis 22:17",
+   "nt": "Hebrews 6:14",
+   "votes": 14,
+   "shared": {
+    "words": 6,
+    "text": "i will surely bless you and"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "I will surely bless you, and I will multiply your descendants like the stars in the sky and the sand on the seashore. Your descendants will possess the gates of their enemies.",
+   "ntText": "saying, “I will surely bless you and multiply your descendants.”"
+  },
+  {
+   "ot": "Isaiah 1:11-14",
+   "nt": "Hebrews 10:4",
+   "votes": 14,
+   "shared": {
+    "words": 5,
+    "text": "the blood of bulls and"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "“What good to Me is your multitude of sacrifices?” says the LORD. “I am full from the burnt offerings of rams and the fat of well-fed cattle; I take no delight in the blood of bulls and lambs and goats. When you come to appear before Me, who has required this of you— this trampling of My courts? Bring your worthless offerings no more; your incense is detestable to Me— your New Moons, Sabbaths, and convocations. I cannot endure iniquity in a solemn assembly. I hate your New Moons and your appointed feasts. They have become a burden to Me; I am weary of bearing them.",
+   "ntText": "because it is impossible for the blood of bulls and goats to take away sins."
+  },
+  {
+   "ot": "Genesis 5:21-24",
+   "nt": "Hebrews 11:5",
+   "votes": 14,
+   "shared": {
+    "words": 6,
+    "text": "because god had taken him away"
+   },
+   "formula": null,
+   "score": 3.15,
+   "sameOtAs": [],
+   "otText": "When Enoch was 65 years old, he became the father of Methuselah. And after he had become the father of Methuselah, Enoch walked with God 300 years and had other sons and daughters. So Enoch lived a total of 365 years. Enoch walked with God, and then he was no more, because God had taken him away.",
+   "ntText": "By faith Enoch was taken up so that he did not see death: “He could not be found, because God had taken him away.” For before he was taken, he was commended as one who pleased God."
+  },
+  {
+   "ot": "Proverbs 16:32",
+   "nt": "Romans 12:21",
+   "votes": 42,
+   "shared": {
+    "words": 0,
+    "text": ""
+   },
+   "formula": {
+    "ref": "Rom.12.19",
+    "phrase": "…ed, but leave room for God’s wrath. For it is written: “Vengeance is Mine; I will repay, says the Lord.…"
+   },
+   "score": 3.12,
+   "sameOtAs": [],
+   "otText": "He who is slow to anger is better than a warrior, and he who controls his temper is greater than one who captures a city.",
+   "ntText": "Do not be overcome by evil, but overcome evil with good."
   }
  ]
 }
