@@ -684,14 +684,26 @@ function verseTap(el) {
   el.classList.add('sel');
   openXref(S.bible.osis, S.bible.c, Number(el.dataset.v)).catch(() => toast.warning('Could not load cross-references'));
 }
-bibleView.addEventListener('change', (e) => {
-  if (e.target.id !== 'trPick') return;
-  const id = e.target.value;
-  if (!id || id === TR.id) return;
+// One place sets the translation: the header button's sheet and the switch inside the Bible tab both call this.
+function setTranslation(id) {
+  if (!id || id === TR.id || !BIB.meta?.translations.some((t) => t.id === id)) return;
   TR.id = id; store.set('sb_tr', id);
-  const y = scrollY;
-  renderBible().then(() => window.scrollTo(0, y));
-});
+  syncTrUI();
+  if (S.tab === 'bible') { const y = scrollY; renderBible().then(() => window.scrollTo(0, y)); }
+  toast(`${trInfo().name}`);
+}
+function syncTrUI() {
+  const t = trInfo();
+  $('#trBtnLabel').textContent = t.label || 'BSB';
+  $('#trBtn').setAttribute('aria-label', `Bible translation: ${t.name || 'BSB'}`);
+  $('#trList').innerHTML = (BIB.meta?.translations || []).map((x) => `<button type="button" class="tr-opt" role="radio" aria-checked="${x.id === t.id}" data-tr="${esc(x.id)}">
+      <span><b>${esc(x.name)}</b><small>${x.lang === 'pl' ? 'Polski' : 'English'} · ${esc(x.licence)}</small></span>
+      ${x.id === t.id ? '<fvl-icon name="check" size="md"></fvl-icon>' : ''}</button>`).join('');
+  const pick = $('#trPick'); if (pick) pick.value = t.id;
+}
+$('#trBtn').addEventListener('click', () => { syncTrUI(); $('#trSheet').show(); });
+$('#trList').addEventListener('click', (e) => { const o = e.target.closest('[data-tr]'); if (!o) return; setTranslation(o.dataset.tr); $('#trSheet').close(); });
+bibleView.addEventListener('change', (e) => { if (e.target.id === 'trPick') setTranslation(e.target.value); });
 bibleView.addEventListener('click', (e) => { const el = e.target.closest('.verse'); if (el && !getSelection()?.toString()) verseTap(el); });
 bibleView.addEventListener('keydown', (e) => { const el = e.target.closest('.verse'); if (el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); verseTap(el); } });
 let chTouch = null;
@@ -758,6 +770,7 @@ window.addEventListener('scroll', () => $('#top').classList.toggle('scrolled', s
 
 // ---------- start ----------
 load().then(() => {
+  syncTrUI();
   buildFilters();
   syncBookUI();
   route();
