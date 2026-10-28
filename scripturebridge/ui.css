@@ -742,3 +742,34 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   line-height: var(--fvl-type-small-line-height);
 }
 .ev-facts q { color: var(--fvl-prose-quote-text); font-style: italic; }
+
+/* ---------- people and places ---------- */
+.who-row { display: flex; flex-wrap: wrap; gap: var(--fvl-space-stack-related); }
+.who-chip {
+  appearance: none;
+  border: 0;
+  font: inherit;
+  font-size: var(--fvl-type-small-size);
+  color: var(--fvl-color-text-primary);
+  background: var(--fvl-color-bg-sunken);
+  border-radius: var(--fvl-radius-pill);
+  padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--fvl-space-icon-gap);
+  cursor: pointer;
+  transition: background var(--fvl-motion-tone);
+}
+.who-chip:hover { background: var(--fvl-color-bg-hover); }
+.who-chip fvl-icon { color: var(--fvl-color-text-muted); }
+.ent-about { margin: 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.mm-wrap { border-radius: var(--fvl-radius-container); overflow: hidden; border: 1px solid var(--fvl-color-line-subtle); }
+.mini-map { display: block; width: 100%; height: auto; }
+.mm-sea { fill: var(--fvl-color-info-subtle); }
+.mm-land { fill: var(--fvl-color-bg-sunken); }
+.mm-label { fill: var(--fvl-color-text-primary); font-family: var(--fvl-type-label-family); font-weight: var(--fvl-type-label-weight); paint-order: stroke; stroke: var(--fvl-color-bg-sunken); stroke-width: 4px; stroke-linejoin: round; }
+.mm-coast { fill: none; stroke: var(--fvl-color-line-strong); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.mm-water { fill: var(--fvl-color-info-subtle); stroke: var(--fvl-color-line-subtle); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.mm-river { fill: none; stroke: var(--fvl-color-info-icon); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; opacity: 0.6; }
+.mm-halo { fill: var(--fvl-color-accent-default); opacity: 0.2; }
+.mm-dot { fill: var(--fvl-color-accent-default); }

@@ -46,6 +46,15 @@ Tap a verse and the sheet shows it word by word in Hebrew (Old Testament) or Gre
   - Dictionaries: TBESH (Hebrew) and TBESG (Greek), keyed by extended Strong's numbers.
 - Built by `scripts/build_original.py <path to STEPBible-Data>` into `data/orig/<Book>/<chapter>.json` (one file per chapter, largest 60 KB), and `data/lex/` and `data/occ/` (dictionary entries and verse lists, grouped by Strong's number in hundreds). 442,997 words; 16,968 distinct Strong's numbers, all with a dictionary entry.
 
+### People and places
+
+The verse sheet lists the people and places named in the verse. Tap a person for their name in Hebrew or Greek with its meaning, a short description and every verse they appear in; tap a place for a small map with the place marked, how confident scholars are about its location, and every verse that names it.
+
+- People: **BibleData** by Brady Stephenson, CC BY 4.0. https://github.com/BradyStephenson/bible-data. God, the Father and the Son (its YHVH entries) are left out of the lists, which are for the people of the story; "G-d" is written "God", and book codes in descriptions are written out.
+- Places: **Bible Geocoding Data** by OpenBible.info, CC BY 4.0. https://github.com/openbibleinfo/Bible-Geocoding-Data. The most likely modern site and its confidence score; each place links to its OpenBible.info page.
+- Maps: **Natural Earth** (public domain) coastlines, lakes and rivers, cut to two frames (the Holy Land; the Mediterranean and Near East) and simplified to 36 KB in `data/maps.json`.
+- Built by `scripts/build_people_places.py <bible-data> <Bible-Geocoding-Data> <natural-earth-vector>` into `data/who/<Book>/<chapter>.json` (who and where, verse by verse) and `data/person/`, `data/place/` (details, grouped into 64 files). 2,991 people and 1,285 places. Names and descriptions are in English in both languages.
+
 ### Evidence for each bridge
 
 `scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage refers to Scripture nearby, reference checks, and how closely each quoted text matches its reference. The vote counts in `prophecies_66_books.json` (318–890) matched no OpenBible data, so they are not shown in the reading layout; the classic page still uses them.

@@ -88,7 +88,7 @@ const STR = {
     fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
-    credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0.',
+    credits: 'Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
     hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
     wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
@@ -98,6 +98,9 @@ const STR = {
     'ev.prophecy': 'Prophecy', 'ev.typology': 'Typology', 'ev.promise': 'Promise', 'ev.parallel': 'Parallel',
     'ev.votes': 'Strongest OpenBible.info cross-reference: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info lists no direct cross-reference between these passages.',
     'ev.overlap': 'Shared wording, {n} {word} in a row:', 'ev.formula': '{ref} refers to Scripture:',
+    'who.title': 'People and places', 'who.hint': 'Tap a name for more.', 'who.verses': 'In {n} {verse}', 'who.site': 'Modern site: {m}',
+    'who.conf': '{n}% confidence', 'who.noMap': 'The location is not known.', 'who.src': 'Location: OpenBible.info', 'who.tribe': 'Tribe: {t}',
+    'who.err': 'Could not load this.', 'who.en': '', 'who.person': 'Person', 'who.place': 'Place',
     'moed.title': 'The appointed time', 'moed.next': 'Next', 'moed.today': 'today', 'moed.now': 'now, until {date}',
     'moed.words': 'Key words', 'moed.reading': 'A reading', 'moed.part': 'Partly a reading', 'moed.nt': 'In the New Testament', 'moed.noCal': 'This browser cannot show Hebrew calendar dates.',
   },
@@ -131,7 +134,7 @@ const STR = {
     fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
-    credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0.',
+    credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
     hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
     wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
@@ -141,6 +144,9 @@ const STR = {
     'ev.prophecy': 'Proroctwo', 'ev.typology': 'Typologia', 'ev.promise': 'Obietnica', 'ev.parallel': 'Paralela',
     'ev.votes': 'Najmocniejszy odnośnik OpenBible.info: {a} → {b}, {n} {vote}.', 'ev.noVotes': 'OpenBible.info nie podaje bezpośredniego odnośnika między tymi fragmentami.',
     'ev.overlap': 'Wspólne sformułowanie w angielskim BSB, {n} {word} z rzędu:', 'ev.formula': '{ref} odwołuje się do Pisma:',
+    'who.title': 'Ludzie i miejsca', 'who.hint': 'Dotknij nazwy, aby zobaczyć więcej.', 'who.verses': 'Wersety: {n}', 'who.site': 'Współczesne miejsce: {m}',
+    'who.conf': 'pewność {n}%', 'who.noMap': 'Położenie nie jest znane.', 'who.src': 'Położenie: OpenBible.info', 'who.tribe': 'Pokolenie: {t}',
+    'who.err': 'Nie udało się wczytać.', 'who.en': 'Imiona, nazwy i opisy po angielsku.', 'who.person': 'Osoba', 'who.place': 'Miejsce',
     'moed.title': 'Wyznaczony czas', 'moed.next': 'Najbliższy termin', 'moed.today': 'dziś', 'moed.now': 'trwa, do {date}',
     'moed.words': 'Słowa kluczowe', 'moed.reading': 'Interpretacja', 'moed.part': 'Częściowo interpretacja', 'moed.nt': 'W Nowym Testamencie', 'moed.noCal': 'Ta przeglądarka nie pokazuje dat kalendarza hebrajskiego.',
   },
@@ -516,6 +522,32 @@ const chapterOrig = (osis, c) => cached(BIB.xref, `orig:${osis}/${c}`, () => get
 const bucketOf = (strong) => `${strong[0]}/${Math.floor(Number(strong.slice(1, 5)) / 100)}`;
 const lexEntry = (strong) => cached(BIB.xref, `lex:${bucketOf(strong)}`, () => getJSON(`data/lex/${bucketOf(strong)}.json`)).then((d) => d[strong]);
 const occList = (strong) => cached(BIB.xref, `occ:${bucketOf(strong)}`, () => getJSON(`data/occ/${bucketOf(strong)}.json`)).then((d) => d[strong] || []);
+// People and places per chapter (BibleData, CC BY 4.0; OpenBible.info geocoding, CC BY 4.0), details by bucket, two base maps.
+const chapterWho = (osis, c) => cached(BIB.xref, `who:${osis}/${c}`, () => getJSON(`data/who/${osis}/${c}.json`).catch(() => ({})));
+const idBucket = (key) => { let a = 0; for (const ch of key) a = (a * 31 + ch.codePointAt(0)) % 64; return a; };
+const entity = (kind, id) => cached(BIB.xref, `${kind}:${idBucket(id)}`, () => getJSON(`data/${kind}/${idBucket(id)}.json`)).then((d) => d[id]);
+let mapsP = null;
+const loadMaps = () => (mapsP ??= getJSON('data/maps.json').catch(() => null));
+const TYPE_PLACE_PL = { settlement: 'miejscowość', region: 'kraina', mountain: 'góra', campsite: 'obozowisko', river: 'rzeka', valley: 'dolina', gate: 'brama',
+  island: 'wyspa', hill: 'wzgórze', 'body of water': 'zbiornik wodny', 'natural area': 'obszar naturalny', structure: 'budowla', spring: 'źródło',
+  'mountain range': 'pasmo górskie', pool: 'sadzawka', road: 'droga', 'district in settlement': 'dzielnica', tree: 'drzewo', altar: 'ołtarz', well: 'studnia',
+  'people group': 'lud', hall: 'sala', garden: 'ogród', field: 'pole', room: 'izba', promontory: 'przylądek', ford: 'bród', rock: 'skała', cliff: 'urwisko',
+  fortification: 'twierdza', canal: 'kanał', 'stone heap': 'kopiec kamieni', forest: 'las', 'mountain pass': 'przełęcz' };
+const placeType = (ty) => { const s = (lang() === 'pl' ? TYPE_PLACE_PL[ty] : ty) || ty || ''; return s && s[0].toUpperCase() + s.slice(1); };
+// A small map with the place marked: the Holy Land when it lies there, else the Mediterranean and Near East.
+function miniMap(maps, lon, lat, label) {
+  const inside = (f) => lon >= f.bbox[0] && lon <= f.bbox[2] && lat >= f.bbox[1] && lat <= f.bbox[3];
+  const f = maps && [maps.holy, maps.region].find(inside);
+  if (!f) return '';
+  const [x0, y0, , y1] = f.bbox, cosm = Math.cos(((y0 + y1) / 2) * Math.PI / 180), k = f.w / ((f.bbox[2] - x0) * cosm);
+  const x = (lon - x0) * cosm * k, y = (y1 - lat) * k, r = f.w / 36;
+  // A 16:10 window of the map, as wide as the map, centred on the place (never letterboxed).
+  const vh = Math.min(f.h, f.w / 1.6), vy = Math.max(0, Math.min(f.h - vh, y - vh / 2));
+  return `<svg class="mini-map" viewBox="0 ${vy.toFixed(1)} ${f.w} ${vh.toFixed(1)}" role="img" aria-label="${esc(label)}">
+    <rect class="mm-sea" width="${f.w}" height="${f.h}"/><path class="mm-land" d="${f.land}"/><path class="mm-coast" d="${f.coast || ''}"/><path class="mm-water" d="${f.water}"/><path class="mm-river" d="${f.rivers}"/>
+    <circle class="mm-halo" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}"/><circle class="mm-dot" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(r / 3).toFixed(1)}"/>
+    <text class="mm-label" x="${(x > f.w * 0.7 ? x - r * 1.3 : x + r * 1.3).toFixed(1)}" y="${y.toFixed(1)}" text-anchor="${x > f.w * 0.7 ? 'end' : 'start'}" dominant-baseline="central" font-size="${(f.w / 26).toFixed(1)}" lang="en">${esc(label)}</text></svg>`;
+}
 const nltUrl = (q) => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(q) + '&version=NLT';
 const nltLink = (q, label = t('nlt')) => `<a class="ext" href="${nltUrl(q)}" target="_blank" rel="noopener">${label}<fvl-icon name="external-link"></fvl-icon></a>`;
 
@@ -663,8 +695,14 @@ async function renderBible() {
 // "Points to" (its own links) and "Referenced by" (verses whose links land here).
 async function openXref(osis, c, v) {
   const b = BIB.byOsis.get(osis);
-  const [text, xo, xi, og] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c), chapterOrig(osis, c)]);
+  const [text, xo, xi, og, who] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c), chapterOrig(osis, c), chapterWho(osis, c)]);
   const out = xo[v] || [], inc = xi[v] || [], ow = og[v] || [];
+  const [pv, lv] = who.v?.[v] || [[], []];
+  const chip = (kind, id, name, icon) => `<button type="button" class="who-chip" data-${kind}="${esc(id)}"><fvl-icon name="${icon}"></fvl-icon><span lang="en">${esc(name)}</span></button>`;
+  const whoHTML = pv.length || lv.length ? `<section class="xgroup" aria-label="${esc(t('who.title'))}">
+      <div class="xgroup-head"><p class="p-label">${esc(t('who.title'))}</p><p class="note">${esc(t('who.hint'))}${t('who.en') ? ` ${esc(t('who.en'))}` : ''}</p></div>
+      <div class="who-row">${pv.map((id) => chip('person', id, who.p[id]?.[0] || id, 'users')).join('')}${lv.map((id) => chip('place', id, who.l[id]?.[0] || id, 'map')).join('')}</div>
+    </section>` : '';
   const heb = b.testament === 'OT';
   const dr = $('#xrefSheet');
   dr.setAttribute('heading', `${refName(b)} ${c}:${v}`);
@@ -676,6 +714,7 @@ async function openXref(osis, c, v) {
       <ol class="list sheet-list" id="x-${key}"></ol><div id="x-${key}-more"></div></section>` : '';
   $('#xrefBody').innerHTML = `<blockquote class="p-text" lang="${esc(trInfo().lang)}">${text[v - 1] ? esc(text[v - 1]) : emptyVerse()}</blockquote>
     <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
+    ${whoHTML}
     ${ow.length ? `<section class="xgroup" aria-label="${esc(t(heb ? 'hebrew' : 'greek'))}">
       <div class="xgroup-head"><p class="p-label">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(t('origWords', { n: ow.length }))}</p><p class="note">${esc(t('origHint'))}</p></div>
       <div class="wgrid ${heb ? 'he' : 'grc'}" dir="${heb ? 'rtl' : 'ltr'}">${ow.map(([w, tr, gl, st]) => `<button type="button" class="wchip" data-word="${esc(st || '')}" ${st ? '' : 'disabled'}>
@@ -711,6 +750,38 @@ async function openWord(strong, { fresh = false } = {}) {
   renderOcc();
   if (fresh) { dr.show(); return; }
   gsap.fromTo(body, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
+}
+// A person or a place, inside the same sheet, with a step back to the verse.
+async function openEntity(kind, id) {
+  const body = $('#xrefBody'), dr = $('#xrefSheet'), sv = S.sheetVerse;
+  const back = { html: body.innerHTML, heading: dr.getAttribute('heading'), description: dr.getAttribute('description') };
+  let e, maps;
+  try { [e, maps] = await Promise.all([entity(kind, id), kind === 'place' ? loadMaps() : null]); } catch { toast.warning(t('who.err')); return; }
+  if (!e) { toast.warning(t('who.err')); return; }
+  S.sheetBack = back;
+  S.occ = { list: e.r, shown: 40 };
+  const backRef = sv ? `${refName(BIB.byOsis.get(sv.osis))} ${sv.c}:${sv.v}` : '';
+  let head = '';
+  if (kind === 'person') {
+    dr.setAttribute('heading', e.n);
+    dr.setAttribute('description', [t('who.person'), e.t && t('who.tribe', { t: e.t })].filter(Boolean).join(' · '));
+    const on = e.on;
+    head = `${on ? `<div class="wordhead"><span class="lemma" lang="${on[2]}" dir="${on[2] === 'he' ? 'rtl' : 'ltr'}">${esc(on[0])}</span>${on[1] ? `<span class="gloss" lang="en">${esc(on[1])}</span>` : ''}</div>` : ''}
+      <p class="ent-about" lang="en">${esc(e.a)}</p>`;
+  } else {
+    dr.setAttribute('heading', e.n);
+    dr.setAttribute('description', [placeType(e.ty), e.ll && e.c ? t('who.conf', { n: e.c }) : ''].filter(Boolean).join(' · '));
+    const map = e.ll ? miniMap(maps, e.ll[0], e.ll[1], e.n) : '';
+    head = `${map ? `<div class="mm-wrap">${map}</div>` : `<p class="note">${esc(t('who.noMap'))}</p>`}
+      <p class="ent-about">${e.m ? `${esc(t('who.site', { m: e.m }))} · ` : ''}<a class="ext" href="${esc(e.u)}" target="_blank" rel="noopener">${esc(t('who.src'))}<fvl-icon name="external-link"></fvl-icon></a></p>`;
+  }
+  body.innerHTML = `${sv ? `<div class="actions"><fvl-button variant="tertiary" size="sm" data-sheet-back><fvl-icon name="arrow-left"></fvl-icon>${esc(t('backTo', { ref: backRef }))}</fvl-button></div>` : ''}
+    ${head}
+    <section class="xgroup"><p class="p-label">${esc(t('who.verses', { n: e.r.length }))}</p><div class="occ" id="occList"></div><div id="occMore"></div></section>`;
+  renderOcc();
+  gsap.fromTo(body, { opacity: 0, x: 16 }, { opacity: 1, x: 0, duration: reduced ? 0 : 0.28, ease: 'power2.out', clearProps: 'opacity,transform' });
+  const halo = $('.mm-halo', body);
+  if (halo && !reduced) gsap.from(halo, { attr: { r: 0 }, ...spring.arrive, delay: 0.12 });
 }
 function renderOcc() {
   const { list, shown } = S.occ;
@@ -1262,6 +1333,8 @@ bibleView.addEventListener('touchend', (e) => {
 }, { passive: true });
 $('#xrefSheet').addEventListener('click', (e) => {
   const wd = e.target.closest('[data-word]'); if (wd && wd.dataset.word) { openWord(wd.dataset.word); return; }
+  const pe = e.target.closest('[data-person]'); if (pe) { openEntity('person', pe.dataset.person); return; }
+  const pl = e.target.closest('[data-place]'); if (pl) { openEntity('place', pl.dataset.place); return; }
   if (e.target.closest('[data-sheet-back]')) { sheetBack(); return; }
   if (e.target.closest('[data-occ-more]')) { S.occ.shown = S.occ.list.length; renderOcc(); return; }
   const more = e.target.closest('[data-more]');
