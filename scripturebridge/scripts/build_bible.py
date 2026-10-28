@@ -4,12 +4,17 @@ Sources (both from github.com/scrollmapper/bible_databases):
   formats/json/BSB.json                 Berean Standard Bible, CC0 (public domain)
   sources/extras/cross_references.txt   OpenBible.info cross references, CC BY (export 2024-11-04)
 
+  formats/json/PolUGdanska.json         Uwspółcześniona Biblia Gdańska, © Fundacja Wrota Nadziei, CC BY-ND 4.0
+                                        (shared unchanged with credit; only surrounding whitespace is trimmed)
+  formats/json/PolGdanska.json          Biblia Gdańska (1881), public domain
+
 Usage:
-  python3 scripts/build_bible.py <path/to/BSB.json> <path/to/cross_references.txt>
+  python3 scripts/build_bible.py <path/to/BSB.json> <path/to/cross_references.txt> [<path/to/PolUGdanska.json> <path/to/PolGdanska.json>]
 
 Writes, next to this script's app folder:
   data/bible/books.json                      66 books: osis id, name, testament, verse counts per chapter
-  data/bible/bsb/<Osis>/<chapter>.json       ["verse 1 text", "verse 2 text", ...]  ("" = verse omitted by the BSB)
+  data/bible/<tr>/<Osis>/<chapter>.json      ["verse 1 text", "verse 2 text", ...] for tr = bsb, ubg, gdanska
+                                             ("" = no separate verse in that translation)
   data/bible/xref/<Osis>/<chapter>.json      {"<verse>": [[target, votes], ...]} sorted by votes, highest first
                                              target is "Osis.C.V", "Osis.C.V-V2" or "Osis.C.V-Osis2.C2.V2"
   data/bible/xin/<Osis>/<chapter>.json       {"<verse>": [["Osis.C.V", votes], ...]} the verses that point HERE
@@ -39,6 +44,31 @@ BOOKS = [
     ("3John", "3 John"), ("Jude", "Jude"), ("Rev", "Revelation"),
 ]
 OSIS = [b[0] for b in BOOKS]
+
+# Polish book names (short forms as used in Polish Bibles' running heads).
+NAMES_PL = [
+    "Rodzaju", "Wyjścia", "Kapłańska", "Liczb", "Powtórzonego Prawa", "Jozuego", "Sędziów", "Rut",
+    "1 Samuela", "2 Samuela", "1 Królewska", "2 Królewska", "1 Kronik", "2 Kronik", "Ezdrasza", "Nehemiasza",
+    "Estery", "Hioba", "Psalmy", "Przypowieści", "Kaznodziei", "Pieśń nad pieśniami", "Izajasza", "Jeremiasza",
+    "Lamentacje", "Ezechiela", "Daniela", "Ozeasza", "Joela", "Amosa", "Abdiasza", "Jonasza", "Micheasza",
+    "Nahuma", "Habakuka", "Sofoniasza", "Aggeusza", "Zachariasza", "Malachiasza",
+    "Mateusza", "Marka", "Łukasza", "Jana", "Dzieje Apostolskie", "Rzymian", "1 Koryntian", "2 Koryntian",
+    "Galacjan", "Efezjan", "Filipian", "Kolosan", "1 Tesaloniczan", "2 Tesaloniczan", "1 Tymoteusza",
+    "2 Tymoteusza", "Tytusa", "Filemona", "Hebrajczyków", "Jakuba", "1 Piotra", "2 Piotra", "1 Jana",
+    "2 Jana", "3 Jana", "Judy", "Objawienie",
+]
+assert len(NAMES_PL) == 66
+
+TRANSLATIONS = [
+    {"id": "bsb", "label": "BSB", "name": "Berean Standard Bible", "lang": "en",
+     "licence": "Public domain (CC0)", "url": "https://berean.bible", "empty": "Not in the earliest manuscripts."},
+    {"id": "ubg", "label": "UBG", "name": "Uwspółcześniona Biblia Gdańska", "lang": "pl",
+     "licence": "© Fundacja Wrota Nadziei, CC BY-ND 4.0", "url": "https://ebible.org/find/show.php?id=polubg",
+     "empty": "Brak osobnego wersetu w tym przekładzie."},
+    {"id": "gdanska", "label": "Gdańska", "name": "Biblia Gdańska (1881)", "lang": "pl",
+     "licence": "Public domain", "url": "https://github.com/scrollmapper/bible_databases",
+     "empty": "Brak osobnego wersetu w tym przekładzie."},
+]
 
 
 def write(path, obj):
@@ -77,7 +107,22 @@ def expand(target, verse_counts):
     return out
 
 
-def main(bsb_path, xref_path):
+def write_translation(tr_id, path, out, shape):
+    """Write one translation as per-chapter files; its chapter/verse layout must match the BSB's."""
+    doc = json.load(open(path, encoding="utf-8"))
+    assert len(doc["books"]) == 66, (tr_id, "expected 66 books")
+    empty = 0
+    for i, book in enumerate(doc["books"]):
+        osis = BOOKS[i][0]
+        assert [len(ch["verses"]) for ch in book["chapters"]] == shape[osis], (tr_id, osis, "versification differs from the BSB")
+        for ch in book["chapters"]:
+            texts = [v["text"].strip() for v in ch["verses"]]
+            empty += sum(1 for t in texts if not t)
+            write(os.path.join(out, tr_id, osis, f"{ch['chapter']}.json"), texts)
+    return empty
+
+
+def main(bsb_path, xref_path, ubg_path=None, gdanska_path=None):
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = os.path.join(root, "data", "bible")
 
@@ -94,7 +139,7 @@ def main(bsb_path, xref_path):
             counts.append(len(texts))
             verses_total += len(texts)
             omitted += sum(1 for t in texts if not t)
-        meta.append({"osis": osis, "name": name, "testament": "OT" if i < 39 else "NT", "verses": counts})
+        meta.append({"osis": osis, "name": name, "namePl": NAMES_PL[i], "testament": "OT" if i < 39 else "NT", "verses": counts})
 
     verse_counts = {BOOKS[i][0]: [len(ch["verses"]) for ch in book["chapters"]] for i, book in enumerate(bsb["books"])}
     xref = defaultdict(lambda: defaultdict(list))  # (osis, chapter) -> verse -> [[target, votes]]
@@ -130,8 +175,16 @@ def main(bsb_path, xref_path):
         if doc:
             write(os.path.join(out, "xin", b, f"{c}.json"), doc)
 
+    shape = {m["osis"]: m["verses"] for m in meta}
+    translations = [TRANSLATIONS[0]]
+    for tr, path in ((TRANSLATIONS[1], ubg_path), (TRANSLATIONS[2], gdanska_path)):
+        if path:
+            n = write_translation(tr["id"], path, out, shape)
+            translations.append(tr)
+            print(f"{tr['name']}: written, {n} verses with no separate text")
+
     meta_doc = {
-        "translation": {"id": "BSB", "name": "Berean Standard Bible", "licence": "Public domain (CC0)", "url": "https://berean.bible"},
+        "translations": translations,
         "crossReferences": {"source": "OpenBible.info", "licence": "CC BY", "url": "https://www.openbible.info/labs/cross-references/",
                             "export": header.strip().split("#")[-1].strip(), "links": links, "incoming": incoming},
         "books": meta,
@@ -141,6 +194,6 @@ def main(bsb_path, xref_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
+    if len(sys.argv) not in (3, 5):
         sys.exit(__doc__)
-    main(sys.argv[1], sys.argv[2])
+    main(*sys.argv[1:])

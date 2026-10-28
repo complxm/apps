@@ -238,7 +238,17 @@ function cached(map, key, load) {
   return map.get(key);
 }
 const getJSON = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url); return r.json(); });
-const chapterText = (osis, c) => cached(BIB.text, `${osis}/${c}`, () => getJSON(`data/bible/bsb/${osis}/${c}.json`));
+// Translation: BSB (English), UBG or Gdańska (Polish). Same versification, so cross-references work for all three.
+const TR = { id: store.get('sb_tr', 'bsb') };
+const trInfo = () => BIB.meta?.translations.find((t) => t.id === TR.id) || BIB.meta?.translations[0] || { id: 'bsb', lang: 'en', empty: '' };
+const bookName = (b) => (trInfo().lang === 'pl' ? b.namePl : b.name) || b.name;
+const emptyVerse = () => `<em class="omit">${esc(trInfo().empty || 'Not in the earliest manuscripts.')}</em>`;
+const chapterText = (osis, c, tr = trInfo().id) => cached(BIB.text, `${tr}:${osis}/${c}`, () => getJSON(`data/bible/${tr}/${osis}/${c}.json`));
+function trPicker() {
+  const ts = BIB.meta.translations;
+  if (ts.length < 2) return '';
+  return `<fvl-segmented id="trPick" value="${esc(trInfo().id)}" aria-label="Translation">${ts.map((t) => `<fvl-segment value="${esc(t.id)}">${esc(t.label)}</fvl-segment>`).join('')}</fvl-segmented>`;
+}
 const chapterXref = (osis, c) => cached(BIB.xref, `${osis}/${c}`, () => getJSON(`data/bible/xref/${osis}/${c}.json`).catch(() => ({})));
 const chapterXin = (osis, c) => cached(BIB.xref, `in:${osis}/${c}`, () => getJSON(`data/bible/xin/${osis}/${c}.json`).catch(() => ({})));
 const nltUrl = (q) => 'https://www.biblegateway.com/passage/?search=' + encodeURIComponent(q) + '&version=NLT';
@@ -253,7 +263,7 @@ function parseTarget(t) {
   return { osis, c: +c, v: +v, end };
 }
 function refLabel(t) {
-  const r = parseTarget(t), name = (o) => BIB.byOsis.get(o)?.name || o;
+  const r = parseTarget(t), name = (o) => (BIB.byOsis.get(o) ? bookName(BIB.byOsis.get(o)) : o);
   let s = `${name(r.osis)} ${r.c}:${r.v}`;
   if (r.end) s += r.end.osis !== r.osis ? `–${name(r.end.osis)} ${r.end.c}:${r.end.v}` : r.end.c !== r.c ? `–${r.end.c}:${r.end.v}` : `–${r.end.v}`;
   return s;
@@ -281,7 +291,7 @@ function neighbour(osis, c, d) {
   if (c < b.verses.length) return { osis, c: c + 1 };
   const nb = BIB.meta.books[b.index + 1]; return nb ? { osis: nb.osis, c: 1 } : null;
 }
-const chName = (r) => `${BIB.byOsis.get(r.osis).name} ${r.c}`;
+const chName = (r) => `${bookName(BIB.byOsis.get(r.osis))} ${r.c}`;
 let bibleToken = 0;
 
 async function renderBible() {
@@ -292,26 +302,28 @@ async function renderBible() {
   if (!b) {
     const pos = store.get('sb_bible_pos', null);
     const posOk = pos && BIB.byOsis.get(pos.osis);
-    v.innerHTML = `<div class="section-head"><h2>Bible</h2><p>The Berean Standard Bible, with 344,799 cross-references. Tap any verse to see everything it connects to.</p></div>
+    v.innerHTML = `<div class="section-head"><h2>Bible</h2><p>${esc(trInfo().name)}, with every OpenBible.info cross-reference. Tap any verse to see everything it connects to.</p></div>
+      <div class="nav-scroll">${trPicker()}</div>
       ${posOk ? `<button type="button" class="continue" data-go="#/bible/${pos.osis}/${pos.c}"><span><small>Continue reading</small><b>${esc(chName(pos))}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
       <div>${['OT', 'NT'].map((t) => `<div class="book-group"><h3>${t === 'OT' ? 'Old Testament' : 'New Testament'}</h3><div class="book-grid">${BIB.meta.books.filter((x) => x.testament === t).map((x) =>
-        `<button type="button" class="book" data-go="#/bible/${x.osis}">${esc(x.name)} <span>${x.verses.length}</span></button>`).join('')}</div></div>`).join('')}</div>`;
+        `<button type="button" class="book" data-go="#/bible/${x.osis}">${esc(bookName(x))} <span>${x.verses.length}</span></button>`).join('')}</div></div>`).join('')}</div>`;
     return;
   }
   if (!c || !b.verses[c - 1]) {
     v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/bible"><fvl-icon name="arrow-left"></fvl-icon>All books</fvl-button></div>
-      <div class="section-head"><h2>${esc(b.name)}</h2><p>${b.verses.length} ${b.verses.length === 1 ? 'chapter' : 'chapters'}. Choose one to read.</p></div>
+      <div class="section-head"><h2>${esc(bookName(b))}</h2><p>${b.verses.length} ${b.verses.length === 1 ? 'chapter' : 'chapters'}. Choose one to read.</p></div>
       <div class="ch-grid">${b.verses.map((_, i) => `<button type="button" class="ch" data-go="#/bible/${b.osis}/${i + 1}">${i + 1}</button>`).join('')}</div>`;
     return;
   }
   const token = ++bibleToken;
   const prev = neighbour(osis, c, -1), next = neighbour(osis, c, 1);
   v.innerHTML = `<div class="ch-head">
-      <fvl-button variant="tertiary" size="sm" data-go="#/bible/${b.osis}"><fvl-icon name="arrow-left"></fvl-icon>${esc(b.name)}</fvl-button>
+      <fvl-button variant="tertiary" size="sm" data-go="#/bible/${b.osis}"><fvl-icon name="arrow-left"></fvl-icon>${esc(bookName(b))}</fvl-button>
       ${nltLink(`${b.name} ${c}`)}
     </div>
-    <h2 class="ch-title">${esc(b.name)} ${c}</h2>
-    <p class="ch-text" id="chText" aria-busy="true"></p>
+    <div class="nav-scroll">${trPicker()}</div>
+    <h2 class="ch-title">${esc(bookName(b))} ${c}</h2>
+    <p class="ch-text" id="chText" aria-busy="true" lang="${esc(trInfo().lang)}"></p>
     <nav class="ch-nav" aria-label="Chapters">
       ${prev ? `<fvl-button variant="secondary" data-go="${bibleHash(prev)}"><fvl-icon name="chevron-left"></fvl-icon>${esc(chName(prev))}</fvl-button>` : '<span></span>'}
       ${next ? `<fvl-button variant="primary" data-go="${bibleHash(next)}">${esc(chName(next))}<fvl-icon name="chevron-right"></fvl-icon></fvl-button>` : '<span></span>'}
@@ -324,7 +336,7 @@ async function renderBible() {
   el.removeAttribute('aria-busy');
   el.innerHTML = text.map((t, i) => {
     const n = i + 1;
-    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="Verse ${n}, show cross-references"><sup>${n}</sup>${t ? esc(t) : '<em class="omit">Not in the earliest manuscripts.</em>'}</span> `;
+    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="Verse ${n}, show cross-references"><sup>${n}</sup>${t ? esc(t) : emptyVerse()}</span> `;
   }).join('');
   store.set('sb_bible_pos', { osis, c });
   if (verse) {
@@ -340,14 +352,14 @@ async function openXref(osis, c, v) {
   const [text, xo, xi] = await Promise.all([chapterText(osis, c), chapterXref(osis, c), chapterXin(osis, c)]);
   const out = xo[v] || [], inc = xi[v] || [];
   const dr = $('#xrefSheet');
-  dr.setAttribute('heading', `${b.name} ${c}:${v}`);
+  dr.setAttribute('heading', `${bookName(b)} ${c}:${v}`);
   const n = out.length + inc.length;
   dr.setAttribute('description', n ? `${n.toLocaleString()} cross-references, strongest first by OpenBible.info reader votes.` : 'No cross-references for this verse.');
   S.xref = { out: { list: out, shown: 12 }, inc: { list: inc, shown: 12 } };
   const group = (key, label, hint, list) => list.length ? `<section class="xgroup" aria-label="${label}">
       <div class="xgroup-head"><p class="p-label">${label} · ${list.length.toLocaleString()}</p><p class="note">${hint}</p></div>
       <ol class="list sheet-list" id="x-${key}"></ol><div id="x-${key}-more"></div></section>` : '';
-  $('#xrefBody').innerHTML = `<blockquote class="p-text">${text[v - 1] ? esc(text[v - 1]) : '<em class="omit">Not in the earliest manuscripts.</em>'}</blockquote>
+  $('#xrefBody').innerHTML = `<blockquote class="p-text" lang="${esc(trInfo().lang)}">${text[v - 1] ? esc(text[v - 1]) : emptyVerse()}</blockquote>
     <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
     ${group('out', 'Points to', 'Where this verse leads.', out)}
     ${group('inc', 'Referenced by', 'Verses that point here.', inc)}`;
@@ -359,13 +371,13 @@ function renderXrefItems(key) {
   const g = S.xref[key];
   $(`#x-${key}`).innerHTML = g.list.slice(0, g.shown).map(([t, votes]) => {
     const r = parseTarget(t);
-    return `<li><button type="button" class="row xref" data-go="${bibleHash(r)}"><span class="row-head"><span class="refs">${esc(refLabel(t))}</span><span class="kicker">${votes} ${Math.abs(votes) === 1 ? 'vote' : 'votes'}</span></span><span class="xtext" data-t="${esc(t)}">…</span></button></li>`;
+    return `<li><button type="button" class="row xref" data-go="${bibleHash(r)}"><span class="row-head"><span class="refs">${esc(refLabel(t))}</span><span class="kicker">${votes} ${Math.abs(votes) === 1 ? 'vote' : 'votes'}</span></span><span class="xtext" lang="${esc(trInfo().lang)}" data-t="${esc(t)}">…</span></button></li>`;
   }).join('');
   $(`#x-${key}-more`).innerHTML = g.list.length > g.shown ? `<fvl-button variant="secondary" size="sm" data-more="${key}">Show all ${g.list.length.toLocaleString()}</fvl-button>` : '';
   $$(`#x-${key} .xtext`).forEach(async (el) => {
     if (el.dataset.done) return;
     el.dataset.done = '1';
-    try { el.textContent = (await targetText(el.dataset.t)) || 'Not in the earliest manuscripts.'; } catch { el.textContent = 'Could not load this verse.'; }
+    try { el.textContent = (await targetText(el.dataset.t)) || trInfo().empty; } catch { el.textContent = 'Could not load this verse.'; }
   });
 }
 
@@ -672,6 +684,14 @@ function verseTap(el) {
   el.classList.add('sel');
   openXref(S.bible.osis, S.bible.c, Number(el.dataset.v)).catch(() => toast.warning('Could not load cross-references'));
 }
+bibleView.addEventListener('change', (e) => {
+  if (e.target.id !== 'trPick') return;
+  const id = e.target.value;
+  if (!id || id === TR.id) return;
+  TR.id = id; store.set('sb_tr', id);
+  const y = scrollY;
+  renderBible().then(() => window.scrollTo(0, y));
+});
 bibleView.addEventListener('click', (e) => { const el = e.target.closest('.verse'); if (el && !getSelection()?.toString()) verseTap(el); });
 bibleView.addEventListener('keydown', (e) => { const el = e.target.closest('.verse'); if (el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); verseTap(el); } });
 let chTouch = null;
