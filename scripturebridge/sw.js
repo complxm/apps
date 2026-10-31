@@ -1,7 +1,8 @@
 // ScriptureBridge offline worker.
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
-const CACHE = 'sb-v4';
+// Renamed with every release (it matches the ?v= in index.html), so kept copies always belong to the running version.
+const CACHE = 'sb-20261031i';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
@@ -33,8 +34,11 @@ self.addEventListener('fetch', (e) => {
   if (req.method !== 'GET' || url.origin !== self.location.origin) return; // never the NLT or any other site
   // The page itself: the newest when online (so updates arrive), the kept copy when not.
   if (req.mode === 'navigate') {
-    e.respondWith(fetch(req).then((r) => { const copy = r.clone(); caches.open(CACHE).then((c) => c.put('./index.html', copy)); return r; })
-      .catch(() => caches.match('./index.html').then((r) => r || caches.match('./'))));
+    const net = fetch(req).then((r) => { const copy = r.clone(); caches.open(CACHE).then((c) => c.put('./index.html', copy)); return r; });
+    e.respondWith(caches.match('./index.html').then((hit) => {
+      if (!hit) return net.catch(() => caches.match('./'));
+      return Promise.race([net.catch(() => hit), new Promise((res) => setTimeout(() => res(hit), 2500))]);
+    }));
     return;
   }
   // Bible text, original words, people and places, dictionary, fonts and vendor code rarely change:
@@ -48,8 +52,13 @@ self.addEventListener('fetch', (e) => {
     }));
     return;
   }
-  // The app's own code and data (bridges, threads, studies) change with each update: the newest when online,
-  // the kept copy only when offline, so a change is never a load behind.
-  e.respondWith(caches.open(CACHE).then((c) => fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; })
-    .catch(() => c.match(req).then((hit) => hit || Promise.reject(new Error('offline'))))));
+  // The app's own code and data: the newest copy when the network answers within 2.5 s, else the kept copy
+  // (the fetch carries on and refreshes it). Kept copies are from this release, since the cache is renamed with each.
+  e.respondWith(caches.open(CACHE).then(async (c) => {
+    const net = fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
+    const hit = await c.match(req);
+    if (!hit) return net;
+    const slow = new Promise((res) => setTimeout(() => res(hit), 2500));
+    return Promise.race([net.catch(() => hit), slow]);
+  }));
 });

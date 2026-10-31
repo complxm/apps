@@ -117,7 +117,7 @@ const STR = {
     defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
     wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
-    passageErr: 'Could not load this passage.', loadErr: 'Could not load the bridges. Check your connection and reload.',
+    passageErr: 'Could not load this passage.', retry: 'Try again', loadErr: 'Could not load the bridges. Check your connection and reload.',
     'ev.title': 'How strong is this link', 'ev.strong': 'Strong link', 'ev.moderate': 'Moderate link', 'ev.weak': 'Weak link',
     'ev.quotation': 'Quoted', 'ev.allusion': 'Echoed', 'ev.theme': 'Shared theme',
     'ev.prophecy': 'Prophecy', 'ev.typology': 'Typology', 'ev.promise': 'Promise', 'ev.parallel': 'Parallel',
@@ -187,7 +187,7 @@ const STR = {
     defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
     wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
-    passageErr: 'Nie udało się wczytać fragmentu.', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
+    passageErr: 'Nie udało się wczytać fragmentu.', retry: 'Spróbuj ponownie', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
     'ev.title': 'Jak mocne jest to powiązanie', 'ev.strong': 'Mocne powiązanie', 'ev.moderate': 'Umiarkowane powiązanie', 'ev.weak': 'Słabe powiązanie',
     'ev.quotation': 'Cytat', 'ev.allusion': 'Nawiązanie', 'ev.theme': 'Wspólny temat',
     'ev.prophecy': 'Proroctwo', 'ev.typology': 'Typologia', 'ev.promise': 'Obietnica', 'ev.parallel': 'Paralela',
@@ -2226,12 +2226,22 @@ function warmOffline() {
 }
 
 // ---------- start ----------
+// The loader leaves once the first screen is drawn: the page fades in under it.
+function appReady() {
+  clearTimeout(window.SB_SLOW);
+  document.documentElement.classList.add('app-ready');
+  const sp = $('#splash');
+  if (!sp) return;
+  if (reduced) { sp.remove(); return; }
+  gsap.to(sp, { opacity: 0, duration: 0.32, ease: 'power2.out', onComplete: () => sp.remove() });
+}
 load().then(() => {
   applyStatic();
   syncTrUI();
   buildFilters();
   syncBookUI();
   route();
+  requestAnimationFrame(appReady);
   // First visit: ask which Bible (and so which language) to use.
   if (!store.get('sb_tr_chosen', false)) showWelcome();
   // Keep the passages for offline reading a few seconds after the app settles (and once the worker controls the page).
@@ -2240,5 +2250,9 @@ load().then(() => {
   navigator.serviceWorker?.addEventListener('controllerchange', () => setTimeout(warm, 3000));
 }).catch((err) => {
   $('#count').textContent = t('loadErr');
+  // Keep the loader up with the reason and a way to try again.
+  clearTimeout(window.SB_SLOW);
+  const n = $('#splashNote');
+  if (n) { n.textContent = t('loadErr'); n.insertAdjacentHTML('afterend', `<button type="button" class="link-btn sp-retry" onclick="location.reload()">${esc(t('retry'))}</button>`); $$('.sp-drop, .sp-tail, .sp-kept').forEach((x) => { x.style.animationPlayState = 'paused'; }); }
   console.error(err);
 });
