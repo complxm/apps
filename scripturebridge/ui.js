@@ -117,7 +117,7 @@ const STR = {
     defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
     wordsLink: 'Words & cross-references', wordErr: 'Could not load this word.',
-    passageErr: 'Could not load this passage.', retry: 'Try again', loadErr: 'Could not load the bridges. Check your connection and reload.',
+    passageErr: 'Could not load this passage.', retry: 'Try again', drawErr: 'Something went wrong while opening the app.', loadErr: 'Could not load the bridges. Check your connection and reload.',
     'ev.title': 'How strong is this link', 'ev.strong': 'Strong link', 'ev.moderate': 'Moderate link', 'ev.weak': 'Weak link',
     'ev.quotation': 'Quoted', 'ev.allusion': 'Echoed', 'ev.theme': 'Shared theme',
     'ev.prophecy': 'Prophecy', 'ev.typology': 'Typology', 'ev.promise': 'Promise', 'ev.parallel': 'Parallel',
@@ -187,7 +187,7 @@ const STR = {
     defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
     wordsLink: 'Słowa i odnośniki', wordErr: 'Nie udało się wczytać słowa.',
-    passageErr: 'Nie udało się wczytać fragmentu.', retry: 'Spróbuj ponownie', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
+    passageErr: 'Nie udało się wczytać fragmentu.', retry: 'Spróbuj ponownie', drawErr: 'Coś poszło nie tak podczas otwierania aplikacji.', loadErr: 'Nie udało się wczytać mostów. Sprawdź połączenie i odśwież stronę.',
     'ev.title': 'Jak mocne jest to powiązanie', 'ev.strong': 'Mocne powiązanie', 'ev.moderate': 'Umiarkowane powiązanie', 'ev.weak': 'Słabe powiązanie',
     'ev.quotation': 'Cytat', 'ev.allusion': 'Nawiązanie', 'ev.theme': 'Wspólny temat',
     'ev.prophecy': 'Proroctwo', 'ev.typology': 'Typologia', 'ev.promise': 'Obietnica', 'ev.parallel': 'Paralela',
@@ -275,8 +275,23 @@ const readSet = new Set(store.get('sb_read_v1', []));
 let lastRead = store.get('sb_last_v1', null);
 
 // ---------- data ----------
+// Fetch JSON, trying again twice on a flaky connection; the error names the file and what went wrong.
+async function fetchJSON(url, tries = 3) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`);
+      try { return await r.json(); } catch { throw new Error(`${url}: the file arrived incomplete`); }
+    } catch (e) {
+      last = e instanceof Error && e.message.startsWith(url) ? e : new Error(`${url}: ${e?.message || 'network error'}`);
+      if (i < tries - 1) await new Promise((res) => setTimeout(res, 600 * (i + 1) ** 2));
+    }
+  }
+  throw last;
+}
 async function load() {
-  const get = (f) => fetch('data/' + f).then((r) => { if (!r.ok) throw new Error(f); return r.json(); });
+  const get = (f) => fetchJSON('data/' + f);
   const [books, P, T] = await Promise.all([get('books_66.json'), get('prophecies_66_books.json'), get('canonical_threads.json'), bibleMeta()]);
   D.P = P; D.T = T; D.OT = books.old_testament; D.NT = books.new_testament;
   P.forEach((p) => { D.byId.set(p.id, p); D.catLabel[p.category] = D.catLabel[p.category] || p.categoryLabel; });
@@ -912,7 +927,7 @@ function renderSaved() {
 const BIB = { meta: null, byOsis: new Map(), byName: new Map(), text: new Map(), done: new Map(), xref: new Map() };
 async function bibleMeta() {
   if (BIB.meta) return BIB.meta;
-  const m = await fetch('data/bible/books.json').then((r) => { if (!r.ok) throw new Error('books.json'); return r.json(); });
+  const m = await fetchJSON('data/bible/books.json');
   m.books.forEach((b, i) => { b.index = i; BIB.byOsis.set(b.osis, b); BIB.byName.set(b.name.toLowerCase(), b); });
   [['psalm', 'Ps'], ['song of songs', 'Song'], ['revelation of john', 'Rev']].forEach(([n, o]) => BIB.byName.set(n, BIB.byOsis.get(o)));
   // The NLT is not stored here: it is read live from Tyndale's NLT API (see nltChapter).
@@ -925,7 +940,7 @@ function cached(map, key, load) {
   if (!map.has(key)) map.set(key, load().catch((err) => { map.delete(key); throw err; }));
   return map.get(key);
 }
-const getJSON = (url) => fetch(url).then((r) => { if (!r.ok) throw new Error(url); return r.json(); });
+const getJSON = (url) => fetchJSON(url, 2);
 // ---------- NLT, live from Tyndale's NLT API (https://api.nlt.to, non-commercial use) ----------
 // The New Living Translation is copyrighted, so its text is never stored in this app: each chapter is fetched
 // when it is read and kept only in memory. Without a key the API serves 50 verses a request and 500 requests a day
@@ -2226,6 +2241,28 @@ function warmOffline() {
 }
 
 // ---------- start ----------
+// Loading failed: keep the loader up with what went wrong (so it can be reported) and a way to try again.
+// "Try again" starts clean: it drops the copies kept on this device and fetches everything afresh.
+function loadFailed(err, drawing) {
+  console.error(err);
+  clearTimeout(window.SB_SLOW);
+  $('#count').textContent = t('loadErr');
+  const n = $('#splashNote');
+  if (!n) return;
+  n.textContent = t(drawing ? 'drawErr' : 'loadErr');
+  n.insertAdjacentHTML('afterend', `<p class="sp-detail">${esc(String(err?.message || err))}</p><button type="button" class="link-btn sp-retry" id="spRetry">${esc(t('retry'))}</button>`);
+  $$('.sp-drop, .sp-tail, .sp-kept').forEach((x) => { x.style.animationPlayState = 'paused'; });
+  $('#spRetry').addEventListener('click', async () => {
+    try {
+      const regs = await navigator.serviceWorker?.getRegistrations?.() || [];
+      await Promise.all(regs.map((r) => r.unregister()));
+      const keys = await caches?.keys?.() || [];
+      await Promise.all(keys.filter((k) => k.startsWith('sb-')).map((k) => caches.delete(k)));
+      Object.keys(localStorage).filter((k) => k.startsWith('sb_warm_')).forEach((k) => localStorage.removeItem(k));
+    } catch {}
+    location.reload();
+  });
+}
 // The loader leaves once the first screen is drawn: the page fades in under it.
 function appReady() {
   clearTimeout(window.SB_SLOW);
@@ -2236,11 +2273,13 @@ function appReady() {
   gsap.to(sp, { opacity: 0, duration: 0.32, ease: 'power2.out', onComplete: () => sp.remove() });
 }
 load().then(() => {
-  applyStatic();
-  syncTrUI();
-  buildFilters();
-  syncBookUI();
-  route();
+  try {
+    applyStatic();
+    syncTrUI();
+    buildFilters();
+    syncBookUI();
+    route();
+  } catch (err) { console.error(err); loadFailed(err, true); return; }
   requestAnimationFrame(appReady);
   // First visit: ask which Bible (and so which language) to use.
   if (!store.get('sb_tr_chosen', false)) showWelcome();
@@ -2249,10 +2288,6 @@ load().then(() => {
   setTimeout(warm, 5000);
   navigator.serviceWorker?.addEventListener('controllerchange', () => setTimeout(warm, 3000));
 }).catch((err) => {
-  $('#count').textContent = t('loadErr');
-  // Keep the loader up with the reason and a way to try again.
-  clearTimeout(window.SB_SLOW);
-  const n = $('#splashNote');
-  if (n) { n.textContent = t('loadErr'); n.insertAdjacentHTML('afterend', `<button type="button" class="link-btn sp-retry" onclick="location.reload()">${esc(t('retry'))}</button>`); $$('.sp-drop, .sp-tail, .sp-kept').forEach((x) => { x.style.animationPlayState = 'paused'; }); }
+  loadFailed(err, false);
   console.error(err);
 });

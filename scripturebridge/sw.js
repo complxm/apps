@@ -2,7 +2,7 @@
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
 // Renamed with every release (it matches the ?v= in index.html), so kept copies always belong to the running version.
-const CACHE = 'sb-20261031i';
+const CACHE = 'sb-20261031j';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
@@ -16,9 +16,16 @@ const SHELL = [
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => Promise.all(SHELL.map((u) => c.add(u).catch(() => {})))).then(() => self.skipWaiting()));
 });
+// Keep the previous release's copies too (only older ones are removed): if this release's copies are still
+// incomplete when the connection drops, the app can still open from the last good set.
 self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith('sb-') && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+  e.waitUntil(caches.keys().then((ks) => {
+    const ours = ks.filter((k) => k.startsWith('sb-') && k !== CACHE).sort();
+    return Promise.all(ours.slice(0, -1).map((k) => caches.delete(k)));
+  }).then(() => self.clients.claim()));
 });
+// A kept copy from this release, else from any earlier one.
+const kept = (c, req) => c.match(req).then((hit) => hit || caches.match(req));
 
 // The page can ask for files to be kept ahead of time (the passages of every bridge, the studies).
 self.addEventListener('message', (e) => {
@@ -46,7 +53,7 @@ self.addEventListener('fetch', (e) => {
   const stable = /\/data\/(bible|orig|who|person|place|lex|occ)\/|\/vendor\//.test(url.pathname);
   if (stable) {
     e.respondWith(caches.open(CACHE).then(async (c) => {
-      const hit = await c.match(req);
+      const hit = await kept(c, req);
       const net = fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; }).catch(() => hit || Promise.reject(new Error('offline')));
       return hit || net;
     }));
@@ -56,7 +63,7 @@ self.addEventListener('fetch', (e) => {
   // (the fetch carries on and refreshes it). Kept copies are from this release, since the cache is renamed with each.
   e.respondWith(caches.open(CACHE).then(async (c) => {
     const net = fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; });
-    const hit = await c.match(req);
+    const hit = await kept(c, req);
     if (!hit) return net;
     const slow = new Promise((res) => setTimeout(() => res(hit), 2500));
     return Promise.race([net.catch(() => hit), slow]);
