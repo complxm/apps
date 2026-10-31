@@ -1,7 +1,7 @@
 // ScriptureBridge offline worker.
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
-const CACHE = 'sb-v3';
+const CACHE = 'sb-v4';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
@@ -37,10 +37,19 @@ self.addEventListener('fetch', (e) => {
       .catch(() => caches.match('./index.html').then((r) => r || caches.match('./'))));
     return;
   }
-  // Everything else: the kept copy at once, refreshed in the background.
-  e.respondWith(caches.open(CACHE).then(async (c) => {
-    const hit = await c.match(req);
-    const net = fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; }).catch(() => hit || Promise.reject(new Error('offline')));
-    return hit || net;
-  }));
+  // Bible text, original words, people and places, dictionary, fonts and vendor code rarely change:
+  // the kept copy at once, refreshed in the background.
+  const stable = /\/data\/(bible|orig|who|person|place|lex|occ)\/|\/vendor\//.test(url.pathname);
+  if (stable) {
+    e.respondWith(caches.open(CACHE).then(async (c) => {
+      const hit = await c.match(req);
+      const net = fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; }).catch(() => hit || Promise.reject(new Error('offline')));
+      return hit || net;
+    }));
+    return;
+  }
+  // The app's own code and data (bridges, threads, studies) change with each update: the newest when online,
+  // the kept copy only when offline, so a change is never a load behind.
+  e.respondWith(caches.open(CACHE).then((c) => fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; })
+    .catch(() => c.match(req).then((hit) => hit || Promise.reject(new Error('offline'))))));
 });

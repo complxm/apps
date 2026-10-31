@@ -7,23 +7,25 @@ Every passage the teacher turns to in ten videos, in his order, with the time in
 ## Contents
 
 - **Our Blessed Hope** (5 parts)
-  - [Our Blessed Hope 01](#hope1) · 63 steps · 2:20:14
-  - [Our Blessed Hope 02 – We Are The Final Generation](#hope2) · 103 steps · 3:45:00
-  - [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3) · 57 steps · 1:43:53
-  - [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4) · 23 steps · 39:02
-  - [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5) · 124 steps · 2:54:31
+  - [The Blessed Hope and the Rapture](#hope1) · 63 steps · 2:20:14
+  - [We Are the Final Generation](#hope2) · 103 steps · 3:45:00
+  - [How We Know We Are the Final Generation](#hope3) · 57 steps · 1:43:53
+  - [Daniel's 70 Weeks](#hope4) · 23 steps · 39:02
+  - [The Two Natures of Christ and the Restrainer](#hope5) · 124 steps · 2:54:31
 - **What Must We Do? Biblical Salvation** (3 parts)
-  - [What Must We Do? Biblical Salvation – Part 1](#saved1) · 91 steps · 2:29:29
-  - [What Must We Do? Biblical Salvation – Part 2](#saved2) · 76 steps · 2:08:04
-  - [What Must We Do? Biblical Salvation – Part 3](#saved3) · 138 steps · 4:22:38
+  - [God in the Flesh and the Plan of Salvation](#saved1) · 91 steps · 2:29:29
+  - [Born of Water and Spirit](#saved2) · 76 steps · 2:08:04
+  - [The Thief on the Cross and the Roman Road](#saved3) · 138 steps · 4:22:38
 - **Single studies**
-  - [Who Do Men Say That I Am? – The Godhead Study](#godhead) · 104 steps · 2:57:09
-  - [The Passion Week Of Jesus Christ](#passion) · 172 steps · 4:58:10
+  - [Who Do Men Say That I Am?](#godhead) · 104 steps · 2:57:09
+  - [The Passion Week of Jesus Christ](#passion) · 172 steps · 4:58:10
 - [Index: books](#index-books) · [Index: passages taught in more than one video](#index-passages) · [Index: topics](#index-topics)
 
 <a id="hope1"></a>
 
-## Our Blessed Hope 01
+## The Blessed Hope and the Rapture
+
+*Video: Our Blessed Hope 01*
 
 *2:20:14 · 63 steps · read from KJV (14), NLT (14), KJV, NLT (1)*
 
@@ -110,7 +112,9 @@ After a long introduction to his approach (Scripture over opinion, Hebrew and Gr
 
 <a id="hope2"></a>
 
-## Our Blessed Hope 02 – We Are The Final Generation
+## We Are the Final Generation
+
+*Video: Our Blessed Hope 02 – We Are The Final Generation*
 
 *3:45:00 · 103 steps · read from KJV (44), KJV, NLT (1), NLT (1)*
 
@@ -237,7 +241,9 @@ He opens with Titus 2:13 and the scoffers of 2 Peter 3, then returns to Lazarus 
 
 <a id="hope3"></a>
 
-## Our Blessed Hope 03 – How Do We Know We Are The Final Generation
+## How We Know We Are the Final Generation
+
+*Video: Our Blessed Hope 03 – How Do We Know We Are The Final Generation*
 
 *1:43:53 · 57 steps · read from NLT (9), KJV (5), other (2)*
 
@@ -318,7 +324,9 @@ Part three of the series starts from the 'blessed hope' of Titus 2:13 and an out
 
 <a id="hope4"></a>
 
-## Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy
+## Daniel's 70 Weeks
+
+*Video: Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy*
 
 *39:02 · 23 steps · read from NLT (9), KJV (4), unknown (2), NLT, KJV (1)*
 
@@ -364,7 +372,9 @@ Continuing the 'blessed hope' series from Titus 2:13, the teacher starts from Je
 
 <a id="hope5"></a>
 
-## Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer
+## The Two Natures of Christ and the Restrainer
+
+*Video: Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer*
 
 *2:54:31 · 124 steps · read from KJV (66), NKJV (5), KJV, NKJV (1)*
 
@@ -512,7 +522,9 @@ In this fifth and closing part of the series, the teacher sets out a Oneness vie
 
 <a id="saved1"></a>
 
-## What Must We Do? Biblical Salvation – Part 1
+## God in the Flesh and the Plan of Salvation
+
+*Video: What Must We Do? Biblical Salvation – Part 1*
 
 *2:29:29 · 91 steps · read from NLT (33), KJV (6), NLT, KJV (1)*
 
@@ -627,7 +639,9 @@ The teacher sets out to answer the biblical question "what must we do to be save
 
 <a id="saved2"></a>
 
-## What Must We Do? Biblical Salvation – Part 2
+## Born of Water and Spirit
+
+*Video: What Must We Do? Biblical Salvation – Part 2*
 
 *2:08:04 · 76 steps · read from NLT (31), KJV (4), NLT, KJV (2)*
 
@@ -727,7 +741,9 @@ Picking up from Nicodemus in John 3, the teacher argues that being 'born of wate
 
 <a id="saved3"></a>
 
-## What Must We Do? Biblical Salvation – Part 3
+## The Thief on the Cross and the Roman Road
+
+*Video: What Must We Do? Biblical Salvation – Part 3*
 
 *4:22:38 · 138 steps · read from NLT (39), KJV (27), KJV, NLT (2), NLT, KJV (1), NLT, KJV, NIV, ESV (1)*
 
@@ -889,7 +905,9 @@ The teacher opens with a quick review of the verses from part two, then argues t
 
 <a id="godhead"></a>
 
-## Who Do Men Say That I Am? – The Godhead Study
+## Who Do Men Say That I Am?
+
+*Video: Who Do Men Say That I Am? – The Godhead Study*
 
 *2:57:09 · 104 steps · read from NLT (40), KJV (39), KJV, NLT (3), NLT, KJV (1)*
 
@@ -1017,7 +1035,9 @@ Starting from Peter's confession in Matthew 16, the teacher traces the God who c
 
 <a id="passion"></a>
 
-## The Passion Week Of Jesus Christ
+## The Passion Week of Jesus Christ
+
+*Video: The Passion Week Of Jesus Christ*
 
 *4:58:10 · 172 steps · read from KJV (72)*
 
@@ -1406,81 +1426,81 @@ Chapters he turns to in two or more videos, with each visit (video and time).
 
 ## Index: topics
 
-- **1 thessalonians 4**: [Our Blessed Hope 01](#hope1)
-- **2 thessalonians 2**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **360-day prophetic year**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3), [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **ascension as a picture of the rapture**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **baptism in jesus' name**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5), [What Must We Do? Biblical Salvation – Part 1](#saved1), [What Must We Do? Biblical Salvation – Part 2](#saved2), [What Must We Do? Biblical Salvation – Part 3](#saved3), [Who Do Men Say That I Am? – The Godhead Study](#godhead), [The Passion Week Of Jesus Christ](#passion)
-- **baptism of the holy ghost**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **bethphage**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **blessed hope**: [Our Blessed Hope 01](#hope1)
-- **born of water and spirit**: [What Must We Do? Biblical Salvation – Part 1](#saved1), [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **conversions in acts**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **creation week parallel**: [The Passion Week Of Jesus Christ](#passion)
-- **daniel's 70 weeks**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3), [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **days of noah**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **decree to rebuild jerusalem**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **dual nature of christ**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5), [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **eschatology**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **ezekiel 430 years**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **father, son and holy spirit**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **fig tree as israel**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **final generation**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **genesis genealogies arithmetic**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **glorified body**: [Our Blessed Hope 01](#hope1)
-- **god manifest in the flesh**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5), [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **godhead**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **great commission**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **greek word study**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **harpazo**: [Our Blessed Hope 01](#hope1)
-- **hebrew day reckoning**: [The Passion Week Of Jesus Christ](#passion)
-- **holy spirit as spirit of christ**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **i am sayings**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **israel 1948**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2), [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **jesus is god**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **last generation**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **lazarus as a picture of the resurrection**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **matthew 24 outline**: [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3)
-- **messiah's timing**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **mystery revealed**: [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **new birth of water and spirit**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **obeying the gospel**: [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **olivet discourse**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **oneness of god**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2), [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5), [What Must We Do? Biblical Salvation – Part 1](#saved1), [What Must We Do? Biblical Salvation – Part 2](#saved2), [What Must We Do? Biblical Salvation – Part 3](#saved3), [Who Do Men Say That I Am? – The Godhead Study](#godhead), [The Passion Week Of Jesus Christ](#passion)
-- **palm sunday**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **parable of the fig tree**: [Our Blessed Hope 02 – We Are The Final Generation](#hope2)
-- **passion week**: [The Passion Week Of Jesus Christ](#passion)
-- **passover**: [The Passion Week Of Jesus Christ](#passion)
-- **pentecost**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **personal testimony**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **philip and the ethiopian**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **plan of salvation**: [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **pre-tribulation rapture**: [Our Blessed Hope 01](#hope1), [Our Blessed Hope 02 – We Are The Final Generation](#hope2), [Our Blessed Hope 03 – How Do We Know We Are The Final Generation](#hope3), [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **preparation day**: [The Passion Week Of Jesus Christ](#passion)
-- **raising of lazarus**: [Our Blessed Hope 01](#hope1)
-- **rapture**: [Our Blessed Hope 01](#hope1), [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **resurrection body**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **resurrection of the dead**: [Our Blessed Hope 01](#hope1)
-- **rich man and lazarus**: [Our Blessed Hope 01](#hope1)
-- **roman road**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **seven-year tribulation**: [Our Blessed Hope 01](#hope1), [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **sign of jonah**: [The Passion Week Of Jesus Christ](#passion)
-- **sinner's prayer**: [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **son of god had a beginning**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **speaking in tongues**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **speaking in tongues as evidence**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **suffering servant**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4)
-- **the 'i am' sayings**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
-- **the logos**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **the restrainer**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **the trinity**: [Who Do Men Say That I Am? – The Godhead Study](#godhead)
-- **thief on the cross**: [What Must We Do? Biblical Salvation – Part 1](#saved1), [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **three days and three nights**: [The Passion Week Of Jesus Christ](#passion)
-- **thursday crucifixion**: [Our Blessed Hope 04 – Daniel's 70 Weeks Prophecy](#hope4), [The Passion Week Of Jesus Christ](#passion)
-- **tithing**: [What Must We Do? Biblical Salvation – Part 3](#saved3)
-- **traditions of men**: [What Must We Do? Biblical Salvation – Part 1](#saved1)
-- **trinity**: [Our Blessed Hope 05 – The Dual Nature Of Christ & The Restrainer](#hope5)
-- **two natures of christ**: [What Must We Do? Biblical Salvation – Part 2](#saved2)
+- **1 thessalonians 4**: [The Blessed Hope and the Rapture](#hope1)
+- **2 thessalonians 2**: [The Two Natures of Christ and the Restrainer](#hope5)
+- **360-day prophetic year**: [How We Know We Are the Final Generation](#hope3), [Daniel's 70 Weeks](#hope4)
+- **ascension as a picture of the rapture**: [We Are the Final Generation](#hope2)
+- **baptism in jesus' name**: [The Two Natures of Christ and the Restrainer](#hope5), [God in the Flesh and the Plan of Salvation](#saved1), [Born of Water and Spirit](#saved2), [The Thief on the Cross and the Roman Road](#saved3), [Who Do Men Say That I Am?](#godhead), [The Passion Week of Jesus Christ](#passion)
+- **baptism of the holy ghost**: [Born of Water and Spirit](#saved2)
+- **bethphage**: [How We Know We Are the Final Generation](#hope3)
+- **blessed hope**: [The Blessed Hope and the Rapture](#hope1)
+- **born of water and spirit**: [God in the Flesh and the Plan of Salvation](#saved1), [Born of Water and Spirit](#saved2)
+- **conversions in acts**: [The Thief on the Cross and the Roman Road](#saved3)
+- **creation week parallel**: [The Passion Week of Jesus Christ](#passion)
+- **daniel's 70 weeks**: [How We Know We Are the Final Generation](#hope3), [Daniel's 70 Weeks](#hope4)
+- **days of noah**: [We Are the Final Generation](#hope2)
+- **decree to rebuild jerusalem**: [Daniel's 70 Weeks](#hope4)
+- **dual nature of christ**: [The Two Natures of Christ and the Restrainer](#hope5), [Who Do Men Say That I Am?](#godhead)
+- **eschatology**: [Daniel's 70 Weeks](#hope4)
+- **ezekiel 430 years**: [How We Know We Are the Final Generation](#hope3)
+- **father, son and holy spirit**: [Who Do Men Say That I Am?](#godhead)
+- **fig tree as israel**: [How We Know We Are the Final Generation](#hope3)
+- **final generation**: [How We Know We Are the Final Generation](#hope3)
+- **genesis genealogies arithmetic**: [How We Know We Are the Final Generation](#hope3)
+- **glorified body**: [The Blessed Hope and the Rapture](#hope1)
+- **god manifest in the flesh**: [The Two Natures of Christ and the Restrainer](#hope5), [God in the Flesh and the Plan of Salvation](#saved1)
+- **godhead**: [Who Do Men Say That I Am?](#godhead)
+- **great commission**: [Born of Water and Spirit](#saved2)
+- **greek word study**: [We Are the Final Generation](#hope2)
+- **harpazo**: [The Blessed Hope and the Rapture](#hope1)
+- **hebrew day reckoning**: [The Passion Week of Jesus Christ](#passion)
+- **holy spirit as spirit of christ**: [Who Do Men Say That I Am?](#godhead)
+- **i am sayings**: [Who Do Men Say That I Am?](#godhead)
+- **israel 1948**: [We Are the Final Generation](#hope2), [How We Know We Are the Final Generation](#hope3)
+- **jesus is god**: [Who Do Men Say That I Am?](#godhead)
+- **last generation**: [We Are the Final Generation](#hope2)
+- **lazarus as a picture of the resurrection**: [We Are the Final Generation](#hope2)
+- **matthew 24 outline**: [How We Know We Are the Final Generation](#hope3)
+- **messiah's timing**: [Daniel's 70 Weeks](#hope4)
+- **mystery revealed**: [God in the Flesh and the Plan of Salvation](#saved1)
+- **new birth of water and spirit**: [The Thief on the Cross and the Roman Road](#saved3)
+- **obeying the gospel**: [God in the Flesh and the Plan of Salvation](#saved1)
+- **olivet discourse**: [We Are the Final Generation](#hope2)
+- **oneness of god**: [We Are the Final Generation](#hope2), [The Two Natures of Christ and the Restrainer](#hope5), [God in the Flesh and the Plan of Salvation](#saved1), [Born of Water and Spirit](#saved2), [The Thief on the Cross and the Roman Road](#saved3), [Who Do Men Say That I Am?](#godhead), [The Passion Week of Jesus Christ](#passion)
+- **palm sunday**: [Daniel's 70 Weeks](#hope4)
+- **parable of the fig tree**: [We Are the Final Generation](#hope2)
+- **passion week**: [The Passion Week of Jesus Christ](#passion)
+- **passover**: [The Passion Week of Jesus Christ](#passion)
+- **pentecost**: [Born of Water and Spirit](#saved2)
+- **personal testimony**: [The Thief on the Cross and the Roman Road](#saved3)
+- **philip and the ethiopian**: [Born of Water and Spirit](#saved2)
+- **plan of salvation**: [God in the Flesh and the Plan of Salvation](#saved1)
+- **pre-tribulation rapture**: [The Blessed Hope and the Rapture](#hope1), [We Are the Final Generation](#hope2), [How We Know We Are the Final Generation](#hope3), [Daniel's 70 Weeks](#hope4)
+- **preparation day**: [The Passion Week of Jesus Christ](#passion)
+- **raising of lazarus**: [The Blessed Hope and the Rapture](#hope1)
+- **rapture**: [The Blessed Hope and the Rapture](#hope1), [The Two Natures of Christ and the Restrainer](#hope5)
+- **resurrection body**: [The Two Natures of Christ and the Restrainer](#hope5)
+- **resurrection of the dead**: [The Blessed Hope and the Rapture](#hope1)
+- **rich man and lazarus**: [The Blessed Hope and the Rapture](#hope1)
+- **roman road**: [The Thief on the Cross and the Roman Road](#saved3)
+- **seven-year tribulation**: [The Blessed Hope and the Rapture](#hope1), [Daniel's 70 Weeks](#hope4)
+- **sign of jonah**: [The Passion Week of Jesus Christ](#passion)
+- **sinner's prayer**: [God in the Flesh and the Plan of Salvation](#saved1)
+- **son of god had a beginning**: [The Two Natures of Christ and the Restrainer](#hope5)
+- **speaking in tongues**: [Born of Water and Spirit](#saved2)
+- **speaking in tongues as evidence**: [The Thief on the Cross and the Roman Road](#saved3)
+- **suffering servant**: [Daniel's 70 Weeks](#hope4)
+- **the 'i am' sayings**: [Born of Water and Spirit](#saved2)
+- **the logos**: [Who Do Men Say That I Am?](#godhead)
+- **the restrainer**: [The Two Natures of Christ and the Restrainer](#hope5)
+- **the trinity**: [Who Do Men Say That I Am?](#godhead)
+- **thief on the cross**: [God in the Flesh and the Plan of Salvation](#saved1), [The Thief on the Cross and the Roman Road](#saved3)
+- **three days and three nights**: [The Passion Week of Jesus Christ](#passion)
+- **thursday crucifixion**: [Daniel's 70 Weeks](#hope4), [The Passion Week of Jesus Christ](#passion)
+- **tithing**: [The Thief on the Cross and the Roman Road](#saved3)
+- **traditions of men**: [God in the Flesh and the Plan of Salvation](#saved1)
+- **trinity**: [The Two Natures of Christ and the Restrainer](#hope5)
+- **two natures of christ**: [Born of Water and Spirit](#saved2)
 
 ---
 Source: the teaching of The Berean Study (YouTube). Transcripts are not reproduced here; only references, times and our summaries.

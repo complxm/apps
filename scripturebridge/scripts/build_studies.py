@@ -161,7 +161,7 @@ def main():
                         continue
                     for v in range(a, z + 1):
                         verses[f"{b['osis']}.{c}"][str(v)].append([sid, i, st["t"], st["kind"]])
-        study = {"id": sid, "title": d["title"], "question": d["question"], "summary": d["summary"], "claims": d["claims"], "topics": d["topics"],
+        study = {"id": sid, "name": d.get("name") or d["title"], "title": d["title"], "question": d["question"], "summary": d["summary"], "claims": d["claims"], "topics": d["topics"],
                  "dur": d["dur"], "video": d.get("video"), "series": se and se["id"], "part": se and se["parts"].index(sid) + 1,
                  "steps": steps, "pl": pl}
         studies[sid] = study
@@ -173,8 +173,8 @@ def main():
             b0, (c0, _v0), _e = span(st["ref"].split(";")[0])
             x = round((books.index(b0) + (c0 - 1) / len(b0["verses"])) / 66 * 1000)
             route.append([x, round(st["t"] / d["dur"] * 1000), 1 if st["kind"] == "read" else 0])
-        index[sid] = {"title": d["title"], "question": d["question"], "dur": d["dur"], "steps": len(steps), "video": d.get("video"), "route": route,
-                      "series": study["series"], "part": study["part"], "pl": {"title": pl["title"], "question": pl["question"]}}
+        index[sid] = {"name": d.get("name") or d["title"], "title": d["title"], "question": d["question"], "dur": d["dur"], "steps": len(steps), "video": d.get("video"), "route": route,
+                      "series": study["series"], "part": study["part"], "pl": {"name": pl.get("name") or pl["title"], "title": pl["title"], "question": pl["question"]}}
     write(os.path.join(OUT, "index.json"), {"source": SOURCE, "series": SERIES, "studies": index})
     write(os.path.join(OUT, "verses.json"), {k: dict(v) for k, v in sorted(verses.items())})
     # Every chapter the studies open, for the offline worker to keep ahead of time.
@@ -198,15 +198,15 @@ def catalogue(order, studies):
     L += [f"**{len(studies)} videos · {hours:.0f} hours · {tot} steps ({rd} read aloud, {tot - rd} mentioned)**", "", "## Contents", ""]
     for s in SERIES:
         L.append(f"- **{s['title']}** ({len(s['parts'])} parts)")
-        L += [f"  - [{studies[p]['title']}](#{p}) · {len(studies[p]['steps'])} steps · {hms(studies[p]['dur'])}" for p in s["parts"]]
+        L += [f"  - [{studies[p]['name']}](#{p}) · {len(studies[p]['steps'])} steps · {hms(studies[p]['dur'])}" for p in s["parts"]]
     L.append("- **Single studies**")
-    L += [f"  - [{studies[p]['title']}](#{p}) · {len(studies[p]['steps'])} steps · {hms(studies[p]['dur'])}" for p in SINGLES]
+    L += [f"  - [{studies[p]['name']}](#{p}) · {len(studies[p]['steps'])} steps · {hms(studies[p]['dur'])}" for p in SINGLES]
     L += ["- [Index: books](#index-books) · [Index: passages taught in more than one video](#index-passages) · [Index: topics](#index-topics)", ""]
 
     for sid in order:
         s = studies[sid]
         vers = collections.Counter(x["version"] for x in s["steps"] if x["kind"] == "read")
-        L += [f'<a id="{sid}"></a>', "", f"## {s['title']}", "",
+        L += [f'<a id="{sid}"></a>', "", f"## {s['name']}", "", f"*Video: {s['title']}*", "",
               f"*{hms(s['dur'])} · {len(s['steps'])} steps · read from " + ", ".join(f"{k} ({n})" for k, n in vers.most_common()) + "*", "",
               f"**Question:** {s['question']}", "", s["summary"], "", "**What he concludes**", ""]
         L += [f"- {c}" for c in s["claims"]]
@@ -253,7 +253,7 @@ def catalogue(order, studies):
         for t in studies[sid]["topics"]:
             tp[t.lower()].append(sid)
     for t in sorted(tp):
-        L.append(f"- **{t}**: " + ", ".join(f"[{studies[s]['title']}](#{s})" for s in tp[t]))
+        L.append(f"- **{t}**: " + ", ".join(f"[{studies[s]['name']}](#{s})" for s in tp[t]))
     L += ["", "---", "Source: the teaching of The Berean Study (YouTube). Transcripts are not reproduced here; only references, times and our summaries."]
     path = os.path.join(ROOT, "research", "berean-study", "CATALOGUE.md")
     os.makedirs(os.path.dirname(path), exist_ok=True)

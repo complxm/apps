@@ -76,7 +76,7 @@ const STR = {
     'st.read': 'read from the {v}', 'st.readU': 'read aloud', 'st.cited': 'mentioned', 'st.draws': 'What he draws from it', 'st.watch': 'Watch from {time}',
     'st.loading': 'Loading the study…', 'st.err': 'The study could not be loaded.',
     'st.verses': 'In the studies', 'st.versesHint': 'Studies that turn to this verse. Tap one to follow it from there.',
-    'pos.study': '{title} · step {i} of {n}', 'st.alsoAt': 'Also at {times}',
+    'pos.study': '{title} · step {i} of {n}', 'st.alsoAt': 'Also at {times}', 'st.video': 'Video: {title}',
     'st.single1': 'Single study', 'st.done': '{r} of {n} read', 'st.continue': 'Continue from step {n}', 'st.fromStart': 'From the start',
     'st.summary': 'What the study covers', 'st.stepsH': 'The {n} steps, in his order',
     'st.coverHint': 'Each cover draws the study’s route: the line runs from Genesis to Revelation (the tick marks where the New Testament begins), and every arc is one move from a passage to the next.',
@@ -146,7 +146,7 @@ const STR = {
     'st.read': 'czytane z {v}', 'st.readU': 'czytane na głos', 'st.cited': 'wspomniane', 'st.draws': 'Co z tego wyprowadza', 'st.watch': 'Oglądaj od {time}',
     'st.loading': 'Wczytywanie studium…', 'st.err': 'Nie udało się wczytać studium.',
     'st.verses': 'W studiach', 'st.versesHint': 'Studia, które sięgają do tego wersetu. Dotknij, aby iść dalej od tego miejsca.',
-    'pos.study': '{title} · krok {i} z {n}', 'st.alsoAt': 'Także: {times}',
+    'pos.study': '{title} · krok {i} z {n}', 'st.alsoAt': 'Także: {times}', 'st.video': 'Film: {title}',
     'st.single1': 'Pojedyncze studium', 'st.done': 'Przeczytano {r} z {n}', 'st.continue': 'Kontynuuj od kroku {n}', 'st.fromStart': 'Od początku',
     'st.summary': 'O czym jest studium', 'st.stepsH': '{n} kroków w jego kolejności',
     'st.coverHint': 'Każda okładka rysuje trasę studium: linia biegnie od Księgi Rodzaju do Objawienia (kreska oznacza początek Nowego Testamentu), a każdy łuk to jedno przejście od fragmentu do następnego.',
@@ -596,7 +596,7 @@ function LS(x) {
   if (!x) return x;
   const pl = lang() === 'pl' && x.pl;
   if (!pl) return x;
-  return { ...x, title: pl.title || x.title, question: pl.question || x.question, summary: pl.summary || x.summary, claims: pl.claims || x.claims, topics: pl.topics || x.topics,
+  return { ...x, name: pl.name || x.name, title: pl.title || x.title, question: pl.question || x.question, summary: pl.summary || x.summary, claims: pl.claims || x.claims, topics: pl.topics || x.topics,
     steps: !Array.isArray(x.steps) ? x.steps : x.steps.map((st, i) => ({ ...st, point: pl.steps?.[i]?.point || st.point, note: pl.steps?.[i]?.note ?? st.note })) };
 }
 const hms = (t) => { const h = Math.floor(t / 3600), m = Math.floor((t % 3600) / 60), s = t % 60; return (h ? `${h}:${String(m).padStart(2, '0')}` : `${m}`) + ':' + String(s).padStart(2, '0'); };
@@ -634,17 +634,14 @@ function coverSVG(route, W = 300, H = 400) {
   }
   const pts = new Map();
   route.forEach(([x, , k]) => { const key = Math.round(X(x)); pts.set(key, (pts.get(key) || 0) | k); });
-  const pt = (x) => `M${x} ${base.toFixed(1)}h0`;
+  const pt = (x) => `M${x} ${base.toFixed(1)}h0.01`;
   const rd = [...pts].filter(([, k]) => k).map(([x]) => pt(x)).join(''), mt = [...pts].filter(([, k]) => !k).map(([x]) => pt(x)).join('');
   return `<svg class="sc-art" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
     <line class="sc-axis" x1="${px}" x2="${W - px}" y1="${base.toFixed(1)}" y2="${base.toFixed(1)}"/><line class="sc-nt" x1="${ntX.toFixed(1)}" x2="${ntX.toFixed(1)}" y1="${(base - 10).toFixed(1)}" y2="${(base + 10).toFixed(1)}"/>
     <path class="sc-route" d="${arcs}"/><path class="mt-o" d="${mt}"/><path class="mt-i" d="${mt}"/><path class="rd" d="${rd}"/></svg>`;
 }
-// The card title drops the series name, which the cover already shows ("Our Blessed Hope 02 – We Are…" -> "We Are…").
-function cardTitle(x) {
-  const i = x.title.indexOf(' – ');
-  return x.series && i > 0 ? x.title.slice(i + 3) : x.series ? t('st.part', { n: x.part }) : x.title;
-}
+// Each study is named by what it is about; the video's own title is shown on the study page.
+const cardTitle = (x) => x.name || x.title;
 function studyCardHTML(id) {
   const m = D.SI.studies[id], x = LS(m), se = m.series && D.SI.series.find((q) => q.id === m.series);
   const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(id, i))).filter(Boolean).length;
@@ -689,7 +686,8 @@ async function renderStudies() {
     <div class="st-hero hue-${studyHue(want)}">
       <div class="sc-cover wide">${coverSVG(meta.route, 640, 240)}<span class="sc-label">${esc(se ? `${LS(se).title} · ${t('st.part', { n: meta.part })}` : t('st.single1'))}</span></div>
       <div class="st-hero-text">
-        <h2>${esc(x.title)}</h2>
+        <h2>${esc(x.name || x.title)}</h2>
+        <p class="st-video">${esc(t('st.video', { title: x.title }))}</p>
         <p class="st-question">${esc(x.question)}</p>
         <p class="st-meta">${esc(`${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')} · ${lenText(meta.dur)}`)}${done ? ` · ${esc(t('st.done', { r: num(done), n: num(x.steps.length) }))}` : ''}</p>
         <div class="actions">${next >= 0 ? `<fvl-button variant="primary" data-study-at="${next}">${esc(t('st.continue', { n: next + 1 }))}</fvl-button><fvl-button variant="secondary" data-read-study="${esc(want)}">${esc(t('st.fromStart'))}</fvl-button>`
@@ -747,7 +745,7 @@ function renderStudyReader() {
   const showKjv = st.kind === 'read' && verId && trInfo().id !== verId && lang() === 'en' && BIB.meta?.translations.some((q) => q.id === verId);
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
-    <div class="r-step"><span class="kicker">${esc(x.title)}</span><p>${esc(x.question)}</p></div>
+    <div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>
     <p class="kicker">${stepKicker(st, cur.idx, true)}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(locRef(st.ref))}</h2>
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
@@ -765,7 +763,7 @@ function renderStudyReader() {
     </section>
     ${nx ? `<button type="button" class="upnext" data-next><span><small>${esc(t('upNext'))}</small><b>${esc(locRef(nx.ref))}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
   </div>`;
-  $('#rPos').textContent = t('pos.study', { i: cur.idx + 1, n: cur.seq.length, title: x.title });
+  $('#rPos').textContent = t('pos.study', { i: cur.idx + 1, n: cur.seq.length, title: x.name || x.title });
   $('#star').hidden = true;
   $('#prev').disabled = cur.idx <= 0;
   const last = cur.idx >= cur.seq.length - 1, next = $('#next');
@@ -799,7 +797,7 @@ async function studyVersesHTML(osis, c, v) {
     <div class="xgroup-head"><p class="p-label">${esc(t('st.verses'))} · ${num(groups.length)}</p><p class="note">${esc(t('st.versesHint'))}</p></div>
     <ol class="list sheet-list">${groups.map(({ sid, best, all }) => { const m = LS(I.studies[sid]); if (!m) return ''; const others = all.filter((h) => h !== best);
       return `<li><button type="button" class="row" data-go-study="${esc(sid)}" data-i="${best[1]}">
-      <span class="kicker"><span class="st-time">${esc(hms(best[2]))}</span><span aria-hidden="true">·</span><span>${esc(best[3] === 'cited' ? t('st.cited') : t('st.readU'))}</span></span><span class="row-title">${esc(m.title)}</span>
+      <span class="kicker"><span class="st-time">${esc(hms(best[2]))}</span><span aria-hidden="true">·</span><span>${esc(best[3] === 'cited' ? t('st.cited') : t('st.readU'))}</span></span><span class="row-title">${esc(m.name || m.title)}</span>
       ${others.length ? `<span class="row-sum">${esc(t('st.alsoAt', { times: others.map((h) => hms(h[2])).join(', ') }))}</span>` : ''}</button></li>`; }).join('')}</ol></section>`;
 }
 
@@ -2207,7 +2205,7 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 function warmOffline() {
   const sw = navigator.serviceWorker?.controller, tr = trInfo().id;
   if (!sw || tr === 'nlt' || navigator.connection?.saveData) return;
-  const key = `sb_warm_${tr}_4`;
+  const key = `sb_warm_${tr}_5`;
   if (store.get(key, false)) return;
   const urls = new Set(['data/studies/index.json']);
   for (const p of D.P) for (const side of ['ot', 'nt']) for (const sg of parseRefList(p[side].ref)) urls.add(`data/bible/${tr}/${sg.osis}/${sg.c}.json`);
