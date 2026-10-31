@@ -1311,3 +1311,37 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   .st-hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; column-gap: var(--fvl-layout-gutter-large); }
   .sc-cover.wide { aspect-ratio: 4 / 3; }
 }
+
+/* ---------- fewer boxes: open lists ----------
+   Bridge and thread rows sit on the page itself: no card, a fine line between them, the timeline leading each row. */
+.open-list { gap: 0; }
+.open-list > li + li { border-top: 1px solid var(--fvl-color-line-subtle); }
+.open-list .row { background: transparent; border-radius: var(--fvl-radius-container); padding-inline: var(--fvl-space-stack-related); padding-block: var(--fvl-space-stack-group); }
+@media (hover: hover) { .open-list .row:hover { background: var(--fvl-color-bg-hover); } }
+.open-list .row:active { background: var(--fvl-color-bg-active); }
+.open-list .span i::before { background: var(--fvl-color-bg-canvas); }
+.open-list .row:hover .span i::before { background: var(--fvl-color-bg-hover); }
+.open-list .tspan b { background: var(--fvl-color-bg-canvas); }
+.open-list .row:hover .tspan b { background: var(--fvl-color-bg-hover); }
+/* Two columns on wide screens: the line between rows runs per column. */
+@media (width >= 75rem) {
+  .open-list { column-gap: var(--fvl-layout-gutter-large); }
+  .open-list > li + li { border-top: 0; }
+  .open-list > li { border-bottom: 1px solid var(--fvl-color-line-subtle); }
+}
+
+/* ---------- the reader speaks the same symbols ----------
+   Promise: an open ring. Fulfilment: a filled point. Both quote lines take the bridge's colour. */
+.p-sym { display: flex; align-items: center; gap: var(--fvl-space-stack-related); }
+.p-sym i { width: 10px; height: 10px; border-radius: var(--fvl-radius-pill); flex: none; }
+.r-pair .sym-open { box-shadow: inset 0 0 0 2px currentColor; }
+.r-pair .sym-kept { background: currentColor; }
+.r-pair .p-sym { color: var(--fvl-color-text-secondary); }
+.r-pair .p-sym i { color: var(--_cat, currentColor); }
+.r-pair.c-birth { --_cat: var(--fvl-color-data-1); }
+.r-pair.c-ministry { --_cat: var(--fvl-color-data-2); }
+.r-pair.c-passion { --_cat: var(--fvl-color-data-3); }
+.r-pair.c-resurrection { --_cat: var(--fvl-color-data-4); }
+.r-pair.c-covenant { --_cat: var(--fvl-color-data-5); }
+.r-pair { color: var(--fvl-color-text-primary); }
+.r-pair .p-text { border-left-color: var(--_cat, var(--fvl-prose-quote-line)); }

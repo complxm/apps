@@ -563,7 +563,7 @@ function renderThreads() {
   const th = S.thread && D.T[S.thread] && LT(S.thread);
   if (!th) {
     v.innerHTML = `<div class="nav-scroll">${thModeHTML('threads')}</div><div class="section-head"><h2>${esc(t('tab.threads'))}</h2><p>${esc(t('threads.lead'))}</p></div>
-      <ol class="list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
+      <ol class="list open-list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
         <span class="span-line">${threadSpanHTML(D.T[k])}<span class="row-gap">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span></span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
     wireThMode(v);
     return;
@@ -702,6 +702,13 @@ async function renderStudies() {
     <ol class="list path">${x.steps.map((st, i) => `<li><button type="button" class="row${sRead.has(sReadKey(want, i)) ? ' is-read' : ''}${st.kind === 'cited' ? ' is-cited' : ''}" data-sstep="${i}">
       <span class="kicker">${stepKicker(st, i)}</span><span class="row-title">${esc(locRef(st.ref))}</span><span class="row-sum">${esc(st.point)}</span></button></li>`).join('')}</ol>
     <p class="note">${esc(t('st.about'))}</p>`;
+  // Opening a study draws its route in his order, one arc after another (once per visit to the page).
+  if (S.drawnStudy !== want && window.DrawSVGPlugin && !reduced) {
+    const route = $('.st-hero .sc-route', v), dots = $$('.st-hero .sc-art path:not(.sc-route)', v);
+    if (route) gsap.from(route, { drawSVG: '0%', duration: 1.8, ease: 'power1.inOut', onComplete: () => { route.style.removeProperty('stroke-dasharray'); route.style.removeProperty('stroke-dashoffset'); } });
+    gsap.from(dots, { opacity: 0, duration: 0.5, delay: 0.2 });
+  }
+  S.drawnStudy = want;
 }
 function openStudyStep(id, i, src) {
   pendingSrc = src || null;
@@ -876,7 +883,7 @@ function timeBridges() {
 }
 function renderTime(animate) {
   const list = timeBridges();
-  $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
+  $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list open-list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
   if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow, onComplete: () => $$('#timeView .tl-arc').forEach((x) => { x.style.removeProperty('stroke-dasharray'); x.style.removeProperty('stroke-dashoffset'); }) });
 }
 function showMapMode() {
@@ -898,7 +905,7 @@ function renderSaved() {
   }
   v.innerHTML = `<div class="section-head"><h2>${esc(t('tab.saved'))}</h2><p>${esc(t('saved.lead', { n: items.length }))}</p></div>
     <div class="actions"><fvl-button variant="primary" data-read-saved>${esc(t('readSaved'))}</fvl-button><fvl-button variant="secondary" data-copy-md><fvl-icon name="copy"></fvl-icon>${esc(t('copyMd'))}</fvl-button></div>
-    <ol class="list">${items.map((p) => rowHTML(p)).join('')}</ol>`;
+    <ol class="list open-list">${items.map((p) => rowHTML(p)).join('')}</ol>`;
 }
 
 // ---------- Bible: BSB text + OpenBible cross-references, one small file per chapter ----------
@@ -1708,16 +1715,16 @@ function renderReader() {
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(p.title)}</h2>
     ${D.EV[p.id]?.votes != null ? `<p class="r-meta">${esc(t('votesReal', { n: D.EV[p.id].votes }))}</p>` : ''}
     ${spanFigure(p0, p)}
-    <div class="r-pair">
+    <div class="r-pair c-${esc(p0.category)}">
     <section class="passage" aria-label="${esc(t('promise'))}">
-      <p class="p-label">${esc(t('promise'))}</p>
+      <p class="p-label p-sym"><i class="sym-open" aria-hidden="true"></i>${esc(t('promise'))}</p>
       <h3 class="p-ref">${esc(locRef(p.ot.ref))} <small>${esc(p.ot.author)}</small></h3>
       <blockquote class="p-text" lang="${pl ? 'pl' : 'en'}">${quote('ot')}</blockquote>
       <p class="p-context">${esc(p.ot.context)}</p>
       ${passageLinks(p.ot.ref)}
     </section>
     <section class="passage" aria-label="${esc(t('fulfilment'))}">
-      <p class="p-label">${esc(t('fulfilment'))}</p>
+      <p class="p-label p-sym"><i class="sym-kept" aria-hidden="true"></i>${esc(t('fulfilment'))}</p>
       <h3 class="p-ref">${esc(locRef(p.nt.ref))} <small>${esc(p.nt.author)}</small></h3>
       <blockquote class="p-text" lang="${pl ? 'pl' : 'en'}">${quote('nt')}</blockquote>
       <p class="p-context">${esc(p.nt.context)}</p>
