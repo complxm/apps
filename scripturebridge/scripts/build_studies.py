@@ -135,6 +135,7 @@ def main():
     order = [p for s in SERIES for p in s["parts"]] + SINGLES
     studies, index, verses = {}, {}, collections.defaultdict(lambda: collections.defaultdict(list))
     merged_away = {}
+    chapters = set()
     for sid in order:
         d = json.load(open(os.path.join(SRC, sid + ".json"), encoding="utf-8"))
         se = next((s for s in SERIES if sid in s["parts"]), None)
@@ -146,6 +147,7 @@ def main():
         steps = []
         for i, st in enumerate(d["steps"]):
             ref, b, spans = norm_ref(st["ref"])
+            chapters.update(f"{b['osis']}/{c}" for c, _, _ in spans)
             o = {"t": st["t"], "ref": ref, "kind": st["kind"], "version": st["version"], "point": st["point"]}
             if st.get("at"):
                 o["at"] = st["at"]
@@ -168,6 +170,8 @@ def main():
                       "series": study["series"], "part": study["part"], "pl": {"title": pl["title"], "question": pl["question"]}}
     write(os.path.join(OUT, "index.json"), {"source": SOURCE, "series": SERIES, "studies": index})
     write(os.path.join(OUT, "verses.json"), {k: dict(v) for k, v in sorted(verses.items())})
+    # Every chapter the studies open, for the offline worker to keep ahead of time.
+    write(os.path.join(OUT, "chapters.json"), sorted(chapters))
     catalogue(order, studies)
     print("repeats merged:", merged_away, sum(merged_away.values()))
     print(f"{len(studies)} studies, {sum(len(s['steps']) for s in studies.values())} steps, "

@@ -1,6 +1,7 @@
 // ScriptureBridge UI — Flow Visual Language components + GSAP with the FVL springs.
 // Browse (bridges, Bible, threads, map, saved) → tap → Reader: one bridge, nothing else on screen.
 import { toast } from '/apps/vendor/fvl/ui/fvl-components.js';
+import '/apps/vendor/fvl/atmosphere/fvl-atmosphere.js'; // the living field behind the home screen
 
 const gsap = window.gsap;
 if (window.DrawSVGPlugin) gsap.registerPlugin(window.DrawSVGPlugin);
@@ -76,6 +77,9 @@ const STR = {
     'st.loading': 'Loading the study…', 'st.err': 'The study could not be loaded.',
     'st.verses': 'In the studies', 'st.versesHint': 'Studies that turn to this verse. Tap one to follow it from there.',
     'pos.study': '{title} · step {i} of {n}', 'st.alsoAt': 'Also at {times}',
+    'share.img': 'Share as picture', 'share.saved': 'Picture saved', 'share.err': 'Could not make the picture.',
+    'vb.title': 'Bridges', 'vb.hint': 'This verse is part of these bridges.', 'vb.aria': 'part of {n} bridge(s)',
+    'cmp.open': 'Compare Bibles', 'cmp.close': 'Hide comparison', 'cmp.na': 'Not available right now.',
     'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the BSB is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
@@ -84,7 +88,8 @@ const STR = {
     'tl.bc': '{n} BC', 'tl.ad': 'AD {n}', 'tl.years': '{n} years', 'tl.later': '{n} years later',
     'hero.title': 'The promise, and the day it was kept.',
     'hero.sub': '{n} bridges across two thousand years of Scripture. Each arc runs from a promise to its fulfilment. Tap one to read it.',
-    'hero.aria': 'Every bridge as an arc on a timeline, from the year of the promise to the year it was fulfilled', 'pos.time': 'In time order · {i} of {n}',
+    'hero.aria': 'Every bridge as an arc on a timeline, from the year of the promise to the year it was fulfilled',
+    'hero.next': 'Next appointed time', 'hero.progress': 'You have read {r} of {n}. Read bridges are drawn solid.', 'hero.progress0': 'Bridges you read will be drawn solid here.', 'pos.time': 'In time order · {i} of {n}',
     'saved.emptyH': 'Nothing saved yet', 'saved.emptyD': 'Open a bridge and tap the star to keep it here.', 'saved.lead': '{n} {bridge}, in the order you saved them.',
     readSaved: 'Read saved', copyMd: 'Copy as Markdown', copiedMd: 'Copied as Markdown',
     'bible.lead': '{name}, with every OpenBible.info cross-reference. Tap any verse to see everything it connects to.',
@@ -138,6 +143,9 @@ const STR = {
     'st.loading': 'Wczytywanie studium…', 'st.err': 'Nie udało się wczytać studium.',
     'st.verses': 'W studiach', 'st.versesHint': 'Studia, które sięgają do tego wersetu. Dotknij, aby iść dalej od tego miejsca.',
     'pos.study': '{title} · krok {i} z {n}', 'st.alsoAt': 'Także: {times}',
+    'share.img': 'Udostępnij jako obraz', 'share.saved': 'Zapisano obraz', 'share.err': 'Nie udało się utworzyć obrazu.',
+    'vb.title': 'Mosty', 'vb.hint': 'Ten werset należy do tych mostów.', 'vb.aria': 'część mostów: {n}',
+    'cmp.open': 'Porównaj Biblie', 'cmp.close': 'Ukryj porównanie', 'cmp.na': 'Teraz niedostępne.',
     'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu BSB.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
@@ -146,7 +154,8 @@ const STR = {
     'tl.bc': '{n} p.n.e.', 'tl.ad': '{n} n.e.', 'tl.years': '{n} lat', 'tl.later': '{n} lat później',
     'hero.title': 'Obietnica i dzień, w którym się spełniła.',
     'hero.sub': '{n} mostów przez dwa tysiące lat Pisma. Każdy łuk biegnie od obietnicy do jej spełnienia. Dotknij go, aby przeczytać.',
-    'hero.aria': 'Każdy most jako łuk na osi czasu, od roku obietnicy do roku spełnienia', 'pos.time': 'Według czasu · {i} z {n}',
+    'hero.aria': 'Każdy most jako łuk na osi czasu, od roku obietnicy do roku spełnienia',
+    'hero.next': 'Najbliższy wyznaczony czas', 'hero.progress': 'Przeczytano {r} z {n}. Przeczytane mosty są narysowane pełną linią.', 'hero.progress0': 'Mosty, które przeczytasz, będą tu narysowane pełną linią.', 'pos.time': 'Według czasu · {i} z {n}',
     'saved.emptyH': 'Nic jeszcze nie zapisano', 'saved.emptyD': 'Otwórz most i dotknij gwiazdki, aby go tu zachować.', 'saved.lead': '{n} {bridge}, w kolejności zapisywania.',
     readSaved: 'Czytaj zapisane', copyMd: 'Kopiuj jako Markdown', copiedMd: 'Skopiowano jako Markdown',
     'bible.lead': '{name} ze wszystkimi odnośnikami OpenBible.info. Dotknij dowolnego wersetu, aby zobaczyć wszystko, z czym się łączy.',
@@ -365,15 +374,53 @@ function fanPoint(e) {
     if (cap && p) cap.textContent = `${L(p).title} · ${locRef(p.ot.ref)} → ${locRef(L(p).nt.ref)}`;
   } else if (cap) cap.textContent = '';
 }
+// Arcs of bridges you have read are drawn solid and thicker.
+function markReadArcs() {
+  $$('#hero .tl-bridge, #timeView .tl-bridge').forEach((g) => g.classList.toggle('read', readSet.has(g.dataset.id)));
+  const pr = $('#hero .hero-progress'); if (pr) pr.textContent = heroProgress(timeList(() => true).length);
+}
 const timeList = (filter) => D.P.filter(filter).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y).sort((a, b) => a.y.ot - b.y.ot || a.y.nt - b.y.nt);
 let heroDrawn = false;
+// The next appointed time of Leviticus 23 (the weekly Sabbath aside), from the same calendar as the feasts thread.
+function nextMoed() {
+  let best = null;
+  for (const tm of D.TIMES) {
+    if (tm.key === 'sabbath') continue;
+    const r = moedNext(tm);
+    if (r && (!best || r.s < best.r.s)) best = { tm, r };
+  }
+  return best;
+}
+function heroNextHTML() {
+  const n = nextMoed();
+  if (!n) return '';
+  const lg = lang(), when = rangeText(n.r, true), until = untilText(n.r);
+  return `<button type="button" class="hero-next" data-moed="${esc(n.tm.bridge)}"><fvl-icon name="calendar"></fvl-icon>
+    <span><small>${esc(t('hero.next'))}</small><b>${esc(n.tm.name[lg])}</b> <span class="hn-when">${esc(when)} · ${esc(until)}</span></span><fvl-icon name="arrow-right"></fvl-icon></button>`;
+}
+// How much of the collection you have read, as words under the arcs (the arcs themselves show which).
+const heroProgress = (n) => { const r = D.P.filter((p) => readSet.has(p.id)).length; return r ? t('hero.progress', { r: num(r), n: num(n) }) : t('hero.progress0'); };
 function renderHero() {
   const el = $('#hero');
   const list = timeList(() => true);
-  el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
-    <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>${fanSVG(list, { cls: 'hero-fan' })}`;
+  // The sky: FVL's living field, following the time of day; the arcs are drawn in its text colour,
+  // which the field keeps at 4.5:1 or more against every pixel.
+  el.innerHTML = `<fvl-atmosphere class="hero-sky" daylight="auto" contrast="4.5"><div class="hero-in">
+    <div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
+    <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>
+    ${fanSVG(list, { cls: 'hero-fan' })}
+    <p class="hero-progress">${esc(heroProgress(list.length))}</p>
+    ${heroNextHTML()}</div></fvl-atmosphere>`;
+  markReadArcs();
   // One orchestrated moment: the first time the home screen opens, the arcs draw in, oldest promise first.
-  if (!heroDrawn && window.DrawSVGPlugin && !reduced) gsap.from('#hero .tl-arc', { drawSVG: '0%', stagger: 0.012, ...spring.grow });
+  if (!heroDrawn && window.DrawSVGPlugin && !reduced) {
+    // Unread arcs are dotted; the dots are switched off while the lines draw in, then come back.
+    const fan = $('#hero .tl-fan'); fan.classList.add('drawing');
+    gsap.from('#hero .tl-arc', { drawSVG: '0%', stagger: 0.012, ...spring.grow, onComplete: () => {
+      $$('#hero .tl-arc').forEach((x) => { x.style.removeProperty('stroke-dasharray'); x.style.removeProperty('stroke-dashoffset'); });
+      fan.classList.remove('drawing');
+    } });
+  }
   heroDrawn = true;
   el.dataset.lang = lang();
 }
@@ -413,6 +460,7 @@ function syncChips(group, cur) { $$('fvl-tag', group).forEach((t) => { t.selecte
 function renderBridges() {
   if (!$('#hero .tl-fan') || $('#hero').dataset.lang !== lang()) renderHero();
   $('#hero .tl-fan')?.setAttribute('data-cat', S.cat);
+  markReadArcs();
   const list = filtered();
   $('#count').textContent = `${num(list.length)} ${pluralForm(list.length, 'bridge')}`;
   $('#applyBtn').textContent = list.length ? t('apply', { n: list.length }) : t('noMatch');
@@ -774,7 +822,7 @@ function timeBridges() {
 function renderTime(animate) {
   const list = timeBridges();
   $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
-  if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow });
+  if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow, onComplete: () => $$('#timeView .tl-arc').forEach((x) => { x.style.removeProperty('stroke-dasharray'); x.style.removeProperty('stroke-dashoffset'); }) });
 }
 function showMapMode() {
   const time = S.mapMode === 'time';
@@ -1077,16 +1125,45 @@ async function renderBible() {
   el.removeAttribute('aria-busy');
   if (trInfo().id === 'nlt' && nltFell.has(`${osis}/${c}`)) { const n = $('.tr-notice', v); if (n) n.textContent = t('nlt.fail'); }
   const jn = joinedNow(osis, c);
+  const bv = bridgeVerses()[`${osis}.${c}`] || {};
   el.innerHTML = text.map((vt, i) => {
     const n = i + 1;
     if (jn[n]) return '';
-    return `<span class="verse" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}"><span class="vn" aria-hidden="true">${verseLabel(jn, n)}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
+    const br = bv[n];
+    // A verse that begins or completes a bridge carries the arc under its number (open ring: a promise; filled: a fulfilment).
+    const mark = br ? `<svg class="vb-mark${br.some((x) => x.side === 'nt') ? ' kept' : ''}" viewBox="0 0 16 9" aria-hidden="true"><path d="M2 7A6 6 0 0 1 14 7"/><circle cx="2" cy="7" r="1.6"/><circle cx="14" cy="7" r="1.6"/></svg>` : '';
+    return `<span class="verse${br ? ' has-bridge' : ''}" data-v="${n}" role="button" tabindex="0" aria-label="${esc(t('verseAria', { n }))}${br ? esc(', ' + t('vb.aria', { n: br.length })) : ''}"><span class="vn" aria-hidden="true">${verseLabel(jn, n)}${mark}</span><span class="vt">${vt ? esc(vt) : emptyVerse()}</span></span>`;
   }).join('');
   store.set('sb_bible_pos', { osis, c });
   if (verse) {
     const vEl = $(`.verse[data-v="${verse}"]`, el);
     if (vEl) { vEl.classList.add('sel'); requestAnimationFrame(() => vEl.scrollIntoView({ block: 'center' })); }
   }
+}
+
+// Which verses begin or complete a bridge: "Osis.c" -> { verse: [{ id, side }] }, built once from the bridges' references.
+let BV = null;
+function bridgeVerses() {
+  if (BV || !BIB.meta) return BV || {};
+  BV = {};
+  for (const p of D.P) for (const side of ['ot', 'nt']) for (const sg of parseRefList(p[side].ref)) {
+    for (const [a, z] of sg.ranges) for (let v = a; v <= z; v++) {
+      const ch = (BV[`${sg.osis}.${sg.c}`] ??= {});
+      (ch[v] ??= []).some((x) => x.id === p.id) || ch[v].push({ id: p.id, side });
+    }
+  }
+  return BV;
+}
+// The same verse in every Bible the app has, side by side (NLT read live, so it may be unavailable).
+async function compareHTML(osis, c, v) {
+  const ts = BIB.meta.translations;
+  const rows = await Promise.all(ts.map(async (tr) => {
+    let txt;
+    try { txt = (await chapterText(osis, c, tr.id))[v - 1]; } catch { txt = null; }
+    const fell = tr.id === 'nlt' && nltFell.has(`${osis}/${c}`);
+    return `<div class="cmp-row"><dt>${esc(tr.label)}</dt><dd lang="${esc(tr.lang)}">${fell || txt == null ? `<em class="omit">${esc(t('cmp.na'))}</em>` : txt ? esc(txt) : `<em class="omit">${esc(tr.empty || '')}</em>`}</dd></div>`;
+  }));
+  return `<dl class="cmp">${rows.join('')}</dl>`;
 }
 
 // OpenBible lists each link one way, so a verse shows two groups:
@@ -1111,7 +1188,11 @@ async function openXref(osis, c, v) {
       <div class="xgroup-head"><p class="p-label">${label} · ${num(list.length)}</p><p class="note">${hint}</p></div>
       <ol class="list sheet-list" id="x-${key}"></ol><div id="x-${key}-more"></div></section>` : '';
   $('#xrefBody').innerHTML = `<blockquote class="p-text" lang="${esc(trInfo().lang)}">${text[v - 1] ? esc(text[v - 1]) : emptyVerse()}</blockquote>
-    <div class="actions">${nltLink(`${b.name} ${c}:${v}`)}</div>
+    <div class="actions"><button type="button" class="link-btn" data-compare="${esc(`${osis}.${c}.${v}`)}" aria-expanded="false">${esc(t('cmp.open'))}</button>${nltLink(`${b.name} ${c}:${v}`)}</div>
+    <div class="cmp-slot" hidden></div>
+    ${(bridgeVerses()[`${osis}.${c}`]?.[v] || []).length ? `<section class="xgroup" aria-label="${esc(t('vb.title'))}">
+      <div class="xgroup-head"><p class="p-label">${esc(t('vb.title'))}</p><p class="note">${esc(t('vb.hint'))}</p></div>
+      <ol class="list sheet-list">${bridgeVerses()[`${osis}.${c}`][v].map((x) => rowHTML(D.byId.get(x.id), { summary: false })).join('')}</ol></section>` : ''}
     ${whoHTML}
     ${ow.length ? `<section class="xgroup" aria-label="${esc(t(heb ? 'hebrew' : 'greek'))}">
       <div class="xgroup-head"><p class="p-label">${esc(t(heb ? 'hebrew' : 'greek'))} · ${esc(t('origWords', { n: ow.length }))}</p><p class="note">${esc(t('origHint2'))}</p></div>
@@ -1292,6 +1373,92 @@ function renderXrefItems(key) {
     el.dataset.done = '1';
     try { el.textContent = (await targetText(el.dataset.t)) || trInfo().empty; } catch { el.textContent = t('verseErr'); }
   });
+}
+
+// ---------- share a bridge as a picture ----------
+// A 4:5 card: the title, the bridge's arc with both dates and the years between, both passages from the chosen Bible
+// (named at the foot), drawn in the app's own colours and type. Sent to the share sheet where the phone has one,
+// otherwise downloaded.
+async function bridgeImage(p0) {
+  const p = L(p0), W = 1080, H = 1350, M = 88;
+  const css = getComputedStyle(document.body), tok = (n) => css.getPropertyValue(n).trim();
+  const probe = document.createElement('span'); document.body.append(probe);
+  const col = (v) => { probe.style.color = `var(${v})`; return getComputedStyle(probe).color; };
+  const C = { bg: col('--fvl-color-bg-canvas'), text: col('--fvl-color-text-primary'), soft: col('--fvl-color-text-secondary'), muted: col('--fvl-color-text-muted'),
+    line: col('--fvl-color-line-subtle'), accent: col('--fvl-color-accent-default') };
+  probe.className = 'c-' + p0.category; probe.style.color = ''; const cat = getComputedStyle(probe).color; probe.remove();
+  const family = tok('--fvl-type-body-family') || 'Inter, sans-serif';
+  await Promise.all([document.fonts.load(`600 64px ${family}`), document.fonts.load(`400 32px ${family}`)]).catch(() => {});
+  const [ot, nt] = await Promise.all([passagePlain(p.ot.ref), passagePlain(p.nt.ref)]).catch(() => [p.ot.text, p.nt.text]);
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const g = cv.getContext('2d');
+  g.fillStyle = C.bg; g.fillRect(0, 0, W, H);
+  const font = (w, px) => { g.font = `${w} ${px}px ${family}`; };
+  // Wrap text into at most `max` lines of width `w`, ending with … when cut.
+  const wrap = (txt, w, max) => {
+    const words = String(txt).split(/\s+/), lines = [];
+    let line = '';
+    for (const word of words) {
+      const test = line ? line + ' ' + word : word;
+      if (g.measureText(test).width > w && line) { lines.push(line); line = word; if (lines.length === max) break; } else line = test;
+    }
+    if (lines.length < max && line) lines.push(line);
+    if (lines.length === max && words.join(' ').length > lines.join(' ').length) {
+      let last = lines[max - 1];
+      while (g.measureText(last + ' …').width > w && last.includes(' ')) last = last.slice(0, last.lastIndexOf(' '));
+      lines[max - 1] = last + ' …';
+    }
+    return lines;
+  };
+  let y = M;
+  // wordmark
+  g.strokeStyle = C.accent; g.lineWidth = 4; g.lineCap = 'round';
+  g.beginPath(); g.ellipse(M + 22, y + 26, 20, 18, 0, Math.PI, 0); g.stroke();
+  font(600, 30); g.fillStyle = C.text; g.textBaseline = 'middle'; g.fillText('ScriptureBridge', M + 58, y + 18);
+  y += 96;
+  // title
+  font(600, 64); g.textBaseline = 'alphabetic'; g.fillStyle = C.text;
+  for (const l of wrap(p.title, W - 2 * M, 3)) { y += 72; g.fillText(l, M, y); }
+  y += 72;
+  // the arc
+  const [a, b] = String(p.eraGap || '').replace(/\s*\([^)]*\)\s*$/, '').split('→').map((x) => (x || '').trim());
+  const yrs = yearsOf(p0), base = y + 150;
+  g.strokeStyle = cat; g.lineWidth = 5;
+  g.beginPath(); g.ellipse(W / 2, base, (W - 2 * M) / 2, 140, 0, Math.PI, 0); g.stroke();
+  g.fillStyle = C.bg; g.beginPath(); g.arc(M, base, 11, 0, 2 * Math.PI); g.fill(); g.stroke();
+  g.fillStyle = cat; g.beginPath(); g.arc(W - M, base, 11, 0, 2 * Math.PI); g.fill();
+  if (yrs != null) { font(600, 34); g.fillStyle = C.text; g.textAlign = 'center'; g.fillText(t('tl.later', { n: num(yrs) }), W / 2, base - 30); }
+  font(600, 30); g.fillStyle = C.text; g.textAlign = 'left'; g.fillText(a, M, base + 52); g.textAlign = 'right'; g.fillText(b, W - M, base + 52); g.textAlign = 'left';
+  y = base + 120;
+  // both passages
+  const passage = (label, ref, txt, maxLines) => {
+    font(400, 26); g.fillStyle = C.muted; g.fillText(label, M, y); y += 46;
+    font(600, 36); g.fillStyle = C.text; g.fillText(locRef(ref), M, y); y += 22;
+    font(400, 32); g.fillStyle = C.soft;
+    const lines = wrap(txt, W - 2 * M - 28, maxLines);
+    const top = y + 8;
+    for (const l of lines) { y += 46; g.fillText(l, M + 28, y); }
+    g.fillStyle = cat; g.fillRect(M, top, 4, y - top + 14);
+    y += 56;
+  };
+  passage(t('promise'), p.ot.ref, ot, 4);
+  passage(t('fulfilment'), p.nt.ref, nt, 4);
+  // foot
+  font(400, 24); g.fillStyle = C.muted; g.fillText(trInfo().name, M, H - M + 10);
+  return new Promise((res) => cv.toBlob(res, 'image/png'));
+}
+async function shareBridgeImage(p0) {
+  let blob;
+  try { blob = await bridgeImage(p0); } catch { blob = null; }
+  if (!blob) { toast.warning(t('share.err')); return; }
+  const name = `${L(p0).title.replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '').slice(0, 60) || 'bridge'}.png`;
+  const file = new File([blob], name, { type: 'image/png' });
+  if (navigator.canShare?.({ files: [file] })) {
+    try { await navigator.share({ files: [file], title: L(p0).title }); return; } catch (e) { if (e?.name === 'AbortError') return; }
+  }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  toast(t('share.saved'));
 }
 
 // Citation text in the current language; Polish quotes come from the chosen Polish Bible, with its name.
@@ -1510,6 +1677,7 @@ function renderReader() {
     <div class="ev-slot">${evidenceHTML(p.id)}</div>
     <div class="motifs" aria-label="${esc(t('motifs'))}">${p.keywords.map((k) => `<fvl-tag data-kw="${esc(k)}" tabindex="0" role="button">${esc(k)}</fvl-tag>`).join('')}</div>
     <div class="r-tools">
+      <fvl-button variant="tertiary" size="sm" data-share-img><fvl-icon name="image"></fvl-icon>${esc(t('share.img'))}</fvl-button>
       <fvl-button variant="tertiary" size="sm" data-cite><fvl-icon name="copy"></fvl-icon>${esc(t('copyCite'))}</fvl-button>
       <fvl-button variant="tertiary" size="sm" data-onmap><fvl-icon name="map"></fvl-icon>${esc(t('onMap'))}</fvl-button>
     </div>
@@ -1879,6 +2047,18 @@ $('#xrefSheet').addEventListener('click', (e) => {
   const pe = e.target.closest('[data-person]'); if (pe) { openEntity('person', pe.dataset.person); return; }
   const pl = e.target.closest('[data-place]'); if (pl) { openEntity('place', pl.dataset.place); return; }
   if (e.target.closest('[data-sheet-back]')) { sheetBack(); return; }
+  const cmp = e.target.closest('[data-compare]');
+  if (cmp) {
+    const slot = $('#xrefBody .cmp-slot'), open = cmp.getAttribute('aria-expanded') === 'true';
+    cmp.setAttribute('aria-expanded', String(!open)); cmp.textContent = t(open ? 'cmp.open' : 'cmp.close');
+    if (open) { slot.hidden = true; return; }
+    slot.hidden = false; slot.innerHTML = `<p class="note">${esc(t('loading'))}</p>`;
+    const [o, c, v] = cmp.dataset.compare.split('.');
+    compareHTML(o, +c, +v).then((h) => { slot.innerHTML = h; if (!reduced) gsap.from($$('.cmp-row', slot), { opacity: 0, y: 6, stagger: 0.04, ...spring.arrive, clearProps: 'opacity,transform' }); });
+    return;
+  }
+  const brow = e.target.closest('.row[data-id]');
+  if (brow) { $('#xrefSheet').close(); pushed = false; openReader(brow.dataset.id, { kind: 'list' }, null); return; }
   const gs = e.target.closest('[data-go-study]');
   if (gs) { $('#xrefSheet').close(); if (!reader.hidden) pushed = false; location.hash = `#/study/${encodeURIComponent(gs.dataset.goStudy)}/${gs.dataset.i}`; return; }
   if (e.target.closest('[data-occ-more]')) { S.occ.shown = S.occ.list.length; renderOcc(); return; }
@@ -1896,6 +2076,8 @@ browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.r
 // Browse: one delegated handler for rows and actions.
 browse.addEventListener('click', (e) => {
   const link = e.target.closest('[data-go]'); if (link) { location.hash = link.dataset.go; return; }
+  const mo = e.target.closest('[data-moed]');
+  if (mo) { const k = 'feasts', i = D.T[k]?.steps.findIndex((st) => st.prophecyId === mo.dataset.moed); openReader(mo.dataset.moed, i >= 0 ? { kind: 'thread', key: k } : { kind: 'list' }, mo, i >= 0 ? i : undefined); return; }
   const fan = e.target.closest('.tl-fan');
   if (fan) { const g = nearestArc(fan, e.clientX, e.clientY); if (g) openReader(g.dataset.id, { kind: 'time' }, null); return; }
   const th = e.target.closest('[data-thread]'); if (th) { location.hash = '#/threads/' + th.dataset.thread; return; }
@@ -1934,6 +2116,7 @@ rBody.addEventListener('click', (e) => {
   if (vl) { e.preventDefault(); const [o, c, v] = vl.dataset.verse.split('.'); openXref(o, +c, +v).catch(() => toast.warning(t('xrefErr'))); return; }
   const bl = e.target.closest('[data-bible]');
   if (bl) { e.preventDefault(); pushed = false; location.hash = bl.dataset.bible; return; }
+  if (e.target.closest('[data-share-img]')) { shareBridgeImage(D.byId.get(cur.id)); return; }
   if (e.target.closest('[data-cite]')) { citation(D.byId.get(cur.id)).then((c) => copy(c.plain, t('citeCopied'))); return; }
   if (e.target.closest('[data-onmap]')) { S.mapBook = D.byId.get(cur.id).ot.book; S.mapScroll = true; S.mapCat = 'all'; syncChips($('#mapCats'), 'all'); pushed = false; location.hash = '#/map'; return; }
   const kw = e.target.closest('[data-kw]');
@@ -1957,6 +2140,28 @@ if (window.ResizeObserver) new ResizeObserver(() => {
   document.documentElement.style.setProperty('--tabbar-h', fixed ? `${Math.ceil(tabbar.getBoundingClientRect().height)}px` : '0px');
 }).observe(tabbar);
 
+// ---------- offline ----------
+// The worker keeps the app and what you read. Once per version and Bible, while the device is idle, it is also asked
+// to keep every bridge's passages and the studies, so they read without a connection (never the NLT, which is live only).
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === '127.0.0.1' || location.hostname === 'localhost')) {
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+function warmOffline() {
+  const sw = navigator.serviceWorker?.controller, tr = trInfo().id;
+  if (!sw || tr === 'nlt' || navigator.connection?.saveData) return;
+  const key = `sb_warm_${tr}_4`;
+  if (store.get(key, false)) return;
+  const urls = new Set(['data/studies/index.json']);
+  for (const p of D.P) for (const side of ['ot', 'nt']) for (const sg of parseRefList(p[side].ref)) urls.add(`data/bible/${tr}/${sg.osis}/${sg.c}.json`);
+  Object.keys(D.SI?.studies || { hope1: 1, hope2: 1, hope3: 1, hope4: 1, hope5: 1, saved1: 1, saved2: 1, saved3: 1, godhead: 1, passion: 1 }).forEach((id) => urls.add(`data/studies/${id}.json`));
+  // and every chapter the studies turn to
+  getJSON('data/studies/chapters.json').catch(() => []).then((chs) => {
+    chs.forEach((oc) => urls.add(`data/bible/${tr}/${oc}.json`));
+    sw.postMessage({ warm: [...urls].map((u) => new URL(u, location.href).href) });
+    store.set(key, true);
+  });
+}
+
 // ---------- start ----------
 load().then(() => {
   applyStatic();
@@ -1966,6 +2171,10 @@ load().then(() => {
   route();
   // First visit: ask which Bible (and so which language) to use.
   if (!store.get('sb_tr_chosen', false)) showWelcome();
+  // Keep the passages for offline reading a few seconds after the app settles (and once the worker controls the page).
+  const warm = () => (window.requestIdleCallback || setTimeout)(warmOffline, { timeout: 4000 });
+  setTimeout(warm, 5000);
+  navigator.serviceWorker?.addEventListener('controllerchange', () => setTimeout(warm, 3000));
 }).catch((err) => {
   $('#count').textContent = t('loadErr');
   console.error(err);

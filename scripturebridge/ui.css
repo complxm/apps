@@ -411,14 +411,14 @@ fvl-button[hidden] { display: none; }
 .bbook:focus-visible { outline: none; }
 .bbook .bname { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bbook .n { flex: none; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-micro-size); font-variant-numeric: var(--fvl-type-data-numeric); }
-.bbook.none { color: var(--fvl-color-text-disabled); cursor: default; }
+.bbook.none { color: var(--fvl-color-text-muted); cursor: default; }
 .bbook.none:hover { background: none; }
 .bmap.has-sel .bbook:not(.sel):not(.linked) { color: var(--fvl-color-text-muted); }
 .bbook.linked { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); }
 .bbook.sel { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); font-weight: var(--fvl-type-label-weight); }
 .bbook.sel .n { color: var(--fvl-color-accent-text); }
 .bcurves { display: block; width: 100%; height: var(--bmap-h); overflow: visible; }
-.curve { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: 0.4; transition: opacity var(--fvl-motion-tone); }
+.curve { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: 0.85; transition: opacity var(--fvl-motion-tone); }
 .bmap.has-sel .curve { opacity: 0.08; }
 .bmap.has-sel .curve.on { opacity: 1; stroke-width: 2.5; }
 
@@ -721,7 +721,9 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   letter-spacing: var(--fvl-type-lead-tracking);
 }
 .p-text mark {
-  background: var(--fvl-color-accent-subtle);
+  /* The words that carry the link: a tint plus an accent underline, so they stand out even where the tint is faint. */
+  background: var(--fvl-color-accent-subtle-hover);
+  box-shadow: inset 0 -2px 0 var(--fvl-color-accent-default);
   color: var(--fvl-color-text-primary);
   border-radius: var(--fvl-radius-tag);
   padding-inline: 2px;
@@ -886,7 +888,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 }
 /* Narrow screens keep every other century mark, so the labels never collide. */
 @media (width < 37.5rem) { .tl-years span.minor { display: none; } }
-.tl-arc { fill: none; stroke: currentColor; stroke-width: 1.5px; vector-effect: non-scaling-stroke; opacity: 0.6; pointer-events: none; transition: opacity var(--fvl-motion-tone), stroke-width var(--fvl-motion-tone); }
+.tl-arc { fill: none; stroke: currentColor; stroke-width: 1.5px; vector-effect: non-scaling-stroke; opacity: 1; pointer-events: none; transition: opacity var(--fvl-motion-tone), stroke-width var(--fvl-motion-tone); }
 /* The arc nearest the pointer comes forward; the others step back. */
 .tl-fan { cursor: pointer; }
 .tl-fan.has-near .tl-arc { opacity: 0.16; }
@@ -1024,7 +1026,53 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 
 /* ---------- home: the promise, and the day it was kept ---------- */
 #hero:empty { display: none; }
-#hero { display: grid; gap: var(--fvl-space-stack-group); padding-block: var(--fvl-space-stack-group) var(--fvl-space-stack-related); }
+#hero { padding-block: var(--fvl-space-stack-related); }
+/* The sky: FVL's living field, following the time of day (dawn, day, dusk, night). It keeps its text colour at
+   4.5:1 against every pixel, so everything drawn on it uses that colour at (nearly) full strength. */
+.hero-sky {
+  display: block;
+  border-radius: var(--fvl-radius-panel);
+  overflow: hidden;
+  color: var(--fvl-color-text-primary);
+  isolation: isolate;
+}
+.hero-in { display: grid; gap: var(--fvl-space-stack-group); padding: var(--fvl-space-stack-group) var(--fvl-space-inset-container) var(--fvl-space-inset-container); }
+@media (width >= 37.5rem) { .hero-in { padding: calc(var(--fvl-space-stack-group) * 2) calc(var(--fvl-space-inset-container) * 1.5) calc(var(--fvl-space-inset-container) * 1.5); } }
+.hero-sky .hero-sub, .hero-sky .hero-progress { color: inherit; }
+.hero-sky .tl-axis, .hero-sky .tl-tick { stroke: currentColor; }
+.hero-sky .tl-years span, .hero-sky .tl-cap { color: inherit; }
+/* On the sky the arcs are one colour (the sky's text colour); read bridges are drawn solid and thick. */
+.hero-sky .tl-bridge { color: inherit; }
+.hero-sky .tl-arc { opacity: 0.8; stroke-width: 1.5px; stroke-dasharray: 6 8; }
+.hero-sky .tl-fan.drawing .tl-arc { stroke-dasharray: none; }
+.hero-sky .tl-bridge.read .tl-arc { opacity: 1; stroke-width: 2.5px; stroke-dasharray: none; }
+.hero-sky .tl-fan.has-near .tl-arc { opacity: 0.35; }
+.hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 3px; stroke-dasharray: none; }
+.hero-sky .tl-fan:not([data-cat="all"]) .tl-arc { opacity: 0.3; }
+.hero-progress { margin: 0; font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.hero-next {
+  appearance: none;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--fvl-space-icon-gap);
+  width: 100%;
+  padding: var(--fvl-space-inset-container);
+  border-radius: var(--fvl-radius-container);
+  background: var(--fvl-color-bg-surface);
+  color: var(--fvl-color-text-primary);
+  transition: background var(--fvl-motion-tone);
+}
+.hero-next:hover { background: var(--fvl-color-bg-hover); }
+.hero-next:focus-visible { outline: none; }
+.hero-next > span { flex: 1; min-width: 0; }
+.hero-next small { display: block; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.hero-next b { font-weight: var(--fvl-type-label-weight); }
+.hn-when { color: var(--fvl-color-text-secondary); font-variant-numeric: var(--fvl-type-data-numeric); }
+@media (width >= 37.5rem) { .hero-next { width: auto; justify-self: start; } }
 .hero-text { display: grid; gap: var(--fvl-space-stack-related); max-width: var(--fvl-layout-width-prose); }
 .hero-title {
   margin: 0;
@@ -1111,7 +1159,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--fvl-color-line-subtle);
+  background: var(--fvl-color-line-strong);
 }
 .path > li:first-child::before { top: calc(var(--fvl-space-inset-container) + 0.75em); }
 .path > li:last-child::before { bottom: auto; height: calc(var(--fvl-space-inset-container) + 0.75em); }
@@ -1139,3 +1187,16 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .tspan i::after { background: var(--fvl-color-accent-default); }
 .tspan b { position: absolute; top: 50%; width: 8px; height: 8px; transform: translate(-50%, -50%); border-radius: var(--fvl-radius-pill); background: var(--fvl-color-bg-surface); box-shadow: inset 0 0 0 2px currentColor; }
 .row:hover .tspan b { background: var(--fvl-color-bg-hover); }
+
+/* ---------- Bible: bridge marks and comparison ---------- */
+.vn { display: grid; justify-items: end; align-content: start; }
+.vb-mark { width: 1rem; height: 0.5625rem; margin-top: 2px; overflow: visible; }
+.vb-mark path { fill: none; stroke: var(--fvl-color-accent-default); stroke-width: 1.5; stroke-linecap: round; }
+.vb-mark circle { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-accent-default); stroke-width: 1.25; }
+.vb-mark.kept circle:last-of-type { fill: var(--fvl-color-accent-default); }
+.cmp-slot[hidden] { display: none; }
+.cmp { margin: 0; display: grid; gap: var(--fvl-space-stack-related); }
+.cmp-row { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--fvl-space-icon-gap); padding: var(--fvl-space-stack-related) 0; border-top: 1px solid var(--fvl-color-line-subtle); }
+.cmp-row:first-child { border-top: 0; }
+.cmp dt { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-body-line-height); font-weight: var(--fvl-type-label-weight); }
+.cmp dd { margin: 0; color: var(--fvl-color-text-primary); }
