@@ -1601,9 +1601,19 @@ function closeReader() {
     gsap.to(reader, { opacity: 0, duration: reduced ? 0 : 0.2, onComplete: done });
   }
 }
+// Closing the reader returns to the list it was read from: the thread or study page, the map, saved, or the bridges.
+function listHash(ctx) {
+  if (!ctx) return '#/' + (S.tab || 'bridges');
+  if (ctx.kind === 'study') return `#/threads/study/${encodeURIComponent(ctx.key)}`;
+  if (ctx.kind === 'thread') return `#/threads/${ctx.key}`;
+  if (ctx.kind === 'time') return S.tab === 'map' ? '#/map/time' : '#/bridges';
+  if (ctx.kind === 'map') return '#/map';
+  if (ctx.kind === 'saved') return '#/saved';
+  return '#/' + (S.tab || 'bridges');
+}
 function back() {
   if (pushed) { pushed = false; history.back(); }
-  else location.replace('#/' + (S.tab || 'bridges'));
+  else location.replace(listHash(cur?.ctx));
 }
 
 function go(d) {
@@ -1785,13 +1795,15 @@ function syncTrUI() {
 const trPop = $('#trPop'), trBtn = $('#trBtn');
 function openTrMenu() {
   syncTrUI();
-  const r = trBtn.getBoundingClientRect();
-  trPop.style.top = `${Math.round(r.bottom + 8)}px`;
-  trPop.style.right = `${Math.round(Math.max(16, innerWidth - r.right))}px`;
+  // The menu opens towards the free space: down from the phone's top bar, up from the bottom of the desktop sidebar.
+  const r = trBtn.getBoundingClientRect(), up = r.top > innerHeight / 2, left = r.left < innerWidth / 2;
+  Object.assign(trPop.style, { top: up ? '' : `${Math.round(r.bottom + 8)}px`, bottom: up ? `${Math.round(innerHeight - r.top + 8)}px` : '',
+    right: left ? '' : `${Math.round(Math.max(16, innerWidth - r.right))}px`, left: left ? `${Math.round(Math.max(16, r.left))}px` : '' });
+  const origin = `${up ? 'bottom' : 'top'} ${left ? 'left' : 'right'}`;
   trPop.hidden = false;
   trBtn.setAttribute('aria-expanded', 'true');
   if (!reduced) {
-    gsap.fromTo(trPop, { opacity: 0, scale: 0.94, y: -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.36, ease: 'fvl-arrive', transformOrigin: 'top right' });
+    gsap.fromTo(trPop, { opacity: 0, scale: 0.94, y: up ? 6 : -6 }, { opacity: 1, scale: 1, y: 0, duration: 0.36, ease: 'fvl-arrive', transformOrigin: origin });
     gsap.fromTo($$('.tr-opt', trPop), { opacity: 0, y: -4 }, { opacity: 1, y: 0, duration: 0.24, stagger: 0.035, delay: 0.05, ease: 'power2.out', clearProps: 'opacity,transform' });
   }
   softFocus($('.tr-opt[aria-checked="true"]', trPop) || $('.tr-opt', trPop));
@@ -1937,6 +1949,13 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   else if (e.key === 'Escape') { e.preventDefault(); back(); }
 });
+
+// The tab bar's real height (it grows with the text size), so nothing sits under it.
+const tabbar = $('.tabbar');
+if (window.ResizeObserver) new ResizeObserver(() => {
+  const fixed = getComputedStyle(tabbar).position === 'fixed';
+  document.documentElement.style.setProperty('--tabbar-h', fixed ? `${Math.ceil(tabbar.getBoundingClientRect().height)}px` : '0px');
+}).observe(tabbar);
 
 // ---------- start ----------
 load().then(() => {
