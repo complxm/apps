@@ -15,6 +15,10 @@
 
 The default page is a calm reader built on the Flow Visual Language (FVL) and GSAP:
 
+- **Time is the visual language.** Every bridge is a span on one shared axis, 2100 BC to AD 150: an open ring at the year of the promise, a filled point at the year it was kept, in its category colour. The home screen opens with all 84 bridges as arcs over two thousand years (they draw in once, oldest promise first; tap the arc nearest your finger to read it; on desktop the nearest arc lights up and is named). Each row carries its own span and the years between; each thread shows its promises as rings along the same axis; the reader shows the bridge as one arc with both dates and "1,457 years later" under it. The wordmark is the same arc.
+- **Frame:** on phones the sections sit in a tab bar at the bottom; from 52.5rem a sidebar holds the wordmark, the sections and the Bible switch. From 75rem bridge lists use two columns and the reader sets promise and fulfilment side by side.
+- **Routes:** thread and study steps hang off one line, a filled point where the passage is read aloud, an open ring where it is only mentioned.
+
 - **Browse** with search, category chips and one filter drawer (book and relationship). Rows show what you have read and saved, and **Continue reading** picks up where you stopped.
 - **Tap a bridge** and it grows into a full-screen reader: promise, fulfilment, why they connect. The rest of the app is hidden. The top and bottom bars step aside as you read down and return on the way up.
 - **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.

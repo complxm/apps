@@ -10,7 +10,7 @@
 <link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
 <link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
 <link rel="stylesheet" href="/apps/vendor/fvl/css/fvl.css">
-<link rel="stylesheet" href="ui.css?v=20261029c">
+<link rel="stylesheet" href="ui.css?v=20261031b">
 <script>
   // FVL context: daylight from the clock (dawn 05–09, day 09–17, dusk 17–21, night 21–05). Theme follows the OS.
   (function () {
@@ -22,30 +22,32 @@
 <body>
 
 <div id="browse">
-  <header class="masthead wrap">
-    <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation" aria-haspopup="dialog" aria-expanded="false"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
-    <div class="brand">
-      <h1>ScriptureBridge</h1>
-      <p data-i18n="tagline">Old Testament promises and their New Testament fulfilments, across all 66 books.</p>
-    </div>
-  </header>
-  <div class="top" id="top">
-    <div class="wrap">
-      <div class="nav-scroll">
-        <fvl-segmented id="nav" value="bridges" aria-label="Sections" data-i18n-attr="aria-label:sections">
-          <fvl-segment value="bridges" data-i18n="tab.bridges">Bridges</fvl-segment>
-          <fvl-segment value="bible" data-i18n="tab.bible">Bible</fvl-segment>
-          <fvl-segment value="threads" data-i18n="tab.threads">Threads</fvl-segment>
-          <fvl-segment value="map" data-i18n="tab.map">Map</fvl-segment>
-          <fvl-segment value="saved" data-i18n="tab.saved">Saved</fvl-segment>
-        </fvl-segmented>
-      </div>
-    </div>
-  </div>
+  <!-- Phone: a top bar that scrolls away and a tab bar at the bottom. Wide screens: one sidebar with both. -->
+  <aside class="rail">
+    <header class="appbar">
+      <a class="wordmark" href="#/bridges" aria-label="ScriptureBridge">
+        <svg class="mark" viewBox="0 0 32 20" aria-hidden="true"><path d="M4 16A12 12 0 0 1 28 16"/><circle class="m-open" cx="4" cy="16" r="2.5"/><circle class="m-kept" cx="28" cy="16" r="2.5"/></svg>
+        <span>ScriptureBridge</span>
+      </a>
+      <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation" aria-haspopup="dialog" aria-expanded="false"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
+    </header>
+    <nav class="tabbar" id="nav" aria-label="Sections" data-i18n-attr="aria-label:sections">
+      <button type="button" class="tab" data-tab="bridges" aria-current="page">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18A9 9 0 0 1 21 18"/><circle cx="3" cy="18" r="1.6"/><circle cx="21" cy="18" r="1.6"/></svg>
+        <span data-i18n="tab.bridges">Bridges</span></button>
+      <button type="button" class="tab" data-tab="bible"><fvl-icon class="tab-ic" name="book-open"></fvl-icon><span data-i18n="tab.bible">Bible</span></button>
+      <button type="button" class="tab" data-tab="threads">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14"/><circle cx="6" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M11 5h9M11 12h7M11 19h9"/></svg>
+        <span data-i18n="tab.threads">Threads</span></button>
+      <button type="button" class="tab" data-tab="map"><fvl-icon class="tab-ic" name="map"></fvl-icon><span data-i18n="tab.map">Map</span></button>
+      <button type="button" class="tab" data-tab="saved"><fvl-icon class="tab-ic" name="star"></fvl-icon><span data-i18n="tab.saved">Saved</span></button>
+    </nav>
+  </aside>
 
   <main class="wrap">
     <!-- Bridges -->
     <section id="view-bridges" class="view stack" aria-label="Bridges" data-i18n-attr="aria-label:tab.bridges">
+      <div id="hero"></div>
       <div id="continue"></div>
       <fvl-search id="q" placeholder="Search verses, books or words" aria-label="Search bridges" data-i18n-attr="placeholder:search.ph;aria-label:search.label;clear-label:search.clear"></fvl-search>
       <div>
@@ -152,6 +154,6 @@
 
 <script src="/apps/vendor/gsap/gsap.min.js"></script>
 <script src="/apps/vendor/gsap/DrawSVGPlugin.min.js"></script>
-<script type="module" src="ui.js?v=20261029c"></script>
+<script type="module" src="ui.js?v=20261031b"></script>
 </body>
 </html>

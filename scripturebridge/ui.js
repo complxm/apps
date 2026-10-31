@@ -81,7 +81,10 @@ const STR = {
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
     'map.mode': 'Map view', 'map.books': 'Books', 'map.time': 'Time', 'map.timeLead': 'Each arc runs from a promise to its fulfilment, oldest promise first. Tap a bridge to read it.',
-    'tl.bc': '{n} BC', 'tl.ad': 'AD {n}', 'tl.years': '{n} years', 'pos.time': 'In time order · {i} of {n}',
+    'tl.bc': '{n} BC', 'tl.ad': 'AD {n}', 'tl.years': '{n} years', 'tl.later': '{n} years later',
+    'hero.title': 'The promise, and the day it was kept.',
+    'hero.sub': '{n} bridges across two thousand years of Scripture. Each arc runs from a promise to its fulfilment. Tap one to read it.',
+    'hero.aria': 'Every bridge as an arc on a timeline, from the year of the promise to the year it was fulfilled', 'pos.time': 'In time order · {i} of {n}',
     'saved.emptyH': 'Nothing saved yet', 'saved.emptyD': 'Open a bridge and tap the star to keep it here.', 'saved.lead': '{n} {bridge}, in the order you saved them.',
     readSaved: 'Read saved', copyMd: 'Copy as Markdown', copiedMd: 'Copied as Markdown',
     'bible.lead': '{name}, with every OpenBible.info cross-reference. Tap any verse to see everything it connects to.',
@@ -140,7 +143,10 @@ const STR = {
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
     'map.mode': 'Widok mapy', 'map.books': 'Księgi', 'map.time': 'Czas', 'map.timeLead': 'Każdy łuk biegnie od obietnicy do jej wypełnienia, od najstarszej obietnicy. Dotknij mostu, aby go przeczytać.',
-    'tl.bc': '{n} p.n.e.', 'tl.ad': '{n} n.e.', 'tl.years': '{n} lat', 'pos.time': 'Według czasu · {i} z {n}',
+    'tl.bc': '{n} p.n.e.', 'tl.ad': '{n} n.e.', 'tl.years': '{n} lat', 'tl.later': '{n} lat później',
+    'hero.title': 'Obietnica i dzień, w którym się spełniła.',
+    'hero.sub': '{n} mostów przez dwa tysiące lat Pisma. Każdy łuk biegnie od obietnicy do jej spełnienia. Dotknij go, aby przeczytać.',
+    'hero.aria': 'Każdy most jako łuk na osi czasu, od roku obietnicy do roku spełnienia', 'pos.time': 'Według czasu · {i} z {n}',
     'saved.emptyH': 'Nic jeszcze nie zapisano', 'saved.emptyD': 'Otwórz most i dotknij gwiazdki, aby go tu zachować.', 'saved.lead': '{n} {bridge}, w kolejności zapisywania.',
     readSaved: 'Czytaj zapisane', copyMd: 'Kopiuj jako Markdown', copiedMd: 'Skopiowano jako Markdown',
     'bible.lead': '{name} ze wszystkimi odnośnikami OpenBible.info. Dotknij dowolnego wersetu, aby zobaczyć wszystko, z czym się łączy.',
@@ -295,15 +301,93 @@ function filtered() {
 }
 
 // ---------- rows ----------
+// ---------- spans ----------
+// Every bridge sits on one shared axis, 2100 BC to AD 150: an open ring at the year of the promise,
+// a filled point at the year it was fulfilled, the line between them in its category colour.
+const SPAN = { y0: -2100, y1: 150 };
+const spanPct = (yr) => ((yr - SPAN.y0) / (SPAN.y1 - SPAN.y0)) * 100;
+const yearsOf = (p) => { const y = eraYears(p); return y ? y.nt - y.ot : null; };
+function spanHTML(p) {
+  const y = eraYears(p);
+  return y ? `<span class="span c-${esc(p.category)}" aria-hidden="true" style="--a:${spanPct(y.ot).toFixed(2)}%;--b:${spanPct(y.nt).toFixed(2)}%"><i></i></span>` : '';
+}
+// A thread on the same axis: an open ring at each step's promise, converging on the fulfilment.
+function threadSpanHTML(th) {
+  const ps = th.steps.map((st) => D.byId.get(st.prophecyId)).filter(Boolean).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y);
+  if (!ps.length) return '<span class="span"></span>';
+  const a = Math.min(...ps.map((x) => x.y.ot)), b = Math.max(...ps.map((x) => x.y.nt));
+  const dots = ps.map(({ p, y }) => `<b class="c-${esc(p.category)}" style="left:${spanPct(y.ot).toFixed(2)}%"></b>`).join('');
+  return `<span class="span tspan" aria-hidden="true" style="--a:${spanPct(a).toFixed(2)}%;--b:${spanPct(b).toFixed(2)}%"><i></i>${dots}</span>`;
+}
+// The arcs of many bridges over one axis (the home screen and the Time map).
+function fanSVG(list, { W = 1000, H = 280, cls = '' } = {}) {
+  const base = H - 10, X = (yr) => 16 + ((yr - SPAN.y0) / (SPAN.y1 - SPAN.y0)) * (W - 32);
+  const label = (yr) => (yr === 0 ? t('tl.ad', { n: '1' }) : t('tl.bc', { n: String(-yr) }));
+  const years = [-2000, -1500, -1000, -500, 0];
+  const ticks = years.map((yr) => `<line class="tl-tick" x1="${X(yr)}" x2="${X(yr)}" y1="${base}" y2="${base + 8}"/>`).join('');
+  const arcs = list.map(({ p, y }) => {
+    const a = X(y.ot), b = X(y.nt), rx = (b - a) / 2, ry = Math.min(base - 12, rx * 0.58);
+    const d = `M${a.toFixed(1)} ${base} A${rx.toFixed(1)} ${ry.toFixed(1)} 0 0 1 ${b.toFixed(1)} ${base}`;
+    return `<g class="tl-bridge c-${esc(p.category)}" data-id="${esc(p.id)}" data-arc="${((a + b) / 2).toFixed(1)} ${rx.toFixed(1)} ${ry.toFixed(1)} ${base}"><path class="tl-arc" d="${d}"/></g>`;
+  }).join('');
+  // Year labels are HTML under the drawing, so they keep a readable size at any width.
+  return `<div class="tl-wrap ${cls}"><svg class="tl-fan" viewBox="0 0 ${W} ${H + 8}" preserveAspectRatio="none" role="img" aria-label="${esc(t('hero.aria'))}" data-cat="${esc(S.cat)}">
+    <line class="tl-axis" x1="16" x2="${W - 16}" y1="${base}" y2="${base}"/>${ticks}<g class="tl-arcs">${arcs}</g></svg>
+    <div class="tl-years" aria-hidden="true">${years.map((yr) => `<span${yr === -1500 || yr === -500 ? ' class="minor"' : ''} style="left:${((X(yr) / W) * 100).toFixed(2)}%">${esc(label(yr))}</span>`).join('')}</div>
+    <p class="tl-cap" aria-live="polite"></p></div>`;
+}
+// Arcs cross, so a tap or a pointer picks the arc nearest to it on screen (within a finger's width), not the one on top.
+function nearestArc(svg, x, y, within = 22) {
+  const m = svg.getScreenCTM();
+  if (!m) return null;
+  let best = null, bd = within;
+  $$('.tl-bridge', svg).forEach((g) => {
+    if (getComputedStyle(g.querySelector('.tl-arc')).opacity < 0.3) return; // stepped back by a filter
+    const [cx, rx, ry, base] = g.dataset.arc.split(' ').map(Number);
+    for (let k = 0; k <= 48; k++) {
+      const th = Math.PI * (k / 48), px = cx - rx * Math.cos(th), py = base - ry * Math.sin(th);
+      const sx = px * m.a + m.e, sy = py * m.d + m.f, d = Math.hypot(sx - x, sy - y);
+      if (d < bd) { bd = d; best = g; }
+    }
+  });
+  return best;
+}
+function fanPoint(e) {
+  const svg = e.target.closest?.('.tl-fan');
+  if (!svg) return;
+  const g = nearestArc(svg, e.clientX, e.clientY);
+  $$('.tl-bridge.is-near', svg).forEach((x) => { if (x !== g) x.classList.remove('is-near'); });
+  svg.classList.toggle('has-near', !!g);
+  const cap = svg.parentElement.querySelector('.tl-cap');
+  if (g) {
+    g.classList.add('is-near');
+    const p = D.byId.get(g.dataset.id);
+    if (cap && p) cap.textContent = `${L(p).title} · ${locRef(p.ot.ref)} → ${locRef(L(p).nt.ref)}`;
+  } else if (cap) cap.textContent = '';
+}
+const timeList = (filter) => D.P.filter(filter).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y).sort((a, b) => a.y.ot - b.y.ot || a.y.nt - b.y.nt);
+let heroDrawn = false;
+function renderHero() {
+  const el = $('#hero');
+  const list = timeList(() => true);
+  el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
+    <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>${fanSVG(list, { cls: 'hero-fan' })}`;
+  // One orchestrated moment: the first time the home screen opens, the arcs draw in, oldest promise first.
+  if (!heroDrawn && window.DrawSVGPlugin && !reduced) gsap.from('#hero .tl-arc', { drawSVG: '0%', stagger: 0.012, ...spring.grow });
+  heroDrawn = true;
+  el.dataset.lang = lang();
+}
+
 function rowHTML(p0, { summary = true } = {}) {
   const p = L(p0);
-  const isRead = readSet.has(p.id), isSaved = saved.includes(p.id);
-  return `<li><button type="button" class="row${isRead ? ' is-read' : ''}" data-id="${esc(p.id)}">
+  const isRead = readSet.has(p.id), isSaved = saved.includes(p.id), yrs = yearsOf(p0);
+  // Span and years share the first line; the years have a fixed width, so every row's timeline lines up.
+  return `<li><button type="button" class="row span-row${isRead ? ' is-read' : ''}" data-id="${esc(p.id)}">
+    <span class="span-line">${spanHTML(p0)}<span class="row-gap">${yrs != null ? esc(t('tl.years', { n: num(yrs) })) : ''}</span><span class="sr">${esc(catLabel(p))}</span></span>
     <span class="row-head">
-      <span class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}</span>
+      <span class="row-title">${esc(p.title)}</span>
       <span class="row-marks">${isSaved ? `<fvl-icon class="saved" name="star" label="${esc(t('rowSaved'))}"></fvl-icon>` : ''}${isRead ? `<fvl-icon name="check" label="${esc(t('rowRead'))}"></fvl-icon>` : ''}</span>
     </span>
-    <span class="row-title">${esc(p.title)}</span>
     <span class="refs">${esc(locRef(p.ot.ref))} <span aria-hidden="true">→</span><span class="sr">${esc(t('fulfilledIn'))}</span> ${esc(locRef(p.nt.ref))}</span>
     ${summary ? `<span class="row-sum">${esc(p.bridge)}</span>` : ''}
   </button></li>`;
@@ -327,6 +411,8 @@ function buildFilters() {
 function syncChips(group, cur) { $$('fvl-tag', group).forEach((t) => { t.selected = t.getAttribute('value') === cur; }); }
 
 function renderBridges() {
+  if (!$('#hero .tl-fan') || $('#hero').dataset.lang !== lang()) renderHero();
+  $('#hero .tl-fan')?.setAttribute('data-cat', S.cat);
   const list = filtered();
   $('#count').textContent = `${num(list.length)} ${pluralForm(list.length, 'bridge')}`;
   $('#applyBtn').textContent = list.length ? t('apply', { n: list.length }) : t('noMatch');
@@ -421,8 +507,8 @@ function renderThreads() {
   const th = S.thread && D.T[S.thread] && LT(S.thread);
   if (!th) {
     v.innerHTML = `<div class="nav-scroll">${thModeHTML('threads')}</div><div class="section-head"><h2>${esc(t('tab.threads'))}</h2><p>${esc(t('threads.lead'))}</p></div>
-      <ol class="list">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
-        <span class="kicker">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
+      <ol class="list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
+        <span class="span-line">${threadSpanHTML(D.T[k])}<span class="row-gap">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span></span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
     wireThMode(v);
     return;
   }
@@ -431,7 +517,7 @@ function renderThreads() {
   v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/threads"><fvl-icon name="arrow-left"></fvl-icon>${esc(t('allThreads'))}</fvl-button></div>
     <div class="section-head"><h2>${esc(th.title)}</h2><p>${esc(th.description)}</p>${cal && D.CALNOTE[lang()] ? `<p class="note">${esc(D.CALNOTE[lang()])}</p>` : ''}</div>
     <div class="actions"><fvl-button variant="primary" data-read-thread="${esc(S.thread)}">${esc(t('readThread'))}</fvl-button></div>
-    <ol class="list">${th.steps.map((st, i) => {
+    <ol class="list path">${th.steps.map((st, i) => {
       const p = D.byId.get(st.prophecyId);
       const tm = cal && D.TIMEBY.get(st.prophecyId), when = tm ? moedWhen(tm, true) : '';
       return `<li><button type="button" class="row${p && readSet.has(p.id) ? ' is-read' : ''}" data-id="${esc(st.prophecyId)}" data-step="${i}">
@@ -510,7 +596,7 @@ async function renderStudies() {
     <section class="st-claims" aria-label="${esc(t('st.concludes'))}"><p class="p-label">${esc(t('st.concludes'))}</p><ul>${x.claims.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></section>
     <div class="motifs" aria-label="${esc(t('st.topics'))}">${x.topics.map((k) => `<fvl-tag>${esc(k)}</fvl-tag>`).join('')}</div>
     <div class="actions"><fvl-button variant="primary" data-read-study="${esc(want)}">${esc(t('st.follow'))}</fvl-button>${meta.video ? `<a class="ext" href="${esc(meta.video)}" target="_blank" rel="noopener">YouTube<fvl-icon name="external-link"></fvl-icon></a>` : ''}</div>
-    <ol class="list">${x.steps.map((st, i) => `<li><button type="button" class="row${sRead.has(sReadKey(want, i)) ? ' is-read' : ''}${st.kind === 'cited' ? ' is-cited' : ''}" data-sstep="${i}">
+    <ol class="list path">${x.steps.map((st, i) => `<li><button type="button" class="row${sRead.has(sReadKey(want, i)) ? ' is-read' : ''}${st.kind === 'cited' ? ' is-cited' : ''}" data-sstep="${i}">
       <span class="kicker">${stepKicker(st, i)}</span><span class="row-title">${esc(locRef(st.ref))}</span><span class="row-sum">${esc(st.point)}</span></button></li>`).join('')}</ol>
     <p class="note">${esc(t('st.about'))}</p>`;
 }
@@ -686,25 +772,8 @@ function timeBridges() {
   return D.P.filter(inMapCat).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y).sort((a, b) => a.y.ot - b.y.ot || a.y.nt - b.y.nt);
 }
 function renderTime(animate) {
-  const list = timeBridges(), W = 1000, H = 340, base = 290, y0 = -2100, y1 = 150;
-  const X = (yr) => 20 + ((yr - y0) / (y1 - y0)) * (W - 40);
-  const yearLabel = (yr) => (yr < 0 ? t('tl.bc', { n: String(-yr) }) : t('tl.ad', { n: String(yr || 1) }));
-  const ticks = [-2000, -1500, -1000, -500, 0].map((yr) => `<line class="tl-tick" x1="${X(yr)}" x2="${X(yr)}" y1="${base}" y2="${base + 8}"/>
-    <text class="tl-year" x="${X(yr)}" y="${base + 36}" text-anchor="middle">${esc(yr === 0 ? t('tl.ad', { n: '' }).trim() : yearLabel(yr))}</text>`).join('');
-  const arcs = list.map(({ p, y }) => {
-    const a = X(y.ot), b = X(y.nt), rx = (b - a) / 2, ry = Math.min(base - 12, rx * 0.62);
-    return `<path class="tl-arc c-${esc(p.category)}" data-id="${esc(p.id)}" d="M${a.toFixed(1)} ${base} A${rx.toFixed(1)} ${ry.toFixed(1)} 0 0 1 ${b.toFixed(1)} ${base}"/>`;
-  }).join('');
-  $('#timeView').innerHTML = `<svg class="tl-fan" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t('map.time'))}">
-      <line class="tl-axis" x1="20" x2="${W - 20}" y1="${base}" y2="${base}"/>${ticks}<g class="tl-arcs">${arcs}</g></svg>
-    <ol class="list">${list.map(({ p: p0, y }) => {
-      const p = L(p0), gap = y.nt - y.ot;
-      return `<li><button type="button" class="row tl-row${readSet.has(p.id) ? ' is-read' : ''}" data-id="${esc(p.id)}">
-        <span class="row-head"><span class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}</span><span class="kicker">${esc(t('tl.years', { n: gap }))}</span></span>
-        <span class="row-title">${esc(p.title)}</span>
-        <span class="tl-era">${esc(String(p.eraGap).replace(/\s*\([^)]*\)\s*$/, ''))}</span>
-        <span class="refs">${esc(locRef(p.ot.ref))} <span aria-hidden="true">→</span><span class="sr">${esc(t('fulfilledIn'))}</span> ${esc(locRef(p.nt.ref))}</span></button></li>`;
-    }).join('')}</ol>`;
+  const list = timeBridges();
+  $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
   if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow });
 }
 function showMapMode() {
@@ -1266,7 +1335,7 @@ function showTab(t, sub) {
     S.thread = S.thMode === 'threads' && sub && D.T[sub] ? sub : null;
   }
   if (t === 'bible') S.bible = sub || {};
-  $('#nav').value = t;
+  $$('#nav .tab').forEach((b) => { if (b.dataset.tab === t) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
   TABS.forEach((k) => { views[k].hidden = k !== t; });
   renderTab(t, changed);
   if (changed && !verseOnly) {
@@ -1386,6 +1455,19 @@ function moedHTML(id) {
   </section>`;
 }
 
+// The bridge as one arc: the year of the promise under an open ring, the year it was kept under a filled point,
+// and the time between them written under the arc.
+function spanFigure(p0, p) {
+  const [a, b] = String(p.eraGap || '').replace(/\s*\([^)]*\)\s*$/, '').split('→').map((x) => x.trim());
+  const yrs = yearsOf(p0);
+  if (!a || !b) return '';
+  return `<figure class="r-span c-${esc(p0.category)}">
+    <div class="rs-arc" aria-hidden="true"><i class="rs-open"></i><i class="rs-kept"></i>${yrs != null ? `<span class="rs-gap">${esc(t('tl.later', { n: num(yrs) }))}</span>` : ''}</div>
+    <figcaption class="rs-ends">
+      <span><b>${esc(a)}</b><small>${esc(locRef(p.ot.ref))}</small></span>
+      <span class="rs-b"><b>${esc(b)}</b><small>${esc(locRef(p.nt.ref))}</small></span>
+    </figcaption></figure>`;
+}
 let passageToken = 0;
 function renderReader() {
   if (cur.ctx.kind === 'study') return renderStudyReader();
@@ -1402,7 +1484,9 @@ function renderReader() {
     ${step ? `<div class="r-step"><span class="kicker">${esc(step.stage)}</span><p>${esc(step.note)}</p></div>` : ''}
     <p class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}<span aria-hidden="true">·</span>${esc(typeLabel(p.type))}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(p.title)}</h2>
-    <p class="r-meta">${esc(p.eraGap)}${D.EV[p.id]?.votes != null ? ` · ${t('votesReal', { n: D.EV[p.id].votes })}` : ''}</p>
+    ${D.EV[p.id]?.votes != null ? `<p class="r-meta">${esc(t('votesReal', { n: D.EV[p.id].votes }))}</p>` : ''}
+    ${spanFigure(p0, p)}
+    <div class="r-pair">
     <section class="passage" aria-label="${esc(t('promise'))}">
       <p class="p-label">${esc(t('promise'))}</p>
       <h3 class="p-ref">${esc(locRef(p.ot.ref))} <small>${esc(p.ot.author)}</small></h3>
@@ -1417,6 +1501,7 @@ function renderReader() {
       <p class="p-context">${esc(p.nt.context)}</p>
       ${passageLinks(p.nt.ref)}
     </section>
+    </div>
     <section class="why" aria-label="${esc(t('why'))}">
       <p class="p-label">${esc(t('why'))}</p>
       <p>${esc(p.bridge)}</p>
@@ -1431,6 +1516,8 @@ function renderReader() {
     ${nextP ? `<button type="button" class="upnext" data-next><span><small>${esc(t('upNext'))}</small><b>${esc(nextP.title)}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
   </div>`;
   $('#rPos').textContent = positionLabel();
+  const arc = $('.rs-arc', rBody);
+  if (arc && !reduced) gsap.fromTo(arc, { clipPath: 'inset(-16px 100% -16px -16px)' }, { clipPath: 'inset(-16px -16px -16px -16px)', ...spring.grow, delay: 0.1, clearProps: 'clipPath' });
   const isSaved = saved.includes(p.id);
   const star = $('#star');
   star.setAttribute('aria-pressed', String(isSaved));
@@ -1615,7 +1702,7 @@ function route() {
 window.addEventListener('hashchange', route);
 
 // ---------- events ----------
-$('#nav').addEventListener('change', (e) => { const v = e.target.value; if (TABS.includes(v)) location.hash = '#/' + v; });
+$('#nav').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b && TABS.includes(b.dataset.tab)) location.hash = '#/' + b.dataset.tab; });
 let qTimer;
 $('#q').addEventListener('input', (e) => { clearTimeout(qTimer); qTimer = setTimeout(() => { S.q = (e.target.value || '').trim(); renderBridges(); }, 120); });
 $('#cats').addEventListener('change', (e) => { const v = e.target.getAttribute?.('value'); if (!v) return; S.cat = e.target.selected || v === 'all' ? v : 'all'; syncChips($('#cats'), S.cat); renderBridges(); });
@@ -1790,11 +1877,15 @@ $('#xrefSheet').addEventListener('click', (e) => {
   location.hash = link.dataset.go;
 });
 
+browse.addEventListener('pointermove', (e) => { if (e.pointerType !== 'touch') fanPoint(e); }, { passive: true });
+browse.addEventListener('pointerleave', () => $$('.tl-fan.has-near').forEach((f) => { f.classList.remove('has-near'); $$('.is-near', f).forEach((x) => x.classList.remove('is-near')); const c = f.parentElement.querySelector('.tl-cap'); if (c) c.textContent = ''; }), true);
 // Start loading a bridge's passages the moment a finger lands on it.
 browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.row[data-id], .continue[data-id]'); if (row) prefetchBridge(row.dataset.id); }, { passive: true });
 // Browse: one delegated handler for rows and actions.
 browse.addEventListener('click', (e) => {
   const link = e.target.closest('[data-go]'); if (link) { location.hash = link.dataset.go; return; }
+  const fan = e.target.closest('.tl-fan');
+  if (fan) { const g = nearestArc(fan, e.clientX, e.clientY); if (g) openReader(g.dataset.id, { kind: 'time' }, null); return; }
   const th = e.target.closest('[data-thread]'); if (th) { location.hash = '#/threads/' + th.dataset.thread; return; }
   const sd = e.target.closest('[data-study]'); if (sd) { location.hash = '#/threads/study/' + encodeURIComponent(sd.dataset.study); return; }
   const rs = e.target.closest('[data-read-study]'); if (rs) { openStudyStep(rs.dataset.readStudy, 0, $('#view-threads .row[data-sstep="0"]')); return; }
@@ -1846,7 +1937,6 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   else if (e.key === 'Escape') { e.preventDefault(); back(); }
 });
-window.addEventListener('scroll', () => $('#top').classList.toggle('scrolled', scrollY > 4), { passive: true });
 
 // ---------- start ----------
 load().then(() => {
