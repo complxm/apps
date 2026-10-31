@@ -166,7 +166,14 @@ def main():
                  "steps": steps, "pl": pl}
         studies[sid] = study
         write(os.path.join(OUT, sid + ".json"), study)
-        index[sid] = {"title": d["title"], "question": d["question"], "dur": d["dur"], "steps": len(steps), "video": d.get("video"),
+        # The study's route for its cover: x = place in the Bible (Genesis 0 to Revelation 1000, by book and chapter),
+        # y = time in the video (0 to 1000), k = 1 where the passage is read aloud.
+        route = []
+        for st in steps:
+            b0, (c0, _v0), _e = span(st["ref"].split(";")[0])
+            x = round((books.index(b0) + (c0 - 1) / len(b0["verses"])) / 66 * 1000)
+            route.append([x, round(st["t"] / d["dur"] * 1000), 1 if st["kind"] == "read" else 0])
+        index[sid] = {"title": d["title"], "question": d["question"], "dur": d["dur"], "steps": len(steps), "video": d.get("video"), "route": route,
                       "series": study["series"], "part": study["part"], "pl": {"title": pl["title"], "question": pl["question"]}}
     write(os.path.join(OUT, "index.json"), {"source": SOURCE, "series": SERIES, "studies": index})
     write(os.path.join(OUT, "verses.json"), {k: dict(v) for k, v in sorted(verses.items())})

@@ -77,6 +77,10 @@ const STR = {
     'st.loading': 'Loading the study…', 'st.err': 'The study could not be loaded.',
     'st.verses': 'In the studies', 'st.versesHint': 'Studies that turn to this verse. Tap one to follow it from there.',
     'pos.study': '{title} · step {i} of {n}', 'st.alsoAt': 'Also at {times}',
+    'st.single1': 'Single study', 'st.done': '{r} of {n} read', 'st.continue': 'Continue from step {n}', 'st.fromStart': 'From the start',
+    'st.summary': 'What the study covers', 'st.stepsH': 'The {n} steps, in his order',
+    'st.coverHint': 'Each cover draws the study’s route: the line runs from Genesis to Revelation (the tick marks where the New Testament begins), and every arc is one move from a passage to the next.',
+    'st.routeHint': 'The route above: every arc is one move from a passage to the next, along the Bible from Genesis to Revelation. Filled points are books he reads from; open rings, books he only mentions.',
     'share.img': 'Share as picture', 'share.saved': 'Picture saved', 'share.err': 'Could not make the picture.',
     'vb.title': 'Bridges', 'vb.hint': 'This verse is part of these bridges.', 'vb.aria': 'part of {n} bridge(s)',
     'cmp.open': 'Compare Bibles', 'cmp.close': 'Hide comparison', 'cmp.na': 'Not available right now.',
@@ -143,6 +147,10 @@ const STR = {
     'st.loading': 'Wczytywanie studium…', 'st.err': 'Nie udało się wczytać studium.',
     'st.verses': 'W studiach', 'st.versesHint': 'Studia, które sięgają do tego wersetu. Dotknij, aby iść dalej od tego miejsca.',
     'pos.study': '{title} · krok {i} z {n}', 'st.alsoAt': 'Także: {times}',
+    'st.single1': 'Pojedyncze studium', 'st.done': 'Przeczytano {r} z {n}', 'st.continue': 'Kontynuuj od kroku {n}', 'st.fromStart': 'Od początku',
+    'st.summary': 'O czym jest studium', 'st.stepsH': '{n} kroków w jego kolejności',
+    'st.coverHint': 'Każda okładka rysuje trasę studium: linia biegnie od Księgi Rodzaju do Objawienia (kreska oznacza początek Nowego Testamentu), a każdy łuk to jedno przejście od fragmentu do następnego.',
+    'st.routeHint': 'Trasa powyżej: każdy łuk to jedno przejście od fragmentu do następnego, wzdłuż Biblii od Księgi Rodzaju do Objawienia. Pełne punkty to księgi, z których czyta; puste kółka – księgi tylko wspomniane.',
     'share.img': 'Udostępnij jako obraz', 'share.saved': 'Zapisano obraz', 'share.err': 'Nie udało się utworzyć obrazu.',
     'vb.title': 'Mosty', 'vb.hint': 'Ten werset należy do tych mostów.', 'vb.aria': 'część mostów: {n}',
     'cmp.open': 'Porównaj Biblie', 'cmp.close': 'Ukryj porównanie', 'cmp.na': 'Teraz niedostępne.',
@@ -405,12 +413,12 @@ function renderHero() {
   const list = timeList(() => true);
   // The sky: FVL's living field, following the time of day; the arcs are drawn in its text colour,
   // which the field keeps at 4.5:1 or more against every pixel.
-  el.innerHTML = `<fvl-atmosphere class="hero-sky" daylight="auto" contrast="4.5"><div class="hero-in">
-    <div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
+  // Only the arcs sit on the sky; the words stay on the page in its own colours.
+  el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
     <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>
-    ${fanSVG(list, { cls: 'hero-fan' })}
+    <fvl-atmosphere class="hero-sky" daylight="auto" contrast="4.5" speed="0.6"><div class="hero-in">${fanSVG(list, { cls: 'hero-fan' })}</div></fvl-atmosphere>
     <p class="hero-progress">${esc(heroProgress(list.length))}</p>
-    ${heroNextHTML()}</div></fvl-atmosphere>`;
+    ${heroNextHTML()}`;
   markReadArcs();
   // One orchestrated moment: the first time the home screen opens, the arcs draw in, oldest promise first.
   if (!heroDrawn && window.DrawSVGPlugin && !reduced) {
@@ -608,6 +616,46 @@ function thModeHTML(mode) {
 function wireThMode(v) {
   $('#thMode', v)?.addEventListener('change', (e) => { const m = e.target.value; location.hash = m === 'studies' ? '#/threads/studies' : '#/threads'; });
 }
+// Each study keeps one hue: the Blessed Hope series, the Salvation series, and each single study its own.
+const STUDY_HUE = { hope: 1, saved: 3, godhead: 2, passion: 5 };
+const studyHue = (id) => { const m = D.SI?.studies[id]; return STUDY_HUE[m?.series] || STUDY_HUE[id] || 4; };
+// A study's cover is its route through Scripture as arcs: a line from Genesis (left) to Revelation (right), and an arc
+// for every move he makes from one passage to the next. A filled point marks a book he reads from, an open ring a book he
+// only mentions. No two covers are alike, and they share the app's one shape: the arc.
+function coverSVG(route, W = 300, H = 400) {
+  if (!route?.length) return '';
+  const px = 16, base = H * 0.9, ntX = px + (39 / 66) * (W - 2 * px), X = (x) => px + (x / 1000) * (W - 2 * px), maxH = H * 0.74;
+  let arcs = '';
+  for (let i = 1; i < route.length; i++) {
+    const a = X(route[i - 1][0]), b = X(route[i][0]);
+    if (Math.abs(b - a) < 1.5) continue;
+    const l = Math.min(a, b), r = Math.max(a, b), rx = (r - l) / 2, ry = Math.min(maxH, rx * (W < H ? 2.2 : 1.1));
+    arcs += `M${l.toFixed(1)} ${base.toFixed(1)}A${rx.toFixed(1)} ${ry.toFixed(1)} 0 0 1 ${r.toFixed(1)} ${base.toFixed(1)}`;
+  }
+  const pts = new Map();
+  route.forEach(([x, , k]) => { const key = Math.round(X(x)); pts.set(key, (pts.get(key) || 0) | k); });
+  const pt = (x) => `M${x} ${base.toFixed(1)}h0`;
+  const rd = [...pts].filter(([, k]) => k).map(([x]) => pt(x)).join(''), mt = [...pts].filter(([, k]) => !k).map(([x]) => pt(x)).join('');
+  return `<svg class="sc-art" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+    <line class="sc-axis" x1="${px}" x2="${W - px}" y1="${base.toFixed(1)}" y2="${base.toFixed(1)}"/><line class="sc-nt" x1="${ntX.toFixed(1)}" x2="${ntX.toFixed(1)}" y1="${(base - 10).toFixed(1)}" y2="${(base + 10).toFixed(1)}"/>
+    <path class="sc-route" d="${arcs}"/><path class="mt-o" d="${mt}"/><path class="mt-i" d="${mt}"/><path class="rd" d="${rd}"/></svg>`;
+}
+// The card title drops the series name, which the cover already shows ("Our Blessed Hope 02 – We Are…" -> "We Are…").
+function cardTitle(x) {
+  const i = x.title.indexOf(' – ');
+  return x.series && i > 0 ? x.title.slice(i + 3) : x.series ? t('st.part', { n: x.part }) : x.title;
+}
+function studyCardHTML(id) {
+  const m = D.SI.studies[id], x = LS(m), se = m.series && D.SI.series.find((q) => q.id === m.series);
+  const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(id, i))).filter(Boolean).length;
+  return `<li><button type="button" class="study-card hue-${studyHue(id)}" data-study="${esc(id)}">
+    <span class="sc-cover">${coverSVG(m.route)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
+    <span class="sc-body"><span class="sc-title">${esc(cardTitle({ ...x, series: m.series, part: m.part }))}</span>
+      <span class="sc-q">${esc(x.question)}</span>
+      <span class="sc-meta">${esc(`${num(m.steps)} ${pluralForm(m.steps, 'step')} · ${lenText(m.dur)}`)}</span>
+      ${done ? `<span class="sc-prog" style="--p:${(done / m.steps * 100).toFixed(1)}%" aria-label="${esc(t('st.done', { r: num(done), n: num(m.steps) }))}"><i></i></span>` : ''}</span>
+  </button></li>`;
+}
 async function renderStudies() {
   const v = $('#view-threads');
   const want = S.study;
@@ -620,30 +668,39 @@ async function renderStudies() {
   }
   const I = D.SI;
   if (!want) {
-    const card = (id) => { const x = LS(I.studies[id]); return `<li><button type="button" class="row" data-study="${esc(id)}">
-      <span class="kicker">${x.part ? `<span>${esc(t('st.part', { n: x.part }))}</span><span aria-hidden="true">·</span>` : ''}<span>${num(x.steps)} ${pluralForm(x.steps, 'step')}</span><span aria-hidden="true">·</span><span>${esc(lenText(x.dur))}</span></span>
-      <span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.question)}</span></button></li>`; };
+    const card = (id) => studyCardHTML(id);
     const singles = Object.keys(I.studies).filter((id) => !I.studies[id].series);
     v.innerHTML = `<div class="nav-scroll">${thModeHTML('studies')}</div>
       <div class="section-head"><h2>${esc(t('th.studies'))}</h2><p>${esc(t('st.lead'))}</p></div>
       ${I.series.map((se) => `<section class="st-group" aria-label="${esc(LS(se).title)}"><h3 class="st-group-h"><span class="p-label">${esc(t('st.series'))}</span>${esc(LS(se).title)}</h3>
-        <ol class="list">${se.parts.map(card).join('')}</ol></section>`).join('')}
-      ${singles.length ? `<section class="st-group" aria-label="${esc(t('st.single'))}"><h3 class="st-group-h"><span class="p-label">${esc(t('st.single'))}</span></h3><ol class="list">${singles.map(card).join('')}</ol></section>` : ''}
+        <ol class="study-grid">${se.parts.map(card).join('')}</ol></section>`).join('')}
+      ${singles.length ? `<section class="st-group" aria-label="${esc(t('st.single'))}"><h3 class="st-group-h"><span class="p-label">${esc(t('st.single'))}</span></h3><ol class="study-grid">${singles.map(card).join('')}</ol></section>` : ''}
+      <p class="note">${esc(t('st.coverHint'))}</p>
       <p class="note">${esc(t('st.about'))}</p>`;
     wireThMode(v);
     return;
   }
   const x = LS(D.SD[want]), meta = I.studies[want], se = meta.series && I.series.find((q) => q.id === meta.series);
+  const done = x.steps.filter((_, i) => sRead.has(sReadKey(want, i))).length;
+  // Where to carry on: the first step not yet read after the last one read.
+  let last = -1; x.steps.forEach((_, i) => { if (sRead.has(sReadKey(want, i))) last = i; });
+  const next = done && last < x.steps.length - 1 ? last + 1 : -1;
   v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/threads/studies"><fvl-icon name="arrow-left"></fvl-icon>${esc(t('st.all'))}</fvl-button></div>
-    <div class="section-head">
-      <p class="kicker">${se ? `<span>${esc(LS(se).title)}</span><span aria-hidden="true">·</span><span>${esc(t('st.part', { n: meta.part }))}</span><span aria-hidden="true">·</span>` : ''}<span>${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span><span aria-hidden="true">·</span><span>${esc(lenText(meta.dur))}</span></p>
-      <h2>${esc(x.title)}</h2>
-      <p class="st-question">${esc(x.question)}</p>
-      <p>${esc(x.summary)}</p>
+    <div class="st-hero hue-${studyHue(want)}">
+      <div class="sc-cover wide">${coverSVG(meta.route, 640, 240)}<span class="sc-label">${esc(se ? `${LS(se).title} · ${t('st.part', { n: meta.part })}` : t('st.single1'))}</span></div>
+      <div class="st-hero-text">
+        <h2>${esc(x.title)}</h2>
+        <p class="st-question">${esc(x.question)}</p>
+        <p class="st-meta">${esc(`${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')} · ${lenText(meta.dur)}`)}${done ? ` · ${esc(t('st.done', { r: num(done), n: num(x.steps.length) }))}` : ''}</p>
+        <div class="actions">${next >= 0 ? `<fvl-button variant="primary" data-study-at="${next}">${esc(t('st.continue', { n: next + 1 }))}</fvl-button><fvl-button variant="secondary" data-read-study="${esc(want)}">${esc(t('st.fromStart'))}</fvl-button>`
+          : `<fvl-button variant="primary" data-read-study="${esc(want)}">${esc(t('st.follow'))}</fvl-button>`}${meta.video ? `<a class="ext" href="${esc(meta.video)}" target="_blank" rel="noopener">YouTube<fvl-icon name="external-link"></fvl-icon></a>` : ''}</div>
+      </div>
     </div>
+    <p class="note">${esc(t('st.routeHint'))}</p>
+    <section class="st-about"><p class="p-label">${esc(t('st.summary'))}</p><p>${esc(x.summary)}</p></section>
     <section class="st-claims" aria-label="${esc(t('st.concludes'))}"><p class="p-label">${esc(t('st.concludes'))}</p><ul>${x.claims.map((c) => `<li>${esc(c)}</li>`).join('')}</ul></section>
     <div class="motifs" aria-label="${esc(t('st.topics'))}">${x.topics.map((k) => `<fvl-tag>${esc(k)}</fvl-tag>`).join('')}</div>
-    <div class="actions"><fvl-button variant="primary" data-read-study="${esc(want)}">${esc(t('st.follow'))}</fvl-button>${meta.video ? `<a class="ext" href="${esc(meta.video)}" target="_blank" rel="noopener">YouTube<fvl-icon name="external-link"></fvl-icon></a>` : ''}</div>
+    <h3 class="st-steps-h">${esc(t('st.stepsH', { n: num(x.steps.length) }))}</h3>
     <ol class="list path">${x.steps.map((st, i) => `<li><button type="button" class="row${sRead.has(sReadKey(want, i)) ? ' is-read' : ''}${st.kind === 'cited' ? ' is-cited' : ''}" data-sstep="${i}">
       <span class="kicker">${stepKicker(st, i)}</span><span class="row-title">${esc(locRef(st.ref))}</span><span class="row-sum">${esc(st.point)}</span></button></li>`).join('')}</ol>
     <p class="note">${esc(t('st.about'))}</p>`;
@@ -2082,6 +2139,7 @@ browse.addEventListener('click', (e) => {
   if (fan) { const g = nearestArc(fan, e.clientX, e.clientY); if (g) openReader(g.dataset.id, { kind: 'time' }, null); return; }
   const th = e.target.closest('[data-thread]'); if (th) { location.hash = '#/threads/' + th.dataset.thread; return; }
   const sd = e.target.closest('[data-study]'); if (sd) { location.hash = '#/threads/study/' + encodeURIComponent(sd.dataset.study); return; }
+  const sa = e.target.closest('[data-study-at]'); if (sa && S.study) { openStudyStep(S.study, Number(sa.dataset.studyAt), $(`#view-threads .row[data-sstep="${sa.dataset.studyAt}"]`)); return; }
   const rs = e.target.closest('[data-read-study]'); if (rs) { openStudyStep(rs.dataset.readStudy, 0, $('#view-threads .row[data-sstep="0"]')); return; }
   const ss = e.target.closest('.row[data-sstep]'); if (ss && S.study) { openStudyStep(S.study, Number(ss.dataset.sstep), ss); return; }
   const rt = e.target.closest('[data-read-thread]');

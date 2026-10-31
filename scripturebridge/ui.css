@@ -1026,7 +1026,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 
 /* ---------- home: the promise, and the day it was kept ---------- */
 #hero:empty { display: none; }
-#hero { padding-block: var(--fvl-space-stack-related); }
+#hero { display: grid; gap: var(--fvl-space-stack-group); padding-block: var(--fvl-space-stack-related); }
 /* The sky: FVL's living field, following the time of day (dawn, day, dusk, night). It keeps its text colour at
    4.5:1 against every pixel, so everything drawn on it uses that colour at (nearly) full strength. */
 .hero-sky {
@@ -1036,9 +1036,8 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   color: var(--fvl-color-text-primary);
   isolation: isolate;
 }
-.hero-in { display: grid; gap: var(--fvl-space-stack-group); padding: var(--fvl-space-stack-group) var(--fvl-space-inset-container) var(--fvl-space-inset-container); }
-@media (width >= 37.5rem) { .hero-in { padding: calc(var(--fvl-space-stack-group) * 2) calc(var(--fvl-space-inset-container) * 1.5) calc(var(--fvl-space-inset-container) * 1.5); } }
-.hero-sky .hero-sub, .hero-sky .hero-progress { color: inherit; }
+.hero-in { padding: var(--fvl-space-stack-group) var(--fvl-space-inset-container) var(--fvl-space-stack-related); }
+@media (width >= 37.5rem) { .hero-in { padding: var(--fvl-space-stack-group) calc(var(--fvl-space-inset-container) * 1.5) var(--fvl-space-stack-related); } }
 .hero-sky .tl-axis, .hero-sky .tl-tick { stroke: currentColor; }
 .hero-sky .tl-years span, .hero-sky .tl-cap { color: inherit; }
 /* On the sky the arcs are one colour (the sky's text colour); read bridges are drawn solid and thick. */
@@ -1049,7 +1048,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .hero-sky .tl-fan.has-near .tl-arc { opacity: 0.35; }
 .hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 3px; stroke-dasharray: none; }
 .hero-sky .tl-fan:not([data-cat="all"]) .tl-arc { opacity: 0.3; }
-.hero-progress { margin: 0; font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.hero-progress { margin: calc(-1 * var(--fvl-space-stack-related)) 0 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
 .hero-next {
   appearance: none;
   border: 0;
@@ -1076,12 +1075,12 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .hero-text { display: grid; gap: var(--fvl-space-stack-related); max-width: var(--fvl-layout-width-prose); }
 .hero-title {
   margin: 0;
-  font-family: var(--fvl-type-display-family);
-  font-size: var(--fvl-type-display-size);
-  font-weight: var(--fvl-type-display-weight);
-  line-height: var(--fvl-type-display-line-height);
-  letter-spacing: var(--fvl-type-display-tracking);
-  font-feature-settings: var(--fvl-type-display-features);
+  font-family: var(--fvl-type-h1-family);
+  font-size: var(--fvl-type-h1-size);
+  font-weight: var(--fvl-type-h1-weight);
+  line-height: var(--fvl-type-h1-line-height);
+  letter-spacing: var(--fvl-type-h1-tracking);
+  font-feature-settings: var(--fvl-type-h1-features);
   text-wrap: balance;
 }
 .hero-sub { margin: 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-lead-size); line-height: var(--fvl-type-lead-line-height); text-wrap: pretty; }
@@ -1200,3 +1199,117 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .cmp-row:first-child { border-top: 0; }
 .cmp dt { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-body-line-height); font-weight: var(--fvl-type-label-weight); }
 .cmp dd { margin: 0; color: var(--fvl-color-text-primary); }
+
+/* ---------- studies: tall cards whose cover is the study's own route ---------- */
+.hue-1 { --hue: var(--fvl-color-data-1); }
+.hue-2 { --hue: var(--fvl-color-data-2); }
+.hue-3 { --hue: var(--fvl-color-data-3); }
+.hue-4 { --hue: var(--fvl-color-data-4); }
+.hue-5 { --hue: var(--fvl-color-data-5); }
+.study-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--fvl-space-stack-group) var(--fvl-space-icon-gap); }
+@media (width >= 37.5rem) { .study-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--fvl-space-stack-group); } }
+@media (width >= 75rem) { .study-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.study-card {
+  appearance: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--fvl-color-bg-surface);
+  border-radius: var(--fvl-radius-panel);
+  overflow: hidden;
+  transition: background var(--fvl-motion-tone);
+}
+.study-card:hover { background: var(--fvl-color-bg-hover); }
+.study-card:focus-visible { outline: none; }
+/* The cover: a soft wash of the study's hue, light or dark with the theme, the route drawn in the hue itself. */
+.sc-cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(165deg, color-mix(in oklab, var(--hue) 26%, var(--fvl-color-bg-surface)), color-mix(in oklab, var(--hue) 7%, var(--fvl-color-bg-surface)));
+}
+.sc-cover.wide { aspect-ratio: 8 / 3; border-radius: var(--fvl-radius-panel); }
+.sc-art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sc-axis, .sc-nt { stroke: var(--fvl-color-text-secondary); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.sc-route { fill: none; stroke: var(--hue); stroke-width: 1.25; opacity: 0.5; vector-effect: non-scaling-stroke; }
+.sc-art path { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.sc-art .rd { stroke: var(--hue); stroke-width: 8px; }
+.sc-art .mt-o { stroke: var(--hue); stroke-width: 8px; }
+.sc-route { mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sc-route { mix-blend-mode: screen; } }
+:root[data-theme="dark"] .sc-route { mix-blend-mode: screen; }
+.sc-art .mt-i { stroke: var(--fvl-color-bg-surface); stroke-width: 4px; }
+.sc-label {
+  position: absolute;
+  top: var(--fvl-space-inset-container);
+  left: var(--fvl-space-inset-container);
+  right: 40%;
+  color: var(--fvl-color-text-primary);
+  font-size: var(--fvl-type-small-size);
+  line-height: var(--fvl-type-small-line-height);
+  font-weight: var(--fvl-type-label-weight);
+}
+.sc-num {
+  position: absolute;
+  left: var(--fvl-space-inset-container);
+  top: var(--fvl-space-inset-container);
+  color: var(--fvl-color-text-primary);
+  font-family: var(--fvl-type-display-family);
+  font-size: var(--fvl-type-h1-size);
+  line-height: 1;
+  font-weight: var(--fvl-type-display-weight);
+  letter-spacing: var(--fvl-type-display-tracking);
+  font-variant-numeric: var(--fvl-type-data-numeric);
+}
+.sc-body { display: grid; align-content: start; gap: var(--fvl-space-stack-related); padding: var(--fvl-space-inset-container); }
+.sc-title {
+  font-family: var(--fvl-type-h4-family);
+  font-size: var(--fvl-type-body-size);
+  font-weight: var(--fvl-type-h4-weight);
+  line-height: var(--fvl-type-body-line-height);
+  letter-spacing: var(--fvl-type-h4-tracking);
+  text-wrap: balance;
+}
+.sc-q { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.sc-meta { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-variant-numeric: var(--fvl-type-data-numeric); }
+/* How far you are through the study. */
+.sc-prog { display: block; height: 4px; border-radius: var(--fvl-radius-pill); background: var(--fvl-color-bg-sunken); overflow: hidden; }
+.sc-prog i { display: block; height: 100%; width: var(--p); background: var(--hue); border-radius: inherit; }
+
+/* The study page opens with its cover as a wide band. */
+.st-hero { display: grid; gap: var(--fvl-space-stack-group); }
+.st-hero-text { display: grid; gap: var(--fvl-space-stack-related); }
+.st-hero-text h2 {
+  margin: 0;
+  font-family: var(--fvl-type-h2-family);
+  font-size: var(--fvl-type-h2-size);
+  font-weight: var(--fvl-type-h2-weight);
+  line-height: var(--fvl-type-h2-line-height);
+  letter-spacing: var(--fvl-type-h2-tracking);
+  text-wrap: balance;
+}
+.st-hero-text .st-question { margin: 0; color: var(--fvl-color-text-primary); font-size: var(--fvl-type-lead-size); line-height: var(--fvl-type-lead-line-height); max-width: var(--fvl-layout-width-prose); }
+.st-meta { margin: 0; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-variant-numeric: var(--fvl-type-data-numeric); }
+.st-hero-text .actions { margin-top: var(--fvl-space-stack-related); }
+.st-about { display: grid; gap: var(--fvl-space-stack-related); max-width: var(--fvl-layout-width-prose); }
+.st-about p:not(.p-label) { margin: 0; color: var(--fvl-color-text-secondary); }
+.st-steps-h {
+  margin: var(--fvl-space-stack-group) 0 0;
+  font-family: var(--fvl-type-h3-family);
+  font-size: var(--fvl-type-h3-size);
+  font-weight: var(--fvl-type-h3-weight);
+  line-height: var(--fvl-type-h3-line-height);
+  letter-spacing: var(--fvl-type-h3-tracking);
+}
+@media (width >= 75rem) {
+  .st-hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; column-gap: var(--fvl-layout-gutter-large); }
+  .sc-cover.wide { aspect-ratio: 4 / 3; }
+}
