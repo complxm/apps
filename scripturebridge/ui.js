@@ -833,7 +833,7 @@ function renderStudyReader() {
   const showKjv = st.kind === 'read' && verId && trInfo().id !== verId && lang() === 'en' && BIB.meta?.translations.some((q) => q.id === verId);
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
-    <div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>
+    ${cur.idx === 0 ? `<div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>` : ''}
     <p class="kicker">${stepKicker(st, cur.idx, true)}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(locRef(st.ref))}</h2>
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
