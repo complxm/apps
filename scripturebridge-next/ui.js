@@ -87,7 +87,7 @@ const STR = {
     'link.follow': 'Follow the link to {ref}', 'link.hint': 'Tap the marked words to follow the link from promise to fulfilment.',
     'vb.title': 'Bridges', 'vb.hint': 'This verse is part of these bridges.', 'vb.aria': 'part of {n} bridge(s)',
     'cmp.open': 'Compare Bibles', 'cmp.close': 'Hide comparison', 'cmp.na': 'Not available right now.',
-    'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the BSB is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the KJV is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
@@ -119,7 +119,7 @@ const STR = {
     fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
-    credits: 'Bible text: Berean Standard Bible (public domain); King James Version (public domain outside the UK); New Living Translation © Tyndale House Foundation, read live from the <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> and not stored; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblica® Słowo Życia, otwarty dostęp (New Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, shown unchanged; original work available for free at <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> and <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
+    credits: 'Bible text: King James Version (public domain outside the UK); New Living Translation © Tyndale House Foundation, read live from the <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> and not stored; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblica® Słowo Życia, otwarty dostęp (New Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, shown unchanged; original work available for free at <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> and <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
     hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.', origHint2: 'Tap a word to see what it means.',
     defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
@@ -165,7 +165,7 @@ const STR = {
     'link.follow': 'Przejdź do powiązanego miejsca: {ref}', 'link.hint': 'Dotknij zaznaczonych słów, aby przejść od obietnicy do wypełnienia.',
     'vb.title': 'Mosty', 'vb.hint': 'Ten werset należy do tych mostów.', 'vb.aria': 'część mostów: {n}',
     'cmp.open': 'Porównaj Biblie', 'cmp.close': 'Ukryj porównanie', 'cmp.na': 'Teraz niedostępne.',
-    'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu BSB.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu KJV.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
@@ -197,7 +197,7 @@ const STR = {
     fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
-    credits: 'Tekst Biblii: Berean Standard Bible (domena publiczna); King James Version (domena publiczna poza Wielką Brytanią); New Living Translation © Tyndale House Foundation, wczytywany na bieżąco z <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> i nieprzechowywany; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblica® Słowo Życia, otwarty dostęp (Nowy Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, bez zmian; oryginał dostępny bezpłatnie na <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> i <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
+    credits: 'Tekst Biblii: King James Version (domena publiczna poza Wielką Brytanią); New Living Translation © Tyndale House Foundation, wczytywany na bieżąco z <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> i nieprzechowywany; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblica® Słowo Życia, otwarty dostęp (Nowy Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, bez zmian; oryginał dostępny bezpłatnie na <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> i <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
     hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.', origHint2: 'Dotknij słowa, aby zobaczyć, co znaczy.',
     defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
@@ -833,7 +833,7 @@ function renderStudyReader() {
   const showKjv = st.kind === 'read' && verId && trInfo().id !== verId && lang() === 'en' && BIB.meta?.translations.some((q) => q.id === verId);
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
-    <div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>
+    ${cur.idx === 0 ? `<div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>` : ''}
     <p class="kicker">${stepKicker(st, cur.idx, true)}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(locRef(st.ref))}</h2>
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
@@ -863,7 +863,7 @@ function renderStudyReader() {
     $('.st-text', rBody).innerHTML = html;
     // If the NLT could not be read for this passage, say plainly that the BSB is shown.
     if (trInfo().id === 'nlt' && parseRefList(st.ref).some((sg) => nltFell.has(`${sg.osis}/${sg.c}`))) {
-      $('.st-tr', rBody).textContent = `${BIB.meta.translations[0].name} · ${t('nlt.fail')}`;
+      $('.st-tr', rBody).textContent = `${trMeta('kjv')?.name || 'King James Version'} · ${t('nlt.fail')}`;
     }
   })
     .catch(() => { if (tok === passageToken) $('.st-text', rBody).textContent = t('passageErr'); });
@@ -997,6 +997,7 @@ async function bibleMeta() {
   m.books.forEach((b, i) => { b.index = i; BIB.byOsis.set(b.osis, b); BIB.byName.set(b.name.toLowerCase(), b); });
   [['psalm', 'Ps'], ['song of songs', 'Song'], ['revelation of john', 'Rev']].forEach(([n, o]) => BIB.byName.set(n, BIB.byOsis.get(o)));
   // The NLT is not stored here: it is read live from Tyndale's NLT API (see nltChapter).
+  m.translations = m.translations.filter((x) => !RETIRED.has(x.id));
   const at = m.translations.findIndex((x) => x.id === 'kjv') + 1 || 1;
   m.translations.splice(at, 0, NLT);
   BIB.meta = m;
@@ -1081,18 +1082,21 @@ function joinedNow(osis, c) {
   return (!otBorrowed(osis) && tr.joined?.[`${osis}/${c}`]) || {};
 }
 function verseLabel(j, v) { let last = v; while (j[last + 1] === v) last++; return last > v ? `${v}–${last}` : String(v); }
-// If the NLT cannot be reached, say so once and read the BSB instead.
+// If the NLT cannot be reached, say so once and read the KJV instead.
 let nltWarned = false;
 const nltFell = new Set();
 function nltFallback(osis, c) {
   nltFell.add(`${osis}/${c}`);
   if (!nltWarned) { nltWarned = true; toast.warning(t('nlt.fail')); }
-  return getJSON(`../scripturebridge/data/bible/bsb/${osis}/${c}.json`);
+  return getJSON(`../scripturebridge/data/bible/kjv/${osis}/${c}.json`);
 }
 
 // Translation: BSB (English), UBG or Gdańska (Polish). Same versification, so cross-references work for all three.
-const TR = { id: store.get('sb_tr', 'bsb') };
-const trInfo = () => BIB.meta?.translations.find((t) => t.id === TR.id) || BIB.meta?.translations[0] || { id: 'bsb', lang: 'en', empty: '' };
+// Bibles kept only for internal use, never offered; a reader who had chosen one moves to the NLT.
+const RETIRED = new Set(['bsb']);
+const TR = { id: store.get('sb_tr', 'nlt') };
+if (RETIRED.has(TR.id)) { TR.id = 'nlt'; store.set('sb_tr', 'nlt'); }
+const trInfo = () => BIB.meta?.translations.find((t) => t.id === TR.id) || BIB.meta?.translations[0] || { id: 'kjv', lang: 'en', empty: '' };
 const bookName = (b) => (trInfo().lang === 'pl' ? b.namePl : b.name) || b.name;
 const trMeta = (id) => BIB.meta?.translations.find((t) => t.id === id);
 const isOT = (osis) => BIB.byOsis?.get(osis)?.testament === 'OT';
@@ -1197,24 +1201,51 @@ function parseRefList(ref) {
 // A verse the Bible translates together with the one before it has no text of its own: a passage that starts there
 // starts at the verse it was joined to, so its words are not lost.
 function versesText(vs, joined, a, b) { let s = a; while (s > 1 && !vs[s - 1] && joined[s]) s = joined[s]; return vs.slice(s - 1, b).filter(Boolean).join(' '); }
-function partsHTML(segs, arrays, key) {
+// The verse where a phrase begins, found in the stored text that has the phrase (its first words, else its last).
+function verseOfPhrase(segs, ref, phrase) {
+  const w = String(phrase).split(/\s+/).filter(Boolean);
+  if (!w.length) return null;
+  const probes = [w.slice(0, Math.min(5, w.length)).join(' '), w.slice(-Math.min(4, w.length)).join(' ')];
+  for (const probe of probes) for (let i = 0; i < segs.length; i++) {
+    const vs = ref[i]; if (!vs) continue;
+    for (const [a, b] of segs[i].ranges.length ? segs[i].ranges : [[1, vs.length]]) for (let v = a; v <= b; v++) if (vs[v - 1]?.includes(probe)) return { i, v };
+  }
+  return null;
+}
+const MARK_A = '\u0001', MARK_B = '\u0002';
+function partsHTML(segs, arrays, key0, ref) {
+  const key = typeof key0 === 'function' ? key0() : key0;
+  // A verse to mark (the live NLT): its words are wrapped whole.
+  const at = key && typeof key === 'object' ? verseOfPhrase(segs, ref || [], key.verseOf) : null;
   const parts = segs.map((sg, i) => {
-    const vs = arrays[i], jn = joinedNow(sg.osis, sg.c);
+    let vs = arrays[i];
+    const jn = joinedNow(sg.osis, sg.c);
+    if (at && at.i === i) {
+      let v = at.v; while (v > 1 && !vs[v - 1] && jn[v]) v = jn[v];
+      if (vs[v - 1]) { vs = vs.slice(); vs[v - 1] = MARK_A + vs[v - 1] + MARK_B; }
+    }
     const pieces = (sg.ranges.length ? sg.ranges : [[1, vs.length]]).map(([a, b]) => versesText(vs, jn, a, b));
     return { label: `${refName(BIB.byOsis.get(sg.osis))} ${sg.c}${sg.spec ? ':' + sg.spec : ''}`, text: pieces.filter(Boolean).join(' … ') };
   });
-  if (parts.length === 1) return highlight(parts[0].text, key);
-  return parts.map((x) => `<span class="seg"><span class="seg-ref">${esc(x.label)}</span> ${highlight(x.text, key)}</span>`).join(' ');
+  const mark = (text) => (at ? esc(text).split(MARK_A).join('<mark>').split(MARK_B).join('</mark>') : highlight(text, typeof key === 'string' ? key : ''));
+  if (parts.length === 1) return mark(parts[0].text);
+  return parts.map((x) => `<span class="seg"><span class="seg-ref">${esc(x.label)}</span> ${mark(x.text)}</span>`).join(' ');
 }
+// The stored text a verse-mark is found in (the BSB, kept for this and no longer offered).
+const markRef = (segs) => Promise.all(segs.map((sg) => chapterText(sg.osis, sg.c, 'bsb').catch(() => null)));
 async function passageHTML(ref, key) {
   const segs = parseRefList(ref);
-  return partsHTML(segs, await Promise.all(segs.map((sg) => chapterText(sg.osis, sg.c))), key);
+  const [arrays, bsb] = await Promise.all([Promise.all(segs.map((sg) => chapterText(sg.osis, sg.c))), trInfo().id === 'nlt' ? markRef(segs) : null]);
+  return partsHTML(segs, arrays, key, bsb);
 }
 // The same, only if every chapter is already loaded (null otherwise).
 function passageHTMLNow(ref, key) {
   const segs = parseRefList(ref);
   const arrays = segs.map((sg) => BIB.done.get(textKey(sg.osis, sg.c, trFor(sg.osis))));
-  return arrays.every(Boolean) ? partsHTML(segs, arrays, key) : null;
+  if (!arrays.every(Boolean)) return null;
+  const bsb = trInfo().id === 'nlt' ? segs.map((sg) => BIB.done.get(textKey(sg.osis, sg.c, 'bsb'))) : null;
+  if (bsb && !bsb.every(Boolean)) return null;
+  return partsHTML(segs, arrays, key, bsb);
 }
 function prefetchBridge(id) {
   const p = D.byId.get(id);
@@ -1849,6 +1880,14 @@ function keyOf(p0, side) {
   // Słowo Życia words the New Testament its own way, so it has its own phrases (its Old Testament is UBG's).
   if (lang() === 'pl' && side === 'nt' && trInfo().id === 'sz' && r?.keyNtSz) return r.keyNtSz;
   if (lang() === 'pl') return (side === 'ot' ? r?.keyOtPl : r?.keyNtPl) || D.PL[p0.id]?.key?.[side] || '';
+  const kjv = () => (side === 'ot' ? r?.keyOtKjv : r?.keyNtKjv) || '';
+  if (trInfo().id === 'kjv') return kjv();
+  if (trInfo().id === 'nlt') {
+    // Read live, the NLT has no stored phrases: mark the verse that holds the link (found in the stored text), or, where
+    // the NLT could not be reached and the KJV is shown, the KJV's phrase.
+    if (parseRefList(p0[side].ref).some((sg) => nltFell.has(`${sg.osis}/${sg.c}`))) return kjv();
+    return { verseOf: (side === 'ot' ? r?.keyOt : r?.keyNt) || p0[side].keyPhrase || '' };
+  }
   return (side === 'ot' ? r?.keyOt : r?.keyNt) || p0[side].keyPhrase || '';
 }
 // How we know: the review's judgement, then the checks computed from the texts and OpenBible.
@@ -1979,7 +2018,7 @@ function renderReader() {
   $$('.p-loading', rBody).forEach(async (el) => {
     try {
       await loadReview();
-      const html = await passageHTML(el.dataset.ref, keyOf(p0, el.dataset.side));
+      const html = await passageHTML(el.dataset.ref, () => keyOf(p0, el.dataset.side));
       if (tok === passageToken) { el.outerHTML = html; drawLinks(true); }
     } catch { if (tok === passageToken) el.textContent = t('passageErr'); }
   });
@@ -2315,8 +2354,8 @@ function trOptionsHTML(checked) {
 }
 function syncTrUI() {
   const cur = trInfo();
-  $('#trBtnLabel').textContent = cur.label || 'BSB';
-  $('#trBtn').setAttribute('aria-label', STR[lang()]['tr.aria'].replace('{name}', cur.name || 'BSB'));
+  $('#trBtnLabel').textContent = cur.label || 'NLT';
+  $('#trBtn').setAttribute('aria-label', STR[lang()]['tr.aria'].replace('{name}', cur.name || 'New Living Translation'));
   $('#trList').innerHTML = trOptionsHTML(true);
   const pick = $('#trPick'); if (pick) pick.value = cur.id;
 }
