@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b0b10" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f7f7fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0e14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#faf7f3" media="(prefers-color-scheme: light)">
 <title>ScriptureBridge</title>
 <meta name="description" content="Old Testament promises and New Testament fulfilments across all 66 books, read one bridge at a time.">
 <link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
@@ -70,10 +70,13 @@
   }
 </style>
 <script>
-  // FVL context: daylight from the clock (dawn 05–09, day 09–17, dusk 17–21, night 21–05). Theme follows the OS.
+  // FVL context. Theme follows the OS. The neutrals are pinned rather than following the clock: light reads on warm
+  // stone (dawn), dark on obsidian (day), and they switch with the OS.
   (function () {
-    var h = new Date().getHours();
-    document.documentElement.dataset.daylight = h < 5 ? 'night' : h < 9 ? 'dawn' : h < 17 ? 'day' : h < 21 ? 'dusk' : 'night';
+    var q = matchMedia('(prefers-color-scheme: dark)');
+    var set = function () { document.documentElement.dataset.daylight = q.matches ? 'day' : 'dawn'; };
+    set();
+    if (q.addEventListener) q.addEventListener('change', set);
   })();
 </script>
 </head>
@@ -105,14 +108,14 @@
 <div id="browse">
   <!-- Phone: a top bar that scrolls away and a tab bar at the bottom. Wide screens: one sidebar with both. -->
   <aside class="rail">
-    <header class="appbar">
+    <header class="appbar glass">
       <a class="wordmark" href="#/bridges" aria-label="ScriptureBridge">
         <svg class="mark" viewBox="0 0 32 20" aria-hidden="true"><path d="M4 16A12 12 0 0 1 28 16"/><circle class="m-open" cx="4" cy="16" r="2.5"/><circle class="m-kept" cx="28" cy="16" r="2.5"/></svg>
         <span>ScriptureBridge</span>
       </a>
       <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation" aria-haspopup="dialog" aria-expanded="false"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
     </header>
-    <nav class="tabbar" id="nav" aria-label="Sections" data-i18n-attr="aria-label:sections">
+    <nav class="tabbar glass" id="nav" aria-label="Sections" data-i18n-attr="aria-label:sections">
       <button type="button" class="tab" data-tab="bridges" aria-current="page">
         <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18A9 9 0 0 1 21 18"/><circle cx="3" cy="18" r="1.6"/><circle cx="21" cy="18" r="1.6"/></svg>
         <span data-i18n="tab.bridges">Bridges</span></button>
@@ -139,7 +142,7 @@
         </div>
       </div>
       <p class="count" id="count" aria-live="polite" data-i18n="loading">Loading…</p>
-      <ol class="list open-list" id="list"></ol>
+      <ol class="list card-list" id="list"></ol>
     </section>
 
     <!-- Threads -->
@@ -167,7 +170,7 @@
           <div class="mb-text"><small id="mbSide"></small><b id="mbBook"></b><span id="mbCount"></span></div>
           <fvl-button variant="tertiary" icon aria-label="Clear selection" id="mbClear" data-i18n-attr="aria-label:map.clear"><fvl-icon name="x" size="md"></fvl-icon></fvl-button>
           <fvl-button variant="secondary" size="sm" id="mbList" data-i18n="list">List</fvl-button>
-          <fvl-button variant="primary" size="sm" id="mbRead" data-i18n="read">Read</fvl-button>
+          <fvl-button variant="secondary" class="cta" size="sm" id="mbRead" data-i18n="read">Read</fvl-button>
         </div>
       </div>
     </section>
@@ -198,7 +201,7 @@
   <nav class="r-bar" id="rBar" aria-label="Bridge navigation" data-i18n-attr="aria-label:readerNav">
     <div class="r-bar-in">
       <fvl-button id="prev" variant="secondary" icon aria-label="Previous bridge" data-i18n-attr="aria-label:prevA"><fvl-icon name="chevron-left" size="md"></fvl-icon></fvl-button>
-      <fvl-button id="next" variant="primary">Next</fvl-button>
+      <fvl-button id="next" variant="secondary" class="cta">Next</fvl-button>
     </div>
   </nav>
 </section>
@@ -206,7 +209,7 @@
 <fvl-drawer id="books" placement="bottom" heading="Filter bridges" description="Narrow the list by relationship and by book." data-i18n-attr="heading:filter.title;description:filter.desc">
   <div class="book-group"><h3 data-i18n="filter.rel">Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship" data-i18n-attr="aria-label:filter.rel"></div></div>
   <div class="book-group"><div id="bookGroups"></div></div>
-  <fvl-button slot="footer" variant="primary" id="applyBtn">Show bridges</fvl-button>
+  <fvl-button slot="footer" variant="secondary" class="cta" id="applyBtn">Show bridges</fvl-button>
 </fvl-drawer>
 
 <!-- Translation menu: springs open from the globe button -->

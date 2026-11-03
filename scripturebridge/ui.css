@@ -1,5 +1,62 @@
 /* ScriptureBridge UI — Flow Visual Language. Semantic tokens only; motion is driven by GSAP with the FVL springs. */
 
+/* ---------- palette: the archival sanctuary ----------
+   Light reads on warm stone (FVL's dawn neutrals), dark on obsidian (FVL's day neutrals): the page pins them in
+   index.html. The accent is FVL's amber ramp instead of indigo: burnished bronze on light, luminous gold on dark.
+   Aliases only, so every value and contrast pair is still FVL's. The selectors mirror fvl.css, so nested themes follow. */
+:root, [data-theme="light"] {
+  --fvl-color-accent-default: var(--fvl-color-warning-text);
+  --fvl-color-accent-hover: var(--fvl-color-warning-text);
+  --fvl-color-accent-active: var(--fvl-color-warning-text);
+  --fvl-color-accent-text: var(--fvl-color-warning-text);
+  --fvl-color-accent-subtle: var(--fvl-color-warning-subtle);
+  --fvl-color-accent-subtle-hover: var(--fvl-color-warning-subtle-hover);
+  --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
+  --fvl-color-focus-ring: var(--fvl-color-warning-text);
+  /* Floating chrome: frosted surface, a lit top edge, a soft drop. */
+  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 80%, transparent);
+  --sb-rim: var(--fvl-color-bg-surface);
+  --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-text-primary) 12%, transparent);
+  --sb-card-lift: 0 0.5rem 1.5rem -0.25rem color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent), 0 1px 2px color-mix(in oklab, var(--fvl-color-text-primary) 5%, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fvl-color-accent-default: var(--fvl-color-warning-text);
+    --fvl-color-accent-hover: var(--fvl-color-warning-solid);
+    --fvl-color-accent-active: var(--fvl-color-warning-solid);
+    --fvl-color-accent-text: var(--fvl-color-warning-text);
+    --fvl-color-accent-subtle: var(--fvl-color-warning-subtle);
+    --fvl-color-accent-subtle-hover: var(--fvl-color-warning-subtle-hover);
+    --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
+    --fvl-color-focus-ring: var(--fvl-color-warning-text);
+    --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 76%, transparent);
+    --sb-rim: color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
+    --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-bg-sunken) 70%, transparent);
+    --sb-card-lift: inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent);
+  }
+}
+[data-theme="dark"] {
+  --fvl-color-accent-default: var(--fvl-color-warning-text);
+  --fvl-color-accent-hover: var(--fvl-color-warning-solid);
+  --fvl-color-accent-active: var(--fvl-color-warning-solid);
+  --fvl-color-accent-text: var(--fvl-color-warning-text);
+  --fvl-color-accent-subtle: var(--fvl-color-warning-subtle);
+  --fvl-color-accent-subtle-hover: var(--fvl-color-warning-subtle-hover);
+  --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
+  --fvl-color-focus-ring: var(--fvl-color-warning-text);
+  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 76%, transparent);
+  --sb-rim: color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
+  --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-bg-sunken) 70%, transparent);
+  --sb-card-lift: inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent);
+}
+/* The one main action of a view: solid gold. FVL's primary button paints an indigo liquid from its script, so the
+   app's main actions use the secondary button with its component tokens re-aliased to the accent (FVL allows this). */
+fvl-button.cta {
+  --fvl-button-secondary-bg: var(--fvl-color-accent-default);
+  --fvl-button-secondary-bg-hover: var(--fvl-color-accent-hover);
+  --fvl-button-secondary-text: var(--fvl-color-text-on-accent);
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 html.reading { overflow: hidden; }
@@ -113,16 +170,27 @@ body {
 /* ---------- app frame ----------
    Phone: a small top bar that scrolls away, and the sections in a tab bar at the bottom, under the thumb.
    From the expanded breakpoint: one sidebar holds the wordmark, the sections and the Bible switch. */
-:root { --tabbar-h: calc(4.5rem + env(safe-area-inset-bottom)); }
+/* --tabbar-h is measured from the bar itself (ui.js); --tabbar-off is the gap under the floating bar. */
+:root { --tabbar-h: 4rem; --tabbar-off: max(env(safe-area-inset-bottom), 0.75rem); }
 .rail { display: contents; }
+/* Frosted glass on floating chrome only: the top bar and the tab bar. */
+.glass {
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .glass { background: var(--fvl-color-bg-surface); } }
 .appbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--fvl-layer-sticky);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--fvl-space-icon-gap);
-  max-width: var(--fvl-layout-width-content);
-  margin-inline: auto;
-  padding: max(env(safe-area-inset-top), var(--fvl-space-stack-related)) var(--fvl-layout-margin-compact) 0;
+  min-height: calc(3.5rem + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) max(var(--fvl-layout-margin-compact), (100% - var(--fvl-layout-width-content)) / 2 + var(--fvl-layout-margin-compact)) 0;
+  box-shadow: 0 1px 0 var(--fvl-color-line-subtle);
 }
 .wordmark {
   display: inline-flex;
@@ -131,30 +199,32 @@ body {
   color: var(--fvl-color-text-primary);
   text-decoration: none;
   font-family: var(--fvl-type-h4-family);
-  font-size: var(--fvl-type-h4-size);
+  font-size: var(--fvl-type-body-size);
   font-weight: var(--fvl-type-h4-weight);
-  line-height: var(--fvl-type-h4-line-height);
+  line-height: var(--fvl-type-body-line-height);
   letter-spacing: var(--fvl-type-h4-tracking);
   min-height: var(--fvl-size-target-min);
 }
-.mark { width: 2rem; height: 1.25rem; flex: none; overflow: visible; }
+.mark { width: 1.75rem; height: 1.125rem; flex: none; overflow: visible; }
 .mark path { fill: none; stroke: var(--fvl-color-accent-default); stroke-width: 2; stroke-linecap: round; }
 /* The promise is an open ring, the fulfilment a filled point: the same marks as every span in the app. */
 .mark .m-open { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-accent-default); stroke-width: 2; }
 .mark .m-kept { fill: var(--fvl-color-accent-default); }
 .tr-btn { flex: none; }
 
+/* Phone: the sections float in a glass capsule above the home indicator, under the thumb. */
 .tabbar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: var(--tabbar-off);
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 30rem);
   z-index: var(--fvl-layer-sticky);
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  padding: var(--fvl-space-stack-related) var(--fvl-layout-margin-compact) env(safe-area-inset-bottom);
-  background: var(--fvl-color-bg-canvas);
-  box-shadow: 0 -1px 0 var(--fvl-color-line-subtle);
+  padding: 0.375rem;
+  border-radius: var(--fvl-radius-pill);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
 .tab {
   appearance: none;
@@ -165,9 +235,10 @@ body {
   display: grid;
   justify-items: center;
   align-content: center;
-  gap: var(--fvl-space-stack-related);
+  gap: 0.125rem;
   min-height: var(--fvl-size-target-min);
-  padding: 0 0 var(--fvl-space-stack-related);
+  padding: 0;
+  border-radius: var(--fvl-radius-pill);
   font-size: var(--fvl-type-micro-size);
   line-height: var(--fvl-type-micro-line-height);
   font-weight: var(--fvl-type-label-weight);
@@ -177,17 +248,19 @@ body {
 .tab:focus-visible { outline: none; }
 .tab-ic { display: block; width: 1.25rem; height: 1.25rem; }
 svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-svg.tab-ic circle { fill: var(--fvl-color-bg-canvas); }
 /* The section you are in: its icon sits on a soft pill, in the accent. */
-.tab .tab-ic { box-sizing: content-box; padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x); border-radius: var(--fvl-radius-pill); transition: background var(--fvl-motion-tone); }
+.tab .tab-ic { box-sizing: content-box; padding: 0.25rem 0.875rem; border-radius: var(--fvl-radius-pill); transition: background var(--fvl-motion-tone); }
 .tab[aria-current="page"] { color: var(--fvl-color-accent-text); }
 .tab[aria-current="page"] .tab-ic { background: var(--fvl-color-accent-subtle); }
 .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
+svg.tab-ic circle { fill: var(--fvl-color-bg-surface); }
 @media (hover: hover) { .tab:hover { color: var(--fvl-color-text-primary); } }
-#browse { padding-bottom: var(--tabbar-h); }
+/* Room under the last row for the floating bar. */
+#browse { padding-bottom: calc(var(--tabbar-h) + var(--tabbar-off)); }
 
 @media (width >= 52.5rem) {
-  #browse { display: grid; grid-template-columns: var(--fvl-layout-width-sidebar) minmax(0, 1fr); padding-bottom: 0; }
+  #browse { display: grid; grid-template-columns: 16.25rem minmax(0, 1fr); padding-bottom: 0; }
+  /* Wide screens: one quiet sidebar holds the wordmark, the sections and the Bible switch. */
   .rail {
     display: flex;
     flex-direction: column;
@@ -196,33 +269,49 @@ svg.tab-ic circle { fill: var(--fvl-color-bg-canvas); }
     top: 0;
     height: 100vh;
     height: 100dvh;
-    padding: var(--fvl-space-stack-group) var(--fvl-space-stack-related) var(--fvl-space-stack-group) var(--fvl-space-stack-group);
+    padding: var(--fvl-space-stack-group) var(--fvl-space-stack-related);
+    background: var(--fvl-color-bg-surface);
+    box-shadow: 1px 0 0 var(--fvl-color-line-subtle);
   }
   .appbar { display: contents; }
-  .wordmark { order: 0; padding-inline: var(--fvl-space-stack-related); font-size: var(--fvl-type-body-size); line-height: var(--fvl-type-body-line-height); white-space: nowrap; }
-  .wordmark .mark { width: 1.5rem; height: 1rem; }
-  .tabbar { order: 1; position: static; display: flex; flex-direction: column; gap: var(--fvl-space-stack-related); padding: 0; background: none; box-shadow: none; }
-  .tr-btn { order: 2; margin-top: auto; align-self: flex-start; }
+  .wordmark { order: 0; padding-inline: 0.875rem; white-space: nowrap; }
+  .tabbar {
+    order: 1;
+    position: static;
+    transform: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .tr-btn { order: 2; margin-top: auto; align-self: flex-start; margin-inline-start: 0.875rem; }
   .tab {
     display: flex;
     justify-items: start;
     align-items: center;
-    gap: var(--fvl-space-icon-gap);
-    padding: var(--fvl-space-stack-related);
-    border-radius: var(--fvl-radius-control);
+    gap: 0.75rem;
+    min-height: 2.75rem;
+    padding: 0 0.875rem;
+    border-radius: var(--fvl-radius-container);
     font-size: var(--fvl-type-body-size);
     line-height: var(--fvl-type-body-line-height);
     font-weight: var(--fvl-type-body-weight);
     color: var(--fvl-color-text-secondary);
+    transition: background var(--fvl-motion-tone), color var(--fvl-motion-tone);
   }
   .tab .tab-ic { padding: 0; background: none; }
-  .tab[aria-current="page"] { background: var(--fvl-color-accent-subtle); font-weight: var(--fvl-type-label-weight); }
+  .tab[aria-current="page"] { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); font-weight: var(--fvl-type-label-weight); }
   .tab[aria-current="page"] .tab-ic { background: none; }
-  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
-  @media (hover: hover) { .tab:not([aria-current]):hover { background: var(--fvl-color-bg-hover); } }
+  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-bg-selected); }
+  @media (hover: hover) { .tab:not([aria-current]):hover { background: var(--fvl-color-bg-hover); color: var(--fvl-color-text-primary); } }
   main.wrap { width: 100%; padding-top: var(--fvl-space-stack-group); }
-  :root { --tabbar-h: 0rem; }
-  .map-bar { left: var(--fvl-layout-width-sidebar); }
+  :root { --tabbar-h: 0rem; --tabbar-off: 0rem; }
 }
 
 /* Rows inside a sheet sit on the overlay surface: give them their own tone and full-contrast text. */
@@ -423,16 +512,20 @@ fvl-button[hidden] { display: none; }
 .bmap.has-sel .curve.on { opacity: 1; stroke-width: 2.5; }
 
 #view-map.with-bar { padding-bottom: calc(var(--fvl-size-control-lg) * 3); }
+/* The chosen book floats just above the tab bar, in the same glass. */
 .map-bar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: var(--tabbar-h);
+  left: var(--fvl-layout-margin-compact);
+  right: var(--fvl-layout-margin-compact);
+  bottom: calc(var(--tabbar-h) + var(--tabbar-off) + var(--fvl-space-stack-related));
   z-index: var(--fvl-layer-sticky);
-  background: var(--fvl-color-bg-raised);
-  box-shadow: var(--fvl-shadow-raised);
-  padding-bottom: env(safe-area-inset-bottom);
+  border-radius: var(--fvl-radius-panel);
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
+@media (width >= 52.5rem) { .map-bar { left: calc(16.25rem + var(--fvl-space-stack-group)); right: var(--fvl-space-stack-group); bottom: var(--fvl-space-stack-group); } }
 .map-bar[hidden] { display: none; }
 .map-bar-in {
   max-width: var(--fvl-layout-width-content);
@@ -1027,28 +1120,49 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 /* ---------- home: the promise, and the day it was kept ---------- */
 #hero:empty { display: none; }
 #hero { display: grid; gap: var(--fvl-space-stack-group); padding-block: var(--fvl-space-stack-related); }
-/* The sky: FVL's living field, following the time of day (dawn, day, dusk, night). It keeps its text colour at
-   4.5:1 against every pixel, so everything drawn on it uses that colour at (nearly) full strength. */
+/* The sky: a still night panel in both themes (a nested dark theme on FVL's night neutrals), a fine field of stars,
+   and a faint gold glow where the arcs come down at the coming of Christ. Unread arcs are fine grey lines (still 3:1
+   on the sky, so they can be seen and tapped); read bridges are drawn in gold with their ring and point. */
 .hero-sky {
+  position: relative;
   display: block;
-  border-radius: var(--fvl-radius-panel);
+  border-radius: 1.25rem;
   overflow: hidden;
-  color: var(--fvl-color-text-primary);
+  color: var(--fvl-color-text-muted);
+  /* Observatory navy: the night neutrals with a little of FVL's blue. */
+  --sky-top: color-mix(in oklab, var(--fvl-color-data-1) 7%, var(--fvl-color-bg-sunken));
+  --sky-low: color-mix(in oklab, var(--fvl-color-data-1) 16%, var(--fvl-color-bg-surface));
+  background-color: var(--sky-top);
+  background-image:
+    radial-gradient(color-mix(in oklab, var(--fvl-color-text-primary) 14%, transparent) 1px, transparent 1.5px),
+    radial-gradient(ellipse 55% 70% at 88% 100%, color-mix(in oklab, var(--fvl-color-accent-default) 16%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--sky-top), var(--sky-low));
+  background-size: 1.5rem 1.5rem, 100% 100%, 100% 100%;
+  box-shadow: var(--sb-card-lift), inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
   isolation: isolate;
 }
-.hero-in { padding: var(--fvl-space-stack-group) var(--fvl-space-inset-container) var(--fvl-space-stack-related); }
-@media (width >= 37.5rem) { .hero-in { padding: var(--fvl-space-stack-group) calc(var(--fvl-space-inset-container) * 1.5) var(--fvl-space-stack-related); } }
-.hero-sky .tl-axis, .hero-sky .tl-tick { stroke: currentColor; }
-.hero-sky .tl-years span, .hero-sky .tl-cap { color: inherit; }
-/* On the sky the arcs are one colour (the sky's text colour); read bridges are drawn solid and thick. */
-.hero-sky .tl-bridge { color: inherit; }
-.hero-sky .tl-arc { opacity: 0.8; stroke-width: 1.5px; stroke-dasharray: 6 8; }
-.hero-sky .tl-fan.drawing .tl-arc { stroke-dasharray: none; }
-.hero-sky .tl-bridge.read .tl-arc { opacity: 1; stroke-width: 2.5px; stroke-dasharray: none; }
-.hero-sky .tl-fan.has-near .tl-arc { opacity: 0.35; }
-.hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 3px; stroke-dasharray: none; }
+.hero-in { padding: 1.75rem var(--fvl-space-inset-container) var(--fvl-space-stack-related); }
+@media (width >= 37.5rem) { .hero-in { padding: 1.75rem calc(var(--fvl-space-inset-container) * 1.5) var(--fvl-space-stack-related); } }
+.hero-sky .tl-axis, .hero-sky .tl-tick { stroke: var(--fvl-color-line-strong); }
+.hero-sky .tl-years span { color: var(--fvl-color-text-secondary); }
+.hero-sky .tl-cap { color: var(--fvl-color-text-secondary); }
+.hero-sky .tl-bridge { color: var(--fvl-color-text-muted); }
+.hero-sky .tl-arc { stroke-width: 1px; }
+.hero-sky .tl-bridge.read { color: var(--fvl-color-accent-default); }
+.hero-sky .tl-bridge.read .tl-arc { stroke-width: 2px; filter: drop-shadow(0 0 4px color-mix(in oklab, var(--fvl-color-accent-default) 55%, transparent)); }
+.hero-sky .tl-fan.has-near .tl-arc { opacity: 0.3; }
+.hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 2.5px; }
+.hero-sky .tl-fan.has-near .is-near:not(.read) { color: var(--fvl-color-text-primary); }
 .hero-sky .tl-fan:not([data-cat="all"]) .tl-arc { opacity: 0.3; }
+/* The two ends of each read bridge: an open ring at the promise, a filled point at the fulfilment. */
+.tl-feet { position: absolute; inset: 0; pointer-events: none; }
+.tl-foot { position: absolute; width: 7px; height: 7px; border-radius: var(--fvl-radius-pill); transform: translate(-50%, -50%); }
+.tl-foot.o { background: var(--sky-low); box-shadow: inset 0 0 0 1.5px var(--fvl-color-accent-default); }
+.tl-foot.k { background: var(--fvl-color-accent-default); }
+.tl-wrap { position: relative; }
+.tl-fan-box { position: relative; }
 .hero-progress { margin: calc(-1 * var(--fvl-space-stack-related)) 0 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+/* The next appointed time: a small card, the calendar in a gold well, the arrow to its bridge. */
 .hero-next {
   appearance: none;
   border: 0;
@@ -1059,19 +1173,22 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   align-items: center;
   gap: var(--fvl-space-icon-gap);
   width: 100%;
-  padding: var(--fvl-space-inset-container);
-  border-radius: var(--fvl-radius-container);
+  padding: 1rem 1.25rem 1rem 1rem;
+  border-radius: var(--fvl-radius-panel);
   background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
   color: var(--fvl-color-text-primary);
-  transition: background var(--fvl-motion-tone);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone);
 }
-.hero-next:hover { background: var(--fvl-color-bg-hover); }
+@media (hover: hover) { .hero-next:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); } }
 .hero-next:focus-visible { outline: none; }
-.hero-next > span { flex: 1; min-width: 0; }
-.hero-next small { display: block; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.hero-next b { font-weight: var(--fvl-type-label-weight); }
-.hn-when { color: var(--fvl-color-text-secondary); font-variant-numeric: var(--fvl-type-data-numeric); }
-@media (width >= 37.5rem) { .hero-next { width: auto; justify-self: start; } }
+.hn-well { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: var(--fvl-radius-container); background: var(--fvl-color-accent-subtle); color: var(--fvl-color-accent-text); }
+.hn-text { flex: 1; min-width: 0; display: grid; }
+.hn-text small { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.hn-text b { font-weight: var(--fvl-type-h4-weight); }
+.hn-when { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-variant-numeric: var(--fvl-type-data-numeric); }
+.hn-go { flex: none; color: var(--fvl-color-text-muted); }
+@media (width >= 37.5rem) { .hero-next { width: auto; min-width: 22rem; justify-self: start; } }
 .hero-text { display: grid; gap: var(--fvl-space-stack-related); max-width: var(--fvl-layout-width-prose); }
 .hero-title {
   margin: 0;
@@ -1312,22 +1429,46 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   .sc-cover.wide { aspect-ratio: 4 / 3; }
 }
 
-/* ---------- fewer boxes: open lists ----------
-   Bridge and thread rows sit on the page itself: no card, a fine line between them, the timeline leading each row. */
-.open-list { gap: 0; }
-.open-list > li + li { border-top: 1px solid var(--fvl-color-line-subtle); }
-.open-list .row { background: transparent; border-radius: var(--fvl-radius-container); padding-inline: var(--fvl-space-stack-related); padding-block: var(--fvl-space-stack-group); }
-@media (hover: hover) { .open-list .row:hover { background: var(--fvl-color-bg-hover); } }
-.open-list .row:active { background: var(--fvl-color-bg-active); }
-.open-list .span i::before { background: var(--fvl-color-bg-canvas); }
-.open-list .row:hover .span i::before { background: var(--fvl-color-bg-hover); }
-.open-list .tspan b { background: var(--fvl-color-bg-canvas); }
-.open-list .row:hover .tspan b { background: var(--fvl-color-bg-hover); }
-/* Two columns on wide screens: the line between rows runs per column. */
-@media (width >= 75rem) {
-  .open-list { column-gap: var(--fvl-layout-gutter-large); }
-  .open-list > li + li { border-top: 0; }
-  .open-list > li { border-bottom: 1px solid var(--fvl-color-line-subtle); }
+/* ---------- bridge cards ----------
+   Each bridge is a soft card on the stone: its span on the shared timeline first, then the title, the two
+   references in the accent, and two lines of summary. */
+.card-list { gap: var(--fvl-space-stack-related); }
+.card-list .row {
+  background: var(--fvl-color-bg-surface);
+  border-radius: var(--fvl-radius-panel);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--sb-card-lift);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone), transform var(--fvl-motion-tone);
+}
+@media (width < 37.5rem) { .card-list .row { padding: 1.125rem 1.25rem; } }
+@media (hover: hover) { .card-list .row:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); transform: translateY(-1px); } }
+.card-list .row:active { background: var(--fvl-color-bg-hover); transform: none; }
+@media (prefers-reduced-motion: reduce) { .card-list .row:hover { transform: none; } }
+.card-list .span i::before { background: var(--fvl-color-bg-surface); }
+@media (hover: hover) { .card-list .row:hover .span i::before, .card-list .row:hover .tspan b { background: var(--fvl-color-bg-raised); } }
+.card-list .tspan b { background: var(--fvl-color-bg-surface); }
+.card-list .row-title { font-size: var(--fvl-type-lead-size); line-height: var(--fvl-type-lead-line-height); }
+.card-list .refs { color: var(--fvl-color-accent-text); font-weight: var(--fvl-type-label-weight); }
+@media (width >= 75rem) { .card-list { gap: var(--fvl-space-stack-group); } }
+
+/* Category chips: round pills, the chosen one inverted (ink on stone, stone on ink). */
+.chips fvl-tag {
+  --fvl-tag-radius: var(--fvl-radius-pill);
+  --fvl-tag-height: 2.25rem;
+  --fvl-tag-inset-x: 0.875rem;
+  --fvl-tag-bg: var(--fvl-color-bg-surface);
+  --fvl-tag-bg-hover: var(--fvl-color-bg-hover);
+  --fvl-tag-text: var(--fvl-color-text-secondary);
+  --fvl-tag-selected-bg: var(--fvl-color-text-primary);
+  --fvl-tag-selected-text: var(--fvl-color-bg-canvas);
+}
+/* Search: a sunken well, no outline until it has focus. */
+#q {
+  max-inline-size: none;
+  --fvl-field-bg: var(--fvl-color-bg-surface);
+  --fvl-field-line: transparent;
+  --fvl-field-height: 3rem;
+  --fvl-field-radius: var(--fvl-radius-container);
 }
 
 /* ---------- the reader speaks the same symbols ----------

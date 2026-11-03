@@ -6,7 +6,7 @@ const CACHE = 'sb-20261031j';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
-  '/apps/vendor/fvl/atmosphere/fvl-atmosphere.js', '/apps/vendor/gsap/gsap.min.js', '/apps/vendor/gsap/DrawSVGPlugin.min.js',
+  '/apps/vendor/gsap/gsap.min.js', '/apps/vendor/gsap/DrawSVGPlugin.min.js',
   '/apps/vendor/fvl/fonts/inter-latin-opsz-normal.woff2', '/apps/vendor/fvl/fonts/inter-latin-ext-opsz-normal.woff2', '/apps/vendor/fvl/brand/favicon.svg',
   './data/bible/books.json', './data/books_66.json', './data/prophecies_66_books.json', './data/canonical_threads.json',
   './data/appointed_times.json', './data/evidence.json', './data/review.json', './data/pl/prophecies.json', './data/pl/threads.json',

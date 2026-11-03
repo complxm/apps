@@ -1,7 +1,6 @@
 // ScriptureBridge UI — Flow Visual Language components + GSAP with the FVL springs.
 // Browse (bridges, Bible, threads, map, saved) → tap → Reader: one bridge, nothing else on screen.
 import { toast } from '/apps/vendor/fvl/ui/fvl-components.js';
-import '/apps/vendor/fvl/atmosphere/fvl-atmosphere.js'; // the living field behind the home screen
 
 const gsap = window.gsap;
 if (window.DrawSVGPlugin) gsap.registerPlugin(window.DrawSVGPlugin);
@@ -360,11 +359,13 @@ function fanSVG(list, { W = 1000, H = 280, cls = '' } = {}) {
   const arcs = list.map(({ p, y }) => {
     const a = X(y.ot), b = X(y.nt), rx = (b - a) / 2, ry = Math.min(base - 12, rx * 0.58);
     const d = `M${a.toFixed(1)} ${base} A${rx.toFixed(1)} ${ry.toFixed(1)} 0 0 1 ${b.toFixed(1)} ${base}`;
-    return `<g class="tl-bridge c-${esc(p.category)}" data-id="${esc(p.id)}" data-arc="${((a + b) / 2).toFixed(1)} ${rx.toFixed(1)} ${ry.toFixed(1)} ${base}"><path class="tl-arc" d="${d}"/></g>`;
+    return `<g class="tl-bridge c-${esc(p.category)}" data-id="${esc(p.id)}" data-ends="${a.toFixed(1)} ${b.toFixed(1)}" data-arc="${((a + b) / 2).toFixed(1)} ${rx.toFixed(1)} ${ry.toFixed(1)} ${base}"><path class="tl-arc" d="${d}"/></g>`;
   }).join('');
   // Year labels are HTML under the drawing, so they keep a readable size at any width.
-  return `<div class="tl-wrap ${cls}"><svg class="tl-fan" viewBox="0 0 ${W} ${H + 8}" preserveAspectRatio="none" role="img" aria-label="${esc(t('hero.aria'))}" data-cat="${esc(S.cat)}">
-    <line class="tl-axis" x1="16" x2="${W - 16}" y1="${base}" y2="${base}"/>${ticks}<g class="tl-arcs">${arcs}</g></svg>
+  // The ends of read bridges are HTML dots over the drawing (data-geo says where the axis is), so they stay round
+  // however the drawing stretches.
+  return `<div class="tl-wrap ${cls}"><div class="tl-fan-box"><svg class="tl-fan" viewBox="0 0 ${W} ${H + 8}" preserveAspectRatio="none" role="img" aria-label="${esc(t('hero.aria'))}" data-cat="${esc(S.cat)}">
+    <line class="tl-axis" x1="16" x2="${W - 16}" y1="${base}" y2="${base}"/>${ticks}<g class="tl-arcs">${arcs}</g></svg><div class="tl-feet" aria-hidden="true" data-geo="${W} ${H + 8} ${base}"></div></div>
     <div class="tl-years" aria-hidden="true">${years.map((yr) => `<span${yr === -1500 || yr === -500 ? ' class="minor"' : ''} style="left:${((X(yr) / W) * 100).toFixed(2)}%">${esc(label(yr))}</span>`).join('')}</div>
     <p class="tl-cap" aria-live="polite"></p></div>`;
 }
@@ -390,7 +391,7 @@ function fanPoint(e) {
   const g = nearestArc(svg, e.clientX, e.clientY);
   $$('.tl-bridge.is-near', svg).forEach((x) => { if (x !== g) x.classList.remove('is-near'); });
   svg.classList.toggle('has-near', !!g);
-  const cap = svg.parentElement.querySelector('.tl-cap');
+  const cap = svg.closest('.tl-wrap')?.querySelector('.tl-cap');
   if (g) {
     g.classList.add('is-near');
     const p = D.byId.get(g.dataset.id);
@@ -400,6 +401,15 @@ function fanPoint(e) {
 // Arcs of bridges you have read are drawn solid and thicker.
 function markReadArcs() {
   $$('#hero .tl-bridge, #timeView .tl-bridge').forEach((g) => g.classList.toggle('read', readSet.has(g.dataset.id)));
+  // The sky draws each read bridge's ring and point where its arc meets the axis.
+  const feet = $('#hero .tl-feet');
+  if (feet) {
+    const [W, H, base] = feet.dataset.geo.split(' ').map(Number), top = ((base / H) * 100).toFixed(2);
+    feet.innerHTML = $$('#hero .tl-bridge.read').map((g) => {
+      const [a, b] = g.dataset.ends.split(' ').map(Number);
+      return `<i class="tl-foot o" style="left:${((a / W) * 100).toFixed(2)}%;top:${top}%"></i><i class="tl-foot k" style="left:${((b / W) * 100).toFixed(2)}%;top:${top}%"></i>`;
+    }).join('');
+  }
   const pr = $('#hero .hero-progress'); if (pr) pr.textContent = heroProgress(timeList(() => true).length);
 }
 const timeList = (filter) => D.P.filter(filter).map((p) => ({ p, y: eraYears(p) })).filter((x) => x.y).sort((a, b) => a.y.ot - b.y.ot || a.y.nt - b.y.nt);
@@ -418,20 +428,18 @@ function heroNextHTML() {
   const n = nextMoed();
   if (!n) return '';
   const lg = lang(), when = rangeText(n.r, true), until = untilText(n.r);
-  return `<button type="button" class="hero-next" data-moed="${esc(n.tm.bridge)}"><fvl-icon name="calendar"></fvl-icon>
-    <span><small>${esc(t('hero.next'))}</small><b>${esc(n.tm.name[lg])}</b> <span class="hn-when">${esc(when)} · ${esc(until)}</span></span><fvl-icon name="arrow-right"></fvl-icon></button>`;
+  return `<button type="button" class="hero-next" data-moed="${esc(n.tm.bridge)}"><span class="hn-well"><fvl-icon name="calendar"></fvl-icon></span>
+    <span class="hn-text"><small>${esc(t('hero.next'))}</small><b>${esc(n.tm.name[lg])}</b><span class="hn-when">${esc(when)} · ${esc(until)}</span></span><fvl-icon class="hn-go" name="chevron-right"></fvl-icon></button>`;
 }
 // How much of the collection you have read, as words under the arcs (the arcs themselves show which).
 const heroProgress = (n) => { const r = D.P.filter((p) => readSet.has(p.id)).length; return r ? t('hero.progress', { r: num(r), n: num(n) }) : t('hero.progress0'); };
 function renderHero() {
   const el = $('#hero');
   const list = timeList(() => true);
-  // The sky: FVL's living field, following the time of day; the arcs are drawn in its text colour,
-  // which the field keeps at 4.5:1 or more against every pixel.
-  // Only the arcs sit on the sky; the words stay on the page in its own colours.
+  // The sky: a still night panel in both themes; only the arcs sit on it, the words stay on the page.
   el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
     <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>
-    <fvl-atmosphere class="hero-sky" daylight="auto" contrast="4.5" speed="0.6"><div class="hero-in">${fanSVG(list, { cls: 'hero-fan' })}</div></fvl-atmosphere>
+    <div class="hero-sky" data-theme="dark" data-daylight="night"><div class="hero-in">${fanSVG(list, { cls: 'hero-fan' })}</div></div>
     <p class="hero-progress">${esc(heroProgress(list.length))}</p>
     ${heroNextHTML()}`;
   markReadArcs();
@@ -578,7 +586,7 @@ function renderThreads() {
   const th = S.thread && D.T[S.thread] && LT(S.thread);
   if (!th) {
     v.innerHTML = `<div class="nav-scroll">${thModeHTML('threads')}</div><div class="section-head"><h2>${esc(t('tab.threads'))}</h2><p>${esc(t('threads.lead'))}</p></div>
-      <ol class="list open-list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
+      <ol class="list card-list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
         <span class="span-line">${threadSpanHTML(D.T[k])}<span class="row-gap">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span></span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
     wireThMode(v);
     return;
@@ -587,7 +595,7 @@ function renderThreads() {
   const cal = th.calendar;
   v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/threads"><fvl-icon name="arrow-left"></fvl-icon>${esc(t('allThreads'))}</fvl-button></div>
     <div class="section-head"><h2>${esc(th.title)}</h2><p>${esc(th.description)}</p>${cal && D.CALNOTE[lang()] ? `<p class="note">${esc(D.CALNOTE[lang()])}</p>` : ''}</div>
-    <div class="actions"><fvl-button variant="primary" data-read-thread="${esc(S.thread)}">${esc(t('readThread'))}</fvl-button></div>
+    <div class="actions"><fvl-button variant="secondary" class="cta" data-read-thread="${esc(S.thread)}">${esc(t('readThread'))}</fvl-button></div>
     <ol class="list path">${th.steps.map((st, i) => {
       const p = D.byId.get(st.prophecyId);
       const tm = cal && D.TIMEBY.get(st.prophecyId), when = tm ? moedWhen(tm, true) : '';
@@ -705,8 +713,8 @@ async function renderStudies() {
         <p class="st-video">${esc(t('st.video', { title: x.title }))}</p>
         <p class="st-question">${esc(x.question)}</p>
         <p class="st-meta">${esc(`${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')} · ${lenText(meta.dur)}`)}${done ? ` · ${esc(t('st.done', { r: num(done), n: num(x.steps.length) }))}` : ''}</p>
-        <div class="actions">${next >= 0 ? `<fvl-button variant="primary" data-study-at="${next}">${esc(t('st.continue', { n: next + 1 }))}</fvl-button><fvl-button variant="secondary" data-read-study="${esc(want)}">${esc(t('st.fromStart'))}</fvl-button>`
-          : `<fvl-button variant="primary" data-read-study="${esc(want)}">${esc(t('st.follow'))}</fvl-button>`}${meta.video ? `<a class="ext" href="${esc(meta.video)}" target="_blank" rel="noopener">YouTube<fvl-icon name="external-link"></fvl-icon></a>` : ''}</div>
+        <div class="actions">${next >= 0 ? `<fvl-button variant="secondary" class="cta" data-study-at="${next}">${esc(t('st.continue', { n: next + 1 }))}</fvl-button><fvl-button variant="secondary" data-read-study="${esc(want)}">${esc(t('st.fromStart'))}</fvl-button>`
+          : `<fvl-button variant="secondary" class="cta" data-read-study="${esc(want)}">${esc(t('st.follow'))}</fvl-button>`}${meta.video ? `<a class="ext" href="${esc(meta.video)}" target="_blank" rel="noopener">YouTube<fvl-icon name="external-link"></fvl-icon></a>` : ''}</div>
       </div>
     </div>
     <p class="note">${esc(t('st.routeHint'))}</p>
@@ -898,7 +906,7 @@ function timeBridges() {
 }
 function renderTime(animate) {
   const list = timeBridges();
-  $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list open-list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
+  $('#timeView').innerHTML = `${fanSVG(list, { H: 320 })}<ol class="list card-list">${list.map(({ p }) => rowHTML(p)).join('')}</ol>`;
   if (animate && window.DrawSVGPlugin && !reduced) gsap.from('#timeView .tl-arc', { drawSVG: '0%', stagger: 0.008, ...spring.grow, onComplete: () => $$('#timeView .tl-arc').forEach((x) => { x.style.removeProperty('stroke-dasharray'); x.style.removeProperty('stroke-dashoffset'); }) });
 }
 function showMapMode() {
@@ -919,8 +927,8 @@ function renderSaved() {
     return;
   }
   v.innerHTML = `<div class="section-head"><h2>${esc(t('tab.saved'))}</h2><p>${esc(t('saved.lead', { n: items.length }))}</p></div>
-    <div class="actions"><fvl-button variant="primary" data-read-saved>${esc(t('readSaved'))}</fvl-button><fvl-button variant="secondary" data-copy-md><fvl-icon name="copy"></fvl-icon>${esc(t('copyMd'))}</fvl-button></div>
-    <ol class="list open-list">${items.map((p) => rowHTML(p)).join('')}</ol>`;
+    <div class="actions"><fvl-button variant="secondary" class="cta" data-read-saved>${esc(t('readSaved'))}</fvl-button><fvl-button variant="secondary" data-copy-md><fvl-icon name="copy"></fvl-icon>${esc(t('copyMd'))}</fvl-button></div>
+    <ol class="list card-list">${items.map((p) => rowHTML(p)).join('')}</ol>`;
 }
 
 // ---------- Bible: BSB text + OpenBible cross-references, one small file per chapter ----------
@@ -1192,7 +1200,7 @@ async function renderBible() {
     ${trInfo().notice ? `<p class="note tr-notice">${esc(trInfo().notice)}</p>` : ''}
     <nav class="ch-nav" aria-label="${esc(t('chaptersNav'))}">
       ${prev ? `<fvl-button variant="secondary" data-go="${bibleHash(prev)}"><fvl-icon name="chevron-left"></fvl-icon>${esc(chName(prev))}</fvl-button>` : '<span></span>'}
-      ${next ? `<fvl-button variant="primary" data-go="${bibleHash(next)}">${esc(chName(next))}<fvl-icon name="chevron-right"></fvl-icon></fvl-button>` : '<span></span>'}
+      ${next ? `<fvl-button variant="secondary" class="cta" data-go="${bibleHash(next)}">${esc(chName(next))}<fvl-icon name="chevron-right"></fvl-icon></fvl-button>` : '<span></span>'}
     </nav>`;
   let text, xr;
   try { [text, xr] = await Promise.all([chapterText(osis, c), chapterXref(osis, c)]); }
@@ -2147,7 +2155,7 @@ $('#xrefSheet').addEventListener('click', (e) => {
 });
 
 browse.addEventListener('pointermove', (e) => { if (e.pointerType !== 'touch') fanPoint(e); }, { passive: true });
-browse.addEventListener('pointerleave', () => $$('.tl-fan.has-near').forEach((f) => { f.classList.remove('has-near'); $$('.is-near', f).forEach((x) => x.classList.remove('is-near')); const c = f.parentElement.querySelector('.tl-cap'); if (c) c.textContent = ''; }), true);
+browse.addEventListener('pointerleave', () => $$('.tl-fan.has-near').forEach((f) => { f.classList.remove('has-near'); $$('.is-near', f).forEach((x) => x.classList.remove('is-near')); const c = f.closest('.tl-wrap')?.querySelector('.tl-cap'); if (c) c.textContent = ''; }), true);
 // Start loading a bridge's passages the moment a finger lands on it.
 browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.row[data-id], .continue[data-id]'); if (row) prefetchBridge(row.dataset.id); }, { passive: true });
 // Browse: one delegated handler for rows and actions.
