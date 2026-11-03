@@ -725,7 +725,7 @@ function studyCardHTML(id) {
   const m = D.SI.studies[id], x = LS(m), se = m.series && D.SI.series.find((q) => q.id === m.series);
   const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(id, i))).filter(Boolean).length;
   return `<li><button type="button" class="study-card hue-${studyHue(id)}" data-study="${esc(id)}">
-    <span class="sc-cover" data-theme="dark" data-daylight="night">${coverSVG(m.route)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
+    <span class="sc-cover" data-theme="dark" data-daylight="night">${coverSVG(m.route, 200, 200)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
     <span class="sc-body"><span class="sc-title">${esc(cardTitle({ ...x, series: m.series, part: m.part }))}</span>
       <span class="sc-q">${esc(x.question)}</span>
       <span class="sc-meta">${esc(`${num(m.steps)} ${pluralForm(m.steps, 'step')} · ${lenText(m.dur)}`)}</span>
@@ -1757,7 +1757,7 @@ function showTab(t, sub) {
     S.thread = S.thMode === 'threads' && sub && D.T[sub] ? sub : null;
   }
   if (t === 'bible') S.bible = sub || {};
-  $$('#nav .tab').forEach((b) => { if (b.dataset.tab === t) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
+  setTabs(t);
   TABS.forEach((k) => { views[k].hidden = k !== t; });
   renderTab(t, changed);
   if (changed && !verseOnly) {
@@ -2475,6 +2475,37 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
   else if (e.key === 'Escape') { e.preventDefault(); back(); }
 });
+
+// ---------- the phone tab bar ----------
+// One glass pill slides to the section you choose and opens to show its name; the other icons glide to their new places
+// (first, last, invert, play: measure before, switch, then animate from the old place to the new).
+const tabInd = $('#nav .tab-ind');
+function placeTabInd() {
+  const cur = $('#nav .tab[aria-current="page"]');
+  if (!cur || getComputedStyle(tabInd).display === 'none') return;
+  gsap.set(tabInd, { left: cur.offsetLeft, top: cur.offsetTop, width: cur.offsetWidth, height: cur.offsetHeight });
+}
+function setTabs(t) {
+  const tabs = $$('#nav .tab'), was = tabs.find((b) => b.hasAttribute('aria-current'));
+  const phone = getComputedStyle(tabInd).display !== 'none';
+  const first = phone ? tabs.map((b) => b.offsetLeft) : null;
+  const from = phone && was ? { left: was.offsetLeft, width: was.offsetWidth } : null;
+  tabs.forEach((b) => { if (b.dataset.tab === t) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current'); });
+  if (!phone) return;
+  gsap.killTweensOf(tabInd);
+  placeTabInd();
+  if (reduced || !was || was.dataset.tab === t || !from) return;
+  const cur = tabs.find((b) => b.dataset.tab === t);
+  gsap.fromTo(tabInd, from, { left: cur.offsetLeft, width: cur.offsetWidth, duration: 0.5, ease: 'back.out(1.3)' });
+  tabs.forEach((b, i) => {
+    const dx = first[i] - b.offsetLeft;
+    if (Math.abs(dx) > 0.5) gsap.fromTo(b, { x: dx }, { x: 0, duration: 0.45, ease: 'power3.out', clearProps: 'transform' });
+  });
+  const name = $('span:not(.tab-ic)', cur);
+  if (name) gsap.fromTo(name, { opacity: 0, x: -6 }, { opacity: 1, x: 0, duration: 0.28, delay: 0.1, ease: 'power2.out', clearProps: 'opacity,transform' });
+}
+if (window.ResizeObserver) { const ro = new ResizeObserver(() => { if (!gsap.isTweening(tabInd)) placeTabInd(); }); $$('#nav .tab').forEach((b) => ro.observe(b)); }
+document.fonts?.ready.then(placeTabInd);
 
 // The tab bar's real height (it grows with the text size), so nothing sits under it.
 const tabbar = $('.tabbar');
