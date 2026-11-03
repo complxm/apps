@@ -2,15 +2,15 @@
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
 // Renamed with every release (it matches the ?v= in index.html), so kept copies always belong to the running version.
-const CACHE = 'sbn-20261103w';
+const CACHE = 'sbn-20261103y';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
   '/apps/vendor/gsap/gsap.min.js', '/apps/vendor/gsap/DrawSVGPlugin.min.js',
   '/apps/vendor/fvl/fonts/inter-latin-opsz-normal.woff2', '/apps/vendor/fvl/fonts/inter-latin-ext-opsz-normal.woff2', '/apps/vendor/fvl/brand/favicon.svg',
   './fonts/newsreader-latin-opsz-normal.woff2', './fonts/newsreader-latin-ext-opsz-normal.woff2', './fonts/newsreader-latin-opsz-italic.woff2',
-  '../scripturebridge/data/bible/books.json', '../scripturebridge/data/books_66.json', '../scripturebridge/data/prophecies_66_books.json', '../scripturebridge/data/canonical_threads.json',
-  '../scripturebridge/data/appointed_times.json', '../scripturebridge/data/evidence.json', '../scripturebridge/data/review.json', '../scripturebridge/data/pl/prophecies.json', '../scripturebridge/data/pl/threads.json',
+  './data/bible/books.json', '../scripturebridge/data/books_66.json', '../scripturebridge/data/prophecies_66_books.json', '../scripturebridge/data/canonical_threads.json',
+  '../scripturebridge/data/appointed_times.json', '../scripturebridge/data/evidence.json', './data/review.json', '../scripturebridge/data/pl/prophecies.json', '../scripturebridge/data/pl/threads.json',
   '../scripturebridge/data/pl/appointed_times.json', '../scripturebridge/data/studies/index.json', '../scripturebridge/data/studies/verses.json', '../scripturebridge/data/maps.json',
 ];
 
