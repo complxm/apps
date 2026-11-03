@@ -1,0 +1,136 @@
+# ScriptureBridge: Whole-Bible Prophecy & Cross-Reference Explorer
+
+**ScriptureBridge** is an interactive, zero-dependency web application that transforms flat Bible cross-reference lists into a guided, semantic study experience across **all 66 books of the Bible**.
+
+## Features
+
+- **Dual-Pane Prophecy Explorer (77 Curated Bridges Across All 66 Books):** Compare Old Testament promises and New Testament fulfillments side by side with highlighted key phrases, historical context, era gaps, community vote weights, and hermeneutical bridge explanations.
+- **Whole-Bible 66-Book Filter Bar:** Filter connections by clicking any of the 39 Old Testament or 27 New Testament books, or filter by relationship type (*Direct Prophecy*, *Typological Foreshadowing*, *Direct OT Quotation*, *Covenantal Promise*, *Thematic Parallel*).
+- **6 Narrative Mega-Threads:** Step chronologically through canonical themes from Genesis to Revelation (*Seed of the Woman & Royal Scepter*, *Passover Lamb & Suffering Servant*, *Melchizedek Priest-King*, *Temple, Veil & Cornerstone*, *New Covenant & Faith*, and *Outpoured Spirit & New Creation*).
+- **Interactive 66-Book Arc Map:** A dynamic SVG arc visualization inspired by the Chris Harrison & Christoph Römhild BibleViz diagram—color-coded by theological category with clickable arcs and book ticks.
+- **Full TSK Index & Live 340,000-Row Dataset Loader:** Pre-loaded with 204 high-confidence Treasury of Scripture Knowledge (TSK) links, plus an in-browser TSV/CSV parser that lets users upload the complete 344,799-row `cross_references.txt` dataset from [OpenBible.info](https://www.openbible.info/labs/cross-references/) and filter by confidence votes.
+- **Saved Study Notes & Markdown Export:** Bookmark passages in `localStorage` and export your study collection to Markdown with one click.
+
+## Reading layout (index.html)
+
+The default page is a calm reader built on the Flow Visual Language (FVL) and GSAP:
+
+- **Time is the visual language.** Every bridge is a span on one shared axis, 2100 BC to AD 150: an open ring at the year of the promise, a filled point at the year it was kept, in its category colour. The home screen opens with all 84 bridges as arcs over two thousand years (they draw in once, oldest promise first; tap the arc nearest your finger to read it; on desktop the nearest arc lights up and is named). Each row carries its own span and the years between; each thread shows its promises as rings along the same axis; the reader shows the bridge as one arc with both dates and "1,457 years later" under it. The wordmark is the same arc.
+- **The sky:** the home screen's arcs (only the arcs; the title and the words stay on the page) sit on FVL's living field (`<fvl-atmosphere daylight="auto">`), which follows the time of day (dawn, day, dusk, night) and keeps its text colour at 4.5:1 or more against every pixel; the arcs are drawn in that colour. Bridges you have read are drawn solid and thick, the rest dotted, with "You have read N of 84" under them. Below: the next appointed time of Leviticus 23 (the weekly Sabbath aside), opening that feast in its thread.
+- **In the Bible:** a verse that begins or completes a bridge carries a small arc under its number; its sheet lists those bridges. **Compare Bibles** in the verse sheet shows the verse in BSB, KJV, NLT, UBG and Gdańska side by side.
+- **Share as picture:** the reader draws the bridge as a 4:5 image (title, arc with both dates and the years between, both passages from the chosen Bible, named at the foot) and offers it to the phone's share sheet, or downloads it.
+- **Install and offline:** `manifest.webmanifest` and `icons/` let the app be added to the iPhone home screen; `sw.js` keeps the app, the data and whatever you read, and once per Bible asks for every bridge's passages, the studies and every chapter they open (`data/studies/chapters.json`). It caches only files from this site: the NLT is never stored.
+- **Loading:** a loader is written into `index.html` itself, so it shows the moment the page opens, before the app's code arrives: a drop runs the arc from the promise ring to the fulfilment point (FVL's loading motion: a drop with a tail at the loop speed), and nothing unstyled is shown until the app is ready. On a slow connection it says so after 10 s; if loading fails it gives the reason and **Try again**.
+- **Release:** the worker's cache name in `sw.js` matches the `?v=` in `index.html` and changes with every release, so kept copies always belong to the running version. App code and data come from the network when it answers within 2.5 s, otherwise from the kept copy.
+- **Contrast:** verse highlights carry an accent underline (5:1) as well as a tint; the route line, map curves and timeline arcs meet 3:1 against their background.
+- **Frame:** on phones the sections sit in a tab bar at the bottom; from 52.5rem a sidebar holds the wordmark, the sections and the Bible switch. From 75rem bridge lists use two columns and the reader sets promise and fulfilment side by side.
+- **Routes:** thread and study steps hang off one line, a filled point where the passage is read aloud, an open ring where it is only mentioned.
+
+- **Browse** with search, category chips and one filter drawer (book and relationship). Rows show what you have read and saved, and **Continue reading** picks up where you stopped.
+- **Tap a bridge** and it grows into a full-screen reader: promise, fulfilment, why they connect. The rest of the app is hidden. The top and bottom bars step aside as you read down and return on the way up.
+- **Next / Previous** (or swipe, or the ← → keys) move through the current list, thread or saved set; **Back** (or Esc, or the phone's back gesture) returns to the exact row you left.
+- **Bible**: the whole Berean Standard Bible, chapter by chapter. Tap any verse for its cross-references in two groups, each strongest first with its text: **Points to** (the verse's own links, 344,799 in total) and **Referenced by** (verses whose links land here, 513,837 entries, since OpenBible lists each link one way only). Tap one to jump there. Swipe between chapters. Every chapter, verse and bridge passage links to the NLT on Bible Gateway.
+- **Threads** read as numbered sequences (including **The Appointed Times of Leviticus 23**, with each feast's next date), the **Map** shows Old and New Testament books in two columns with the bridges between them, and **Saved** collects starred bridges.
+- The **Map** has two views: **Books** (above) and **Time**, where every bridge is an arc from the date of the promise to the date of its fulfilment, read from each bridge's era line; the list below it opens the bridges in time order.
+- Every bridge ends with **How strong is this link**: how the New Testament uses the passage, how strong the connection is, and the evidence for it.
+
+### Bible data
+
+`data/bible/` is generated by `scripts/build_bible.py` and loaded one chapter at a time (largest file 34 KB):
+
+- Text: **Berean Standard Bible**, public domain (CC0). https://berean.bible
+- Text: **King James Version** (1769), public domain outside the UK, where it is under Crown copyright. Added so the Berean Study readings can be followed in the words the teacher mostly reads. Bridge key phrases are BSB wording, so they are only marked when reading the BSB.
+- Polish text: **Uwspółcześniona Biblia Gdańska (UBG)**, © Fundacja Wrota Nadziei, CC BY-ND 4.0 (shared unchanged, with credit). https://ebible.org/find/show.php?id=polubg
+- Polish text: **Biblia Gdańska (1881)**, public domain.
+- Choosing a Polish Bible also switches the app to Polish: every label, the 77 bridges and 6 threads (`data/pl/`, translated from the English master, which stays the source), and the bridge passages, which are then read from the chosen Polish Bible. First-time visitors pick their Bible on a welcome card; the globe button changes it later.
+- All five share the same chapter and verse numbering, so the cross-references apply to each. The Bible tab has a BSB / KJV / NLT / UBG / Gdańska switch, remembered per device; Polish book names are used with the Polish texts.
+- Cross-references: **OpenBible.info**, CC BY, export of 2024-11-04 (344,799 links). https://www.openbible.info/labs/cross-references/
+- `data/bible/xin/` holds the reverse direction, computed from the same file: every verse a link's target covers lists that link's source, minus any already in its own links.
+- Both taken from https://github.com/scrollmapper/bible_databases (`formats/json/BSB.json`, `sources/extras/cross_references.txt`).
+- **New Living Translation**: copyrighted by Tyndale House Foundation, so it is **not stored** in this repository. Choosing NLT reads each chapter live from Tyndale's official [NLT API](https://api.nlt.to) (free for non-commercial use) and keeps it only in memory, with Tyndale's copyright notice under the text. Without a key the API allows 50 verses a request and 500 requests a day for each reader (the app splits long chapters); a free key from api.nlt.to (Sign Up) raises this to 500 verses and 5,000 requests. Put it in `NLT_KEY` in `ui.js`. If the API cannot be reached, the BSB is shown and the app says so. Bible Gateway links to the NLT remain throughout.
+
+### Original languages
+
+Tap a verse and the sheet shows it word by word in Hebrew (Old Testament) or Greek (New Testament), each word with its transliteration and gloss. Tap a word for its dictionary entry and every verse it appears in; tap one of those to go there. Bridge passages have a **Words & cross-references** link that opens the same sheet.
+
+- Source: **STEPBible data** by Tyndale House, Cambridge, CC BY 4.0. https://github.com/STEPBible/STEPBible-Data
+  - Hebrew: TAHOT (Leningrad Codex), with English verse numbering. Cantillation marks are removed; vowels are kept.
+  - Greek: TAGNT, keeping only the words in the Nestle-Aland text.
+  - Dictionaries: TBESH (Hebrew) and TBESG (Greek), keyed by extended Strong's numbers.
+- Built by `scripts/build_original.py <path to STEPBible-Data>` into `data/orig/<Book>/<chapter>.json` (one file per chapter, largest 60 KB), and `data/lex/` and `data/occ/` (dictionary entries and verse lists, grouped by Strong's number in hundreds). 442,997 words; 16,968 distinct Strong's numbers, all with a dictionary entry.
+
+### People and places
+
+The verse sheet lists the people and places named in the verse. Tap a person for their name in Hebrew or Greek with its meaning, a short description and every verse they appear in; tap a place for a small map with the place marked, how confident scholars are about its location, and every verse that names it.
+
+- People: **BibleData** by Brady Stephenson, CC BY 4.0. https://github.com/BradyStephenson/bible-data. God, the Father and the Son (its YHVH entries) are left out of the lists, which are for the people of the story; "G-d" is written "God", and book codes in descriptions are written out.
+- Places: **Bible Geocoding Data** by OpenBible.info, CC BY 4.0. https://github.com/openbibleinfo/Bible-Geocoding-Data. The most likely modern site and its confidence score; each place links to its OpenBible.info page.
+- Maps: **Natural Earth** (public domain) coastlines, lakes and rivers, cut to two frames (the Holy Land; the Mediterranean and Near East) and simplified to 36 KB in `data/maps.json`.
+- Built by `scripts/build_people_places.py <bible-data> <Bible-Geocoding-Data> <natural-earth-vector>` into `data/who/<Book>/<chapter>.json` (who and where, verse by verse) and `data/person/`, `data/place/` (details, grouped into 64 files). 2,991 people and 1,285 places. Names and descriptions are in English in both languages.
+
+### Evidence for each bridge
+
+`scripts/build_evidence.py` checks each bridge against the texts and the OpenBible links and writes `data/evidence.json`: the strongest real OpenBible link between the two passages (either direction), the longest run of identical wording, whether the New Testament passage refers to Scripture nearby, reference checks, and how closely each quoted text matches its reference. The original vote counts (318–890, and 300–620 in the classic page's index) matched no OpenBible data; every `votes` value, in `prophecies_66_books.json`, `tsk_high_impact_index.json` and the classic page, is now the strongest real OpenBible link between the passages (0 where there is none).
+
+### How strong is each link
+
+`data/review.json` holds a check of every bridge against the BSB text, the evidence above and the way the New Testament uses the Old, written with AI assistance as suggestions for the editor:
+
+- `link`: quotation, allusion or shared theme; `reading`: prophecy, typology, promise or parallel; `strength`: strong, moderate or weak.
+- `note` / `notePl`: a few plain sentences on how we know the connection is (or is not) there.
+- `keyOt`, `keyNt` (exact BSB phrases) and `keyOtPl`, `keyNtPl` (exact UBG phrases): the words that carry the link.
+- `verdict` (keep, revise, reconsider), `issues` and `resolved`: the editorial record, not shown to readers.
+
+All of the review's corrections were applied on 2026-10-28, in English and Polish, to the 66 original bridges that had any issue (34 to revise, 6 to reconsider, 26 with minor notes; none was removed), and the corrections were checked again by an independent pass. Labels now say what the texts show: 23 bridges are *Thematic Parallel* (an association the New Testament itself does not make). `research/bridge-review.md` lists every issue and what changed.
+
+The reader shows both passages from the chosen Bible (BSB, UBG or Gdańska) with those words marked, and a **How strong is this link** panel: strength, kind of link, the note, the strongest OpenBible cross-reference, shared wording and the verse that refers to Scripture. Every bridge's stored quotation (`text`, `keyPhrase`) is now the BSB text of its references.
+
+### The appointed times (Leviticus 23)
+
+`data/appointed_times.json` (with `data/pl/appointed_times.json`) adds a seventh thread and seven bridges, p78–p84, beside the original data: the Sabbath, Passover, Unleavened Bread, Firstfruits, Weeks (Pentecost), Trumpets and Tabernacles; the Day of Atonement step uses the existing bridge p50. Their passages are quoted from the BSB. `times` gives each feast's Hebrew date, the New Testament basis (or says when a link is only a reading, as for Trumpets) and its key Hebrew and Greek words, which open the dictionary.
+
+The thread and each feast show the next date, computed in the browser from the Hebrew calendar in `Intl` (the calculated calendar of Jewish practice today). Firstfruits is counted from the weekly Sabbath during Unleavened Bread, so it and Weeks fall on Sundays; the rabbinic dates (16 Nisan, 6 Sivan) are shown beside them.
+
+### Studies (The Berean Study)
+
+**Threads → Studies** follows ten videos from the YouTube channel The Berean Study, passage by passage in the order the teacher takes them: *Our Blessed Hope* (5 parts), *What Must We Do? Biblical Salvation* (3 parts), *Who Do Men Say That I Am? – The Godhead Study* and *The Passion Week of Jesus Christ*. Each study shows the question it answers, a summary, what the teacher concludes and its topics, then every step: the time in the video, whether he reads the passage aloud (and from which version) or only mentions it, and what he draws from it. **Follow the study** opens the steps one by one in the reader, with the passage verse by verse in the chosen Bible; when he reads from the KJV, one tap shows it in the KJV. In the Bible, a verse's sheet lists the studies that turn to it (**In the studies**), and each one opens at that moment of the study.
+
+- **Covers:** each study is a tall card whose cover is drawn from its own route: a line from Genesis to Revelation (a tick where the New Testament begins) and an arc for every move from one passage to the next, a filled point for books he reads from and an open ring for books he only mentions, in the study's hue (Blessed Hope, Salvation and each single study have their own). A bar under the card shows how far you have read. The study page opens with the same cover as a wide band, then the question, and **Continue from step N** where you stopped.
+- How it was made: each transcript was matched against the KJV text (word runs of five) and scanned for spoken references, as aids. Each video was then read in full to record every passage in order, and checked again by a second, independent reader against the transcript at each time. The notes are in our own words and attribute the views to the teacher; the app does not judge his teaching. Mis-cited references are corrected, and each correction says what he said.
+- Repeats: when he goes straight back to verses he has just read (to stress one verse, or to read it in another version), the build joins those back-to-back steps into one, so the passage is shown once and each thing he says about it is kept as its own paragraph with its time in the video. A return to a passage after other passages in between stays a separate step. The source files keep every moment; the joining happens in `scripts/build_studies.py` (49 joins, 1,000 moments in 951 steps).
+- Data: `research/berean-study/steps/<id>.json` (the source, with Polish in `pl`), built by `scripts/build_studies.py` into `data/studies/` (`index.json`, one file per study, `verses.json` for the verse sheet). The catalogue of all studies, with indexes by book, by passage taught in more than one video, and by topic, is `research/berean-study/CATALOGUE.md`.
+- The transcripts themselves are not included; only references, times and our summaries. Video links (for "Watch from" each step) can be added as `video` in each source file.
+
+Files: `index.html`, `ui.css`, `ui.js`, data loaded from `data/*.json`. The original single-file layout is kept as `bible_prophecy_explorer.html` (rebuilt by `scripts/generate_app.py`).
+
+## Repository Structure
+
+```text
+├── index.html                      # Self-contained single-page app (ready for GitHub Pages)
+├── bible_prophecy_explorer.html    # Standalone copy of the web application
+├── data/
+│   ├── books_66.json               # Metadata and coordinates for all 66 canonical books
+│   ├── prophecies_66_books.json    # 77 full-text dual-pane bridges covering all 66 books
+│   ├── canonical_threads.json      # 6 step-by-step narrative threads across Scripture
+│   └── tsk_high_impact_index.json  # 204 high-impact TSK cross-references with vote scores
+├── scripts/
+│   ├── build_dataset.py            # Python dataset definition and 66-book coverage verifier
+│   └── generate_app.py             # Static site generator that compiles data into index.html
+├── LICENSE                         # MIT License
+└── README.md
+```
+
+## Quick Start & GitHub Pages Deployment
+
+1. **Run Locally:** Simply double-click `index.html` in any web browser—no server or build step required.
+2. **Deploy on GitHub Pages:**
+   - Upload the contents of this archive to your GitHub repository.
+   - Go to **Settings → Pages**.
+   - Under **Build and deployment**, select **Deploy from a branch**, choose `main` (and `/ (root)`), and click **Save**.
+   - Your site will be live at `https://<your-username>.github.io/<repo-name>/`.
+
+## Loading the Full 340,000+ OpenBible.info Dataset
+
+1. Download `cross_references.txt` (zipped) from [OpenBible.info Labs](https://www.openbible.info/labs/cross-references/) and extract the `.txt` file.
+2. Open **ScriptureBridge**, click the **Full TSK Index & 340k Loader** tab, and select your `cross_references.txt` file using the file picker.
+3. Use the **Min Votes** slider and search box to filter hundreds of thousands of verse links in real time.

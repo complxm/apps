@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0e14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#faf7f3" media="(prefers-color-scheme: light)">
+<title>ScriptureBridge · Preview</title>
+<meta name="description" content="Old Testament promises and New Testament fulfilments across all 66 books, read one bridge at a time.">
+<link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="SB Preview">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fvl.css">
+<link rel="stylesheet" href="ui.css?v=20261103t">
+<style>
+  /* Loader: shown the moment the page opens, before the app's code arrives; gone once the app is ready.
+     The drop travels the arc from the promise (open ring) to the fulfilment (filled point), in FVL's loading
+     motion: a drop with a tail at the loop speed (0.26 turns a second, so half a turn about 1.9 s), easing with
+     the loop's gravity. Nothing else is shown until the app is ready, so no unstyled page flashes. */
+  html:not(.app-ready) #browse { visibility: hidden; }
+  fvl-drawer:not(:defined) { display: none; }
+  .splash {
+    position: fixed;
+    inset: 0;
+    z-index: var(--fvl-layer-toast);
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: var(--fvl-space-stack-group);
+    background: var(--fvl-color-bg-canvas);
+    color: var(--fvl-color-text-primary);
+    opacity: 0;
+    animation: sp-in var(--fvl-motion-tone) forwards;
+    animation-delay: 0.25s; /* lint-allow: a fast load never flashes the loader */
+  }
+  @keyframes sp-in { to { opacity: 1; } }
+  .sp-mark { width: 7.5rem; height: 4.5rem; overflow: visible; }
+  .sp-mark path { fill: none; stroke-linecap: round; }
+  .sp-track { stroke: var(--fvl-color-line-subtle); stroke-width: 4; }
+  .sp-tail, .sp-drop { stroke: var(--fvl-color-accent-default); stroke-dasharray: 0 120; animation: sp-run 1.9s cubic-bezier(0.42, 0.06, 0.58, 0.94) infinite; } /* lint-allow: FVL loop speed */
+  .sp-drop { stroke-width: 6; --len: 6; }
+  .sp-tail { stroke-width: 3; opacity: 0.45; --len: 26; animation-delay: 0.04s; } /* lint-allow: the tail trails the drop */
+  @keyframes sp-run {
+    0% { stroke-dasharray: var(--len) 200; stroke-dashoffset: var(--len); }
+    100% { stroke-dasharray: var(--len) 200; stroke-dashoffset: -100; }
+  }
+  .sp-open { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-accent-default); stroke-width: 3; }
+  .sp-kept { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-accent-default); stroke-width: 3; animation: sp-kept 1.9s ease-in infinite; } /* lint-allow: in step with the drop */
+  @keyframes sp-kept { 0%, 80% { fill: var(--fvl-color-bg-canvas); } 92%, 100% { fill: var(--fvl-color-accent-default); } }
+  .sp-name {
+    margin: 0;
+    font-family: var(--fvl-type-h4-family);
+    font-size: var(--fvl-type-h4-size);
+    font-weight: var(--fvl-type-h4-weight);
+    letter-spacing: var(--fvl-type-h4-tracking);
+  }
+  .sp-note { margin: 0; min-height: var(--fvl-type-small-line-height); color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); text-align: center; max-width: 20rem; }
+  .sp-retry { margin-top: var(--fvl-space-stack-related); }
+  .sp-detail { margin: 0; max-width: 20rem; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); text-align: center; overflow-wrap: anywhere; }
+  .splash[hidden] { display: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .sp-tail { display: none; }
+    .sp-drop, .sp-kept { animation: none; }
+    .sp-drop { stroke-dasharray: none; }
+  }
+</style>
+<script>
+  // FVL context. Theme follows the OS. The neutrals are pinned rather than following the clock: light reads on warm
+  // stone (dawn), dark on obsidian (day), and they switch with the OS.
+  (function () {
+    var q = matchMedia('(prefers-color-scheme: dark)');
+    var set = function () { document.documentElement.dataset.daylight = q.matches ? 'day' : 'dawn'; };
+    set();
+    if (q.addEventListener) q.addEventListener('change', set);
+  })();
+</script>
+</head>
+<body>
+
+<div class="splash" id="splash" role="status" aria-label="Loading ScriptureBridge">
+  <svg class="sp-mark" viewBox="0 0 120 70" aria-hidden="true">
+    <path class="sp-track" d="M12 60A48 48 0 0 1 108 60"/>
+    <path class="sp-tail" pathLength="100" d="M12 60A48 48 0 0 1 108 60"/>
+    <path class="sp-drop" pathLength="100" d="M12 60A48 48 0 0 1 108 60"/>
+    <circle class="sp-open" cx="12" cy="60" r="6"/>
+    <circle class="sp-kept" cx="108" cy="60" r="6"/>
+  </svg>
+  <p class="sp-name">ScriptureBridge</p>
+  <p class="sp-note" id="splashNote"></p>
+</div>
+<script>
+  // If the app is slow to arrive, say so after a while (in the language of the chosen Bible).
+  (function () {
+    var tr = ''; try { tr = JSON.parse(localStorage.getItem('sb_tr') || '""'); } catch (e) {}
+    var pl = tr === 'ubg' || tr === 'gdanska';
+    window.SB_SLOW = setTimeout(function () {
+      var n = document.getElementById('splashNote');
+      if (n) n.textContent = pl ? 'Wciąż wczytywanie. Przy wolnym połączeniu może to chwilę potrwać.' : 'Still loading. On a slow connection this can take a little longer.';
+    }, 10000);
+  })();
+</script>
+
+<div id="browse">
+  <!-- Phone: a top bar that scrolls away and a tab bar at the bottom. Wide screens: one sidebar with both. -->
+  <aside class="rail">
+    <header class="appbar glass">
+      <a class="wordmark" href="#/bridges" aria-label="ScriptureBridge">
+        <svg class="mark" viewBox="0 0 32 20" aria-hidden="true"><path d="M4 16A12 12 0 0 1 28 16"/><circle class="m-open" cx="4" cy="16" r="2.5"/><circle class="m-kept" cx="28" cy="16" r="2.5"/></svg>
+        <span>ScriptureBridge</span>
+      </a>
+      <fvl-button id="trBtn" class="tr-btn" variant="secondary" size="sm" aria-label="Bible translation" aria-haspopup="dialog" aria-expanded="false"><fvl-icon name="globe"></fvl-icon><span id="trBtnLabel">BSB</span></fvl-button>
+    </header>
+    <nav class="tabbar glass" id="nav" aria-label="Sections" data-i18n-attr="aria-label:sections">
+      <button type="button" class="tab" data-tab="bridges" aria-current="page">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18A9 9 0 0 1 21 18"/><circle cx="3" cy="18" r="1.6"/><circle cx="21" cy="18" r="1.6"/></svg>
+        <span data-i18n="tab.bridges">Bridges</span></button>
+      <button type="button" class="tab" data-tab="bible"><fvl-icon class="tab-ic" name="book-open"></fvl-icon><span data-i18n="tab.bible">Bible</span></button>
+      <button type="button" class="tab" data-tab="threads">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14"/><circle cx="6" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M11 5h9M11 12h7M11 19h9"/></svg>
+        <span data-i18n="tab.threads">Threads</span></button>
+      <button type="button" class="tab" data-tab="map"><fvl-icon class="tab-ic" name="map"></fvl-icon><span data-i18n="tab.map">Map</span></button>
+      <button type="button" class="tab" data-tab="saved"><fvl-icon class="tab-ic" name="star"></fvl-icon><span data-i18n="tab.saved">Saved</span></button>
+    </nav>
+  </aside>
+
+  <main class="wrap">
+    <!-- Bridges -->
+    <section id="view-bridges" class="view stack" aria-label="Bridges" data-i18n-attr="aria-label:tab.bridges">
+      <div id="hero"></div>
+      <div id="continue"></div>
+      <fvl-search id="q" placeholder="Search verses, books or words" aria-label="Search bridges" data-i18n-attr="placeholder:search.ph;aria-label:search.label;clear-label:search.clear"></fvl-search>
+      <div>
+        <div class="chips" id="cats" role="group" aria-label="Category" data-i18n-attr="aria-label:category"></div>
+        <div class="actions">
+          <fvl-button id="filterBtn" variant="secondary" size="sm"><fvl-icon name="list-filter"></fvl-icon><span id="filterLabel">Book and relationship</span></fvl-button>
+          <fvl-button id="clearBtn" variant="tertiary" size="sm" hidden data-i18n="clear">Clear</fvl-button>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite" data-i18n="loading">Loading…</p>
+      <ol class="list card-list" id="list"></ol>
+    </section>
+
+    <!-- Threads -->
+    <section id="view-threads" class="view stack" aria-label="Threads" data-i18n-attr="aria-label:tab.threads" hidden></section>
+
+    <!-- Map -->
+    <section id="view-map" class="view stack" aria-label="Map" data-i18n-attr="aria-label:tab.map" hidden>
+      <div class="section-head">
+        <h2 data-i18n="map.title">Bridge map</h2>
+        <p id="mapLead">Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.</p>
+      </div>
+      <fvl-segmented id="mapMode" value="books" aria-label="Map view" data-i18n-attr="aria-label:map.mode">
+        <fvl-segment value="books" data-i18n="map.books">Books</fvl-segment><fvl-segment value="time" data-i18n="map.time">Time</fvl-segment>
+      </fvl-segmented>
+      <div class="chips" id="mapCats" role="group" aria-label="Category" data-i18n-attr="aria-label:category"></div>
+      <div class="time-view" id="timeView" hidden></div>
+      <div class="bmap" id="bmap">
+        <span class="bhead" data-i18n="ot">Old Testament</span><span></span><span class="bhead nt" data-i18n="nt">New Testament</span>
+        <div class="bcol ot" id="otCol" role="group" aria-label="Old Testament books" data-i18n-attr="aria-label:otBooks"></div>
+        <svg class="bcurves" id="curves" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div class="bcol nt" id="ntCol" role="group" aria-label="New Testament books" data-i18n-attr="aria-label:ntBooks"></div>
+      </div>
+      <div class="map-bar" id="mapBar" hidden>
+        <div class="map-bar-in">
+          <div class="mb-text"><small id="mbSide"></small><b id="mbBook"></b><span id="mbCount"></span></div>
+          <fvl-button variant="tertiary" icon aria-label="Clear selection" id="mbClear" data-i18n-attr="aria-label:map.clear"><fvl-icon name="x" size="md"></fvl-icon></fvl-button>
+          <fvl-button variant="secondary" size="sm" id="mbList" data-i18n="list">List</fvl-button>
+          <fvl-button variant="secondary" class="cta" size="sm" id="mbRead" data-i18n="read">Read</fvl-button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saved -->
+    <section id="view-saved" class="view stack" aria-label="Saved" data-i18n-attr="aria-label:tab.saved" hidden></section>
+
+    <!-- Bible: BSB text, tap a verse for its cross-references -->
+    <section id="view-bible" class="view stack" aria-label="Bible" data-i18n-attr="aria-label:tab.bible" hidden></section>
+
+    <footer class="foot stack-tight">
+      <p class="note" data-i18n-html="credits">Bible text: Berean Standard Bible (public domain); Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY.</p>
+      <a href="../scripturebridge/bible_prophecy_explorer.html" data-i18n="classic">Classic layout</a>
+    </footer>
+  </main>
+</div>
+
+<!-- Reader: one bridge at a time, nothing else on screen -->
+<section id="reader" class="reader" hidden aria-label="Reader" data-i18n-attr="aria-label:reader">
+  <div class="r-top" id="rTop">
+    <div class="r-top-in">
+      <fvl-button id="back" variant="tertiary" icon aria-label="Back to list" data-i18n-attr="aria-label:back"><fvl-icon name="arrow-left" size="md"></fvl-icon></fvl-button>
+      <span class="r-pos" id="rPos"></span>
+      <fvl-button id="star" variant="tertiary" icon aria-label="Save" aria-pressed="false"><fvl-icon name="star" size="md"></fvl-icon></fvl-button>
+    </div>
+  </div>
+  <article class="r-body" id="rBody"></article>
+  <nav class="r-bar" id="rBar" aria-label="Bridge navigation" data-i18n-attr="aria-label:readerNav">
+    <div class="r-bar-in">
+      <fvl-button id="prev" variant="secondary" icon pill aria-label="Previous bridge" data-i18n-attr="aria-label:prevA"><fvl-icon name="chevron-left" size="md"></fvl-icon></fvl-button>
+      <fvl-button id="next" variant="secondary" class="cta" pill>Next</fvl-button>
+    </div>
+  </nav>
+</section>
+
+<fvl-drawer id="books" placement="bottom" heading="Filter bridges" description="Narrow the list by relationship and by book." data-i18n-attr="heading:filter.title;description:filter.desc">
+  <div class="book-group"><h3 data-i18n="filter.rel">Relationship</h3><div class="tag-wrap" id="types" role="group" aria-label="Relationship" data-i18n-attr="aria-label:filter.rel"></div></div>
+  <div class="book-group"><div id="bookGroups"></div></div>
+  <fvl-button slot="footer" variant="secondary" class="cta" id="applyBtn">Show bridges</fvl-button>
+</fvl-drawer>
+
+<!-- Translation menu: springs open from the globe button -->
+<div class="tr-pop" id="trPop" hidden role="dialog" aria-label="Bible translation" data-i18n-attr="aria-label:tr.title">
+  <p class="tr-pop-head" data-i18n="tr.title">Bible translation</p>
+  <p class="tr-pop-desc" data-i18n="tr.desc">Also sets the app language.</p>
+  <div class="tr-list" id="trList" role="radiogroup" aria-label="Bible translation" data-i18n-attr="aria-label:tr.title"></div>
+</div>
+
+<!-- First visit: choose the Bible, and with it the app language -->
+<div class="welcome" id="welcome" hidden>
+  <div class="welcome-card" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" tabindex="-1">
+    <h2 id="welcomeTitle">Choose your Bible <span>Wybierz Biblię</span></h2>
+    <p>This also sets the app language. You can change it any time with the globe button.<br><span lang="pl">Ustawia też język aplikacji. Możesz to zmienić w każdej chwili przyciskiem z globusem.</span></p>
+    <div class="tr-list" id="welcomeList" role="radiogroup" aria-labelledby="welcomeTitle"></div>
+  </div>
+</div>
+
+<fvl-drawer id="xrefSheet" placement="bottom" heading="Cross-references">
+  <div id="xrefBody" class="stack"></div>
+</fvl-drawer>
+
+<fvl-drawer id="mapList" placement="bottom" heading="Bridges" data-i18n-attr="heading:tab.bridges">
+  <ol class="list sheet-list" id="mapListRows"></ol>
+</fvl-drawer>
+
+<script src="/apps/vendor/gsap/gsap.min.js"></script>
+<script src="/apps/vendor/gsap/DrawSVGPlugin.min.js"></script>
+<script type="module" src="ui.js?v=20261103t"></script>
+</body>
+</html>
