@@ -202,21 +202,32 @@ body {
   inset: 0;
   z-index: var(--fvl-layer-dialog);
   background: var(--fvl-color-scrim);
-  display: grid;
-  place-items: center;
-  padding: var(--fvl-layout-margin-compact);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* The backdrop is its own scroller: a short phone scrolls the card here, and a swipe never reaches the page. */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(env(safe-area-inset-top), var(--fvl-layout-margin-compact)) var(--fvl-layout-margin-compact) max(env(safe-area-inset-bottom), var(--fvl-layout-margin-compact));
 }
 .welcome[hidden] { display: none; }
-.welcome { overflow: hidden; }
+/* While the card is up the page underneath stays put (sb-modal is set on <html> by ui.js). */
+html.sb-modal, html.sb-modal body { overflow: hidden; }
 .welcome-card {
+  margin: auto; /* centred, yet never cut off at the top when taller than the screen */
+  flex: none;
   width: min(28rem, 100%);
   background: var(--fvl-color-bg-overlay);
   box-shadow: var(--fvl-shadow-overlay);
   border-radius: var(--fvl-radius-sheet);
-  padding: var(--fvl-space-inset-overlay);
+  padding: 1.5rem 1.25rem 1.25rem;
   display: grid;
-  gap: var(--fvl-space-stack-group);
+  gap: 0.75rem;
 }
+.welcome-card .tr-list { margin-top: 0.5rem; gap: 0.5rem; }
+.welcome-card .tr-opt { padding: 0.875rem 1rem; border-radius: 0.875rem; }
+.welcome-card .tr-opt small { margin-top: 0.125rem; }
 .welcome-card:focus { outline: none; }
 .welcome-card h2 {
   margin: 0;

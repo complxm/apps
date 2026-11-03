@@ -2406,8 +2406,9 @@ addEventListener('resize', () => closeTrMenu());
 function showWelcome() {
   const w = $('#welcome'), card = $('.welcome-card', w);
   $('#welcomeList').innerHTML = trOptionsHTML(false);
-  w.hidden = false;
+  w.hidden = false; w.scrollTop = 0;
   browse.inert = true;
+  document.documentElement.classList.add('sb-modal');
   if (!reduced) {
     gsap.fromTo(w, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: 'power1.out' });
     gsap.fromTo(card, { opacity: 0, y: 24, scale: 0.98 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'fvl-arrive', delay: 0.06 });
@@ -2415,12 +2416,14 @@ function showWelcome() {
   }
   softFocus($('.tr-opt', card)); // keyboard users land on the first choice; touch users see no ring
 }
+// iOS can still drag the page under a fixed layer: when the card fits, a swipe on it does nothing.
+$('#welcome').addEventListener('touchmove', (e) => { const w = e.currentTarget; if (w.scrollHeight <= w.clientHeight + 1) e.preventDefault(); }, { passive: false });
 $('#welcomeList').addEventListener('click', (e) => {
   const o = e.target.closest('[data-tr]'); if (!o) return;
   const id = o.dataset.tr, w = $('#welcome');
   $$('.tr-opt', w).forEach((x) => x.setAttribute('aria-checked', String(x === o)));
   w.style.pointerEvents = 'none';
-  const finish = () => { w.hidden = true; w.style.pointerEvents = ''; browse.inert = false; gsap.set([w, $('.welcome-card', w)], { clearProps: 'opacity,transform' }); };
+  const finish = () => { w.hidden = true; document.documentElement.classList.remove('sb-modal'); w.style.pointerEvents = ''; browse.inert = false; gsap.set([w, $('.welcome-card', w)], { clearProps: 'opacity,transform' }); };
   if (reduced) { setTranslation(id, { instant: true }); finish(); return; }
   // The tick shows, the card leaves, the language switches behind the backdrop, then the backdrop lifts.
   // The card stays solid and slides away (no see-through text over the page), then the backdrop lifts.
