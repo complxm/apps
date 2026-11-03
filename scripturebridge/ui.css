@@ -14,7 +14,7 @@
   --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
   --fvl-color-focus-ring: var(--fvl-color-warning-text);
   /* Floating chrome: frosted surface, a lit top edge, a soft drop. */
-  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 80%, transparent);
+  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 88%, transparent);
   --sb-rim: var(--fvl-color-bg-surface);
   --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-text-primary) 12%, transparent);
   --sb-card-lift: 0 0.5rem 1.5rem -0.25rem color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent), 0 1px 2px color-mix(in oklab, var(--fvl-color-text-primary) 5%, transparent);
@@ -29,7 +29,7 @@
     --fvl-color-accent-subtle-hover: var(--fvl-color-warning-subtle-hover);
     --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
     --fvl-color-focus-ring: var(--fvl-color-warning-text);
-    --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 76%, transparent);
+    --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 88%, transparent);
     --sb-rim: color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
     --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-bg-sunken) 70%, transparent);
     --sb-card-lift: inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent);
@@ -44,7 +44,7 @@
   --fvl-color-accent-subtle-hover: var(--fvl-color-warning-subtle-hover);
   --fvl-color-bg-selected: var(--fvl-color-warning-subtle);
   --fvl-color-focus-ring: var(--fvl-color-warning-text);
-  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 76%, transparent);
+  --sb-glass: color-mix(in oklab, var(--fvl-color-bg-surface) 88%, transparent);
   --sb-rim: color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
   --sb-lift: 0 0.75rem 2rem color-mix(in oklab, var(--fvl-color-bg-sunken) 70%, transparent);
   --sb-card-lift: inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 6%, transparent);
@@ -179,7 +179,9 @@ body {
   -webkit-backdrop-filter: blur(24px) saturate(1.5);
   backdrop-filter: blur(24px) saturate(1.5);
 }
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .glass { background: var(--fvl-color-bg-surface); } }
+/* Where frost cannot be drawn, or the reader asks for less transparency, the bars are solid. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { :root, :root:not([data-theme="light"]), [data-theme] { --sb-glass: var(--fvl-color-bg-surface); } }
+@media (prefers-reduced-transparency: reduce) { :root, :root:not([data-theme="light"]), [data-theme] { --sb-glass: var(--fvl-color-bg-surface); } }
 .appbar {
   position: sticky;
   top: 0;
@@ -723,8 +725,11 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--fvl-color-bg-canvas);
   padding-top: env(safe-area-inset-top);
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: 0 1px 0 var(--fvl-color-line-subtle);
 }
 .r-top-in, .r-bar-in {
   max-width: var(--fvl-layout-width-prose);
@@ -753,18 +758,25 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 }
 .r-bar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--fvl-color-bg-canvas);
-  padding-bottom: env(safe-area-inset-bottom);
+  left: 50%;
+  bottom: var(--fvl-space-stack-related);
+  bottom: max(env(safe-area-inset-bottom), 0.75rem);
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 30rem);
+  border-radius: var(--fvl-radius-pill);
+  padding: 0.375rem;
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  backdrop-filter: blur(24px) saturate(1.5);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
+.r-bar .r-bar-in { padding: 0; max-width: none; }
 .r-bar-in fvl-button#next { min-width: 8rem; }
 .r-in > * + * { margin-top: var(--fvl-space-stack-group); }
 .r-in > .passage + .passage, .r-in > .why { margin-top: calc(var(--fvl-space-stack-group) * 2); }
 
 .r-step {
-  background: var(--fvl-color-bg-surface);
+  background: var(--fvl-color-bg-sunken);
   border-radius: var(--fvl-radius-container);
   padding: var(--fvl-space-inset-container);
   display: grid;
@@ -849,16 +861,18 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   color: inherit;
   cursor: pointer;
   margin-top: var(--fvl-space-stack-section) !important;
-  padding: var(--fvl-space-inset-container);
-  border-radius: var(--fvl-radius-container);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--fvl-radius-panel);
   background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--fvl-space-icon-gap);
-  transition: background var(--fvl-motion-tone);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone);
 }
-.upnext:hover { background: var(--fvl-color-bg-hover); }
+@media (hover: hover) { .upnext:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); } }
+.upnext fvl-icon { color: var(--fvl-color-accent-text); }
 .upnext:focus-visible { outline: none; }
 .upnext small { display: block; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: var(--fvl-type-label-weight); }
 .upnext b { display: block; font-weight: var(--fvl-type-label-weight); }
@@ -1225,7 +1239,15 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .row-marks { align-items: center; }
 
 /* ---------- reader: the span of one bridge ---------- */
-.r-span { margin: var(--fvl-space-stack-group) 0 0; display: grid; gap: var(--fvl-space-stack-related); }
+.r-span {
+  margin: var(--fvl-space-stack-group) 0 0;
+  display: grid;
+  gap: var(--fvl-space-stack-related);
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-radius: var(--fvl-radius-panel);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
 .rs-arc {
   position: relative;
   height: clamp(4rem, 12vw, 6rem);
@@ -1235,7 +1257,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 .rs-arc i { position: absolute; bottom: 0; width: 12px; height: 12px; border-radius: var(--fvl-radius-pill); }
-.rs-open { left: -1px; transform: translate(-50%, 50%); background: var(--fvl-color-bg-canvas); box-shadow: inset 0 0 0 2px currentColor; }
+.rs-open { left: -1px; transform: translate(-50%, 50%); background: var(--fvl-color-bg-surface); box-shadow: inset 0 0 0 2px currentColor; }
 .rs-kept { right: -1px; transform: translate(50%, 50%); background: currentColor; }
 .rs-gap {
   position: absolute;
@@ -1252,8 +1274,16 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .rs-ends .rs-b { text-align: right; }
 .rs-ends b { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); font-variant-numeric: var(--fvl-type-data-numeric); }
 .rs-ends small { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.r-pair { display: grid; gap: calc(var(--fvl-space-stack-group) * 2); margin-top: calc(var(--fvl-space-stack-group) * 2); align-items: start; }
-.r-pair > .passage { align-content: start; }
+.r-pair { display: grid; gap: var(--fvl-space-stack-group); margin-top: var(--fvl-space-stack-group); align-items: stretch; }
+.r-pair > .passage {
+  align-content: start;
+  padding: 1.5rem;
+  border-radius: var(--fvl-radius-panel);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
+@media (width < 37.5rem) { .r-pair > .passage, .r-span { padding: 1.25rem; } }
+.r-pair .p-text { border-left-width: 3px; }
 
 /* Wide screens: promise and fulfilment side by side under the arc; the rest keeps a reading measure. */
 @media (width >= 75rem) {
@@ -1261,7 +1291,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   .reader:has(.r-pair) .r-body { padding-inline: var(--fvl-layout-margin-large); }
   .r-in > * { max-width: var(--fvl-layout-width-prose); }
   .r-in > .r-pair, .r-in > .r-span { max-width: none; }
-  .r-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--fvl-layout-gutter-large); }
+  .r-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--fvl-space-stack-group); }
 }
 
 /* ---------- a route through Scripture: thread and study steps ----------
@@ -1323,6 +1353,12 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .hue-3 { --hue: var(--fvl-color-data-3); }
 .hue-4 { --hue: var(--fvl-color-data-4); }
 .hue-5 { --hue: var(--fvl-color-data-5); }
+/* Covers are always night: their hue is re-read inside the cover, so it takes the brighter dark-theme colour. */
+.hue-1 .sc-cover { --hue: var(--fvl-color-data-1); }
+.hue-2 .sc-cover { --hue: var(--fvl-color-data-2); }
+.hue-3 .sc-cover { --hue: var(--fvl-color-data-3); }
+.hue-4 .sc-cover { --hue: var(--fvl-color-data-4); }
+.hue-5 .sc-cover { --hue: var(--fvl-color-data-5); }
 .study-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--fvl-space-stack-group) var(--fvl-space-icon-gap); }
 @media (width >= 37.5rem) { .study-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--fvl-space-stack-group); } }
 @media (width >= 75rem) { .study-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -1344,28 +1380,41 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   overflow: hidden;
   transition: background var(--fvl-motion-tone);
 }
-.study-card:hover { background: var(--fvl-color-bg-hover); }
+.study-card { box-shadow: var(--sb-card-lift); transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone), transform var(--fvl-motion-tone); }
+@media (hover: hover) { .study-card:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); transform: translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { .study-card:hover { transform: none; } }
 .study-card:focus-visible { outline: none; }
 /* The cover: a soft wash of the study's hue, light or dark with the theme, the route drawn in the hue itself. */
 .sc-cover {
   position: relative;
   display: block;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(165deg, color-mix(in oklab, var(--hue) 26%, var(--fvl-color-bg-surface)), color-mix(in oklab, var(--hue) 7%, var(--fvl-color-bg-surface)));
+  color: var(--fvl-color-text-primary);
+  background-color: var(--fvl-color-bg-sunken);
+  background-image:
+    radial-gradient(color-mix(in oklab, var(--fvl-color-text-primary) 12%, transparent) 1px, transparent 1.5px),
+    radial-gradient(ellipse 80% 60% at 50% 100%, color-mix(in oklab, var(--hue) 34%, transparent), transparent 75%),
+    linear-gradient(170deg, color-mix(in oklab, var(--hue) 22%, var(--fvl-color-bg-sunken)), color-mix(in oklab, var(--hue) 10%, var(--fvl-color-bg-sunken)));
+  background-size: 1.25rem 1.25rem, 100% 100%, 100% 100%;
 }
 .sc-cover.wide { aspect-ratio: 8 / 3; border-radius: var(--fvl-radius-panel); }
 .sc-art { position: absolute; inset: 0; width: 100%; height: 100%; }
 .sc-axis, .sc-nt { stroke: var(--fvl-color-text-secondary); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.sc-route { fill: none; stroke: var(--hue); stroke-width: 1.25; stroke-opacity: 0.6; vector-effect: non-scaling-stroke; }
+.sc-route { fill: none; stroke: var(--hue); stroke-width: 1.25; stroke-opacity: 0.85; vector-effect: non-scaling-stroke; }
 .sc-art path { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
 .sc-art .rd { stroke: var(--hue); stroke-width: 8px; }
 .sc-art .mt-o { stroke: var(--hue); stroke-width: 8px; }
-.sc-art .mt-i { stroke: var(--fvl-color-bg-surface); stroke-width: 4px; }
+.sc-art .mt-i { stroke: var(--fvl-color-bg-sunken); stroke-width: 4px; }
 .sc-label {
   position: absolute;
   top: var(--fvl-space-inset-container);
   left: var(--fvl-space-inset-container);
-  right: 40%;
+  max-width: calc(100% - 2 * var(--fvl-space-inset-container));
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--fvl-radius-pill);
+  background: color-mix(in oklab, var(--fvl-color-bg-sunken) 72%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   color: var(--fvl-color-text-primary);
   font-size: var(--fvl-type-small-size);
   line-height: var(--fvl-type-small-line-height);
@@ -1375,7 +1424,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   position: absolute;
   left: var(--fvl-space-inset-container);
   top: var(--fvl-space-inset-container);
-  color: var(--fvl-color-text-primary);
+  color: var(--fvl-color-text-secondary);
   font-family: var(--fvl-type-display-family);
   font-size: var(--fvl-type-h1-size);
   line-height: 1;
@@ -1486,3 +1535,35 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .r-pair.c-covenant { --_cat: var(--fvl-color-data-5); }
 .r-pair { color: var(--fvl-color-text-primary); }
 .r-pair .p-text { border-left-color: var(--_cat, var(--fvl-prose-quote-line)); }
+
+/* ---------- what he draws from it ----------
+   Each point the teacher makes is its own card, led by a small gold point. */
+.st-points { display: grid; gap: var(--fvl-space-stack-related); margin-top: var(--fvl-space-stack-related); }
+.st-points > p {
+  position: relative;
+  margin: 0 !important;
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: var(--fvl-radius-container);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
+.st-points > p::before {
+  content: "";
+  position: absolute;
+  left: 1.125rem;
+  top: 1.8rem;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--fvl-radius-pill);
+  background: var(--fvl-color-accent-default);
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- sheets: frosted glass ----------
+   The verse sheet, filters and other drawers: a strong frost so the words stay crisp over whatever is behind. */
+fvl-drawer::part(panel) {
+  background: color-mix(in oklab, var(--fvl-color-bg-raised) 94%, transparent);
+  -webkit-backdrop-filter: blur(32px) saturate(1.6);
+  backdrop-filter: blur(32px) saturate(1.6);
+  box-shadow: var(--fvl-shadow-overlay), inset 0 1px 0 var(--sb-rim);
+}

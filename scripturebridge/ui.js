@@ -669,7 +669,7 @@ function studyCardHTML(id) {
   const m = D.SI.studies[id], x = LS(m), se = m.series && D.SI.series.find((q) => q.id === m.series);
   const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(id, i))).filter(Boolean).length;
   return `<li><button type="button" class="study-card hue-${studyHue(id)}" data-study="${esc(id)}">
-    <span class="sc-cover">${coverSVG(m.route)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
+    <span class="sc-cover" data-theme="dark" data-daylight="night">${coverSVG(m.route)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
     <span class="sc-body"><span class="sc-title">${esc(cardTitle({ ...x, series: m.series, part: m.part }))}</span>
       <span class="sc-q">${esc(x.question)}</span>
       <span class="sc-meta">${esc(`${num(m.steps)} ${pluralForm(m.steps, 'step')} · ${lenText(m.dur)}`)}</span>
@@ -707,7 +707,7 @@ async function renderStudies() {
   const next = done && last < x.steps.length - 1 ? last + 1 : -1;
   v.innerHTML = `<div class="actions"><fvl-button variant="tertiary" size="sm" data-go="#/threads/studies"><fvl-icon name="arrow-left"></fvl-icon>${esc(t('st.all'))}</fvl-button></div>
     <div class="st-hero hue-${studyHue(want)}">
-      <div class="sc-cover wide">${coverSVG(meta.route, 640, 240)}<span class="sc-label">${esc(se ? `${LS(se).title} · ${t('st.part', { n: meta.part })}` : t('st.single1'))}</span></div>
+      <div class="sc-cover wide" data-theme="dark" data-daylight="night">${coverSVG(meta.route, 640, 240)}<span class="sc-label">${esc(se ? `${LS(se).title} · ${t('st.part', { n: meta.part })}` : t('st.single1'))}</span></div>
       <div class="st-hero-text">
         <h2>${esc(x.name || x.title)}</h2>
         <p class="st-video">${esc(t('st.video', { title: x.title }))}</p>
@@ -787,7 +787,7 @@ function renderStudyReader() {
     </section>
     <section class="why" aria-label="${esc(t('st.draws'))}">
       <p class="p-label">${esc(t('st.draws'))}</p>
-      ${pointHTML(st, meta)}
+      <div class="st-points">${pointHTML(st, meta)}</div>
       ${st.note ? `<p class="note">${esc(st.note)}</p>` : ''}
       ${vid ? `<p class="p-links"><a class="ext" href="${esc(vid)}" target="_blank" rel="noopener">${esc(t('st.watch', { time: hms(st.t) }))}<fvl-icon name="external-link"></fvl-icon></a></p>` : ''}
     </section>
@@ -1461,23 +1461,33 @@ function renderXrefItems(key) {
 }
 
 // ---------- share a bridge as a picture ----------
-// A 4:5 card: the title, the bridge's arc with both dates and the years between, both passages from the chosen Bible
-// (named at the foot), drawn in the app's own colours and type. Sent to the share sheet where the phone has one,
-// otherwise downloaded.
+// A 4:5 card on the night sky (the same in light and dark): the title, the bridge's arc in gold with both dates and the
+// years between, both passages from the chosen Bible (named at the foot), in the app's own colours and type. Sent to the
+// share sheet where the phone has one, otherwise downloaded.
 async function bridgeImage(p0) {
   const p = L(p0), W = 1080, H = 1350, M = 88;
   const css = getComputedStyle(document.body), tok = (n) => css.getPropertyValue(n).trim();
-  const probe = document.createElement('span'); document.body.append(probe);
-  const col = (v) => { probe.style.color = `var(${v})`; return getComputedStyle(probe).color; };
-  const C = { bg: col('--fvl-color-bg-canvas'), text: col('--fvl-color-text-primary'), soft: col('--fvl-color-text-secondary'), muted: col('--fvl-color-text-muted'),
-    line: col('--fvl-color-line-subtle'), accent: col('--fvl-color-accent-default') };
-  probe.className = 'c-' + p0.category; probe.style.color = ''; const cat = getComputedStyle(probe).color; probe.remove();
+  // Colours come from a hidden night-theme probe, each turned into plain rgb so every canvas draws it the same.
+  const night = document.createElement('div'); night.dataset.theme = 'dark'; night.dataset.daylight = 'night'; night.hidden = true;
+  const probe = document.createElement('span'); night.append(probe); document.body.append(night);
+  const px = document.createElement('canvas').getContext('2d', { willReadFrequently: true });
+  const rgb = (c) => { px.clearRect(0, 0, 1, 1); px.fillStyle = '#000'; px.fillStyle = c; px.fillRect(0, 0, 1, 1); const d = px.getImageData(0, 0, 1, 1).data; return `rgb(${d[0]},${d[1]},${d[2]})`; }; // lint-allow: a canvas needs plain rgb, read back from the token
+  const col = (v) => { probe.style.color = v.startsWith('--') ? `var(${v})` : v; return rgb(getComputedStyle(probe).color); };
+  const C = { bg: col('color-mix(in oklab, var(--fvl-color-data-1) 7%, var(--fvl-color-bg-sunken))'), low: col('color-mix(in oklab, var(--fvl-color-data-1) 16%, var(--fvl-color-bg-surface))'),
+    text: col('--fvl-color-text-primary'), soft: col('--fvl-color-text-secondary'), muted: col('--fvl-color-text-muted'),
+    line: col('--fvl-color-line-strong'), accent: col('--fvl-color-accent-default') };
+  probe.className = 'c-' + p0.category; probe.style.color = ''; const cat = rgb(getComputedStyle(probe).color); night.remove();
   const family = tok('--fvl-type-body-family') || 'Inter, sans-serif';
   await Promise.all([document.fonts.load(`600 64px ${family}`), document.fonts.load(`400 32px ${family}`)]).catch(() => {});
   const [ot, nt] = await Promise.all([passagePlain(p.ot.ref), passagePlain(p.nt.ref)]).catch(() => [p.ot.text, p.nt.text]);
   const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
   const g = cv.getContext('2d');
-  g.fillStyle = C.bg; g.fillRect(0, 0, W, H);
+  const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, C.bg); sky.addColorStop(1, C.low);
+  g.fillStyle = sky; g.fillRect(0, 0, W, H);
+  // a fine field of stars
+  g.fillStyle = C.line; g.globalAlpha = 0.35;
+  for (let sy = 24; sy < H; sy += 36) for (let sx = 24; sx < W; sx += 36) { g.beginPath(); g.arc(sx, sy, 1.2, 0, 2 * Math.PI); g.fill(); }
+  g.globalAlpha = 1;
   const font = (w, px) => { g.font = `${w} ${px}px ${family}`; };
   // Wrap text into at most `max` lines of width `w`, ending with … when cut.
   const wrap = (txt, w, max) => {
@@ -1508,10 +1518,11 @@ async function bridgeImage(p0) {
   // the arc
   const [a, b] = String(p.eraGap || '').replace(/\s*\([^)]*\)\s*$/, '').split('→').map((x) => (x || '').trim());
   const yrs = yearsOf(p0), base = y + 150;
-  g.strokeStyle = cat; g.lineWidth = 5;
+  g.strokeStyle = C.accent; g.lineWidth = 5; g.shadowColor = C.accent; g.shadowBlur = 24;
   g.beginPath(); g.ellipse(W / 2, base, (W - 2 * M) / 2, 140, 0, Math.PI, 0); g.stroke();
+  g.shadowBlur = 0;
   g.fillStyle = C.bg; g.beginPath(); g.arc(M, base, 11, 0, 2 * Math.PI); g.fill(); g.stroke();
-  g.fillStyle = cat; g.beginPath(); g.arc(W - M, base, 11, 0, 2 * Math.PI); g.fill();
+  g.fillStyle = C.accent; g.beginPath(); g.arc(W - M, base, 11, 0, 2 * Math.PI); g.fill();
   if (yrs != null) { font(600, 34); g.fillStyle = C.text; g.textAlign = 'center'; g.fillText(t('tl.later', { n: num(yrs) }), W / 2, base - 30); }
   font(600, 30); g.fillStyle = C.text; g.textAlign = 'left'; g.fillText(a, M, base + 52); g.textAlign = 'right'; g.fillText(b, W - M, base + 52); g.textAlign = 'left';
   y = base + 120;
