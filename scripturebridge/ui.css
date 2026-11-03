@@ -2014,3 +2014,21 @@ body::before { opacity: 0.035; }
 }
 /* Very narrow phones: Saved and the study stack too. */
 @media (width < 22rem) { .bento { grid-template-areas: "sky sky" "today today" "cont cont" "next next" "saved saved" "study study"; } }
+
+/* The sliding pill behind the current tab (phone). The tab itself no longer paints the pill. */
+.tab-ind { display: none; }
+@media (width < 52.5rem) {
+  .tab-ind {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    border-radius: var(--fvl-radius-pill);
+    background: var(--fvl-color-accent-subtle);
+    box-shadow: inset 0 1px 0 var(--sb-rim), 0 0 0 1px var(--fvl-color-line-subtle), 0 0.25rem 0.75rem -0.25rem var(--sb-gold-glow);
+    pointer-events: none;
+  }
+  .tab { position: relative; z-index: 1; }
+  .tab[aria-current="page"] { background: none; box-shadow: none; }
+}

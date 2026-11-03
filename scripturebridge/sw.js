@@ -2,7 +2,7 @@
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
 // Renamed with every release (it matches the ?v= in index.html), so kept copies always belong to the running version.
-const CACHE = 'sb-20261103u';
+const CACHE = 'sb-20261103v';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
