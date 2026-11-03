@@ -81,6 +81,10 @@ const STR = {
     'st.coverHint': 'Each cover draws the study’s route: the line runs from Genesis to Revelation (the tick marks where the New Testament begins), and every arc is one move from a passage to the next.',
     'st.routeHint': 'The route above: every arc is one move from a passage to the next, along the Bible from Genesis to Revelation. Filled points are books he reads from; open rings, books he only mentions.',
     'share.img': 'Share as picture', 'share.saved': 'Picture saved', 'share.err': 'Could not make the picture.',
+    'cn.title': 'Constellation', 'cn.hint': 'Every line is a link from this verse: gold for bridges, the study colours for studies, the brightest stars for the strongest cross-references. Tap a star.',
+    'cn.centre': 'Centre here', 'cn.read': 'Read in the Bible', 'cn.bridge': 'Read the bridge', 'cn.study': 'Open the study',
+    'cn.out': 'This verse points to it', 'cn.inc': 'It points to this verse', 'cn.kBridge': 'Bridge', 'cn.kStudy': 'Study', 'cn.pick': 'Tap a star to see where it leads.',
+    'link.follow': 'Follow the link to {ref}', 'link.hint': 'Tap the marked words to follow the link from promise to fulfilment.',
     'vb.title': 'Bridges', 'vb.hint': 'This verse is part of these bridges.', 'vb.aria': 'part of {n} bridge(s)',
     'cmp.open': 'Compare Bibles', 'cmp.close': 'Hide comparison', 'cmp.na': 'Not available right now.',
     'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the BSB is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
@@ -92,6 +96,9 @@ const STR = {
     'hero.title': 'The promise, and the day it was kept.',
     'hero.sub': '{n} bridges across two thousand years of Scripture. Each arc runs from a promise to its fulfilment. Tap one to read it.',
     'hero.aria': 'Every bridge as an arc on a timeline, from the year of the promise to the year it was fulfilled',
+    'bento.today': 'Bridge of the day', 'bento.start': 'Start here', 'bento.study': 'Continue the study', 'bento.studies': 'Bible studies',
+    'bento.studiesD': 'Follow The Berean Study passage by passage', 'bento.step': 'Step {i} of {n}', 'bento.saved': 'Saved',
+    'bento.saved0': 'Star a bridge to keep it here', 'bento.savedN': '{n} saved', 'bento.sky': 'Every bridge',
     'hero.next': 'Next appointed time', 'hero.progress': 'You have read {r} of {n}. Read bridges are drawn solid.', 'hero.progress0': 'Bridges you read will be drawn solid here.', 'pos.time': 'In time order · {i} of {n}',
     'saved.emptyH': 'Nothing saved yet', 'saved.emptyD': 'Open a bridge and tap the star to keep it here.', 'saved.lead': '{n} {bridge}, in the order you saved them.',
     readSaved: 'Read saved', copyMd: 'Copy as Markdown', copiedMd: 'Copied as Markdown',
@@ -151,6 +158,10 @@ const STR = {
     'st.coverHint': 'Każda okładka rysuje trasę studium: linia biegnie od Księgi Rodzaju do Objawienia (kreska oznacza początek Nowego Testamentu), a każdy łuk to jedno przejście od fragmentu do następnego.',
     'st.routeHint': 'Trasa powyżej: każdy łuk to jedno przejście od fragmentu do następnego, wzdłuż Biblii od Księgi Rodzaju do Objawienia. Pełne punkty to księgi, z których czyta; puste kółka – księgi tylko wspomniane.',
     'share.img': 'Udostępnij jako obraz', 'share.saved': 'Zapisano obraz', 'share.err': 'Nie udało się utworzyć obrazu.',
+    'cn.title': 'Konstelacja', 'cn.hint': 'Każda linia to połączenie z tym wersetem: złote to mosty, kolory studiów to studia, najjaśniejsze gwiazdy to najsilniejsze odnośniki. Dotknij gwiazdy.',
+    'cn.centre': 'Ustaw w centrum', 'cn.read': 'Czytaj w Biblii', 'cn.bridge': 'Czytaj most', 'cn.study': 'Otwórz studium',
+    'cn.out': 'Ten werset na niego wskazuje', 'cn.inc': 'On wskazuje na ten werset', 'cn.kBridge': 'Most', 'cn.kStudy': 'Studium', 'cn.pick': 'Dotknij gwiazdy, aby zobaczyć, dokąd prowadzi.',
+    'link.follow': 'Przejdź do powiązanego miejsca: {ref}', 'link.hint': 'Dotknij zaznaczonych słów, aby przejść od obietnicy do wypełnienia.',
     'vb.title': 'Mosty', 'vb.hint': 'Ten werset należy do tych mostów.', 'vb.aria': 'część mostów: {n}',
     'cmp.open': 'Porównaj Biblie', 'cmp.close': 'Ukryj porównanie', 'cmp.na': 'Teraz niedostępne.',
     'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu BSB.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
@@ -162,6 +173,9 @@ const STR = {
     'hero.title': 'Obietnica i dzień, w którym się spełniła.',
     'hero.sub': '{n} mostów przez dwa tysiące lat Pisma. Każdy łuk biegnie od obietnicy do jej spełnienia. Dotknij go, aby przeczytać.',
     'hero.aria': 'Każdy most jako łuk na osi czasu, od roku obietnicy do roku spełnienia',
+    'bento.today': 'Most dnia', 'bento.start': 'Zacznij tutaj', 'bento.study': 'Kontynuuj studium', 'bento.studies': 'Studia biblijne',
+    'bento.studiesD': 'Krok po kroku za The Berean Study', 'bento.step': 'Krok {i} z {n}', 'bento.saved': 'Zapisane',
+    'bento.saved0': 'Oznacz most gwiazdką, aby go tu zachować', 'bento.savedN': 'Zapisane: {n}', 'bento.sky': 'Wszystkie mosty',
     'hero.next': 'Najbliższy wyznaczony czas', 'hero.progress': 'Przeczytano {r} z {n}. Przeczytane mosty są narysowane pełną linią.', 'hero.progress0': 'Mosty, które przeczytasz, będą tu narysowane pełną linią.', 'pos.time': 'Według czasu · {i} z {n}',
     'saved.emptyH': 'Nic jeszcze nie zapisano', 'saved.emptyD': 'Otwórz most i dotknij gwiazdki, aby go tu zachować.', 'saved.lead': '{n} {bridge}, w kolejności zapisywania.',
     readSaved: 'Czytaj zapisane', copyMd: 'Kopiuj jako Markdown', copiedMd: 'Skopiowano jako Markdown',
@@ -437,11 +451,21 @@ function renderHero() {
   const el = $('#hero');
   const list = timeList(() => true);
   // The sky: a still night panel in both themes; only the arcs sit on it, the words stay on the page.
+  // The Continue card keeps its own element (#continue), moved into the bento.
+  const cont = $('#continue'); cont.remove();
   el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
     <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>
-    <div class="hero-sky" data-theme="dark" data-daylight="night"><div class="hero-in">${fanSVG(list, { cls: 'hero-fan' })}</div></div>
-    <p class="hero-progress">${esc(heroProgress(list.length))}</p>
-    ${heroNextHTML()}`;
+    <div class="bento">
+      <div class="hero-sky b-sky" data-theme="dark" data-daylight="night"><div class="hero-in"><p class="b-kick">${esc(t('bento.sky'))}</p>${fanSVG(list, { cls: 'hero-fan' })}
+        <p class="hero-progress">${esc(heroProgress(list.length))}</p></div></div>
+      <div class="b-slot b-today" id="bToday"></div>
+      <div class="b-slot b-cont" id="bCont"></div>
+      <div class="b-slot b-next" id="bNext">${heroNextHTML()}</div>
+      <div class="b-slot b-study" id="bStudy"></div>
+      <div class="b-slot b-saved" id="bSaved"></div>
+    </div>`;
+  $('#bCont').append(cont);
+  renderBento();
   markReadArcs();
   // One orchestrated moment: the first time the home screen opens, the arcs draw in, oldest promise first.
   if (!heroDrawn && window.DrawSVGPlugin && !reduced) {
@@ -454,6 +478,40 @@ function renderHero() {
   }
   heroDrawn = true;
   el.dataset.lang = lang();
+}
+
+// The bento cards that change as you read: the bridge of the day, where you left off, the study you are in, your saved bridges.
+const dayIndex = () => { const d = new Date(); return Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5); };
+function miniArcSVG(cls = '') {
+  return `<svg class="b-arc ${cls}" viewBox="0 0 120 44" aria-hidden="true"><path d="M8 38A52 32 0 0 1 112 38"/><circle class="o" cx="8" cy="38" r="4"/><circle class="k" cx="112" cy="38" r="4"/></svg>`;
+}
+function renderBento() {
+  if (!$('#bToday')) return;
+  const all = D.P, pick = all[dayIndex() % all.length], p = L(pick), yrs = yearsOf(pick);
+  $('#bToday').innerHTML = `<button type="button" class="bento-card b-day" data-id="${esc(pick.id)}">
+    <span class="b-kick">${esc(t('bento.today'))}</span>
+    <span class="b-title">${esc(p.title)}</span>
+    <span class="bento-quote" lang="${lang() === 'pl' ? 'pl' : 'en'}">“${esc(p.ot.keyPhrase || p.ot.text || '')}”</span>
+    <span class="b-foot">${miniArcSVG(`c-${esc(pick.category)}`)}<span class="b-refs">${esc(locRef(p.ot.ref))} <span aria-hidden="true">→</span> ${esc(locRef(p.nt.ref))}${yrs != null ? ` · ${esc(t('tl.years', { n: num(yrs) }))}` : ''}</span></span></button>`;
+  const last = lastRead && D.byId.get(lastRead), start = last || timeList(() => true)[0]?.p;
+  $('#continue').innerHTML = start ? `<button type="button" class="continue bento-card" data-id="${esc(start.id)}"><span><small>${esc(t(last ? 'continue' : 'bento.start'))}</small><b>${esc(L(start).title)}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : '';
+  const n = saved.length;
+  $('#bSaved').innerHTML = `<button type="button" class="bento-card b-sv" data-go="#/saved"><span class="b-kick">${esc(t('bento.saved'))}</span>
+    <span class="b-big">${num(n)}</span><span class="b-sub">${esc(n ? saved.slice(-2).reverse().map((id) => L(D.byId.get(id) || { title: '' }).title).filter(Boolean).join(' · ') : t('bento.saved0'))}</span></button>`;
+  // The study you were last in (the most recent step read), else the way into the studies.
+  const keys = [...sRead], lastKey = keys[keys.length - 1], sid = lastKey && lastKey.slice(0, lastKey.lastIndexOf(':'));
+  const studyCard = (I) => {
+    const m = sid && I?.studies[sid];
+    if (!m) return `<button type="button" class="bento-card b-st" data-go="#/threads/studies"><span class="b-kick">${esc(t('bento.studies'))}</span><span class="b-title">${esc(t('bento.studiesD'))}</span>${miniArcSVG('many')}</button>`;
+    const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(sid, i)));
+    let nxt = done.indexOf(false); if (nxt < 0) nxt = 0;
+    const pct = (done.filter(Boolean).length / m.steps) * 100;
+    return `<button type="button" class="bento-card b-st hue-${studyHue(sid)}" data-go="#/study/${encodeURIComponent(sid)}/${nxt}"><span class="b-kick">${esc(t('bento.study'))}</span>
+      <span class="b-title">${esc(LS(m).name || LS(m).title)}</span><span class="b-sub">${esc(t('bento.step', { i: num(nxt + 1), n: num(m.steps) }))}</span>
+      <span class="sc-prog" style="--p:${pct.toFixed(1)}%"><i></i></span></button>`;
+  };
+  $('#bStudy').innerHTML = studyCard(D.SI);
+  if (sid && !D.SI) loadStudyIndex().then((I) => { if ($('#bStudy')) $('#bStudy').innerHTML = studyCard(I); }).catch(() => {});
 }
 
 function rowHTML(p0, { summary = true } = {}) {
@@ -498,9 +556,7 @@ function renderBridges() {
   const active = [S.book && dispBook(S.book), S.type !== 'all' && typeLabel(S.type)].filter(Boolean);
   $('#filterLabel').textContent = active.length ? active.join(' · ') : t('filterBtn');
   $('#clearBtn').hidden = !(active.length || S.cat !== 'all' || S.q);
-  const last = lastRead && D.byId.get(lastRead);
-  $('#continue').innerHTML = last && !S.q && S.cat === 'all' && !S.book && S.type === 'all'
-    ? `<button type="button" class="continue" data-id="${esc(last.id)}"><span><small>${esc(t('continue'))}</small><b>${esc(L(last).title)}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : '';
+  renderBento();
   $('#list').innerHTML = list.length ? list.map((p) => rowHTML(p)).join('')
     : `<li><fvl-empty icon="search" heading="${esc(t('noMatch'))}" description="${esc(t('empty.desc'))}"><fvl-button slot="actions" variant="secondary" id="reset">${esc(t('clearFilters'))}</fvl-button></fvl-empty></li>`;
   $('#reset')?.addEventListener('click', resetFilters);
@@ -1275,6 +1331,7 @@ async function openXref(osis, c, v) {
   $('#xrefBody').innerHTML = `<blockquote class="p-text" lang="${esc(trInfo().lang)}">${text[v - 1] ? esc(text[v - 1]) : emptyVerse()}</blockquote>
     <div class="actions"><button type="button" class="link-btn" data-compare="${esc(`${osis}.${c}.${v}`)}" aria-expanded="false">${esc(t('cmp.open'))}</button>${nltLink(`${b.name} ${c}:${v}`)}</div>
     <div class="cmp-slot" hidden></div>
+    ${constellationHTML(osis, c, v, out, inc)}
     ${(bridgeVerses()[`${osis}.${c}`]?.[v] || []).length ? `<section class="xgroup" aria-label="${esc(t('vb.title'))}">
       <div class="xgroup-head"><p class="p-label">${esc(t('vb.title'))}</p><p class="note">${esc(t('vb.hint'))}</p></div>
       <ol class="list sheet-list">${bridgeVerses()[`${osis}.${c}`][v].map((x) => rowHTML(D.byId.get(x.id), { summary: false })).join('')}</ol></section>` : ''}
@@ -1291,10 +1348,112 @@ async function openXref(osis, c, v) {
   if (inc.length) renderXrefItems('inc');
   const xtok = (S.xrefTok = (S.xrefTok || 0) + 1);
   studyVersesHTML(osis, c, v).then((html) => { if (html && xtok === S.xrefTok) $('#xrefBody .actions')?.insertAdjacentHTML('afterend', html); }).catch(() => {});
+  constellationStudies(osis, c, v, xtok);
+  if (!reduced) requestAnimationFrame(() => $('#cnSky')?.classList.add('on')); else $('#cnSky')?.classList.add('on');
   S.sheetBack = null;
   S.sheetVerse = { osis, c, v };
   dr.show();
 }
+// ---------- the verse constellation ----------
+// A verse at the centre of its own small sky: its bridges (gold) and studies (in their colours) close in, its strongest
+// cross-references further out, brighter and larger the more readers linked them; an open ring where another verse points
+// to this one, a filled star where this verse points on. Tap a star to see it below; from there read it, or centre the sky on it.
+const bookAbbr = (name) => { const w = String(name).split(' '); return /^\d/.test(w[0]) ? `${w[0]} ${w[1]?.slice(0, 3) || ''}` : w[0].slice(0, 4).replace(/(\w{3})s$/, '$1'); };
+// Short book names: the standard abbreviations in English ("1 Cor", "Isa"), the first letters in Polish.
+const shortBook = (osis) => { const b = BIB.byOsis.get(osis); if (!b) return osis; return lang() === 'pl' ? bookAbbr(refName(b)) : osis.replace(/^(\d)/, '$1 ').replace(/^Ps$/, 'Ps').replace(/^Song$/, 'Song'); };
+function cnShort(tg) { const r = parseTarget(tg); return `${shortBook(r.osis)} ${r.c}:${r.v}`; }
+function constellationHTML(osis, c, v, out, inc) {
+  const b = BIB.byOsis.get(osis);
+  const bridges = (bridgeVerses()[`${osis}.${c}`]?.[v] || []).map((x) => D.byId.get(x.id)).filter(Boolean).slice(0, 5);
+  const refs = [...out.map(([tg, n]) => ({ tg, n, dir: 'out' })), ...inc.map(([tg, n]) => ({ tg, n, dir: 'inc' }))]
+    .sort((a, z) => z.n - a.n).filter((x, i, arr) => arr.findIndex((y) => y.tg === x.tg) === i).slice(0, 16);
+  if (!refs.length && !bridges.length) return '';
+  const max = Math.max(1, ...refs.map((x) => x.n));
+  const nodes = [];
+  // Inner ring: bridges (studies join it when they arrive).
+  bridges.forEach((p) => nodes.push({ kind: 'bridge', id: p.id, label: L(p).title, short: L(p).title.split(/[:(&]/)[0].trim(), cat: p.category }));
+  refs.forEach((x, i) => nodes.push({ kind: x.dir, tg: x.tg, n: x.n, label: refLabel(x.tg), short: cnShort(x.tg), w: Math.sqrt(x.n / max), named: i < 8 }));
+  S.cn = { nodes, centre: { osis, c, v } };
+  return `<section class="cn" aria-label="${esc(t('cn.title'))}">
+    <div class="xgroup-head"><p class="p-label">${esc(t('cn.title'))}</p><p class="note">${esc(t('cn.hint'))}</p></div>
+    <div class="cn-sky" id="cnSky" data-theme="dark" data-daylight="night">${cnInner()}</div>
+    <div class="cn-cap" id="cnCap" aria-live="polite"><p class="note">${esc(t('cn.pick'))}</p></div>
+  </section>`;
+}
+// Place the stars: the inner ring evenly, the outer ring evenly with a gentle in-and-out, so it reads as a sky, not a clock.
+function cnInner() {
+  const { nodes, centre } = S.cn, b = BIB.byOsis.get(centre.osis);
+  const inner = nodes.filter((n) => n.kind === 'bridge' || n.kind === 'study'), outer = nodes.filter((n) => n.kind === 'out' || n.kind === 'inc');
+  const place = (list, r0, wob, rot) => list.forEach((n, i) => {
+    const a = rot + (i / Math.max(1, list.length)) * Math.PI * 2, r = r0 + (i % 2 ? wob : -wob) * (list.length > 5 ? 1 : 0);
+    n.x = 50 + Math.cos(a) * r; n.y = 50 + Math.sin(a) * r; n.a = a;
+  });
+  place(inner, 17, 0, -Math.PI / 2 + 0.4);
+  place(outer, 30, 3, -Math.PI / 2);
+  const lines = nodes.map((n, i) => `<line class="cn-l ${n.kind}" pathLength="1" data-i="${i}" x1="50" y1="50" x2="${n.x.toFixed(2)}" y2="${n.y.toFixed(2)}" style="--w:${(n.w ?? 1).toFixed(2)}"/>`).join('');
+  const stars = nodes.map((n, i) => {
+    const size = n.kind === 'bridge' || n.kind === 'study' ? 14 : 6 + Math.round((n.w ?? 0.5) * 8);
+    const side = Math.cos(n.a) < -0.2 ? 'l' : Math.cos(n.a) > 0.2 ? 'r' : Math.sin(n.a) < 0 ? 't' : 'b';
+    return `<button type="button" class="cn-node ${n.kind}${n.cat ? ` c-${esc(n.cat)}` : ''}${n.hue ? ` hue-${n.hue}` : ''}" data-cn="${i}" style="left:${n.x.toFixed(2)}%;top:${n.y.toFixed(2)}%;--s:${size}px;--d:${(i * 0.04).toFixed(2)}s" aria-label="${esc(n.label)}">
+      <i></i>${n.named !== false ? `<span class="cn-lab ${side}">${esc(n.short)}</span>` : ''}</button>`;
+  }).join('');
+  return `<svg class="cn-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>
+    <span class="cn-core"><i></i><span>${esc(`${shortBook(centre.osis)} ${centre.c}:${centre.v}`)}</span></span>${stars}`;
+}
+// Studies that turn to this verse join the inner ring once their index arrives.
+async function constellationStudies(osis, c, v, xtok) {
+  if (!S.cn || !$('#cnSky')) return;
+  const map = await loadStudyVerses().catch(() => ({}));
+  const hits = map[`${osis}.${c}`]?.[v];
+  if (!hits?.length) return;
+  const I = await loadStudyIndex().catch(() => null);
+  if (!I || xtok !== S.xrefTok || !$('#cnSky')) return;
+  const seen = new Set();
+  hits.forEach((h) => { if (seen.has(h[0]) || seen.size >= 4) return; seen.add(h[0]); const m = I.studies[h[0]]; if (!m) return;
+    const name = LS(m).name || LS(m).title;
+    S.cn.nodes.push({ kind: 'study', sid: h[0], i: h[1], label: name, short: name, hue: studyHue(h[0]) }); });
+  const sky = $('#cnSky'); sky.innerHTML = cnInner(); sky.classList.add('on', 'still');
+}
+function cnPick(i) {
+  const n = S.cn?.nodes[i]; if (!n) return;
+  $$('#cnSky .sel').forEach((x) => x.classList.remove('sel'));
+  $(`#cnSky .cn-node[data-cn="${i}"]`)?.classList.add('sel'); $(`#cnSky .cn-l[data-i="${i}"]`)?.classList.add('sel');
+  $('#cnSky').classList.add('has-sel');
+  const cap = $('#cnCap');
+  if (n.kind === 'bridge') {
+    const p = L(D.byId.get(n.id));
+    cap.innerHTML = `<p class="cn-k">${esc(t('cn.kBridge'))}</p><p class="cn-t">${esc(p.title)}</p><p class="xtext">${esc(locRef(p.ot.ref))} → ${esc(locRef(p.nt.ref))}</p>
+      <div class="actions"><fvl-button variant="secondary" class="cta" size="sm" data-cn-bridge="${esc(n.id)}">${esc(t('cn.bridge'))}</fvl-button></div>`;
+  } else if (n.kind === 'study') {
+    cap.innerHTML = `<p class="cn-k">${esc(t('cn.kStudy'))}</p><p class="cn-t">${esc(n.label)}</p>
+      <div class="actions"><fvl-button variant="secondary" class="cta" size="sm" data-go-study="${esc(n.sid)}" data-i="${n.i}">${esc(t('cn.study'))}</fvl-button></div>`;
+  } else {
+    const r = parseTarget(n.tg);
+    cap.innerHTML = `<p class="cn-k">${esc(t(n.kind === 'out' ? 'cn.out' : 'cn.inc'))} · ${esc(t('votesTotal', { n: n.n }))}</p><p class="cn-t">${esc(n.label)}</p>
+      <p class="xtext" lang="${esc(trInfo().lang)}">…</p>
+      <div class="actions"><fvl-button variant="secondary" class="cta" size="sm" data-cn-centre="${esc(`${r.osis}.${r.c}.${r.v}`)}">${esc(t('cn.centre'))}</fvl-button><fvl-button variant="tertiary" size="sm" data-go="${bibleHash(r)}">${esc(t('cn.read'))}</fvl-button></div>`;
+    const tok = S.xrefTok;
+    targetText(n.tg).then((txt) => { const x = $('#cnCap .xtext'); if (x && tok === S.xrefTok) x.textContent = txt || trInfo().empty; }).catch(() => {});
+  }
+  if (!reduced) gsap.fromTo(cap, { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out', clearProps: 'opacity,transform' });
+}
+$('#xrefBody').addEventListener('click', (e) => {
+  const node = e.target.closest('.cn-node');
+  if (node) { e.stopPropagation(); cnPick(+node.dataset.cn); return; }
+  const ce = e.target.closest('[data-cn-centre]');
+  if (ce) {
+    e.stopPropagation();
+    const [o, c, v] = ce.dataset.cnCentre.split('.');
+    const body = $('#xrefBody');
+    if (!reduced) gsap.to(body, { opacity: 0, duration: 0.15, onComplete: () => openXref(o, +c, +v).then(() => gsap.fromTo(body, { opacity: 0 }, { opacity: 1, duration: 0.25, clearProps: 'opacity' })) });
+    else openXref(o, +c, +v);
+    $('#xrefSheet').shadowRoot?.querySelector('[part="body"]')?.scrollTo({ top: 0 });
+    return;
+  }
+  const br = e.target.closest('[data-cn-bridge]');
+  if (br) { e.stopPropagation(); $('#xrefSheet').close(); pushed = false; openReader(br.dataset.cnBridge, { kind: 'list' }, null); }
+});
+
 // A word's meaning: the dictionary form, a short definition (the full one on request) and the verses that use it.
 // The first line that says what the word means: not the headword line, not the "[in LXX …]" note, at least two English words;
 // cut before the references and scholarly asides that follow.
@@ -1757,6 +1916,7 @@ function renderReader() {
       <p class="p-context">${esc(p.ot.context)}</p>
       ${passageLinks(p.ot.ref)}
     </section>
+    <div class="r-gutter" aria-hidden="true"></div>
     <section class="passage" aria-label="${esc(t('fulfilment'))}">
       <p class="p-label p-sym"><i class="sym-kept" aria-hidden="true"></i>${esc(t('fulfilment'))}</p>
       <h3 class="p-ref">${esc(locRef(p.nt.ref))} <small>${esc(p.nt.author)}</small></h3>
@@ -1764,7 +1924,9 @@ function renderReader() {
       <p class="p-context">${esc(p.nt.context)}</p>
       ${passageLinks(p.nt.ref)}
     </section>
+    <svg class="r-links" aria-hidden="true"></svg>${yearsOf(p0) != null ? `<span class="r-links-gap" aria-hidden="true">${esc(t('tl.years', { n: num(yearsOf(p0)) }))}</span>` : ''}
     </div>
+    <p class="note r-links-hint">${esc(t('link.hint'))}</p>
     <section class="why" aria-label="${esc(t('why'))}">
       <p class="p-label">${esc(t('why'))}</p>
       <p>${esc(p.bridge)}</p>
@@ -1798,9 +1960,12 @@ function renderReader() {
     try {
       await loadReview();
       const html = await passageHTML(el.dataset.ref, keyOf(p0, el.dataset.side));
-      if (tok === passageToken) el.outerHTML = html;
+      if (tok === passageToken) { el.outerHTML = html; drawLinks(true); }
     } catch { if (tok === passageToken) el.textContent = t('passageErr'); }
   });
+  linksDrawn = false;
+  requestAnimationFrame(() => drawLinks(true));
+  document.fonts?.ready.then(() => { if (tok === passageToken) drawLinks(false); });
   if (!D.RV) loadReview().then(() => { if (tok === passageToken) { const slot = $('.ev-slot', rBody); if (slot) slot.innerHTML = evidenceHTML(p.id); fillEvidence(tok); } });
   fillEvidence(tok);
   $$('[data-lex]', rBody).forEach(async (b) => {
@@ -1812,6 +1977,87 @@ function renderReader() {
   const nid = cur.seq[cur.idx + 1];
   if (nid) prefetchBridge(nid);
 }
+// ---------- the connection: promise words to fulfilment words ----------
+// A gold curve runs from each marked phrase of the promise to each marked phrase of the fulfilment: an open ring where it
+// leaves the promise, a filled point where it arrives. Side by side, the curves cross the gutter between the two passages;
+// stacked on a phone, they arc down the right edge. Tapping a marked phrase lights its curves and brings the other end
+// into view. Where a passage has no marked words, the curve joins the passages themselves.
+let linksDrawn = false;
+const SVGNS = 'http://www.w3.org/2000/svg';
+function linkAnchors(sec) {
+  const marks = $$('.p-text mark', sec).slice(0, 3);
+  if (marks.length) return marks;
+  const q = $('.p-text', sec);
+  return q ? [q] : [];
+}
+function drawLinks(animate) {
+  const pair = $('.r-pair', rBody), svg = pair && $('.r-links', pair);
+  if (!svg) return;
+  const [ps, fs] = $$('.passage', pair);
+  if (!ps || !fs) return;
+  const box = pair.getBoundingClientRect();
+  if (!box.width) return;
+  const side = getComputedStyle($('.r-gutter', pair)).display !== 'none';
+  const pr = ps.getBoundingClientRect(), fr = fs.getBoundingClientRect();
+  const A = linkAnchors(ps), B = linkAnchors(fs);
+  // The y of a phrase: the middle of its last line (leaving) or its first line (arriving).
+  const yOf = (el, last) => { const rs = el.getClientRects(); const r = rs.length ? rs[last ? rs.length - 1 : 0] : el.getBoundingClientRect(); return (el.tagName === 'MARK' ? r.top + r.height / 2 : r.top + Math.min(r.height / 2, 48)) - box.top; };
+  const edgeR = (side ? pr.right : pr.right - 10) - box.left, edgeL = (side ? fr.left : fr.right - 10) - box.left;
+  let out = '', nodes = '', first = null;
+  A.forEach((a, i) => B.forEach((b, j) => {
+    const ay = yOf(a, true), by = yOf(b, false);
+    const d = side
+      ? `M${edgeR} ${ay}C${edgeR + (edgeL - edgeR) / 2} ${ay} ${edgeL - (edgeL - edgeR) / 2} ${by} ${edgeL} ${by}`
+      : `M${edgeR} ${ay}C${edgeR + 30} ${ay + 40} ${edgeL + 30} ${by - 40} ${edgeL} ${by}`;
+    if (!first) first = { x: side ? (edgeR + edgeL) / 2 : edgeR + 22, y: (ay + by) / 2 };
+    out += `<g class="lk" data-a="${i}" data-b="${j}"><path class="lk-halo" d="${d}"/><path class="lk-line" pathLength="1" d="${d}"/></g>`;
+    if (j === 0) nodes += `<circle class="lk-node o" data-a="${i}" cx="${edgeR}" cy="${ay}" r="5"/>`;
+    if (i === 0) nodes += `<circle class="lk-node k" data-b="${j}" cx="${edgeL}" cy="${by}" r="5"/>`;
+  }));
+  svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+  svg.innerHTML = out + nodes;
+  const gap = $('.r-links-gap', pair);
+  if (gap && first) { gap.style.left = `${first.x}px`; gap.style.top = `${first.y}px`; gap.classList.toggle('side', side); }
+  // The marked words lead to the other end.
+  A.forEach((a, i) => { if (a.tagName === 'MARK') { a.dataset.a = i; a.tabIndex = 0; a.setAttribute('role', 'button'); a.setAttribute('aria-label', `${a.textContent} · ${t('link.follow', { ref: $('.p-ref', fs).firstChild.textContent.trim() })}`); } });
+  B.forEach((b, j) => { if (b.tagName === 'MARK') { b.dataset.b = j; b.tabIndex = 0; b.setAttribute('role', 'button'); b.setAttribute('aria-label', `${b.textContent} · ${t('link.follow', { ref: $('.p-ref', ps).firstChild.textContent.trim() })}`); } });
+  if (animate && !linksDrawn && !reduced) svg.classList.remove('drawn'), void svg.getBoundingClientRect(), svg.classList.add('drawing');
+  else svg.classList.remove('drawing');
+  svg.classList.add('drawn');
+  linksDrawn = true;
+  // A redraw (a passage arriving, the page reflowing) keeps the lit connection lit.
+  if (pair.dataset.lit) { const [k, v] = pair.dataset.lit.split(':'); $$('.lk, .lk-node', pair).forEach((g) => g.classList.toggle('lit', g.dataset[k] === v)); }
+}
+function lightLinks(mark, follow) {
+  const pair = mark.closest('.r-pair'); if (!pair) return;
+  const k = mark.dataset.a != null ? ['a', mark.dataset.a] : ['b', mark.dataset.b];
+  $$('.lk, .lk-node', pair).forEach((g) => g.classList.toggle('lit', g.dataset[k[0]] === k[1]));
+  pair.classList.add('has-lit'); pair.dataset.lit = k.join(':');
+  $$('mark', pair).forEach((m) => m.classList.remove('lit'));
+  mark.classList.add('lit');
+  const other = k[0] === 'a' ? $('.passage:last-of-type mark[data-b="0"]', pair) || $$('.passage', pair)[1] : $('.passage mark[data-a="0"]', pair) || $$('.passage', pair)[0];
+  if (!other) return;
+  other.classList?.add('lit');
+  if (follow) {
+    const r = other.getBoundingClientRect(), top = rTop.getBoundingClientRect().bottom, bot = rBar.getBoundingClientRect().top;
+    if (r.top < top + 8 || r.bottom > bot - 8) rBody.closest('.reader').scrollBy({ top: r.top - (top + bot) / 2 + r.height / 2, behavior: reduced ? 'auto' : 'smooth' });
+  }
+}
+function unlightLinks(pair) {
+  pair.classList.remove('has-lit'); delete pair.dataset.lit;
+  $$('.lit', pair).forEach((x) => x.classList.remove('lit'));
+}
+if (window.ResizeObserver) new ResizeObserver(() => { if (!reader.hidden) drawLinks(false); }).observe(rBody);
+// A tap or click pins the connection (it stays lit while the page scrolls to the other end); hovering only previews it.
+rBody.addEventListener('click', (e) => {
+  const m = e.target.closest('.r-pair mark[data-a], .r-pair mark[data-b]');
+  if (m) { m.closest('.r-pair').dataset.pinned = '1'; lightLinks(m, true); return; }
+  const pair = e.target.closest('.r-pair'); if (pair?.classList.contains('has-lit')) { delete pair.dataset.pinned; unlightLinks(pair); }
+});
+rBody.addEventListener('keydown', (e) => { const m = e.target.closest?.('.r-pair mark[role="button"]'); if (m && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); m.closest('.r-pair').dataset.pinned = '1'; lightLinks(m, true); } });
+rBody.addEventListener('pointerover', (e) => { if (e.pointerType === 'touch') return; const m = e.target.closest('.r-pair mark[data-a], .r-pair mark[data-b]'); if (m && !m.closest('.r-pair').dataset.pinned) lightLinks(m, false); });
+rBody.addEventListener('pointerout', (e) => { if (e.pointerType === 'touch') return; const m = e.target.closest('.r-pair mark'); const pair = m?.closest('.r-pair'); if (m && !pair.dataset.pinned && !m.contains(e.relatedTarget)) unlightLinks(pair); });
+
 // Other than the BSB: the verse that refers to Scripture, in the chosen Bible.
 function fillEvidence(tok) {
   $$('.ev-fq', rBody).forEach(async (q) => {
@@ -2168,7 +2414,7 @@ $('#xrefSheet').addEventListener('click', (e) => {
 browse.addEventListener('pointermove', (e) => { if (e.pointerType !== 'touch') fanPoint(e); }, { passive: true });
 browse.addEventListener('pointerleave', () => $$('.tl-fan.has-near').forEach((f) => { f.classList.remove('has-near'); $$('.is-near', f).forEach((x) => x.classList.remove('is-near')); const c = f.closest('.tl-wrap')?.querySelector('.tl-cap'); if (c) c.textContent = ''; }), true);
 // Start loading a bridge's passages the moment a finger lands on it.
-browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.row[data-id], .continue[data-id]'); if (row) prefetchBridge(row.dataset.id); }, { passive: true });
+browse.addEventListener('pointerdown', (e) => { const row = e.target.closest('.row[data-id], .continue[data-id], .b-day[data-id]'); if (row) prefetchBridge(row.dataset.id); }, { passive: true });
 // Browse: one delegated handler for rows and actions.
 browse.addEventListener('click', (e) => {
   const link = e.target.closest('[data-go]'); if (link) { location.hash = link.dataset.go; return; }
@@ -2188,7 +2434,7 @@ browse.addEventListener('click', (e) => {
     Promise.all(saved.map((id) => D.byId.get(id)).filter(Boolean).map(citation)).then((cs) => copy(cs.map((c) => c.md).join('\n\n'), t('copiedMd')));
     return;
   }
-  const row = e.target.closest('.row[data-id], .continue[data-id]');
+  const row = e.target.closest('.row[data-id], .continue[data-id], .b-day[data-id]');
   if (!row) return;
   const id = row.dataset.id;
   if (S.tab === 'threads' && row.dataset.step != null) openReader(id, { kind: 'thread', key: S.thread }, row, Number(row.dataset.step));
