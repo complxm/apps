@@ -725,7 +725,7 @@ function studyCardHTML(id) {
   const m = D.SI.studies[id], x = LS(m), se = m.series && D.SI.series.find((q) => q.id === m.series);
   const done = Array.from({ length: m.steps }, (_, i) => sRead.has(sReadKey(id, i))).filter(Boolean).length;
   return `<li><button type="button" class="study-card hue-${studyHue(id)}" data-study="${esc(id)}">
-    <span class="sc-cover" data-theme="dark" data-daylight="night">${coverSVG(m.route)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
+    <span class="sc-cover" data-theme="dark" data-daylight="night">${coverSVG(m.route, 200, 200)}${m.part ? `<span class="sc-num" aria-hidden="true">${String(m.part).padStart(2, '0')}</span>` : ''}</span>
     <span class="sc-body"><span class="sc-title">${esc(cardTitle({ ...x, series: m.series, part: m.part }))}</span>
       <span class="sc-q">${esc(x.question)}</span>
       <span class="sc-meta">${esc(`${num(m.steps)} ${pluralForm(m.steps, 'step')} · ${lenText(m.dur)}`)}</span>
