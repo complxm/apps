@@ -1996,3 +1996,21 @@ body::before { opacity: 0.035; }
 .r-bar fvl-button#next { min-width: 8.5rem; }
 .r-bar fvl-button#next::part(control) { width: 100%; padding: 0 1.5rem; font-weight: 600; letter-spacing: -0.005em; }
 .r-bar fvl-button#prev::part(control) { width: 2.75rem; }
+
+/* Phone bento: every row full, no orphaned half tiles. Continue and the feast are compact strips; Saved and the study
+   share the last row as two tiles of equal height, sized to their content. */
+@media (width < 64rem) {
+  .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "sky sky" "today today" "cont cont" "next next" "saved study"; }
+  .b-sky { grid-area: sky; } .b-today { grid-area: today; } .b-cont { grid-area: cont; } .b-next { grid-area: next; }
+  .b-saved { grid-area: saved; } .b-study { grid-area: study; }
+  .b-st, .b-sv, .bento .continue { min-height: 0; }
+  .bento .continue { padding: 1rem 1.125rem; gap: 0.75rem; }
+  .bento .continue b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .b-saved .bento-card, .b-study .bento-card { padding: 1rem 1.125rem; gap: 0.25rem; }
+  .b-study .b-title { font-size: var(--fvl-type-body-size); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .b-study .b-arc { width: 3rem; margin-top: auto; }
+  .b-big { font-size: 2rem; }
+  .b-saved .b-sub { -webkit-line-clamp: 3; }
+}
+/* Very narrow phones: Saved and the study stack too. */
+@media (width < 22rem) { .bento { grid-template-areas: "sky sky" "today today" "cont cont" "next next" "saved saved" "study study"; } }
