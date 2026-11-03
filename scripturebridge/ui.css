@@ -2073,3 +2073,7 @@ body::before { opacity: 0.035; }
 .st-about p:not(.p-label) { font-size: var(--fvl-type-body-size); line-height: 1.65; }
 /* Buttons are pills throughout, as in the boards. */
 fvl-button { --fvl-button-radius: var(--fvl-radius-pill); }
+
+/* A chosen chip under the finger (or pointer) stays light with dark text: FVL's tag paints selected-and-hovered in the
+   shared subtle-hover colour, which in dark mode is a dark gold that hides the chip's dark text. */
+.chips fvl-tag { --fvl-color-accent-subtle-hover: color-mix(in oklab, var(--fvl-color-text-primary) 84%, var(--fvl-color-bg-canvas)); }

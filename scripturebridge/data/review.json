@@ -1,5 +1,5 @@
 {
- "about": "A check of each bridge against the Berean Standard Bible text, the OpenBible.info cross-references (data/evidence.json) and the way the New Testament uses the Old. Written with AI assistance as suggestions for the editor. link: quotation | allusion | theme. reading: prophecy | typology | promise | parallel. strength: strong | moderate | weak. verdict and issues are editorial (keep | revise | reconsider) and are not shown in the reading layout. keyOt/keyNt are exact BSB phrases, keyOtPl/keyNtPl exact UBG phrases, highlighted in the reader. keyNtSz are exact Słowo Życia phrases.",
+ "about": "A check of each bridge against the Berean Standard Bible text, the OpenBible.info cross-references (data/evidence.json) and the way the New Testament uses the Old. Written with AI assistance as suggestions for the editor. link: quotation | allusion | theme. reading: prophecy | typology | promise | parallel. strength: strong | moderate | weak. verdict and issues are editorial (keep | revise | reconsider) and are not shown in the reading layout. keyOt/keyNt are exact BSB phrases, keyOtPl/keyNtPl exact UBG phrases, highlighted in the reader. keyNtSz are exact Słowo Życia phrases. keyOtKjv/keyNtKjv are exact KJV phrases.",
  "bridges": {
   "p1": {
    "link": "allusion",
@@ -19,7 +19,9 @@
    "keyOtPl": "Ono zrani ci głowę, a ty zranisz mu piętę",
    "keyNtPl": "wkrótce zetrze szatana pod waszymi stopami",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (the bridge reads Genesis 3:15 as a prediction, but the NT only echoes it and never presents it as fulfilled); nt.ref: Galatians 4:4; Revelation 12:5 → Romans 16:20; Revelation 12:9, 17 ('born of a woman' is a common idiom; Revelation 12:5 mainly echoes Psalm 2:9); nt.context rewritten for the new passages; nt.author stays Paul / John; eraGap: c. AD 50 → c. AD 57 (Romans); bridge: says plainly that no NT text quotes Genesis 3:15; 'first gospel' and 'heel wound = the cross' now presented as traditional Christian interpretation; keywords: Incarnation → Ancient serpent; review: note rewritten for the new references; keyOt/keyNt/keyOtPl/keyNtPl now the crushing phrases",
-   "keyNtSz": "Już wkrótce Bóg, który obdarza ludzi pokojem, zmiażdży szatana pod waszymi stopami"
+   "keyNtSz": "Już wkrótce Bóg, który obdarza ludzi pokojem, zmiażdży szatana pod waszymi stopami",
+   "keyOtKjv": "it shall bruise thy head, and thou shalt bruise his heel",
+   "keyNtKjv": "shall bruise Satan under your feet shortly"
   },
   "p2": {
    "link": "quotation",
@@ -36,7 +38,9 @@
    "keyOtPl": "w twoim potomstwie będą błogosławione wszystkie narody ziemi",
    "keyNtPl": "W twoim potomstwie będą błogosławione wszystkie narody ziemi",
    "resolved": "Corrected 2026-10-28: nt.author: Paul → Paul / Peter (recorded by Luke), since Acts 3:25 is Peter's sermon; nt.context: now covers Peter's quotation in Acts 3:25 as well as Galatians 3:16; bridge: rewritten in BSB wording; Paul's one-seed argument presented as his reading, with Galatians 3:14 cited for the blessing to the Gentiles; ot.context: plain wording; the promise is placed in 'the land of Moriah' as Genesis 22:2 says; thread step seed#1: note now attributes the one-Seed reading to Paul (Galatians 3:16)",
-   "keyNtSz": "Przez twojego potomka będą błogosławieni wszyscy ludzie na ziemi"
+   "keyNtSz": "Przez twojego potomka będą błogosławieni wszyscy ludzie na ziemi",
+   "keyOtKjv": "in thy seed shall all the nations of the earth be blessed",
+   "keyNtKjv": "in thy seed shall all the kindreds of the earth be blessed"
   },
   "p3": {
    "link": "allusion",
@@ -56,7 +60,9 @@
    "keyOtPl": "Judo, szczenię lwie",
    "keyNtPl": "zwyciężył lew z pokolenia Judy, korzeń Dawida",
    "resolved": "Corrected 2026-10-28: ot.ref: Genesis 49:10 → Genesis 49:9-10 (the lion title in Revelation 5:5 comes from 49:9); type: Direct Prophecy → Thematic Parallel (the NT echoes only the lion image, never the scepter promise or Shiloh); bridge: 'Shiloh' = 'He to whom it belongs' is now one uncertain reading among several, not a fact; bridge: Luke 3:33 described as showing Jesus' descent from Judah only, not the scepter promise; bridge: 'Messiah' explained in plain words; ot.context / nt.context: now cover the lion image and Luke's family tree; pl: 'Szilo' → 'Szylo' to match the UBG text (title, bridge, keywords); review: keyOt/keyOtPl moved to the lion line that Revelation 5:5 echoes; note tidied; steps seed#2: Polish note spelling 'Szilo' → 'Szylo' (rest unchanged)",
-   "keyNtSz": "Lew z rodu Judy, potomek króla Dawida"
+   "keyNtSz": "Lew z rodu Judy, potomek króla Dawida",
+   "keyOtKjv": "Judah is a lion’s whelp",
+   "keyNtKjv": "the Lion of the tribe of Juda, the Root of David"
   },
   "p4": {
    "link": "allusion",
@@ -74,7 +80,9 @@
    "keyOtPl": "gwiazda wzejdzie z Jakuba, berło powstanie z Izraela",
    "keyNtPl": "Widzieliśmy bowiem jego gwiazdę na Wschodzie",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Thematic Parallel (Matthew never quotes Numbers 24:17 or says the star fulfils it); bridge: removed the speculation that Eastern wisdom traditions kept Balaam's oracle and drew the Magi; now says Matthew does not explain how they linked the star to a king; bridge: Balaam's eastern origin now rests on a cited verse (Numbers 23:7); the Revelation 22:16 echo is presented as a reading; nt.context: covers Revelation 22:16 too and keeps to what Matthew 2:2 says (no 'following the star' to Jerusalem); review.note/notePl: rewritten for the corrected bridge (no complaint about the removed speculation)",
-   "keyNtSz": "Ujrzeliśmy u nas, na Wschodzie, Jego gwiazdę"
+   "keyNtSz": "Ujrzeliśmy u nas, na Wschodzie, Jego gwiazdę",
+   "keyOtKjv": "there shall come a Star out of Jacob, and a Sceptre shall rise out of Israel",
+   "keyNtKjv": "we have seen his star in the east"
   },
   "p5": {
    "link": "allusion",
@@ -94,7 +102,9 @@
    "keyOtPl": "I nadały mu imię Obed. On to jest ojcem Jessego, ojca Dawida",
    "keyNtPl": "Booz spłodził z Rut Obeda, a Obed spłodził Jessego",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (no New Testament text presents Boaz as a type of Christ); ot.ref: Ruth 4:14-17 → Ruth 4:9-10, 14-17 (adds Boaz's act of redemption); nt.author: Matthew → Matthew / Paul (Galatians 4:4-5); bridge rewritten: land redemption (Leviticus 25:25) and the levirate law (Deuteronomy 25:5-6) explained separately, no 'buying back a bride'; bridge: the redeemer praised in Ruth 4:14-15 identified as most naturally Obed; Boaz as a picture of Christ given as a Christian reading; Galatians 4:5 framed as general redemption language; ot.context and nt.context rewritten to match the passages; review: reading typology → parallel; note and notePl rewritten",
-   "keyNtSz": "Booz (jego matką była Rachab), Jobed (jego matką była Rut), Jesse"
+   "keyNtSz": "Booz (jego matką była Rachab), Jobed (jego matką była Rut), Jesse",
+   "keyOtKjv": "they called his name Obed: he is the father of Jesse, the father of David",
+   "keyNtKjv": "Booz begat Obed of Ruth; and Obed begat Jesse"
   },
   "p6": {
    "link": "allusion",
@@ -112,7 +122,9 @@
    "keyOtPl": "wywyższy róg swego pomazańca",
    "keyNtPl": "I wzbudził nam róg zbawienia w domu Dawida, swego sługi",
    "resolved": "Corrected 2026-10-28: ot.ref: 1 Samuel 2:10 → 1 Samuel 2:1-10 (Mary's song follows 2:1-8 most closely); bridge: 'directly mirror' → Luke echoes Hannah without quoting her (compare 1 Samuel 2:4-8 with Luke 1:51-53); bridge: added Psalm 18:2 ('the horn of my salvation') as another background to 'horn of salvation'; bridge: 'Anointed (Messiah) refers to the coming ideal King' → first use of 'anointed' for a king; the Christian reading is marked as interpretation; nt.context: Zechariah's song placed at John's birth, not at the announcement of Jesus' birth; pl: Hannah written 'Anna', as in the UBG; review.note: updated for the widened reference",
-   "keyNtSz": "posłał potężnego Zbawiciela z rodu króla Dawida, swojego sługi"
+   "keyNtSz": "posłał potężnego Zbawiciela z rodu króla Dawida, swojego sługi",
+   "keyOtKjv": "exalt the horn of his anointed",
+   "keyNtKjv": "hath raised up an horn of salvation for us in the house of his servant David"
   },
   "p7": {
    "link": "quotation",
@@ -130,7 +142,9 @@
    "keyOtPl": "Ja będę mu ojcem, a on będzie mi synem",
    "keyNtPl": "Ja będę mu Ojcem, a on będzie mi Synem",
    "resolved": "Corrected 2026-10-28: bridge: Gabriel now said to echo 2 Samuel 7, not quote it 'directly'; the word-for-word quotation is credited to Hebrews 1:5; bridge: 'God's oath required an immortal descendant' reworded as the hope the promise's 'forever' raised; Solomon named as its first subject; nt.author: Luke → Luke / Author of Hebrews; nt.context: adds Hebrews 1:5; review: note kept; quotation punctuation matched to the BSB",
-   "keyNtSz": "Ja będę Jego Ojcem, a On będzie moim Synem"
+   "keyNtSz": "Ja będę Jego Ojcem, a On będzie moim Synem",
+   "keyOtKjv": "I will be his father, and he shall be my son",
+   "keyNtKjv": "I will be to him a Father, and he shall be to me a Son"
   },
   "p8": {
    "link": "quotation",
@@ -147,7 +161,9 @@
    "keyOtPl": "Oto dziewica pocznie i urodzi syna, i nazwie go Emmanuel",
    "keyNtPl": "Oto dziewica będzie brzemienna i urodzi syna, któremu nadadzą imię Emmanuel",
    "resolved": "Corrected 2026-10-28: bridge: rewritten with exact BSB wording (the stored quotation from another translation is no longer used); bridge: 'house of David' now cited to Isaiah 7:13, and Isaiah 7:16 cited for what the sign meant in Ahaz's day; bridge: Hebrew almah and the Greek 'virgin' explained; Matthew's fulfillment claim presented as his reading; nt.context: Matthew (not the angel) links the birth to Isaiah; ot.context explains the Syro-Ephraimite crisis; thread step seed#4: note and highlight now say Matthew reads Isaiah 7:14 and Micah 5:2 this way (Matthew 1:22-23; 2:5-6)",
-   "keyNtSz": "Oto dziewica pocznie i urodzi Syna i nazwą Go Emmanuel"
+   "keyNtSz": "Oto dziewica pocznie i urodzi Syna i nazwą Go Emmanuel",
+   "keyOtKjv": "a virgin shall conceive, and bear a son, and shall call his name Immanuel",
+   "keyNtKjv": "a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel"
   },
   "p9": {
    "link": "allusion",
@@ -168,7 +184,9 @@
    "keyOtPl": "zasiądzie na tronie Dawida i nad jego królestwem",
    "keyNtPl": "a Pan Bóg da mu tron jego ojca Dawida",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Thematic Parallel (no NT writer quotes Isaiah 9:6-7; Luke only echoes it); nt.ref: Luke 2:11; John 14:27 → Luke 1:32-33; 2:11 (Luke 1:32-33 echoes 9:7; John 14:27 shared only the word 'peace'); nt.author: stays Luke, now correct since John 14:27 is removed; bridge: the two lines are explained as Hebrew parallelism describing one birth; the Incarnation reading of 'a son is given' and 'Mighty God' is presented as later Christian interpretation; ot.context: 'Divine King' claim replaced by a plain description of the passage; nt.context: now covers Gabriel's announcement as well as the shepherds; pl.keywords: 'Narodzi się Dziecię' → 'Dziecko narodziło się nam' (UBG wording); review: keys moved to the throne-of-David lines that Luke echoes; note updated",
-   "keyNtSz": "Bóg da Mu tron Jego przodka, króla Dawida"
+   "keyNtSz": "Bóg da Mu tron Jego przodka, króla Dawida",
+   "keyOtKjv": "upon the throne of David, and upon his kingdom",
+   "keyNtKjv": "the Lord God shall give unto him the throne of his father David"
   },
   "p10": {
    "link": "quotation",
@@ -187,7 +205,9 @@
    "keyOtPl": "korzeń Jessego będzie stać jako sztandar dla narodów",
    "keyNtPl": "Przyjdzie korzeń Jessego, ten, który powstanie, aby panować nad poganami",
    "resolved": "Corrected 2026-10-28: bridge: dropped the claim that Isaiah predicted the royal family's 'peasant obscurity'; it now describes the felled tree sprouting again and gives its meaning as a reading; bridge/note: Matthew 3:16 presented as an echo of Isaiah 11:2, not a citation; bridge: notes that Paul quotes Isaiah 11:10 in its Greek form; nt.author: Paul → Paul / Matthew; nt.context now covers Matthew 3:16; ot.context: describes Isaiah's stump image without adding to it; review.note/notePl: no complaint about the removed claim",
-   "keyNtSz": "Przyjdzie potomek Jessego, który będzie królem nad poganami"
+   "keyNtSz": "Przyjdzie potomek Jessego, który będzie królem nad poganami",
+   "keyOtKjv": "there shall be a root of Jesse, which shall stand for an ensign of the people",
+   "keyNtKjv": "There shall be a root of Jesse, and he that shall rise to reign over the Gentiles"
   },
   "p11": {
    "link": "quotation",
@@ -205,7 +225,9 @@
    "keyOtPl": "Ale ty, Betlejem Efrata, choć jesteś najmniejsze wśród tysięcy w Judzie, z ciebie jednak wyjdzie",
    "keyNtPl": "A ty, Betlejem, ziemio Judy, wcale nie jesteś najmniejsze wśród władców Judei, z ciebie bowiem wyjdzie władca",
    "resolved": "Corrected 2026-10-28: bridge rewritten around the Micah link: Matthew 2:5-6 quotes Micah 5:2 in freer wording, with the shepherd line echoing 2 Samuel 5:2, and John 7:42 shows the same expectation; bridge: Luke's census kept only as a cited aside (Luke 2:4); the unsourced '90 miles' detail removed; nt.author: Matthew → Matthew / John (John 7:42); ot.context: 'proud Jerusalem ... during the Assyrian siege' → the siege as Micah 5:1 states it; nt.context: adds John 7:42",
-   "keyNtSz": "A ty, Betlejem w Judzie, wcale nie jesteś najgorsze wśród miast Judy"
+   "keyNtSz": "A ty, Betlejem w Judzie, wcale nie jesteś najgorsze wśród miast Judy",
+   "keyOtKjv": "But thou, Beth–lehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth",
+   "keyNtKjv": "thou Bethlehem, in the land of Juda, art not the least among the princes of Juda"
   },
   "p12": {
    "link": "quotation",
@@ -222,7 +244,9 @@
    "keyOtPl": "Rachel opłakuje swoich synów, nie daje się pocieszyć po stracie swoich synów, bo ich już nie ma",
    "keyNtPl": "Rachel opłakuje swoje dzieci i nie daje się pocieszyć, bo już ich nie ma",
    "resolved": "Corrected 2026-10-28: bridge: 'Bethlehem/Ramah' split: Ramah lies north of Jerusalem, Bethlehem south of it, about 10 miles apart; bridge: Rachel's grave placed on the way to Bethlehem (Genesis 35:19); Ramah named as the exiles' gathering point (Jeremiah 40:1); bridge: the new covenant comes later in the chapter (Jeremiah 31:31), not 'immediately'; Matthew's pattern marked as interpretation; ot.context: 'Judean captives' → her descendants taken into exile; Ramah located north of Jerusalem; review.note: small wording update ('at Ramah', 'is best read as')",
-   "keyNtSz": "To Rachel opłakuje swoje dzieci i nie daje się pocieszyć, bo już ich nie ma"
+   "keyNtSz": "To Rachel opłakuje swoje dzieci i nie daje się pocieszyć, bo już ich nie ma",
+   "keyOtKjv": "Rahel weeping for her children refused to be comforted for her children, because they were not",
+   "keyNtKjv": "Rachel weeping for her children, and would not be comforted, because they are not"
   },
   "p13": {
    "link": "quotation",
@@ -236,7 +260,9 @@
    "keyNt": "Out of Egypt I called My Son",
    "keyOtPl": "z Egiptu wezwałem mego syna",
    "keyNtPl": "Z Egiptu wezwałem mego syna",
-   "keyNtSz": "Z Egiptu wezwałem mojego Syna"
+   "keyNtSz": "Z Egiptu wezwałem mojego Syna",
+   "keyOtKjv": "called my son out of Egypt",
+   "keyNtKjv": "Out of Egypt have I called my son"
   },
   "p14": {
    "link": "quotation",
@@ -250,7 +276,9 @@
    "keyNt": "Prepare the way for the Lord, make straight paths for Him",
    "keyOtPl": "Głos wołającego na pustyni: Przygotujcie drogę Pana",
    "keyNtPl": "Głos wołającego na pustyni: Przygotujcie drogę Pana, prostujcie jego ścieżki",
-   "keyNtSz": "Przygotujcie drogę dla Pana, prostujcie dla Niego ścieżki"
+   "keyNtSz": "Przygotujcie drogę dla Pana, prostujcie dla Niego ścieżki",
+   "keyOtKjv": "The voice of him that crieth in the wilderness, Prepare ye the way of the Lord",
+   "keyNtKjv": "Prepare ye the way of the Lord, make his paths straight"
   },
   "p15": {
    "link": "allusion",
@@ -271,7 +299,9 @@
    "keyOtPl": "przez mnóstwo obrzydliwości uczyni spustoszenie",
    "keyNtPl": "obrzydliwość spustoszenia, o której mówił prorok Daniel",
    "resolved": "Corrected 2026-10-28: title: 'Daniel's Seventy Weeks Timeline to Messiah the Prince' → 'Daniel's Seventy Weeks: The Anointed One & the Desolation' (no longer claims a timeline the NT never uses); type: Direct Prophecy → Thematic Parallel; category: birth → ministry (none of the passages concerns birth or lineage; all NT texts are from Jesus' ministry); ot.ref: Daniel 9:24-26 → Daniel 9:24-27 (adds the verse behind Matthew 24:15); nt.ref: Mark 1:15; Luke 19:41-44 → Matthew 24:15; Mark 1:15; Luke 19:43-44 (adds the NT's clear use of this passage); nt.author: Mark / Luke → Matthew / Mark / Luke; ot.author wording tidied; ot.context / nt.context rewritten ('490-year prophetic clock' and 'the clock has reached its fulfillment' removed); bridge: the 483-year count now presented as a later calculation with competing start dates and year lengths; adds the 2nd-century BC reading and the 'an anointed one, a prince' rendering; says Mark 1:15 and Luke 19 do not cite Daniel; review: link theme → allusion and strength weak → moderate (Matthew 24:15 draws on Daniel 9:27); note rewritten; key phrases moved to the abomination of desolation",
-   "keyNtSz": "ohydę spustoszenia"
+   "keyNtSz": "ohydę spustoszenia",
+   "keyOtKjv": "for the overspreading of abominations he shall make it desolate",
+   "keyNtKjv": "the abomination of desolation"
   },
   "p16": {
    "link": "quotation",
@@ -285,7 +315,9 @@
    "keyNt": "the people living in darkness have seen a great light",
    "keyOtPl": "Lud, który chodził w ciemności, ujrzał wielką światłość",
    "keyNtPl": "Lud, który siedział w ciemności, ujrzał światłość wielką",
-   "keyNtSz": "ten lud żyjący w ciemnościach, ujrzał wielkie światło"
+   "keyNtSz": "ten lud żyjący w ciemnościach, ujrzał wielkie światło",
+   "keyOtKjv": "The people that walked in darkness have seen a great light",
+   "keyNtKjv": "The people which sat in darkness saw great light"
   },
   "p17": {
    "link": "quotation",
@@ -303,7 +335,9 @@
    "keyOtPl": "Pan mnie namaścił, abym głosił dobrą nowinę cichym",
    "keyNtPl": "namaścił mnie, abym głosił ewangelię ubogim",
    "resolved": "Corrected 2026-10-28: title: dropped 'Heal the Brokenhearted' (in Isaiah 61:1 but not in Luke 4:18 in the BSB and most modern editions); now 'Anointed to Preach Good News & Proclaim the Lord's Favor'; bridge: the stop before 'the day of our God’s vengeance' now presented as a common Christian reading; Luke gives no reason; bridge: notes Luke's Greek-based wording and the Isaiah 58:6 line; Jubilee explained with Leviticus 25:10; ot.context: BSB wording ('year of the LORD's favor') instead of 'acceptable year'; speaker no longer named as the Servant",
-   "keyNtSz": "On wybrał Mnie, abym przekazał biednym dobrą nowinę"
+   "keyNtSz": "On wybrał Mnie, abym przekazał biednym dobrą nowinę",
+   "keyOtKjv": "the Lord hath anointed me to preach good tidings unto the meek",
+   "keyNtKjv": "he hath anointed me to preach the gospel to the poor"
   },
   "p18": {
    "link": "quotation",
@@ -317,7 +351,9 @@
    "keyNt": "The Lord your God will raise up for you a prophet like me from among your brothers",
    "keyOtPl": "Pan, twój Bóg, wzbudzi ci proroka podobnego do mnie spośród ciebie, spośród twoich braci",
    "keyNtPl": "Proroka jak ja wzbudzi wam Pan, wasz Bóg, spośród waszych braci",
-   "keyNtSz": "Bóg, wasz Pan, powoła spośród was proroka podobnego do mnie"
+   "keyNtSz": "Bóg, wasz Pan, powoła spośród was proroka podobnego do mnie",
+   "keyOtKjv": "The Lord thy God will raise up unto thee a Prophet from the midst of thee, of thy brethren, like unto me",
+   "keyNtKjv": "A prophet shall the Lord your God raise up unto you of your brethren, like unto me"
   },
   "p19": {
    "link": "allusion",
@@ -337,7 +373,9 @@
    "keyOtPl": "Wtedy otworzą się oczy ślepych i otworzą się uszy głuchych",
    "keyNtPl": "Ślepi widzą, chromi chodzą, trędowaci zostają oczyszczeni, głusi słyszą",
    "resolved": "Corrected 2026-10-28: bridge: removed the claim that no OT prophet restored sight (Elisha's prayer opens blinded eyes in 2 Kings 6:18-20); bridge: 'signature credential of the Messianic age' replaced by a Christian reading; Isaiah 35:4 (God Himself coming to save) is now in view; ot.ref: Isaiah 35:5-6 → Isaiah 35:4-6; nt.ref: Mark 7:37 → Mark 7:32, 37 (7:32 shares the rare Greek word of Isaiah 35:6); nt.author: Matthew → Matthew / Mark; nt.context now covers Mark; ot.context: 'messianic restoration' → Isaiah's own picture of God coming to save; keywords: 'Messianic signs' → 'Signs of salvation'",
-   "keyNtSz": "niewidomi widzą, kalecy chodzą, trędowaci odzyskują zdrowie, głusi słyszą"
+   "keyNtSz": "niewidomi widzą, kalecy chodzą, trędowaci odzyskują zdrowie, głusi słyszą",
+   "keyOtKjv": "Then the eyes of the blind shall be opened, and the ears of the deaf shall be unstopped",
+   "keyNtKjv": "The blind receive their sight, and the lame walk, the lepers are cleansed, and the deaf hear"
   },
   "p20": {
    "link": "quotation",
@@ -355,7 +393,9 @@
    "keyOtPl": "Otworzę moje usta do przypowieści, opowiem starodawne tajemnice",
    "keyNtPl": "Otworzę moje usta w przypowieściach, wypowiem rzeczy ukryte od założenia świata",
    "resolved": "Corrected 2026-10-28: checked the old OT quotation: it was another translation's wording of Psalm 78:2-3; the reference stays Psalm 78:2, the verse Matthew quotes, and 78:3-7 is cited in the explanation; bridge: rewritten to explain how Psalm 78:2 connects to Jesus' parables (a pattern, not a prediction) instead of why Jesus used parables; ot.context: plainer description of Psalm 78 (no 'redemptive history ... as riddles')",
-   "keyNtSz": "Będę nauczać w przypowieściach, opowiem o tajemnicach ukrytych od początku świata"
+   "keyNtSz": "Będę nauczać w przypowieściach, opowiem o tajemnicach ukrytych od początku świata",
+   "keyOtKjv": "I will open my mouth in a parable: I will utter dark sayings of old",
+   "keyNtKjv": "I will open my mouth in parables; I will utter things which have been kept secret"
   },
   "p21": {
    "link": "quotation",
@@ -369,7 +409,9 @@
    "keyNt": "A bruised reed He will not break, and a smoldering wick He will not extinguish",
    "keyOtPl": "Trzciny nadłamanej nie złamie, a knota tlącego się nie zagasi",
    "keyNtPl": "Trzciny nadłamanej nie złamie, a knota tlącego się nie zagasi",
-   "keyNtSz": "On nie dołamie nawet nadłamanej trzciny ani nie zgasi wątłego płomyka"
+   "keyNtSz": "On nie dołamie nawet nadłamanej trzciny ani nie zgasi wątłego płomyka",
+   "keyOtKjv": "A bruised reed shall he not break, and the smoking flax shall he not quench",
+   "keyNtKjv": "A bruised reed shall he not break, and smoking flax shall he not quench"
   },
   "p22": {
    "link": "theme",
@@ -390,7 +432,9 @@
    "keyOtPl": "jako wódz wojska Pana teraz przyszedłem",
    "keyNtPl": "A wojska w niebie podążały za nim na białych koniach",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (no NT text identifies the Commander); nt.ref: Hebrews 4:8-9; Revelation 19:11-14 → Revelation 19:11-14 (Hebrews 4:8 is about Joshua not giving Israel rest, not about the Commander); nt.book (66-book index and map): Hebrews → Revelation, since Hebrews is no longer cited; nt.author: Author of Hebrews / John → John; category: ministry → resurrection (categoryLabel 'Resurrection & Reign'), since the NT side is now Christ's return in Revelation 19; bridge rewritten around the Commander only: the Joshua/Jesus name claim dropped (it mixed two claims); bridge: 'accepts worship' → Joshua falls facedown, a gesture also made to kings (2 Samuel 14:4); the angel-refuses-worship argument (Revelation 22:9) dropped; bridge: Christ in this figure presented as a Christian reading (Christophany explained); states plainly that the NT never mentions the scene and that Revelation 19 shares only a picture; ot.context, nt.context and keywords updated; review: reading typology → parallel; note and notePl rewritten",
-   "keyNtSz": "Za Nim, na białych koniach, podążały niebiańskie oddziały, ubrane w biały, czysty len"
+   "keyNtSz": "Za Nim, na białych koniach, podążały niebiańskie oddziały, ubrane w biały, czysty len",
+   "keyOtKjv": "as captain of the host of the Lord am I now come",
+   "keyNtKjv": "the armies which were in heaven followed him upon white horses, clothed in fine linen, white and clean"
   },
   "p23": {
    "link": "quotation",
@@ -408,7 +452,9 @@
    "keyOtPl": "spuszczę wam jak deszcz chleb z nieba",
    "keyNtPl": "mój Ojciec daje wam prawdziwy chleb z nieba",
    "resolved": "Corrected 2026-10-28: ot.ref: added Exodus 16:4 and Psalm 78:24, which John 6:31's quoted line combines with Exodus 16:15; ot.author: Moses → Moses / Asaph; eraGap adds c. 950 BC for Psalm 78; bridge: 'struck once under the rod of Moses' Law' removed as fact; now a devotional reading that Paul does not make; nt.author: 'Paul / John' → 'John / Paul' to follow the order of the references; keywords: 'Living water' → 'Spiritual rock'; review.keyOt: Exodus 16:4 ('bread from heaven'), the wording John 6:31-32 shares; step spirit#0: highlight no longer says Christ was struck; it now cites 1 Corinthians 10:4 and John 7:38-39; nt.context (EN/PL): quotation set to exact BSB/UBG wording ('I am the bread of life', „Ja jestem chlebem życia”)",
-   "keyNtSz": "mój Ojciec daje wam teraz prawdziwy chleb z nieba"
+   "keyNtSz": "mój Ojciec daje wam teraz prawdziwy chleb z nieba",
+   "keyOtKjv": "I will rain bread from heaven for you",
+   "keyNtKjv": "my Father giveth you the true bread from heaven"
   },
   "p24": {
    "link": "allusion",
@@ -425,7 +471,9 @@
    "keyOtPl": "Mojżesz wykonał więc węża miedzianego i umieścił go na drzewcu",
    "keyNtPl": "jak Mojżesz wywyższył węża na pustyni, tak musi być wywyższony Syn Człowieczy",
    "resolved": "Corrected 2026-10-28: bridge: 'bronze was the biblical metal of judgment' now presented as a later symbolic reading that Scripture does not state; bridge: the serpent / 'made sin' link presented as a common Christian reading, with 2 Corinthians 5:21 quoted from the BSB and cited in full; bridge: Jesus' comparison quoted in BSB wording",
-   "keyNtSz": "Podobnie jak wąż, który na pustyni został podniesiony w górę przez Mojżesza, tak i Ja, Syn Człowieczy, również muszę zostać podniesiony w górę"
+   "keyNtSz": "Podobnie jak wąż, który na pustyni został podniesiony w górę przez Mojżesza, tak i Ja, Syn Człowieczy, również muszę zostać podniesiony w górę",
+   "keyOtKjv": "Moses made a serpent of brass, and put it upon a pole",
+   "keyNtKjv": "as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up"
   },
   "p25": {
    "link": "allusion",
@@ -444,7 +492,9 @@
    "keyOtPl": "dwadzieścia chlebów jęczmiennych",
    "keyNtPl": "pięć chlebów jęczmiennych i dwie rybki",
    "resolved": "Corrected 2026-10-28: bridge: removed Elijah's 'camel hair' (that is John the Baptist's clothing; 2 Kings 1:8 gives Elijah only hair and a leather belt); bridge: the Elijah–Elisha / John–Jesus pattern now presented as some readers' view, with Matthew 11:14 cited; bridge and nt.context: Luke 4:27 now described as Jesus' example of God's mercy to a foreigner, not a picture of His healings; bridge: dropped the name meaning 'God is salvation', which was presented like a quotation; ot.author: Jeremiah / Royal Annalists → Anonymous (later Jewish tradition: Jeremiah)",
-   "keyNtSz": "Jest tu chłopiec, który ma pięć jęczmiennych chlebów i dwie ryby"
+   "keyNtSz": "Jest tu chłopiec, który ma pięć jęczmiennych chlebów i dwie ryby",
+   "keyOtKjv": "bread of the firstfruits, twenty loaves of barley",
+   "keyNtKjv": "a lad here, which hath five barley loaves, and two small fishes"
   },
   "p26": {
    "link": "quotation",
@@ -461,7 +511,9 @@
    "keyOtPl": "cichy i siedzący na ośle, na oślątku, źrebięciu oślicy",
    "keyNtPl": "cichy, siedzący na ośle, na oślątku, źrebięciu oślicy",
    "resolved": "Corrected 2026-10-28: bridge: 1 Kings 1:33 now correctly described as King David's mule, not a donkey; bridge: the peace contrast now rests on Zechariah 9:10; the general claim about conquerors on war stallions is removed; bridge: 'Jesus deliberately enacted' softened to what the texts show (He sends for the donkey; Matthew and John cite the prophecy); ot.context: 'post-exilic' → 'from after the exile' (plain wording); nt.context: dropped the 'unbroken' colt (a detail from Mark and Luke, not the cited verses); review: note adds that John quotes in a shortened form",
-   "keyNtSz": "łagodny, jadący na osiołku —źrebięciu oślicy"
+   "keyNtSz": "łagodny, jadący na osiołku —źrebięciu oślicy",
+   "keyOtKjv": "lowly, and riding upon an ass, and upon a colt the foal of an ass",
+   "keyNtKjv": "meek, and sitting upon an ass, and a colt the foal of an ass"
   },
   "p27": {
    "link": "quotation",
@@ -475,7 +527,9 @@
    "keyNt": "Zeal for Your house will consume Me",
    "keyOtPl": "gorliwość o twój dom zżarła mnie",
    "keyNtPl": "Gorliwość o twój dom zżarła mnie",
-   "keyNtSz": "Jestem pochłonięty troską o Twój dom"
+   "keyNtSz": "Jestem pochłonięty troską o Twój dom",
+   "keyOtKjv": "the zeal of thine house hath eaten me up",
+   "keyNtKjv": "The zeal of thine house hath eaten me up"
   },
   "p28": {
    "link": "quotation",
@@ -493,7 +547,9 @@
    "keyOtPl": "który jadł mój chleb, podniósł przeciwko mnie piętę",
    "keyNtPl": "Ten, który je ze mną chleb, podniósł przeciwko mnie swoją piętę",
    "resolved": "Corrected 2026-10-28: ot.context: no longer says the psalms are about Ahithophel; the Ahithophel link is called traditional; bridge: says only Psalm 41:9 is quoted in the NT and Psalm 55:12-14 is an added parallel; bridge: the Ahithophel–Judas comparison is presented as a reading, with 2 Samuel 15:12, 31; 17:23 and Matthew 27:5 cited; bridge: dropped the unsourced claim that sharing bread was 'a sacred pledge of loyalty'; uses the psalm's own words instead; ot.ref: 'Psalm 41:9; Psalm 55:12-14' → 'Psalm 41:9; 55:12-14' (reference style); review.note/notePl: add that neither psalm names Ahithophel",
-   "keyNtSz": "Ten, który jadł ze Mną chleb, zwrócił się przeciwko Mnie"
+   "keyNtSz": "Ten, który jadł ze Mną chleb, zwrócił się przeciwko Mnie",
+   "keyOtKjv": "which did eat of my bread, hath lifted up his heel against me",
+   "keyNtKjv": "He that eateth bread with me hath lifted up his heel against me"
   },
   "p29": {
    "link": "quotation",
@@ -510,7 +566,9 @@
    "keyOtPl": "Wziąłem więc trzydzieści srebrników i rzuciłem je przed garncarza",
    "keyNtPl": "I wzięli trzydzieści srebrników, zapłatę za oszacowanego",
    "resolved": "Corrected 2026-10-28: bridge rewritten: explains that Matthew 27:9 names Jeremiah while the wording is chiefly Zechariah 11:12-13, as a combined citation drawing on Jeremiah's potter and field scenes (Jeremiah 18:2-3; 19:1; 32:9); bridge: the four 'converging details' kept as a plain account of the parallels; ot.context: 'The Good Shepherd' label removed; the gored-slave price now cited (Exodus 21:32); nt.context: mentions the Jeremiah attribution; keyword: 'Good Shepherd' → 'Shepherd's wages'; step lamb#3: the Zechariah 12:10 quotation corrected to the BSB and UBG wording",
-   "keyNtSz": "Wzięli trzydzieści srebrnych monet, bo na tyle Go wycenili"
+   "keyNtSz": "Wzięli trzydzieści srebrnych monet, bo na tyle Go wycenili",
+   "keyOtKjv": "I took the thirty pieces of silver, and cast them to the potter",
+   "keyNtKjv": "they took the thirty pieces of silver, the price of him that was valued"
   },
   "p30": {
    "link": "quotation",
@@ -527,7 +585,9 @@
    "keyOtPl": "Uderz pasterza, a owce zostaną rozproszone",
    "keyNtPl": "Uderzę pasterza i rozproszą się owce stada",
    "resolved": "Corrected 2026-10-28: bridge: removed '[My Equal]'; the Hebrew word means companion or associate; bridge: the divine-nature reading is now presented as some Christians' view; the Gospels use the verse for the disciples' scattering; bridge: substitutionary-death claim dropped (the verse is not used that way in the Gospels); added Jesus' promise to go ahead of them into Galilee (Matthew 26:32); nt.author: 'Mark / Matthew' → 'Matthew / Mark' to follow the order of the references; review.note (EN/PL): the fulfilment words of Matthew 26:56 are attributed to Jesus at His arrest, followed by the disciples' flight",
-   "keyNtSz": "Uderzę pasterza i rozproszą się owce jego stada"
+   "keyNtSz": "Uderzę pasterza i rozproszą się owce jego stada",
+   "keyOtKjv": "smite the shepherd, and the sheep shall be scattered",
+   "keyNtKjv": "I will smite the shepherd, and the sheep of the flock shall be scattered abroad"
   },
   "p31": {
    "link": "quotation",
@@ -545,7 +605,9 @@
    "keyOtPl": "jak owca przed tymi, którzy ją strzygą, zamilkł i nie otworzył swoich ust",
    "keyNtPl": "jak baranek milczący wobec tego, który go strzyże, tak on nie otworzył swoich ust",
    "resolved": "Corrected 2026-10-28: nt.ref: adds Matthew 26:63 (silence before the high priest) and Luke 23:9 (silence before Herod), so every scene named in the context is cited; Acts placed first; nt.context reworded to match the cited scenes; bridge rewritten to cover the trial scenes and to treat the Gospel silences as echoes, not quotations; quotations now BSB only (the old 'He answered him not one word...' wording came from Matthew 27:12, 14 in another translation); review: note updated for the added references",
-   "keyNtSz": "jak baranek milczący wobec strzygących Go, tak On nie otwiera swoich ust"
+   "keyNtSz": "jak baranek milczący wobec strzygących Go, tak On nie otwiera swoich ust",
+   "keyOtKjv": "as a sheep before her shearers is dumb, so he openeth not his mouth",
+   "keyNtKjv": "like a lamb dumb before his shearer, so opened he not his mouth"
   },
   "p32": {
    "link": "allusion",
@@ -564,7 +626,9 @@
    "keyOtPl": "Nie zakrywałem mojej twarzy przed zniewagami i pluciem",
    "keyNtPl": "zaczęli pluć mu w twarz i bili go pięściami",
    "resolved": "Corrected 2026-10-28: title: 'Beaten, Spat Upon & Beard Plucked' → 'Beaten, Spat Upon & Flogged' (no Gospel records the beard being pulled); ot.ref: removed Micah 5:1 (never cited in the NT, only a loose parallel); ot.author Isaiah & Micah → Isaiah; nt.ref: added Luke 18:31-33, where Jesus says the prophets wrote He would be spat upon and flogged; nt.author → Matthew / Luke; eraGap: 'c. 700 / 500 BC → c. AD 33' → 'c. 700 BC → c. AD 33 (733 Years)'; bridge: rewritten; says plainly that Matthew does not quote Isaiah and presents the Isaiah 50:6 link as a Christian reading anchored in Luke 18:31-33; nt.context and keywords: 'reed' → 'staff' (BSB); context now covers Luke 18",
-   "keyNtSz": "I zaczęli pluć Jezusowi w twarz i bić po głowie"
+   "keyNtSz": "I zaczęli pluć Jezusowi w twarz i bić po głowie",
+   "keyOtKjv": "I hid not my face from shame and spitting",
+   "keyNtKjv": "Then did they spit in his face, and buffeted him"
   },
   "p33": {
    "link": "theme",
@@ -583,7 +647,9 @@
    "keyOtPl": "przebili moje ręce i nogi",
    "keyNtPl": "Jeśli nie zobaczę na jego rękach śladów gwoździ",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Thematic Parallel (no NT writer quotes or applies Psalm 22:16); title: '(Crucifixion Prefigured)' → '& the Marks of the Nails' (the prefiguring is a Christian reading, not a stated fulfillment); bridge: Dead Sea Scroll evidence restated: the Nahal Hever fragment supports a verb of debated meaning, and the standard Hebrew text has a lion image; bridge / ot.context / step: removed the claims that Rome invented crucifixion and that the psalm depicts an execution; bridge: notes that the NT does quote other lines of Psalm 22 at the cross (Matthew 27:46; John 19:24); nt.context: nails mentioned only for the hands, as in John 20:25; steps lamb#1: note now quotes the psalm instead of 'David foresees execution by piercing', no longer adds 'soldiers'; highlight 'Written centuries before Roman crucifixion existed' replaced",
-   "keyNtSz": "Jeżeli nie zobaczę na Jego rękach śladów po gwoździach"
+   "keyNtSz": "Jeżeli nie zobaczę na Jego rękach śladów po gwoździach",
+   "keyOtKjv": "they pierced my hands and my feet",
+   "keyNtKjv": "in his hands the print of the nails"
   },
   "p34": {
    "link": "quotation",
@@ -600,7 +666,9 @@
    "keyOtPl": "Dzielą między siebie moje szaty i o moją tunikę rzucają losy",
    "keyNtPl": "Podzielili między siebie moje szaty, a o moje ubranie rzucali losy",
    "resolved": "Corrected 2026-10-28: ot.context: no longer reads John's garments/tunic distinction into the psalm; describes its two lines as poetic parallels; bridge: explains the term 'parallelism' and presents the two-part fulfilment as John's reading, in his own words; nt.context: 'outer cloak' and 'rolling dice' replaced with John's wording (garments, casting lots)",
-   "keyNtSz": "Rozdzielają między siebie moje ubrania i rzucają losy o moją tunikę"
+   "keyNtSz": "Rozdzielają między siebie moje ubrania i rzucają losy o moją tunikę",
+   "keyOtKjv": "They part my garments among them, and cast lots upon my vesture",
+   "keyNtKjv": "They parted my raiment among them, and for my vesture they did cast lots"
   },
   "p35": {
    "link": "quotation",
@@ -619,7 +687,9 @@
    "keyOtPl": "jego ranami zostaliśmy uzdrowieni",
    "keyNtPl": "przez jego rany zostaliście uzdrowieni",
    "resolved": "Corrected 2026-10-28: nt.ref: 1 Peter 2:24; Mark 15:27-28; Luke 23:34 → 1 Peter 2:24-25; Luke 22:37; 23:33-34 (Mark 15:28 is missing from the earliest manuscripts; in Luke 22:37 Jesus quotes Isaiah 53:12; 1 Peter 2:25 echoes Isaiah 53:6; Luke 23:33 gives the two criminals); nt.author: Peter / Mark / Luke → Peter / Luke; bridge rewritten: 'Jesus fulfilled every phrase of Isaiah 53' → the particular lines the NT applies; 'Father, forgive them' given as a common reading, not a citation; ot.context: 'explaining substitutionary atonement' → what the text says; nt.context updated; keyword: 'Two thieves' → 'Two criminals' (Luke's word); step lamb#2: ref Isaiah 53:5-9 → 53:5-9, 12 (its note cites 53:12); stage uses the BSB 'Pierced'; note follows Isaiah 53:9 instead of 'rich man's tomb'; highlight no longer states penal substitution as the text's meaning; review note and notePl rewritten for the new references",
-   "keyNtSz": "To dzięki Jego ranom zostaliście uleczeni"
+   "keyNtSz": "To dzięki Jego ranom zostaliście uleczeni",
+   "keyOtKjv": "with his stripes we are healed",
+   "keyNtKjv": "by whose stripes ye were healed"
   },
   "p36": {
    "link": "quotation",
@@ -637,7 +707,9 @@
    "keyOtPl": "Boże mój, Boże mój, czemu mnie opuściłeś?",
    "keyNtPl": "Boże mój, Boże mój, czemu mnie opuściłeś?",
    "resolved": "Corrected 2026-10-28: bridge: 'quoting the first line invoked the entire psalm' now presented as a common but debated view; bridge: the psalm's ending is quoted from the BSB (Psalm 22:27, 31) instead of 'He has done this!'; bridge: linking that ending with 'It is finished' (John 19:30, not Matthew) marked as a devotional reading the New Testament does not make; ot.context: 'exact taunts' → taunts (Matthew's wording is close to Psalm 22:8, not identical); keywords: 'It is finished' → 'Let God deliver Him'; title (EN/PL): quotation set to exact BSB/UBG wording of Matthew 27:43 ('Let God deliver Him', „Niech go teraz wybawi”)",
-   "keyNtSz": "Boże mój, Boże mój, czemu Mnie opuściłeś?"
+   "keyNtSz": "Boże mój, Boże mój, czemu Mnie opuściłeś?",
+   "keyOtKjv": "My God, my God, why hast thou forsaken me?",
+   "keyNtKjv": "My God, my God, why hast thou forsaken me?"
   },
   "p37": {
    "link": "allusion",
@@ -651,7 +723,9 @@
    "keyNt": "to fulfill the Scripture, Jesus said, “I am thirsty.”",
    "keyOtPl": "Zamiast pokarmu podali mi żółć, a gdy pragnąłem, napoili mnie octem",
    "keyNtPl": "aby się wypełniło Pismo, powiedział: Pragnę",
-   "keyNtSz": "wypełniając zapowiedź Pisma—rzekł: —Jestem spragniony"
+   "keyNtSz": "wypełniając zapowiedź Pisma—rzekł: —Jestem spragniony",
+   "keyOtKjv": "They gave me also gall for my meat; and in my thirst they gave me vinegar to drink",
+   "keyNtKjv": "that the scripture might be fulfilled, saith, I thirst"
   },
   "p38": {
    "link": "quotation",
@@ -669,7 +743,9 @@
    "keyOtPl": "Będą patrzyć na mnie, którego przebili",
    "keyNtPl": "Ujrzą tego, którego przebili",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Direct Quotation (John formally cites both texts; Exodus 12:46 is a Passover rule he reads as typology, so 'prophecy' fits only Zechariah); bridge: explains the Exodus rule as typology, with the term defined; 'a window into the Trinity' now presented as a Christian reading the NT does not draw out; ot.context / nt.context: quotations replaced with BSB / UBG wording; Psalm 34:20 and Revelation 1:7 mentioned; review: note says which text John reads as typology and which as prophecy; step lamb#4: highlight no longer claims 'every prophetic detail'; note puts the events in John's order and quotes the BSB 'It is finished.' and UBG 'Wykonało się'",
-   "keyNtSz": "Będą patrzeć na Tego, którego przebili"
+   "keyNtSz": "Będą patrzeć na Tego, którego przebili",
+   "keyOtKjv": "they shall look upon me whom they have pierced",
+   "keyNtKjv": "They shall look on him whom they pierced"
   },
   "p39": {
    "link": "allusion",
@@ -686,7 +762,9 @@
    "keyOtPl": "sprawię, że słońce zajdzie o południu, i przyprowadzę na ziemię ciemność w jasny dzień",
    "keyNtPl": "od godziny szóstej aż do dziewiątej ciemność ogarnęła całą ziemię",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (Amos 8:9-10 is a prophecy of judgment, not an earlier person, event or institution, and the Gospels do not cite it); review reading typology → parallel; ot.ref: Amos 8:9 → Amos 8:9-10, so the mourning 'for an only son' is in the cited text; bridge and note: rewritten; say plainly that the Gospels do not quote or mention Amos and present the link as a parallel readers draw; pl.bridge: 'Niektórzy przypominają też dziewiątą plagę' → 'Niektórzy przywołują też dziewiątą plagę' (clearer Polish); bridge: 'Exod 10:22' written out as Exodus 10:22; the eclipse point now explains why (Passover at full moon); nt.author: Luke / Matthew → Matthew / Luke (reference order); nt.context drops 'supernatural'; keywords: 'Amos 8:9' → 'Amos 8:9-10'",
-   "keyNtSz": "około południa całą ziemię okrył mrok i aż do godziny trzeciej było ciemno"
+   "keyNtSz": "około południa całą ziemię okrył mrok i aż do godziny trzeciej było ciemno",
+   "keyOtKjv": "I will cause the sun to go down at noon, and I will darken the earth in the clear day",
+   "keyNtKjv": "from the sixth hour there was darkness over all the land unto the ninth hour"
   },
   "p40": {
    "link": "allusion",
@@ -703,7 +781,9 @@
    "keyOtPl": "z bogaczami była jego śmierć",
    "keyNtPl": "przyszedł bogaty człowiek z Arymatei, imieniem Józef",
    "resolved": "Corrected 2026-10-28: bridge: the contrast between a grave with the wicked and a rich man's tomb is now one possible reading, since the two terms may be poetic parallels; bridge: removed unsupported claims that crucified bodies were normally left on crosses or thrown into pits, and that the tomb was costly, guarded and in a garden; bridge: notes that 1 Peter 2:22 applies the second half of Isaiah 53:9 to Jesus; Matthew 27:38 cited for the two robbers; ot.context: no longer builds the contrast ('yet') into the text; nt.context: 'member of the council' (from Mark and Luke) replaced by Matthew's own description",
-   "keyNtSz": "pewien bogaty człowiek—Józef z Arymatei"
+   "keyNtSz": "pewien bogaty człowiek—Józef z Arymatei",
+   "keyOtKjv": "with the rich in his death",
+   "keyNtKjv": "there came a rich man of Arimathea, named Joseph"
   },
   "p41": {
    "link": "quotation",
@@ -720,7 +800,9 @@
    "keyOtPl": "nie dopuścisz swemu Świętemu doznać zniszczenia",
    "keyNtPl": "nie dasz swojemu Świętemu doznać zniszczenia",
    "resolved": "Corrected 2026-10-28: ot.ref: Psalm 16:9-11 → Psalm 16:8-11 (Peter's quotation begins at verse 8); ot.context: covers verse 8, explains Sheol and follows the BSB wording; drops 'golden psalm' (the meaning of 'miktam' is uncertain); bridge: Peter's and Paul's reasoning is presented as their argument rather than as 'proving' the prophecy; step priest#1: ref Psalm 16:9-11 → 16:8-11; note now says Peter calls David a prophet here; highlight tied to Hebrews 7:16",
-   "keyNtSz": "nie pozwolisz, aby ciało Twojego Świętego uległo rozkładowi"
+   "keyNtSz": "nie pozwolisz, aby ciało Twojego Świętego uległo rozkładowi",
+   "keyOtKjv": "neither wilt thou suffer thine Holy One to see corruption",
+   "keyNtKjv": "neither wilt thou suffer thine Holy One to see corruption"
   },
   "p42": {
    "link": "quotation",
@@ -737,7 +819,9 @@
    "keyOtPl": "Jonasz był we wnętrznościach tej ryby trzy dni i trzy noce",
    "keyNtPl": "Jonasz był w brzuchu wieloryba trzy dni i trzy noce",
    "resolved": "Corrected 2026-10-28: bridge rewritten: rests on Jesus' own Jonah comparison (Matthew 12:40-41) instead of 'calming the storm of wrath'; says 1 Corinthians 15:4 does not name Hosea 6:2, which speaks of Israel's national revival rather than one person's resurrection; ot.context: Hosea 6:2 described as the people's hope, not as 'Hosea's promise of third-day raising'; nt.context: 'ultimate proof of His authority' → what Matthew 12:39-40 and 1 Corinthians 15:4 say",
-   "keyNtSz": "Tak jak Jonasz przebywał w brzuchu wielkiej ryby trzy dni i trzy noce"
+   "keyNtSz": "Tak jak Jonasz przebywał w brzuchu wielkiej ryby trzy dni i trzy noce",
+   "keyOtKjv": "Jonah was in the belly of the fish three days and three nights",
+   "keyNtKjv": "as Jonas was three days and three nights in the whale’s belly"
   },
   "p43": {
    "link": "theme",
@@ -757,7 +841,9 @@
    "keyOtPl": "mój Odkupiciel żyje",
    "keyNtPl": "Chrystus został wskrzeszony z martwych",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Thematic Parallel; title: '(Bodily Resurrection)' → '& the Resurrection Hope'; bridge: says plainly that the NT never quotes or alludes to Job 19:25-27 and that 1 Corinthians 15:54 quotes Isaiah 25:8; bridge: notes the uncertain Hebrew of Job 19:26 instead of asserting 'the physical resurrection of the body'; bridge: 'often considered the oldest book' → a traditional view; the date of writing is unknown; bridge: explains go'el (redeemer); ot/nt context: dropped the 'Kinsman-Redeemer standing on the earth' and 'return of the living Redeemer' framing; keywords: 'Bodily resurrection', 'See God in flesh' → 'Resurrection hope', 'Seeing God'; review.note: rewritten for the corrected bridge",
-   "keyNtSz": "Lecz Chrystus naprawdę zmartwychwstał"
+   "keyNtSz": "Lecz Chrystus naprawdę zmartwychwstał",
+   "keyOtKjv": "I know that my redeemer liveth",
+   "keyNtKjv": "now is Christ risen from the dead"
   },
   "p44": {
    "link": "quotation",
@@ -775,7 +861,9 @@
    "keyOtPl": "Kamień, który odrzucili budujący, stał się kamieniem węgielnym",
    "keyNtPl": "Kamień, który odrzucili budujący, stał się kamieniem węgielnym",
    "resolved": "Corrected 2026-10-28: bridge: no longer says Paul quotes Psalm 118:22; it is quoted by Jesus and Peter, and Paul's use of Isaiah 28:16 (Romans 9:33) is noted; nt.ref: Acts 4:11 → Acts 4:10-11 (adds 'whom God raised from the dead', which the explanation relies on); nt.context: 'days earlier' → 'weeks earlier' (Acts 4 comes after Pentecost); mentions Matthew 21:42 and 1 Peter; ot.context: mentions Isaiah 28:16 as well as the psalm; quotations now BSB from the cited verses (the old wording came from Acts 4:11-12 in another translation); review: note reference updated to Acts 4:10-11",
-   "keyNtSz": "Kamieniem, odrzuconym przez budujących, który stał się kamieniem węgielnym"
+   "keyNtSz": "Kamieniem, odrzuconym przez budujących, który stał się kamieniem węgielnym",
+   "keyOtKjv": "The stone which the builders refused is become the head stone of the corner",
+   "keyNtKjv": "The stone which the builders rejected, the same is become the head of the corner"
   },
   "p45": {
    "link": "quotation",
@@ -792,7 +880,9 @@
    "keyOtPl": "Ty jesteś kapłanem na wieki według porządku Melchizedeka",
    "keyNtPl": "Ty jesteś kapłanem na wieki według porządku Melchizedeka",
    "resolved": "Corrected 2026-10-28: nt.ref: added Hebrews 7:1-3, where Hebrews discusses Genesis 14; Hebrews 7 trimmed to 7:17, 24-25 and 10:11 added for the standing priests; ot.ref: Genesis 14:18 → Genesis 14:18-20 (Melchizedek's blessing and Abraham's tenth, retold in Hebrews 7:1-2); ot.author: David → David / Moses, so the author line covers Genesis; nt.author: Peter's speech noted as recorded by Luke; bridge: rewritten; dropped the unsupported 'no chairs in the tabernacle' claim and uses Hebrews 10:11-13's own contrast; ot.context: dropped the 'single most quoted chapter' claim; now covers Genesis 14",
-   "keyNtSz": "Jesteś kapłanem na wieki, na wzór Melchizedeka"
+   "keyNtSz": "Jesteś kapłanem na wieki, na wzór Melchizedeka",
+   "keyOtKjv": "Thou art a priest for ever after the order of Melchizedek",
+   "keyNtKjv": "Thou art a priest for ever after the order of Melchisedec"
   },
   "p46": {
    "link": "quotation",
@@ -809,7 +899,9 @@
    "keyOtPl": "Wstąpiłeś na wysokość, poprowadziłeś pojmanych jeńców",
    "keyNtPl": "Wstąpiwszy na wysokość, poprowadził pojmanych jeńców i dał ludziom dary",
    "resolved": "Corrected 2026-10-28: bridge: now explains that Paul changes the psalm's 'received gifts from men' to 'gave gifts to men', and that some ancient Jewish interpretation reads it the same way; bridge: Ephesians 4:11-12 cited for the gifts that build up the church; nt.context: 'bodily' removed (Ephesians 4 does not say it); keywords: 'Led captivity captive' → 'Led captives away' (BSB wording); PL 'Uprowadził jeńców' → 'Poprowadził jeńców' (UBG wording)",
-   "keyNtSz": "Wstępując do nieba, zabrał ze sobą jeńców, a ludziom rozdał dary"
+   "keyNtSz": "Wstępując do nieba, zabrał ze sobą jeńców, a ludziom rozdał dary",
+   "keyOtKjv": "Thou hast ascended on high, thou hast led captivity captive",
+   "keyNtKjv": "When he ascended up on high, he led captivity captive, and gave gifts unto men"
   },
   "p47": {
    "link": "allusion",
@@ -827,7 +919,9 @@
    "keyOtPl": "w obłokach nieba przybył ktoś podobny do Syna Człowieka",
    "keyNtPl": "ujrzycie Syna Człowieczego siedzącego po prawicy mocy Boga i przychodzącego na obłokach niebieskich",
    "resolved": "Corrected 2026-10-28: bridge: no longer claims every 'Son of Man' saying is a claim to Daniel 7:13; notes the phrase can simply mean a human being (Ezekiel 2:1); bridge: 'divine-human figure' replaced by the range of readings, noting that Daniel 7:18, 27 give the kingdom to the saints; ot.context: 'receiving universal worship' → an everlasting kingdom that all nations will serve (BSB wording); Ancient of Days explained; nt.context: no longer calls the title Jesus' 'favorite' or the trial its 'climax'; covers Revelation 1:7, 13; pl keywords: Przedwieczny → Odwieczny (the UBG term); review.note/notePl: 'it is written' wording dropped; caution about other Son of Man sayings kept; step seed#5: ref Galatians 4:4; Revelation 5:5 → Revelation 5:5; Matthew 26:64; note and highlight no longer present 'born of a woman' as the fulfilment of Genesis 3:15",
-   "keyNtSz": "Wkrótce zobaczycie Mnie, Syna Człowieczego, zasiadającego na tronie z Bogiem i powracającego w obłokach na ziemię"
+   "keyNtSz": "Wkrótce zobaczycie Mnie, Syna Człowieczego, zasiadającego na tronie z Bogiem i powracającego w obłokach na ziemię",
+   "keyOtKjv": "one like the Son of man came with the clouds of heaven",
+   "keyNtKjv": "the Son of man sitting on the right hand of power, and coming in the clouds of heaven"
   },
   "p48": {
    "link": "quotation",
@@ -841,7 +935,9 @@
    "keyNt": "Death has been swallowed up in victory",
    "keyOtPl": "Połknie śmierć w zwycięstwie",
    "keyNtPl": "Połknięta jest śmierć w zwycięstwie",
-   "keyNtSz": "Zwycięstwo pochłonęło śmierć"
+   "keyNtSz": "Zwycięstwo pochłonęło śmierć",
+   "keyOtKjv": "He will swallow up death in victory",
+   "keyNtKjv": "Death is swallowed up in victory"
   },
   "p49": {
    "link": "quotation",
@@ -855,7 +951,9 @@
    "keyNt": "at the name of Jesus every knee should bow",
    "keyOtPl": "Przede mną będzie się zginać każde kolano, będzie przysięgać każdy język",
    "keyNtPl": "na imię Jezusa zginało się wszelkie kolano",
-   "keyNtSz": "Słysząc go, każda istota, żyjąca w niebie, na ziemi i pod ziemią, padnie na kolana"
+   "keyNtSz": "Słysząc go, każda istota, żyjąca w niebie, na ziemi i pod ziemią, padnie na kolana",
+   "keyOtKjv": "unto me every knee shall bow, every tongue shall swear",
+   "keyNtKjv": "at the name of Jesus every knee should bow"
   },
   "p50": {
    "link": "allusion",
@@ -874,7 +972,9 @@
    "keyOtPl": "wniesie jego krew poza zasłonę",
    "keyNtPl": "przez własną krew wszedł raz do Miejsca Najświętszego",
    "resolved": "Corrected 2026-10-28: nt.ref: Hebrews 9:11-12, 24; Matthew 27:51 → Hebrews 9:11-12, 24, 28; 10:19-20 (Hebrews 10:19-20 is the text about the way through the curtain; Hebrews 9:28 is the 'appear a second time' verse quoted by step 7 of the Appointed Times thread); bridge rewritten: Hebrews 13:11-12 now tied to the sin-offering bodies burned outside the camp (Leviticus 16:27), not to the scapegoat; bridge: states that the NT never explicitly calls Christ the scapegoat; the torn veil (Matthew 27:51) given as a common inference, cited but no longer a passage; nt.context: torn veil removed; Hebrews 9:28 and 10:20 reflected; pl ot.context: 'kozła ofiarnego' → the live goat sent into the wilderness (Leviticus 16:21); keyword: 'Veil torn' → 'Behind the veil'; review note and notePl rewritten for the corrected bridge",
-   "keyNtSz": "wszedł do miejsca świętego przelewając własną krew"
+   "keyNtSz": "wszedł do miejsca świętego przelewając własną krew",
+   "keyOtKjv": "bring his blood within the vail",
+   "keyNtKjv": "by his own blood he entered in once into the holy place"
   },
   "p51": {
    "link": "quotation",
@@ -888,7 +988,9 @@
    "keyNt": "I will put My laws in their minds and inscribe them on their hearts",
    "keyOtPl": "Włożę moje prawo w ich wnętrzu i wypisze je na ich sercach",
    "keyNtPl": "Dam moje prawa w ich umysły i wypiszę je na ich sercach",
-   "keyNtSz": "Moje prawa włożę w ich umysły i zapiszę je w ich sercach"
+   "keyNtSz": "Moje prawa włożę w ich umysły i zapiszę je w ich sercach",
+   "keyOtKjv": "I will put my law in their inward parts, and write it in their hearts",
+   "keyNtKjv": "I will put my laws into their mind, and write them in their hearts"
   },
   "p52": {
    "link": "allusion",
@@ -906,7 +1008,9 @@
    "keyOtPl": "I dam wam nowe serce, i włożę nowego ducha do waszego wnętrza",
    "keyNtPl": "nie narodzi z wody i z Ducha",
    "resolved": "Corrected 2026-10-28: ot.ref: removed Ezekiel 34:23 (one shepherd, 'My servant David' belongs with John 10, not John 3 or Titus 3); nt.ref: added John 3:10, the remark the explanation rests on; bridge: 'pointing directly to Ezekiel 36:25-27' → a widely held reading; Jesus cites no verse; nt.context: 'regeneration' replaced by the BSB wording 'the washing of new birth'; step spirit#2: note no longer applies the promise to 'us'; highlight marks the John 3 link as a widely held reading; review.note: dropped the Ezekiel 34:23 remark (now fixed)",
-   "keyNtSz": "jeśli człowiek nie narodzi się z wody i z Ducha"
+   "keyNtSz": "jeśli człowiek nie narodzi się z wody i z Ducha",
+   "keyOtKjv": "A new heart also will I give you, and a new spirit will I put within you",
+   "keyNtKjv": "Except a man be born of water and of the Spirit"
   },
   "p53": {
    "link": "quotation",
@@ -920,7 +1024,9 @@
    "keyNt": "I will pour out My Spirit on all people",
    "keyOtPl": "wyleję swojego Ducha na wszelkie ciało",
    "keyNtPl": "wyleję z mego Ducha na wszelkie ciało",
-   "keyNtSz": "ześlę mojego Ducha na wielu ludzi"
+   "keyNtSz": "ześlę mojego Ducha na wielu ludzi",
+   "keyOtKjv": "I will pour out my spirit upon all flesh",
+   "keyNtKjv": "I will pour out of my Spirit upon all flesh"
   },
   "p54": {
    "link": "quotation",
@@ -938,7 +1044,9 @@
    "keyOtPl": "sprawiedliwy będzie żył ze swojej wiary",
    "keyNtPl": "Sprawiedliwy będzie żył z wiary",
    "resolved": "Corrected 2026-10-28: bridge: 'seven-word Hebrew sentence' → three words in Hebrew; bridge: the 'three emphases' scheme (just / by faith / shall live) now described as a preaching outline the texts do not state; adds Habakkuk's own meaning and the faith/faithfulness sense; nt.context: covers Galatians and Hebrews as well as Romans; review: note quotes Hebrews 10:38 in its own BSB wording; step covenant#1: note gives Habakkuk's meaning instead of Paul's 'righteous standing'",
-   "keyNtSz": "Prawy człowiek będzie żył dzięki wierze"
+   "keyNtSz": "Prawy człowiek będzie żył dzięki wierze",
+   "keyOtKjv": "the just shall live by his faith",
+   "keyNtKjv": "The just shall live by faith"
   },
   "p55": {
    "link": "quotation",
@@ -955,7 +1063,9 @@
    "keyOtPl": "podniosę upadły przybytek Dawida",
    "keyNtPl": "powrócę i odbuduję upadły przybytek Dawida",
    "resolved": "Corrected 2026-10-28: ot.context: now follows the Hebrew-based Amos 9:12 ('possess the remnant of Edom') instead of the Septuagint/Acts wording; bridge: rewritten; explains the Septuagint, gives the Septuagint-based wording of Acts 15:17 beside the Hebrew-based Amos 9:12, and cites James's conclusion (Acts 15:14, 19) and the council's question (Acts 15:5); nt.author: notes that Luke records James's speech; nt.context: 'saved by grace without becoming Jewish proselytes' → plain description of the council's decision; keywords: 'Tabernacle of David' → 'Fallen tent of David' (BSB); Polish title and keyword use UBG 'przybytek'",
-   "keyNtSz": "Potem wrócę i odbuduję zniszczony dom Dawida"
+   "keyNtSz": "Potem wrócę i odbuduję zniszczony dom Dawida",
+   "keyOtKjv": "will I raise up the tabernacle of David that is fallen",
+   "keyNtKjv": "I will return, and will build again the tabernacle of David, which is fallen down"
   },
   "p56": {
    "link": "quotation",
@@ -974,7 +1084,9 @@
    "keyOtPl": "Jeszcze raz, po krótkim czasie, wstrząsnę niebem i ziemią",
    "keyNtPl": "Jeszcze raz wstrząsnę nie tylko ziemią, ale i niebem",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Direct Quotation (Hebrews 12:26 formally quotes Haggai 2:6; the temple-glory fulfillment is a traditional reading, not an NT claim); title: 'The Glory of the Latter Temple & Desire of All Nations' → 'The Latter Glory of This House & the Unshakable Kingdom' (BSB wording; 'Desire of All Nations' is an older translation); nt.ref: reordered so Hebrews 12:26-28, the only NT quotation of Haggai, comes first; nt.author 'Hebrews' → 'Author of Hebrews'; bridge: says Hebrews applies the shaking to the end of the created order, and that Luke 2 and John 2 do not mention Haggai; bridge: removed the claims about the Ark and the Shekinah cloud missing from the Second Temple (not in the cited texts); bridge: 'Desire of All Nations' explained as an older rendering of Haggai 2:7; the BSB 'treasures' is quoted; ot.context: 'builders who wept' (Ezra 3:12) → Haggai 2:3's picture of a house that looked like nothing; nt.context and keywords updated; steps temple#3: 'when Peace Himself enters it' and 'Fulfilled when Jesus walked in its courts' replaced by Haggai's own words and a highlight marked as the traditional reading",
-   "keyNtSz": "Ponownie wstrząsnę ziemią i niebem"
+   "keyNtSz": "Ponownie wstrząsnę ziemią i niebem",
+   "keyOtKjv": "Yet once, it is a little while, and I will shake the heavens, and the earth",
+   "keyNtKjv": "Yet once more I shake not the earth only, but also heaven"
   },
   "p57": {
    "link": "allusion",
@@ -993,7 +1105,9 @@
    "keyOtPl": "Kiedy przygotowywał niebiosa, byłam tam",
    "keyNtPl": "Wszystko przez niego i dla niego zostało stworzone",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (the NT echoes the wider Wisdom tradition but never quotes Proverbs 8); ot.ref: removed Proverbs 30:4, which no cited NT passage uses; ot.author: Solomon & Agur → Solomon; ot.context no longer quotes Agur; bridge: no longer says the NT 'identifies' the Wisdom of Proverbs 8 with Christ; presents the link as an echo many scholars see; bridge/note: Proverbs 8:22 ('created') handled carefully: the NT borrows Wisdom's role in creation, not that verse; the Hebrew verb's range explained (UBG 'posiadł'); bridge: dropped the 'Logos of Genesis 1' claim and the Colossians 2:3 quotation that was not in BSB wording; nt.context: 'Wisdom of God' title replaced by Paul's actual words, with their context (the message of the cross); review: reading typology → parallel",
-   "keyNtSz": "Wszystko to zostało stworzone przez Niego i dla Niego"
+   "keyNtSz": "Wszystko to zostało stworzone przez Niego i dla Niego",
+   "keyOtKjv": "When he prepared the heavens, I was there",
+   "keyNtKjv": "all things were created by him, and for him"
   },
   "p58": {
    "link": "quotation",
@@ -1012,7 +1126,9 @@
    "keyOtPl": "mój dom będzie nazywany domem modlitwy dla wszystkich narodów",
    "keyNtPl": "Mój dom będzie nazwany domem modlitwy dla wszystkich narodów",
    "resolved": "Corrected 2026-10-28: ot.ref: 1 Kings 8:41-43; 2 Chronicles 6:32-33; Isaiah 56:7 → 1 Kings 8:41-43; Isaiah 56:7 (2 Chronicles 6:32-33 repeats 1 Kings 8:41-43 almost word for word); nt.ref: Ephesians 2:13-22 → Ephesians 2:13, 19-22 (shorter; keeps 'brought near', 'fellow citizens' and the holy temple); bridge rewritten: Mark 11:17 quotes Isaiah 56:7 (with Jeremiah 7:11), and Solomon's prayer is background, not the text Jesus cites; bridge: the anachronism removed; the outer court is placed in Herod's temple and the trading location given as probable; bridge: Ephesians 2 described as sharing the theme without quoting these texts; ot.context and nt.context updated; review note and notePl rewritten for the corrected bridge",
-   "keyNtSz": "Moja świątynia ma być domem modlitwy dla wszystkich narodów"
+   "keyNtSz": "Moja świątynia ma być domem modlitwy dla wszystkich narodów",
+   "keyOtKjv": "mine house shall be called an house of prayer for all people",
+   "keyNtKjv": "My house shall be called of all nations the house of prayer"
   },
   "p59": {
    "link": "quotation",
@@ -1032,7 +1148,9 @@
    "keyOtPl": "opuści mężczyzna swojego ojca i swoją matkę i połączy się ze swoją żoną",
    "keyNtPl": "opuści człowiek swego ojca i matkę i połączy się ze swoją żoną",
    "resolved": "Corrected 2026-10-28: type: stays Typological Foreshadowing, now resting on Genesis 2:24, which Ephesians 5:31-32 quotes and applies to Christ and the church (not on the Song of Songs); ot.ref: added Genesis 2:24, which Ephesians 5:31 quotes before its 'mystery'; dropped Song of Solomon 2:4 to keep the references short; nt.ref: added Hebrews 1:8-9, where the NT does quote Psalm 45:6-7 (about the Son's throne, not the bride); Ephesians trimmed to 5:25, 31-32; ot.author: 'Solomon' → 'Moses, the Sons of Korah & Solomon'; nt.author adds the Author of Hebrews; eraGap: c. 950 BC → c. 1400 / 950 BC (Genesis added); bridge: rewritten around the NT's own typology (Genesis 2:24 in Ephesians 5:31-32), with Psalm 45 in Hebrews 1 and the Song of Songs as a Christian tradition (allegory) the NT does not make; ot/nt context rewritten to match the new references; keywords: added 'One flesh'; Polish 'Gody Baranka' → 'Wesele Baranka' (UBG wording); review: link theme → quotation, reading parallel → typology, strength weak → moderate; key phrases now the Genesis 2:24 words quoted in Ephesians 5:31",
-   "keyNtSz": "Dlatego mężczyzna opuści rodziców i złączy się z żoną"
+   "keyNtSz": "Dlatego mężczyzna opuści rodziców i złączy się z żoną",
+   "keyOtKjv": "shall a man leave his father and his mother, and shall cleave unto his wife",
+   "keyNtKjv": "shall a man leave his father and mother, and shall be joined unto his wife"
   },
   "p60": {
    "link": "theme",
@@ -1051,7 +1169,9 @@
    "keyOtPl": "Marność nad marnościami",
    "keyNtPl": "stworzenie jest poddane marności",
    "resolved": "Corrected 2026-10-28: ot.ref: Ecclesiastes 1:2; 12:13-14 → Ecclesiastes 1:2-3 (12:13-14 has no tie to the NT verses; 1:3 supplies the 'toil' theme); bridge: no longer says Paul 'directly answers' Qoheleth; says the echo is uncertain and that Genesis 3:17-19 is the clearer background to Romans 8:20; bridge: says 1 Corinthians 15:58 uses a different Greek word (empty), so it is a thematic, not verbal, parallel; ot.context / nt.context rewritten (the 'exact Greek word ... breaks the curse' claim removed); review: note rewritten for the corrected bridge",
-   "keyNtSz": "Wbrew swojej woli, ale z woli Boga, doświadcza ono skutków grzechu"
+   "keyNtSz": "Wbrew swojej woli, ale z woli Boga, doświadcza ono skutków grzechu",
+   "keyOtKjv": "Vanity of vanities, saith the Preacher",
+   "keyNtKjv": "the creature was made subject to vanity"
   },
   "p61": {
    "link": "allusion",
@@ -1071,7 +1191,9 @@
    "keyOtPl": "których zabił przy swojej śmierci, było więcej niż tych, których zabił za swego życia",
    "keyNtPl": "umocnieni powstawali z niemocy",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (Hebrews 11 presents the judges as examples of faith, not foreshadowings of Christ); title: 'Raised Up by the Spirit' → 'Raised Up by the LORD' (the cited verses do not mention the Spirit); 'Strength Out of Weakness' → 'Strength from Weakness' (BSB); bridge: the Samson–Christ link (Judges 16:30 with Hebrews 2:14) now stated as later Christian reading, not the NT's; bridge: Gideon's three hundred now cited to Judges 7:7; dropped the outstretched-arms detail from the uncited Judges 16:29; ot.author: 'Samuel (trad.)' → 'Anonymous (Jewish tradition: Samuel)'; ot.context and nt.context rewritten to match the cited verses; nt.ref: 'Hebrews 11:32-34; Hebrews 2:14' → 'Hebrews 11:32-34; 2:14' (reference style); review: reading typology → parallel",
-   "keyNtSz": "przezwyciężyli swoją bezsilność"
+   "keyNtSz": "przezwyciężyli swoją bezsilność",
+   "keyOtKjv": "the dead which he slew at his death were more than they which he slew in his life",
+   "keyNtKjv": "out of weakness were made strong"
   },
   "p62": {
    "link": "theme",
@@ -1092,7 +1214,9 @@
    "keyOtPl": "wyjaśniali znaczenie tak, żeby zrozumiano to, co czytali",
    "keyNtPl": "otworzył ich umysły, żeby rozumieli Pisma",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel; review reading typology → parallel; title: removed 'Rebuilding the Walls' and 'The Water of the Word' (no cited verse supports them); now names what the passages share; ot.ref: removed Nehemiah 9:6 (no NT counterpart); nt.ref: removed Revelation 21:12 (its tribal gates draw on Ezekiel 48:31-34, not Nehemiah); Luke 24:45 → 24:44-45; nt.author: Luke / Peter / John → Luke / Peter; bridge: rewritten to say plainly that the NT never refers to Ezra or Nehemiah; the Daniel 70-weeks 'historical preparation' claim (not cited) removed; eraGap: c. AD 60-95 → c. AD 60-65 (Revelation removed); ot.context, nt.context, keywords and review note updated",
-   "keyNtSz": "Wtedy rozjaśnił ich umysły, by to wszystko zrozumieli"
+   "keyNtSz": "Wtedy rozjaśnił ich umysły, by to wszystko zrozumieli",
+   "keyOtKjv": "gave the sense, and caused them to understand the reading",
+   "keyNtKjv": "Then opened he their understanding, that they might understand the scriptures"
   },
   "p63": {
    "link": "theme",
@@ -1111,7 +1235,9 @@
    "keyOtPl": "wejdę do króla, choć to niezgodne z prawem. A jeśli zginę, to zginę.",
    "keyNtPl": "Przystąpmy więc z ufnością do tronu łaski",
    "resolved": "Corrected 2026-10-28: type: Typological Foreshadowing → Thematic Parallel (the NT never quotes or mentions Esther); nt.ref: removed Galatians 3:13, which shares nothing with Esther's story; Hebrews 4:16 and Romans 8:34 kept as the app's parallel; nt.context: no longer says Christ 'reversed the decree of death'; states what Hebrews 4:16 and Romans 8:34 actually say; bridge: rewritten to say plainly that the NT never mentions Esther and to frame the link as a contrast; the claim that David's line would have been wiped out is replaced by a reading of God's hidden care; ot.author: 'Mordecai (trad.)' → the speakers in the passage, with the book's author unknown; eraGap: NT side now the dates of Romans and Hebrews (c. AD 57-65) after Galatians was removed; keywords: 'Preservation of line' → 'Such a time as this'; review: reading typology → parallel; note no longer lists Galatians 3:13",
-   "keyNtSz": "z otwartym sercem biegnijmy pod tron Tego, którzy obdarza ludzi łaską"
+   "keyNtSz": "z otwartym sercem biegnijmy pod tron Tego, którzy obdarza ludzi łaską",
+   "keyOtKjv": "so will I go in unto the king, which is not according to the law: and if I perish, I perish.",
+   "keyNtKjv": "Let us therefore come boldly unto the throne of grace"
   },
   "p64": {
    "link": "allusion",
@@ -1131,7 +1257,9 @@
    "keyOtPl": "wszyscy, którzy przechodzą drogą; świstają i kiwają głowami",
    "keyNtPl": "ci, którzy przechodzili obok, bluźnili mu, kiwając głowami",
    "resolved": "Corrected 2026-10-28: ot.ref: Lamentations 2:15; 3:22-23, 30 → Lamentations 2:15; 3:22-23 (3:30 had no NT counterpart here); ot.author: Jeremiah → Jeremiah (trad.); Lamentations is anonymous; bridge rewritten: 'prefigures' removed to match the Thematic Parallel label; bridge: Matthew 27:39 described as drawing mainly on Psalm 22:7, with Lamentations 2:15 as a possible secondary echo; ot.context: authorship given as traditional; review note and notePl rewritten",
-   "keyNtSz": "Przechodzący obok ludzie śmiali się z Niego. Patrzyli z pogardą"
+   "keyNtSz": "Przechodzący obok ludzie śmiali się z Niego. Patrzyli z pogardą",
+   "keyOtKjv": "All that pass by clap their hands at thee; they hiss and wag their head",
+   "keyNtKjv": "they that passed by reviled him, wagging their heads"
   },
   "p65": {
    "link": "theme",
@@ -1152,7 +1280,9 @@
    "keyOtPl": "królestwo będzie należeć do Pana",
    "keyNtPl": "Królestwa świata stały się królestwami naszego Pana i jego Chrystusa",
    "resolved": "Corrected 2026-10-28: type: Direct Prophecy → Thematic Parallel (no NT text cites Obadiah or Nahum); title: 'Judgment on Pride' (pride is only in Obadiah 1:3) → 'the Herald of Good News'; bridge: names Isaiah 52:7 as the source of Romans 10:15's quotation; bridge: Revelation 11:15 presented as a possible echo of Obadiah 1:21, alongside Psalm 2:2 and Daniel 7:14; refs: removed Nahum 1:7 and 2 Timothy 2:19 (its 'The Lord knows those who are His' is usually traced to Numbers 16:5); contexts: 'feet of the gospel messenger' → a messenger bringing Judah news of peace; NT context now covers Romans 10:15; keywords: 'Obadiah 21' → 'Obadiah 1:21'; 'Feet of gospel messenger' → 'Feet of the messenger'; review: link allusion → theme, reading prophecy → parallel",
-   "keyNtSz": "Teraz władzę nad światem obejmie nasz Pan i Jego Mesjasz"
+   "keyNtSz": "Teraz władzę nad światem obejmie nasz Pan i Jego Mesjasz",
+   "keyOtKjv": "the kingdom shall be the Lord’s",
+   "keyNtKjv": "The kingdoms of this world are become the kingdoms of our Lord, and of his Christ"
   },
   "p66": {
    "link": "allusion",
@@ -1173,7 +1303,9 @@
    "keyOtPl": "powiedzą do Jerozolimy: Nie bój się!",
    "keyNtPl": "Nie bój się, córko Syjonu. Oto twój król przychodzi",
    "resolved": "Corrected 2026-10-28: title: 'Redeemed Bride' → 'People' (no bride imagery in Zephaniah 3 or the NT verses); type: Direct Prophecy → Thematic Parallel (no NT text presents Zephaniah 3:17's singing as fulfilled); ot.ref: Zephaniah 3:14-17; 3:9 → Zephaniah 3:14-17 (3:9 had no NT counterpart); nt.ref: John 12:15; Hebrews 2:12; Revelation 21:3 → John 12:15; Revelation 21:3 (Hebrews 2:12 quotes Psalm 22:22, the Son praising God); nt.author: John / Author of Hebrews → John; nt.context rewritten; bridge: says John 12:15 is mainly Zechariah 9:9 and only its opening may come from Zephaniah 3:16 (or Isaiah 40:9); says no NT text speaks of God singing over His people; keywords: Tabernacle of God → Daughter of Zion; review: note rewritten for the corrected references",
-   "keyNtSz": "Nie bój się, córko Syjonu! Oto nadchodzi twój król"
+   "keyNtSz": "Nie bój się, córko Syjonu! Oto nadchodzi twój król",
+   "keyOtKjv": "it shall be said to Jerusalem, Fear thou not: and to Zion",
+   "keyNtKjv": "Fear not, daughter of Sion: behold, thy King cometh"
   },
   "p67": {
    "link": "allusion",
@@ -1194,7 +1326,9 @@
    "keyOtPl": "On zwróci serca ojców ku synom",
    "keyNtPl": "w duchu i mocy Eliasza, aby zwrócić serca ojców ku dzieciom",
    "resolved": "Corrected 2026-10-28: title: now names the firmest link, Malachi 4:5-6 applied to John the Baptist in Luke 1:17 ('Elijah Sent Ahead & the Rising Sun of Righteousness'); bridge: rewritten; Luke 1:17 leads, Luke 1:78 and 2 Peter 1:19 are presented as possible echoes, with Numbers 24:17 noted as another proposed source; bridge: the cloak-fringe reading of Malachi's 'wings' now presented as a modern association, not the NT's; the sun's-rays reading and the different Greek word noted; bridge: Numbers 15:38 corrected — the tassels hang on the garment's corners; they are not the corners; ot.context: 'final page of the OT canon' → last book of the Christian Old Testament; nt.context: now covers Luke 1:17 and 2 Peter 1:19; 'Dayspring' → 'Dawn' (BSB); keywords updated",
-   "keyNtSz": "nieugiętym duchem i mocą proroka Eliasza"
+   "keyNtSz": "nieugiętym duchem i mocą proroka Eliasza",
+   "keyOtKjv": "he shall turn the heart of the fathers to the children",
+   "keyNtKjv": "in the spirit and power of Elias, to turn the hearts of the fathers to the children"
   },
   "p68": {
    "link": "quotation",
@@ -1214,7 +1348,9 @@
    "keyOtPl": "Nie zawiążesz pyska młócącemu wołowi",
    "keyNtPl": "Mówi bowiem Pismo: Młócącemu wołowi nie zawiążesz pyska",
    "resolved": "Corrected 2026-10-28: title: 'Shepherding the Flock & Guarding the Deposit of Truth' → 'The Worker's Wages & the Lord Who Knows His Own' (the shepherd text and 1 Timothy 6:20 / 2 Timothy 1:14 are not part of the bridge); ot.ref: removed Isaiah 40:11 (no NT counterpart); ot.author 'Moses & Isaiah' → 'Moses'; nt.ref: removed Philemon 1:16-18 (no tie to these OT texts); 1 Timothy 5:18 → 5:17-18 (the elders the quotation is about); bridge: removed the Philemon / Isaiah 53 'substitutionary accounting' claim (Isaiah 53 was not cited) and the 'canonical unity' claim; bridge: whether 'the Scripture says' also covers the Luke 10:7 saying is now presented as debated; bridge: adds the 2 Timothy 2:19 / Numbers 16:5 link, which was in the references but not explained; eraGap: c. 1400 / 700 BC → c. 1400 BC (Isaiah removed); ot.context, nt.context and keywords updated",
-   "keyNtSz": "Nie będziesz zawiązywał pyska wołowi, który młóci zboże"
+   "keyNtSz": "Nie będziesz zawiązywał pyska wołowi, który młóci zboże",
+   "keyOtKjv": "Thou shalt not muzzle the ox when he treadeth out the corn",
+   "keyNtKjv": "Thou shalt not muzzle the ox that treadeth out the corn"
   },
   "p69": {
    "link": "allusion",
@@ -1235,7 +1371,9 @@
    "keyOtPl": "Niech cię Pan zgromi, szatanie!",
    "keyNtPl": "Niech cię Pan zgromi",
    "resolved": "Corrected 2026-10-28: type: Direct Quotation → Thematic Parallel (only Jude 9 repeats OT wording, and it is not introduced as Scripture); title: 'Walking in Truth, Love & Contending for the Faith' → 'Old Testament Echoes in the Letters of John, Peter and Jude' (walking in truth and contending for the faith had no OT counterpart); nt.ref: added 2 Peter 3:8, the verse the explanation pairs with Psalm 90:4; removed 3 John 1:4, which had no OT counterpart; bridge: the love commands of 1 and 2 John are traced to Jesus' command (John 13:34) and only compared with Leviticus 19:18, not called a quotation; nt.author: John & Jude → John, Peter & Jude; nt.context rewritten (also fixes the typo 'hospitaliy'); ot.context: full book names; 'royal command' wording dropped; keywords updated to the corrected references ('Propitiation' and '1-3 John' removed)",
-   "keyNtSz": "Niech Pan cię potępi"
+   "keyNtSz": "Niech Pan cię potępi",
+   "keyOtKjv": "The Lord rebuke thee, O Satan",
+   "keyNtKjv": "The Lord rebuke thee"
   },
   "p70": {
    "link": "allusion",
@@ -1252,7 +1390,9 @@
    "keyOtPl": "Oto bowiem stworzę nowe niebiosa i nową ziemię",
    "keyNtPl": "Potem zobaczyłem nowe niebo i nową ziemię",
    "resolved": "Corrected 2026-10-28: nt.ref: Revelation 21:1-5; 22:1-5; 2 Thessalonians 1:10 → Revelation 21:1-5; 22:1-5 (2 Thessalonians 1:10 has no tie to these OT passages; p73 still covers 2 Thessalonians); bridge rewritten to show how Revelation 21–22 takes up Isaiah 65:17, Ezekiel 47 and Genesis 2:9; the Genesis 3 material it relied on is now cited (Genesis 3:24); bridge: the 'grand literary frame' given as a reading, with inclusio explained; nt.context: 'Paradise restored ... opened to the nations' → what John's vision describes; review note and notePl: the 'it is written' / 'jest napisane' formula quoted as if Bible text removed",
-   "keyNtSz": "Potem zobaczyłem nowe niebo i nową ziemię"
+   "keyNtSz": "Potem zobaczyłem nowe niebo i nową ziemię",
+   "keyOtKjv": "I create new heavens and a new earth",
+   "keyNtKjv": "I saw a new heaven and a new earth"
   },
   "p71": {
    "link": "quotation",
@@ -1270,7 +1410,9 @@
    "keyOtPl": "Ja będę mu ojcem, a on będzie mi synem",
    "keyNtPl": "Ja będę mu Ojcem, a on będzie mi Synem",
    "resolved": "Corrected 2026-10-28: ot.ref: removed 1 Chronicles 16:31 (David's thanksgiving psalm has no NT counterpart here); title: 'David's Thanksgiving Psalm & Eternal Kingdom Covenant' → 'God's Covenant with David & the Son's Eternal Throne'; ot.context: the promise answers David's wish to build God a house (1 Chronicles 17:1-4), not the ark's arrival; bridge: the purpose of the Chronicler's omission is now presented as interpretation; the 2 Samuel 7:14 line is quoted from the BSB; ot.author: 'Ezra / Chronicler' → 'The Chronicler (traditionally Ezra)'; nt.context: 'directly to prove the supremacy' → 'to show that the Son is greater than the angels'; Luke 1 added",
-   "keyNtSz": "Ja będę Jego Ojcem, a On będzie moim Synem"
+   "keyNtSz": "Ja będę Jego Ojcem, a On będzie moim Synem",
+   "keyOtKjv": "I will be his father, and he shall be my son",
+   "keyNtKjv": "I will be to him a Father, and he shall be to me a Son"
   },
   "p72": {
    "link": "allusion",
@@ -1290,7 +1432,9 @@
    "keyOtPl": "ukamienowali go na rozkaz króla na dziedzińcu domu Pana",
    "keyNtPl": "aż do krwi Zachariasza, który zginął między ołtarzem a świątynią",
    "resolved": "Corrected 2026-10-28: type: Direct Quotation → Thematic Parallel (Jesus refers to the event; He does not quote 2 Chronicles); title: drops 'Fire From Heaven on the Altar' → 'From the Blood of Abel to the Blood of Zechariah'; ot.ref: 2 Chronicles 24:20-22; 7:1 → 2 Chronicles 24:20-22 (7:1 has no NT counterpart); bridge: acknowledges Matthew's 'son of Berechiah' vs Chronicles' 'son of Jehoiada' difficulty; bridge: 'from A to Z' wordplay removed; the whole-canon reading presented as widely held but uncertain; ot.author: Ezra / Chronicler → The Chronicler (traditionally Ezra); ot.context no longer calls Zechariah the canon's 'final martyr' as fact; nt.author order matched to the references (Matthew / Luke); review: note rewritten for the corrected bridge",
-   "keyNtSz": "aż po Zachariasza, syna Barachiasza, którego zabiliście między ołtarzem a miejscem świętym"
+   "keyNtSz": "aż po Zachariasza, syna Barachiasza, którego zabiliście między ołtarzem a miejscem świętym",
+   "keyOtKjv": "stoned him with stones at the commandment of the king in the court of the house of the Lord",
+   "keyNtKjv": "the blood of Zacharias, which perished between the altar and the temple"
   },
   "p73": {
    "link": "allusion",
@@ -1307,7 +1451,9 @@
    "keyOtPl": "tchnieniem swoich warg zabije niegodziwego",
    "keyNtPl": "którego Pan zabije duchem swoich ust",
    "resolved": "Corrected 2026-10-28: type: Direct Quotation → Direct Prophecy (Paul adapts Isaiah 11:4 without a quotation formula: a strong allusion, not a formal quotation); bridge: no longer says Paul 'directly quotes' Isaiah; explains the change from 'lips' to 'mouth'; bridge: Isaiah 11:1 and 2 Thessalonians 2:3-4 cited for the king from Jesse's line and the man of lawlessness; pl.bridge: the Isaiah quotation now uses the exact UBG wording; ot.context and nt.context: now also cover Isaiah 66:15 and 2 Thessalonians 1:7-8",
-   "keyNtSz": "którego Pan zgładzi jednym tchnieniem ust"
+   "keyNtSz": "którego Pan zgładzi jednym tchnieniem ust",
+   "keyOtKjv": "with the breath of his lips shall he slay the wicked",
+   "keyNtKjv": "whom the Lord shall consume with the spirit of his mouth"
   },
   "p74": {
    "link": "theme",
@@ -1327,7 +1473,9 @@
    "keyOtPl": "a Pan włożył na niego nieprawość nas wszystkich",
    "keyNtPl": "albo jest ci coś winien, policz to na mój rachunek",
    "resolved": "Corrected 2026-10-28: title: removed 'Covenant' (neither Judah's pledge nor Paul's offer is a covenant act); 'Charge That' → 'Charge It' (BSB wording); PL 'Zapisz' → 'Policz' (UBG wording); bridge: 'living portraits of Christ's substitutionary atonement' replaced by a Christian illustration, stated as the app's, not the NT's; bridge: says plainly that nothing in Philemon points to Genesis 44 or Isaiah 53; bridge: quotations are now exact BSB/UBG text of Genesis 44:33 and Philemon 1:18 (the old Genesis quotation did not match the cited verses); bridge: 'imputation' explained in plain words; ot.context: 'bearing the debt of others' → 'bears the iniquities of others' (Isaiah 53:11); nt.context: dropped 'runaway' and 'entire debt' (not stated in the text); 2 Corinthians 5:21 now covered; keywords: 'Put that on my account' → 'Charge it to my account'; 'Judah's surety' → 'Judah's pledge'; PL keyword to UBG wording",
-   "keyNtSz": "Jeżeli wyrządził ci jakąś szkodę lub jest ci coś winien, policz to na mój rachunek"
+   "keyNtSz": "Jeżeli wyrządził ci jakąś szkodę lub jest ci coś winien, policz to na mój rachunek",
+   "keyOtKjv": "the Lord hath laid on him the iniquity of us all",
+   "keyNtKjv": "If he hath wronged thee, or oweth thee ought, put that on mine account"
   },
   "p75": {
    "link": "allusion",
@@ -1346,7 +1494,9 @@
    "keyOtPl": "aby was oczyścić od wszystkich waszych grzechów",
    "keyNtPl": "krew Jezusa Chrystusa, jego Syna, oczyszcza nas z wszelkiego grzechu",
    "resolved": "Corrected 2026-10-28: bridge/note: corrected the word claim: 1 John's hilasmos ('atoning sacrifice') is related to, not the same as, hilastērion, the Greek OT word for the mercy seat; ot.ref: added Leviticus 16:15, where the blood is sprinkled on the mercy seat; bridge: 1 John 1:7 now 'closely echoes' Leviticus 16:30 instead of using its 'exact language'; ot.context/nt.context: no longer call Jesus the 'atoning Mercy Seat' or equate the mercy seat with 'propitiation'; bridge: Isaiah 1:18 and Zechariah 13:1 now explained; typology defined; Hebrews 9:11-12 cited for the explicit NT link; review.note/notePl: rewritten for the corrected bridge (no 'the word claim needs correcting')",
-   "keyNtSz": "przelana krew Jezusa Chrystusa, Syna Bożego, oczyszcza nas ze wszystkich grzechów"
+   "keyNtSz": "przelana krew Jezusa Chrystusa, Syna Bożego, oczyszcza nas ze wszystkich grzechów",
+   "keyOtKjv": "to cleanse you, that ye may be clean from all your sins before the Lord",
+   "keyNtKjv": "the blood of Jesus Christ his Son cleanseth us from all sin"
   },
   "p76": {
    "link": "theme",
@@ -1365,7 +1515,9 @@
    "keyOtPl": "abym chodził w twojej prawdzie",
    "keyNtPl": "które postępują w prawdzie, jak otrzymaliśmy przykazanie od Ojca",
    "resolved": "Corrected 2026-10-28: title: 'Walking in the Truth of the Incarnate Christ' → 'Walking in Truth and Love' (the Incarnation verse has no OT counterpart here); nt.ref: 2 John 1:4-7 → 2 John 1:4-6 (2 John 1:7 dropped for the same reason); eraGap: c. 1000 / 700 BC → c. 1400 / 1000 BC (Moses for Leviticus and Deuteronomy, David for Psalm 86); bridge rewritten: 2 John never mentions the Law; 'from the beginning' most likely means the start of the readers' faith (John 13:34), not the Torah; bridge: 'walk in truth' presented as a common OT idiom, not an allusion to Psalm 86:11; says plainly that 2 John quotes none of these verses; ot.context, nt.context and keywords updated (Incarnation removed); review note and notePl rewritten",
-   "keyNtSz": "trzymają się prawdy i żyją zgodnie z nakazem naszego Ojca"
+   "keyNtSz": "trzymają się prawdy i żyją zgodnie z nakazem naszego Ojca",
+   "keyOtKjv": "I will walk in thy truth",
+   "keyNtKjv": "walking in truth, as we have received a commandment from the Father"
   },
   "p77": {
    "link": "theme",
@@ -1383,7 +1535,9 @@
    "keyOtPl": "Odwróć się od zła i czyń dobrze",
    "keyNtPl": "nie naśladuj tego, co złe, lecz to, co dobre",
    "resolved": "Corrected 2026-10-28: ot.author: 'David & Solomon' → 'David, Solomon & the author of Kings' (covers 2 Kings 4); bridge: 3 John 7 does not say whose Name is meant; reading it as Jesus' name is given as the majority view (compare Acts 5:41); bridge: 'HaShem' described as later Jewish usage, with Leviticus 24:11 as an early use of 'the Name'; bridge: added the shared ideas with Psalm 34:14 and 2 Kings 4 that the bridge rests on; nt.ref: 3 John 1:4 → 1:5-6, the verses about Gaius's hospitality; nt.context: 'for the Name's sake' → BSB wording 'on behalf of the Name'; ot.context: abbreviations written out; Proverbs 3:27 described; keywords: 'For the Name's sake' → 'On behalf of the Name'; pl.bridge: 'the Name' alone is the reading of the oldest Greek manuscripts (UBG follows a text with 'his name')",
-   "keyNtSz": "nie bierz przykładu z ludzi, którzy postępują źle, ale naśladuj tych, którzy czynią dobro"
+   "keyNtSz": "nie bierz przykładu z ludzi, którzy postępują źle, ale naśladuj tych, którzy czynią dobro",
+   "keyOtKjv": "Depart from evil, and do good",
+   "keyNtKjv": "follow not that which is evil, but that which is good"
   },
   "p78": {
    "link": "allusion",
@@ -1407,7 +1561,9 @@
     "UBG Hebrews 4:9 says only 'odpoczynek', so the Polish loses the Sabbath word the English quotes ('a Sabbath rest'); e.g. 'więc wciąż „zostaje jeszcze odpoczynek dla ludu Bożego” – po grecku sabbatismos, czyli odpoczynek szabatu'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "Istnieje jednak prawdziwe miejsce odpoczynku, które Bóg przygotował dla swojego ludu"
+   "keyNtSz": "Istnieje jednak prawdziwe miejsce odpoczynku, które Bóg przygotował dla swojego ludu",
+   "keyOtKjv": "the seventh day is the sabbath of rest",
+   "keyNtKjv": "There remaineth therefore a rest to the people of God"
   },
   "p79": {
    "link": "allusion",
@@ -1431,7 +1587,9 @@
     "'Jan dodaje, że jak wymagało prawo dla baranka paschalnego, …' is awkward and, like the English, too definite; e.g. 'Jan dodaje, że żadna z Jego kości nie została złamana, „aby się wypełniło Pismo” (Jana 19:36) – najpewniej przepis o baranku paschalnym (Wyjścia 12:46).'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "samego Chrystusa, który stał się naszą ofiarą paschalną"
+   "keyNtSz": "samego Chrystusa, który stał się naszą ofiarą paschalną",
+   "keyOtKjv": "In the fourteenth day of the first month at even is the Lord’s passover",
+   "keyNtKjv": "Christ our passover is sacrificed for us"
   },
   "p80": {
    "link": "allusion",
@@ -1453,7 +1611,9 @@
     "1 Corinthians 5:8 quotation does not match UBG ('Obchodźmy zatem święto nie ze starym zakwasem ani z zakwasem złośliwości i przewrotności…'): write „obchodźmy zatem święto” and follow UBG for the rest: 'nie ze starym zakwasem ani z zakwasem złośliwości i przewrotności, ale w przaśnikach szczerości i prawdy'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "nie w starym kwasie złości i obłudy, ale w czystości i prawdzie"
+   "keyNtSz": "nie w starym kwasie złości i obłudy, ale w czystości i prawdzie",
+   "keyOtKjv": "the feast of unleavened bread unto the Lord",
+   "keyNtKjv": "with the unleavened bread of sincerity and truth"
   },
   "p81": {
    "link": "allusion",
@@ -1481,7 +1641,9 @@
     "otContext: 'aby plon został przyjęty' → 'aby był przyjęty za was' (UBG Leviticus 23:11)"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "Chrystus naprawdę zmartwychwstał—jako pierwszy z umarłych"
+   "keyNtSz": "Chrystus naprawdę zmartwychwstał—jako pierwszy z umarłych",
+   "keyOtKjv": "a sheaf of the firstfruits of your harvest",
+   "keyNtKjv": "the firstfruits of them that slept"
   },
   "p82": {
    "link": "allusion",
@@ -1502,7 +1664,9 @@
     "Mirror the English fix: '…około trzech tysięcy ludzi (Dzieje Apostolskie 2:41), co wielu odczytuje jako pierwsze żniwo zebrane po Chrystusie, pierwszym plonie'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "Kilka dni później nadeszło święto Pięćdziesiątnicy"
+   "keyNtSz": "Kilka dni później nadeszło święto Pięćdziesiątnicy",
+   "keyOtKjv": "Even unto the morrow after the seventh sabbath shall ye number fifty days",
+   "keyNtKjv": "when the day of Pentecost was fully come"
   },
   "p83": {
    "link": "theme",
@@ -1524,7 +1688,9 @@
     "ntContext is awkward ('opisuje … umarłych wskrzeszonych'): 'Paweł opisuje powrót Pana przy dźwięku trąby Bożej oraz wskrzeszenie umarłych na ostatnią trąbę.'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "dźwięk Bożej trąby"
+   "keyNtSz": "dźwięk Bożej trąby",
+   "keyOtKjv": "a memorial of blowing of trumpets, an holy convocation",
+   "keyNtKjv": "with the trump of God"
   },
   "p84": {
    "link": "allusion",
@@ -1551,7 +1717,9 @@
     "basisTextPl: 'Ewangelia Jana 7 dzieje się w czasie tego święta' is unnatural; e.g. 'Wydarzenia z Jana 7 rozgrywają się w czasie tego święta, a Jana 1:14 i Objawienie 21:3 używają greckiego słowa oznaczającego namiot (skēnē), od którego pochodzi grecka nazwa święta; pełnię jego znaczenia odczytuje się jako wciąż przyszłą.'"
    ],
    "resolved": "Issues corrected in appointed_times.json (2026-10-28).",
-   "keyNtSz": "jako człowiek zamieszkało wśród nas"
+   "keyNtSz": "jako człowiek zamieszkało wśród nas",
+   "keyOtKjv": "Ye shall dwell in booths seven days",
+   "keyNtKjv": "the Word was made flesh, and dwelt among us"
   }
  }
 }
