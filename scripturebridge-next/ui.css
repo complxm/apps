@@ -177,6 +177,14 @@ body {
 .tr-opt:hover { background: var(--fvl-color-bg-hover); }
 .tr-check { color: var(--fvl-color-accent-text); opacity: 0; transition: opacity var(--fvl-motion-tone); flex: none; }
 .tr-opt[aria-checked="true"] .tr-check { opacity: 1; }
+/* The backup Bible, folded under the main choices. */
+.tr-more > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; cursor: pointer;
+  padding: 0.5rem 0.25rem 0.25rem; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: var(--fvl-type-label-weight); letter-spacing: 0.08em; text-transform: uppercase; }
+.tr-more > summary::-webkit-details-marker { display: none; }
+.tr-more > summary fvl-icon { transition: transform var(--fvl-motion-tone); }
+.tr-more[open] > summary fvl-icon { transform: rotate(180deg); }
+.tr-more > summary:focus-visible { outline: 2px solid var(--fvl-color-focus-ring, currentColor); outline-offset: 2px; border-radius: 0.5rem; }
+.tr-more > .tr-list { margin-top: 0.5rem; }
 
 /* Globe menu */
 .tr-pop {

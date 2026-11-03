@@ -56,7 +56,7 @@ function highlight(text, phrase) {
 const refTouches = (ref, book) => ref.split(/;\s*/).some((r) => r === book || r.startsWith(book + ' '));
 
 // ---------- language ----------
-// The app language follows the Bible translation: BSB = English, UBG / Gdańska = Polish.
+// The app language follows the Bible translation: KJV / NLT = English, Słowo Życia / UBG = Polish.
 const STR = {
   en: {
     tagline: 'Old Testament promises and their New Testament fulfilments, across all 66 books.',
@@ -117,9 +117,9 @@ const STR = {
     next: 'Next', finish: 'Finish', finishA: 'Finish and go back', nextA: 'Next: {t}',
     back: 'Back to list', prevA: 'Previous bridge', readerNav: 'Bridge navigation', reader: 'Reader',
     fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
-    'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with all three.',
+    'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with every Bible here.',
     'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
-    credits: 'Bible text: King James Version (public domain outside the UK); New Living Translation © Tyndale House Foundation, read live from the <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> and not stored; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblica® Słowo Życia, otwarty dostęp (New Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, shown unchanged; original work available for free at <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> and <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), public domain. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
+    credits: 'Bible text: King James Version (public domain outside the UK); New Living Translation © Tyndale House Foundation, read live from the <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> and not stored; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblica® Słowo Życia, otwarty dostęp (New Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, shown unchanged; original work available for free at <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> and <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
     hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.', origHint2: 'Tap a word to see what it means.',
     defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
     wordTimes: 'Used {n} {time} in the Bible', backTo: 'Back to {ref}', definition: 'Definition', occurrences: 'Where it appears',
@@ -195,9 +195,9 @@ const STR = {
     next: 'Dalej', finish: 'Zakończ', finishA: 'Zakończ i wróć', nextA: 'Dalej: {t}',
     back: 'Wróć do listy', prevA: 'Poprzedni most', readerNav: 'Nawigacja mostów', reader: 'Czytnik',
     fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
-    'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają ze wszystkimi trzema.',
+    'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają z każdym przekładem.',
     'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
-    credits: 'Tekst Biblii: King James Version (domena publiczna poza Wielką Brytanią); New Living Translation © Tyndale House Foundation, wczytywany na bieżąco z <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> i nieprzechowywany; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblica® Słowo Życia, otwarty dostęp (Nowy Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, bez zmian; oryginał dostępny bezpłatnie na <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> i <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>; Biblia Gdańska (1881), domena publiczna. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
+    credits: 'Tekst Biblii: King James Version (domena publiczna poza Wielką Brytanią); New Living Translation © Tyndale House Foundation, wczytywany na bieżąco z <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> i nieprzechowywany; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblica® Słowo Życia, otwarty dostęp (Nowy Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, bez zmian; oryginał dostępny bezpłatnie na <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> i <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
     hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.', origHint2: 'Dotknij słowa, aby zobaczyć, co znaczy.',
     defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
     wordTimes: 'Występuje {n} {time} w Biblii', backTo: 'Wróć do {ref}', definition: 'Definicja (po angielsku)', occurrences: 'Gdzie występuje',
@@ -849,7 +849,6 @@ function renderStudyReader() {
       ${st.note ? `<p class="note">${esc(st.note)}</p>` : ''}
       ${vid ? `<p class="p-links"><a class="ext" href="${esc(vid)}" target="_blank" rel="noopener">${esc(t('st.watch', { time: hms(st.t) }))}<fvl-icon name="external-link"></fvl-icon></a></p>` : ''}
     </section>
-    ${nx ? `<button type="button" class="upnext" data-next><span><small>${esc(t('upNext'))}</small><b>${esc(locRef(nx.ref))}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
   </div>`;
   $('#rPos').textContent = t('pos.study', { i: cur.idx + 1, n: cur.seq.length, title: x.name || x.title });
   $('#star').hidden = true;
@@ -1091,11 +1090,13 @@ function nltFallback(osis, c) {
   return getJSON(`../scripturebridge/data/bible/kjv/${osis}/${c}.json`);
 }
 
-// Translation: BSB (English), UBG or Gdańska (Polish). Same versification, so cross-references work for all three.
-// Bibles kept only for internal use, never offered; a reader who had chosen one moves to the NLT.
-const RETIRED = new Set(['bsb']);
+// Translations: KJV and NLT (English), Słowo Życia (Polish), UBG as the Polish backup. Same versification throughout.
+// Retired Bibles are kept only for internal use, never offered; a reader who had chosen one moves to its successor.
+const RETIRED = new Map([['bsb', 'nlt'], ['gdanska', 'sz']]);
+// Backup Bibles sit in a folded "Backup" section of the pickers (UBG: complete and offline, also Słowo Życia's Old Testament).
+const BACKUP = new Set(['ubg']);
 const TR = { id: store.get('sb_tr', 'nlt') };
-if (RETIRED.has(TR.id)) { TR.id = 'nlt'; store.set('sb_tr', 'nlt'); }
+if (RETIRED.has(TR.id)) { TR.id = RETIRED.get(TR.id); store.set('sb_tr', TR.id); }
 const trInfo = () => BIB.meta?.translations.find((t) => t.id === TR.id) || BIB.meta?.translations[0] || { id: 'kjv', lang: 'en', empty: '' };
 const bookName = (b) => (trInfo().lang === 'pl' ? b.namePl : b.name) || b.name;
 const trMeta = (id) => BIB.meta?.translations.find((t) => t.id === id);
@@ -1109,7 +1110,7 @@ const emptyVerse = () => `<em class="omit">${esc(trInfo().empty || 'Not in the e
 const textKey = (osis, c, tr) => `${tr}:${osis}/${c}`;
 const chapterText = (osis, c, tr0 = trInfo().id, tr = trFor(osis, tr0)) => cached(BIB.text, textKey(osis, c, tr), () => (tr === 'nlt' ? nltChapter(osis, c).catch(() => nltFallback(osis, c)) : getJSON(`../scripturebridge/data/bible/${tr}/${osis}/${c}.json`)).then((vs) => { BIB.done.set(textKey(osis, c, tr), vs); return vs; }));
 function trPicker() {
-  const ts = BIB.meta.translations;
+  const ts = BIB.meta.translations.filter((x) => !BACKUP.has(x.id) || x.id === TR.id);
   if (ts.length < 2) return '';
   return `<fvl-segmented id="trPick" value="${esc(trInfo().id)}" aria-label="${esc(t('translation'))}">${ts.map((t) => `<fvl-segment value="${esc(t.id)}">${esc(t.label)}</fvl-segment>`).join('')}</fvl-segmented>`;
 }
@@ -1998,7 +1999,6 @@ function renderReader() {
       <fvl-button variant="tertiary" size="sm" data-cite><fvl-icon name="copy"></fvl-icon>${esc(t('copyCite'))}</fvl-button>
       <fvl-button variant="tertiary" size="sm" data-onmap><fvl-icon name="map"></fvl-icon>${esc(t('onMap'))}</fvl-button>
     </div>
-    ${nextP ? `<button type="button" class="upnext" data-next><span><small>${esc(t('upNext'))}</small><b>${esc(nextP.title)}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
   </div>`;
   $('#rPos').textContent = positionLabel();
   const arc = $('.rs-arc', rBody);
@@ -2344,13 +2344,15 @@ function setTranslation(id, { instant = false } = {}) {
   } });
 }
 function trOptionsHTML(checked) {
-  const cur = trInfo();
-  return (BIB.meta?.translations || []).map((x) => {
-    const on = checked && x.id === cur.id;
-    return `<button type="button" class="tr-opt" role="radio" aria-checked="${on}" data-tr="${esc(x.id)}">
-      <span><b>${esc(x.name)}</b><small>${x.lang === 'pl' ? `Polski · cała aplikacja po polsku${x.nt ? ' · współczesny język, Nowy Testament (Stary z UBG)' : ''}` : 'English · the whole app in English'}</small></span>
+  const cur = trInfo(), all = BIB.meta?.translations || [];
+  const opt = (x) => `<button type="button" class="tr-opt" role="radio" aria-checked="${checked && x.id === cur.id}" data-tr="${esc(x.id)}">
+      <span><b>${esc(x.name)}</b><small>${BACKUP.has(x.id) ? 'Polski · pełna Biblia, działa offline' : x.lang === 'pl' ? `Polski · cała aplikacja po polsku${x.nt ? ' · współczesny język, Nowy Testament (Stary z UBG)' : ''}` : 'English · the whole app in English'}</small></span>
       <fvl-icon name="check" size="md" class="tr-check"></fvl-icon></button>`;
-  }).join('');
+  // English first, then Polish; the backup folded away (open when it is the Bible in use).
+  const main = all.filter((x) => !BACKUP.has(x.id)).sort((a, b) => (a.lang === b.lang ? 0 : a.lang === 'en' ? -1 : 1)), back = all.filter((x) => BACKUP.has(x.id));
+  return main.map(opt).join('') + (back.length ? `<details class="tr-more"${checked && BACKUP.has(cur.id) ? ' open' : ''}>
+      <summary><span>Backup · Zapasowa</span><fvl-icon name="chevron-down" size="sm"></fvl-icon></summary>
+      <div class="tr-list">${back.map(opt).join('')}</div></details>` : '');
 }
 function syncTrUI() {
   const cur = trInfo();
@@ -2396,7 +2398,7 @@ document.addEventListener('keydown', (e) => {
   if (trPop.hidden) return;
   if (e.key === 'Escape') { e.preventDefault(); closeTrMenu(null, { focusButton: true }); return; }
   if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-    const opts = $$('.tr-opt', trPop), i = opts.indexOf(document.activeElement);
+    const opts = $$('.tr-opt', trPop).filter((x) => (x.checkVisibility ? x.checkVisibility() : x.offsetParent)), i = opts.indexOf(document.activeElement);
     e.preventDefault(); opts[(i + (e.key === 'ArrowDown' ? 1 : opts.length - 1)) % opts.length]?.focus();
   }
 });
