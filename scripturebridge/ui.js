@@ -96,7 +96,7 @@ const STR = {
     'hero.title': 'The promise, and the day it was kept.',
     'hero.sub': '{n} bridges across two thousand years of Scripture. Each arc runs from a promise to its fulfilment. Tap one to read it.',
     'hero.aria': 'Every bridge as an arc on a timeline, from the year of the promise to the year it was fulfilled',
-    'bento.today': 'Bridge of the day', 'bento.start': 'Start here', 'bento.study': 'Continue the study', 'bento.studies': 'Bible studies',
+    'hero.kick': '{n} promises and the day each was kept', 'bento.today': 'Bridge of the day', 'bento.start': 'Start here', 'bento.study': 'Continue the study', 'bento.studies': 'Bible studies',
     'bento.studiesD': 'Follow The Berean Study passage by passage', 'bento.step': 'Step {i} of {n}', 'bento.saved': 'Saved',
     'bento.saved0': 'Star a bridge to keep it here', 'bento.savedN': '{n} saved', 'bento.sky': 'Every bridge',
     'hero.next': 'Next appointed time', 'hero.progress': 'You have read {r} of {n}. Read bridges are drawn solid.', 'hero.progress0': 'Bridges you read will be drawn solid here.', 'pos.time': 'In time order · {i} of {n}',
@@ -173,7 +173,7 @@ const STR = {
     'hero.title': 'Obietnica i dzień, w którym się spełniła.',
     'hero.sub': '{n} mostów przez dwa tysiące lat Pisma. Każdy łuk biegnie od obietnicy do jej spełnienia. Dotknij go, aby przeczytać.',
     'hero.aria': 'Każdy most jako łuk na osi czasu, od roku obietnicy do roku spełnienia',
-    'bento.today': 'Most dnia', 'bento.start': 'Zacznij tutaj', 'bento.study': 'Kontynuuj studium', 'bento.studies': 'Studia biblijne',
+    'hero.kick': 'Obietnic i dni ich wypełnienia: {n}', 'bento.today': 'Most dnia', 'bento.start': 'Zacznij tutaj', 'bento.study': 'Kontynuuj studium', 'bento.studies': 'Studia biblijne',
     'bento.studiesD': 'Krok po kroku za The Berean Study', 'bento.step': 'Krok {i} z {n}', 'bento.saved': 'Zapisane',
     'bento.saved0': 'Oznacz most gwiazdką, aby go tu zachować', 'bento.savedN': 'Zapisane: {n}', 'bento.sky': 'Wszystkie mosty',
     'hero.next': 'Najbliższy wyznaczony czas', 'hero.progress': 'Przeczytano {r} z {n}. Przeczytane mosty są narysowane pełną linią.', 'hero.progress0': 'Mosty, które przeczytasz, będą tu narysowane pełną linią.', 'pos.time': 'Według czasu · {i} z {n}',
@@ -453,7 +453,7 @@ function renderHero() {
   // The sky: a still night panel in both themes; only the arcs sit on it, the words stay on the page.
   // The Continue card keeps its own element (#continue), moved into the bento.
   const cont = $('#continue'); cont.remove();
-  el.innerHTML = `<div class="hero-text"><h1 class="hero-title">${esc(t('hero.title'))}</h1>
+  el.innerHTML = `<div class="hero-text"><p class="hero-kick"><i aria-hidden="true"></i>${esc(t('hero.kick', { n: num(list.length) }))}</p><h1 class="hero-title">${esc(t('hero.title'))}</h1>
     <p class="hero-sub">${esc(t('hero.sub', { n: num(list.length) }))}</p></div>
     <div class="bento">
       <div class="hero-sky b-sky" data-theme="dark" data-daylight="night"><div class="hero-in"><p class="b-kick">${esc(t('bento.sky'))}</p>${fanSVG(list, { cls: 'hero-fan' })}

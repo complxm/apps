@@ -840,7 +840,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
 .r-bar .r-bar-in { padding: 0; max-width: none; }
-.r-bar-in fvl-button#next { min-width: 8rem; }
+.r-bar-in fvl-button#next { min-width: 8.5rem; }
 .r-in > * + * { margin-top: var(--fvl-space-stack-group); }
 .r-in > .passage + .passage, .r-in > .why { margin-top: calc(var(--fvl-space-stack-group) * 2); }
 
@@ -1840,3 +1840,159 @@ fvl-drawer::part(panel) {
 .cn-k { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: 500; }
 .cn-t { font-weight: 600; font-size: var(--fvl-type-body-size); }
 .cn-cap .actions { margin-top: 0.25rem; }
+
+/* ==========================================================================
+   Finish: the concept's precision.
+   A calmer type scale, 20px corners, a hairline on every card, a sheen and (in dark) a gold edge of light,
+   small tracked section labels, and a tab bar where only the current section shows its name.
+   ========================================================================== */
+:root, [data-theme] {
+  --fvl-type-display-size: clamp(2.375rem, 1.6rem + 3.2vw, 3.5rem);
+  --fvl-type-h1-size: clamp(2rem, 1.45rem + 2.3vw, 3rem);
+  --fvl-type-h2-size: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
+  --fvl-type-h3-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --fvl-type-h4-size: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+  --fvl-type-lead-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --fvl-type-body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --fvl-type-small-size: 0.8125rem;
+  --fvl-type-label-size: 0.8125rem;
+  --fvl-type-micro-size: 0.6875rem;
+  --fvl-type-display-line-height: calc(var(--fvl-type-display-size) * 1.06);
+  --fvl-type-h1-line-height: calc(var(--fvl-type-h1-size) * 1.1);
+  --fvl-type-h2-line-height: calc(var(--fvl-type-h2-size) * 1.18);
+  --fvl-type-h3-line-height: calc(var(--fvl-type-h3-size) * 1.25);
+  --fvl-type-h4-line-height: calc(var(--fvl-type-h4-size) * 1.32);
+  --fvl-type-lead-line-height: calc(var(--fvl-type-lead-size) * 1.55);
+  --fvl-type-body-line-height: calc(var(--fvl-type-body-size) * 1.6);
+  --fvl-type-small-line-height: calc(var(--fvl-type-small-size) * 1.5);
+  --fvl-type-label-line-height: calc(var(--fvl-type-label-size) * 1.45);
+  --fvl-type-micro-line-height: calc(var(--fvl-type-micro-size) * 1.4);
+  --sb-r: 1.25rem;
+  --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 45%);
+  --sb-card-lift: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 1px 2px rgba(60, 44, 20, 0.05), 0 0.75rem 2rem -0.875rem rgba(60, 44, 20, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 42%);
+    --sb-card-lift: inset 0 1px 0 rgba(229, 184, 105, 0.14), 0 1.25rem 2.625rem -0.75rem rgba(0, 0, 0, 0.7);
+  }
+}
+[data-theme="dark"] {
+  --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 42%);
+  --sb-card-lift: inset 0 1px 0 rgba(229, 184, 105, 0.14), 0 1.25rem 2.625rem -0.75rem rgba(0, 0, 0, 0.7);
+}
+body::before { opacity: 0.035; }
+
+/* Every card: the same corner, hairline, sheen and lift. */
+.card-list .row, .bento-card, .bento .continue, .hero-next, .r-span, .r-pair > .passage, .study-card, .upnext,
+.st-points > p, .cn-cap, .moed-card, .ev-facts, .r-step, .st-claims, .welcome-card, .tr-pop {
+  border: 1px solid var(--fvl-color-line-subtle);
+  border-radius: var(--sb-r);
+  background-image: var(--sb-sheen);
+  box-shadow: var(--sb-card-lift);
+}
+.st-points > p, .cn-cap, .r-step { border-radius: 1rem; }
+.r-step { background-image: none; box-shadow: none; }
+.hero-sky, .cn-sky { border: 1px solid rgba(255, 255, 255, 0.07); border-radius: var(--sb-r); }
+.sc-cover.wide { border-radius: var(--sb-r); }
+
+/* Small tracked labels above sections, as in the boards. */
+.p-label, .b-kick, .bhead, .cn-k, .st-group-h .p-label, .xgroup-head .p-label, .hn-text small, .continue small, .upnext small, .mb-text small {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--fvl-color-text-muted);
+}
+.p-sym { gap: 0.5rem; }
+.continue small { color: var(--fvl-color-accent-text); }
+
+/* Home. */
+.hero-kick { margin: 0 0 0.25rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); font-weight: 500; }
+.hero-kick i { width: 8px; height: 8px; border-radius: 50%; background: var(--fvl-color-accent-default); box-shadow: 0 0 0.5rem var(--sb-gold-glow); }
+.hero-title { font-size: var(--fvl-type-display-size); line-height: 1.06; }
+.hero-sub { font-size: var(--fvl-type-body-size); line-height: 1.6; max-width: 34rem; }
+.hero-text { gap: 0.625rem; }
+#hero { gap: 1.5rem; }
+.bento { gap: 0.75rem; }
+@media (width >= 64rem) { .bento { gap: 1rem; } }
+.bento-card { padding: 1.25rem 1.375rem; gap: 0.375rem; }
+.b-day .b-title { font-size: var(--fvl-type-h4-size); line-height: 1.25; }
+.bento-quote { font-size: var(--fvl-type-body-size); }
+.b-big { font-size: 2.5rem; }
+.hero-next { padding: 0.875rem 1.125rem 0.875rem 0.875rem; }
+.hn-well { width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; }
+.bento .continue { padding: 1.25rem 1.375rem; }
+.bento .continue b { font-size: var(--fvl-type-body-size); }
+.b-sky .hero-in { padding: 1.125rem 1.125rem 0.875rem; }
+.b-sky .hero-progress { font-size: 0.75rem; }
+
+/* Search and chips: finer. */
+#q { --fvl-field-height: 2.875rem; --fvl-field-radius: 0.875rem; --fvl-field-line: var(--fvl-color-line-subtle); }
+.chips fvl-tag { --fvl-tag-height: 2rem; --fvl-tag-inset-x: 0.75rem; font-size: 0.8125rem; }
+
+/* Bridge cards. */
+.card-list { gap: 0.75rem; }
+.card-list .row { padding: 1.125rem 1.25rem 1.25rem; gap: 0.375rem; }
+.card-list .row-title { font-size: var(--fvl-type-h4-size); line-height: 1.3; letter-spacing: -0.012em; }
+.card-list .refs { font-size: 0.8125rem; }
+.card-list .row-sum { font-size: 0.875rem; line-height: 1.55; }
+.row-gap { font-size: 0.75rem; }
+
+/* Reader: panes with room, Scripture at a comfortable size. */
+.r-title { font-size: var(--fvl-type-h1-size); line-height: 1.08; }
+.r-span { padding: 1.5rem 1.5rem 1.25rem; }
+.r-pair > .passage { padding: 1.375rem; }
+@media (width >= 37.5rem) { .r-pair > .passage { padding: 1.75rem; } }
+.p-ref { font-size: var(--fvl-type-h3-size); line-height: 1.2; }
+.p-text, .st-text, .ch-text { font-size: 1.1875rem; line-height: 1.68; }
+@media (width >= 64rem) { .p-text, .st-text, .ch-text { font-size: 1.25rem; } }
+.r-pair .p-text { padding-left: 1rem; margin-top: 0.75rem; }
+.p-text mark { padding: 0.06em 0.22em; border-radius: 0.25rem; }
+.p-context, .why p:not(.p-label) { font-size: 0.875rem; line-height: 1.6; }
+.why p:not(.p-label) { font-size: var(--fvl-type-body-size); }
+
+/* Phone tab bar: icons, and the name of the section you are in. */
+@media (width < 52.5rem) {
+  :root { --tabbar-h: 3.75rem; }
+  .tabbar { display: flex; justify-content: space-between; align-items: center; gap: 0.25rem; width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 24rem); padding: 0.375rem; }
+  .tab { flex: 0 0 auto; width: 3rem; height: 3rem; min-height: 0; border-radius: var(--fvl-radius-pill); display: grid; place-items: center; gap: 0; transition: background 0.3s ease, color 0.3s ease, width 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+  .tab .tab-ic { padding: 0; background: none !important; }
+  .tab > span:not(.tab-ic) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .tab[aria-current="page"] { width: auto; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.125rem 0 0.875rem; background: var(--fvl-color-accent-subtle); box-shadow: inset 0 1px 0 var(--sb-rim), 0 0 0 1px var(--fvl-color-line-subtle); }
+  .tab[aria-current="page"] > span:not(.tab-ic) { position: static; width: auto; height: auto; overflow: visible; clip-path: none; font-size: 0.875rem; font-weight: 600; }
+  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
+  @media (prefers-reduced-motion: reduce) { .tab { transition: none; } }
+}
+
+/* Study covers and steps. */
+.study-card { border-radius: var(--sb-r); }
+.sc-body { padding: 1rem 1.125rem 1.125rem; gap: 0.375rem; }
+.sc-title { font-size: 0.9375rem; line-height: 1.35; }
+.sc-q { font-size: 0.8125rem; }
+.sc-num { font-size: 2.5rem; font-weight: 500; opacity: 0.9; }
+.st-points > p { padding: 1rem 1.125rem 1rem 2.125rem; font-size: var(--fvl-type-body-size); line-height: 1.6; }
+.st-points > p::before { left: 1.0625rem; top: 1.55rem; }
+
+/* Verse sheet. */
+#xrefBody > .p-text { font-size: 1.25rem; line-height: 1.6; }
+.cn-cap { padding: 1rem 1.125rem; }
+
+/* Gold throughout the reader, as in the boards: the span arc, the quote rules and the ring and point. The category stays
+   as the dot in the kicker. A lit phrase glows instead of being boxed. */
+.r-span { color: var(--fvl-color-accent-default); }
+.r-span .rs-arc { filter: drop-shadow(0 0 6px var(--sb-gold-glow)); }
+.r-pair .p-text, .st-text, #xrefBody > .p-text { border-left-color: var(--fvl-color-accent-default); }
+.r-pair .p-sym i { color: var(--fvl-color-accent-default); }
+.r-pair { align-items: start; }
+.r-pair mark.lit { background: rgba(229, 184, 105, 0.34); box-shadow: inset 0 -2px 0 var(--fvl-color-accent-default), 0 0 1rem var(--sb-gold-glow); }
+
+/* The reader's bar: a glass capsule holding two pills of one height, back a circle on the left, Next filling its
+   own width on the right, both inset evenly from the capsule's edge. */
+.r-bar { padding: 0.375rem; }
+.r-bar .r-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.r-bar fvl-button { --fvl-button-height-md: 2.75rem; }
+.r-bar fvl-button#next { min-width: 8.5rem; }
+.r-bar fvl-button#next::part(control) { width: 100%; padding: 0 1.5rem; font-weight: 600; letter-spacing: -0.005em; }
+.r-bar fvl-button#prev::part(control) { width: 2.75rem; }
