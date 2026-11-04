@@ -337,7 +337,7 @@ html.sb-modal, html.sb-modal body { overflow: hidden; }
 }
 .tab:focus-visible { outline: none; }
 .tab-ic { display: block; width: 1.25rem; height: 1.25rem; }
-svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 2.1; /* 1.75px on screen at 20px, as the library icons */ stroke-linecap: round; stroke-linejoin: round; }
 /* The section you are in: its icon sits on a soft pill, in the accent. */
 .tab .tab-ic { box-sizing: content-box; padding: 0.25rem 0.875rem; border-radius: var(--fvl-radius-pill); transition: background var(--fvl-motion-tone); }
 .tab[aria-current="page"] { color: var(--fvl-color-accent-text); }
@@ -2124,3 +2124,7 @@ html.reading fvl-toaster::part(stack) { inset-block-end: calc(3.5rem + max(env(s
 .ch-head > fvl-button:first-child, .actions > fvl-button[variant="tertiary"]:first-child { margin-left: -0.75rem; }
 /* The end of a page: enough room to finish, not a void before the footer. */
 .view { padding-bottom: 2rem; }
+/* Tab-bar icons: the library icons drew at 16px pinned to the top of their 20px slot, the hand-drawn ones at 20px.
+   All five now fill the same 20px box, centred, with one stroke weight. */
+.tab fvl-icon.tab-ic { display: flex; align-items: center; justify-content: center; --fvl-icon-stroke: 1.75; }
+.tab fvl-icon.tab-ic::part(icon) { display: block; width: 1.25rem; height: 1.25rem; stroke-width: 1.75; }
