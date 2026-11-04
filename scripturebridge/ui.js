@@ -87,7 +87,7 @@ const STR = {
     'link.follow': 'Follow the link to {ref}', 'link.hint': 'Tap the marked words to follow the link from promise to fulfilment.',
     'vb.title': 'Bridges', 'vb.hint': 'This verse is part of these bridges.', 'vb.aria': 'part of {n} bridge(s)',
     'cmp.open': 'Compare Bibles', 'cmp.close': 'Hide comparison', 'cmp.na': 'Not available right now.',
-    'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the KJV is shown here instead.', 'st.stepN': 'Step {n}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'The NLT text could not be loaded from Tyndale’s NLT API, so the KJV is shown here instead.', 'st.stepN': 'Step {n}', 'st.stepOf': 'Step {n} of {t}', 'st.into': '{time} into the video', 'st.inVer': 'He reads this from the {v}.', 'st.toVer': 'Show in the {v}', 'st.len': '{h} h {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Paths through Scripture from Genesis to Revelation. Each one reads as a sequence, step by step.', allThreads: 'All threads', readThread: 'Read this thread',
     'map.title': 'Bridge map', 'map.lead': 'Old Testament on the left, New Testament on the right. Tap a book to see where its promises lead.',
     'map.clear': 'Clear selection', list: 'List', read: 'Read',
@@ -118,7 +118,7 @@ const STR = {
     back: 'Back to list', prevA: 'Previous bridge', readerNav: 'Bridge navigation', reader: 'Reader',
     fulfilledIn: ' fulfilled in ', rowSaved: 'Saved', rowRead: 'Read', votesTotal: '{n} {vote}', votesReal: 'OpenBible link: {n} {vote}',
     'tr.title': 'Bible translation', 'tr.desc': 'Also sets the app language: a Polish Bible switches the whole app to Polish. Cross-references work with every Bible here.',
-    'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout',
+    'tr.aria': 'Bible translation: {name}', lang: 'English', classic: 'Classic layout', creditsSum: 'Sources and licences',
     credits: 'Bible text: King James Version (public domain outside the UK); New Living Translation © Tyndale House Foundation, read live from the <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> and not stored; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, shown unchanged; Biblica® Słowo Życia, otwarty dostęp (New Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, shown unchanged; original work available for free at <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> and <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>. Cross-references: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrew and Greek: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. People: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Places: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Maps: Natural Earth.',
     hebrew: 'Hebrew', greek: 'Greek', origWords: '{n} {word}', origHint: 'Tap a word for its meaning and every verse that uses it.', origHint2: 'Tap a word to see what it means.',
     defMore: 'Full definition', defLess: 'Shorter definition', occOpen: 'Where it appears · {n} {verse}', occClose: 'Hide the verses',
@@ -165,7 +165,7 @@ const STR = {
     'link.follow': 'Przejdź do powiązanego miejsca: {ref}', 'link.hint': 'Dotknij zaznaczonych słów, aby przejść od obietnicy do wypełnienia.',
     'vb.title': 'Mosty', 'vb.hint': 'Ten werset należy do tych mostów.', 'vb.aria': 'część mostów: {n}',
     'cmp.open': 'Porównaj Biblie', 'cmp.close': 'Ukryj porównanie', 'cmp.na': 'Teraz niedostępne.',
-    'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu KJV.', 'st.stepN': 'Krok {n}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
+    'nlt.fail': 'Nie udało się wczytać tekstu NLT z NLT API wydawnictwa Tyndale, dlatego pokazano tu KJV.', 'st.stepN': 'Krok {n}', 'st.stepOf': 'Krok {n} z {t}', 'st.into': '{time} od początku filmu', 'st.inVer': 'Czyta ten fragment z {v}.', 'st.toVer': 'Pokaż w {v}', 'st.len': '{h} godz. {m} min', 'st.lenM': '{m} min',
     'threads.lead': 'Ścieżki przez Pismo od Księgi Rodzaju do Objawienia. Każdą czyta się po kolei, krok po kroku.', allThreads: 'Wszystkie wątki', readThread: 'Czytaj ten wątek',
     'map.title': 'Mapa mostów', 'map.lead': 'Stary Testament po lewej, Nowy po prawej. Dotknij księgi, aby zobaczyć, dokąd prowadzą jej obietnice.',
     'map.clear': 'Wyczyść wybór', list: 'Lista', read: 'Czytaj',
@@ -196,7 +196,7 @@ const STR = {
     back: 'Wróć do listy', prevA: 'Poprzedni most', readerNav: 'Nawigacja mostów', reader: 'Czytnik',
     fulfilledIn: ' wypełnione w ', rowSaved: 'Zapisane', rowRead: 'Przeczytane', votesTotal: '{n} {vote}', votesReal: 'Powiązanie w OpenBible: {n} {vote}',
     'tr.title': 'Przekład Biblii', 'tr.desc': 'Ustawia też język aplikacji: polski przekład przełącza całą aplikację na polski. Odnośniki działają z każdym przekładem.',
-    'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny',
+    'tr.aria': 'Przekład Biblii: {name}', lang: 'Polski', classic: 'Układ klasyczny', creditsSum: 'Źródła i licencje',
     credits: 'Tekst Biblii: King James Version (domena publiczna poza Wielką Brytanią); New Living Translation © Tyndale House Foundation, wczytywany na bieżąco z <a href="https://api.nlt.to" target="_blank" rel="noopener">NLT API</a> i nieprzechowywany; Uwspółcześniona Biblia Gdańska © Fundacja Wrota Nadziei, <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener">CC BY-ND 4.0</a>, bez zmian; Biblica® Słowo Życia, otwarty dostęp (Nowy Testament) © 1991, 2005, 2016 Biblica, Inc., <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, bez zmian; oryginał dostępny bezpłatnie na <a href="https://www.biblica.com" target="_blank" rel="noopener">www.biblica.com</a> i <a href="https://open.bible" target="_blank" rel="noopener">open.bible</a>. Odnośniki: <a href="https://www.openbible.info/labs/cross-references/" target="_blank" rel="noopener">OpenBible.info</a>, CC BY. Hebrajski i grecki: <a href="https://github.com/STEPBible/STEPBible-Data" target="_blank" rel="noopener">STEPBible.org</a> (Tyndale House, Cambridge), CC BY 4.0. Osoby: <a href="https://github.com/BradyStephenson/bible-data" target="_blank" rel="noopener">BibleData</a> (Brady Stephenson), CC BY 4.0. Miejsca: <a href="https://www.openbible.info/geo/" target="_blank" rel="noopener">OpenBible.info</a> Bible Geocoding, CC BY 4.0. Mapy: Natural Earth.',
     hebrew: 'Hebrajski', greek: 'Grecki', origWords: '{n} {word}', origHint: 'Dotknij słowa, aby zobaczyć jego znaczenie i wszystkie wersety, w których występuje.', origHint2: 'Dotknij słowa, aby zobaczyć, co znaczy.',
     defMore: 'Pełna definicja (po angielsku)', defLess: 'Krótsza definicja', occOpen: 'Gdzie występuje · {n} {verse}', occClose: 'Ukryj wersety',
@@ -643,7 +643,7 @@ function renderThreads() {
   if (S.thMode === 'studies') return renderStudies();
   const th = S.thread && D.T[S.thread] && LT(S.thread);
   if (!th) {
-    v.innerHTML = `<div class="nav-scroll">${thModeHTML('threads')}</div><div class="section-head"><h2>${esc(t('tab.threads'))}</h2><p>${esc(t('threads.lead'))}</p></div>
+    v.innerHTML = `<div class="nav-scroll">${thModeHTML('threads')}</div><div class="section-head"><p>${esc(t('threads.lead'))}</p></div>
       <ol class="list card-list" id="threadList">${Object.keys(D.T).map((k) => { const x = LT(k); return `<li><button type="button" class="row" data-thread="${esc(k)}">
         <span class="span-line">${threadSpanHTML(D.T[k])}<span class="row-gap">${num(x.steps.length)} ${pluralForm(x.steps.length, 'step')}</span></span><span class="row-title">${esc(x.title)}</span><span class="row-sum">${esc(x.subtitle)}</span></button></li>`; }).join('')}</ol>`;
     wireThMode(v);
@@ -685,10 +685,10 @@ const lenText = (sec) => { const h = Math.floor(sec / 3600), m = Math.round((sec
 const videoAt = (st, sec) => st.video ? `${st.video}${st.video.includes('?') ? '&' : '?'}t=${sec}s` : '';
 const sReadKey = (id, i) => `${id}:${i}`;
 const sRead = new Set(store.get('sb_sread_v1', []));
-function stepKicker(st, i, full) {
+function stepKicker(st, i, total) {
   const how = st.kind === 'cited' ? t('st.cited') : st.version && st.version !== 'unknown' && st.version !== '-' ? t('st.read', { v: st.version }) : t('st.readU');
-  // In the reader the line is spelled out: "Step 4 · 12:00 into the video · read from the KJV".
-  return full ? `<span>${esc(t('st.stepN', { n: i + 1 }))}</span><span aria-hidden="true">·</span><span>${esc(t('st.into', { time: hms(st.t) }))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`
+  // In the reader the line is spelled out: "Step 4 of 104 · 12:00 into the video · read from the KJV".
+  return total ? `<span>${esc(t('st.stepOf', { n: i + 1, t: total }))}</span><span aria-hidden="true">·</span><span>${esc(t('st.into', { time: hms(st.t) }))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`
     : `<span class="step-n">${i + 1}</span><span aria-hidden="true">·</span><span class="st-time">${esc(hms(st.t))}</span><span aria-hidden="true">·</span><span>${esc(how)}</span>`;
 }
 function thModeHTML(mode) {
@@ -749,7 +749,7 @@ async function renderStudies() {
     const card = (id) => studyCardHTML(id);
     const singles = Object.keys(I.studies).filter((id) => !I.studies[id].series);
     v.innerHTML = `<div class="nav-scroll">${thModeHTML('studies')}</div>
-      <div class="section-head"><h2>${esc(t('th.studies'))}</h2><p>${esc(t('st.lead'))}</p></div>
+      <div class="section-head"><p>${esc(t('st.lead'))}</p></div>
       ${I.series.map((se) => `<section class="st-group" aria-label="${esc(LS(se).title)}"><h3 class="st-group-h"><span class="p-label">${esc(t('st.series'))}</span>${esc(LS(se).title)}</h3>
         <ol class="study-grid">${se.parts.map(card).join('')}</ol></section>`).join('')}
       ${singles.length ? `<section class="st-group" aria-label="${esc(t('st.single'))}"><h3 class="st-group-h"><span class="p-label">${esc(t('st.single'))}</span></h3><ol class="study-grid">${singles.map(card).join('')}</ol></section>` : ''}
@@ -834,7 +834,7 @@ function renderStudyReader() {
   const vid = videoAt(meta, st.t);
   rBody.innerHTML = `<div class="r-in">
     ${cur.idx === 0 ? `<div class="r-step"><span class="kicker">${esc(x.name || x.title)}</span><p>${esc(x.question)}</p></div>` : ''}
-    <p class="kicker">${stepKicker(st, cur.idx, true)}</p>
+    <p class="kicker">${stepKicker(st, cur.idx, cur.seq.length)}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(locRef(st.ref))}</h2>
     <section class="passage" aria-label="${esc(locRef(st.ref))}">
       <p class="p-label st-tr">${esc(trNameFor(parseRefList(st.ref)[0]?.osis))}</p>
@@ -850,7 +850,6 @@ function renderStudyReader() {
       ${vid ? `<p class="p-links"><a class="ext" href="${esc(vid)}" target="_blank" rel="noopener">${esc(t('st.watch', { time: hms(st.t) }))}<fvl-icon name="external-link"></fvl-icon></a></p>` : ''}
     </section>
   </div>`;
-  $('#rPos').textContent = t('pos.study', { i: cur.idx + 1, n: cur.seq.length, title: x.name || x.title });
   $('#star').hidden = true;
   $('#prev').disabled = cur.idx <= 0;
   const last = cur.idx >= cur.seq.length - 1, next = $('#next');
@@ -860,9 +859,10 @@ function renderStudyReader() {
   studyPassageHTML(st.ref).then((html) => {
     if (tok !== passageToken) return;
     $('.st-text', rBody).innerHTML = html;
-    // If the NLT could not be read for this passage, say plainly that the BSB is shown.
+    // If the NLT could not be read for this passage, the label names the KJV and a plain note under the text says why.
     if (trInfo().id === 'nlt' && parseRefList(st.ref).some((sg) => nltFell.has(`${sg.osis}/${sg.c}`))) {
-      $('.st-tr', rBody).textContent = `${trMeta('kjv')?.name || 'King James Version'} · ${t('nlt.fail')}`;
+      $('.st-tr', rBody).textContent = trMeta('kjv')?.name || 'King James Version';
+      if (!$('.st-fell', rBody)) $('.st-text', rBody).insertAdjacentHTML('afterend', `<p class="note st-fell">${esc(t('nlt.fail'))}</p>`);
     }
   })
     .catch(() => { if (tok === passageToken) $('.st-text', rBody).textContent = t('passageErr'); });
@@ -1109,11 +1109,6 @@ const refName = (b) => (b.osis === 'Ps' ? 'Psalm' : bookName(b));
 const emptyVerse = () => `<em class="omit">${esc(trInfo().empty || 'Not in the earliest manuscripts.')}</em>`;
 const textKey = (osis, c, tr) => `${tr}:${osis}/${c}`;
 const chapterText = (osis, c, tr0 = trInfo().id, tr = trFor(osis, tr0)) => cached(BIB.text, textKey(osis, c, tr), () => (tr === 'nlt' ? nltChapter(osis, c).catch(() => nltFallback(osis, c)) : getJSON(`data/bible/${tr}/${osis}/${c}.json`)).then((vs) => { BIB.done.set(textKey(osis, c, tr), vs); return vs; }));
-function trPicker() {
-  const ts = BIB.meta.translations.filter((x) => !BACKUP.has(x.id) || x.id === TR.id);
-  if (ts.length < 2) return '';
-  return `<fvl-segmented id="trPick" value="${esc(trInfo().id)}" aria-label="${esc(t('translation'))}">${ts.map((t) => `<fvl-segment value="${esc(t.id)}">${esc(t.label)}</fvl-segment>`).join('')}</fvl-segmented>`;
-}
 const chapterXref = (osis, c) => cached(BIB.xref, `${osis}/${c}`, () => getJSON(`data/bible/xref/${osis}/${c}.json`).catch(() => ({})));
 const chapterXin = (osis, c) => cached(BIB.xref, `in:${osis}/${c}`, () => getJSON(`data/bible/xin/${osis}/${c}.json`).catch(() => ({})));
 // Hebrew / Greek words per chapter, lexicon and occurrence buckets (STEPBible data, CC BY 4.0).
@@ -1278,7 +1273,6 @@ async function renderBible() {
     const pos = store.get('sb_bible_pos', null);
     const posOk = pos && BIB.byOsis.get(pos.osis);
     v.innerHTML = `<div class="section-head"><h2>${esc(t('tab.bible'))}</h2><p>${esc(t('bible.lead', { name: trInfo().name }))}</p></div>
-      <div class="nav-scroll">${trPicker()}</div>
       ${posOk ? `<button type="button" class="continue" data-go="#/bible/${pos.osis}/${pos.c}"><span><small>${esc(t('continue'))}</small><b>${esc(chName(pos))}</b></span><fvl-icon name="arrow-right" size="md"></fvl-icon></button>` : ''}
       <div>${['OT', 'NT'].map((tt) => `<div class="book-group"><h3>${esc(t(tt === 'OT' ? 'ot' : 'nt'))}</h3><div class="book-grid">${BIB.meta.books.filter((x) => x.testament === tt).map((x) =>
         `<button type="button" class="book" data-go="#/bible/${x.osis}">${esc(bookName(x))} <span>${x.verses.length}</span></button>`).join('')}</div></div>`).join('')}</div>`;
@@ -1296,7 +1290,6 @@ async function renderBible() {
       <fvl-button variant="tertiary" size="sm" data-go="#/bible/${b.osis}"><fvl-icon name="arrow-left"></fvl-icon>${esc(bookName(b))}</fvl-button>
       ${nltLink(`${b.name} ${c}`)}
     </div>
-    <div class="nav-scroll">${trPicker()}</div>
     <h2 class="ch-title">${esc(refName(b))} ${c}</h2>
     <p class="ch-text" id="chText" aria-busy="true" lang="${esc(trInfo().lang)}"></p>
     ${trInfo().notice ? `<p class="note tr-notice">${esc(trInfo().notice)}</p>` : ''}
@@ -1816,7 +1809,7 @@ function showTab(t, sub) {
 }
 
 // ---------- reader ----------
-const reader = $('#reader'), rBody = $('#rBody'), rTop = $('#rTop'), rBar = $('#rBar'), browse = $('#browse');
+const reader = $('#reader'), rBody = $('#rBody'), rBar = $('#rBar'), browse = $('#browse');
 let cur = null;          // { id, ctx, seq, idx }
 let pendingSrc = null;   // element the reader grows from
 let pushed = false;      // did we push a history entry to open the reader?
@@ -1963,9 +1956,8 @@ function renderReader() {
   const quote = (side) => (D.RV && passageHTMLNow(p[side].ref, keyOf(p0, side))) ?? `<span class="p-loading" data-side="${side}" data-ref="${esc(p[side].ref)}">…</span>`;
   rBody.innerHTML = `<div class="r-in">
     ${step ? `<div class="r-step"><span class="kicker">${esc(step.stage)}</span><p>${esc(step.note)}</p></div>` : ''}
-    <p class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}<span aria-hidden="true">·</span>${esc(typeLabel(p.type))}</p>
+    <p class="kicker"><span class="dot c-${esc(p.category)}"></span>${esc(catLabel(p))}<span aria-hidden="true">·</span>${esc(typeLabel(p.type))}${cur.ctx.kind !== 'all' ? `<span aria-hidden="true">·</span><span>${esc(positionLabel())}</span>` : ''}</p>
     <h2 class="r-title" id="rTitle" tabindex="-1">${esc(p.title)}</h2>
-    ${D.EV[p.id]?.votes != null ? `<p class="r-meta">${esc(t('votesReal', { n: D.EV[p.id].votes }))}</p>` : ''}
     ${spanFigure(p0, p)}
     <div class="r-pair c-${esc(p0.category)}">
     <section class="passage" aria-label="${esc(t('promise'))}">
@@ -2000,7 +1992,6 @@ function renderReader() {
       <fvl-button variant="tertiary" size="sm" data-onmap><fvl-icon name="map"></fvl-icon>${esc(t('onMap'))}</fvl-button>
     </div>
   </div>`;
-  $('#rPos').textContent = positionLabel();
   const arc = $('.rs-arc', rBody);
   if (arc && !reduced) gsap.fromTo(arc, { clipPath: 'inset(-16px 100% -16px -16px)' }, { clipPath: 'inset(-16px -16px -16px -16px)', ...spring.grow, delay: 0.1, clearProps: 'clipPath' });
   const isSaved = saved.includes(p.id);
@@ -2098,7 +2089,7 @@ function lightLinks(mark, follow) {
   if (!other) return;
   other.classList?.add('lit');
   if (follow) {
-    const r = other.getBoundingClientRect(), top = rTop.getBoundingClientRect().bottom, bot = rBar.getBoundingClientRect().top;
+    const r = other.getBoundingClientRect(), top = 0, bot = rBar.getBoundingClientRect().top;
     if (r.top < top + 8 || r.bottom > bot - 8) rBody.closest('.reader').scrollBy({ top: r.top - (top + bot) / 2 + r.height / 2, behavior: reduced ? 'auto' : 'smooth' });
   }
 }
@@ -2143,7 +2134,7 @@ function animateOpen(src) {
     gsap.fromTo(reader, { opacity: 0 }, { opacity: 1, duration: reduced ? 0 : 0.2, clearProps: 'opacity' });
   }
   gsap.fromTo($$('.r-in > *', rBody), { opacity: 0, y: 16 }, { opacity: 1, y: 0, stagger: 0.035, ...spring.arrive, delay: r ? 0.08 : 0, clearProps: 'opacity,transform' });
-  gsap.fromTo([rTop, rBar], { opacity: 0 }, { opacity: 1, duration: reduced ? 0 : 0.3, delay: 0.12, clearProps: 'opacity' });
+  gsap.fromTo(rBar, { opacity: 0 }, { opacity: 1, duration: reduced ? 0 : 0.3, delay: 0.12, clearProps: 'opacity' });
   softFocus($('#rTitle'));
 }
 function closeReader() {
@@ -2155,7 +2146,7 @@ function closeReader() {
   const row = id && views[S.tab] && $(cur.ctx?.kind === 'study' ? `.row[data-sstep="${CSS.escape(id)}"]` : `.row[data-id="${CSS.escape(id)}"]`, views[S.tab]);
   const done = () => {
     reader.hidden = true;
-    gsap.set([reader, rTop, rBar], { clearProps: 'clipPath,opacity,transform' });
+    gsap.set([reader, rBar], { clearProps: 'clipPath,opacity,transform' });
     if (row) softFocus(row);
   };
   if (row && !reduced) {
@@ -2163,7 +2154,7 @@ function closeReader() {
     // FVL carve curve, compressed so its settle tail does not linger.
     row.scrollIntoView({ block: 'center' });
     gsap.timeline({ onComplete: done })
-      .to($$('.r-in > *', rBody).concat([rTop, rBar]), { opacity: 0, duration: 0.12, ease: 'power1.in' }, 0)
+      .to($$('.r-in > *', rBody).concat([rBar]), { opacity: 0, duration: 0.12, ease: 'power1.in' }, 0)
       .to(reader, { clipPath: insetFor(row.getBoundingClientRect()), duration: 0.42, ease: 'fvl-carve' }, 0)
       .to(reader, { opacity: 0, duration: 0.2, ease: 'power1.out' }, 0.16);
   } else {
@@ -2230,13 +2221,11 @@ let lastY = 0, barsHidden = false;
 function showBars(instant) {
   if (!barsHidden && !instant) return;
   barsHidden = false;
-  gsap.to(rTop, { yPercent: 0, ...(instant ? { duration: 0 } : spring.settle) });
   gsap.to(rBar, { yPercent: 0, ...(instant ? { duration: 0 } : spring.settle) });
 }
 function hideBars() {
   if (barsHidden) return;
   barsHidden = true;
-  gsap.to(rTop, { yPercent: -100, ...spring.settle });
   gsap.to(rBar, { yPercent: 100, ...spring.settle });
 }
 reader.addEventListener('scroll', () => {
@@ -2359,7 +2348,6 @@ function syncTrUI() {
   $('#trBtnLabel').textContent = cur.label || 'NLT';
   $('#trBtn').setAttribute('aria-label', STR[lang()]['tr.aria'].replace('{name}', cur.name || 'New Living Translation'));
   $('#trList').innerHTML = trOptionsHTML(true);
-  const pick = $('#trPick'); if (pick) pick.value = cur.id;
 }
 
 // Globe menu: a small popover that springs from the button and closes fast.
@@ -2435,7 +2423,6 @@ $('#welcomeList').addEventListener('click', (e) => {
     .add(() => setTranslation(id, { instant: true }))
     .to(w, { opacity: 0, duration: 0.28, ease: 'power2.out' });
 });
-bibleView.addEventListener('change', (e) => { if (e.target.id === 'trPick') setTranslation(e.target.value); });
 bibleView.addEventListener('click', (e) => { const el = e.target.closest('.verse'); if (el && !getSelection()?.toString()) verseTap(el); });
 bibleView.addEventListener('keydown', (e) => { const el = e.target.closest('.verse'); if (el && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); verseTap(el); } });
 let chTouch = null;

@@ -346,7 +346,7 @@ svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-lineca
 svg.tab-ic circle { fill: var(--fvl-color-bg-surface); }
 @media (hover: hover) { .tab:hover { color: var(--fvl-color-text-primary); } }
 /* Room under the last row for the floating bar. */
-#browse { padding-bottom: calc(var(--tabbar-h) + var(--tabbar-off)); }
+#browse { padding-bottom: calc(var(--tabbar-h) + var(--tabbar-off) + 1.5rem); }
 
 @media (width >= 52.5rem) {
   #browse { display: grid; grid-template-columns: 16.25rem minmax(0, 1fr); padding-bottom: 0; }
@@ -540,7 +540,13 @@ fvl-button[hidden] { display: none; }
 .section-head p { margin: 0; color: var(--fvl-color-text-secondary); max-width: var(--fvl-layout-width-prose); }
 .actions { display: flex; flex-wrap: wrap; gap: var(--fvl-space-icon-gap); align-items: center; }
 .note { margin: 0; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.foot { padding-top: var(--fvl-space-stack-section); }
+.foot { padding-top: var(--fvl-space-stack-group); display: grid; gap: 0.75rem; justify-items: start; }
+/* Credits fold under one line: the passages carry their own copyright lines where the licence asks for them. */
+.foot-credits > summary { list-style: none; display: inline-flex; align-items: center; gap: 0.375rem; cursor: pointer; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); }
+.foot-credits > summary::-webkit-details-marker { display: none; }
+.foot-credits > summary fvl-icon { transition: transform var(--fvl-motion-tone); }
+.foot-credits[open] > summary fvl-icon { transform: rotate(180deg); }
+.foot-credits > .note { margin-top: 0.5rem; max-width: var(--fvl-layout-width-prose); }
 .foot a { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); }
 
 /* ---------- threads ---------- */
@@ -842,7 +848,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .r-body {
   max-width: var(--fvl-layout-width-prose);
   margin-inline: auto;
-  padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) calc(var(--fvl-size-control-lg) * 3 + env(safe-area-inset-bottom));
+  padding: calc(env(safe-area-inset-top) + 1.5rem) var(--fvl-layout-margin-compact) calc(var(--fvl-size-control-lg) * 3 + env(safe-area-inset-bottom));
 }
 .r-bar {
   position: fixed;
@@ -2014,7 +2020,10 @@ body::before { opacity: 0.035; }
 .r-bar fvl-button { --fvl-button-height-md: 2.75rem; }
 .r-bar fvl-button#next { min-width: 8.5rem; }
 .r-bar fvl-button#next::part(control) { width: 100%; padding: 0 1.5rem; font-weight: 600; letter-spacing: -0.005em; }
-.r-bar fvl-button#prev::part(control) { width: 2.75rem; }
+.r-bar fvl-button#prev::part(control), .r-bar fvl-button#back::part(control), .r-bar fvl-button#star::part(control) { width: 2.75rem; }
+/* Close and back on the left, save and Next on the right. */
+.r-bar fvl-button#prev { margin-right: auto; }
+.r-bar fvl-button#star[hidden] { display: none; }
 
 /* Phone bento: every row full, no orphaned half tiles. Continue and the feast are compact strips; Saved and the study
    share the last row as two tiles of equal height, sized to their content. */
@@ -2096,3 +2105,7 @@ fvl-button { --fvl-button-radius: var(--fvl-radius-pill); }
 /* A chosen chip under the finger (or pointer) stays light with dark text: FVL's tag paints selected-and-hovered in the
    shared subtle-hover colour, which in dark mode is a dark gold that hides the chip's dark text. */
 .chips fvl-tag { --fvl-color-accent-subtle-hover: color-mix(in oklab, var(--fvl-color-text-primary) 84%, var(--fvl-color-bg-canvas)); }
+
+/* Messages rise above whatever floats at the bottom (the tab bar, or the reader's bar) instead of covering its buttons. */
+fvl-toaster::part(stack) { inset-block-end: calc(var(--tabbar-h) + var(--tabbar-off) + 0.75rem); }
+html.reading fvl-toaster::part(stack) { inset-block-end: calc(3.5rem + max(env(safe-area-inset-bottom), 0.75rem) + 0.75rem); }
