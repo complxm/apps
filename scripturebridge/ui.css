@@ -2109,3 +2109,18 @@ fvl-button { --fvl-button-radius: var(--fvl-radius-pill); }
 /* Messages rise above whatever floats at the bottom (the tab bar, or the reader's bar) instead of covering its buttons. */
 fvl-toaster::part(stack) { inset-block-end: calc(var(--tabbar-h) + var(--tabbar-off) + 0.75rem); }
 html.reading fvl-toaster::part(stack) { inset-block-end: calc(3.5rem + max(env(safe-area-inset-bottom), 0.75rem) + 0.75rem); }
+
+/* Spacing pass (4 Nov): one rhythm. Content starts a gutter's width (1rem) under the top bar, and the reader just
+   under the status bar; a kicker sits close to the title it labels. */
+.view { padding-top: 1rem; }
+.reader .r-body { padding-top: max(calc(env(safe-area-inset-top) + 0.75rem), 1.5rem); }
+.r-in > :first-child { margin-top: 0; }
+.r-in > p.kicker { margin-bottom: 0; }
+.r-in > .kicker + .r-title { margin-top: 0.5rem; }
+/* Section labels share one style (small, tracked capitals), Bible's testaments included. */
+.book-group h3 { text-transform: uppercase; letter-spacing: 0.09em; font-size: 0.6875rem; line-height: 1.4; font-weight: 600; margin-bottom: 0.625rem; }
+.book-group + .book-group { margin-top: 1.5rem; }
+/* Back links line their arrow up with the page's left edge instead of sitting one button-padding in. */
+.ch-head > fvl-button:first-child, .actions > fvl-button[variant="tertiary"]:first-child { margin-left: -0.75rem; }
+/* The end of a page: enough room to finish, not a void before the footer. */
+.view { padding-bottom: 2rem; }
