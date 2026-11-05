@@ -1,33 +1,217 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>apps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070f2c">
+<title>Apps</title>
+<meta name="description" content="complx's apps: Slipbox, ScriptureBridge and Two Seats of Time.">
+<link rel="icon" href="/apps/vendor/fvl/brand/favicon.svg">
+<link rel="apple-touch-icon" href="/apps/slipbox/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
 <style>
-  :root { color-scheme: light dark; --fg: #111; --bg: #fafafa; --muted: #777; --line: #e3e3e3; }
-  @media (prefers-color-scheme: dark) { :root { --fg: #ececec; --bg: #111; --muted: #999; --line: #2a2a2a; } }
+  :root {
+    color-scheme: dark;
+    --ink: #f4f6fb;
+    --ink-2: rgba(244, 246, 251, .70);
+    --ink-3: rgba(244, 246, 251, .48);
+    --glass: rgba(255, 255, 255, .075);
+    --glass-press: rgba(255, 255, 255, .14);
+    --hair: rgba(255, 255, 255, .12);
+    --focus: #81a7fc;
+    --night: #070f2c;
+    --display: "Inter", system-ui, -apple-system, sans-serif;
+    --gutter: max(20px, env(safe-area-inset-left));
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, system-ui, sans-serif; }
-  main { max-width: 640px; margin: 0 auto; padding: 48px 20px; }
-  h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 8px; }
-  p { color: var(--muted); margin: 0 0 32px; }
-  ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
-  li { border-bottom: 1px solid var(--line); }
-  li a { display: block; padding: 16px 0; color: var(--fg); text-decoration: none; }
-  li a:active { opacity: .6; }
-  small { color: var(--muted); }
+  html { background: var(--night); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; min-height: 100dvh; color: var(--ink); background: var(--night);
+    font: 400 17px/1.45 var(--display); font-feature-settings: "cv11", "ss03";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* The sky: FVL atmosphere, following the clock. Fixed behind everything. */
+  fvl-atmosphere { position: fixed; inset: 0; z-index: 0; display: block; color: var(--ink); }
+
+  main {
+    position: relative; z-index: 1;
+    max-width: 560px; margin: 0 auto;
+    padding: calc(env(safe-area-inset-top) + 18vh) var(--gutter) calc(env(safe-area-inset-bottom) + 40px);
+  }
+
+  .owner { margin: 0; font-size: 15px; font-weight: 500; color: var(--ink-2); letter-spacing: -.005em; }
+  h1 {
+    margin: 2px 0 0; font-family: var(--display);
+    font-size: clamp(76px, 24vw, 132px); line-height: .9; font-weight: 640;
+    letter-spacing: -.055em; font-variation-settings: "opsz" 32;
+    margin-left: -.05em;
+  }
+  .sky-now {
+    margin: 18px 0 0; font-size: 17px; color: var(--ink-2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* One grouped shelf, not separate cards. */
+  .shelf {
+    list-style: none; margin: 44px 0 0; padding: 0;
+    background: var(--glass); border: 1px solid var(--hair); border-radius: 26px;
+    -webkit-backdrop-filter: blur(22px) saturate(140%); backdrop-filter: blur(22px) saturate(140%);
+    overflow: hidden;
+  }
+  .shelf li + li { position: relative; }
+  .shelf li + li::before {
+    content: ""; position: absolute; top: 0; right: 0; left: 92px; height: 1px; background: var(--hair);
+  }
+  .app {
+    display: grid; grid-template-columns: 60px 1fr 14px; align-items: center; gap: 16px;
+    padding: 16px 18px 16px 16px; color: inherit; text-decoration: none;
+    -webkit-tap-highlight-color: transparent; transition: background-color .15s ease;
+  }
+  .app:active { background: var(--glass-press); }
+  @media (hover: hover) { .app:hover { background: rgba(255, 255, 255, .06); } }
+  .app:focus-visible { outline: 2px solid var(--focus); outline-offset: -4px; border-radius: 22px; }
+
+  .tile {
+    width: 60px; height: 60px; border-radius: 14px; display: block; overflow: hidden;
+    box-shadow: 0 0 0 .5px rgba(255, 255, 255, .18), 0 6px 18px rgba(0, 0, 0, .35);
+  }
+  .tile img, .tile svg { width: 100%; height: 100%; display: block; }
+  .name { display: block; font-size: 19px; font-weight: 600; letter-spacing: -.015em; line-height: 1.2; }
+  .what { display: block; margin-top: 3px; font-size: 15px; line-height: 1.35; color: var(--ink-2); }
+  .chev { width: 14px; height: 14px; stroke: var(--ink-3); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Sky preview: look at the other times of day. */
+  .skies { margin: 40px 0 0; }
+  .skies p { margin: 0 0 10px; font-size: 14px; color: var(--ink-3); }
+  .seg {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 4px;
+    background: rgba(0, 0, 0, .18); border: 1px solid var(--hair); border-radius: 14px;
+  }
+  .seg button {
+    appearance: none; border: 0; margin: 0; padding: 9px 0; border-radius: 10px;
+    font: 500 14px/1.2 var(--display); color: var(--ink-2); background: transparent; cursor: pointer;
+    -webkit-tap-highlight-color: transparent; transition: background-color .2s ease, color .2s ease;
+  }
+  .seg button[aria-pressed="true"] { background: rgba(255, 255, 255, .16); color: var(--ink); }
+  .seg button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+  .tip { margin: 28px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-3); max-width: 40ch; }
+
+  /* One entrance on load: the title and shelf settle in. */
+  @media (prefers-reduced-motion: no-preference) {
+    .rise { animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
+    .rise.d1 { animation-delay: .08s; }
+    .rise.d2 { animation-delay: .18s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  }
+
+  @media (min-width: 720px) {
+    main { padding-top: 22vh; }
+    .shelf { margin-top: 56px; }
+  }
 </style>
 </head>
 <body>
+<fvl-atmosphere daylight="auto" aria-hidden="true"></fvl-atmosphere>
+
 <main>
-  <h1>apps</h1>
-  <p>Live. Each app gets its own folder and shows up in this list.</p>
-  <ul id="list">
-    <li><a href="/apps/two-seats/">Two Seats of Time <small>— the score seen from inside and outside</small></a></li>
-    <li><a href="/apps/scripturebridge/">ScriptureBridge <small>— prophecy and cross-reference explorer across all 66 books</small></a></li>
-    <li><a href="/apps/slipbox/">Slipbox <small>— a zettelkasten: capture, make main notes, connect them, write from them</small></a></li>
+  <header class="rise">
+    <p class="owner">complx</p>
+    <h1>Apps</h1>
+    <p class="sky-now" id="skyNow">&nbsp;</p>
+  </header>
+
+  <ul class="shelf rise d1" aria-label="Apps">
+    <li>
+      <a class="app" href="/apps/slipbox/">
+        <span class="tile"><img src="/apps/slipbox/icons/icon-192.png" alt="" width="60" height="60"></span>
+        <span>
+          <span class="name">Slipbox</span>
+          <span class="what">Catch thoughts, link them into notes, write from them.</span>
+        </span>
+        <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="m5 2.5 4.5 4.5L5 11.5"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="app" href="/apps/scripturebridge/">
+        <span class="tile"><img src="/apps/scripturebridge/icons/icon-192.png" alt="" width="60" height="60"></span>
+        <span>
+          <span class="name">ScriptureBridge</span>
+          <span class="what">Prophecies and their fulfilment across all 66 books.</span>
+        </span>
+        <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="m5 2.5 4.5 4.5L5 11.5"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="app" href="/apps/two-seats/">
+        <span class="tile">
+          <svg viewBox="0 0 60 60" aria-hidden="true">
+            <defs>
+              <linearGradient id="tsBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#171541"/><stop offset="1" stop-color="#040613"/>
+              </linearGradient>
+              <linearGradient id="tsFog" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#81a7fc" stop-opacity="0"/><stop offset="1" stop-color="#81a7fc" stop-opacity=".9"/>
+              </linearGradient>
+            </defs>
+            <rect width="60" height="60" fill="url(#tsBg)"/>
+            <path d="M30 52 C30 42 30 38 30 34 M30 34 C24 28 20 22 17 12 M30 34 C31 26 33 20 34 10 M30 34 C36 29 41 24 45 15" fill="none" stroke="url(#tsFog)" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="30" cy="34" r="3.6" fill="#f4f6fb"/>
+            <circle cx="48" cy="46" r="2.6" fill="#81a7fc"/>
+          </svg>
+        </span>
+        <span>
+          <span class="name">Two Seats of Time</span>
+          <span class="what">Time from inside, where the future branches, and from outside.</span>
+        </span>
+        <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="m5 2.5 4.5 4.5L5 11.5"/></svg>
+      </a>
+    </li>
   </ul>
+
+  <section class="skies rise d2" aria-label="Sky">
+    <p>The sky follows your clock. Look at another time of day:</p>
+    <div class="seg" role="group" aria-label="Time of day">
+      <button type="button" data-sky="auto" aria-pressed="true">Now</button>
+      <button type="button" data-sky="dawn" aria-pressed="false">Dawn</button>
+      <button type="button" data-sky="day" aria-pressed="false">Day</button>
+      <button type="button" data-sky="dusk" aria-pressed="false">Dusk</button>
+      <button type="button" data-sky="night" aria-pressed="false">Night</button>
+    </div>
+  </section>
+
+  <p class="tip rise d2">To keep an app on your phone, open it in Safari, tap Share, then Add to Home Screen.</p>
 </main>
+
+<script type="module">
+  import "/apps/vendor/fvl/atmosphere/fvl-atmosphere.js";
+
+  const sky = document.querySelector("fvl-atmosphere");
+  const now = document.getElementById("skyNow");
+  // Same boundaries as the FVL atmosphere: dawn 5:00, day 9:00, dusk 17:00, night 21:00.
+  const phase = (h) => (h >= 5 && h < 9 ? "Dawn" : h >= 9 && h < 17 ? "Day" : h >= 17 && h < 21 ? "Dusk" : "Night");
+  const pad = (n) => String(n).padStart(2, "0");
+  let picked = "auto";
+
+  function tick() {
+    const d = new Date();
+    const time = `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    now.textContent = picked === "auto"
+      ? `${phase(d.getHours())} sky, ${time}`
+      : `${picked[0].toUpperCase() + picked.slice(1)} sky. Your time is ${time}.`;
+  }
+  tick();
+  setTimeout(() => { tick(); setInterval(tick, 60000); }, (60 - new Date().getSeconds()) * 1000);
+
+  document.querySelector(".seg").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-sky]");
+    if (!b) return;
+    picked = b.dataset.sky;
+    sky.setAttribute("daylight", picked);
+    for (const x of document.querySelectorAll(".seg button")) x.setAttribute("aria-pressed", String(x === b));
+    tick();
+  });
+</script>
 </body>
 </html>
