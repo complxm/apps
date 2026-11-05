@@ -1,5 +1,131 @@
 /* ScriptureBridge UI — Flow Visual Language. Semantic tokens only; motion is driven by GSAP with the FVL springs. */
 
+/* ---------- palette: archival sanctuary ----------
+   The concept's own colours, set straight onto the semantic tokens the app (and FVL's components) read:
+   light is warm parchment with burnished bronze, dark is obsidian with luminous gold. */
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 200 800; font-display: swap; src: url(fonts/newsreader-latin-opsz-normal.woff2) format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Newsreader"; font-style: normal; font-weight: 200 800; font-display: swap; src: url(fonts/newsreader-latin-ext-opsz-normal.woff2) format("woff2-variations"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 200 800; font-display: swap; src: url(fonts/newsreader-latin-opsz-italic.woff2) format("woff2-variations"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Newsreader"; font-style: italic; font-weight: 200 800; font-display: swap; src: url(fonts/newsreader-latin-ext-opsz-italic.woff2) format("woff2-variations"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+:root, [data-theme="light"] {
+  --sb-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --fvl-color-bg-canvas: #f3eee5;
+  --fvl-color-bg-surface: #fbf8f2;
+  --fvl-color-bg-raised: #fffdf9;
+  --fvl-color-bg-overlay: #fbf8f2;
+  --fvl-color-bg-sunken: #e9e1d3;
+  --fvl-color-bg-hover: #efe7da;
+  --fvl-color-bg-active: #e6dccb;
+  --fvl-color-bg-selected: #f1e3c9;
+  --fvl-color-text-primary: #1c1915;
+  --fvl-color-text-secondary: #554d42;
+  --fvl-color-text-muted: #6b6255;
+  --fvl-color-text-disabled: #a59c8e;
+  --fvl-color-text-on-accent: #fffdf9;
+  --fvl-color-line-subtle: #e2d9ca;
+  --fvl-color-line-strong: #8c8273;
+  --fvl-color-accent-default: #8f622c;
+  --fvl-color-accent-hover: #7d5320;
+  --fvl-color-accent-active: #6c4718;
+  --fvl-color-accent-text: #7a521f;
+  --fvl-color-accent-subtle: #f1e3c9;
+  --fvl-color-accent-subtle-hover: #ead5b0;
+  --fvl-color-focus-ring: #8f622c;
+  --fvl-color-scrim: rgba(28, 25, 21, 0.38);
+  --sb-gold-glow: rgba(154, 107, 50, 0.32);
+  --sb-mark: rgba(201, 146, 62, 0.24);
+  --sb-glass: rgba(251, 248, 242, 0.74);
+  --sb-rim: rgba(255, 255, 255, 0.9);
+  --sb-lift: 0 0.875rem 2.25rem -0.5rem rgba(60, 44, 20, 0.18), 0 2px 6px rgba(60, 44, 20, 0.06);
+  --sb-card-lift: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 0.625rem 1.75rem -0.75rem rgba(60, 44, 20, 0.16), 0 1px 2px rgba(60, 44, 20, 0.06);
+  --sb-paper: radial-gradient(120% 70% at 0% 0%, rgba(255, 252, 244, 0.9), transparent 60%), radial-gradient(90% 60% at 100% 100%, rgba(214, 196, 166, 0.35), transparent 70%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fvl-color-bg-canvas: #0d0f12;
+    --fvl-color-bg-surface: #161920;
+    --fvl-color-bg-raised: #1c1f27;
+    --fvl-color-bg-overlay: #171a21;
+    --fvl-color-bg-sunken: #090b0e;
+    --fvl-color-bg-hover: #1f232b;
+    --fvl-color-bg-active: #262a33;
+    --fvl-color-bg-selected: #2a2419;
+    --fvl-color-text-primary: #f3efea;
+    --fvl-color-text-secondary: #b8b0a4;
+    --fvl-color-text-muted: #8f877b;
+    --fvl-color-text-disabled: #5d574f;
+    --fvl-color-text-on-accent: #16120b;
+    --fvl-color-line-subtle: #252830;
+    --fvl-color-line-strong: #6e685f;
+    --fvl-color-accent-default: #e5b869;
+    --fvl-color-accent-hover: #f0ca86;
+    --fvl-color-accent-active: #d4a457;
+    --fvl-color-accent-text: #f0ca86;
+    --fvl-color-accent-subtle: #2a2419;
+    --fvl-color-accent-subtle-hover: #3a3120;
+    --fvl-color-focus-ring: #e5b869;
+    --fvl-color-scrim: rgba(0, 0, 0, 0.6);
+    --sb-gold-glow: rgba(229, 184, 105, 0.45);
+    --sb-mark: rgba(229, 184, 105, 0.2);
+    --sb-glass: rgba(22, 25, 32, 0.72);
+    --sb-rim: rgba(255, 255, 255, 0.08);
+    --sb-lift: 0 1rem 2.5rem -0.5rem rgba(0, 0, 0, 0.6);
+    --sb-card-lift: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 1rem 2.25rem -0.75rem rgba(0, 0, 0, 0.55);
+    --sb-paper: radial-gradient(90% 55% at 50% -10%, rgba(229, 184, 105, 0.07), transparent 70%), radial-gradient(80% 60% at 100% 100%, rgba(91, 136, 241, 0.05), transparent 70%);
+  }
+}
+[data-theme="dark"] {
+  --fvl-color-bg-canvas: #0d0f12;
+  --fvl-color-bg-surface: #161920;
+  --fvl-color-bg-raised: #1c1f27;
+  --fvl-color-bg-overlay: #171a21;
+  --fvl-color-bg-sunken: #090b0e;
+  --fvl-color-bg-hover: #1f232b;
+  --fvl-color-bg-active: #262a33;
+  --fvl-color-bg-selected: #2a2419;
+  --fvl-color-text-primary: #f3efea;
+  --fvl-color-text-secondary: #b8b0a4;
+  --fvl-color-text-muted: #8f877b;
+  --fvl-color-text-disabled: #5d574f;
+  --fvl-color-text-on-accent: #16120b;
+  --fvl-color-line-subtle: #252830;
+  --fvl-color-line-strong: #6e685f;
+  --fvl-color-accent-default: #e5b869;
+  --fvl-color-accent-hover: #f0ca86;
+  --fvl-color-accent-active: #d4a457;
+  --fvl-color-accent-text: #f0ca86;
+  --fvl-color-accent-subtle: #2a2419;
+  --fvl-color-accent-subtle-hover: #3a3120;
+  --fvl-color-focus-ring: #e5b869;
+  --fvl-color-scrim: rgba(0, 0, 0, 0.6);
+  --sb-gold-glow: rgba(229, 184, 105, 0.45);
+  --sb-mark: rgba(229, 184, 105, 0.2);
+  --sb-glass: rgba(22, 25, 32, 0.72);
+  --sb-rim: rgba(255, 255, 255, 0.08);
+  --sb-lift: 0 1rem 2.5rem -0.5rem rgba(0, 0, 0, 0.6);
+  --sb-card-lift: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 1rem 2.25rem -0.75rem rgba(0, 0, 0, 0.55);
+  --sb-paper: radial-gradient(90% 55% at 50% -10%, rgba(229, 184, 105, 0.07), transparent 70%);
+}
+/* Paper: a soft light across the page and a fine grain, fixed behind everything. */
+body { background-color: var(--fvl-color-bg-canvas); background-image: var(--sb-paper); background-attachment: fixed; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.33 0 0 0 0 0.22 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+/* The one main action of a view: solid gold (FVL's primary button paints its own indigo liquid, so the main actions
+   use the secondary button in the accent). */
+fvl-button.cta {
+  --fvl-button-secondary-bg: var(--fvl-color-accent-default);
+  --fvl-button-secondary-bg-hover: var(--fvl-color-accent-hover);
+  --fvl-button-secondary-text: var(--fvl-color-text-on-accent);
+}
+
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 html.reading { overflow: hidden; }
@@ -51,6 +177,14 @@ body {
 .tr-opt:hover { background: var(--fvl-color-bg-hover); }
 .tr-check { color: var(--fvl-color-accent-text); opacity: 0; transition: opacity var(--fvl-motion-tone); flex: none; }
 .tr-opt[aria-checked="true"] .tr-check { opacity: 1; }
+/* The backup Bible, folded under the main choices. */
+.tr-more > summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; cursor: pointer;
+  padding: 0.5rem 0.25rem 0.25rem; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: var(--fvl-type-label-weight); letter-spacing: 0.08em; text-transform: uppercase; }
+.tr-more > summary::-webkit-details-marker { display: none; }
+.tr-more > summary fvl-icon { transition: transform var(--fvl-motion-tone); }
+.tr-more[open] > summary fvl-icon { transform: rotate(180deg); }
+.tr-more > summary:focus-visible { outline: 2px solid var(--fvl-color-focus-ring, currentColor); outline-offset: 2px; border-radius: 0.5rem; }
+.tr-more > .tr-list { margin-top: 0.5rem; }
 
 /* Globe menu */
 .tr-pop {
@@ -76,21 +210,32 @@ body {
   inset: 0;
   z-index: var(--fvl-layer-dialog);
   background: var(--fvl-color-scrim);
-  display: grid;
-  place-items: center;
-  padding: var(--fvl-layout-margin-compact);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* The backdrop is its own scroller: a short phone scrolls the card here, and a swipe never reaches the page. */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(env(safe-area-inset-top), var(--fvl-layout-margin-compact)) var(--fvl-layout-margin-compact) max(env(safe-area-inset-bottom), var(--fvl-layout-margin-compact));
 }
 .welcome[hidden] { display: none; }
-.welcome { overflow: hidden; }
+/* While the card is up the page underneath stays put (sb-modal is set on <html> by ui.js). */
+html.sb-modal, html.sb-modal body { overflow: hidden; }
 .welcome-card {
+  margin: auto; /* centred, yet never cut off at the top when taller than the screen */
+  flex: none;
   width: min(28rem, 100%);
   background: var(--fvl-color-bg-overlay);
   box-shadow: var(--fvl-shadow-overlay);
   border-radius: var(--fvl-radius-sheet);
-  padding: var(--fvl-space-inset-overlay);
+  padding: 1.5rem 1.25rem 1.25rem;
   display: grid;
-  gap: var(--fvl-space-stack-group);
+  gap: 0.75rem;
 }
+.welcome-card .tr-list { margin-top: 0.5rem; gap: 0.5rem; }
+.welcome-card .tr-opt { padding: 0.875rem 1rem; border-radius: 0.875rem; }
+.welcome-card .tr-opt small { margin-top: 0.125rem; }
 .welcome-card:focus { outline: none; }
 .welcome-card h2 {
   margin: 0;
@@ -113,16 +258,29 @@ body {
 /* ---------- app frame ----------
    Phone: a small top bar that scrolls away, and the sections in a tab bar at the bottom, under the thumb.
    From the expanded breakpoint: one sidebar holds the wordmark, the sections and the Bible switch. */
-:root { --tabbar-h: calc(4.5rem + env(safe-area-inset-bottom)); }
+/* --tabbar-h is measured from the bar itself (ui.js); --tabbar-off is the gap under the floating bar. */
+:root { --tabbar-h: 4rem; --tabbar-off: max(env(safe-area-inset-bottom), 0.75rem); }
 .rail { display: contents; }
+/* Frosted glass on floating chrome only: the top bar and the tab bar. */
+.glass {
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  backdrop-filter: blur(28px) saturate(1.6);
+}
+/* Where frost cannot be drawn, or the reader asks for less transparency, the bars are solid. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { :root, :root:not([data-theme="light"]), [data-theme] { --sb-glass: var(--fvl-color-bg-surface); } }
+@media (prefers-reduced-transparency: reduce) { :root, :root:not([data-theme="light"]), [data-theme] { --sb-glass: var(--fvl-color-bg-surface); } }
 .appbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--fvl-layer-sticky);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--fvl-space-icon-gap);
-  max-width: var(--fvl-layout-width-content);
-  margin-inline: auto;
-  padding: max(env(safe-area-inset-top), var(--fvl-space-stack-related)) var(--fvl-layout-margin-compact) 0;
+  min-height: calc(3.5rem + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) max(var(--fvl-layout-margin-compact), (100% - var(--fvl-layout-width-content)) / 2 + var(--fvl-layout-margin-compact)) 0;
+  box-shadow: 0 1px 0 var(--fvl-color-line-subtle);
 }
 .wordmark {
   display: inline-flex;
@@ -131,30 +289,32 @@ body {
   color: var(--fvl-color-text-primary);
   text-decoration: none;
   font-family: var(--fvl-type-h4-family);
-  font-size: var(--fvl-type-h4-size);
+  font-size: var(--fvl-type-body-size);
   font-weight: var(--fvl-type-h4-weight);
-  line-height: var(--fvl-type-h4-line-height);
+  line-height: var(--fvl-type-body-line-height);
   letter-spacing: var(--fvl-type-h4-tracking);
   min-height: var(--fvl-size-target-min);
 }
-.mark { width: 2rem; height: 1.25rem; flex: none; overflow: visible; }
+.mark { width: 1.75rem; height: 1.125rem; flex: none; overflow: visible; }
 .mark path { fill: none; stroke: var(--fvl-color-accent-default); stroke-width: 2; stroke-linecap: round; }
 /* The promise is an open ring, the fulfilment a filled point: the same marks as every span in the app. */
 .mark .m-open { fill: var(--fvl-color-bg-canvas); stroke: var(--fvl-color-accent-default); stroke-width: 2; }
 .mark .m-kept { fill: var(--fvl-color-accent-default); }
 .tr-btn { flex: none; }
 
+/* Phone: the sections float in a glass capsule above the home indicator, under the thumb. */
 .tabbar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: var(--tabbar-off);
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 30rem);
   z-index: var(--fvl-layer-sticky);
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  padding: var(--fvl-space-stack-related) var(--fvl-layout-margin-compact) env(safe-area-inset-bottom);
-  background: var(--fvl-color-bg-canvas);
-  box-shadow: 0 -1px 0 var(--fvl-color-line-subtle);
+  padding: 0.375rem;
+  border-radius: var(--fvl-radius-pill);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
 .tab {
   appearance: none;
@@ -165,9 +325,10 @@ body {
   display: grid;
   justify-items: center;
   align-content: center;
-  gap: var(--fvl-space-stack-related);
+  gap: 0.125rem;
   min-height: var(--fvl-size-target-min);
-  padding: 0 0 var(--fvl-space-stack-related);
+  padding: 0;
+  border-radius: var(--fvl-radius-pill);
   font-size: var(--fvl-type-micro-size);
   line-height: var(--fvl-type-micro-line-height);
   font-weight: var(--fvl-type-label-weight);
@@ -176,18 +337,20 @@ body {
 }
 .tab:focus-visible { outline: none; }
 .tab-ic { display: block; width: 1.25rem; height: 1.25rem; }
-svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-svg.tab-ic circle { fill: var(--fvl-color-bg-canvas); }
+svg.tab-ic { fill: none; stroke: currentColor; stroke-width: 2.1; /* 1.75px on screen at 20px, as the library icons */ stroke-linecap: round; stroke-linejoin: round; }
 /* The section you are in: its icon sits on a soft pill, in the accent. */
-.tab .tab-ic { box-sizing: content-box; padding: var(--fvl-space-stack-related) var(--fvl-space-inset-item-x); border-radius: var(--fvl-radius-pill); transition: background var(--fvl-motion-tone); }
+.tab .tab-ic { box-sizing: content-box; padding: 0.25rem 0.875rem; border-radius: var(--fvl-radius-pill); transition: background var(--fvl-motion-tone); }
 .tab[aria-current="page"] { color: var(--fvl-color-accent-text); }
 .tab[aria-current="page"] .tab-ic { background: var(--fvl-color-accent-subtle); }
 .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
+svg.tab-ic circle { fill: var(--fvl-color-bg-surface); }
 @media (hover: hover) { .tab:hover { color: var(--fvl-color-text-primary); } }
-#browse { padding-bottom: var(--tabbar-h); }
+/* Room under the last row for the floating bar. */
+#browse { padding-bottom: calc(var(--tabbar-h) + var(--tabbar-off) + 1.5rem); }
 
 @media (width >= 52.5rem) {
-  #browse { display: grid; grid-template-columns: var(--fvl-layout-width-sidebar) minmax(0, 1fr); padding-bottom: 0; }
+  #browse { display: grid; grid-template-columns: 16.25rem minmax(0, 1fr); padding-bottom: 0; }
+  /* Wide screens: one quiet sidebar holds the wordmark, the sections and the Bible switch. */
   .rail {
     display: flex;
     flex-direction: column;
@@ -196,33 +359,49 @@ svg.tab-ic circle { fill: var(--fvl-color-bg-canvas); }
     top: 0;
     height: 100vh;
     height: 100dvh;
-    padding: var(--fvl-space-stack-group) var(--fvl-space-stack-related) var(--fvl-space-stack-group) var(--fvl-space-stack-group);
+    padding: var(--fvl-space-stack-group) var(--fvl-space-stack-related);
+    background: var(--fvl-color-bg-surface);
+    box-shadow: 1px 0 0 var(--fvl-color-line-subtle);
   }
   .appbar { display: contents; }
-  .wordmark { order: 0; padding-inline: var(--fvl-space-stack-related); font-size: var(--fvl-type-body-size); line-height: var(--fvl-type-body-line-height); white-space: nowrap; }
-  .wordmark .mark { width: 1.5rem; height: 1rem; }
-  .tabbar { order: 1; position: static; display: flex; flex-direction: column; gap: var(--fvl-space-stack-related); padding: 0; background: none; box-shadow: none; }
-  .tr-btn { order: 2; margin-top: auto; align-self: flex-start; }
+  .wordmark { order: 0; padding-inline: 0.875rem; white-space: nowrap; }
+  .tabbar {
+    order: 1;
+    position: static;
+    transform: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .tr-btn { order: 2; margin-top: auto; align-self: flex-start; margin-inline-start: 0.875rem; }
   .tab {
     display: flex;
     justify-items: start;
     align-items: center;
-    gap: var(--fvl-space-icon-gap);
-    padding: var(--fvl-space-stack-related);
-    border-radius: var(--fvl-radius-control);
+    gap: 0.75rem;
+    min-height: 2.75rem;
+    padding: 0 0.875rem;
+    border-radius: var(--fvl-radius-container);
     font-size: var(--fvl-type-body-size);
     line-height: var(--fvl-type-body-line-height);
     font-weight: var(--fvl-type-body-weight);
     color: var(--fvl-color-text-secondary);
+    transition: background var(--fvl-motion-tone), color var(--fvl-motion-tone);
   }
   .tab .tab-ic { padding: 0; background: none; }
-  .tab[aria-current="page"] { background: var(--fvl-color-accent-subtle); font-weight: var(--fvl-type-label-weight); }
+  .tab[aria-current="page"] { background: var(--fvl-color-bg-selected); color: var(--fvl-color-accent-text); font-weight: var(--fvl-type-label-weight); }
   .tab[aria-current="page"] .tab-ic { background: none; }
-  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
-  @media (hover: hover) { .tab:not([aria-current]):hover { background: var(--fvl-color-bg-hover); } }
+  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-bg-selected); }
+  @media (hover: hover) { .tab:not([aria-current]):hover { background: var(--fvl-color-bg-hover); color: var(--fvl-color-text-primary); } }
   main.wrap { width: 100%; padding-top: var(--fvl-space-stack-group); }
-  :root { --tabbar-h: 0rem; }
-  .map-bar { left: var(--fvl-layout-width-sidebar); }
+  :root { --tabbar-h: 0rem; --tabbar-off: 0rem; }
 }
 
 /* Rows inside a sheet sit on the overlay surface: give them their own tone and full-contrast text. */
@@ -361,7 +540,13 @@ fvl-button[hidden] { display: none; }
 .section-head p { margin: 0; color: var(--fvl-color-text-secondary); max-width: var(--fvl-layout-width-prose); }
 .actions { display: flex; flex-wrap: wrap; gap: var(--fvl-space-icon-gap); align-items: center; }
 .note { margin: 0; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.foot { padding-top: var(--fvl-space-stack-section); }
+.foot { padding-top: var(--fvl-space-stack-group); display: grid; gap: 0.75rem; justify-items: start; }
+/* Credits fold under one line: the passages carry their own copyright lines where the licence asks for them. */
+.foot-credits > summary { list-style: none; display: inline-flex; align-items: center; gap: 0.375rem; cursor: pointer; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); }
+.foot-credits > summary::-webkit-details-marker { display: none; }
+.foot-credits > summary fvl-icon { transition: transform var(--fvl-motion-tone); }
+.foot-credits[open] > summary fvl-icon { transform: rotate(180deg); }
+.foot-credits > .note { margin-top: 0.5rem; max-width: var(--fvl-layout-width-prose); }
 .foot a { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); }
 
 /* ---------- threads ---------- */
@@ -423,16 +608,20 @@ fvl-button[hidden] { display: none; }
 .bmap.has-sel .curve.on { opacity: 1; stroke-width: 2.5; }
 
 #view-map.with-bar { padding-bottom: calc(var(--fvl-size-control-lg) * 3); }
+/* The chosen book floats just above the tab bar, in the same glass. */
 .map-bar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: var(--tabbar-h);
+  left: var(--fvl-layout-margin-compact);
+  right: var(--fvl-layout-margin-compact);
+  bottom: calc(var(--tabbar-h) + var(--tabbar-off) + var(--fvl-space-stack-related));
   z-index: var(--fvl-layer-sticky);
-  background: var(--fvl-color-bg-raised);
-  box-shadow: var(--fvl-shadow-raised);
-  padding-bottom: env(safe-area-inset-bottom);
+  border-radius: var(--fvl-radius-panel);
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  backdrop-filter: blur(28px) saturate(1.6);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
+@media (width >= 52.5rem) { .map-bar { left: calc(16.25rem + var(--fvl-space-stack-group)); right: var(--fvl-space-stack-group); bottom: var(--fvl-space-stack-group); } }
 .map-bar[hidden] { display: none; }
 .map-bar-in {
   max-width: var(--fvl-layout-width-content);
@@ -630,8 +819,11 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--fvl-color-bg-canvas);
   padding-top: env(safe-area-inset-top);
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  backdrop-filter: blur(28px) saturate(1.6);
+  box-shadow: 0 1px 0 var(--fvl-color-line-subtle);
 }
 .r-top-in, .r-bar-in {
   max-width: var(--fvl-layout-width-prose);
@@ -656,22 +848,29 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .r-body {
   max-width: var(--fvl-layout-width-prose);
   margin-inline: auto;
-  padding: var(--fvl-space-stack-group) var(--fvl-layout-margin-compact) calc(var(--fvl-size-control-lg) * 3 + env(safe-area-inset-bottom));
+  padding: calc(env(safe-area-inset-top) + 1.5rem) var(--fvl-layout-margin-compact) calc(var(--fvl-size-control-lg) * 3 + env(safe-area-inset-bottom));
 }
 .r-bar {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--fvl-color-bg-canvas);
-  padding-bottom: env(safe-area-inset-bottom);
+  left: 50%;
+  bottom: var(--fvl-space-stack-related);
+  bottom: max(env(safe-area-inset-bottom), 0.75rem);
+  transform: translateX(-50%);
+  width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 30rem);
+  border-radius: var(--fvl-radius-pill);
+  padding: 0.375rem;
+  background: var(--sb-glass);
+  -webkit-backdrop-filter: blur(28px) saturate(1.6);
+  backdrop-filter: blur(28px) saturate(1.6);
+  box-shadow: var(--sb-lift), inset 0 1px 0 var(--sb-rim), inset 0 0 0 1px var(--fvl-color-line-subtle);
 }
-.r-bar-in fvl-button#next { min-width: 8rem; }
+.r-bar .r-bar-in { padding: 0; max-width: none; }
+.r-bar-in fvl-button#next { min-width: 8.5rem; }
 .r-in > * + * { margin-top: var(--fvl-space-stack-group); }
 .r-in > .passage + .passage, .r-in > .why { margin-top: calc(var(--fvl-space-stack-group) * 2); }
 
 .r-step {
-  background: var(--fvl-color-bg-surface);
+  background: var(--fvl-color-bg-sunken);
   border-radius: var(--fvl-radius-container);
   padding: var(--fvl-space-inset-container);
   display: grid;
@@ -756,16 +955,18 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   color: inherit;
   cursor: pointer;
   margin-top: var(--fvl-space-stack-section) !important;
-  padding: var(--fvl-space-inset-container);
-  border-radius: var(--fvl-radius-container);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--fvl-radius-panel);
   background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--fvl-space-icon-gap);
-  transition: background var(--fvl-motion-tone);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone);
 }
-.upnext:hover { background: var(--fvl-color-bg-hover); }
+@media (hover: hover) { .upnext:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); } }
+.upnext fvl-icon { color: var(--fvl-color-accent-text); }
 .upnext:focus-visible { outline: none; }
 .upnext small { display: block; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: var(--fvl-type-label-weight); }
 .upnext b { display: block; font-weight: var(--fvl-type-label-weight); }
@@ -1027,28 +1228,49 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 /* ---------- home: the promise, and the day it was kept ---------- */
 #hero:empty { display: none; }
 #hero { display: grid; gap: var(--fvl-space-stack-group); padding-block: var(--fvl-space-stack-related); }
-/* The sky: FVL's living field, following the time of day (dawn, day, dusk, night). It keeps its text colour at
-   4.5:1 against every pixel, so everything drawn on it uses that colour at (nearly) full strength. */
+/* The sky: a still night panel in both themes (a nested dark theme on FVL's night neutrals), a fine field of stars,
+   and a faint gold glow where the arcs come down at the coming of Christ. Unread arcs are fine grey lines (still 3:1
+   on the sky, so they can be seen and tapped); read bridges are drawn in gold with their ring and point. */
 .hero-sky {
+  position: relative;
   display: block;
-  border-radius: var(--fvl-radius-panel);
+  border-radius: 1.25rem;
   overflow: hidden;
-  color: var(--fvl-color-text-primary);
+  color: var(--fvl-color-text-muted);
+  /* Observatory navy: the night neutrals with a little of FVL's blue. */
+  --sky-top: color-mix(in oklab, var(--fvl-color-data-1) 7%, var(--fvl-color-bg-sunken));
+  --sky-low: color-mix(in oklab, var(--fvl-color-data-1) 16%, var(--fvl-color-bg-surface));
+  background-color: var(--sky-top);
+  background-image:
+    radial-gradient(color-mix(in oklab, var(--fvl-color-text-primary) 14%, transparent) 1px, transparent 1.5px),
+    radial-gradient(ellipse 55% 70% at 88% 100%, color-mix(in oklab, var(--fvl-color-accent-default) 16%, transparent), transparent 70%),
+    linear-gradient(180deg, var(--sky-top), var(--sky-low));
+  background-size: 1.5rem 1.5rem, 100% 100%, 100% 100%;
+  box-shadow: var(--sb-card-lift), inset 0 1px 0 color-mix(in oklab, var(--fvl-color-text-primary) 8%, transparent);
   isolation: isolate;
 }
-.hero-in { padding: var(--fvl-space-stack-group) var(--fvl-space-inset-container) var(--fvl-space-stack-related); }
-@media (width >= 37.5rem) { .hero-in { padding: var(--fvl-space-stack-group) calc(var(--fvl-space-inset-container) * 1.5) var(--fvl-space-stack-related); } }
-.hero-sky .tl-axis, .hero-sky .tl-tick { stroke: currentColor; }
-.hero-sky .tl-years span, .hero-sky .tl-cap { color: inherit; }
-/* On the sky the arcs are one colour (the sky's text colour); read bridges are drawn solid and thick. */
-.hero-sky .tl-bridge { color: inherit; }
-.hero-sky .tl-arc { opacity: 0.8; stroke-width: 1.5px; stroke-dasharray: 6 8; }
-.hero-sky .tl-fan.drawing .tl-arc { stroke-dasharray: none; }
-.hero-sky .tl-bridge.read .tl-arc { opacity: 1; stroke-width: 2.5px; stroke-dasharray: none; }
-.hero-sky .tl-fan.has-near .tl-arc { opacity: 0.35; }
-.hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 3px; stroke-dasharray: none; }
+.hero-in { padding: 1.75rem var(--fvl-space-inset-container) var(--fvl-space-stack-related); }
+@media (width >= 37.5rem) { .hero-in { padding: 1.75rem calc(var(--fvl-space-inset-container) * 1.5) var(--fvl-space-stack-related); } }
+.hero-sky .tl-axis, .hero-sky .tl-tick { stroke: var(--fvl-color-line-strong); }
+.hero-sky .tl-years span { color: var(--fvl-color-text-secondary); }
+.hero-sky .tl-cap { color: var(--fvl-color-text-secondary); }
+.hero-sky .tl-bridge { color: var(--fvl-color-text-muted); }
+.hero-sky .tl-arc { stroke-width: 1px; }
+.hero-sky .tl-bridge.read { color: var(--fvl-color-accent-default); }
+.hero-sky .tl-bridge.read .tl-arc { stroke-width: 2px; filter: drop-shadow(0 0 4px color-mix(in oklab, var(--fvl-color-accent-default) 55%, transparent)); }
+.hero-sky .tl-fan.has-near .tl-arc { opacity: 0.3; }
+.hero-sky .tl-fan.has-near .is-near .tl-arc { opacity: 1; stroke-width: 2.5px; }
+.hero-sky .tl-fan.has-near .is-near:not(.read) { color: var(--fvl-color-text-primary); }
 .hero-sky .tl-fan:not([data-cat="all"]) .tl-arc { opacity: 0.3; }
-.hero-progress { margin: calc(-1 * var(--fvl-space-stack-related)) 0 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+/* The two ends of each read bridge: an open ring at the promise, a filled point at the fulfilment. */
+.tl-feet { position: absolute; inset: 0; pointer-events: none; }
+.tl-foot { position: absolute; width: 7px; height: 7px; border-radius: var(--fvl-radius-pill); transform: translate(-50%, -50%); }
+.tl-foot.o { background: var(--sky-low); box-shadow: inset 0 0 0 1.5px var(--fvl-color-accent-default); }
+.tl-foot.k { background: var(--fvl-color-accent-default); }
+.tl-wrap { position: relative; }
+.tl-fan-box { position: relative; }
+.hero-progress { margin: 0; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+/* The next appointed time: a small card, the calendar in a gold well, the arrow to its bridge. */
 .hero-next {
   appearance: none;
   border: 0;
@@ -1059,19 +1281,22 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   align-items: center;
   gap: var(--fvl-space-icon-gap);
   width: 100%;
-  padding: var(--fvl-space-inset-container);
-  border-radius: var(--fvl-radius-container);
+  padding: 1rem 1.25rem 1rem 1rem;
+  border-radius: var(--fvl-radius-panel);
   background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
   color: var(--fvl-color-text-primary);
-  transition: background var(--fvl-motion-tone);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone);
 }
-.hero-next:hover { background: var(--fvl-color-bg-hover); }
+@media (hover: hover) { .hero-next:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); } }
 .hero-next:focus-visible { outline: none; }
-.hero-next > span { flex: 1; min-width: 0; }
-.hero-next small { display: block; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.hero-next b { font-weight: var(--fvl-type-label-weight); }
-.hn-when { color: var(--fvl-color-text-secondary); font-variant-numeric: var(--fvl-type-data-numeric); }
-@media (width >= 37.5rem) { .hero-next { width: auto; justify-self: start; } }
+.hn-well { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: var(--fvl-radius-container); background: var(--fvl-color-accent-subtle); color: var(--fvl-color-accent-text); }
+.hn-text { flex: 1; min-width: 0; display: grid; }
+.hn-text small { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
+.hn-text b { font-weight: var(--fvl-type-h4-weight); }
+.hn-when { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-variant-numeric: var(--fvl-type-data-numeric); }
+.hn-go { flex: none; color: var(--fvl-color-text-muted); }
+@media (width >= 37.5rem) { .hero-next { width: auto; min-width: 22rem; justify-self: start; } }
 .hero-text { display: grid; gap: var(--fvl-space-stack-related); max-width: var(--fvl-layout-width-prose); }
 .hero-title {
   margin: 0;
@@ -1108,7 +1333,15 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .row-marks { align-items: center; }
 
 /* ---------- reader: the span of one bridge ---------- */
-.r-span { margin: var(--fvl-space-stack-group) 0 0; display: grid; gap: var(--fvl-space-stack-related); }
+.r-span {
+  margin: var(--fvl-space-stack-group) 0 0;
+  display: grid;
+  gap: var(--fvl-space-stack-related);
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-radius: var(--fvl-radius-panel);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
 .rs-arc {
   position: relative;
   height: clamp(4rem, 12vw, 6rem);
@@ -1118,7 +1351,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 .rs-arc i { position: absolute; bottom: 0; width: 12px; height: 12px; border-radius: var(--fvl-radius-pill); }
-.rs-open { left: -1px; transform: translate(-50%, 50%); background: var(--fvl-color-bg-canvas); box-shadow: inset 0 0 0 2px currentColor; }
+.rs-open { left: -1px; transform: translate(-50%, 50%); background: var(--fvl-color-bg-surface); box-shadow: inset 0 0 0 2px currentColor; }
 .rs-kept { right: -1px; transform: translate(50%, 50%); background: currentColor; }
 .rs-gap {
   position: absolute;
@@ -1135,8 +1368,16 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .rs-ends .rs-b { text-align: right; }
 .rs-ends b { color: var(--fvl-color-text-primary); font-weight: var(--fvl-type-label-weight); font-variant-numeric: var(--fvl-type-data-numeric); }
 .rs-ends small { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); }
-.r-pair { display: grid; gap: calc(var(--fvl-space-stack-group) * 2); margin-top: calc(var(--fvl-space-stack-group) * 2); align-items: start; }
-.r-pair > .passage { align-content: start; }
+.r-pair { display: grid; gap: var(--fvl-space-stack-group); margin-top: var(--fvl-space-stack-group); align-items: stretch; }
+.r-pair > .passage {
+  align-content: start;
+  padding: 1.5rem;
+  border-radius: var(--fvl-radius-panel);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
+@media (width < 37.5rem) { .r-pair > .passage, .r-span { padding: 1.25rem; } }
+.r-pair .p-text { border-left-width: 3px; }
 
 /* Wide screens: promise and fulfilment side by side under the arc; the rest keeps a reading measure. */
 @media (width >= 75rem) {
@@ -1144,7 +1385,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   .reader:has(.r-pair) .r-body { padding-inline: var(--fvl-layout-margin-large); }
   .r-in > * { max-width: var(--fvl-layout-width-prose); }
   .r-in > .r-pair, .r-in > .r-span { max-width: none; }
-  .r-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--fvl-layout-gutter-large); }
+  .r-pair { grid-template-columns: minmax(0, 1fr) 7rem minmax(0, 1fr); column-gap: 0; }
 }
 
 /* ---------- a route through Scripture: thread and study steps ----------
@@ -1206,6 +1447,12 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .hue-3 { --hue: var(--fvl-color-data-3); }
 .hue-4 { --hue: var(--fvl-color-data-4); }
 .hue-5 { --hue: var(--fvl-color-data-5); }
+/* Covers are always night: their hue is re-read inside the cover, so it takes the brighter dark-theme colour. */
+.hue-1 .sc-cover { --hue: var(--fvl-color-data-1); }
+.hue-2 .sc-cover { --hue: var(--fvl-color-data-2); }
+.hue-3 .sc-cover { --hue: var(--fvl-color-data-3); }
+.hue-4 .sc-cover { --hue: var(--fvl-color-data-4); }
+.hue-5 .sc-cover { --hue: var(--fvl-color-data-5); }
 .study-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--fvl-space-stack-group) var(--fvl-space-icon-gap); }
 @media (width >= 37.5rem) { .study-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--fvl-space-stack-group); } }
 @media (width >= 75rem) { .study-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -1227,28 +1474,41 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   overflow: hidden;
   transition: background var(--fvl-motion-tone);
 }
-.study-card:hover { background: var(--fvl-color-bg-hover); }
+.study-card { box-shadow: var(--sb-card-lift); transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone), transform var(--fvl-motion-tone); }
+@media (hover: hover) { .study-card:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); transform: translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { .study-card:hover { transform: none; } }
 .study-card:focus-visible { outline: none; }
 /* The cover: a soft wash of the study's hue, light or dark with the theme, the route drawn in the hue itself. */
 .sc-cover {
   position: relative;
   display: block;
   aspect-ratio: 3 / 4;
-  background: linear-gradient(165deg, color-mix(in oklab, var(--hue) 26%, var(--fvl-color-bg-surface)), color-mix(in oklab, var(--hue) 7%, var(--fvl-color-bg-surface)));
+  color: var(--fvl-color-text-primary);
+  background-color: var(--fvl-color-bg-sunken);
+  background-image:
+    radial-gradient(color-mix(in oklab, var(--fvl-color-text-primary) 12%, transparent) 1px, transparent 1.5px),
+    radial-gradient(ellipse 80% 60% at 50% 100%, color-mix(in oklab, var(--hue) 34%, transparent), transparent 75%),
+    linear-gradient(170deg, color-mix(in oklab, var(--hue) 22%, var(--fvl-color-bg-sunken)), color-mix(in oklab, var(--hue) 10%, var(--fvl-color-bg-sunken)));
+  background-size: 1.25rem 1.25rem, 100% 100%, 100% 100%;
 }
 .sc-cover.wide { aspect-ratio: 8 / 3; border-radius: var(--fvl-radius-panel); }
 .sc-art { position: absolute; inset: 0; width: 100%; height: 100%; }
 .sc-axis, .sc-nt { stroke: var(--fvl-color-text-secondary); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-.sc-route { fill: none; stroke: var(--hue); stroke-width: 1.25; stroke-opacity: 0.6; vector-effect: non-scaling-stroke; }
+.sc-route { fill: none; stroke: var(--hue); stroke-width: 1.25; stroke-opacity: 0.85; vector-effect: non-scaling-stroke; }
 .sc-art path { fill: none; stroke-linecap: round; vector-effect: non-scaling-stroke; }
 .sc-art .rd { stroke: var(--hue); stroke-width: 8px; }
 .sc-art .mt-o { stroke: var(--hue); stroke-width: 8px; }
-.sc-art .mt-i { stroke: var(--fvl-color-bg-surface); stroke-width: 4px; }
+.sc-art .mt-i { stroke: var(--fvl-color-bg-sunken); stroke-width: 4px; }
 .sc-label {
   position: absolute;
   top: var(--fvl-space-inset-container);
   left: var(--fvl-space-inset-container);
-  right: 40%;
+  max-width: calc(100% - 2 * var(--fvl-space-inset-container));
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--fvl-radius-pill);
+  background: color-mix(in oklab, var(--fvl-color-bg-sunken) 72%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   color: var(--fvl-color-text-primary);
   font-size: var(--fvl-type-small-size);
   line-height: var(--fvl-type-small-line-height);
@@ -1258,7 +1518,7 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   position: absolute;
   left: var(--fvl-space-inset-container);
   top: var(--fvl-space-inset-container);
-  color: var(--fvl-color-text-primary);
+  color: var(--fvl-color-text-secondary);
   font-family: var(--fvl-type-display-family);
   font-size: var(--fvl-type-h1-size);
   line-height: 1;
@@ -1312,22 +1572,46 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
   .sc-cover.wide { aspect-ratio: 4 / 3; }
 }
 
-/* ---------- fewer boxes: open lists ----------
-   Bridge and thread rows sit on the page itself: no card, a fine line between them, the timeline leading each row. */
-.open-list { gap: 0; }
-.open-list > li + li { border-top: 1px solid var(--fvl-color-line-subtle); }
-.open-list .row { background: transparent; border-radius: var(--fvl-radius-container); padding-inline: var(--fvl-space-stack-related); padding-block: var(--fvl-space-stack-group); }
-@media (hover: hover) { .open-list .row:hover { background: var(--fvl-color-bg-hover); } }
-.open-list .row:active { background: var(--fvl-color-bg-active); }
-.open-list .span i::before { background: var(--fvl-color-bg-canvas); }
-.open-list .row:hover .span i::before { background: var(--fvl-color-bg-hover); }
-.open-list .tspan b { background: var(--fvl-color-bg-canvas); }
-.open-list .row:hover .tspan b { background: var(--fvl-color-bg-hover); }
-/* Two columns on wide screens: the line between rows runs per column. */
-@media (width >= 75rem) {
-  .open-list { column-gap: var(--fvl-layout-gutter-large); }
-  .open-list > li + li { border-top: 0; }
-  .open-list > li { border-bottom: 1px solid var(--fvl-color-line-subtle); }
+/* ---------- bridge cards ----------
+   Each bridge is a soft card on the stone: its span on the shared timeline first, then the title, the two
+   references in the accent, and two lines of summary. */
+.card-list { gap: var(--fvl-space-stack-related); }
+.card-list .row {
+  background: var(--fvl-color-bg-surface);
+  border-radius: var(--fvl-radius-panel);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--sb-card-lift);
+  transition: background var(--fvl-motion-tone), box-shadow var(--fvl-motion-tone), transform var(--fvl-motion-tone);
+}
+@media (width < 37.5rem) { .card-list .row { padding: 1.125rem 1.25rem; } }
+@media (hover: hover) { .card-list .row:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); transform: translateY(-1px); } }
+.card-list .row:active { background: var(--fvl-color-bg-hover); transform: none; }
+@media (prefers-reduced-motion: reduce) { .card-list .row:hover { transform: none; } }
+.card-list .span i::before { background: var(--fvl-color-bg-surface); }
+@media (hover: hover) { .card-list .row:hover .span i::before, .card-list .row:hover .tspan b { background: var(--fvl-color-bg-raised); } }
+.card-list .tspan b { background: var(--fvl-color-bg-surface); }
+.card-list .row-title { font-size: var(--fvl-type-lead-size); line-height: var(--fvl-type-lead-line-height); }
+.card-list .refs { color: var(--fvl-color-accent-text); font-weight: var(--fvl-type-label-weight); }
+@media (width >= 75rem) { .card-list { gap: var(--fvl-space-stack-group); } }
+
+/* Category chips: round pills, the chosen one inverted (ink on stone, stone on ink). */
+.chips fvl-tag {
+  --fvl-tag-radius: var(--fvl-radius-pill);
+  --fvl-tag-height: 2.25rem;
+  --fvl-tag-inset-x: 0.875rem;
+  --fvl-tag-bg: var(--fvl-color-bg-surface);
+  --fvl-tag-bg-hover: var(--fvl-color-bg-hover);
+  --fvl-tag-text: var(--fvl-color-text-secondary);
+  --fvl-tag-selected-bg: var(--fvl-color-text-primary);
+  --fvl-tag-selected-text: var(--fvl-color-bg-canvas);
+}
+/* Search: a sunken well, no outline until it has focus. */
+#q {
+  max-inline-size: none;
+  --fvl-field-bg: var(--fvl-color-bg-surface);
+  --fvl-field-line: transparent;
+  --fvl-field-height: 3rem;
+  --fvl-field-radius: var(--fvl-radius-container);
 }
 
 /* ---------- the reader speaks the same symbols ----------
@@ -1345,3 +1629,502 @@ button.idx-row:hover { background: var(--fvl-color-bg-hover); }
 .r-pair.c-covenant { --_cat: var(--fvl-color-data-5); }
 .r-pair { color: var(--fvl-color-text-primary); }
 .r-pair .p-text { border-left-color: var(--_cat, var(--fvl-prose-quote-line)); }
+
+/* ---------- what he draws from it ----------
+   Each point the teacher makes is its own card, led by a small gold point. */
+.st-points { display: grid; gap: var(--fvl-space-stack-related); margin-top: var(--fvl-space-stack-related); }
+.st-points > p {
+  position: relative;
+  margin: 0 !important;
+  padding: 1rem 1.25rem 1rem 2.25rem;
+  border-radius: var(--fvl-radius-container);
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+}
+.st-points > p::before {
+  content: "";
+  position: absolute;
+  left: 1.125rem;
+  top: 1.8rem;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--fvl-radius-pill);
+  background: var(--fvl-color-accent-default);
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- sheets: frosted glass ----------
+   The verse sheet, filters and other drawers: a strong frost so the words stay crisp over whatever is behind. */
+fvl-drawer::part(panel) {
+  background: color-mix(in oklab, var(--fvl-color-bg-raised) 94%, transparent);
+  -webkit-backdrop-filter: blur(32px) saturate(1.6);
+  backdrop-filter: blur(32px) saturate(1.6);
+  box-shadow: var(--fvl-shadow-overlay), inset 0 1px 0 var(--sb-rim);
+}
+
+/* ---------- type: the editorial pairing ---------- */
+/* Scripture in the serif; the big editorial titles too. */
+.p-text, .ch-text .vt, .st-text, .cmp dd, .xtext, #xrefBody > .p-text, .bento-quote {
+  font-family: var(--sb-serif);
+  font-optical-sizing: auto;
+  letter-spacing: 0;
+}
+.p-text, .st-text, .ch-text { font-size: calc(var(--fvl-type-lead-size) * 1.08); line-height: 1.55; }
+.hero-title, .r-title, .ch-title, .st-hero-text h2, .section-head h2 {
+  font-family: var(--sb-serif);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+}
+.hero-title em, .r-title em { font-style: italic; color: var(--fvl-color-accent-text); }
+
+
+/* ---------- the connection: promise words to fulfilment words ---------- */
+.r-pair { position: relative; }
+.r-gutter { display: none; }
+@media (width >= 75rem) { .r-gutter { display: block; } }
+.r-links { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 1; }
+.lk { transition: opacity 0.3s ease; }
+.lk-halo { fill: none; stroke: var(--sb-gold-glow); stroke-width: 8; stroke-linecap: round; opacity: 0.5; transition: opacity 0.3s ease, stroke-width 0.3s ease; }
+.lk-line { fill: none; stroke: var(--fvl-color-accent-default); stroke-width: 1.75; stroke-linecap: round; transition: stroke-width 0.3s ease; }
+.lk-node { stroke: var(--fvl-color-accent-default); stroke-width: 2; filter: drop-shadow(0 0 5px var(--sb-gold-glow)); }
+.lk-node.o { fill: var(--fvl-color-bg-surface); }
+.lk-node.k { fill: var(--fvl-color-accent-default); }
+.r-links.drawing .lk-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: lk-draw 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards; }
+.r-links.drawing .lk-halo { opacity: 0; animation: lk-halo 0.8s ease 1s forwards; }
+.r-links.drawing .lk-node { opacity: 0; animation: lk-node 0.5s ease 0.2s forwards; }
+.r-links.drawing .lk-node.k { animation-delay: 1.1s; }
+@keyframes lk-draw { to { stroke-dashoffset: 0; } }
+@keyframes lk-halo { to { opacity: 0.5; } }
+@keyframes lk-node { to { opacity: 1; } }
+.r-pair.has-lit .lk:not(.lit) { opacity: 0.15; }
+.lk.lit .lk-halo { opacity: 1; stroke-width: 12; }
+.lk.lit .lk-line { stroke-width: 2.5; }
+.r-pair mark[role="button"] { cursor: pointer; transition: background 0.25s ease, box-shadow 0.25s ease; }
+.r-pair mark.lit { background: var(--fvl-color-accent-subtle-hover); box-shadow: inset 0 -2px 0 var(--fvl-color-accent-default), 0 0 0 3px var(--sb-gold-glow); }
+.r-pair mark:focus-visible { outline: 2px solid var(--fvl-color-focus-ring); outline-offset: 2px; }
+.r-links-gap {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--fvl-radius-pill);
+  background: var(--fvl-color-bg-raised);
+  box-shadow: var(--sb-card-lift), 0 0 0 1px var(--fvl-color-line-subtle);
+  color: var(--fvl-color-text-secondary);
+  font-size: var(--fvl-type-micro-size);
+  font-weight: 500;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.r-links-gap:not(.side) { display: none; }
+.r-links-hint { margin-top: var(--fvl-space-stack-related) !important; }
+@media (prefers-reduced-motion: reduce) { .lk, .lk-halo, .lk-line, .r-pair mark[role="button"] { transition: none; } }
+/* Key words: a gold wash with a gold underline. */
+.p-text mark { background: var(--sb-mark); box-shadow: inset 0 -2px 0 var(--fvl-color-accent-default); }
+
+/* ---------- home: a bento of cards ----------
+   The sky (every bridge), the bridge of the day, where you left off, saved bridges, the next appointed time and the study
+   you are in. Phone: two columns; wide screens: four, the sky a large tile. */
+.bento { display: grid; gap: 0.875rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.bento > * { min-width: 0; }
+.b-sky, .b-today, .b-next, .b-study { grid-column: 1 / -1; }
+@media (width >= 64rem) {
+  .bento { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .b-sky { grid-column: 1 / 3; grid-row: 1 / 3; }
+  .b-today { grid-column: 3 / 5; grid-row: 1; }
+  .b-cont { grid-column: 3; grid-row: 2; }
+  .b-saved { grid-column: 4; grid-row: 2; }
+  .b-next { grid-column: 1 / 3; grid-row: 3; }
+  .b-study { grid-column: 3 / 5; grid-row: 3; }
+}
+.b-slot { display: grid; }
+.b-slot:empty { display: none; }
+.b-slot > *, #continue, #continue > * { height: 100%; }
+#continue { display: grid; }
+.bento-card {
+  appearance: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  font: inherit;
+  color: var(--fvl-color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: var(--fvl-color-bg-surface);
+  box-shadow: var(--sb-card-lift);
+  transition: background 0.2s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+@media (hover: hover) { .bento-card:hover { background: var(--fvl-color-bg-raised); box-shadow: var(--sb-lift); transform: translateY(-2px); } }
+@media (prefers-reduced-motion: reduce) { .bento-card:hover { transform: none; } }
+.bento-card:focus-visible { outline: 2px solid var(--fvl-color-focus-ring); outline-offset: 2px; }
+.b-kick { margin: 0; color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-weight: 500; }
+.b-title { font-size: var(--fvl-type-lead-size); line-height: 1.3; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+.b-day .b-title { font-family: var(--sb-serif); font-weight: 500; font-size: calc(var(--fvl-type-h4-size) * 1.05); letter-spacing: -0.01em; }
+.bento-quote { color: var(--fvl-color-text-secondary); font-style: italic; font-size: var(--fvl-type-body-size); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.b-foot { display: flex; align-items: center; gap: 0.75rem; margin-top: auto; padding-top: 0.25rem; }
+.b-refs { min-width: 0; color: var(--fvl-color-accent-text); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); font-weight: 500; }
+.b-arc { flex: none; width: 3.5rem; height: auto; overflow: visible; }
+.b-arc.many { color: var(--fvl-color-accent-default); }
+.b-arc path { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; }
+.b-arc .o { fill: var(--fvl-color-bg-surface); stroke: currentColor; stroke-width: 2.5; }
+.b-arc .k { fill: currentColor; }
+.b-st .b-arc { margin-top: auto; width: 4.5rem; }
+.b-big { font-family: var(--sb-serif); font-size: var(--fvl-type-h1-size); font-weight: 500; line-height: 1; }
+.b-sub { color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); line-height: var(--fvl-type-small-line-height); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.b-st .sc-prog { margin-top: auto; }
+.b-st, .b-sv { min-height: 8.5rem; }
+/* Where you left off: the gold card. */
+.bento .continue { flex-direction: row; align-items: center; border-radius: 1.25rem; padding: 1.25rem; background: var(--fvl-color-accent-subtle); box-shadow: var(--sb-card-lift); min-height: 8.5rem; }
+.bento .continue b { font-weight: 600; line-height: 1.3; }
+@media (hover: hover) { .bento .continue:hover { background: var(--fvl-color-accent-subtle-hover); } }
+.bento .hero-next { width: 100%; height: 100%; min-width: 0; border-radius: 1.25rem; }
+/* The sky as the large tile. */
+.b-sky { border-radius: 1.25rem; display: flex; flex-direction: column; }
+.b-sky .hero-in { display: flex; flex-direction: column; gap: 0.5rem; flex: 1; justify-content: space-between; padding: 1.25rem 1.25rem 1rem; }
+.b-sky .b-kick { color: var(--fvl-color-text-secondary); }
+.b-sky .hero-progress { color: var(--fvl-color-text-secondary); }
+
+/* ---------- the verse constellation ---------- */
+.cn { display: grid; gap: var(--fvl-space-stack-related); }
+.cn-sky {
+  position: relative;
+  width: 100%;
+  max-width: 26rem;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  isolation: isolate;
+  --sky-top: color-mix(in oklab, var(--fvl-color-data-1) 7%, var(--fvl-color-bg-sunken));
+  --sky-low: color-mix(in oklab, var(--fvl-color-data-1) 16%, var(--fvl-color-bg-surface));
+  background-color: var(--sky-top);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(229, 184, 105, 0.16), transparent 32%),
+    radial-gradient(rgba(243, 239, 234, 0.12) 1px, transparent 1.5px),
+    linear-gradient(180deg, var(--sky-top), var(--sky-low));
+  background-size: 100% 100%, 1.25rem 1.25rem, 100% 100%;
+  box-shadow: var(--sb-card-lift), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: var(--fvl-color-text-primary);
+}
+.cn-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cn-l { stroke: rgba(243, 239, 234, 0.5); stroke-width: calc(0.6px + var(--w) * 1.2px); vector-effect: non-scaling-stroke; opacity: calc(0.25 + var(--w) * 0.55); stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, stroke 0.3s ease; }
+.cn-l.bridge { stroke: var(--fvl-color-accent-default); opacity: 0.9; stroke-width: 1.5px; }
+.cn-l.study { stroke: var(--fvl-color-text-secondary); opacity: 0.7; stroke-width: 1.2px; stroke-dasharray: 0.02 0.02; }
+.cn-sky.on .cn-l { stroke-dashoffset: 0; }
+.cn-sky.on .cn-l.study { stroke-dasharray: 0.02 0.02; }
+.cn-sky.has-sel .cn-l:not(.sel) { opacity: 0.12; }
+.cn-sky .cn-l.sel { stroke: var(--fvl-color-accent-default); opacity: 1; stroke-width: 2px; }
+.cn-core { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 0.375rem; pointer-events: none; z-index: 2; }
+.cn-core i { width: 1.125rem; height: 1.125rem; border-radius: 50%; background: var(--fvl-color-accent-default); box-shadow: 0 0 0 4px rgba(229, 184, 105, 0.22), 0 0 1.5rem rgba(229, 184, 105, 0.7); }
+.cn-core span { position: absolute; top: 100%; margin-top: 0.375rem; white-space: nowrap; color: var(--fvl-color-accent-text); font-size: var(--fvl-type-small-size); font-weight: 600; }
+.cn-node {
+  position: absolute;
+  z-index: 1;
+  width: 2.25rem;
+  height: 2.25rem;
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--fvl-color-text-primary);
+  font: inherit;
+  cursor: pointer;
+  transition: opacity 0.4s ease var(--d), transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d);
+}
+.cn-sky.on .cn-node { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.cn-sky.still .cn-node, .cn-sky.still .cn-l { transition: none; }
+.cn-node i { display: block; width: var(--s); height: var(--s); border-radius: 50%; background: var(--fvl-color-text-primary); box-shadow: 0 0 calc(var(--s) * 1.2) rgba(243, 239, 234, 0.45); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.cn-node.inc i { background: var(--sky-top); box-shadow: inset 0 0 0 2px var(--fvl-color-text-primary), 0 0 calc(var(--s) * 1.2) rgba(243, 239, 234, 0.35); }
+.cn-node.bridge i { background: var(--fvl-color-accent-default); box-shadow: 0 0 0 3px rgba(229, 184, 105, 0.2), 0 0 1.25rem rgba(229, 184, 105, 0.75); }
+.cn-node.study i { background: var(--hue); box-shadow: 0 0 1rem var(--hue); }
+.cn-node:hover i, .cn-node:focus-visible i { transform: scale(1.3); }
+.cn-node.sel i { box-shadow: 0 0 0 3px var(--fvl-color-bg-sunken), 0 0 0 5px var(--fvl-color-accent-default), 0 0 1.5rem rgba(229, 184, 105, 0.7); }
+.cn-node:focus-visible { outline: none; }
+.cn-lab { position: absolute; white-space: nowrap; color: var(--fvl-color-text-secondary); font-size: 0.6875rem; line-height: 1.2; font-weight: 500; pointer-events: none; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+.cn-node.bridge .cn-lab, .cn-node.study .cn-lab { color: var(--fvl-color-text-primary); max-width: 5.5rem; overflow: hidden; text-overflow: ellipsis; }
+.cn-lab.r { left: 75%; top: 50%; transform: translateY(-50%); }
+.cn-lab.l { right: 75%; top: 50%; transform: translateY(-50%); }
+.cn-lab.t { bottom: 78%; left: 50%; transform: translateX(-50%); }
+.cn-lab.b { top: 78%; left: 50%; transform: translateX(-50%); }
+.cn-node.sel .cn-lab { color: var(--fvl-color-accent-text); }
+@keyframes cn-tw { 50% { opacity: 0.55; } }
+.cn-sky.on .cn-node.out i, .cn-sky.on .cn-node.inc i { animation: cn-tw 4s ease-in-out infinite; animation-delay: calc(var(--d) * 9); }
+@media (prefers-reduced-motion: reduce) { .cn-node, .cn-l { transition: none; } .cn-sky.on .cn-node i { animation: none; } }
+.cn-cap { display: grid; gap: 0.375rem; min-height: 4.5rem; padding: 1rem 1.25rem; border-radius: 1rem; background: var(--fvl-color-bg-sunken); }
+.cn-cap p { margin: 0; }
+.cn-k { color: var(--fvl-color-text-muted); font-size: var(--fvl-type-small-size); font-weight: 500; }
+.cn-t { font-weight: 600; font-size: var(--fvl-type-body-size); }
+.cn-cap .actions { margin-top: 0.25rem; }
+
+/* ==========================================================================
+   Finish: the concept's precision.
+   A calmer type scale, 20px corners, a hairline on every card, a sheen and (in dark) a gold edge of light,
+   small tracked section labels, and a tab bar where only the current section shows its name.
+   ========================================================================== */
+:root, [data-theme] {
+  --fvl-type-display-size: clamp(2.375rem, 1.6rem + 3.2vw, 3.5rem);
+  --fvl-type-h1-size: clamp(2rem, 1.45rem + 2.3vw, 3rem);
+  --fvl-type-h2-size: clamp(1.625rem, 1.3rem + 1.4vw, 2.25rem);
+  --fvl-type-h3-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --fvl-type-h4-size: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+  --fvl-type-lead-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --fvl-type-body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --fvl-type-small-size: 0.8125rem;
+  --fvl-type-label-size: 0.8125rem;
+  --fvl-type-micro-size: 0.6875rem;
+  --fvl-type-display-line-height: calc(var(--fvl-type-display-size) * 1.06);
+  --fvl-type-h1-line-height: calc(var(--fvl-type-h1-size) * 1.1);
+  --fvl-type-h2-line-height: calc(var(--fvl-type-h2-size) * 1.18);
+  --fvl-type-h3-line-height: calc(var(--fvl-type-h3-size) * 1.25);
+  --fvl-type-h4-line-height: calc(var(--fvl-type-h4-size) * 1.32);
+  --fvl-type-lead-line-height: calc(var(--fvl-type-lead-size) * 1.55);
+  --fvl-type-body-line-height: calc(var(--fvl-type-body-size) * 1.6);
+  --fvl-type-small-line-height: calc(var(--fvl-type-small-size) * 1.5);
+  --fvl-type-label-line-height: calc(var(--fvl-type-label-size) * 1.45);
+  --fvl-type-micro-line-height: calc(var(--fvl-type-micro-size) * 1.4);
+  --sb-r: 1.25rem;
+  --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 45%);
+  --sb-card-lift: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 1px 2px rgba(60, 44, 20, 0.05), 0 0.75rem 2rem -0.875rem rgba(60, 44, 20, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 42%);
+    --sb-card-lift: inset 0 1px 0 rgba(229, 184, 105, 0.14), 0 1.25rem 2.625rem -0.75rem rgba(0, 0, 0, 0.7);
+  }
+}
+[data-theme="dark"] {
+  --sb-sheen: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0) 42%);
+  --sb-card-lift: inset 0 1px 0 rgba(229, 184, 105, 0.14), 0 1.25rem 2.625rem -0.75rem rgba(0, 0, 0, 0.7);
+}
+body::before { opacity: 0.035; }
+
+/* Every card: the same corner, hairline, sheen and lift. */
+.card-list .row, .bento-card, .bento .continue, .hero-next, .r-span, .r-pair > .passage, .study-card, .upnext,
+.st-points > p, .cn-cap, .moed-card, .ev-facts, .r-step, .st-claims, .welcome-card, .tr-pop {
+  border: 1px solid var(--fvl-color-line-subtle);
+  border-radius: var(--sb-r);
+  background-image: var(--sb-sheen);
+  box-shadow: var(--sb-card-lift);
+}
+.st-points > p, .cn-cap, .r-step { border-radius: 1rem; }
+.r-step { background-image: none; box-shadow: none; }
+.hero-sky, .cn-sky { border: 1px solid rgba(255, 255, 255, 0.07); border-radius: var(--sb-r); }
+.sc-cover.wide { border-radius: var(--sb-r); }
+
+/* Small tracked labels above sections, as in the boards. */
+.p-label, .b-kick, .bhead, .cn-k, .st-group-h .p-label, .xgroup-head .p-label, .hn-text small, .continue small, .upnext small, .mb-text small {
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--fvl-color-text-muted);
+}
+.p-sym { gap: 0.5rem; }
+.continue small { color: var(--fvl-color-accent-text); }
+
+/* Home. */
+.hero-kick { margin: 0 0 0.25rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fvl-color-text-secondary); font-size: var(--fvl-type-small-size); font-weight: 500; }
+.hero-kick i { width: 8px; height: 8px; border-radius: 50%; background: var(--fvl-color-accent-default); box-shadow: 0 0 0.5rem var(--sb-gold-glow); }
+.hero-title { font-size: var(--fvl-type-display-size); line-height: 1.06; }
+.hero-sub { font-size: var(--fvl-type-body-size); line-height: 1.6; max-width: 34rem; }
+.hero-text { gap: 0.625rem; }
+#hero { gap: 1.5rem; }
+.bento { gap: 0.75rem; }
+@media (width >= 64rem) { .bento { gap: 1rem; } }
+.bento-card { padding: 1.25rem 1.375rem; gap: 0.375rem; }
+.b-day .b-title { font-size: var(--fvl-type-h4-size); line-height: 1.25; }
+.bento-quote { font-size: var(--fvl-type-body-size); }
+.b-big { font-size: 2.5rem; }
+.hero-next { padding: 0.875rem 1.125rem 0.875rem 0.875rem; }
+.hn-well { width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; }
+.bento .continue { padding: 1.25rem 1.375rem; }
+.bento .continue b { font-size: var(--fvl-type-body-size); }
+.b-sky .hero-in { padding: 1.125rem 1.125rem 0.875rem; }
+.b-sky .hero-progress { font-size: 0.75rem; }
+
+/* Search and chips: finer. */
+#q { --fvl-field-height: 2.875rem; --fvl-field-radius: 0.875rem; --fvl-field-line: var(--fvl-color-line-subtle); }
+.chips fvl-tag { --fvl-tag-height: 2rem; --fvl-tag-inset-x: 0.75rem; font-size: 0.8125rem; }
+
+/* Bridge cards. */
+.card-list { gap: 0.75rem; }
+.card-list .row { padding: 1.125rem 1.25rem 1.25rem; gap: 0.375rem; }
+.card-list .row-title { font-size: var(--fvl-type-h4-size); line-height: 1.3; letter-spacing: -0.012em; }
+.card-list .refs { font-size: 0.8125rem; }
+.card-list .row-sum { font-size: 0.875rem; line-height: 1.55; }
+.row-gap { font-size: 0.75rem; }
+
+/* Reader: panes with room, Scripture at a comfortable size. */
+.r-title { font-size: var(--fvl-type-h1-size); line-height: 1.08; }
+.r-span { padding: 1.5rem 1.5rem 1.25rem; }
+.r-pair > .passage { padding: 1.375rem; }
+@media (width >= 37.5rem) { .r-pair > .passage { padding: 1.75rem; } }
+.p-ref { font-size: var(--fvl-type-h3-size); line-height: 1.2; }
+.p-text, .st-text, .ch-text { font-size: 1.1875rem; line-height: 1.68; }
+@media (width >= 64rem) { .p-text, .st-text, .ch-text { font-size: 1.25rem; } }
+.r-pair .p-text { padding-left: 1rem; margin-top: 0.75rem; }
+.p-text mark { padding: 0.06em 0.22em; border-radius: 0.25rem; }
+.p-context, .why p:not(.p-label) { font-size: 0.875rem; line-height: 1.6; }
+.why p:not(.p-label) { font-size: var(--fvl-type-body-size); }
+
+/* Phone tab bar: icons, and the name of the section you are in. */
+@media (width < 52.5rem) {
+  :root { --tabbar-h: 3.75rem; }
+  .tabbar { display: flex; justify-content: space-between; align-items: center; gap: 0.25rem; width: min(calc(100% - 2 * var(--fvl-layout-margin-compact)), 24rem); padding: 0.375rem; }
+  .tab { flex: 0 0 auto; width: 3rem; height: 3rem; min-height: 0; border-radius: var(--fvl-radius-pill); display: grid; place-items: center; gap: 0; transition: background 0.3s ease, color 0.3s ease, width 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+  .tab .tab-ic { padding: 0; background: none !important; }
+  .tab > span:not(.tab-ic) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .tab[aria-current="page"] { width: auto; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0 1.125rem 0 0.875rem; background: var(--fvl-color-accent-subtle); box-shadow: inset 0 1px 0 var(--sb-rim), 0 0 0 1px var(--fvl-color-line-subtle); }
+  .tab[aria-current="page"] > span:not(.tab-ic) { position: static; width: auto; height: auto; overflow: visible; clip-path: none; font-size: 0.875rem; font-weight: 600; }
+  .tab[aria-current="page"] svg.tab-ic circle { fill: var(--fvl-color-accent-subtle); }
+  @media (prefers-reduced-motion: reduce) { .tab { transition: none; } }
+}
+
+/* Study covers and steps. */
+.study-card { border-radius: var(--sb-r); }
+.sc-body { padding: 1rem 1.125rem 1.125rem; gap: 0.375rem; }
+.sc-title { font-size: 0.9375rem; line-height: 1.35; }
+.sc-q { font-size: 0.8125rem; }
+.sc-num { font-size: 2.5rem; font-weight: 500; opacity: 0.9; }
+.st-points > p { padding: 1rem 1.125rem 1rem 2.125rem; font-size: var(--fvl-type-body-size); line-height: 1.6; }
+.st-points > p::before { left: 1.0625rem; top: 1.55rem; }
+
+/* Verse sheet. */
+#xrefBody > .p-text { font-size: 1.25rem; line-height: 1.6; }
+.cn-cap { padding: 1rem 1.125rem; }
+
+/* Gold throughout the reader, as in the boards: the span arc, the quote rules and the ring and point. The category stays
+   as the dot in the kicker. A lit phrase glows instead of being boxed. */
+.r-span { color: var(--fvl-color-accent-default); }
+.r-span .rs-arc { filter: drop-shadow(0 0 6px var(--sb-gold-glow)); }
+.r-pair .p-text, .st-text, #xrefBody > .p-text { border-left-color: var(--fvl-color-accent-default); }
+.r-pair .p-sym i { color: var(--fvl-color-accent-default); }
+.r-pair { align-items: start; }
+.r-pair mark.lit { background: rgba(229, 184, 105, 0.34); box-shadow: inset 0 -2px 0 var(--fvl-color-accent-default), 0 0 1rem var(--sb-gold-glow); }
+
+/* The reader's bar: a glass capsule holding two pills of one height, back a circle on the left, Next filling its
+   own width on the right, both inset evenly from the capsule's edge. */
+.r-bar { padding: 0.375rem; }
+.r-bar .r-bar-in { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.r-bar fvl-button { --fvl-button-height-md: 2.75rem; }
+.r-bar fvl-button#next { min-width: 8.5rem; }
+.r-bar fvl-button#next::part(control) { width: 100%; padding: 0 1.5rem; font-weight: 600; letter-spacing: -0.005em; }
+.r-bar fvl-button#prev::part(control), .r-bar fvl-button#back::part(control), .r-bar fvl-button#star::part(control) { width: 2.75rem; }
+/* Close and back on the left, save and Next on the right. */
+.r-bar fvl-button#prev { margin-right: auto; }
+.r-bar fvl-button#star[hidden] { display: none; }
+
+/* Phone bento: every row full, no orphaned half tiles. Continue and the feast are compact strips; Saved and the study
+   share the last row as two tiles of equal height, sized to their content. */
+@media (width < 64rem) {
+  .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "sky sky" "today today" "cont cont" "next next" "saved study"; }
+  .b-sky { grid-area: sky; } .b-today { grid-area: today; } .b-cont { grid-area: cont; } .b-next { grid-area: next; }
+  .b-saved { grid-area: saved; } .b-study { grid-area: study; }
+  .b-st, .b-sv, .bento .continue { min-height: 0; }
+  .bento .continue { padding: 1rem 1.125rem; gap: 0.75rem; }
+  .bento .continue b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .b-saved .bento-card, .b-study .bento-card { padding: 1rem 1.125rem; gap: 0.25rem; }
+  .b-study .b-title { font-size: var(--fvl-type-body-size); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .b-study .b-arc { width: 3rem; margin-top: auto; }
+  .b-big { font-size: 2rem; }
+  .b-saved .b-sub { -webkit-line-clamp: 3; }
+}
+/* Very narrow phones: Saved and the study stack too. */
+@media (width < 22rem) { .bento { grid-template-areas: "sky sky" "today today" "cont cont" "next next" "saved saved" "study study"; } }
+
+/* The sliding pill behind the current tab (phone). The tab itself no longer paints the pill. */
+.tab-ind { display: none; }
+@media (width < 52.5rem) {
+  .tab-ind {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    border-radius: var(--fvl-radius-pill);
+    background: var(--fvl-color-accent-subtle);
+    box-shadow: inset 0 1px 0 var(--sb-rim), 0 0 0 1px var(--fvl-color-line-subtle), 0 0.25rem 0.75rem -0.25rem var(--sb-gold-glow);
+    pointer-events: none;
+  }
+  .tab { position: relative; z-index: 1; }
+  .tab[aria-current="page"] { background: none; box-shadow: none; }
+}
+
+/* ---------- studies: compact cards, as the bento ----------
+   A small square night cover with the study's route (its part number on it), and beside it the title, the question in
+   two lines, the length and how far you are. Phone: one column; wide screens: two. */
+.st-group { gap: 0.75rem; }
+.st-group + .st-group { margin-top: 2rem; }
+.st-group-h { gap: 0.25rem; font-family: var(--sb-serif); font-weight: 500; font-size: var(--fvl-type-h3-size); letter-spacing: -0.01em; }
+.st-group-h .p-label { font-family: var(--fvl-type-body-family); }
+.study-grid { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+@media (width >= 37.5rem) { .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.875rem; } }
+@media (width >= 75rem) { .study-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+.study-card {
+  grid-template-rows: none;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.875rem;
+  padding: 0.625rem;
+  height: 100%;
+}
+@media (width >= 37.5rem) { .study-card { grid-template-columns: 6.5rem minmax(0, 1fr); } }
+.study-card .sc-cover { aspect-ratio: 1; height: auto; align-self: start; border-radius: 0.875rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.06); }
+.study-card .sc-num { left: 0.5rem; top: 0.375rem; font-size: 1.125rem; font-family: var(--sb-serif); font-weight: 500; color: var(--fvl-color-text-primary); opacity: 0.9; letter-spacing: 0; }
+.study-card .sc-body { padding: 0.25rem 0.375rem 0.25rem 0; gap: 0.25rem; align-content: center; }
+.study-card .sc-title { font-size: var(--fvl-type-body-size); line-height: 1.3; font-weight: 600; }
+.study-card .sc-q { font-size: 0.8125rem; line-height: 1.45; -webkit-line-clamp: 2; }
+.study-card .sc-meta { font-size: 0.75rem; }
+.study-card .sc-prog { height: 3px; margin-top: 0.25rem; }
+@media (hover: hover) { .study-card:hover { transform: translateY(-1px); } }
+
+/* The study page: the cover as a short night band, then the text. */
+.st-hero { gap: 1.25rem; }
+.st-hero .sc-cover.wide { aspect-ratio: auto; height: clamp(8rem, 26vw, 12rem); }
+@media (width >= 75rem) { .st-hero { grid-template-columns: minmax(0, 1fr); } .st-hero .sc-cover.wide { aspect-ratio: auto; height: 12rem; } }
+.st-hero-text h2 { font-size: var(--fvl-type-h1-size); line-height: 1.1; }
+.st-hero-text .st-question { font-family: var(--sb-serif); font-style: italic; font-size: var(--fvl-type-lead-size); line-height: 1.5; color: var(--fvl-color-text-secondary); }
+.study-card .sc-art .rd, .study-card .sc-art .mt-o { stroke-width: 5px; }
+.study-card .sc-art .mt-i { stroke-width: 2.25px; }
+.study-card .sc-route { stroke-width: 1px; }
+.st-about p:not(.p-label) { font-size: var(--fvl-type-body-size); line-height: 1.65; }
+/* Buttons are pills throughout, as in the boards. */
+fvl-button { --fvl-button-radius: var(--fvl-radius-pill); }
+
+/* A chosen chip under the finger (or pointer) stays light with dark text: FVL's tag paints selected-and-hovered in the
+   shared subtle-hover colour, which in dark mode is a dark gold that hides the chip's dark text. */
+.chips fvl-tag { --fvl-color-accent-subtle-hover: color-mix(in oklab, var(--fvl-color-text-primary) 84%, var(--fvl-color-bg-canvas)); }
+
+/* Messages rise above whatever floats at the bottom (the tab bar, or the reader's bar) instead of covering its buttons. */
+fvl-toaster::part(stack) { inset-block-end: calc(var(--tabbar-h) + var(--tabbar-off) + 0.75rem); }
+html.reading fvl-toaster::part(stack) { inset-block-end: calc(3.5rem + max(env(safe-area-inset-bottom), 0.75rem) + 0.75rem); }
+
+/* Spacing pass (4 Nov): one rhythm. Content starts a gutter's width (1rem) under the top bar, and the reader just
+   under the status bar; a kicker sits close to the title it labels. */
+.view { padding-top: 1rem; }
+.reader .r-body { padding-top: max(calc(env(safe-area-inset-top) + 0.75rem), 1.5rem); }
+.r-in > :first-child { margin-top: 0; }
+.r-in > p.kicker { margin-bottom: 0; }
+.r-in > .kicker + .r-title { margin-top: 0.5rem; }
+/* Section labels share one style (small, tracked capitals), Bible's testaments included. */
+.book-group h3 { text-transform: uppercase; letter-spacing: 0.09em; font-size: 0.6875rem; line-height: 1.4; font-weight: 600; margin-bottom: 0.625rem; }
+.book-group + .book-group { margin-top: 1.5rem; }
+/* Back links line their arrow up with the page's left edge instead of sitting one button-padding in. */
+.ch-head > fvl-button:first-child, .actions > fvl-button[variant="tertiary"]:first-child { margin-left: -0.75rem; }
+/* The end of a page: enough room to finish, not a void before the footer. */
+.view { padding-bottom: 2rem; }
+/* Tab-bar icons: the library icons drew at 16px pinned to the top of their 20px slot, the hand-drawn ones at 20px.
+   All five now fill the same 20px box, centred, with one stroke weight. */
+.tab fvl-icon.tab-ic { display: flex; align-items: center; justify-content: center; --fvl-icon-stroke: 1.75; }
+.tab fvl-icon.tab-ic::part(icon) { display: block; width: 1.25rem; height: 1.25rem; stroke-width: 1.75; }

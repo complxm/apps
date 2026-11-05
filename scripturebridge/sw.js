@@ -2,12 +2,13 @@
 // Keeps the app and whatever you have read on this device, so it opens and reads without a connection.
 // Only files from this site are cached: the NLT, read live from Tyndale's API, is never stored.
 // Renamed with every release (it matches the ?v= in index.html), so kept copies always belong to the running version.
-const CACHE = 'sb-20261031j';
+const CACHE = 'sb-20261104g';
 const SHELL = [
   './', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/apple-touch-icon.png',
   '/apps/vendor/fvl/css/fonts.css', '/apps/vendor/fvl/css/fvl.css', '/apps/vendor/fvl/ui/fvl-components.js',
-  '/apps/vendor/fvl/atmosphere/fvl-atmosphere.js', '/apps/vendor/gsap/gsap.min.js', '/apps/vendor/gsap/DrawSVGPlugin.min.js',
-  '/apps/vendor/fvl/fonts/inter-latin-opsz-normal.woff2', '/apps/vendor/fvl/fonts/inter-latin-ext-opsz-normal.woff2', '/apps/vendor/fvl/brand/favicon.svg',
+  '/apps/vendor/gsap/gsap.min.js', '/apps/vendor/gsap/DrawSVGPlugin.min.js',
+  '/apps/vendor/fvl/fonts/inter-latin-opsz-normal.woff2', '/apps/vendor/fvl/fonts/inter-latin-ext-opsz-normal.woff2', './icons/favicon-32.png',
+  './fonts/newsreader-latin-opsz-normal.woff2', './fonts/newsreader-latin-ext-opsz-normal.woff2', './fonts/newsreader-latin-opsz-italic.woff2',
   './data/bible/books.json', './data/books_66.json', './data/prophecies_66_books.json', './data/canonical_threads.json',
   './data/appointed_times.json', './data/evidence.json', './data/review.json', './data/pl/prophecies.json', './data/pl/threads.json',
   './data/pl/appointed_times.json', './data/studies/index.json', './data/studies/verses.json', './data/maps.json',
