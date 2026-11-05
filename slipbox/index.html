@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0e14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#faf7f3" media="(prefers-color-scheme: light)">
+<title>Slipbox</title>
+<meta name="description" content="A Luhmann-style zettelkasten for your phone: capture, make main notes, connect them, and write from them.">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Slipbox">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fonts.css">
+<link rel="stylesheet" href="/apps/vendor/fvl/css/fvl.css">
+<link rel="stylesheet" href="app.css?v=1">
+<script>
+  // FVL context: the neutrals follow the OS — warm stone (dawn) in light, obsidian (day) in dark.
+  (function () {
+    var q = matchMedia('(prefers-color-scheme: dark)');
+    var set = function () { document.documentElement.dataset.daylight = q.matches ? 'day' : 'dawn'; };
+    set();
+    if (q.addEventListener) q.addEventListener('change', set);
+  })();
+</script>
+</head>
+<body>
+<main id="view" class="view" tabindex="-1"></main>
+
+<nav class="tabbar" id="tabbar" aria-label="Sections">
+  <a class="tab" href="#/inbox" data-tab="inbox"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h5l1.5 3h5L16 13h5"/><path d="M5.5 5h13L21 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5z"/></svg><span>Inbox</span><b class="tab-count" id="inboxCount" hidden></b></a>
+  <a class="tab" href="#/box" data-tab="box"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="8" width="17" height="12" rx="2"/><path d="M6 5h12M8.5 2.5h7"/></svg><span>Box</span></a>
+  <a class="tab" href="#/sources" data-tab="sources"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2 2 2 0 0 0 2 2h14"/><path d="M9 7h7"/></svg><span>Sources</span></a>
+  <a class="tab" href="#/views" data-tab="views"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Views</span></a>
+  <a class="tab" href="#/write" data-tab="write"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg><span>Write</span></a>
+</nav>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<dialog id="sheet" class="sheet"></dialog>
+
+<noscript><p style="padding:2rem">Slipbox needs JavaScript.</p></noscript>
+<script type="module" src="app.js?v=1"></script>
+</body>
+</html>
